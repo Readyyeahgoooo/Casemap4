@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import base64
 import json
 
 
@@ -5572,11 +5571,51 @@ def render_knowledge_graph(bundle: dict) -> str:
       link.classed("faded", d => d.source.id !== id && d.target.id !== id);
     }}
 
+    function zoomToNode(n, scale = 1.45) {{
+      if (!n) return;
+      const tx = width() / 2 - (n.x || 0) * scale;
+      const ty = height() / 2 - (n.y || 0) * scale;
+      svg.transition().duration(420).call(
+        zoom.transform,
+        d3.zoomIdentity.translate(tx, ty).scale(scale)
+      );
+    }}
+
+    function focusNodeByHint(caseId, caseName) {{
+      let match = null;
+      if (caseId) match = nodeIndex.get(caseId);
+      if (!match && caseName) {{
+        const q = caseName.trim().toLowerCase();
+        match = NODES.find(n => n.label.toLowerCase() === q)
+          || NODES.find(n => n.label.toLowerCase().includes(q) || q.includes(n.label.toLowerCase().slice(0, 16)));
+      }}
+      if (!match) return false;
+      selectNode(match.id);
+      zoomToNode(match, 1.6);
+      return true;
+    }}
+
+    window.addEventListener("message", (event) => {{
+      const payload = event.data || {{}};
+      if (payload.type !== "casemap-focus-node") return;
+      focusNodeByHint(payload.caseId || "", payload.caseName || "");
+    }});
+
+    window.casemapFocusNode = (caseId, caseName) => focusNodeByHint(caseId || "", caseName || "");
+
+    const initialFocus = new URLSearchParams(window.location.search).get("focus");
+    if (initialFocus) {{
+      setTimeout(() => focusNodeByHint(initialFocus, initialFocus), 520);
+    }}
+
     document.getElementById("search").addEventListener("input", e => {{
       const q = e.target.value.trim().toLowerCase();
       if (!q) {{ node.classed("faded", false).classed("active", false); link.classed("faded", false); return; }}
       const match = NODES.find(n => n.label.toLowerCase().includes(q) || n.summary.toLowerCase().includes(q));
-      if (match) selectNode(match.id);
+      if (match) {{
+        selectNode(match.id);
+        zoomToNode(match, 1.45);
+      }}
     }});
   </script>
 </body>
@@ -5589,34 +5628,9 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     heading = meta.get("viewer_heading_public") or meta.get("title") or "HK Criminal Law Knowledge Graph"
     legal_domain = meta.get("legal_domain", "criminal")
     node_count = meta.get("node_count", 0)
-    edge_count = meta.get("edge_count", 0)
     case_count = meta.get("case_count", 0)
     statute_count = meta.get("statute_count", 0)
-    hierarchy_payload = json.dumps(base64.b64encode(hierarchy_html.encode("utf-8")).decode("ascii"))
-
-    # Build inline graph data (same logic as render_knowledge_graph)
-    VISIBLE_TYPES = {"Module", "Subground", "Topic", "Case", "Statute", "AuthorityLineage"}
-    graph_nodes = []
-    for n in bundle.get("nodes", []):
-        if n.get("type") not in VISIBLE_TYPES:
-            continue
-        graph_nodes.append({
-            "id": n["id"],
-            "type": n["type"],
-            "label": (n.get("label_en") or n.get("case_name") or n.get("label") or n["id"])[:32],
-            "summary": (n.get("summary_en") or n.get("summary") or "")[:240],
-        })
-    visible_ids = {n["id"] for n in graph_nodes}
-    VISIBLE_EDGE_TYPES = {"CONTAINS", "BELONGS_TO_TOPIC", "CITES", "FOLLOWS", "APPLIES", "DISTINGUISHES", "HAS_MEMBER", "ABOUT_TOPIC"}
-    graph_edges = [
-        {"source": e["source"], "target": e["target"], "type": e["type"]}
-        for e in bundle.get("edges", [])
-        if e.get("type") in VISIBLE_EDGE_TYPES
-        and e["source"] in visible_ids
-        and e["target"] in visible_ids
-    ]
-    nodes_json = json.dumps(graph_nodes, ensure_ascii=False)
-    edges_json = json.dumps(graph_edges, ensure_ascii=False)
+    _ = hierarchy_html
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -6043,10 +6057,10 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
         </div>
         <div class="canvas-stage">
           <div id="graphPane" class="canvas-pane">
-            <svg id="mainGraph"></svg>
+            <iframe id="graphFrame" src="/graph" title="Casemap graph workspace"></iframe>
           </div>
           <div id="hierarchyPane" class="canvas-pane hidden">
-            <div class="hierarchy-shell" id="hierarchyMount"></div>
+            <iframe src="/tree" title="Casemap hierarchy tree"></iframe>
           </div>
         </div>
       </section>
@@ -6097,182 +6111,10 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     </section>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script>
-    // ── Inline force-directed graph ──────────────────────────────────────
-    const GNODES = {nodes_json};
-    const GEDGES = {edges_json};
-    const GCOLOR = {{
-      Module:"#4a9eff", Subground:"#7b68ee", Topic:"#ffa500",
-      Case:"#ff6b6b", Statute:"#50c878", AuthorityLineage:"#dda0dd"
-    }};
-    const GRADIUS = {{Module:22,Subground:15,Topic:11,Case:9,Statute:8,AuthorityLineage:8}};
-    const gNeighbours = new Map(GNODES.map(n=>[n.id,new Set()]));
-    GEDGES.forEach(e=>{{gNeighbours.get(e.source)?.add(e.target);gNeighbours.get(e.target)?.add(e.source);}});
-    const gIndex = new Map(GNODES.map(n=>[n.id,n]));
-    let gSvg = null;
-    let gZoom = null;
-    let gG = null;
-    let gNode = null;
-    let gLink = null;
-    let gViewport = {{ w: 900, h: 700 }};
-
-    function renderGraphFallback(message) {{
-      const graphPaneEl = document.getElementById("graphPane");
-      graphPaneEl.innerHTML = `
-        <div style="display:grid;gap:12px;height:100%;padding:16px;background:#0b121a;color:#e8edf3;align-content:start;">
-          <div>
-            <strong>Inline graph did not finish loading.</strong>
-            <p style="margin:8px 0 0;color:#99a7b8;line-height:1.6;">${{message || "Falling back to the dedicated graph viewer so the node map still stays accessible."}}</p>
-          </div>
-          <iframe src="/graph" title="Casemap graph workspace" style="width:100%;height:100%;min-height:520px;border:0;border-radius:14px;"></iframe>
-        </div>
-      `;
-    }}
-
-    try {{
-      if (!window.d3 || !GNODES.length) {{
-        renderGraphFallback("The browser could not initialise the inline renderer.");
-      }} else {{
-        gSvg = d3.select("#mainGraph");
-        const gSvgEl = gSvg.node();
-        gG = gSvg.append("g");
-        gZoom = d3.zoom().scaleExtent([0.04,4]).on("zoom",ev=>gG.attr("transform",ev.transform));
-        gSvg.call(gZoom);
-
-        function viewport() {{
-          const rect = gSvgEl.getBoundingClientRect();
-          return {{
-            w: Math.max(640, rect.width || 0),
-            h: Math.max(420, rect.height || 0),
-          }};
-        }}
-
-        function fitGraph() {{
-          try {{
-            const bbox = gG.node().getBBox();
-            const {{ w, h }} = viewport();
-            gViewport = {{ w, h }};
-            const widthRatio = bbox.width / Math.max(w, 1);
-            const heightRatio = bbox.height / Math.max(h, 1);
-            const scale = Math.min(0.9, 0.9 / Math.max(widthRatio, heightRatio, 0.01));
-            const tx = w / 2 - scale * (bbox.x + bbox.width / 2);
-            const ty = h / 2 - scale * (bbox.y + bbox.height / 2);
-            gSvg.transition().duration(250).call(gZoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
-          }} catch (error) {{
-            console.warn("graph-fit-failed", error);
-          }}
-        }}
-
-        const {{ w, h }} = viewport();
-        gViewport = {{ w, h }};
-        gSvg.attr("viewBox", `0 0 ${{w}} ${{h}}`);
-        GNODES.forEach((node, index) => {{
-          const angle = (Math.PI * 2 * index) / Math.max(GNODES.length, 1);
-          const radius = Math.min(w, h) * 0.24 + (index % 11) * 6;
-          node.x = w / 2 + Math.cos(angle) * radius;
-          node.y = h / 2 + Math.sin(angle) * radius;
-        }});
-
-        gSvg.append("defs").append("marker")
-          .attr("id","arrow").attr("viewBox","0 -4 8 8").attr("refX",14).attr("refY",0)
-          .attr("markerWidth",6).attr("markerHeight",6).attr("orient","auto")
-          .append("path").attr("d","M0,-4L8,0L0,4").attr("fill","rgba(255,255,255,0.25)");
-
-        const gSim = d3.forceSimulation(GNODES)
-          .force("link",d3.forceLink(GEDGES).id(d=>d.id).distance(d=>{{
-            const t=[d.source.type||"",d.target.type||""];
-            if(t.includes("Module"))return 220;if(t.includes("Subground"))return 150;if(t.includes("Topic"))return 104;return 72;
-          }}).strength(0.5))
-          .force("charge",d3.forceManyBody().strength(d=>{{
-            if(d.type==="Module")return -960;if(d.type==="Subground")return -520;if(d.type==="Topic")return -260;return -150;
-          }}))
-          .force("center",d3.forceCenter(w/2,h/2))
-          .force("collision",d3.forceCollide().radius(d=>(GRADIUS[d.type]||9)+8));
-
-        gLink = gG.append("g").selectAll("line").data(GEDGES).join("line")
-          .attr("stroke","rgba(255,255,255,0.12)").attr("stroke-width",1)
-          .attr("marker-end","url(#arrow)");
-
-        gNode = gG.append("g").selectAll("g").data(GNODES).join("g")
-          .attr("cursor","pointer")
-          .call(d3.drag()
-            .on("start",(ev,d)=>{{if(!ev.active)gSim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;}})
-            .on("drag",(ev,d)=>{{d.fx=ev.x;d.fy=ev.y;}})
-            .on("end",(ev,d)=>{{if(!ev.active)gSim.alphaTarget(0);d.fx=null;d.fy=null;}}))
-          .on("click",(ev,d)=>{{
-            const q=document.getElementById("question");
-            if(q)q.value=d.label+(d.type==="Topic"?" — what are the key legal principles and cases?":"");
-            gNode.attr("opacity",n=>n.id===d.id||gNeighbours.get(d.id)?.has(n.id)?1:0.15);
-            gLink.attr("opacity",e=>e.source.id===d.id||e.target.id===d.id?1:0.08);
-          }});
-
-        gNode.append("circle")
-          .attr("r",d=>GRADIUS[d.type]||9)
-          .attr("fill",d=>GCOLOR[d.type]||"#888")
-          .attr("fill-opacity",0.88)
-          .attr("stroke","rgba(255,255,255,0.72)").attr("stroke-width",1.2);
-
-        gNode.append("text")
-          .attr("dx",d=>(GRADIUS[d.type]||9)+4).attr("dy","0.35em")
-          .attr("fill","#e8edf3").attr("font-size","9.5px")
-          .attr("font-family","'SFMono-Regular',monospace")
-          .text(d=>d.label.length>26?d.label.slice(0,24)+"…":d.label);
-
-        // Paint an immediate static frame so the graph is visible
-        // even before force-simulation ticks fire in slower browsers.
-        const initialPos = new Map(GNODES.map(n => [n.id, n]));
-        gLink
-          .attr("x1", d => (initialPos.get(typeof d.source === "string" ? d.source : d.source.id)?.x ?? w / 2))
-          .attr("y1", d => (initialPos.get(typeof d.source === "string" ? d.source : d.source.id)?.y ?? h / 2))
-          .attr("x2", d => (initialPos.get(typeof d.target === "string" ? d.target : d.target.id)?.x ?? w / 2))
-          .attr("y2", d => (initialPos.get(typeof d.target === "string" ? d.target : d.target.id)?.y ?? h / 2));
-        gNode.attr("transform", d => `translate(${{d.x}},${{d.y}})`);
-
-        let fitted = false;
-        gSim.on("tick",()=>{{
-          gLink.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
-               .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
-          gNode.attr("transform",d=>`translate(${{d.x}},${{d.y}})`);
-          if (!fitted && gSim.alpha() < 0.28) {{
-            fitted = true;
-            fitGraph();
-          }}
-        }});
-
-        gSim.on("end", fitGraph);
-        window.addEventListener("resize", () => {{
-          const next = viewport();
-          gViewport = next;
-          gSvg.attr("viewBox", `0 0 ${{next.w}} ${{next.h}}`);
-          gSim.force("center", d3.forceCenter(next.w/2, next.h/2));
-          fitGraph();
-        }});
-
-        setTimeout(() => {{
-          if (!fitted) fitGraph();
-        }}, 700);
-
-        gSvg.on("click",ev=>{{
-          if(ev.target===gSvg.node()||ev.target===gG.node()){{
-            gNode.attr("opacity",1);gLink.attr("opacity",1);
-          }}
-        }});
-      }}
-    }} catch (error) {{
-      console.error("inline-graph-init-failed", error);
-      renderGraphFallback("The inline graph renderer failed in this browser session.");
-    }}
-    // ── End inline graph ─────────────────────────────────────────────────
-
-    const hierarchyHtml = new TextDecoder().decode(
-      Uint8Array.from(atob({hierarchy_payload}), (char) => char.charCodeAt(0))
-    );
-    const hierarchyMount = document.getElementById("hierarchyMount");
-    hierarchyMount.innerHTML = hierarchyHtml;
-
     const graphPane = document.getElementById("graphPane");
     const hierarchyPane = document.getElementById("hierarchyPane");
+    const graphFrame = document.getElementById("graphFrame");
     const graphModeBtn = document.getElementById("graphModeBtn");
     const hierarchyModeBtn = document.getElementById("hierarchyModeBtn");
     const canvasTitle = document.getElementById("canvasTitle");
@@ -6297,6 +6139,21 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
 
     graphModeBtn.addEventListener("click", () => switchMode("graph"));
     hierarchyModeBtn.addEventListener("click", () => switchMode("hierarchy"));
+    let pendingGraphFocus = null;
+
+    function postGraphFocus(payload) {{
+      if (!graphFrame || !graphFrame.contentWindow) return;
+      graphFrame.contentWindow.postMessage(payload, window.location.origin);
+    }}
+
+    if (graphFrame) {{
+      graphFrame.addEventListener("load", () => {{
+        graphFrame.dataset.loadedOnce = "1";
+        if (pendingGraphFocus) {{
+          postGraphFocus(pendingGraphFocus);
+        }}
+      }});
+    }}
 
     function markdownToHtml(text) {{
       // Minimal markdown renderer: bold, italic, headers, tables, lists, hr
@@ -6330,25 +6187,16 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       statusEl.textContent = message;
     }}
 
-    // Focus the graph on a node by case_id or case_name match
+    // Focus the graph iframe on a node by case_id or case_name match
     function focusGraphNode(caseId, caseName) {{
-      if (!gSvg || !gZoom || !gNode || !gLink) return;
-      // Try exact id match first, then label match
-      let target = gIndex.get(caseId);
-      if (!target && caseName) {{
-        const lower = caseName.toLowerCase();
-        target = GNODES.find(n => (n.label||"").toLowerCase().includes(lower) || lower.includes((n.label||"").toLowerCase().slice(0,12)));
-      }}
-      if (!target) return;
-      // Highlight
-      gNode.attr("opacity", n => n.id === target.id || gNeighbours.get(target.id)?.has(n.id) ? 1 : 0.15);
-      gLink.attr("opacity", e => e.source.id === target.id || e.target.id === target.id ? 1 : 0.08);
-      // Zoom to node
-      const w = gSvg.node().clientWidth || gViewport.w;
-      const h = gSvg.node().clientHeight || gViewport.h;
-      gSvg.transition().duration(600).call(gZoom.transform,
-        d3.zoomIdentity.translate(w/2 - target.x * 1.4, h/2 - target.y * 1.4).scale(1.4)
-      );
+      const payload = {{
+        type: "casemap-focus-node",
+        caseId: caseId || "",
+        caseName: caseName || "",
+      }};
+      pendingGraphFocus = payload;
+      switchMode("graph");
+      postGraphFocus(payload);
     }}
 
     function citationMarkup(citation) {{
