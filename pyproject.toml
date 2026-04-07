@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "casemap"
+version = "0.1.0"
+description = "MVP GraphRAG knowledge map for contract-law notes"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["neo4j>=5.22.0", "pypdf>=6.9.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
