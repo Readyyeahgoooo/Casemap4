@@ -1,0 +1,69 @@
+{
+  "count": 4,
+  "results": [
+    {
+      "title": "香港特別行政區 訴 尹載道",
+      "path": "/tc/cases/hkcfi/2022/1889",
+      "pub_date": "2022-06-24T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA166/2021",
+      "neutral": "[2022] HKCFI 1889",
+      "parallel": "",
+      "coram": "主審法官： 高等法院原訟法庭法官李運騰",
+      "parties": "答辯人 香港特別行政區 訴 上訴人 尹載道",
+      "charge": "",
+      "representations": "答辯人： 由律政司檢控官鄧芷琳代表香港特別行政區。 上訴人： 無律師代表，親自行事。",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. YEUNG HO YIN",
+      "path": "/en/cases/hkcfi/2022/569",
+      "pub_date": "2022-03-25T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMA354/2020",
+      "neutral": "[2022] HKCFI 569",
+      "parallel": "[2023] 2 HKLRD 677",
+      "coram": "Before:  High Court Judge Albert Wong in Court",
+      "parties": "BETWEEN HKSAR Respondent and Yeung Ho Yin（楊浩然） Appellant",
+      "charge": "",
+      "representations": "Mr Wayne Lee, Public Prosecutor of the Department of Justice, for the Respondent. Mr Tien Kei Rui, instructed by Ho Tse Wai & Partners, for the Appellant. Translated by the Judgment Translation Unit of the Judiciary and vetted by Mr. Walter Lee, solicitor.",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 簡梓濱及另二人",
+      "path": "/tc/cases/hkdc/2023/806",
+      "pub_date": "2023-05-19T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC737/2020",
+      "neutral": "[2023] HKDC 806",
+      "parallel": "",
+      "coram": "主審法官: 區域法院暫委法官徐綺薇",
+      "parties": "香港特別行政區 訴 簡梓濱（第一被告人） 連俊雄（第二被告人） 卓嘉豪（第三被告人）",
+      "charge": "控罪: [1] 非法集結（Unlawful assembly） - 第一被告人 [2] 暴動（Riot） - 第二及第四被告人 [3] 刑事損壞（Criminal damage） – 第二及第四被告人 [4] 暴動（Riot） - 第二至第四被告人 [5] 襲擊他人致造成身體傷害（Assault occasioning actual bodily harm） – 第二至第四被告人 [6] 普通襲擊（Common assault） - 第二至第四被告人 [7] 搶劫罪（Robbery） – 第三被告人",
+      "representations": "出席人士: 葉志康先生及黃祖毅先生，為外聘大律師，代表香港特別行政區 朱寶田先生，由法律援助署委派的劉藹宜黃汝仲律師事務所延聘，代表第一被告人 鄭從展先生，由法律援助署委派的李思行周慧蘭律師事務所延聘，代表第二被告人 沈偉民先生，由法律援助署委派的伍展邦律師行延聘，及王立欣女士，由法律援助署委派的伍展邦律師行以義助服務形式延聘，代表第三被告人",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 楊浩然",
+      "path": "/tc/cases/hkcfi/2022/569",
+      "pub_date": "2022-03-25T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA354/2020",
+      "neutral": "[2022] HKCFI 569",
+      "parallel": "[2022] 4 HKC 346 ; [2023] 2 HKLRD 648",
+      "coram": "主審法官： 高等法院原訟法庭法官黃崇厚",
+      "parties": "答辯人 香港特別行政區 及 上訴人 楊浩然",
+      "charge": "",
+      "representations": "答辯人：由律政司檢控官李穎賢代表 上訴人：由何謝韋律師事務所轉聘田奇睿大律師代表",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

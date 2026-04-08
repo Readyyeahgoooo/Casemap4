@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "HKSAR V. CHAN CHUN HEI",
+      "path": "/en/cases/hkca/2023/926",
+      "pub_date": "2023-11-23T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC52/2022",
+      "neutral": "[2023] HKCA 926",
+      "parallel": "[2024] 2 HKC 48; [2024] 1 HKLRD 118",
+      "coram": "Before: Hon Macrae VP and Zervos JA in Court",
+      "parties": "HKSAR Respondent v Chan Chun Hei (陳俊曦) Appellant",
+      "charge": "",
+      "representations": "Mr Douglas Lau, SPP (Ag), of the Department of Justice, for the respondent Mr Simon So and Mr Enoch Fong, instructed by Ho & Associates, for the appellant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

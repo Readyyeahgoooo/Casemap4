@@ -1,0 +1,41 @@
+{
+  "count": 2,
+  "results": [
+    {
+      "title": "ROBERT SCOTT WOODS, THE TRUSTEE-IN-BANKRUPTCY OF PHILLIP JAMES KINGSTON V. INDUSTRIAL AND COMMERCIAL BANK OF CHINA (ASIA) LTD",
+      "path": "/en/cases/hkcfi/2024/3311",
+      "pub_date": "2024-11-18T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP1789/2024",
+      "neutral": "[2024] HKCFI 3311",
+      "parallel": "[2025] 2 HKC 259; [2024] 5 HKLRD 788",
+      "coram": "Before: Hon Linda Chan J in Chambers",
+      "parties": "IN THE MATTER of Phillip James Kingston, a person adjudged bankrupt in Australia and IN THE MATTER of the inherent jurisdiction of the Court\nBETWEEN ROBERT SCOTT WOODS, THE TRUSTEE-IN-BANKRUPTCY OF PHILLIP JAMES KINGSTON Plaintiff and INDUSTRIAL AND COMMERCIAL BANK\nOF CHINA (ASIA) LIMITED Defendant",
+      "charge": "",
+      "representations": "Mr Lai Chun Ho, instructed by Baker & McKenzie, for the Plaintiff Attendance of Stevenson, Wong & Co. for the Defendant is excused",
+      "remarks": ""
+    },
+    {
+      "title": "POON CHI FAI V. POON CHI HUNG, WILLIAM AND OTHERS",
+      "path": "/en/cases/hkcfi/2024/3097",
+      "pub_date": "2024-11-11T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP1538/2023",
+      "neutral": "[2024] HKCFI 3097",
+      "parallel": "",
+      "coram": "Before: Mr Recorder William Wong, SC in Chambers",
+      "parties": "IN THE MATTER OF POON CHUEN AND CHAN LIN TEI’S FAMILY FUND LIMITED (潘泉陳連娣家族有限公司) (Business Registration No. 65523609) and IN THE MATTER OF Section 42 of the Companies Ordinance (Cap 622 of the Laws of Hong Kong)\nBETWEEN POON CHI FAI (潘志輝) Plaintiff and POON CHI HUNG, WILLIAM (潘志雄) 1 st Defendant POON CHUEN AND CHAN LIN TEI'S FAMILY FUND LIMITED (潘泉陳連娣家族有限公司) 2 nd Defendant COMPANIES REGISTRY (公司註冊處) 3 rd Defendant",
+      "charge": "",
+      "representations": "The Plaintiff, in person, present Mr. Ivan Chu instructed by Messrs Raymond Cheung & Chan for the 1 st and 2 nd Defendants The 3 rd Defendant, attendance excused",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "count": 5,
+  "results": [
+    {
+      "title": "SECRETARY FOR JUSTICE V. LAI CHEE YING ",
+      "path": "/en/cases/hkcfi/2022/923",
+      "pub_date": "2022-04-13T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMA138/2021",
+      "neutral": "[2022] HKCFI 923",
+      "parallel": "",
+      "coram": "Before: Hon Andrew Chan J in Court",
+      "parties": "BETWEEN SECRETARY FOR JUSTICE Appellant and LAI CHEE YING Respondent",
+      "charge": "",
+      "representations": "Ms Priscilia Lam, Counsel on fiat, for the Department of Justice, for the Appellant Mr Peter Duncan, SC leading Mr Ernie Tung, instructed by Robertsons, for the Respondent",
+      "remarks": ""
+    },
+    {
+      "title": "TSE SUM PING V. THE COLLECTOR OF STAMP REVENUE",
+      "path": "/en/cases/hkdc/2021/379",
+      "pub_date": "2021-03-30T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCSA2/2020",
+      "neutral": "[2021] HKDC 379",
+      "parallel": "",
+      "coram": "Coram: His Honour Judge H. Au-Yeung (Paper Disposal)",
+      "parties": "In the matter of Section 14 of the Stamp Duty Ordinance Cap. 117 -------------------------- BETWEEN TSE SUM PING Appellant and THE COLLECTOR OF STAMP REVENUE Respondent",
+      "charge": "",
+      "representations": "Mr Stefano Mariani of Deacons, for the appellant Ms Diana Cheung, instructed by the Department of Justice, for the respondent",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 朱佩賢",
+      "path": "/tc/cases/hkcfi/2025/387",
+      "pub_date": "2024-11-26T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA393/2023",
+      "neutral": "[2025] HKCFI 387",
+      "parallel": "",
+      "coram": "主審法官 ： 高等法院原訟法庭暫委法官姚勳智",
+      "parties": "答辯人 香港特別行政區 訴 上訴人 朱佩賢",
+      "charge": "",
+      "representations": "答辯人：由律政司署理助理刑事檢控專員羅天瑋先生及高級檢控官徐倩姿女士代表 上訴人：由鄭國洪律師事務所延聘的關文渭大律師及陳靄霆大律師代表",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 趙鶯",
+      "path": "/tc/cases/hkcfa/2020/18",
+      "pub_date": "2020-06-30T00:00:00+08:00",
+      "db": "終審法院",
+      "act": "FACC6/2019",
+      "neutral": "[2020] HKCFA 18",
+      "parallel": "",
+      "coram": "主審法官: 終審法院首席法官馬道立 終審法院常任法官李義 終審法院常任法官霍兆剛 終審法院非常任法官陳兆愷 終審法院非常任法官司徒敬",
+      "parties": "上訴人 香港特別行政區 訴 答辯人 趙鶯",
+      "charge": "",
+      "representations": "由律政司副刑事檢控專員譚耀豪資深大律師及高級檢控官阮兆妍代表上訴人 由梁陳彭律師行延聘李紹強資深大律師及陳煒欣大律師代表答辯人",
+      "remarks": ""
+    },
+    {
+      "title": "律政司司長 對 余德穎及另七人",
+      "path": "/tc/cases/hkca/2023/877",
+      "pub_date": "2023-07-14T00:00:00+08:00",
+      "db": "上訴法庭",
+      "act": "CACC278/2021",
+      "neutral": "[2023] HKCA 877",
+      "parallel": "[2024] 2 HKC 134",
+      "coram": "主審法官： 高等法院首席法官潘兆初 高等法院上訴法庭法官彭偉昌 高等法院上訴法庭法官彭寶琴",
+      "parties": "上訴人 律政司司長 對 第一答辯人 張浩輝(D1) 第二答辯人 胡凱富(D2) 第三答辯人 陳子斌(D3) 第四答辯人 蘇美莉(D4) 第五答辯人 李盈莉(D5)",
+      "charge": "",
+      "representations": "上訴人： 由律政司署理助理刑事檢控專員張卓勤先生及檢控官黃恩寧女士代表 法庭之友： 黃佩琪資深大律師及彭浩原大律師",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

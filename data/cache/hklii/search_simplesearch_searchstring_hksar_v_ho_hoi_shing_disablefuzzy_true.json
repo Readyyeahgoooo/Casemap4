@@ -1,0 +1,83 @@
+{
+  "count": 5,
+  "results": [
+    {
+      "title": "HKSAR V. LAM TSZ KIN, KENT AND ANOTHER",
+      "path": "/en/cases/hkca/2024/192",
+      "pub_date": "2024-06-04T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC94/2022",
+      "neutral": "[2024] HKCA 192",
+      "parallel": "",
+      "coram": "Before: Hon Zervos JA in Court",
+      "parties": "HKSAR Respondent v Lam Tsz-kin, Kent (林子健) (D1) 1st Applicant Enriquez Anna Mae Justimbaste (D3) 2nd Applicant",
+      "charge": "",
+      "representations": "Ms Kasmine Hui, SPP, of Department of Justice, for the respondent The 1 st applicant appeared in person Mr Hanif Mohamed Mughal, instructed by Wong and Co, assigned by Director of Legal Aid, and Ms Teresa Yu (on a pro-bono basis), for the 2 nd applicant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. LAI KAM FUNG (賴錦鋒)",
+      "path": "/en/cases/hkcfa/2021/13",
+      "pub_date": "2021-04-01T00:00:00+08:00",
+      "db": "Court of Final Appeal",
+      "act": "FAMC8/2021",
+      "neutral": "[2021] HKCFA 13",
+      "parallel": "",
+      "coram": "Appeal Committee: Mr Justice Ribeiro PJ, Mr Justice Fok PJ and Mr Justice Chan NPJ",
+      "parties": "BETWEEN HKSAR Respondent and LAI KAM FUNG (賴錦鋒) Applicant",
+      "charge": "",
+      "representations": "Mr Bernard Yuen, instructed by ONC Lawyers, assigned by the Director of Legal Aid, for the Applicant Ms Audrey Parwani SPP, of the Department of Justice, for the Respondent",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. ROJAS MONTOYA JUAN PABLO",
+      "path": "/en/cases/hkca/2022/107",
+      "pub_date": "2022-01-26T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC78/2021",
+      "neutral": "[2022] HKCA 107",
+      "parallel": "",
+      "coram": "Before: Hon Zervos JA in Court",
+      "parties": "HKSAR Respondent v ROJAS MONTOYA JUAN PABLO Applicant",
+      "charge": "",
+      "representations": "Mr Nicholas Wong, SPP, of Department of Justice, for the respondent The applicant appears in person",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. WONG CHUN YAU",
+      "path": "/en/cases/hkca/2021/120",
+      "pub_date": "2021-03-25T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC118/2019",
+      "neutral": "[2021] HKCA 120",
+      "parallel": "[2021] 4 HKC 117",
+      "coram": "Before: Hon Chu and Zervos JJA and M Poon J in Court",
+      "parties": "HKSAR Respondent v WONG CHUN YAU (黃竣佑) Appellant",
+      "charge": "",
+      "representations": "Mr Derek Wong, SPP of the Department of Justice, for the respondent Mr Eric TM Cheung, Solicitor Advocate of ONC Lawyers, assigned by the Director of Legal Aid, for the appellant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. WAHAJ FYAZ",
+      "path": "/en/cases/hkca/2022/316",
+      "pub_date": "2022-03-07T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC87/2018",
+      "neutral": "[2022] HKCA 316",
+      "parallel": "[2022] 3 HKC 308",
+      "coram": "Before:  Hon Macrae VP, Zervos and Anthea Pang JJA in Court",
+      "parties": "HKSAR Respondent v WAHAJ FYAZ Applicant",
+      "charge": "",
+      "representations": "Ms Vinci Lam, SC, DDPP and Mr Ivan Leung, SPP of the Department of Justice, for the respondent Mr Trevor Beel, instructed by Messrs Jal N Karbhari & Co, assigned by the Director of Legal Aid, for the applicant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

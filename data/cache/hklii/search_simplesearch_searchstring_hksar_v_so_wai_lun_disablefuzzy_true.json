@@ -1,0 +1,41 @@
+{
+  "count": 2,
+  "results": [
+    {
+      "title": "香港特別行政區 訴 黃証鴻",
+      "path": "/tc/cases/hkdc/2023/534",
+      "pub_date": "2023-04-21T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC188/2022",
+      "neutral": "[2023] HKDC 534",
+      "parallel": "",
+      "coram": "主審法官： 區域法院暫委法官彭亮廷",
+      "parties": "香港特別行政區 訴 黃証鴻",
+      "charge": "控罪： [1] 及 [2] 與年齡在 16 歲以下的女童非法性交（Unlawful sexual intercourse with a girl under the age of 16 years） [3] 向年齡在 16 歲以下的兒童作出猥褻行為（Indecent conduct towards a child under the age of 16 years）",
+      "representations": "出席人士： 馬宇傑先生，律政司檢控官，代表香港特別行政區 梁卓然先生，資深大律師，帶領李芷澄女士，由黎錦文李孟華律師事務所延聘，代表被告人",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 歐陽迪安",
+      "path": "/tc/cases/hkdc/2025/1147",
+      "pub_date": "2025-07-04T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC186/2024",
+      "neutral": "[2025] HKDC 1147",
+      "parallel": "",
+      "coram": "主審法官: 區域法院暫委法官劉綺雲",
+      "parties": "香港特別行政區 訴 歐陽迪安",
+      "charge": "控罪: 在沒有按照香港法例第586章第5(1)條的規定下進口附錄I物種的標本（Importing specimens of Appendix I species otherwise than in accordance with the provisions of section 5(1)  of Cap. 586）",
+      "representations": "出席人士: 黃達明先生，為外聘大律師，代表香港特別行政區 黎匡晉先生，由廖廣志律師事務所延聘，代表被告人",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

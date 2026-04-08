@@ -1,0 +1,41 @@
+{
+  "count": 2,
+  "results": [
+    {
+      "title": "HKSAR V. KO KIN MING",
+      "path": "/en/cases/hkdc/2025/220",
+      "pub_date": "2025-02-06T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC1134/2023",
+      "neutral": "[2025] HKDC 220",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge M.H. Tsui",
+      "parties": "HKSAR v KO Kin-ming",
+      "charge": "Offence: Causing death by dangerous driving（危險駕駛引致他人死亡）",
+      "representations": "Present: Mr Trevor Beel, Counsel on Fiat, for HKSAR Mr David Boyton, instructed by Messrs Francis Kong & Co, for the defendant",
+      "remarks": ""
+    },
+    {
+      "title": "SECRETARY FOR JUSTICE V. KO KIN MING",
+      "path": "/en/cases/hkca/2025/674",
+      "pub_date": "2025-07-15T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC47/2025",
+      "neutral": "[2025] HKCA 674",
+      "parallel": "[2025] 4 HKLRD 296",
+      "coram": "Before: Hon Zervos JA in Court",
+      "parties": "BETWEEN Secretary for Justice Applicant and Ko Kin Ming (高健鳴) Respondent",
+      "charge": "",
+      "representations": "Ms Cherry Ho, SPP, of Department of Justice, for the applicant Mr David Boyton, instructed by Francis Kong & Co, for the respondent",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "LUSO INTERNATIONAL BANKING LTD V. SUMMI (GROUP) HOLDINGS LTD",
+      "path": "/en/cases/hkcfi/2021/906",
+      "pub_date": "2021-04-09T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA1167/2020",
+      "neutral": "[2021] HKCFI 906",
+      "parallel": "[2021] 4 HKC 272",
+      "coram": "Before:  Mr Recorder Eugene Fung SC in Chambers (Open to Public)",
+      "parties": "BETWEEN LUSO INTERNATIONAL BANKING LIMITED Plaintiff and SUMMI (GROUP) HOLDINGS LIMITED Defendant",
+      "charge": "",
+      "representations": "Ms Bonnie Y.K. Cheng, instructed by Deacons, for the plaintiff Mr Jacky Lam, instructed by Ling & Lawyers, for the defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

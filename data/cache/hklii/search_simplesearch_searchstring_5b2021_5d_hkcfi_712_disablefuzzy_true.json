@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "CHUNG SUN KWAN V. THE OFFICIAL RECEIVER",
+      "path": "/en/cases/hkcfi/2021/712",
+      "pub_date": "2021-03-22T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA2731/2015",
+      "neutral": "[2021] HKCFI 712",
+      "parallel": "[2021] 2 HKLRD 292",
+      "coram": "Before: Hon Ng J in Court",
+      "parties": "BETWEEN CHUNG SUN KWAN (鍾新坤) Plaintiff and THE OFFICIAL RECEIVER Defendant",
+      "charge": "",
+      "representations": "Mr Alan M S Ng, instructed by Fung, Wong, Ng & Lam LLP Solicitors, assigned by Director of Legal Aid, for the Plaintiff Mr Wilson Leung, instructed by the Department of Justice, for the Defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

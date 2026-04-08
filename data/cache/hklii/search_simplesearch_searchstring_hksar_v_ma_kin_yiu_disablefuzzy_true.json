@@ -1,0 +1,69 @@
+{
+  "count": 4,
+  "results": [
+    {
+      "title": "HKSAR V. CHAN SZE CHUN",
+      "path": "/en/cases/hkca/2025/1007",
+      "pub_date": "2025-11-06T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC171/2023",
+      "neutral": "[2025] HKCA 1007",
+      "parallel": "",
+      "coram": "Before: Hon Macrae VP in Court",
+      "parties": "BETWEEN HKSAR Respondent and Chan Sze Chun (陳子進) Applicant",
+      "charge": "",
+      "representations": "Mr Antony Leung SPP, of the Department of Justice, for the Respondent The Applicant appeared in person",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. CHAN SZE CHUN",
+      "path": "/en/cases/hkca/2025/870",
+      "pub_date": "2025-09-22T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC171/2023",
+      "neutral": "[2025] HKCA 870",
+      "parallel": "",
+      "coram": "Before: Hon Macrae VP in Court",
+      "parties": "BETWEEN HKSAR Respondent and Chan Sze Chun (陳子進) Applicant",
+      "charge": "",
+      "representations": "Mr Antony Leung SPP, of the Department of Justice, for the Respondent Mr Franco Kuan and Ms Manalie Chan, instructed by Leung Kin & Co., for the Applicant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. YIP KA YU",
+      "path": "/en/cases/hkca/2024/390",
+      "pub_date": "2024-05-09T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC185/2023",
+      "neutral": "[2024] HKCA 390",
+      "parallel": "",
+      "coram": "Before: Hon Zervos JA in Court",
+      "parties": "HKSAR Respondent v Yip Ka Yu (葉嘉宇) Applicant",
+      "charge": "",
+      "representations": "Mr Beney Wong, SADPP, of Department of Justice, for the respondent Mr Charles J Chan and Mr Brian Yu, instructed by Francis Kong & Co, for the applicant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. YIP KA YU",
+      "path": "/en/cases/hkca/2025/573",
+      "pub_date": "2025-06-19T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC185/2023",
+      "neutral": "[2025] HKCA 573",
+      "parallel": "[2025] 5 HKC 156; [2025] 3 HKLRD 611",
+      "coram": "Before: Hon Macrae VP, Zervos and Anthea Pang JJA in Court",
+      "parties": "BETWEEN HKSAR Respondent and Yip Ka Yu (葉嘉宇) Applicant",
+      "charge": "",
+      "representations": "Mr Beney Wong SADPP, of Department of Justice, for the Respondent Mr Charles J Chan and Mr Brian Yu, instructed by Francis Kong & Co, for the Applicant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

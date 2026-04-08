@@ -1,0 +1,41 @@
+{
+  "count": 2,
+  "results": [
+    {
+      "title": "HKSAR V. CHEUNG WING KIN",
+      "path": "/en/cases/hkdc/2024/398",
+      "pub_date": "2024-03-07T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC546/2023",
+      "neutral": "[2024] HKDC 398",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge KH Cheang in court",
+      "parties": "HKSAR V CHEUNG WING KIN",
+      "charge": "Offence: [1] & [2] Burglary（入屋犯法罪）",
+      "representations": "Present: Ms Chung Wing Sze, Natalie, Public Prosecutor, for HKSAR/Director of Public Prosecutions Mr Leung Hok Yuen, Andrew Christopher, instructed by Kwok, Ng & Chan, assigned by the Director of Legal Aid, for the defendant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. CHEUNG WING KIN",
+      "path": "/en/cases/hkca/2024/1023",
+      "pub_date": "2024-11-15T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC71/2024",
+      "neutral": "[2024] HKCA 1023",
+      "parallel": "",
+      "coram": "Before: Hon Zervos JA in Court",
+      "parties": "HKSAR Respondent v Cheung Wing Kin (張永健) Applicant",
+      "charge": "",
+      "representations": "Ms Lisa Go, SPP, of Department of Justice, for the respondent The applicant appeared in person",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

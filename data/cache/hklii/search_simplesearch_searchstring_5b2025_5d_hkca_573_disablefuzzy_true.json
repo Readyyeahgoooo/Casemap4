@@ -1,0 +1,69 @@
+{
+  "count": 4,
+  "results": [
+    {
+      "title": "HKSAR V. YIP KA YU",
+      "path": "/en/cases/hkca/2025/573",
+      "pub_date": "2025-06-19T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC185/2023",
+      "neutral": "[2025] HKCA 573",
+      "parallel": "[2025] 5 HKC 156; [2025] 3 HKLRD 611",
+      "coram": "Before: Hon Macrae VP, Zervos and Anthea Pang JJA in Court",
+      "parties": "BETWEEN HKSAR Respondent and Yip Ka Yu (葉嘉宇) Applicant",
+      "charge": "",
+      "representations": "Mr Beney Wong SADPP, of Department of Justice, for the Respondent Mr Charles J Chan and Mr Brian Yu, instructed by Francis Kong & Co, for the Applicant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. YIP KA YU",
+      "path": "/en/cases/hkca/2025/718",
+      "pub_date": "2025-07-30T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC185/2023",
+      "neutral": "[2025] HKCA 718",
+      "parallel": "",
+      "coram": "Before: Hon Macrae VP, Zervos and Anthea Pang JJA in Court",
+      "parties": "BETWEEN HKSAR Respondent and Yip Ka Yu (葉嘉宇) Appellant",
+      "charge": "",
+      "representations": "Mr Ira Lui ADPP, of Department of Justice, for the Respondent Mr Charles J Chan and Mr Brian Yu, instructed by Francis Kong & Co, for the Appellant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. LAM SIU FUNG, ANDY",
+      "path": "/en/cases/hkca/2025/826",
+      "pub_date": "2025-09-15T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC38/2022",
+      "neutral": "[2025] HKCA 826",
+      "parallel": "[2025] 5 HKLRD 649",
+      "coram": "Before: Hon Macrae VP, Zervos JA and K Yeung J in Court",
+      "parties": "BETWEEN HKSAR Respondent and LAM Siu-fung, Andy (林少峯) Applicant",
+      "charge": "",
+      "representations": "Mr Raymond Cheng, SADPP and Mr Lucas Lai, SPP (Ag.), of Department of Justice, for the respondent The applicant appeared in person",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 林俊一",
+      "path": "/tc/cases/hkdc/2025/1923",
+      "pub_date": "2025-12-11T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC234/2024",
+      "neutral": "[2025] HKDC 1923",
+      "parallel": "",
+      "coram": "主審法官: 區域法院暫委法官鍾偉強",
+      "parties": "香港特別行政區 訴 林俊一 被告人",
+      "charge": "控罪： [1] - [6]、[8]、[10] - [13]、[15] - [20] 猥褻侵犯另一人     (Indecent assault on another person) [7]、[9]、[14] 普通襲擊 (Common assault)",
+      "representations": "出席人士： 是香媛女士，為外聘律師，代表香港特別行政區 黃雋文先生及周俊軒先生，由易庭暉陳偉健律師事務所  延聘，代表被告人",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

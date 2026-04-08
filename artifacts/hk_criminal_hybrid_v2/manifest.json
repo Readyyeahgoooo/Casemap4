@@ -1,0 +1,31 @@
+{
+  "title": "Hong Kong Criminal Law Hierarchical Graph",
+  "generated_at": "2026-04-08T06:29:24.793208+00:00",
+  "node_count": 1129,
+  "edge_count": 3340,
+  "case_count": 766,
+  "statute_count": 253,
+  "topic_count": 43,
+  "lineage_count": 0,
+  "paragraph_count": 10,
+  "proposition_count": 10,
+  "enriched_case_count": 6,
+  "notes": [
+    "Hybrid hierarchical graph bundle generated from the Casemap relationship graph.",
+    "Hierarchy is represented explicitly as Module -> Subground -> Topic while authorities remain graph-native.",
+    "Neo4j constraints and import templates are included for database-backed deployment."
+  ],
+  "neo4j": {
+    "vector_dimensions": 1536,
+    "constraints_file": "neo4j_constraints.cypher",
+    "import_file": "neo4j_import.cypher"
+  },
+  "legal_domain": "criminal",
+  "domain_tags": [
+    "criminal"
+  ],
+  "viewer_heading_public": "Hong Kong Criminal Law Hierarchical Knowledge Graph",
+  "viewer_heading_internal": "Hong Kong Criminal Law Internal Hierarchy Explorer",
+  "viewer_intro_public": "A criminal-law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
+  "viewer_intro_internal": "This internal criminal-law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links."
+}

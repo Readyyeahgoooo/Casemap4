@@ -1,0 +1,44 @@
+{
+  "count": 2,
+  "results": [
+    {
+      "title": "CHUNG SUN KWAN V. THE OFFICIAL RECEIVER",
+      "path": "/en/cases/hkcfi/2021/712",
+      "pub_date": "2021-03-22T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA2731/2015",
+      "neutral": "[2021] HKCFI 712",
+      "parallel": "[2021] 2 HKLRD 292",
+      "coram": "Before: Hon Ng J in Court",
+      "parties": "BETWEEN CHUNG SUN KWAN (鍾新坤) Plaintiff and THE OFFICIAL RECEIVER Defendant",
+      "charge": "",
+      "representations": "Mr Alan M S Ng, instructed by Fung, Wong, Ng & Lam LLP Solicitors, assigned by Director of Legal Aid, for the Plaintiff Mr Wilson Leung, instructed by the Department of Justice, for the Defendant",
+      "remarks": ""
+    },
+    {
+      "title": "GURDAS SABHAGCHAND CHOITHRAMANI V. THE OFFICIAL RECEIVER AND TRUSTEE IN BANKRUPTCY OF GURDAS SABHAGCHAND CHOITHRAMANI (A DISCHARGED BANKRUPT)",
+      "path": "/en/cases/hkcfi/2024/356",
+      "pub_date": "2024-01-31T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA1548/2020",
+      "neutral": "[2024] HKCFI 356",
+      "parallel": "",
+      "coram": "Before: Hon Cheng J in Chambers",
+      "parties": "BETWEEN GURDAS SABHAGCHAND CHOITHRAMANI Plaintiff and THE OFFICIAL RECEIVER AND TRUSTEE IN BANKRUPTCY OF GURDAS SABHAGCHAND CHOITHRAMANI (A DISCHARGED BANKRUPT) Defendant",
+      "charge": "",
+      "representations": "Mr Mark Pierrepont of Hart Giles, for the Plaintiff Mr Christopher Chain SC leading Ms Sakinah Sat, instructed by Department of Justice, for the Defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "LEGIS",
+    "cap": null,
+    "suffix": null,
+    "prefix": "",
+    "title": null
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "count": 0,
+  "results": [],
+  "classification": {
+    "type": "ENTITY",
+    "entities": []
+  },
+  "recommendation": {
+    "message": "Exception occurred in handling search",
+    "data": []
+  }
+}

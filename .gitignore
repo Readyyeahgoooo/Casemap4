@@ -6,6 +6,9 @@ __pycache__/
 .vscode/
 .env
 .env.local
+Crim books/
+run_build.py
+/tmp/
 artifacts/*
 !artifacts/contract_big/
 !artifacts/contract_big/chunks.json
@@ -41,3 +44,17 @@ artifacts/*
 !artifacts/hybrid_graph/manifest.json
 !artifacts/hybrid_graph/neo4j_constraints.cypher
 !artifacts/hybrid_graph/neo4j_import.cypher
+!artifacts/hk_criminal_hybrid_v2/
+!artifacts/hk_criminal_hybrid_v2/hierarchical_graph.json
+!artifacts/hk_criminal_hybrid_v2/manifest.json
+!artifacts/hk_criminal_hybrid_v2/neo4j_constraints.cypher
+!artifacts/hk_criminal_hybrid_v2/neo4j_import.cypher
+!artifacts/hk_criminal_hybrid_v2/public_projection.json
+!artifacts/hk_criminal_relationship_v2/
+!artifacts/hk_criminal_relationship_v2/build_progress.json
+!artifacts/hk_criminal_relationship_v2/manifest.json
+!artifacts/hk_criminal_relationship_v2/monitor_report.html
+!artifacts/hk_criminal_relationship_v2/monitor_report.json
+!artifacts/hk_criminal_relationship_v2/relationship_graph.json
+!artifacts/hk_criminal_relationship_v2/relationship_map.html
+!artifacts/hk_criminal_relationship_v2/relationship_tree.html

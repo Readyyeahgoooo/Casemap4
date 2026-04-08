@@ -1,0 +1,72 @@
+{
+  "count": 4,
+  "results": [
+    {
+      "title": "香港特別行政區 訴 鄒幸彤",
+      "path": "/tc/cases/hkcfi/2026/1341",
+      "pub_date": "2026-03-04T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCCC155/2022",
+      "neutral": "[2026] HKCFI 1341",
+      "parallel": "",
+      "coram": "主審法官： 高等法院原訟法庭法官李運騰 高等法院原訟法庭法官陳仲衡 高等法院原訟法庭法官黎婉姫",
+      "parties": "答辯人 香港特別行政區 訴 申請人 鄒幸彤",
+      "charge": "",
+      "representations": "申請人：無律師代表，親自行事 答辯人：由律政司副刑事檢控專員黎嘉誼、助理刑事檢控專員張卓勤及高級檢控官吳加悅代表",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 鄒幸彤",
+      "path": "/tc/cases/hkmagc/2022/1",
+      "pub_date": "2022-01-04T00:00:00+08:00",
+      "db": "裁判法院",
+      "act": "WKCC2595/2021",
+      "neutral": "[2022] HKMagC 1",
+      "parallel": "",
+      "coram": "主審裁判官： 裁判官陳慧敏",
+      "parties": "香港特別行政區 訴 被告人 鄒幸彤",
+      "charge": "",
+      "representations": "控方：由律政司延聘大律師黃錦卿，代表香港特別行政區。 辯方：被告人沒有律師代表，親自應訊。",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. TONG YING KIT",
+      "path": "/en/cases/hkcfi/2021/2200",
+      "pub_date": "2021-07-27T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCCC280/2020",
+      "neutral": "[2021] HKCFI 2200",
+      "parallel": "[2021] 5 HKC 100 ",
+      "coram": "Before: Hon Toh, Anthea Pang and Wilson Chan JJ in Court",
+      "parties": "BETWEEN HKSAR and Tong Ying Kit (唐英傑) Defendant",
+      "charge": "",
+      "representations": "Mr Anthony Chau, DDPP (Ag) and Mr Ivan Cheung, SSP of the Department of Justice, for the HKSAR Mr C S Grossman, S C leading Mr Lau Wai-chung Lawrence, assigned by Director of Legal Aid and Ms Chan Pik-kei (Private) instructed by Bond Ng Solicitors, for the Defendant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. NG MAN YUEN AVERY AND OTHERS",
+      "path": "/en/cases/hkcfi/2020/2425",
+      "pub_date": "2020-09-17T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMA492/2019",
+      "neutral": "[2020] HKCFI 2425",
+      "parallel": "[2021] 2 HKLRD 1111; [2021] 2 HKC 318",
+      "coram": "Before: Hon Alex Lee J in Court",
+      "parties": "BETWEEN HKSAR Respondent and Ng Man Yuen Avery（吳文遠） 1 st Appellant Chau Dickson Ka Faat（周嘉發） 2 nd Appellant Cheng Pui Lun（鄭沛倫） 3 rd Appellant",
+      "charge": "",
+      "representations": "Mr. Raymond Cheng, Senior Assistant Director of Public Prosecutions and Miss Clara Ma, Senior Public Prosecutor (instructed by Department of Justice) for the respondent Mr. Douglas Kwok and Mr. Marco Li (instructed by JCC Cheung & Co.) for the 1 st Appellant Mr. Law Ka-sing (instructed by JCC Cheung & Co.) for the 2 nd Appellant Mr. Howard Tang (instructed by JCC Cheung & Co.) for the 3 rd Appellant Translated by the Judgment Translation Unit of the Judiciary and vetted by Ms. Jenny Chung, Solicitor.",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "LEGIS",
+    "cap": null,
+    "suffix": null,
+    "prefix": "",
+    "title": null
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

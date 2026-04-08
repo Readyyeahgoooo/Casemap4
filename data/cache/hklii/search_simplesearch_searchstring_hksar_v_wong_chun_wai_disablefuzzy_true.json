@@ -1,0 +1,55 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "title": "SECRETARY FOR JUSTICE V. KO KIN MING",
+      "path": "/en/cases/hkca/2025/674",
+      "pub_date": "2025-07-15T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC47/2025",
+      "neutral": "[2025] HKCA 674",
+      "parallel": "[2025] 4 HKLRD 296",
+      "coram": "Before: Hon Zervos JA in Court",
+      "parties": "BETWEEN Secretary for Justice Applicant and Ko Kin Ming (高健鳴) Respondent",
+      "charge": "",
+      "representations": "Ms Cherry Ho, SPP, of Department of Justice, for the applicant Mr David Boyton, instructed by Francis Kong & Co, for the respondent",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. KWOK TSUN NING",
+      "path": "/en/cases/hkca/2025/955",
+      "pub_date": "2025-10-30T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC160/2025",
+      "neutral": "[2025] HKCA 955",
+      "parallel": "[2025] 5 HKLRD 1048",
+      "coram": "Before: Hon M Poon JA in Chambers",
+      "parties": "HKSAR Applicant and KWOK TSUN NING Respondent",
+      "charge": "",
+      "representations": "Mr Jonathan Man, DPP(Ag.) of the Department of Justice, for the applicant Mr Lee Hung Sang Jacky, Solicitor Advocate of Johnnie Yam, Jacky Lee & Co, for the respondent",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. YIP CHING YIN",
+      "path": "/en/cases/hkdc/2021/548",
+      "pub_date": "2021-05-06T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC49/2021",
+      "neutral": "[2021] HKDC 548",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge David Cheung in Court",
+      "parties": "HKSAR v YIP CHING YIN",
+      "charge": "Offence: [1]  Dangerous driving (危險駕駛) [2]  Driving while disqualified (於取消駕駛資格期間駕駛) [3]  Using a motor vehicle without third party insurance (沒有第三者保險而使用汽車) [4]  Failing to display a valid vehicle licence (沒有展示有效車輛牌照)",
+      "representations": "Present: Mr Albert Cheung, Counsel on fiat, for HKSAR Ms Munira Moosdeen, instructed by Lo Chan & Leung, assigned by the Director of Legal Aid, for the defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

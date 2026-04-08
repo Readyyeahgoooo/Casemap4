@@ -1,0 +1,41 @@
+{
+  "count": 2,
+  "results": [
+    {
+      "title": "HKSAR V. GAMMON CONSTRUCTION LTD",
+      "path": "/en/cases/hkca/2021/185",
+      "pub_date": "2021-02-19T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "HCMA97/2019",
+      "neutral": "[2021] HKCA 185",
+      "parallel": "",
+      "coram": "Before: Hon Macrae VP, Zervos JA and Wong J in Court",
+      "parties": "BETWEEN HKSAR Respondent and Gammon Construction Limited Applicant (金門建築有限公司)",
+      "charge": "",
+      "representations": "Mr Man Tak Ho Jonathan SADPP and Mr Derek Lau SPP, of the Department of Justice, for the Respondent Mr Andrew Bruce SC and Mr Benny WH Lo, instructed by Mr Ashley Howlett of Gammon Construction Limited, for the Applicant",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 安保工程有限公司",
+      "path": "/tc/cases/hkcfi/2021/427",
+      "pub_date": "2021-03-11T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA62/2020",
+      "neutral": "[2021] HKCFI 427",
+      "parallel": "",
+      "coram": "主審法官 ： 高等法院原訟法庭暫委法官游德康",
+      "parties": "答辯人 香港特別行政區 訴 上訴人 安保工程有限公司",
+      "charge": "",
+      "representations": "上訴人：由翁宗榮律師行委派郭棟明資深大律師及方偉健大律師代表。 答辯人：由律政司助理刑事檢控專員陳淑儀女士代表。",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

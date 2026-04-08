@@ -1,0 +1,55 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "title": "HKSAR V. LAM SIU FUNG, ANDY",
+      "path": "/en/cases/hkca/2024/26",
+      "pub_date": "2024-01-15T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC38/2022",
+      "neutral": "[2024] HKCA 26",
+      "parallel": "",
+      "coram": "Before: Hon Zervos JA in Court",
+      "parties": "HKSAR Respondent v Lam Siu-fung, Andy Applicant",
+      "charge": "",
+      "representations": "Mr Ng Wing Kit, SPP (Ag), of Department of Justice, for the respondent Mr Phil Chau, SC and Mr Andrew Christopher Lau, instructed by K B Chau & Co, assigned by Director of Legal Aid, for the applicant",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. LAM SIU FUNG, ANDY",
+      "path": "/en/cases/hkca/2025/826",
+      "pub_date": "2025-09-15T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC38/2022",
+      "neutral": "[2025] HKCA 826",
+      "parallel": "[2025] 5 HKLRD 649",
+      "coram": "Before: Hon Macrae VP, Zervos JA and K Yeung J in Court",
+      "parties": "BETWEEN HKSAR Respondent and LAM Siu-fung, Andy (林少峯) Applicant",
+      "charge": "",
+      "representations": "Mr Raymond Cheng, SADPP and Mr Lucas Lai, SPP (Ag.), of Department of Justice, for the respondent The applicant appeared in person",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 葉家藝",
+      "path": "/tc/cases/hkcfi/2025/4803",
+      "pub_date": "2025-10-08T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCCC366/2023",
+      "neutral": "[2025] HKCFI 4803",
+      "parallel": "",
+      "coram": "主審法官: 高等法院原訟庭法官游德康",
+      "parties": "香港特別行政區 訴 被告人 葉家藝",
+      "charge": "",
+      "representations": "控方：由律政司高級檢控官莊文欣女士代表 被告人：由法援署委派趙司徒鄭律師事務所延聘方漢權大律師代表",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

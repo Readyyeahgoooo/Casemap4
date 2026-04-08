@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, datetime
 from html import escape
 from pathlib import Path
@@ -35,6 +36,31 @@ LEADING_CASE_PREFIX_RE = re.compile(
 
 def _normalize_label(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+
+
+_CAP_NUMBER_RE = re.compile(r"Cap\.?\s*(\d+)", re.IGNORECASE)
+
+
+def _hklii_legislation_url(label: str) -> str:
+    """Build an HKLII legislation URL from a statute label like 'Theft Ordinance (Cap. 210)'."""
+    match = _CAP_NUMBER_RE.search(label)
+    if match:
+        return f"https://www.hklii.hk/en/legis/ord/{match.group(1)}"
+    return ""
+
+
+def _normalize_statute_label(label: str) -> str:
+    """Remove noisy trailing text and normalize a statute label to 'Name (Cap. NNN)' form."""
+    match = _CAP_NUMBER_RE.search(label)
+    if not match:
+        return label.strip()
+    cap_num = match.group(1)
+    # Try to extract ordinance name before Cap reference
+    name_match = re.match(r"(.+?)\s*\(?\s*Cap\.?\s*\d+\s*\)?", label, re.IGNORECASE)
+    ordinance_name = name_match.group(1).strip().rstrip("(") if name_match else label[:label.find("Cap")].strip().rstrip("(")
+    if ordinance_name:
+        return f"{ordinance_name} (Cap. {cap_num})"
+    return f"Cap. {cap_num}"
 
 
 CURATED_CASE_OVERRIDES = {
@@ -677,9 +703,9 @@ def _authority_tree_payload(payload_nodes: list[dict], payload_edges: list[dict]
 def build_criminal_relationship_payload(
     source_paths: list[str | Path],
     title: str = "Hong Kong Criminal Law Relationship Graph",
-    per_query_limit: int = 6,
-    max_cases: int = 140,
-    max_textbook_case_fetches: int = 30,
+    per_query_limit: int = 8,
+    max_cases: int = 400,
+    max_textbook_case_fetches: int = 80,
     progress_callback=None,
 ) -> tuple[dict, list[dict], list[SourceDocument], list[Passage], list[HKLIICaseDocument], list[str]]:
     topic_catalog = _topic_catalog()
@@ -902,17 +928,20 @@ def build_criminal_relationship_payload(
                 }
             )
         for statute_label in statutes:
+            normalized_statute = _normalize_statute_label(statute_label)
+            hklii_legis_url = _hklii_legislation_url(statute_label)
+            statute_links = [{"label": "HKLII legislation", "url": hklii_legis_url}] if hklii_legis_url else []
             statute_node = add_node(
                 {
-                    "id": f"statute:{slugify(statute_label)[:80]}",
-                    "label": statute_label,
+                    "id": f"statute:{slugify(normalized_statute)[:80]}",
+                    "label": normalized_statute,
                     "type": "statute",
                     "summary": "Hong Kong legislation discussed in criminal-law secondary sources.",
                     "summary_en": "Hong Kong legislation discussed in criminal-law secondary sources.",
                     "references": [],
-                    "links": [],
+                    "links": statute_links,
                     "metrics": {},
-                    "keywords": top_keywords(statute_label),
+                    "keywords": top_keywords(normalized_statute),
                 }
             )
             latest_references = statute_mentions[_normalize_label(statute_label)][-1:]
@@ -940,24 +969,69 @@ def build_criminal_relationship_payload(
             fetched_case_count=len(case_documents),
             warning_count=len(crawler.warnings),
         )
+
+    # --- Separate curated overrides (instant, no network) from names that need search ---
+    needs_search: list[tuple[str, str]] = []  # (normalized_name, candidate_label)
     for normalized_case_name, mentions in textbook_fetch_candidates:
         if normalized_case_name in fetched_case_labels:
             continue
-        candidate_label = mentions[0]["case_name"]
         override = CURATED_CASE_OVERRIDES.get(normalized_case_name)
         if override and override.get("public_path"):
             textbook_fetch_paths.append(str(override["public_path"]))
             fetched_case_labels.add(normalized_case_name)
             if len(textbook_fetch_paths) >= max_textbook_case_fetches:
                 break
-            continue
-        results = crawler.simple_search(candidate_label, limit=1)
-        if not results:
-            continue
-        textbook_fetch_paths.append(results[0].path)
-        fetched_case_labels.add(normalized_case_name)
-        if len(textbook_fetch_paths) >= max_textbook_case_fetches:
-            break
+        else:
+            needs_search.append((normalized_case_name, mentions[0]["case_name"]))
+
+    # --- Parallel batch search for remaining textbook case names ---
+    # Use a higher worker count than crawl_paths (searches are lightweight HEAD-like API calls)
+    _BACKFILL_SEARCH_WORKERS = max(crawler.max_workers, 12)
+    remaining_budget = max(0, max_textbook_case_fetches - len(textbook_fetch_paths))
+    if needs_search and remaining_budget > 0:
+        # Over-query to fill budget after misses; sorted by frequency already
+        batch = needs_search[:remaining_budget * 3]
+        search_results: dict[str, list] = {}
+        completed_count = 0
+
+        def _search_one(item: tuple[str, str]) -> tuple[str, list]:
+            norm_name, label = item
+            return norm_name, crawler.simple_search(label, limit=1)
+
+        with ThreadPoolExecutor(max_workers=_BACKFILL_SEARCH_WORKERS) as _pool:
+            future_map = {_pool.submit(_search_one, item): item for item in batch}
+            for future in as_completed(future_map):
+                try:
+                    norm_name, results = future.result()
+                    search_results[norm_name] = results
+                except Exception as exc:
+                    crawler.warnings.append(f"Parallel textbook search failed: {exc}")
+                completed_count += 1
+                # Report progress every 10 completed searches so the monitor doesn't look stuck
+                if progress_callback and completed_count % 10 == 0:
+                    progress_callback(
+                        "backfilling_textbook_cases",
+                        f"Searching HKLII for textbook cases: {completed_count}/{len(batch)} searched, "
+                        f"{len(textbook_fetch_paths)} paths queued so far.",
+                        textbook_case_candidates=len(textbook_fetch_candidates),
+                        searches_completed=completed_count,
+                        searches_total=len(batch),
+                        paths_queued=len(textbook_fetch_paths),
+                        warning_count=len(crawler.warnings),
+                    )
+
+        # Collect results in original frequency order (batch is already ordered)
+        for normalized_case_name, _label in batch:
+            if len(textbook_fetch_paths) >= max_textbook_case_fetches:
+                break
+            if normalized_case_name in fetched_case_labels:
+                continue
+            results = search_results.get(normalized_case_name, [])
+            if not results:
+                continue
+            textbook_fetch_paths.append(results[0].path)
+            fetched_case_labels.add(normalized_case_name)
+
     if textbook_fetch_paths:
         case_documents.extend(crawler.crawl_paths(textbook_fetch_paths))
     if progress_callback:
@@ -1016,17 +1090,20 @@ def build_criminal_relationship_payload(
             add_edge(topic_id, case_id, "discusses_case", mentions=1)
             add_edge(HKLII_SOURCE_ID, topic_id, "covers_topic", mentions=1)
         for statute in case_doc.cited_statutes:
+            normalized_statute_label = _normalize_statute_label(statute.label)
+            hklii_legis = _hklii_legislation_url(statute.label) or statute.url
+            statute_links = [{"label": "HKLII legislation", "url": hklii_legis}] if hklii_legis else []
             statute_node = add_node(
                 {
-                    "id": f"statute:{slugify(statute.label)[:80]}",
-                    "label": statute.label,
+                    "id": f"statute:{slugify(normalized_statute_label)[:80]}",
+                    "label": normalized_statute_label,
                     "type": "statute",
                     "summary": "Hong Kong legislation cited in criminal-law judgments or textbooks.",
                     "summary_en": "Hong Kong legislation cited in criminal-law judgments or textbooks.",
                     "references": [],
-                    "links": [{"label": "HKLII legislation", "url": statute.url}],
+                    "links": statute_links,
                     "metrics": {},
-                    "keywords": top_keywords(statute.label),
+                    "keywords": top_keywords(normalized_statute_label),
                 }
             )
             statute_node.setdefault("references", []).append(
@@ -1147,8 +1224,10 @@ def build_criminal_graph_artifacts(
     relationship_output_dir: str | Path,
     hybrid_output_dir: str | Path | None = None,
     title: str = "Hong Kong Criminal Law Relationship Graph",
-    per_query_limit: int = 6,
-    max_cases: int = 140,
+    per_query_limit: int = 8,
+    max_cases: int = 400,
+    max_textbook_case_fetches: int = 80,
+    max_enrich: int = 80,
     embedding_backend: str = "auto",
     embedding_model: str = "",
     embedding_dimensions: int = 0,
@@ -1199,6 +1278,7 @@ def build_criminal_graph_artifacts(
         title=title,
         per_query_limit=per_query_limit,
         max_cases=max_cases,
+        max_textbook_case_fetches=max_textbook_case_fetches,
         progress_callback=update_progress,
     )
     update_progress(
@@ -1218,7 +1298,14 @@ def build_criminal_graph_artifacts(
             node_count=len(payload["nodes"]),
             edge_count=len(payload["edges"]),
         )
-        bundle = build_hierarchical_graph_bundle(payload, title=title.replace("Relationship", "Hierarchical"))
+        bundle = build_hierarchical_graph_bundle(
+            payload,
+            title=title.replace("Relationship", "Hierarchical"),
+            embedding_backend=embedding_backend,
+            embedding_model=embedding_model,
+            embedding_dimensions=embedding_dimensions,
+            max_enrich=max_enrich,
+        )
         write_hybrid_graph_artifacts(bundle, hybrid_output_dir)
 
     update_progress(

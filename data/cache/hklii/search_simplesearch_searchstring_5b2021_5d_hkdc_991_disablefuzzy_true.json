@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "HKSAR V. CHAN PAK KIT",
+      "path": "/en/cases/hkdc/2021/991",
+      "pub_date": "2021-08-11T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC117/2021",
+      "neutral": "[2021] HKDC 991",
+      "parallel": "",
+      "coram": "Before: HH Judge Dufton",
+      "parties": "HKSAR v CHAN PAK KIT",
+      "charge": "Offences: (1)  Falsely pretending to be a public officer (假冒公職人員) (2)  Indecent conduct towards a child under the age of 16 years (向年齡在16歲以下的兒童作出猥褻行為)",
+      "representations": "Present: Ms Angel Yuen, SPP (Ag.), of the Department of Justice, for HKSAR Mr Jonathan Midgley of Haldanes, for the defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

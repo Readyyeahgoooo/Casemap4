@@ -1,0 +1,13 @@
+{
+  "title": "Hong Kong Criminal Law Relationship Graph",
+  "updated_at": "2026-04-08T11:10:22.484772+00:00",
+  "status": "running",
+  "stage": "building_hybrid",
+  "message": "Building the hierarchical criminal-law explorer bundle.",
+  "percent": 88,
+  "refresh_seconds": 300,
+  "stats": {
+    "node_count": 1069,
+    "edge_count": 2716
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "count": 5,
+  "results": [
+    {
+      "title": "STANDARD CHARTERED BANK (HONG KONG) LTD V. SANJAY KHANDURI",
+      "path": "/en/cases/hkdc/2023/1007",
+      "pub_date": "2023-07-27T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCJ1068/2022",
+      "neutral": "[2023] HKDC 1007",
+      "parallel": "",
+      "coram": "Before: Master Raymond Ho in Chambers (Open to Public)",
+      "parties": "BETWEEN STANDARD CHARTERED BANK (HONG KONG) LIMITED Plaintiff and SANJAY KHANDURI Defendant",
+      "charge": "",
+      "representations": "Mr Isaac Chan, instructed by Tsang, Chan & Wong, for the plaintiff The defendant appeared in person",
+      "remarks": ""
+    },
+    {
+      "title": "汪裕祖 對 凌嘉勤 – 前規劃署署長",
+      "path": "/tc/cases/hkdc/2021/764",
+      "pub_date": "2021-06-24T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCJ2307/2019",
+      "neutral": "[2021] HKDC 764",
+      "parallel": "",
+      "coram": "主審法官 : 區域法院法官歐陽浩榮內庭聆訊(公開)",
+      "parties": "汪裕祖 原告人 訴 李啓榮 – 規劃署署長 被告人 -------------------------",
+      "charge": "",
+      "representations": "原告人無律師代表，親自應訊 被告人由律政司署理高級政府律師阮熙舜代表",
+      "remarks": ""
+    },
+    {
+      "title": "LEE PRISCILLA SIOK AI V. SECRETARY OF JUSTICE SUED FOR AND ON BEHALF OF DIRECTOR OF HIGHWAYS",
+      "path": "/en/cases/hkcfi/2022/1569",
+      "pub_date": "2022-05-27T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCPI129/2019",
+      "neutral": "[2022] HKCFI 1569",
+      "parallel": "",
+      "coram": "Before: Hon Au-Yeung J in Court",
+      "parties": "LEE PRISCILLA SIOK AI Plaintiff and SECRETARY OF JUSTICE sued for and on behalf of DIRECTOR OF HIGHWAYS Defendant",
+      "charge": "",
+      "representations": "Mr Charles Chan, instructed by Mohnani & Associates, for the Plaintiff Ms Carmen Siu, Senior Government Counsel of the Department of Justice, for the Defendant",
+      "remarks": ""
+    },
+    {
+      "title": "STANDARD CHARTERED BANK (HONG KONG) LTD V. KHANDURI SANJAY",
+      "path": "/en/cases/hkdc/2023/1446",
+      "pub_date": "2023-10-19T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCJ1068/2022",
+      "neutral": "[2023] HKDC 1446",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge G Chow in Chambers (Open to Public)",
+      "parties": "STANDARD CHARTERED BANK (HONG KONG) LIMITED Plaintiff and KHANDURI SANJAY Defendant",
+      "charge": "",
+      "representations": "Mr Wong C K Adrian, instructed by Tsang, Chan & Wong, for the plaintiff The defendant appeared in person",
+      "remarks": ""
+    },
+    {
+      "title": "CHUNG SUN KWAN V. THE OFFICIAL RECEIVER",
+      "path": "/en/cases/hkcfi/2021/712",
+      "pub_date": "2021-03-22T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA2731/2015",
+      "neutral": "[2021] HKCFI 712",
+      "parallel": "[2021] 2 HKLRD 292",
+      "coram": "Before: Hon Ng J in Court",
+      "parties": "BETWEEN CHUNG SUN KWAN (鍾新坤) Plaintiff and THE OFFICIAL RECEIVER Defendant",
+      "charge": "",
+      "representations": "Mr Alan M S Ng, instructed by Fung, Wong, Ng & Lam LLP Solicitors, assigned by Director of Legal Aid, for the Plaintiff Mr Wilson Leung, instructed by the Department of Justice, for the Defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

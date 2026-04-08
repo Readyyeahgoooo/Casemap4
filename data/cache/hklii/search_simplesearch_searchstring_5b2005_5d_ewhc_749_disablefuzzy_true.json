@@ -1,0 +1,100 @@
+{
+  "count": 6,
+  "results": [
+    {
+      "title": "SANTA MONICA EQUITY INC. V. CHRISTELLE FILA NZOLOLO",
+      "path": "/en/cases/hkcfi/2022/111",
+      "pub_date": "2022-01-06T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP214/2021",
+      "neutral": "[2022] HKCFI 111",
+      "parallel": "[2022] 1 HKLRD 752",
+      "coram": "Before: Hon Anthony Chan J in Court",
+      "parties": "IN THE MATTER OF an application by Santa Monica Equity Inc. (“the Applicant”) against Christelle Fila Nzololo (“the Respondent”) for an Order of Committal under Order 52, Rule 1 of the Rules of the High Court (Cap. 4A) _______________________ BETWEEN SANTA MONICA EQUITY INC. Applicant AND CHRISTELLE FILA NZOLOLO Respondent",
+      "charge": "",
+      "representations": "Mr John Han (solicitor advocate) of Kobre & Kim, for the Applicant The Respondent was not represented and did not appear",
+      "remarks": ""
+    },
+    {
+      "title": "CHAN KA HO ABRAHAM V. TUNG YIN LING CORA AND ANOTHER",
+      "path": "/en/cases/hkcfi/2023/1170",
+      "pub_date": "2023-04-28T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP103/2023",
+      "neutral": "[2023] HKCFI 1170",
+      "parallel": "",
+      "coram": "Before: Deputy High Court Judge H. Au-Yeung in Court",
+      "parties": "IN THE MATTER of an Application on behalf of CHAN Ka Ho Abraham against TUNG YIN LING CORA and YIK WAI SEE for an Order of Committal and IN THE MATTER of Order 52 Rules 1 and 3, Rules of the High Court (Cap.4A)",
+      "charge": "",
+      "representations": "Mr Jason Tang, instructed by Tso Au Yim & Yeung, for the plaintiff The 1 st and 2 nd defendants were not represented and did not appear",
+      "remarks": ""
+    },
+    {
+      "title": "SAIF PARTNERS II L.P. AND ANOTHER V. JOE ZHIXIONG ZHOU",
+      "path": "/en/cases/hkcfi/2021/727",
+      "pub_date": "2021-03-29T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP208/2020",
+      "neutral": "[2021] HKCFI 727",
+      "parallel": "",
+      "coram": "Before:  Hon Anthony Chan J in Court",
+      "parties": "IN THE MATTER OF an application by SAIF Partners II L.P. and SAIF II GP Capital Limited against Joe Zhixiong Zhou for Orders of Committal",
+      "charge": "",
+      "representations": "Mr Jason Pow SC and Mr Alexander Tang, instructed by Fangda Partners, for the 1 st and 2 nd Plaintiffs Mr Barrie Barlow SC and Mr Chan Pat Lun, instructed by MinterEllison LLP, for the Defendant",
+      "remarks": ""
+    },
+    {
+      "title": "JEANNY HELENA FRANSLAY V. FUNG ARIEL MEI SHAN",
+      "path": "/en/cases/hkcfi/2021/258",
+      "pub_date": "2021-01-29T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP1614/2019",
+      "neutral": "[2021] HKCFI 258",
+      "parallel": "",
+      "coram": "Before:  Hon G Lam J in Court",
+      "parties": "IN THE MATTER OF an application on behalf of JEANNY HELENA FRANSLAY against FUNG ARIEL MEI SHAN for an Order of Committal and IN THE MATTER OF Order 52 Rules 1 and 3 of the Rules of the High Court",
+      "charge": "",
+      "representations": "Mr Kenny Lin and Mr Ken Cheng, instructed by Myra Li & Co, for the Plaintiff Mr John Hui and Mr Tommy Cheung, instructed by Siao, Wen and Leung, for the Defendant",
+      "remarks": ""
+    },
+    {
+      "title": "MA CHING YEUNG PHILIP V. CHIN WAI YEE WINNIE",
+      "path": "/en/cases/hkfc/2023/198",
+      "pub_date": "2023-11-24T00:00:00+08:00",
+      "db": "Family Court",
+      "act": "FCMC11432/2018",
+      "neutral": "[2023] HKFC 198",
+      "parallel": "",
+      "coram": "Coram: Her Honour Judge Elaine Liu in Court",
+      "parties": "BETWEEN Ma Ching Yeung Philip Petitioner and Chin Wai Yee Winnie Respondent",
+      "charge": "",
+      "representations": "Mr. Jeffrey Li and Ms. Elizabeth Lee instructed by Rita Ku & Ser for the Petitioner. Ms. Anita Yip S.C. and Ms. Lily Yu instructed by Chaine Chow & Barbara Hung for the Respondent.",
+      "remarks": ""
+    },
+    {
+      "title": "K V. A",
+      "path": "/en/cases/hkcfi/2025/1024",
+      "pub_date": "2025-03-24T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP2186/2021",
+      "neutral": "[2025] HKCFI 1024",
+      "parallel": "",
+      "coram": "Before: Hon Winnie Tsui J in Chambers (not open to public)",
+      "parties": "IN THE MATTER of an application on behalf of the Applicant K against the Respondent A for an Order for Committal and IN THE MATTER of Order 52 Rules 1 & 3 of the Rules of the High Court",
+      "charge": "",
+      "representations": "Mr Felix Tam and Mr Kevin Leung, instructed by Oldham, Li & Nie, for the applicant Ms Audrey Eu, SC and Ms Ann Lee, instructed by ONC Lawyers, for the respondent",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "LEGIS",
+    "cap": null,
+    "suffix": null,
+    "prefix": "",
+    "title": null
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

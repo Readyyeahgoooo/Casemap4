@@ -136,6 +136,42 @@ CRIMINAL_AUTHORITY_TREE = [
                 ],
             },
             {
+                "id": "kidnapping_false_imprisonment",
+                "label_en": "Kidnapping and False Imprisonment",
+                "label_zh": "綁架與非法禁錮",
+                "summary_en": "Kidnapping, false imprisonment, and unlawful detention offences.",
+                "summary_zh": "綁架、非法禁錮及非法拘禁罪行。",
+                "topics": [
+                    {
+                        "id": "kidnapping",
+                        "label_en": "Kidnapping and False Imprisonment",
+                        "label_zh": "綁架與非法禁錮",
+                        "search_queries": ["kidnapping HKSAR criminal appeal", "false imprisonment HKSAR", "unlawful detention HKSAR criminal"],
+                    }
+                ],
+                "children": [
+                    {"en": "Kidnapping and false imprisonment", "zh": "綁架與非法禁錮"},
+                ],
+            },
+            {
+                "id": "intimidation_threats",
+                "label_en": "Intimidation and Criminal Threats",
+                "label_zh": "恐嚇與刑事威脅",
+                "summary_en": "Criminal intimidation, blackmail, and threatening behaviour.",
+                "summary_zh": "刑事恐嚇、勒索及威脅行為。",
+                "topics": [
+                    {
+                        "id": "criminal_intimidation",
+                        "label_en": "Criminal Intimidation and Blackmail",
+                        "label_zh": "刑事恐嚇與勒索",
+                        "search_queries": ["criminal intimidation HKSAR", "blackmail HKSAR criminal appeal", "threats to kill HKSAR"],
+                    }
+                ],
+                "children": [
+                    {"en": "Criminal intimidation and blackmail", "zh": "刑事恐嚇與勒索"},
+                ],
+            },
+            {
                 "id": "sexual_offences",
                 "label_en": "Sexual Offences",
                 "label_zh": "性罪行",
@@ -223,6 +259,60 @@ CRIMINAL_AUTHORITY_TREE = [
                     {"en": "Fraud and deception", "zh": "詐騙與欺騙"},
                 ],
             },
+            {
+                "id": "forgery_counterfeiting",
+                "label_en": "Forgery and Counterfeiting",
+                "label_zh": "偽造與假冒",
+                "summary_en": "Forgery of documents, counterfeiting, and related offences under Cap. 200.",
+                "summary_zh": "偽造文件、假冒及第200章相關罪行。",
+                "topics": [
+                    {
+                        "id": "forgery",
+                        "label_en": "Forgery and Counterfeiting",
+                        "label_zh": "偽造與假冒",
+                        "search_queries": ["forgery HKSAR criminal appeal", "using false instrument HKSAR", "counterfeiting HKSAR criminal"],
+                    }
+                ],
+                "children": [
+                    {"en": "Forgery and counterfeiting", "zh": "偽造與假冒"},
+                ],
+            },
+            {
+                "id": "handling_stolen_goods",
+                "label_en": "Handling Stolen Goods",
+                "label_zh": "處理贓物",
+                "summary_en": "Receiving and handling stolen property.",
+                "summary_zh": "收受及處理被盜財物。",
+                "topics": [
+                    {
+                        "id": "handling_stolen",
+                        "label_en": "Handling Stolen Goods",
+                        "label_zh": "處理贓物",
+                        "search_queries": ["handling stolen goods HKSAR", "receiving stolen property HKSAR criminal"],
+                    }
+                ],
+                "children": [
+                    {"en": "Handling stolen goods", "zh": "處理贓物"},
+                ],
+            },
+            {
+                "id": "criminal_damage",
+                "label_en": "Criminal Damage",
+                "label_zh": "刑事毀壞",
+                "summary_en": "Criminal damage, arson, and destruction of property under Cap. 60.",
+                "summary_zh": "刑事毀壞、縱火及第60章相關罪行。",
+                "topics": [
+                    {
+                        "id": "criminal_damage_arson",
+                        "label_en": "Criminal Damage and Arson",
+                        "label_zh": "刑事毀壞與縱火",
+                        "search_queries": ["criminal damage HKSAR appeal", "arson HKSAR criminal", "crimes ordinance cap 60 HKSAR"],
+                    }
+                ],
+                "children": [
+                    {"en": "Criminal damage and arson", "zh": "刑事毀壞與縱火"},
+                ],
+            },
         ],
     },
     {
@@ -284,6 +374,60 @@ CRIMINAL_AUTHORITY_TREE = [
                 ],
                 "children": [
                     {"en": "Bribery and public office misconduct", "zh": "賄賂與公職失當"},
+                ],
+            },
+            {
+                "id": "money_laundering",
+                "label_en": "Money Laundering",
+                "label_zh": "洗黑錢",
+                "summary_en": "Money laundering, dealing with proceeds of crime under OSCO (Cap. 455) and DTROP (Cap. 405).",
+                "summary_zh": "洗黑錢、處理犯罪得益（第455章及第405章）。",
+                "topics": [
+                    {
+                        "id": "money_laundering",
+                        "label_en": "Money Laundering",
+                        "label_zh": "洗黑錢",
+                        "search_queries": ["money laundering HKSAR appeal", "organized serious crimes ordinance cap 455 HKSAR", "dealing with proceeds crime HKSAR"],
+                    }
+                ],
+                "children": [
+                    {"en": "Money laundering and proceeds of crime", "zh": "洗黑錢與犯罪得益"},
+                ],
+            },
+            {
+                "id": "computer_crimes",
+                "label_en": "Computer Crimes",
+                "label_zh": "電腦罪行",
+                "summary_en": "Unauthorised access to computers, online fraud, and technology-related offences.",
+                "summary_zh": "未經授權取用電腦、網絡欺詐及科技相關罪行。",
+                "topics": [
+                    {
+                        "id": "computer_crimes",
+                        "label_en": "Computer Crimes",
+                        "label_zh": "電腦罪行",
+                        "search_queries": ["access to computer with criminal intent HKSAR", "section 161 crimes ordinance HKSAR", "computer crime hong kong criminal"],
+                    }
+                ],
+                "children": [
+                    {"en": "Unauthorised computer access and online fraud", "zh": "未經授權取用電腦與網絡詐騙"},
+                ],
+            },
+            {
+                "id": "tax_evasion",
+                "label_en": "Tax Evasion",
+                "label_zh": "逃稅",
+                "summary_en": "Tax evasion and related offences under the Inland Revenue Ordinance (Cap. 112).",
+                "summary_zh": "逃稅及《稅務條例》（第112章）相關罪行。",
+                "topics": [
+                    {
+                        "id": "tax_evasion",
+                        "label_en": "Tax Evasion",
+                        "label_zh": "逃稅",
+                        "search_queries": ["tax evasion HKSAR criminal", "inland revenue ordinance cap 112 HKSAR", "wilful tax evasion hong kong"],
+                    }
+                ],
+                "children": [
+                    {"en": "Tax evasion offences", "zh": "逃稅罪行"},
                 ],
             },
         ],
@@ -419,6 +563,60 @@ CRIMINAL_AUTHORITY_TREE = [
                     {"en": "Investigative powers and fairness", "zh": "調查權與程序公平"},
                 ],
             },
+            {
+                "id": "expert_evidence",
+                "label_en": "Expert Evidence",
+                "label_zh": "專家證據",
+                "summary_en": "Admissibility and reliability of expert evidence in criminal proceedings.",
+                "summary_zh": "刑事訴訟中專家證據的可接納性及可靠性。",
+                "topics": [
+                    {
+                        "id": "expert_evidence",
+                        "label_en": "Expert Evidence",
+                        "label_zh": "專家證據",
+                        "search_queries": ["expert evidence HKSAR criminal", "expert witness admissibility HKSAR", "forensic evidence HKSAR criminal"],
+                    }
+                ],
+                "children": [
+                    {"en": "Expert evidence admissibility", "zh": "專家證據可接納性"},
+                ],
+            },
+            {
+                "id": "character_bad_acts",
+                "label_en": "Character and Similar Fact Evidence",
+                "label_zh": "品格與類似事實證據",
+                "summary_en": "Character evidence, similar fact evidence, and propensity reasoning.",
+                "summary_zh": "品格證據、類似事實證據及傾向推理。",
+                "topics": [
+                    {
+                        "id": "character_evidence",
+                        "label_en": "Character and Similar Fact Evidence",
+                        "label_zh": "品格與類似事實證據",
+                        "search_queries": ["similar fact evidence HKSAR criminal", "character evidence HKSAR", "propensity evidence criminal HKSAR"],
+                    }
+                ],
+                "children": [
+                    {"en": "Character and similar fact evidence", "zh": "品格與類似事實證據"},
+                ],
+            },
+            {
+                "id": "bail_remand",
+                "label_en": "Bail and Remand",
+                "label_zh": "保釋與還柙",
+                "summary_en": "Bail applications, conditions, and remand in custody.",
+                "summary_zh": "保釋申請、條件及還柙羈押。",
+                "topics": [
+                    {
+                        "id": "bail",
+                        "label_en": "Bail and Remand",
+                        "label_zh": "保釋與還柙",
+                        "search_queries": ["bail HKSAR criminal", "remand custody HKSAR", "bail application criminal HKSAR"],
+                    }
+                ],
+                "children": [
+                    {"en": "Bail and remand", "zh": "保釋與還柙"},
+                ],
+            },
         ],
     },
     {
@@ -528,6 +726,73 @@ CRIMINAL_AUTHORITY_TREE = [
                     {"en": "Unnecessary suffering and cruelty", "zh": "不必要痛苦與虐待"},
                     {"en": "Neglect and abandonment", "zh": "疏忽及遺棄"},
                     {"en": "Sentencing for animal cruelty", "zh": "虐待動物量刑"},
+                ],
+            },
+            {
+                "id": "road_traffic",
+                "label_en": "Road Traffic Offences",
+                "label_zh": "道路交通罪行",
+                "summary_en": "Dangerous driving, drink driving, and causing death by dangerous driving under Cap. 374.",
+                "summary_zh": "危險駕駛、醉酒駕駛及因危險駕駛引致死亡（第374章）。",
+                "topics": [
+                    {
+                        "id": "dangerous_driving",
+                        "label_en": "Dangerous Driving and Road Traffic Offences",
+                        "label_zh": "危險駕駛與道路交通罪行",
+                        "search_queries": [
+                            "dangerous driving HKSAR appeal",
+                            "causing death by dangerous driving HKSAR",
+                            "drink driving HKSAR criminal",
+                            "road traffic ordinance cap 374 HKSAR",
+                        ],
+                    }
+                ],
+                "children": [
+                    {"en": "Dangerous driving and drink driving", "zh": "危險駕駛及醉駕"},
+                ],
+            },
+            {
+                "id": "environmental_offences",
+                "label_en": "Environmental Offences",
+                "label_zh": "環境罪行",
+                "summary_en": "Pollution, waste dumping, and environmental protection offences.",
+                "summary_zh": "污染、廢物傾倒及環境保護罪行。",
+                "topics": [
+                    {
+                        "id": "environmental_crimes",
+                        "label_en": "Environmental Offences",
+                        "label_zh": "環境罪行",
+                        "search_queries": [
+                            "water pollution HKSAR criminal",
+                            "waste disposal ordinance HKSAR prosecution",
+                            "environmental protection HKSAR criminal",
+                        ],
+                    }
+                ],
+                "children": [
+                    {"en": "Pollution and environmental protection", "zh": "污染與環保"},
+                ],
+            },
+            {
+                "id": "occupational_safety",
+                "label_en": "Occupational Safety Offences",
+                "label_zh": "職業安全罪行",
+                "summary_en": "Industrial safety offences, construction-site fatalities, and employer liability.",
+                "summary_zh": "工業安全罪行、工地死亡事故及僱主責任。",
+                "topics": [
+                    {
+                        "id": "workplace_safety",
+                        "label_en": "Occupational Safety Offences",
+                        "label_zh": "職業安全罪行",
+                        "search_queries": [
+                            "occupational safety HKSAR prosecution",
+                            "factories and industrial undertakings HKSAR",
+                            "construction site fatality HKSAR criminal",
+                        ],
+                    }
+                ],
+                "children": [
+                    {"en": "Occupational safety and employer liability", "zh": "職業安全與僱主責任"},
                 ],
             },
         ],

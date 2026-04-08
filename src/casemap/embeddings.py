@@ -25,6 +25,13 @@ class EmbeddingBackend:
     def embed_documents(self, texts: list[str]) -> list[list[float]]:
         raise NotImplementedError
 
+    def embed(self, text: str) -> list[float]:
+        content = (text or "").strip()
+        if not content:
+            return []
+        vectors = self.embed_documents([content])
+        return vectors[0] if vectors else []
+
     def manifest(self) -> dict:
         return {
             "backend": self.name,

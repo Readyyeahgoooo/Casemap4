@@ -63,12 +63,17 @@ def build_hybrid_graph_command(args: argparse.Namespace) -> int:
         graph_path=args.graph,
         output_dir=args.output_dir,
         title=args.title,
+        embedding_backend=args.embedding_backend,
+        embedding_model=args.embedding_model,
+        embedding_dimensions=args.embedding_dimensions,
     )
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0
 
 
 def build_criminal_graph_command(args: argparse.Namespace) -> int:
+    for candidate in args.env_file:
+        load_env_file(candidate)
     manifest = build_criminal_graph_artifacts(
         source_paths=args.source,
         relationship_output_dir=args.output_dir,
@@ -76,6 +81,8 @@ def build_criminal_graph_command(args: argparse.Namespace) -> int:
         title=args.title,
         per_query_limit=args.per_query_limit,
         max_cases=args.max_cases,
+        max_textbook_case_fetches=args.max_textbook_case_fetches,
+        max_enrich=args.max_enrich,
         embedding_backend=args.embedding_backend,
         embedding_model=args.embedding_model,
         embedding_dimensions=args.embedding_dimensions,
@@ -178,6 +185,22 @@ def parser() -> argparse.ArgumentParser:
         default="Casemap Hybrid Hierarchical Graph",
         help="Display title for the generated hybrid graph bundle",
     )
+    hybrid_parser.add_argument(
+        "--embedding-backend",
+        default="auto",
+        help="Embedding backend to use for summary vectors: auto, local-hash, sentence-transformers, or openai",
+    )
+    hybrid_parser.add_argument(
+        "--embedding-model",
+        default="",
+        help="Optional model override for the selected embedding backend",
+    )
+    hybrid_parser.add_argument(
+        "--embedding-dimensions",
+        type=int,
+        default=0,
+        help="Optional embedding dimension override when supported by the chosen backend",
+    )
     hybrid_parser.set_defaults(func=build_hybrid_graph_command)
 
     criminal_parser = subparsers.add_parser(
@@ -201,8 +224,26 @@ def parser() -> argparse.ArgumentParser:
         default="Hong Kong Criminal Law Relationship Graph",
         help="Display title for the generated criminal-law graph",
     )
-    criminal_parser.add_argument("--per-query-limit", type=int, default=6, help="Maximum HKLII case hits to retain per seeded topic query")
-    criminal_parser.add_argument("--max-cases", type=int, default=140, help="Upper bound on HKLII case documents to fetch")
+    criminal_parser.add_argument("--per-query-limit", type=int, default=8, help="Maximum HKLII case hits to retain per seeded topic query")
+    criminal_parser.add_argument("--max-cases", type=int, default=400, help="Upper bound on HKLII case documents to fetch")
+    criminal_parser.add_argument(
+        "--max-textbook-case-fetches",
+        type=int,
+        default=80,
+        help="Upper bound on HKLII backfill fetches triggered by textbook case mentions",
+    )
+    criminal_parser.add_argument(
+        "--max-enrich",
+        type=int,
+        default=80,
+        help="Maximum number of cases to auto-enrich via HKLII + LLM (requires DEEPSEEK_API_KEY or OPENROUTER_API_KEY)",
+    )
+    criminal_parser.add_argument(
+        "--env-file",
+        action="append",
+        default=[".env.local", ".env"],
+        help="Env file to load before building. Repeat to add more files.",
+    )
     criminal_parser.add_argument(
         "--embedding-backend",
         default="auto",

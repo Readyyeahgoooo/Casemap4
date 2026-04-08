@@ -1,0 +1,90 @@
+{
+  "count": 6,
+  "results": [
+    {
+      "cap_version": "2006-03-16T00:00:00",
+      "title": "REGISTRATION OF PERSONS (APPLICATION FOR NEW IDENTITY CARDS) ORDER Section 2 Interpretation",
+      "subtitle": "Cap 177E Section 2",
+      "path": "/en/legis/reg/177E/s2",
+      "pub_date": "2004-07-01T00:00:00",
+      "db": "Hong Kong Regulations"
+    },
+    {
+      "title": "LUSO INTERNATIONAL BANKING LTD V. SUMMI (GROUP) HOLDINGS LTD",
+      "path": "/en/cases/hkcfi/2021/906",
+      "pub_date": "2021-04-09T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA1167/2020",
+      "neutral": "[2021] HKCFI 906",
+      "parallel": "[2021] 4 HKC 272",
+      "coram": "Before:  Mr Recorder Eugene Fung SC in Chambers (Open to Public)",
+      "parties": "BETWEEN LUSO INTERNATIONAL BANKING LIMITED Plaintiff and SUMMI (GROUP) HOLDINGS LIMITED Defendant",
+      "charge": "",
+      "representations": "Ms Bonnie Y.K. Cheng, instructed by Deacons, for the plaintiff Mr Jacky Lam, instructed by Ling & Lawyers, for the defendant",
+      "remarks": ""
+    },
+    {
+      "title": "HOMEBRIDGE INDUSTRIAL LTD V. GIMAN INTERNATIONAL LTD",
+      "path": "/en/cases/hkdc/2025/378",
+      "pub_date": "2025-03-20T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCJ710/2022",
+      "neutral": "[2025] HKDC 378",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge Walker Sham in Court",
+      "parties": "HOMEBRIDGE INDUSTRIAL LIMITED Plaintiff and GIMAN INTERNATIONAL LIMITED Defendant",
+      "charge": "",
+      "representations": "Ms Josephine Tjia, instructed by A Lee & Partners, for the Plaintiff The Defendant was not represented and did not appear",
+      "remarks": ""
+    },
+    {
+      "title": "RE FREEMAN FINTECH CORPORATION LTD",
+      "path": "/en/cases/hkcfi/2021/310",
+      "pub_date": "2021-02-02T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMP2304/2020",
+      "neutral": "[2021] HKCFI 310",
+      "parallel": "[2021] HKCLC 159; [2021] 1 HKLRD 1178",
+      "coram": "Before: Hon Harris J in Court",
+      "parties": "IN THE MATTER of Freeman Fintech Corporation Limited (stock code: 279) and IN THE MATTER of section 670, 671, 673 and 674 of the Companies Ordinance, Chapter 622 of the Laws of the Hong Kong Special Administrative Region",
+      "charge": "",
+      "representations": "Mr James Wood, instructed by P C Woo & Co, for the joint and several provisional liquidators",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. LEE CHUNG MANUEL LUIS",
+      "path": "/en/cases/hkcfi/2021/2759",
+      "pub_date": "2021-02-01T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCCC260/2020",
+      "neutral": "[2021] HKCFI 2759",
+      "parallel": "",
+      "coram": "Before: DHCJ Andrew Bruce, SC",
+      "parties": "HKSAR v Lee Chung Manuel Luis",
+      "charge": "Offence: Trafficking in dangerous drugs (販運危險藥物)",
+      "representations": "Present: Mr Raymond Chan Hing-man, PP of the Department of Justice, for HKSAR Mrs Lisa D’Alamada Remedios, instructed by K Y Woo & Co, assigned by DLA, for the accused",
+      "remarks": ""
+    },
+    {
+      "title": "KSLT ALSO KNOWN AS TKSL V. LXZ ALSO KNOWN AS ZLX",
+      "path": "/en/cases/hkfc/2025/66",
+      "pub_date": "2025-04-01T00:00:00+08:00",
+      "db": "Family Court",
+      "act": "FCMC6021/2022",
+      "neutral": "[2025] HKFC 66",
+      "parallel": "",
+      "coram": "Coram: Her Honour Judge Thelma Kwan in Chambers (not open to public)",
+      "parties": "BETWEEN KSLT Petitioner also known as TKSL and LXZ Respondent also known as ZLX",
+      "charge": "",
+      "representations": "Petitioner represented by Ms Mairead Rattigan SC instructed by Messrs Rita Ku & Ser Respondent represented by Ms Frances Irving and Mr Felix Li instructed by Messrs Fairbairn Catley Low & Kong",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "COMPLICATED"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

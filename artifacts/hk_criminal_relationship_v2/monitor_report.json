@@ -1,0 +1,85 @@
+{
+  "title": "Hong Kong Criminal Law Relationship Graph",
+  "generated_at": "2026-04-08T06:29:27.515176+00:00",
+  "case_count": 764,
+  "topic_count": 43,
+  "uncovered_topics": [],
+  "low_coverage_topics": [
+    {
+      "topic_id": "topic:evidence_procedure:29:confessions",
+      "label_en": "Confessions",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:evidence_procedure:30:identification_evidence",
+      "label_en": "Identification Evidence",
+      "case_count": 2
+    },
+    {
+      "topic_id": "topic:regulatory_and_welfare_offences:43:occupational_safety_offences",
+      "label_en": "Occupational Safety Offences",
+      "case_count": 2
+    }
+  ],
+  "cases_missing_principles": [
+    "[2021] HKDC 315",
+    "[2021] HKDC 1178",
+    "[2022] HKDC 1083",
+    "[2023] HKDC 218",
+    "[2023] HKDC 1588",
+    "[2018] HKCA 159",
+    "[2024] HKDC 315",
+    "[2024] HKDC 398",
+    "[2008] HKCU 932",
+    "HKSAR v. CHAN SUNG WING",
+    "[1984] HKLR 247",
+    "LO KWONG YIN v. HKSAR",
+    "HKSAR v. CHAN KAM SHING",
+    "[2016] HCA 30",
+    "[2012] QB 160",
+    "[1975] QB 773",
+    "[2003] UKPC 10",
+    "[1997] LQR 453",
+    "[1954] AC 378",
+    "[1989] QB 775",
+    "HKSAR v. CHAN MAN-SUM, IVAN",
+    "[2021] HKCFI 2833",
+    "[2019] HKCFA 2",
+    "[2018] HKCFA 36",
+    "[2020] HKCA 516",
+    "[1996] AC 1",
+    "[2013] NICA 23",
+    "[2020] HKCFI 2425",
+    "[1980] HKLR 466",
+    "[1974] AC 104"
+  ],
+  "warnings": [
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=prevention+of+bribery+ordinance+HKSAR+criminal&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'prevention of bribery ordinance HKSAR criminal': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=criminal+hearsay+ordinance+HKSAR&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'criminal hearsay ordinance HKSAR': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=confiscation+order+HKSAR+criminal&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'confiscation order HKSAR criminal': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=animal+welfare+ordinance+hong+kong&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'animal welfare ordinance hong kong': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=waste+disposal+ordinance+HKSAR+prosecution&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'waste disposal ordinance HKSAR prosecution': HTTP Error 500: Internal Server Error"
+  ],
+  "storage": {
+    "embedding_record_count": 1058,
+    "embedding_dimensions": 256,
+    "embedding_backend": {
+      "backend": "local-hash",
+      "model": "deterministic-token-hash",
+      "dimensions": 256
+    },
+    "chroma_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_criminal_relationship_v2/chroma_records.json",
+    "supabase_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_criminal_relationship_v2/supabase_export.sql",
+    "hybrid_bundle_written": true
+  },
+  "next_actions": [
+    "Run a second HKLII crawl on the uncovered topics using more specific offence or doctrine queries.",
+    "Feed uncovered topics into NotebookLM or a DeepSeek/OpenRouter enrichment pass if an MCP or API becomes available.",
+    "Review the low-coverage topics before promoting this graph as a full-production criminal-law map."
+  ]
+}

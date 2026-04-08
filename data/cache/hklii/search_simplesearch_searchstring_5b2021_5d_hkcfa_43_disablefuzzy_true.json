@@ -1,0 +1,69 @@
+{
+  "count": 4,
+  "results": [
+    {
+      "title": "HKSAR V. CHAN KAM CHING (陳鑑清)",
+      "path": "/en/cases/hkcfa/2021/43",
+      "pub_date": "2021-12-13T00:00:00+08:00",
+      "db": "Court of Final Appeal",
+      "act": "FAMC7/2021",
+      "neutral": "[2021] HKCFA 43",
+      "parallel": "",
+      "coram": "Appeal Committee: Mr Justice Ribeiro PJ, Mr Justice Lam PJ and\nMr Justice Stock NPJ",
+      "parties": "BETWEEN HKSAR Respondent and CHAN KAM CHING (陳鑑清) Applicant",
+      "charge": "",
+      "representations": "Ms Maggie Wong SC and Ms Karry Lau, instructed by Chui & Lau, for the Applicant Ms Virginia Lau, SADPP and Ms Sabra Lo, SPP of the Department of Justice, for the Respondent",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. CHAN KAM CHING",
+      "path": "/en/cases/hkcfa/2022/13",
+      "pub_date": "2022-06-22T00:00:00+08:00",
+      "db": "Court of Final Appeal",
+      "act": "FACC10/2021",
+      "neutral": "[2022] HKCFA 13",
+      "parallel": " [2022] 5 HKC 464 ; (2022) 25 HKCFAR 181",
+      "coram": "Before: Chief Justice Cheung, Mr Justice Ribeiro PJ,\nMr Justice Fok PJ, Mr Justice Lam PJ and\nLord Phillips of Worth Matravers NPJ",
+      "parties": "BETWEEN HKSAR Respondent and CHAN KAM CHING (陳鑑清) Appellant",
+      "charge": "",
+      "representations": "Written submissions by Mr David Perry QC, Ms Maggie Wong SC and Ms Karry Lau, instructed by Chui & Lau, for the Appellant Written submissions by Ms Maggie Yang, DPP, Mr Derek Lau, SADPP (Ag) and Ms Sabra Lo, SPP, of the Department of Justice, for the Respondent",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. CHAN KAM CHING (陳鑑清) ",
+      "path": "/en/cases/hkcfa/2022/7",
+      "pub_date": "2022-04-14T00:00:00+08:00",
+      "db": "Court of Final Appeal",
+      "act": "FACC10/2021",
+      "neutral": "[2022] HKCFA 7",
+      "parallel": "[2022] 4 HKC 276 ; (2022) 25 HKCFAR 48",
+      "coram": "Before: Chief Justice Cheung, Mr Justice Ribeiro PJ, Mr Justice Fok PJ, Mr Justice Lam PJ and Lord Phillips of Worth Matravers NPJ",
+      "parties": "BETWEEN HKSAR Respondent and CHAN KAM CHING (陳鑑清) Appellant",
+      "charge": "",
+      "representations": "Mr David Perry QC, Ms Maggie Wong SC and Ms Karry Lau, instructed by Chui & Lau, for the Appellant Ms Maggie Yang, DPP, Mr Derek Lau, SADPP (Ag) and Ms Sabra Lo, SPP, of the Department of Justice, for the Respondent",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 陳鑑清",
+      "path": "/tc/cases/hkcfa/2022/7",
+      "pub_date": "2022-04-14T00:00:00+08:00",
+      "db": "終審法院",
+      "act": "FACC10/2021",
+      "neutral": "[2022] HKCFA 7",
+      "parallel": "",
+      "coram": "主審法官： 終審法院首席法官張舉能 終審法院常任法官李義 終審法院常任法官霍兆剛 終審法院常任法官林文瀚 終審法院非常任法官范理申勳爵",
+      "parties": "答辯人 香港特別行政區 訴 上訴人 陳鑑清",
+      "charge": "",
+      "representations": "御用大律師David Perry先生、資深大律師黃佩琪女士及大律師劉穎欣女士（由徐伯鳴劉永強律師行延聘）代表上訴人 律政司刑事檢控專員楊美琪女士、署理高級助理刑事檢控專員劉德偉先生及高級檢控官盧萃瑩女士代表答辯人",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

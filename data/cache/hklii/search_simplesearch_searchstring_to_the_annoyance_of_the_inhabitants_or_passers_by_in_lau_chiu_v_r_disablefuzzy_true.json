@@ -1,0 +1,20 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "cap_version": "2022-12-15T00:00:00",
+      "title": "Summary Offences Ordinance Section 4 Nuisances committed in public places, etc.",
+      "subtitle": "Cap 228 Section 4",
+      "path": "/en/legis/ord/228/s4",
+      "pub_date": "2022-07-01T00:00:00",
+      "db": "Hong Kong Ordinances"
+    }
+  ],
+  "classification": {
+    "type": "COMPLICATED"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

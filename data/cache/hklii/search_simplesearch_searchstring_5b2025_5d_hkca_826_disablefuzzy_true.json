@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "HKSAR V. LAM SIU FUNG, ANDY",
+      "path": "/en/cases/hkca/2025/826",
+      "pub_date": "2025-09-15T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC38/2022",
+      "neutral": "[2025] HKCA 826",
+      "parallel": "[2025] 5 HKLRD 649",
+      "coram": "Before: Hon Macrae VP, Zervos JA and K Yeung J in Court",
+      "parties": "BETWEEN HKSAR Respondent and LAM Siu-fung, Andy (林少峯) Applicant",
+      "charge": "",
+      "representations": "Mr Raymond Cheng, SADPP and Mr Lucas Lai, SPP (Ag.), of Department of Justice, for the respondent The applicant appeared in person",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

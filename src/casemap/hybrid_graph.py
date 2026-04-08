@@ -7,6 +7,7 @@ import json
 import math
 import os
 import re
+import ssl
 from urllib import error as urllib_error
 from urllib import parse as urllib_parse
 from urllib import request as urllib_request
@@ -183,6 +184,48 @@ CRIMINAL_QUERY_HINTS = {
     "insanity": ["insanity defence hong kong criminal", "mental disorder HKSAR"],
     "duress": ["duress defence hong kong criminal"],
     "intoxication": ["intoxication defence hong kong criminal", "voluntary intoxication HKSAR"],
+    # Kidnapping and false imprisonment
+    "kidnap": ["kidnapping hong kong criminal", "false imprisonment HKSAR"],
+    "kidnapping": ["kidnapping hong kong criminal", "abduction HKSAR"],
+    "imprison": ["false imprisonment hong kong criminal"],
+    "detention": ["unlawful detention hong kong criminal"],
+    # Intimidation and threats
+    "intimidat": ["criminal intimidation hong kong", "intimidation offence HKSAR"],
+    "blackmail": ["blackmail extortion hong kong criminal", "criminal intimidation HKSAR"],
+    "threat": ["criminal threats hong kong", "threats to kill HKSAR"],
+    # Forgery
+    "forgery": ["forgery hong kong criminal", "using false instrument HKSAR"],
+    "counterfeit": ["counterfeiting hong kong criminal"],
+    "forging": ["forgery document hong kong criminal"],
+    # Criminal damage and arson
+    "arson": ["arson hong kong criminal", "criminal damage fire HKSAR"],
+    "damage": ["criminal damage hong kong", "crimes ordinance cap 60 HKSAR"],
+    # Computer crime
+    "computer": ["computer crime hong kong criminal", "section 161 crimes ordinance HKSAR"],
+    "hacking": ["unauthorised access computer hong kong criminal"],
+    "cyber": ["computer crime hong kong criminal", "online fraud HKSAR"],
+    # Money laundering (expanded)
+    "proceeds": ["proceeds of crime hong kong", "organized serious crimes ordinance HKSAR"],
+    # Tax evasion
+    "tax": ["tax evasion hong kong criminal", "inland revenue ordinance HKSAR"],
+    "evasion": ["tax evasion hong kong criminal"],
+    # Expert evidence
+    "expert": ["expert evidence hong kong criminal", "expert witness admissibility HKSAR"],
+    "forensic": ["forensic evidence hong kong criminal"],
+    "dna": ["DNA evidence hong kong criminal"],
+    # Character evidence
+    "character": ["character evidence hong kong criminal", "similar fact evidence HKSAR"],
+    "propensity": ["propensity evidence hong kong criminal"],
+    # Bail
+    "bail": ["bail hong kong criminal", "bail application HKSAR"],
+    "remand": ["remand custody hong kong criminal"],
+    # Environmental
+    "pollution": ["pollution offence hong kong criminal", "waste disposal ordinance HKSAR"],
+    "environmental": ["environmental offence hong kong criminal"],
+    # Occupational safety
+    "occupational": ["occupational safety hong kong criminal", "factory ordinance HKSAR"],
+    "workplace": ["workplace safety hong kong criminal prosecution"],
+    "construction": ["construction site offence hong kong criminal"],
 }
 
 
@@ -576,7 +619,428 @@ def _make_topic_path(module_label: str, subground_label: str, topic_label: str) 
     return f"{module_label}/{subground_label}/{topic_label}"
 
 
-def build_hierarchical_graph_bundle(relationship_payload: dict, title: str | None = None) -> dict:
+def _summary_embedding_text(node: dict) -> str:
+    node_type = node.get("type", "")
+    if node_type == "Case":
+        return " ".join(
+            part
+            for part in (
+                node.get("case_name", node.get("label", "")),
+                node.get("summary_en", node.get("summary", "")),
+                " ".join(node.get("topic_paths", [])),
+            )
+            if part
+        ).strip()
+    if node_type == "Topic":
+        return " ".join(
+            part
+            for part in (
+                node.get("label_en", node.get("label", "")),
+                node.get("summary", ""),
+            )
+            if part
+        ).strip()
+    if node_type == "Proposition":
+        return " ".join(
+            part
+            for part in (
+                node.get("label_en", node.get("label", "")),
+                node.get("statement_en", node.get("public_excerpt", "")),
+            )
+            if part
+        ).strip()
+    return ""
+
+
+def _populate_summary_embeddings(
+    nodes: list[dict],
+    *,
+    backend=None,
+    allow_openai: bool = True,
+) -> None:
+    embedder = backend
+    if embedder is None:
+        embedder = create_embedding_backend()
+    if getattr(embedder, "name", "") == "openai" and not allow_openai:
+        return
+
+    pending_nodes: list[dict] = []
+    pending_texts: list[str] = []
+    for node in nodes:
+        if node.get("type") not in {"Case", "Topic", "Proposition"}:
+            continue
+        if node.get("summary_embedding"):
+            continue
+        text = _summary_embedding_text(node)
+        if not text:
+            continue
+        pending_nodes.append(node)
+        pending_texts.append(text)
+
+    if not pending_texts:
+        return
+
+    embeddings = embedder.embed_documents(pending_texts)
+    for node, embedding in zip(pending_nodes, embeddings, strict=True):
+        node["summary_embedding"] = embedding
+
+
+# ---------------------------------------------------------------------------
+# Auto-enrichment: extract principles from HKLII case documents via LLM
+# ---------------------------------------------------------------------------
+
+_RATIO_KEYWORDS_RE = re.compile(
+    r"\b(held|principle|ratio|conclude|find|determined|ruling|essential element|test is|"
+    r"court held|we hold|it is settled|the law is|the correct approach)\b",
+    re.IGNORECASE,
+)
+
+_AUTO_ENRICH_PROMPT = """You are a Hong Kong criminal law analyst. Given paragraphs from a judgment, extract the key legal principles (ratio decidendi).
+
+Return a JSON object with two arrays: "principles" and "relationships".
+
+For EACH principle in "principles", output JSON with:
+- "principle_label": short title (e.g. "Mens rea for murder")
+- "paraphrase_en": restate the principle IN YOUR OWN WORDS (do NOT copy verbatim from the judgment)
+- "paragraph_span": the paragraph range where this principle appears (e.g. "[47]-[52]")
+- "cited_statutes": list of relevant ordinance references (e.g. ["Cap. 210 s.9"])
+
+For EACH case-law relationship in "relationships", output JSON with:
+- "target_case_name": the other authority mentioned in the judgment
+- "target_neutral_citation": neutral citation if stated, otherwise ""
+- "relationship_type": one of FOLLOWS, APPLIES, DISTINGUISHES, OVERRULES, DOUBTS, or CITES
+- "description": 1 sentence paraphrase of how the present judgment treats that authority
+
+Maximum 5 principles per case and maximum 6 relationships per case.
+If no clear ratio decidendi or case-law relationships can be identified, return {{"principles": [], "relationships": []}}.
+Do not invent citations or authorities not reasonably supported by the supplied paragraphs.
+
+Case: {case_name}
+Citation: {neutral_citation}
+
+Paragraphs:
+{paragraphs}
+
+Output JSON object only, no other text:"""
+
+
+def _extract_json_payload(raw_text: str):
+    decoder = json.JSONDecoder()
+    for index, char in enumerate(raw_text or ""):
+        if char not in "[{":
+            continue
+        try:
+            payload, _end = decoder.raw_decode(raw_text[index:])
+            return payload
+        except json.JSONDecodeError:
+            continue
+    return None
+
+
+def _normalize_case_relationship_type(value: str) -> str:
+    normalized = (value or "").strip().upper()
+    if normalized in CASE_EDGE_TYPES:
+        return normalized
+    lowered = (value or "").strip().lower()
+    if "follow" in lowered or "adopt" in lowered:
+        return "FOLLOWS"
+    if "apply" in lowered or "applied" in lowered:
+        return "APPLIES"
+    if "distinguish" in lowered or "qualified" in lowered:
+        return "DISTINGUISHES"
+    if "overrule" in lowered or "depart" in lowered:
+        return "OVERRULES"
+    if "doubt" in lowered:
+        return "DOUBTS"
+    return "CITES"
+
+
+def _auto_enrich_case_via_llm(case_name: str, neutral_citation: str, paragraphs: list[dict]) -> dict[str, list[dict]]:
+    """Call DeepSeek/OpenRouter to extract principles from case paragraphs."""
+    empty_payload = {"principles": [], "relationships": []}
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
+    openrouter_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    if not deepseek_key and not openrouter_key:
+        return empty_payload
+
+    # Select candidate paragraphs that likely contain ratio
+    candidates = []
+    for para in paragraphs:
+        text = para.get("text", "")
+        if len(text) < 60:
+            continue
+        if _RATIO_KEYWORDS_RE.search(text):
+            candidates.append(para)
+    if not candidates:
+        # Fallback: use first 8 substantial paragraphs
+        candidates = [p for p in paragraphs if len(p.get("text", "")) > 80][:8]
+    if not candidates:
+        return empty_payload
+
+    # Truncate to avoid token limits
+    para_text = "\n\n".join(
+        f"[{p.get('paragraph_span', '?')}] {p['text'][:600]}"
+        for p in candidates[:15]
+    )
+
+    prompt = _AUTO_ENRICH_PROMPT.format(
+        case_name=case_name,
+        neutral_citation=neutral_citation,
+        paragraphs=para_text[:8000],
+    )
+
+    if deepseek_key:
+        endpoint = "https://api.deepseek.com/v1/chat/completions"
+        api_key = deepseek_key
+        model = "deepseek-chat"
+    else:
+        endpoint = "https://openrouter.ai/api/v1/chat/completions"
+        api_key = openrouter_key
+        model = os.environ.get("OPENROUTER_MODEL", "").strip() or "deepseek/deepseek-chat"
+
+    payload = {
+        "model": model,
+        "temperature": 0,
+        "messages": [{"role": "user", "content": prompt}],
+    }
+    request_obj = urllib_request.Request(
+        endpoint,
+        data=json.dumps(payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+    )
+    def _call(ctx=None):
+        kw = {"timeout": 30}
+        if ctx is not None:
+            kw["context"] = ctx
+        with urllib_request.urlopen(request_obj, **kw) as response:
+            return response.read().decode("utf-8")
+
+    try:
+        try:
+            raw = _call()
+        except ssl.SSLError:
+            raw = _call(ssl._create_unverified_context())
+        except urllib_error.URLError as exc:
+            if "certificate" in str(exc).lower() or "ssl" in str(exc).lower():
+                raw = _call(ssl._create_unverified_context())
+            else:
+                raise
+        parsed = json.loads(raw)
+        content = parsed.get("choices", [{}])[0].get("message", {}).get("content", "")
+        payload_obj = _extract_json_payload(content)
+        if isinstance(payload_obj, list):
+            return {
+                "principles": [item for item in payload_obj if isinstance(item, dict)],
+                "relationships": [],
+            }
+        if isinstance(payload_obj, dict):
+            return {
+                "principles": [item for item in payload_obj.get("principles", []) if isinstance(item, dict)],
+                "relationships": [item for item in payload_obj.get("relationships", []) if isinstance(item, dict)],
+            }
+    except Exception:
+        pass
+    return empty_payload
+
+
+def _auto_enrich_cases_in_bundle(
+    bundle_nodes: list[dict],
+    bundle_edges: list[dict],
+    add_node,
+    add_edge,
+    ensure_case,
+    ensure_statute,
+    legal_domain: str,
+    domain_tags: list[str],
+    max_enrich: int = 80,
+) -> int:
+    """Auto-enrich case nodes that lack principles by fetching from HKLII + LLM extraction."""
+    crawler = HKLIICrawler()
+    enriched = 0
+
+    unenriched = [
+        node for node in bundle_nodes
+        if node["type"] == "Case"
+        and node.get("enrichment_status") == "case_only"
+        and (node.get("source_links") or node.get("neutral_citation"))
+    ][:max_enrich]
+
+    for case_node in unenriched:
+        # Try to get HKLII URL (must be a direct judgment URL, not a search URL)
+        hklii_url = ""
+        for link in case_node.get("source_links", []):
+            url = link.get("url", "")
+            if "hklii" in url.lower() and "/search" not in url and "search?" not in url:
+                hklii_url = url
+                break
+
+        if not hklii_url and case_node.get("neutral_citation"):
+            # Try search by neutral citation
+            results = crawler.simple_search(case_node["neutral_citation"], limit=1)
+            if results:
+                hklii_url = results[0].public_url
+                case_node.setdefault("source_links", []).append(
+                    {"label": "HKLII judgment", "url": hklii_url}
+                )
+
+        if not hklii_url:
+            continue
+
+        # Fetch case document
+        parsed_url = urllib_parse.urlparse(hklii_url)
+        try:
+            case_doc = crawler.fetch_case_document(parsed_url.path)
+        except Exception:
+            continue
+
+        if not case_doc or not case_doc.paragraphs:
+            continue
+
+        # Fill missing metadata
+        if not case_node.get("neutral_citation") and case_doc.neutral_citation:
+            case_node["neutral_citation"] = case_doc.neutral_citation
+        if not case_node.get("court_name") and case_doc.court_name:
+            case_node["court_name"] = case_doc.court_name
+        if not case_node.get("decision_date") and case_doc.decision_date:
+            case_node["decision_date"] = case_doc.decision_date
+        if not case_node.get("judges") and case_doc.judges:
+            case_node["judges"] = case_doc.judges
+
+        # Extract principles via LLM
+        para_dicts = [
+            {"text": p.text, "paragraph_span": p.paragraph_span}
+            for p in case_doc.paragraphs
+            if p.text
+        ]
+        enrichment = _auto_enrich_case_via_llm(
+            case_node.get("case_name", case_node.get("label", "")),
+            case_node.get("neutral_citation", ""),
+            para_dicts,
+        )
+        principles = enrichment.get("principles", [])
+        relationships = enrichment.get("relationships", [])
+
+        if not principles and not relationships:
+            # Even without LLM principles, mark as fetched and update metadata
+            case_node["enrichment_status"] = "metadata_enriched"
+            enriched += 1
+            continue
+
+        citation_base = case_node.get("neutral_citation") or case_node.get("case_name", "")
+        short_name = case_node.get("short_name", case_node.get("label", ""))
+
+        for idx, principle in enumerate(principles[:5], start=1):
+            para_span_raw = principle.get("paragraph_span", "")
+            para_span = ", ".join(para_span_raw) if isinstance(para_span_raw, list) else str(para_span_raw)
+            paragraph_id = f"paragraph:{slugify(citation_base + ':' + str(idx))[:80]}"
+            proposition_id = f"proposition:{slugify(citation_base + ':' + principle.get('principle_label', str(idx)))[:80]}"
+
+            # Build HKLII deep link to specific paragraph
+            hklii_deep = hklii_url
+            span_match = re.search(r"\[(\d+)\]", para_span)
+            if span_match:
+                hklii_deep = f"{hklii_url}#p{span_match.group(1)}"
+
+            paragraph_node = add_node({
+                "id": paragraph_id,
+                "type": "Paragraph",
+                "label": f"{short_name} {para_span}".strip(),
+                "case_id": case_node["id"],
+                "paragraph_span": para_span,
+                "public_excerpt": principle.get("paraphrase_en", ""),
+                "text_private": "",  # We don't store original text publicly
+                "hklii_deep_link": hklii_deep,
+                "embedding": [],
+                "principle_ids": [proposition_id],
+                "legal_domain": legal_domain,
+                "domain_tags": list(domain_tags),
+            })
+            proposition_node = add_node({
+                "id": proposition_id,
+                "type": "Proposition",
+                "label": principle.get("principle_label", f"Principle {idx}"),
+                "label_en": principle.get("principle_label", f"Principle {idx}"),
+                "statement_en": principle.get("paraphrase_en", ""),
+                "doctrine_key": slugify(principle.get("principle_label", "")),
+                "confidence": 0.85,
+                "legal_domain": legal_domain,
+                "domain_tags": list(domain_tags),
+            })
+            add_edge(paragraph_node["id"], case_node["id"], "PART_OF")
+            add_edge(paragraph_node["id"], proposition_node["id"], "SUPPORTS")
+
+            # Link cited statutes
+            for statute_ref in principle.get("cited_statutes", []):
+                for existing in bundle_nodes:
+                    if existing["type"] == "Statute" and statute_ref.lower() in existing.get("label", "").lower():
+                        add_edge(proposition_node["id"], existing["id"], "CITES", reason="auto-enrichment")
+                        break
+
+        for relationship in relationships[:6]:
+            target_case_name = str(
+                relationship.get("target_case_name")
+                or relationship.get("target_label")
+                or relationship.get("case_name")
+                or ""
+            ).strip()
+            if not target_case_name:
+                continue
+            target_neutral_citation = str(
+                relationship.get("target_neutral_citation")
+                or relationship.get("neutral_citation")
+                or ""
+            ).strip()
+            hklii_target_url = str(
+                relationship.get("hklii_url")
+                or relationship.get("target_hklii_url")
+                or ""
+            ).strip()
+            explanation = str(
+                relationship.get("description")
+                or relationship.get("application")
+                or relationship.get("note")
+                or ""
+            ).strip()
+            edge_type = _normalize_case_relationship_type(
+                relationship.get("relationship_type")
+                or relationship.get("type")
+                or relationship.get("treatment")
+                or ""
+            )
+            target_node = ensure_case(
+                target_case_name,
+                target_neutral_citation,
+                source_links=(
+                    [{"label": "HKLII judgment", "url": hklii_target_url}]
+                    if hklii_target_url
+                    else None
+                ),
+            )
+            if target_node["id"] == case_node["id"]:
+                continue
+            add_edge(case_node["id"], target_node["id"], edge_type, explanation=explanation, reason="auto-enrichment lineage")
+            if edge_type != "CITES":
+                add_edge(case_node["id"], target_node["id"], "CITES", explanation=explanation, reason="auto-enrichment lineage")
+
+        case_node["enrichment_status"] = "auto_enriched"
+        enriched += 1
+
+    return enriched
+
+
+def build_hierarchical_graph_bundle(
+    relationship_payload: dict,
+    title: str | None = None,
+    *,
+    embedding_backend: str = "auto",
+    embedding_model: str = "",
+    embedding_dimensions: int = 0,
+    max_enrich: int = 80,
+) -> dict:
     public_projection = (
         relationship_payload
         if relationship_payload.get("meta", {}).get("authority_tree")
@@ -883,9 +1347,15 @@ def build_hierarchical_graph_bundle(relationship_payload: dict, title: str | Non
             original = original_node_lookup.get(node["id"], node)
             case_node = ensure_case(
                 node["label"],
+                neutral_citation=original.get("neutral_citation", node.get("neutral_citation", "")),
                 summary_en=original.get("summary", node.get("summary", "")),
-                source_links=original.get("links", node.get("links", [])),
+                source_links=original.get("source_links", original.get("links", node.get("links", []))),
                 references=original.get("references", node.get("references", [])),
+                court_name=original.get("court_name", node.get("court_name", "")),
+                court_code=original.get("court_code", node.get("court_code", "")),
+                decision_date=original.get("decision_date", node.get("decision_date", "")),
+                judges=original.get("judges", node.get("judges", [])),
+                summary_embedding=original.get("summary_embedding", original.get("embedding", [])),
             )
             for reference in original.get("references", node.get("references", [])):
                 source_label = reference.get("source_label", "")
@@ -1053,6 +1523,29 @@ def build_hierarchical_graph_bundle(relationship_payload: dict, title: str | Non
                 target_node = ensure_statute(relationship["target_label"])
                 add_edge(case_node["id"], target_node["id"], relationship["type"], explanation=relationship["description"], curated=True)
 
+    # ── Auto-enrich unenriched cases via HKLII + LLM ──────────────
+    if os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("OPENROUTER_API_KEY"):
+        _auto_enrich_cases_in_bundle(
+            bundle_nodes, bundle_edges, add_node, add_edge,
+            ensure_case, ensure_statute,
+            legal_domain=legal_domain,
+            domain_tags=list(domain_tags),
+            max_enrich=max_enrich,
+        )
+
+    try:
+        _populate_summary_embeddings(
+            bundle_nodes,
+            backend=create_embedding_backend(
+                backend=embedding_backend,
+                model=embedding_model,
+                dimensions=embedding_dimensions,
+            ),
+            allow_openai=True,
+        )
+    except Exception:
+        pass
+
     outgoing: defaultdict[str, list[dict]] = defaultdict(list)
     incoming: defaultdict[str, list[dict]] = defaultdict(list)
     for edge in bundle_edges:
@@ -1156,6 +1649,7 @@ def build_hierarchical_graph_bundle(relationship_payload: dict, title: str | Non
                     "statement_zh": proposition.get("statement_zh", "") if proposition else "",
                     "public_excerpt": paragraph.get("public_excerpt", ""),
                     "text_private": paragraph.get("text_private", ""),
+                    "hklii_deep_link": paragraph.get("hklii_deep_link", ""),
                     "cited_authority": (
                         {
                             "id": cited_target["id"],
@@ -1351,9 +1845,19 @@ def build_hybrid_graph_artifacts(
     graph_path: str | Path,
     output_dir: str | Path,
     title: str | None = None,
+    *,
+    embedding_backend: str = "auto",
+    embedding_model: str = "",
+    embedding_dimensions: int = 0,
 ) -> dict:
     payload = json.loads(Path(graph_path).read_text(encoding="utf-8"))
-    bundle = build_hierarchical_graph_bundle(payload, title=title)
+    bundle = build_hierarchical_graph_bundle(
+        payload,
+        title=title,
+        embedding_backend=embedding_backend,
+        embedding_model=embedding_model,
+        embedding_dimensions=embedding_dimensions,
+    )
     return write_hybrid_graph_artifacts(bundle, output_dir)
 
 
@@ -1368,6 +1872,23 @@ class HybridGraphStore:
         for edge in self.edges:
             self.outgoing[edge["source"]].append(edge)
             self.incoming[edge["target"]].append(edge)
+        # Lazy embedding backend for semantic retrieval boost
+        self._embedding_backend = None
+        try:
+            self._embedding_backend = create_embedding_backend(
+                backend=os.environ.get("CASEMAP_QUERY_EMBEDDING_BACKEND", "auto"),
+            )
+        except Exception:
+            pass
+        if self._embedding_backend is not None:
+            try:
+                _populate_summary_embeddings(
+                    list(self.nodes.values()),
+                    backend=self._embedding_backend,
+                    allow_openai=bool(os.environ.get("CASEMAP_QUERY_EMBEDDING_BACKEND", "").strip()),
+                )
+            except Exception:
+                pass
 
     @classmethod
     def from_file(cls, path: str | Path) -> "HybridGraphStore":
@@ -1386,6 +1907,37 @@ class HybridGraphStore:
         node = self.nodes.get(case_id)
         if not node or node["type"] != "Case":
             raise KeyError(case_id)
+
+        # Build principles from Paragraph → Proposition edges dynamically
+        principles = []
+        for edge in self.incoming.get(case_id, []):
+            if edge["type"] != "PART_OF":
+                continue
+            para_node = self.nodes.get(edge["source"])
+            if not para_node or para_node["type"] != "Paragraph":
+                continue
+            prop_node = None
+            cited_authority = None
+            for sup_edge in self.outgoing.get(para_node["id"], []):
+                if sup_edge["type"] == "SUPPORTS":
+                    prop_node = self.nodes.get(sup_edge["target"])
+                    if prop_node:
+                        for cite_edge in self.outgoing.get(prop_node["id"], []):
+                            if cite_edge["type"] == "CITES":
+                                ct = self.nodes.get(cite_edge["target"])
+                                if ct:
+                                    cited_authority = {"id": ct["id"], "label": ct.get("label", ""), "type": ct["type"]}
+                                    break
+                    break
+            principles.append({
+                "paragraph_span": para_node.get("paragraph_span", ""),
+                "label_en": prop_node.get("label_en", "") if prop_node else "",
+                "statement_en": prop_node.get("statement_en", para_node.get("public_excerpt", "")) if prop_node else para_node.get("public_excerpt", ""),
+                "public_excerpt": para_node.get("public_excerpt", ""),
+                "hklii_deep_link": para_node.get("hklii_deep_link", ""),
+                "cited_authority": cited_authority,
+            })
+
         return {
             "id": case_id,
             "metadata": {
@@ -1407,7 +1959,7 @@ class HybridGraphStore:
                 "lineage_ids": node.get("lineage_ids", []),
                 "enrichment_status": node.get("enrichment_status", "case_only"),
             },
-            "principles": [],
+            "principles": principles,
             "relationships": [],
             "lineage_memberships": [],
             "derived_relationships": {
@@ -1552,10 +2104,36 @@ class HybridGraphStore:
                 score += 0.12
             lexical_scores[node_id] = score
         lexical_norm = normalize_scores(lexical_scores)
+
+        # ── Semantic embedding boost (30% weight) ─────────────────
+        # If nodes have summary_embedding, compute cosine similarity with query
+        semantic_boost: dict[str, float] = {}
+        if hasattr(self, '_embedding_backend') and self._embedding_backend is not None:
+            try:
+                query_emb = self._embedding_backend.embed(question)
+                if query_emb:
+                    for node_id, _kind, _text in searchable:
+                        node_emb = self.nodes[node_id].get("summary_embedding", [])
+                        if node_emb and len(node_emb) == len(query_emb):
+                            dot = sum(a * b for a, b in zip(query_emb, node_emb))
+                            mag_q = math.sqrt(sum(a * a for a in query_emb))
+                            mag_n = math.sqrt(sum(a * a for a in node_emb))
+                            if mag_q > 0 and mag_n > 0:
+                                semantic_boost[node_id] = max(0.0, dot / (mag_q * mag_n))
+            except Exception:
+                pass
+
+        # Combine lexical (70%) + semantic (30%) scores
+        combined_scores: dict[str, float] = {}
+        for node_id in lexical_norm:
+            lex = lexical_norm.get(node_id, 0.0)
+            sem = semantic_boost.get(node_id, 0.0)
+            combined_scores[node_id] = 0.7 * lex + 0.3 * sem if semantic_boost else lex
+
         best_node_ids = [
             node_id
-            for node_id in sorted(lexical_norm, key=lexical_norm.get, reverse=True)
-            if lexical_norm[node_id] > 0
+            for node_id in sorted(combined_scores, key=combined_scores.get, reverse=True)
+            if combined_scores[node_id] > 0
         ][: max(bounded_top_k * 2, 8)]
 
         supporting_node_ids: set[str] = set(best_node_ids[:bounded_top_k])
@@ -1629,6 +2207,8 @@ class HybridGraphStore:
                             "paragraph_span": principle.get("paragraph_span", ""),
                             "principle_label": principle.get("label_en", ""),
                             "quote": quote,
+                            "hklii_deep_link": principle.get("hklii_deep_link", ""),
+                            "links": card["metadata"]["source_links"],
                             "lineage_titles": lineage_titles,
                             "support_score": round(case_score + (0.06 / position), 6),
                         }
@@ -1645,6 +2225,8 @@ class HybridGraphStore:
                             "paragraph_span": "",
                             "principle_label": "",
                             "quote": summary,
+                            "hklii_deep_link": "",
+                            "links": card["metadata"]["source_links"],
                             "lineage_titles": lineage_titles,
                             "support_score": round(case_score, 6),
                         }
@@ -2023,6 +2605,70 @@ OFFENCE_ORDINANCE_RULES = [
         "phrases": {"sexual assault", "indecent assault"},
         "strict_liability_possible": False,
     },
+    {
+        "offence_family": "kidnapping",
+        "ordinance": "Offences against the Person Ordinance (Cap. 212)",
+        "section": "s.42 kidnapping; common law false imprisonment",
+        "keywords": {"kidnap", "kidnapping", "abduct", "abduction", "imprison", "detention", "hostage"},
+        "phrases": {"false imprisonment", "unlawful detention", "kidnap for ransom"},
+        "strict_liability_possible": False,
+    },
+    {
+        "offence_family": "criminal_intimidation",
+        "ordinance": "Crimes Ordinance (Cap. 200)",
+        "section": "s.24 criminal intimidation",
+        "keywords": {"intimidat", "threaten", "threat", "extort", "extortion"},
+        "phrases": {"criminal intimidation", "threats to kill", "demand with menaces"},
+        "strict_liability_possible": False,
+    },
+    {
+        "offence_family": "forgery",
+        "ordinance": "Crimes Ordinance (Cap. 200)",
+        "section": "Part IX forgery and related offences",
+        "keywords": {"forgery", "forge", "forging", "counterfeit", "false instrument"},
+        "phrases": {"using false instrument", "making false instrument"},
+        "strict_liability_possible": False,
+    },
+    {
+        "offence_family": "criminal_damage",
+        "ordinance": "Crimes Ordinance (Cap. 200)",
+        "section": "s.60 criminal damage; s.60(2) arson",
+        "keywords": {"arson", "damage", "destroy", "fire", "vandal", "vandalism"},
+        "phrases": {"criminal damage", "damage property", "set fire"},
+        "strict_liability_possible": False,
+    },
+    {
+        "offence_family": "computer_crimes",
+        "ordinance": "Crimes Ordinance (Cap. 200)",
+        "section": "s.161 access to computer with criminal or dishonest intent",
+        "keywords": {"computer", "hack", "hacking", "cyber", "online", "internet", "phishing"},
+        "phrases": {"access to computer", "computer crime", "criminal intent computer"},
+        "strict_liability_possible": False,
+    },
+    {
+        "offence_family": "handling_stolen_goods",
+        "ordinance": "Theft Ordinance (Cap. 210)",
+        "section": "s.24 handling stolen goods",
+        "keywords": {"handling", "stolen", "receive", "receiving", "goods"},
+        "phrases": {"handling stolen goods", "receiving stolen property"},
+        "strict_liability_possible": False,
+    },
+    {
+        "offence_family": "environmental",
+        "ordinance": "Waste Disposal Ordinance (Cap. 354)",
+        "section": "environmental protection offences",
+        "keywords": {"pollution", "waste", "dump", "dumping", "effluent", "environment"},
+        "phrases": {"water pollution", "waste disposal", "environmental offence"},
+        "strict_liability_possible": True,
+    },
+    {
+        "offence_family": "occupational_safety",
+        "ordinance": "Factories and Industrial Undertakings Ordinance (Cap. 59)",
+        "section": "occupational safety offences",
+        "keywords": {"workplace", "factory", "construction", "safety", "occupational", "scaffold"},
+        "phrases": {"occupational safety", "industrial accident", "workplace fatality"},
+        "strict_liability_possible": True,
+    },
 ]
 NEUTRAL_CITATION_RE = re.compile(r"\[\d{4}\]\s+[A-Z]{2,8}\s+\d+")
 
@@ -2124,7 +2770,11 @@ class DeterminatorPipeline:
                     + (
                         "Local knowledge base evidence:\n" + "\n\n".join(evidence_lines)
                         if evidence_lines
-                        else "No local evidence found — please use your knowledge of HK criminal law."
+                        else (
+                            "Grounding status: no verified local or live HKLII citations were recovered for this query.\n"
+                            "You may still answer using general HK criminal law knowledge, but do not invent case citations.\n"
+                            "Clearly signal when a proposition is general / unverified rather than citation-grounded."
+                        )
                     )
                     + "\n\nProvide a structured answer following the 8-step framework."
                 ),
@@ -2187,7 +2837,11 @@ class DeterminatorPipeline:
 
         return {
             "answer": answer,
-            "answer_mode": "deepseek_determinator" if deepseek_key and mode != "openrouter" else "openrouter_determinator",
+            "answer_mode": (
+                "deepseek_determinator"
+                if deepseek_key and mode != "openrouter"
+                else "openrouter_determinator"
+            ) + ("_ungrounded" if not citations else ""),
             "model_used": selected_model,
             "new_knowledge": new_knowledge,
         }
@@ -2287,15 +2941,24 @@ class DeterminatorPipeline:
             except Exception as exc:
                 local_result.setdefault("warnings", []).append(f"LLM synthesis skipped: {exc}")
         elif use_llm and not local_result.get("citations"):
-            local_result.setdefault("warnings", []).append(
-                "LLM synthesis was skipped because no verified citations were available for grounding."
-            )
+            try:
+                llm_result = self._llm_query(question, [], mode, model, classification)
+                llm_answer = llm_result["answer"]
+                llm_mode = llm_result["answer_mode"]
+                model_used = llm_result["model_used"]
+                new_knowledge = llm_result.get("new_knowledge", [])
+                local_result.setdefault("warnings", []).append(
+                    "No verified citations were available, so the answer was generated as an ungrounded LLM fallback."
+                )
+            except Exception as exc:
+                local_result.setdefault("warnings", []).append(f"Ungrounded LLM fallback failed: {exc}")
 
         final_answer = llm_answer or local_result.get("answer", "")
         final_mode = llm_mode
         if not local_result.get("citations"):
-            final_answer = self._ungrounded_answer(question, classification)
-            final_mode = "ungrounded_classifier_only"
+            if not llm_answer:
+                final_answer = self._ungrounded_answer(question, classification)
+                final_mode = "ungrounded_classifier_only"
 
         verifier = KnowledgeGrowthWriter()
         verified_new_knowledge, rejected_new_knowledge = verifier.verify_items(

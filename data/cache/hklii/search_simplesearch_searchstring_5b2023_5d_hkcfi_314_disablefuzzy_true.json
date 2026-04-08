@@ -1,0 +1,55 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "title": "AKRAM MUHAMMAD V. HONG KONG SAR GOVERNMENT",
+      "path": "/en/cases/hkcfi/2023/314",
+      "pub_date": "2023-02-01T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCAL111/2023",
+      "neutral": "[2023] HKCFI 314",
+      "parallel": "",
+      "coram": "Before: Hon Campbell-Moffat J in Court",
+      "parties": "AKRAM MUHAMMAD Applicant and DIRECTOR OF IMMIGRATION 1st Putative Respondent SECRETARY FOR SECURITY 2nd Putative Respondent",
+      "charge": "",
+      "representations": "The applicant appeared in person Mr Michael Lok, Government Counsel, of the Department of Justice, for the putative respondents",
+      "remarks": ""
+    },
+    {
+      "title": "ABDUL RAUF HARIS V. DIRECTOR OF IMMIGRATION AND ANOTHER",
+      "path": "/en/cases/hkcfi/2025/6412",
+      "pub_date": "2025-12-22T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCAL2365/2025",
+      "neutral": "[2025] HKCFI 6412",
+      "parallel": "",
+      "coram": "Before: Deputy High Court Judge Grace Chow in Court",
+      "parties": "BETWEEN ABDUL RAUF HARIS Applicant and DIRECTOR OF IMMIGRATION 1 st Respondent SECURITY BUREAU 2 nd Respondent",
+      "charge": "",
+      "representations": "The Applicant, appeared in person Miss Nova Tang, Government Counsel of Department of Justice, for the 1 st and 2 nd Respondents",
+      "remarks": ""
+    },
+    {
+      "title": "AKRAM MUHAMMAD V. DIRECTOR OF IMMIGRATION AND ANOTHER",
+      "path": "/en/cases/hkcfi/2023/595",
+      "pub_date": "2023-03-16T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCAL1329/2022",
+      "neutral": "[2023] HKCFI 595",
+      "parallel": "",
+      "coram": "Before: Hon Coleman J in Court",
+      "parties": "BETWEEN AKRAM MUHAMMAD Applicant and DIRECTOR OF IMMIGRATION 1 st Putative Respondent SECRETARY FOR SECURITY 2 nd Putative Respondent",
+      "charge": "",
+      "representations": "Mr Jeffrey Tam and Mr Albert Wan, instructed by Tang, Wong & Chow, for the applicant Mr Michael Lok, instructed by the Department of Justice, for the putative respondents",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

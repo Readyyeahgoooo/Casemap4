@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "HKSAR V. TSUI HOK TAK",
+      "path": "/en/cases/hkdc/2021/197",
+      "pub_date": "2021-02-01T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC1020/2020",
+      "neutral": "[2021] HKDC 197",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge N. Wong",
+      "parties": "HKSAR v Tsui Hok-tak",
+      "charge": "Offence: [1] and [3]  Theft (盜竊罪) [2]  Passing or tendering counterfeit notes (行使或付給偽製紙幣或硬幣)",
+      "representations": "Present: Mr Alan M S Ng, Counsel on fiat, for HKSAR Mr Wong Yiu-fai, Kenneth instructed by Messrs. Chan & Tsu assigned by DLA, for the defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

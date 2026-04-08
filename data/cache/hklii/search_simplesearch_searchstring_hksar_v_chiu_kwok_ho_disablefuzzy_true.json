@@ -1,0 +1,69 @@
+{
+  "count": 4,
+  "results": [
+    {
+      "title": "香港特別行政區 訴 黃可瀚",
+      "path": "/tc/cases/hkcfi/2022/3347",
+      "pub_date": "2022-11-04T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA111/2021",
+      "neutral": "[2022] HKCFI 3347",
+      "parallel": "",
+      "coram": "主審法官： 高等法院原訟法庭法官邱智立",
+      "parties": "答辯人 香港特別行政區 訴 上訴人 黃可瀚",
+      "charge": "",
+      "representations": "答辯人： 由律政司檢控官黃雋文代表香港特別行政區 上訴人： 無律師代表，親自應訊",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 林孝航",
+      "path": "/tc/cases/hkcfi/2022/1129",
+      "pub_date": "2022-05-13T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA22/2022",
+      "neutral": "[2022] HKCFI 1129",
+      "parallel": "",
+      "coram": "主審法官: 高等法院原訟法庭法官黃崇厚",
+      "parties": "答辯人 香港特別行政區 及 上訴人 林孝航",
+      "charge": "",
+      "representations": "答辯人： 由律政司檢控官劉德澤代表 上訴人： 無律師代表，親自行事",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 方金明",
+      "path": "/tc/cases/hkdc/2025/1233",
+      "pub_date": "2025-08-01T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC1296/2023",
+      "neutral": "[2025] HKDC 1233",
+      "parallel": "",
+      "coram": "主審法官: 區域法院暫委法官鄧少雄",
+      "parties": "香港特別行政區 訴 方金明",
+      "charge": "控罪: [1] 及 [2] 與精神上無行為能力的人非法性交（Unlawful sexual intercourse with a mentally incapacitated person） [3] 企圖與精神上無行為能力的人作出肛交Attemped buggery with mentally incapacitated person",
+      "representations": "出席人士: 律政司助理刑事檢控專員張卓勤先生代表香港特別行政區 (審訊期間，律政司高級檢控官陳曦媛女士及檢控官江建嬅女士代表香港特別行政區) 梁寶琳女士，由法律援助署委派的錢志庸律師行延聘，代表被告人",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 何志豪及另四人",
+      "path": "/tc/cases/hkca/2025/769",
+      "pub_date": "2025-09-05T00:00:00+08:00",
+      "db": "上訴法庭",
+      "act": "CACC34/2023",
+      "neutral": "[2025] HKCA 769",
+      "parallel": "",
+      "coram": "主審法官： 高等法院上訴法庭法官彭偉昌 高等法院上訴法庭法官潘敏琦 高等法院上訴法庭法官彭寶琴",
+      "parties": "答辯人 香港特別行政區 對 第一申請人 HO CHI HO (何志豪) (D2) 第二申請人 CHENG KAM MUN (鄭錦滿) (D3) 第三申請人 CHAN KAI YIN (陳啟賢) (D4) 第四申請人 FUNG SZE YUI (馮思睿) (D6) 第五申請人 LAM WING MAN (林泳汶) (D7)",
+      "charge": "",
+      "representations": "答辯人： 由律政司高級助理刑事檢控專員劉德偉代表 第一申請人： 由法律援助署委派張子安‧劉景新律師行轉聘田奇睿大律師代表 第二申請人： 由法律援助署委派戴鄧莊李律師行轉聘李國威大律師代表 第三申請人： 由CLM Lawyers轉聘陳芊仲大律師代表 第四申請人： 由謝延豐律師行轉聘蘇昊義大律師代表 第五申請人： 由張沛彬律師行轉聘蘇昊義大律師代表",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

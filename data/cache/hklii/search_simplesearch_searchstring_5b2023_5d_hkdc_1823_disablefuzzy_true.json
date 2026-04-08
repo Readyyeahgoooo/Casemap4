@@ -1,0 +1,83 @@
+{
+  "count": 5,
+  "results": [
+    {
+      "title": "SEMGAS SUPPLY PTE LTD AND ANOTHER V. HONG KONG XIN CHUANG DECORATIVE MATERIAL CO LTD",
+      "path": "/en/cases/hkdc/2023/1823",
+      "pub_date": "2023-12-29T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCJ6395/2019",
+      "neutral": "[2023] HKDC 1823",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge Alexander Tang in Court",
+      "parties": "SEMGAS SUPPLY PTE LTD 1 st Plaintiff HEALTH DOMAIN PTE LTD 2 nd Plaintiff and HONG KONG XIN CHUANG DECORATIVE MATERIAL CO. LIMITED 2 nd Defendant",
+      "charge": "",
+      "representations": "Mr Sim Jing En, instructed by Angela Wang & Co, for the Plaintiffs The 2 nd Defendant was not represented and did not appear",
+      "remarks": ""
+    },
+    {
+      "title": "JOEL ENRIQUE VIVEROS GALINDO V. TAN ZHIRONG AND OTHERS",
+      "path": "/en/cases/hkcfi/2026/1616",
+      "pub_date": "2026-03-18T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA733/2022",
+      "neutral": "[2026] HKCFI 1616",
+      "parallel": "",
+      "coram": "Before: Hon Au-Yeung J in Chambers",
+      "parties": "BETWEEN JOEL ENRIQUE VIVEROS GALINDO Plaintiff and TAN ZHIRONG (譚志榮) 1st Defendant UNICORN CO. LTD 2nd Defendant YIU CHIU FUNG (姚朝峰) 3rd Defendant",
+      "charge": "",
+      "representations": "Ms Sabina Sui , instructed by Yung, Yu, Yuen & Co, for the Plaintiff The 3 rd Defendant was not represented and did not appear",
+      "remarks": ""
+    },
+    {
+      "title": "CHU YUNG V. CHAN LOK HIM AND ANOTHER",
+      "path": "/en/cases/hkdc/2025/992",
+      "pub_date": "2025-06-17T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCMP2981/2024",
+      "neutral": "[2025] HKDC 992",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge Patrick Siu",
+      "parties": "CHU YUNG Plaintiff and CHAN LOK HIM 1st Defendant NEXT STATION TRADING LIMITED 2nd Defendant",
+      "charge": "",
+      "representations": "Ms Kyra P.S. Kung, instructed by Kwok, Ng & Chan, for the Plaintiff The 1 st and 2 nd Defendants were not represented and did not appear",
+      "remarks": ""
+    },
+    {
+      "title": "ELITE CONSORTIUM LTD AND OTHERS V. YIM WAN POR AND OTHERS",
+      "path": "/en/cases/hkcfi/2024/704",
+      "pub_date": "2024-03-15T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCA66/2022",
+      "neutral": "[2024] HKCFI 704",
+      "parallel": "",
+      "coram": "Before: Master Alexander Tang in Chambers (Open to Public)",
+      "parties": "BETWEEN ELITE CONSORTIUM LIMITED 1 st Plaintiff SWISS EDUCATION GROUP LIMITED 2 nd Plaintiff 广州雅博信息咨询有限公司 3 rd Plaintiff and YIM WAN POR (嚴運波) 1 st Defendant CHAN LAI YI (陳麗儀) 2 nd Defendant CHAN YUK CHUN (陳玉珍) 3 rd Defendant WONG KAM TIM (黄錦添) 4 th Defendant",
+      "charge": "",
+      "representations": "Val Chow, instructed by Grandall Zimmern Law Firm, for the Plaintiffs Tony Ko and Michelle Lin, instructed by Ince & Co, for the Defendants",
+      "remarks": ""
+    },
+    {
+      "title": "金子楷 對 格萊國際控股有限公司及另一人",
+      "path": "/tc/cases/hkdc/2026/452",
+      "pub_date": "2026-03-23T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCMP480/2024",
+      "neutral": "[2026] HKDC 452",
+      "parallel": "",
+      "coram": "主審法官： 區域法院暫委法官周偉倫法庭聆訊",
+      "parties": "關於存入格萊國際控股有限公司在香港上海匯豐銀行持有的銀行戶口號碼004-582637799838的港幣$155,000.00及劉雅芳在理慧銀行持有的銀行戶口號碼388-756045496550的港幣$199,900.00 及 關於《區域法院規則》（第336H章）第15號命令第16條規則",
+      "charge": "",
+      "representations": "原告人：由郭吳陳律師事務所的吳文堅律師代表 第二被告人：沒有律師代表，並親自應訊",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

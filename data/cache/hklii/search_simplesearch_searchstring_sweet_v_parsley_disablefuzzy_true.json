@@ -1,0 +1,55 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "title": "香港特別行政區 訴 關迦曦",
+      "path": "/tc/cases/hkcfa/2020/21",
+      "pub_date": "2020-07-09T00:00:00+08:00",
+      "db": "終審法院",
+      "act": "FACC8/2019",
+      "neutral": "[2020] HKCFA 21",
+      "parallel": "(2020) 23 HKCFAR 229",
+      "coram": "主審法官： 終審法院首席法官馬道立 終審法院常任法官李義 終審法院常任法官霍兆剛 終審法院常任法官張舉能 終審法院非常任法官紀立信",
+      "parties": "答辯人 香港特別行政區 對 上訴人 關迦曦",
+      "charge": "",
+      "representations": "資深大律師郭莎樂女士（經法律援助署委派並由陳進安鍾海英律師行延聘）及大律師馬慧賢女士（由陳進安鍾海英律師行延聘）代表上訴人 律政司副刑事檢控專員何詠光先生及助理刑事檢控專員（署理）李希哲先生代表答辯人",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. YEUNG HO YIN",
+      "path": "/en/cases/hkcfi/2022/569",
+      "pub_date": "2022-03-25T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMA354/2020",
+      "neutral": "[2022] HKCFI 569",
+      "parallel": "[2023] 2 HKLRD 677",
+      "coram": "Before:  High Court Judge Albert Wong in Court",
+      "parties": "BETWEEN HKSAR Respondent and Yeung Ho Yin（楊浩然） Appellant",
+      "charge": "",
+      "representations": "Mr Wayne Lee, Public Prosecutor of the Department of Justice, for the Respondent. Mr Tien Kei Rui, instructed by Ho Tse Wai & Partners, for the Appellant. Translated by the Judgment Translation Unit of the Judiciary and vetted by Mr. Walter Lee, solicitor.",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 楊浩然",
+      "path": "/tc/cases/hkcfi/2022/569",
+      "pub_date": "2022-03-25T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA354/2020",
+      "neutral": "[2022] HKCFI 569",
+      "parallel": "[2022] 4 HKC 346 ; [2023] 2 HKLRD 648",
+      "coram": "主審法官： 高等法院原訟法庭法官黃崇厚",
+      "parties": "答辯人 香港特別行政區 及 上訴人 楊浩然",
+      "charge": "",
+      "representations": "答辯人：由律政司檢控官李穎賢代表 上訴人：由何謝韋律師事務所轉聘田奇睿大律師代表",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "HKSAR V. HO CHEUK MAN, RAY",
+      "path": "/en/cases/hkcfi/2025/3265",
+      "pub_date": "2025-06-30T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCCC234/2023",
+      "neutral": "[2025] HKCFI 3265",
+      "parallel": "",
+      "coram": "Before: DHCJ A Wong",
+      "parties": "HKSAR v Ho Cheuk-man, Ray",
+      "charge": "Offence: (1) Trafficking in dangerous drugs (販運危險藥物) in HCCC 233/2023 (2) Manufacturing a dangerous drug (製造危險藥物) in HCCC 233/2023 (1) Possession of a dangerous drug (管有危險藥物) in HCCC 234/2023",
+      "representations": "Present: Mr John Marray, on fiat, for HKSAR Mr Gordon Wong, instructed by Johnnie Yam, Jacky Lee & Co, assigned by the DLA, for the accused",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

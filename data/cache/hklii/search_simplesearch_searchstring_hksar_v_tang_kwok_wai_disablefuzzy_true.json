@@ -1,0 +1,83 @@
+{
+  "count": 5,
+  "results": [
+    {
+      "title": "HKSAR V. TANG KWOK-WAI AND OTHERS",
+      "path": "/en/cases/hkcfi/2021/2833",
+      "pub_date": "2018-11-22T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCCC55/2018",
+      "neutral": "[2021] HKCFI 2833",
+      "parallel": "",
+      "coram": "Before: DHCJ Saw",
+      "parties": "HKSAR v TANG Kwok-wai (A1) WONG Yuk-wai (A3) NG Ka-lun (A4) KWAN Chun-yuen (A5)",
+      "charge": "Offence: (1)  to (3)  Trafficking in a dangerous drug (販運危險藥物)",
+      "representations": "Present: Ms Susanna Ku Pui-fong, on fiat, for HKSAR Mr Charles J Chan and Mr Byron C Y Tsang, instructed by Pansy Leung Tang & Chua, for the 1 st accused Mr Robert C K Lam, instructed by Ivan Tang & Co, for the 3 rd accused Ms Olivia Tsang, instructed by Raymond Lam & Associates, for the 4 th accused Mr Jonathan Kwan, instructed by Yeung & Chan, for the 5 th accused",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 鄧冠鋒",
+      "path": "/tc/cases/hkdc/2021/1398",
+      "pub_date": "2021-07-29T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC85/2021",
+      "neutral": "[2021] HKDC 1398",
+      "parallel": "",
+      "coram": "主審法官: 區域法院暫委法官高偉雄",
+      "parties": "香港特別行政區 訴 鄧冠鋒",
+      "charge": "控罪: [1] 縱火（Arson） [2] 管有適合於及擬用作吸服危險藥物的器具（Possession of an apparatus fit and intended for the inhalation of a dangerous drug）",
+      "representations": "出席人士: 程雲峰大律師，為外聘檢控官，代表香港特別行政區 畢新威大律師，由法律援助署委派的史蒂文生黃律師事務所延聘，代表被告人",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. TSANG MAN FUNG",
+      "path": "/en/cases/hkdc/2021/1389",
+      "pub_date": "2021-11-05T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC219/2021",
+      "neutral": "[2021] HKDC 1389",
+      "parallel": "",
+      "coram": "Before: HH Judge Dufton",
+      "parties": "HKSAR v TSANG MAN FUNG",
+      "charge": "Offences: Arson（縱火）",
+      "representations": "Present: Ms Jay Ma, counsel on fiat, for HKSAR Miss Sezen Chong instructed by Eric Cheung & Lau, assigned by the Director of Legal Aid, for the defendant",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 王偉鴻",
+      "path": "/tc/cases/hkdc/2021/1087",
+      "pub_date": "2021-08-26T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC538/2021",
+      "neutral": "[2021] HKDC 1087",
+      "parallel": "",
+      "coram": "主審法官: 區域法院法官高勁修",
+      "parties": "香港特別行政區 訴 王偉鴻",
+      "charge": "控罪: [1] 罔顧他人生命是否會受危害而縱火（Arson being reckless as to whether the life of another would thereby be    endangered） [2] 在公眾地方管有攻擊性武器（Possession of offensive weapon in a public place）",
+      "representations": "出席人士: 嚴康焯先生，為外聘大律師，代表香港特別行政區 劉天裕先生，由歐陽盧鍾律師行延聘，代表被告人",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 孫鑫浩",
+      "path": "/tc/cases/hkdc/2022/1540",
+      "pub_date": "2022-12-30T00:00:00+08:00",
+      "db": "區域法院",
+      "act": "DCCC795/2021",
+      "neutral": "[2022] HKDC 1540",
+      "parallel": "",
+      "coram": "主審法官: 區域法院暫委法官梁少玲",
+      "parties": "香港特別行政區 訴 孫鑫浩",
+      "charge": "控罪: [1] 及 [4] 罔顧生命是否會受到危害而縱火（Arson being reckless as to whether life would be endangered）",
+      "representations": "出席人士: 詹俊祺先生，為外聘大律師，代表香港特別行政區 梁振強先生，由法律援助署委派的羅拔臣延聘，代表被告人",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "name"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

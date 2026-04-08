@@ -2806,7 +2806,7 @@ def render_relationship_family_tree(graph_payload: dict) -> str:
       });
       fillList(metricList, metricItems, "No extra metrics available.");
 
-      const linkItems = (target.links || []).map((link) => {
+      const linkItems = (target.links || target.source_links || []).map((link) => {
         const item = document.createElement("li");
         item.innerHTML = `<a href="${escapeHtml(link.url)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`;
         return item;
@@ -4589,18 +4589,29 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
       return `
         <div class="chat-citation-grid">
           ${{
-            citations.map((citation) => `
+            citations.map((citation) => {{
+              const principleLabel = citation.principle_label ? ` — ${{escapeHtml(citation.principle_label)}}` : "";
+              const deepLink = citation.hklii_deep_link || "";
+              let hkliiHtml = "";
+              if (deepLink) {{
+                hkliiHtml = `<a href="${{escapeHtml(deepLink)}}" target="_blank" rel="noopener" style="color:#2d6a8a;font-size:12px;text-decoration:none">See ${{escapeHtml(citation.paragraph_span || "judgment")}} on HKLII ↗</a>`;
+              }} else {{
+                const srcLinks = citation.links || [];
+                hkliiHtml = srcLinks.map((lk) => `<a href="${{escapeHtml(lk.url)}}" target="_blank" rel="noopener" style="color:#2d6a8a;font-size:12px;text-decoration:none">${{escapeHtml(lk.label || "HKLII")}} ↗</a>`).join(" ");
+              }}
+              const originLabel = citation.retrieval_origin === "hklii_live" ? " <span style='color:#4dc0b5;font-size:10px'>LIVE</span>" : "";
+              return `
               <div class="chat-citation">
-                <strong>[${{escapeHtml(citation.citation_id || "")}}] ${{escapeHtml(citation.case_name || "Unknown Case")}}</strong>
+                <strong>[${{escapeHtml(citation.citation_id || "")}}] ${{escapeHtml(citation.case_name || "Unknown Case")}}${{principleLabel}}${{originLabel}}</strong>
                 <p>${{escapeHtml(citation.quote || "")}}</p>
-                <div class="chat-meta">${{escapeHtml((citation.neutral_citation || "") + (citation.paragraph_span ? " · " + citation.paragraph_span : ""))}}</div>
+                <div class="chat-meta">${{escapeHtml((citation.neutral_citation || "") + (citation.paragraph_span ? " · ¶ " + citation.paragraph_span : ""))}}${{hkliiHtml ? " · " + hkliiHtml : ""}}</div>
                 ${{
                   citation.focus_node_id || citation.case_id
                     ? `<button type="button" data-focus-node-id="${{escapeHtml(citation.focus_node_id || citation.case_id)}}">Focus Node</button>`
                     : ""
                 }}
               </div>
-            `).join("")
+            `;}}).join("")
           }}
         </div>
       `;
@@ -5165,10 +5176,18 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
       }} else if (selected.type === "Case") {{
         const card = caseCards[selected.id];
         detailSummary.textContent = selected.summary_en || selected.summary || selected.case_name || selected.label;
-        detailChips.innerHTML = [
+        const caseChips = [
           selected.neutral_citation ? `<span class="detail-chip">${{escapeHtml(selected.neutral_citation)}}</span>` : "",
           `<span class="detail-chip">Authority ${{(selected.authority_score || 0).toFixed(2)}}</span>`,
-        ].join("");
+        ];
+        // HKLII link chip
+        const caseLinks = selected.source_links || selected.links || [];
+        if (caseLinks.length) {{
+          caseLinks.forEach((lk) => {{
+            caseChips.push(`<a href="${{escapeHtml(lk.url)}}" target="_blank" rel="noopener" class="detail-chip" style="color:#2d6a8a;text-decoration:none">${{escapeHtml(lk.label || "HKLII")}} ↗</a>`);
+          }});
+        }}
+        detailChips.innerHTML = caseChips.join("");
         facts.push({{ html: `${{selected.topic_paths?.length || 0}} topic paths attached to this case.` }});
         facts.push({{ html: `${{selected.lineage_ids?.length || 0}} curated lineage memberships.` }});
         selected.topic_paths?.slice(0, 8).forEach((path) => support.push({{ html: `<strong>Topic Path</strong><div>${{escapeHtml(path)}}</div>` }}));
@@ -5176,9 +5195,13 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
           id: relationship.target_id,
           html: `<strong>${{escapeHtml(relationship.target_label)}}</strong><div>${{escapeHtml(relationship.type + (relationship.explanation ? " · " + relationship.explanation : ""))}}</div>`,
         }}));
-        (card?.principles || []).slice(0, 8).forEach((principle) => support.push({{
-          html: `<strong>${{escapeHtml(principle.label_en || principle.paragraph_span || "Principle")}}</strong><div>${{escapeHtml(principle.statement_en || principle.public_excerpt || "")}}</div>`,
-        }}));
+        (card?.principles || []).slice(0, 8).forEach((principle) => {{
+          let principleHtml = `<strong>${{escapeHtml(principle.label_en || principle.paragraph_span || "Principle")}}</strong><div>${{escapeHtml(principle.statement_en || principle.public_excerpt || "")}}</div>`;
+          if (principle.hklii_deep_link) {{
+            principleHtml += `<div style="margin-top:4px"><a href="${{escapeHtml(principle.hklii_deep_link)}}" target="_blank" rel="noopener" style="color:#2d6a8a;font-size:12px;text-decoration:none">See ${{escapeHtml(principle.paragraph_span || "judgment")}} on HKLII ↗</a></div>`;
+          }}
+          support.push({{ html: principleHtml }});
+        }});
       }} else if (selected.type === "AuthorityLineage") {{
         detailChips.innerHTML = `<span class="detail-chip">${{escapeHtml((selected.codes || []).join(" · ") || "Lineage")}}</span>`;
         const members = (outgoing.get(selected.id) || []).filter((edge) => edge.type === "HAS_MEMBER");
@@ -5193,6 +5216,10 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
         }});
       }} else if (selected.type === "Statute") {{
         detailSummary.textContent = selected.summary_en || selected.label;
+        const statuteLinks = selected.source_links || selected.links || [];
+        if (statuteLinks.length) {{
+          detailChips.innerHTML = statuteLinks.map((lk) => `<a href="${{escapeHtml(lk.url)}}" target="_blank" rel="noopener" class="detail-chip" style="color:#2d6a8a;text-decoration:none">${{escapeHtml(lk.label || "HKLII")}} ↗</a>`).join("");
+        }}
         facts.push({{ html: `${{topicIdsForNode(selected).length}} topic links from this statute.` }});
         topicIdsForNode(selected).forEach((topicId) => {{
           const topic = nodeMap.get(topicId);
@@ -5352,12 +5379,21 @@ def render_knowledge_graph(bundle: dict) -> str:
     for n in bundle.get("nodes", []):
         if n.get("type") not in VISIBLE_TYPES:
             continue
-        graph_nodes.append({
+        gn = {
             "id": n["id"],
             "type": n["type"],
             "label": n.get("label_en") or n.get("case_name") or n.get("label") or n["id"],
             "summary": (n.get("summary_en") or n.get("summary") or "")[:280],
-        })
+        }
+        # Include HKLII links for Case and Statute nodes
+        if n["type"] in ("Case", "Statute"):
+            links = n.get("source_links") or n.get("links") or []
+            if links:
+                gn["links"] = [{"url": lk.get("url", ""), "label": lk.get("label", "HKLII")} for lk in links[:3]]
+            nc = n.get("neutral_citation", "")
+            if nc:
+                gn["neutral_citation"] = nc
+        graph_nodes.append(gn)
 
     visible_ids = {n["id"] for n in graph_nodes}
     VISIBLE_EDGE_TYPES = {"CONTAINS", "BELONGS_TO_TOPIC", "CITES", "FOLLOWS", "APPLIES", "DISTINGUISHES", "HAS_MEMBER", "ABOUT_TOPIC"}
@@ -5553,7 +5589,17 @@ def render_knowledge_graph(bundle: dict) -> str:
       const nbs = [...(neighbours.get(id) || [])].map(nid => nodeIndex.get(nid)).filter(Boolean);
       titleEl.textContent = n.label;
       typeEl.textContent = n.type;
-      summaryEl.textContent = n.summary || "No summary available.";
+      // Show neutral citation for Case nodes
+      let summaryHtml = n.summary || "No summary available.";
+      if (n.neutral_citation) {{
+        summaryHtml = `<span style="color:#6b7280;font-size:12px">${{n.neutral_citation}}</span><br>${{summaryHtml}}`;
+      }}
+      // Show HKLII links for Case/Statute nodes
+      if (n.links && n.links.length) {{
+        const linkHtml = n.links.map(l => `<a href="${{l.url}}" target="_blank" rel="noopener" style="color:#2d6a8a;font-size:13px;text-decoration:none">${{l.label || "HKLII"}} ↗</a>`).join(" · ");
+        summaryHtml += `<div style="margin-top:8px">${{linkHtml}}</div>`;
+      }}
+      summaryEl.innerHTML = summaryHtml;
       neighbourList.innerHTML = "";
       if (!nbs.length) {{
         neighbourList.innerHTML = "<li>No neighbours.</li>";
@@ -6201,16 +6247,44 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
 
     function citationMarkup(citation) {{
       const title = citation.case_name || citation.label || citation.citation_id || "Citation";
-      const meta = [citation.neutral_citation, citation.paragraph_span].filter(Boolean).join(" · ");
+      const citId = citation.citation_id || "";
+      const nc = citation.neutral_citation || "";
+      const paraSpan = citation.paragraph_span || "";
+      const principleLabel = citation.principle_label || "";
       const quote = citation.quote || citation.summary || "No summary available.";
       const caseId = citation.case_id || citation.focus_node_id || "";
-      const hkliiLinks = (citation.links || []).map(l => `<a href="${{l.url}}" target="_blank" rel="noopener">${{l.label || "HKLII"}}</a>`).join(" ");
+      const origin = citation.retrieval_origin || "bundle";
+      const originBadge = origin === "hklii_live"
+        ? '<span style="display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(77,192,181,0.18);color:var(--accent-2);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;margin-left:6px">HKLII Live</span>'
+        : '<span style="display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(241,162,56,0.12);color:var(--accent);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;margin-left:6px">Graph</span>';
+
+      // Build HKLII link: prefer hklii_deep_link (paragraph-level), fall back to source_links
+      let hkliiHtml = "";
+      const deepLink = citation.hklii_deep_link || "";
+      if (deepLink) {{
+        hkliiHtml = `<a href="${{deepLink}}" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none;font-size:12px">See ${{paraSpan || "judgment"}} on HKLII ↗</a>`;
+      }} else {{
+        const hkliiLinks = (citation.links || []).map(l => `<a href="${{l.url}}" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none;font-size:12px">${{l.label || "HKLII"}} ↗</a>`).join(" ");
+        hkliiHtml = hkliiLinks;
+      }}
+
+      // Citation header: [C1] Principle — Case Name [neutral_citation]
+      const headerParts = [];
+      if (citId) headerParts.push(`<span style="color:var(--accent);font-weight:700">[` + citId + `]</span>`);
+      if (principleLabel) headerParts.push(`<span style="color:#e8edf3">${{principleLabel}}</span>`);
+      headerParts.push(`<span style="color:var(--muted)">—</span>`);
+      headerParts.push(`<em style="color:#dbe5ef">${{title}}</em>`);
+      if (nc) headerParts.push(`<span style="color:var(--muted);font-size:12px">[` + nc + `]</span>`);
+
       return `
         <article class="citation" data-case-id="${{caseId}}" data-case-name="${{title}}" style="cursor:pointer" onclick="focusGraphNode('${{caseId}}','${{title.replace(/'/g,"\\'")}}')" title="Click to focus in graph">
-          <strong>${{title}}</strong>
-          <div class="meta">${{meta || "Local grounding"}}${{hkliiLinks ? " · " + hkliiLinks : ""}}</div>
-          <p>${{quote}}</p>
-          ${{caseId ? `<div class="meta" style="color:var(--accent-2);font-size:11px">▶ Click to focus in graph</div>` : ""}}
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:6px">${{headerParts.join(" ")}}${{originBadge}}</div>
+          <p style="margin:0 0 8px;color:#dbe5ef;font-size:13px;line-height:1.65">${{quote}}</p>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            ${{paraSpan ? '<span style="color:var(--muted);font-size:11px">¶ ' + paraSpan + '</span>' : ''}}
+            ${{hkliiHtml}}
+            ${{caseId ? '<span style="color:var(--accent-2);font-size:11px;cursor:pointer">▶ Focus in graph</span>' : ''}}
+          </div>
         </article>
       `;
     }}

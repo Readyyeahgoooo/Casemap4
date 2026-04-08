@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "HKSAR V. DAO VAN TUNG",
+      "path": "/en/cases/hkdc/2021/315",
+      "pub_date": "2021-03-12T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC716/2020",
+      "neutral": "[2021] HKDC 315",
+      "parallel": "",
+      "coram": "Before: Deputy District Judge David Cheung in Court",
+      "parties": "HKSAR v DAO VAN TUNG",
+      "charge": "Offence: Attempted burglary (企圖入屋犯法罪)",
+      "representations": "Present: Mr Henry Ma, Counsel on fiat, for HKSAR Mr David Boyton, instructed by Choy Yung & Co., Solicitors, assigned by the Director of Legal Aid, for the defendant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

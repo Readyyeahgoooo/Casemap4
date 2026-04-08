@@ -1,0 +1,27 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "title": "HKSAR V. CHAN CHEUK HEI",
+      "path": "/en/cases/hkcfi/2022/3584",
+      "pub_date": "2022-12-07T00:00:00+08:00",
+      "db": "Court of First Instance",
+      "act": "HCMA507/2021",
+      "neutral": "[2022] HKCFI 3584",
+      "parallel": "",
+      "coram": "Before: Deputy High Court Judge Woodcock in Court",
+      "parties": "HKSAR Respondent and CHAN CHEUK HEI Appellant",
+      "charge": "",
+      "representations": "Mr Lui Ming Chun, Pierre, Senior Public Prosecutor and Ms Kathy Sum, Public Prosecutor, of Department of Justice, for the Respondent Mr McGuinniety, Edward L, instructed by Messrs. Fongs, for the Appellant",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

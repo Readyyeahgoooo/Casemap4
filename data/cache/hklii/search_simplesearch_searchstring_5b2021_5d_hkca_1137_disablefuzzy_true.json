@@ -1,0 +1,69 @@
+{
+  "count": 4,
+  "results": [
+    {
+      "title": "HKSAR V. AU NOK HIN",
+      "path": "/en/cases/hkca/2021/1137",
+      "pub_date": "2021-08-04T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC84/2021",
+      "neutral": "[2021] HKCA 1137",
+      "parallel": "",
+      "coram": "Before: Hon Pang JA in Court",
+      "parties": "BETWEEN HKSAR Respondent and AU NOK HIN (區諾軒) (D9) Applicant",
+      "charge": "",
+      "representations": "Mr Robert Pang, SC leading Ms Agnes Kwong, instructed by M/s Ho Tse Wai & Partners, for the Applicant Mr William Siu, SADPP (Ag.) and Mr Edward Lau, SPP (Ag.) of Department of Justice, for the Respondent",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. WONG CHI FUNG AND ANOTHER",
+      "path": "/en/cases/hkca/2022/239",
+      "pub_date": "2022-02-21T00:00:00+08:00",
+      "db": "Court of Appeal",
+      "act": "CACC101/2021",
+      "neutral": "[2022] HKCA 239",
+      "parallel": "[2022] 3 HKC 131; [2022] 1 HKLRD 1305",
+      "coram": "Before:  Hon M Poon and A Pang JJA in Court",
+      "parties": "BETWEEN HKSAR Respondent and WONG CHI FUNG (黃之鋒) 1 st Applicant LEUNG JANNELLE ROSALYNNE (梁凱晴) 2 nd Applicant",
+      "charge": "",
+      "representations": "Mr William Siu, SADPP and Mr Edward Lau, SPP of the Department of Justice, for the respondent Mr Steven Kwan and Ms Charlotte Chan, instructed by Ho Tse Wai & Partners, for the 1 st and 2 nd applicants",
+      "remarks": ""
+    },
+    {
+      "title": "HKSAR V. CHAN HO WUN AND OTHERS",
+      "path": "/en/cases/hkdc/2021/1324",
+      "pub_date": "2021-10-16T00:00:00+08:00",
+      "db": "District Court",
+      "act": "DCCC107/2021",
+      "neutral": "[2021] HKDC 1324",
+      "parallel": "",
+      "coram": "Before: District Judge D Yau",
+      "parties": "HKSAR v CHAN HO WUN (D1) TSANG KIN SHING (D2) CHUI CHI KIN (D3) WU CHI WAI (D4) CHU HOI DICK, EDDIE (D6) LEUNG KWOK HUNG (D7) TANG SAI LAI (D8)",
+      "charge": "Offence: [1] Incitement to knowingly take part in an unauthorized assembly（煽惑他人明知而參與未經批准集結） - D1-D5 [2] Holding or organizing an unauthorized assembly（舉行或組織一個未經批准集結）- D1, D3, D4, D6-D8 [3] Knowingly taking part in an unauthorized assembly（明知而參與未經批准集結） – D1, D3, D4, D6 to D8",
+      "representations": "Present: Ms Crystal Chan, Senior Public Prosecutor and Mr Wayne Lee, Public Prosecutor, for HKSAR (The 1 st defendant was not represented and was acting in person) Mr Ng Chung Luen, Chris, instructed by JCC Cheung & Co, for the 2 nd and 8 th defendants Miss Wong Kam Hing, Fanny, instructed by Keith Lam Lau & Chan, assigned by the Director of Legal Aid, for the 3 rd defendant Mr Grounds Christopher and Mr Lee Hung Mo, Geoffrey, instructed by Ho, Tse, Wai & Partners, for the 4 th defendant Mr Chan King Yan, Kristin, Solicitor of Ho, Tse, Wai & Partners, for the 6 th defendant Mr Wong Yu Yat, Anson, instructed by Chan & Chan, assigned by the Director of Legal Aid, for the 7 th defendant",
+      "remarks": ""
+    },
+    {
+      "title": "香港特別行政區 訴 鄒幸彤",
+      "path": "/tc/cases/hkcfi/2022/3692",
+      "pub_date": "2022-12-14T00:00:00+08:00",
+      "db": "原訟法庭",
+      "act": "HCMA51/2022",
+      "neutral": "[2022] HKCFI 3692",
+      "parallel": "[2023] 3 HKC 158",
+      "coram": "主審法官： 高等法院原訟法庭法官張慧玲",
+      "parties": "香港特別行政區 訴 上訴人 鄒幸彤",
+      "charge": "",
+      "representations": "答辯人：由律政司副刑事檢控專員譚耀豪資深大律師及署理高級檢控官劉允祥代表香港特別行政區 上訴人：由鄭國洪律師事務所轉聘彭耀鴻資深大律師及吳宗鑾大律師代表",
+      "remarks": ""
+    }
+  ],
+  "classification": {
+    "type": "CASE",
+    "case_format": "citation"
+  },
+  "recommendation": {
+    "message": "Not concept search",
+    "data": []
+  }
+}

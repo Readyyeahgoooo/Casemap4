@@ -1,0 +1,15 @@
+{
+  "count": 0,
+  "results": [],
+  "classification": {
+    "type": "LEGIS",
+    "cap": "374",
+    "suffix": "",
+    "prefix": "",
+    "title": "Road Traffic Ordinance"
+  },
+  "recommendation": {
+    "message": "Exception occurred in handling search",
+    "data": []
+  }
+}
