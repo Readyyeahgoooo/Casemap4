@@ -4,7 +4,7 @@ import time, json, sys, os
 sys.path.insert(0, "src")
 from casemap.hybrid_graph import HybridGraphStore, DeterminatorPipeline
 
-store = HybridGraphStore.from_file("artifacts/hk_criminal_hybrid/hierarchical_graph.json")
+store = HybridGraphStore.from_file("artifacts/hk_criminal_hybrid_v2/hierarchical_graph.json")
 pipeline = DeterminatorPipeline()
 
 queries = [

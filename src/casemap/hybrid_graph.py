@@ -123,6 +123,92 @@ QUERY_STOPWORDS = {
     "offense",
     "law",
 }
+
+# Maps inflected / colloquial verb forms to their canonical legal token.
+# Applied during score token expansion so that "stealing my friend's jacket"
+# surfaces theft propositions even though the graph uses "theft"/"appropriation".
+QUERY_SYNONYMS: dict[str, str] = {
+    # Theft
+    "stealing": "theft",
+    "steal": "theft",
+    "stole": "theft",
+    "stolen": "theft",
+    "shoplifting": "theft",
+    "shoplift": "theft",
+    "shoplifted": "theft",
+    "took": "theft",
+    "taking": "theft",
+    "appropriating": "appropriation",
+    "appropriated": "appropriation",
+    # Robbery
+    "robbing": "robbery",
+    "robbed": "robbery",
+    "rob": "robbery",
+    # Burglary
+    "burgling": "burglary",
+    "burgled": "burglary",
+    "broke": "burglary",
+    "breaking": "burglary",
+    # Homicide
+    "killing": "murder",
+    "killed": "murder",
+    "kill": "murder",
+    "slaying": "murder",
+    "slew": "murder",
+    # Assault / violence
+    "beating": "assault",
+    "beat": "assault",
+    "hit": "assault",
+    "hitting": "assault",
+    "punching": "assault",
+    "punch": "assault",
+    "punched": "assault",
+    "kicked": "assault",
+    "kicking": "assault",
+    "attacking": "assault",
+    "attacked": "assault",
+    # Stabbing / wounding — NOTE: "stabbing" is NOT mapped here
+    # because CRIMINAL_QUERY_HINTS already handle the expansion
+    # and adding "wounding" to scoring_tokens would boost the
+    # "Assault and Wounding" topic even for "stab a dog" queries.
+    "slashing": "wounding",
+    "slashed": "wounding",
+    # Fraud / deception
+    "cheating": "deception",
+    "cheat": "deception",
+    "cheated": "deception",
+    "tricking": "deception",
+    "tricked": "deception",
+    "scamming": "fraud",
+    "scammed": "fraud",
+    "scam": "fraud",
+    # Drugs
+    "dealing": "trafficking",
+    "deal": "trafficking",
+    "dealt": "trafficking",
+    # Driving
+    "drove": "driving",
+    "drunk": "drink",
+    "drinking": "drink",
+    # Sexual offences
+    "raping": "rape",
+    "raped": "rape",
+    # Damage
+    "burning": "arson",
+    "burned": "arson",
+    "burnt": "arson",
+    "destroying": "damage",
+    "destroyed": "damage",
+    # Handling / laundering
+    "laundering": "laundering",
+    "launder": "laundering",
+    "laundered": "laundering",
+    # Bribing
+    "bribing": "bribery",
+    "bribed": "bribery",
+    "bribe": "bribery",
+}
+
 CRIMINAL_QUERY_HINTS = {
     # Animal welfare
     "dog": ["animal cruelty dog hong kong", "prevention of cruelty to animals ordinance cap 169 hong kong"],
@@ -162,7 +248,14 @@ CRIMINAL_QUERY_HINTS = {
     "deception": ["deception offence hong kong criminal", "obtaining property deception HKSAR"],
     # Theft and property offences
     "theft": ["theft hong kong criminal", "theft ordinance HKSAR"],
+    "steal": ["theft hong kong criminal", "theft ordinance HKSAR"],
+    "stealing": ["theft hong kong criminal", "theft ordinance HKSAR"],
+    "stole": ["theft hong kong criminal", "theft ordinance HKSAR"],
+    "stolen": ["theft hong kong criminal", "theft ordinance HKSAR"],
+    "shoplifting": ["theft shoplifting hong kong criminal", "theft ordinance HKSAR"],
     "robbery": ["robbery hong kong criminal", "armed robbery HKSAR"],
+    "robbing": ["robbery hong kong criminal", "armed robbery HKSAR"],
+    "rob": ["robbery hong kong criminal", "armed robbery HKSAR"],
     "burglary": ["burglary hong kong criminal", "breaking entering HKSAR"],
     "blackmail": ["blackmail extortion hong kong criminal"],
     "handling": ["handling stolen goods hong kong criminal"],
@@ -2131,6 +2224,18 @@ class HybridGraphStore:
             # All tokens were stopwords; fall back to original tokens
             scoring_tokens = query_tokens
 
+        # ── Synonym expansion ────────────────────────────────────
+        # Map inflected verb forms (stealing→theft, robbing→robbery …)
+        # to their canonical legal forms so colloquial phrasing still
+        # matches graph propositions that use formal legal vocabulary.
+        synonym_expansions: list[str] = []
+        for tok in scoring_tokens:
+            canonical = QUERY_SYNONYMS.get(tok)
+            if canonical and canonical not in scoring_tokens:
+                synonym_expansions.append(canonical)
+        if synonym_expansions:
+            scoring_tokens = scoring_tokens + synonym_expansions
+
         # ── Query expansion via CRIMINAL_QUERY_HINTS ────────────
         # When query tokens match hint keys (e.g. "usdt" → money
         # laundering), derive extra tokens so that relevant topics and
@@ -2171,12 +2276,24 @@ class HybridGraphStore:
         # Add offence keywords (e.g. "murder", "theft", "drug") for
         # sub-topic matching.  Also expand slang terms through hints
         # (e.g. "usdt" → "money laundering") so area matching works.
+        # Verb-form synonyms (e.g. "stabbing") are resolved to their
+        # canonical noun before hint expansion, and only expanded if
+        # their canonical form aligns with (or doesn't conflict with)
+        # tokens already in the boost set.  This prevents "stabbing a
+        # dog" from boosting "Assault & Wounding" when the classifier
+        # already identified "animal_cruelty" via the "dog" token.
         if offence_keywords:
             area_boost_tokens = area_boost_tokens | {k.lower() for k in offence_keywords}
+            # Resolve synonyms to decide which hints to expand
+            _resolved_offence_kws: set[str] = set()
             for kw in offence_keywords:
                 kw_lower = kw.lower()
-                if kw_lower in CRIMINAL_QUERY_HINTS:
-                    for hint_q in CRIMINAL_QUERY_HINTS[kw_lower]:
+                canonical = QUERY_SYNONYMS.get(kw_lower, kw_lower)
+                _resolved_offence_kws.add(canonical)
+                _resolved_offence_kws.add(kw_lower)
+            for kw in sorted(_resolved_offence_kws):
+                if kw in CRIMINAL_QUERY_HINTS:
+                    for hint_q in CRIMINAL_QUERY_HINTS[kw]:
                         for ht in tokenize(hint_q):
                             if ht not in _HINT_DOMAIN_STOPWORDS:
                                 area_boost_tokens.add(ht)
@@ -2758,8 +2875,8 @@ OFFENCE_ORDINANCE_RULES = [
         "offence_family": "theft",
         "ordinance": "Theft Ordinance (Cap. 210)",
         "section": "s.9",
-        "keywords": {"steal", "stole", "theft", "dishonestly", "property", "shoplift"},
-        "phrases": {"take property", "shop theft"},
+        "keywords": {"steal", "stole", "stolen", "stealing", "theft", "dishonestly", "property", "shoplift", "shoplifting", "shoplifted", "appropriat"},
+        "phrases": {"take property", "shop theft", "stealing from", "took without"},
         "strict_liability_possible": False,
     },
     {
@@ -2938,6 +3055,13 @@ class DeterminatorPipeline:
             "arrest", "charge", "prosecution", "defendant", "accused", "police",
             "court", "magistrate", "sentence", "imprisonment", "fine", "bail",
             "murder", "theft", "assault", "drug", "fraud", "bribery",
+            # Verb / colloquial forms
+            "steal", "stealing", "stole", "stolen",
+            "rob", "robbing", "robbed",
+            "kill", "killing", "killed",
+            "stabbing", "stabbed",
+            "shoplifting", "shoplifted",
+            "laundering", "launder",
         }
         criminal_hits |= tokens & criminal_keywords
 
