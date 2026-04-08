@@ -1255,6 +1255,9 @@ def build_hierarchical_graph_bundle(
             "topic_paths": [],
             "lineage_ids": [],
             "enrichment_status": "case_only",
+            "primary_topic": "",
+            "offence_family": "",
+            "secondary_topics": [],
             "summary_embedding": [],
             "references": [],
             "legal_domain": legal_domain,
@@ -1503,14 +1506,17 @@ def build_hierarchical_graph_bundle(
             path = context.get("path", source_node["label"])
             if path not in case_node["topic_paths"]:
                 case_node["topic_paths"].append(path)
+            _is_curated = edge_type == "lineage_case"
             add_edge(
                 case_node["id"],
                 source_node["id"],
                 "BELONGS_TO_TOPIC",
                 score=round(float(edge.get("weight", 1.0)), 4),
-                primary=edge_type == "lineage_case",
+                primary=_is_curated,
                 assignment_source=edge_type,
-                curated=edge_type == "lineage_case",
+                curated=_is_curated,
+                assignment_confidence=1.0 if _is_curated else 0.6,
+                assignment_status="verified" if _is_curated else "candidate",
             )
         elif source_node and source_node["type"] == "topic" and target_node and target_node["type"] == "statute":
             statute_node = ensure_statute(target_node["label"])
@@ -1585,7 +1591,7 @@ def build_hierarchical_graph_bundle(
             context = topic_context.get(topic_id, {})
             if context.get("path") and context["path"] not in case_node["topic_paths"]:
                 case_node["topic_paths"].append(context["path"])
-            add_edge(case_node["id"], topic_id, "BELONGS_TO_TOPIC", score=1.0, primary=True, assignment_source="curated_case_enrichment", curated=True)
+            add_edge(case_node["id"], topic_id, "BELONGS_TO_TOPIC", score=1.0, primary=True, assignment_source="curated_case_enrichment", curated=True, assignment_confidence=1.0, assignment_status="verified")
         for judge in enrichment.get("judges", []):
             judge_id = f"judge:{slugify(judge)[:80]}"
             add_node({"id": judge_id, "type": "Judge", "label": judge, "name": judge})
@@ -1699,6 +1705,52 @@ def build_hierarchical_graph_bundle(
             typed_link_count = sum(1 for edge in outgoing[node["id"]] + incoming[node["id"]] if edge["type"] in TREATMENT_EDGE_TYPES)
             lineage_count = len(node.get("lineage_ids", []))
             node["authority_score"] = _court_score(node.get("court_level", ""), lineage_count, typed_link_count, node["degree"])
+
+    # ── Derive primary_topic and offence_family for each case ──
+    # Uses the BELONGS_TO_TOPIC edge with the highest confidence,
+    # preferring curated/verified assignments over auto-assigned ones.
+    _OFFENCE_FAMILY_MAP: dict[str, str] = {
+        "theft": "theft", "robbery": "theft", "burglary": "theft",
+        "fraud": "fraud", "deception": "fraud",
+        "money laundering": "money_laundering", "proceeds": "money_laundering",
+        "murder": "homicide", "manslaughter": "homicide",
+        "assault": "violence", "wounding": "violence", "grievous": "violence",
+        "rape": "sexual_offences", "sexual": "sexual_offences", "indecent": "sexual_offences",
+        "drug": "dangerous_drugs", "trafficking": "dangerous_drugs", "dangerous drugs": "dangerous_drugs",
+        "arson": "criminal_damage", "criminal damage": "criminal_damage",
+        "animal": "animal_cruelty", "cruelty": "animal_cruelty",
+        "riot": "public_order", "unlawful assembly": "public_order",
+        "bribery": "bribery", "corruption": "bribery",
+        "computer": "computer_crimes", "forgery": "forgery",
+        "kidnap": "kidnapping", "false imprisonment": "kidnapping",
+        "intoxication": "defences", "insanity": "defences", "duress": "defences",
+        "sentencing": "sentencing", "tariff": "sentencing",
+    }
+    for node in bundle_nodes:
+        if node["type"] != "Case":
+            continue
+        # Find best topic assignment
+        best_topic_label = ""
+        best_conf = -1.0
+        for edge in outgoing.get(node["id"], []):
+            if edge["type"] != "BELONGS_TO_TOPIC":
+                continue
+            conf = edge.get("assignment_confidence", 0.5)
+            if edge.get("primary"):
+                conf += 0.5
+            if conf > best_conf:
+                best_conf = conf
+                target = bundle_node_lookup.get(edge["target"], {})
+                best_topic_label = target.get("label_en", target.get("label", ""))
+        if best_topic_label and not node.get("primary_topic"):
+            node["primary_topic"] = best_topic_label
+        # Derive offence_family from primary topic or topic_paths
+        if not node.get("offence_family"):
+            combined = (node.get("primary_topic", "") + " " + " ".join(node.get("topic_paths", []))).lower()
+            for keyword, family in _OFFENCE_FAMILY_MAP.items():
+                if keyword in combined:
+                    node["offence_family"] = family
+                    break
 
     case_cards: dict[str, dict] = {}
     for node in bundle_nodes:
@@ -2677,8 +2729,19 @@ class HybridGraphStore:
                     # Keep local citations as fallback even when live grounding
                     # was preferred but returned nothing.  Clearing them left
                     # the user with 0 results despite having relevant cases.
+                    # Filter out weak local citations that would confuse users.
+                    # Only keep citations with support_score above a minimum
+                    # relevance threshold *or* those from curated enrichments.
+                    _MIN_WEAK_FALLBACK_SCORE = 0.15
+                    citations = [
+                        c for c in citations
+                        if c.get("support_score", 0) >= _MIN_WEAK_FALLBACK_SCORE
+                    ]
                     if not warnings_from_live:
-                        warnings = ["Local criminal graph coverage was weak, and no live HKLII matches were found.  Showing best local results."]
+                        if citations:
+                            warnings = ["Local criminal graph coverage was weak, and no live HKLII matches were found.  Showing best local results."]
+                        else:
+                            warnings = ["No reliable local citations were found for this query.  Try rephrasing with specific legal terms."]
             else:
                 warnings = []
         else:
