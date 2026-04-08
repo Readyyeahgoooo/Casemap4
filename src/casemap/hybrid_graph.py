@@ -110,6 +110,18 @@ QUERY_STOPWORDS = {
     "which",
     "with",
     "would",
+    # Domain stopwords: appear in nearly every criminal-law node,
+    # so they add noise rather than signal to lexical scoring.
+    "hong",
+    "kong",
+    "criminal",
+    "crime",
+    "crimes",
+    "hksar",
+    "offence",
+    "offences",
+    "offense",
+    "law",
 }
 CRIMINAL_QUERY_HINTS = {
     # Animal welfare
@@ -121,7 +133,13 @@ CRIMINAL_QUERY_HINTS = {
     "livestock": ["animal cruelty livestock hong kong", "prevention of cruelty to animals hong kong"],
     "wildlife": ["wildlife protection hong kong criminal", "animals ordinance hong kong"],
     "cruelty": ["animal cruelty hong kong", "prevention of cruelty to animals ordinance cap 169"],
-    "stab": ["stabbing animal hong kong offence", "animal cruelty injury hong kong"],
+    "stab": ["assault wounding hong kong criminal", "grievous bodily harm stabbing HKSAR"],
+    "stabbing": ["assault wounding hong kong criminal", "grievous bodily harm stabbing HKSAR"],
+    "wound": ["wounding hong kong criminal", "grievous bodily harm HKSAR"],
+    "wounding": ["wounding hong kong criminal", "offences against the person HKSAR"],
+    "grievous": ["grievous bodily harm hong kong criminal", "offences against the person HKSAR"],
+    "bodily": ["grievous bodily harm hong kong criminal", "assault occasioning HKSAR"],
+    "gbh": ["grievous bodily harm hong kong criminal", "wounding HKSAR"],
     # Evidence
     "hearsay": ["hearsay evidence criminal hong kong"],
     "confession": ["confession evidence criminal hong kong", "admissibility confession HKSAR"],
@@ -2061,6 +2079,8 @@ class HybridGraphStore:
         mode: str = "extractive",
         model: str = "",
         max_citations: int = 8,
+        classification_area: str = "",
+        offence_keywords: list[str] | None = None,
     ) -> dict:
         try:
             bounded_top_k = max(1, min(int(top_k), 10))
@@ -2102,6 +2122,15 @@ class HybridGraphStore:
             elif node["type"] == "Proposition":
                 searchable.append((node["id"], "Proposition", f"{node.get('label_en', '')} {node.get('statement_en', '')}"))
 
+        # ── Stopword-filtered tokens for scoring ────────────────
+        # Remove domain-generic words (hong, kong, criminal …) from
+        # the scoring token set so they don't inflate every node
+        # equally and drown out the distinctive query terms.
+        scoring_tokens = [t for t in query_tokens if t not in QUERY_STOPWORDS]
+        if not scoring_tokens:
+            # All tokens were stopwords; fall back to original tokens
+            scoring_tokens = query_tokens
+
         # ── Query expansion via CRIMINAL_QUERY_HINTS ────────────
         # When query tokens match hint keys (e.g. "usdt" → money
         # laundering), derive extra tokens so that relevant topics and
@@ -2112,6 +2141,7 @@ class HybridGraphStore:
         _HINT_DOMAIN_STOPWORDS = {
             "hong", "kong", "criminal", "hksar", "law", "ordinance",
             "cap", "offence", "charge", "court", "section", "act",
+            "crime", "crimes",
         }
         hint_expanded_tokens: set[str] = set()
         if legal_domain == "criminal":
@@ -2122,6 +2152,79 @@ class HybridGraphStore:
             hint_expanded_tokens -= set(query_tokens)
             hint_expanded_tokens -= _HINT_DOMAIN_STOPWORDS
 
+        # ── Area-aware topic path matching ──────────────────────
+        # When classification_area is known (sentencing, defences, etc.)
+        # and offence_keywords provide criminal_hits, build a set of
+        # topic-path keywords to boost cases that match the doctrinal
+        # area queried.  This prevents "murder sentencing" from
+        # returning burglary authorities.
+        _AREA_TOPIC_KEYWORDS: dict[str, set[str]] = {
+            "sentencing": {"sentencing", "sentence", "penalty", "tariff", "imprisonment", "discount", "starting point"},
+            "defences": {"defence", "defense", "duress", "self-defence", "insanity", "intoxication", "provocation", "diminished", "automatism", "consent"},
+            "procedure": {"bail", "arrest", "confession", "evidence", "admissibility", "identification", "witness", "disclosure", "warrant", "caution", "silence", "police"},
+            "offence_elements": set(),  # rely on offence_keywords instead
+        }
+        area_boost_tokens: set[str] = set()
+        resolved_area = (classification_area or "").strip().lower()
+        if resolved_area and resolved_area in _AREA_TOPIC_KEYWORDS:
+            area_boost_tokens = _AREA_TOPIC_KEYWORDS[resolved_area]
+        # Add offence keywords (e.g. "murder", "theft", "drug") for
+        # sub-topic matching.  Also expand slang terms through hints
+        # (e.g. "usdt" → "money laundering") so area matching works.
+        if offence_keywords:
+            area_boost_tokens = area_boost_tokens | {k.lower() for k in offence_keywords}
+            for kw in offence_keywords:
+                kw_lower = kw.lower()
+                if kw_lower in CRIMINAL_QUERY_HINTS:
+                    for hint_q in CRIMINAL_QUERY_HINTS[kw_lower]:
+                        for ht in tokenize(hint_q):
+                            if ht not in _HINT_DOMAIN_STOPWORDS:
+                                area_boost_tokens.add(ht)
+        # Pre-compute per-case area relevance flag
+        # Also build sibling-exclusion map for closely-related offences
+        # (e.g. theft vs burglary) so that "theft elements" doesn't
+        # return burglary-only cases.
+        _OFFENCE_SIBLINGS: dict[str, set[str]] = {
+            "theft": {"burglary", "robbery"},
+            "burglary": {"theft", "robbery"},
+            "robbery": {"theft", "burglary"},
+            "murder": {"manslaughter"},
+            "manslaughter": {"murder"},
+            "assault": {"rape", "indecent"},
+            "rape": {"assault", "indecent"},
+        }
+        # Identify the primary offence keyword from the query
+        _primary_offences: set[str] = set()
+        _sibling_offences: set[str] = set()
+        if offence_keywords:
+            for kw in offence_keywords:
+                kw_lower = kw.lower()
+                if kw_lower in _OFFENCE_SIBLINGS:
+                    _primary_offences.add(kw_lower)
+                    _sibling_offences |= _OFFENCE_SIBLINGS[kw_lower]
+            # Don't exclude siblings that are also explicitly queried
+            _sibling_offences -= _primary_offences
+            _sibling_offences -= set(query_tokens)
+
+        _case_area_match: dict[str, bool] = {}
+        if area_boost_tokens:
+            for node in self.nodes.values():
+                if node["type"] == "Case":
+                    paths_text = " ".join(node.get("topic_paths", [])).lower()
+                    summary_text = (node.get("summary_en", "") or "").lower()
+                    combined = paths_text + " " + summary_text
+                    match_count = sum(1 for kw in area_boost_tokens if kw in combined)
+                    matched = match_count >= 1
+                    # Sibling exclusion: if the case matches a sibling
+                    # offence but NOT the primary offence, treat as
+                    # non-matching (e.g. burglary-only for theft query)
+                    if matched and _primary_offences and _sibling_offences:
+                        has_primary = any(p in combined for p in _primary_offences)
+                        has_sibling = any(s in combined for s in _sibling_offences)
+                        if has_sibling and not has_primary:
+                            matched = False
+                    _case_area_match[node["id"]] = matched
+
         lexical_scores: dict[str, float] = {}
         for node_id, kind, text in searchable:
             text_tokens = tokenize(text)
@@ -2129,11 +2232,36 @@ class HybridGraphStore:
                 lexical_scores[node_id] = 0.0
                 continue
             text_token_set = set(text_tokens)
-            query_token_set = set(query_tokens)
+            query_token_set = set(scoring_tokens)
             overlap = len(query_token_set & text_token_set)
             score = overlap / max(math.sqrt(len(text_token_set) * len(query_token_set)), 1)
             if kind == "Proposition":
-                score += 0.12
+                score += 0.18
+            elif kind == "Topic" and overlap:
+                # Topics that match query terms should rank alongside
+                # propositions so they enter best_node_ids and trigger
+                # topic-mediated case retrieval downstream.
+                score += 0.20
+                # Extra boost for propositions from area-matched cases
+                if _case_area_match:
+                    prop_node = self.nodes.get(node_id, {})
+                    for edge in self.incoming.get(node_id, []):
+                        if edge["type"] == "SUPPORTS":
+                            for pe in self.outgoing.get(edge["source"], []):
+                                if pe["type"] == "PART_OF" and _case_area_match.get(pe["target"], False):
+                                    score += 0.15
+                                    break
+                            break
+                # Sibling-offence penalty at proposition level:
+                # If the proposition text mentions a sibling offence
+                # (e.g. "burglary") but NOT the primary offence
+                # (e.g. "theft"), reduce its score significantly.
+                if _primary_offences and _sibling_offences:
+                    text_lower = text.lower()
+                    prop_has_primary = any(p in text_lower for p in _primary_offences)
+                    prop_has_sibling = any(s in text_lower for s in _sibling_offences)
+                    if prop_has_sibling and not prop_has_primary:
+                        score *= 0.3
             # Hint expansion bonus (50% dampening) — bridges lexical
             # gaps like "usdt" → "money laundering"
             if hint_expanded_tokens:
@@ -2197,8 +2325,18 @@ class HybridGraphStore:
                             support_case_scores[paragraph_edge["target"]] += node_score + 0.22
             elif node["type"] == "Topic":
                 topic_label_tokens = set(tokenize(node.get("label_en", node.get("label", ""))))
+                scoring_token_set = set(scoring_tokens)
+                _topic_common = topic_label_tokens & scoring_token_set
+                # Use the better of topic-side and query-side overlap
+                # so that a topic like "Insanity, Automatism and
+                # Intoxication" still gets boosted even though only
+                # 1/3 of its tokens match, because 1/2 of the query
+                # tokens ("intoxication") are covered.
                 topic_overlap = (
-                    len(topic_label_tokens & set(query_tokens)) / max(len(topic_label_tokens), 1)
+                    max(
+                        len(_topic_common) / max(len(topic_label_tokens), 1),
+                        len(_topic_common) / max(len(scoring_token_set), 1),
+                    )
                     if topic_label_tokens else 0.0
                 )
                 # Also check hint-expanded tokens so that USDT → money
@@ -2231,6 +2369,19 @@ class HybridGraphStore:
                 if self.nodes.get(edge["target"], {}).get("type") == "Case":
                     support_case_ids.add(edge["target"])
                     support_case_scores[edge["target"]] += node_score * 0.15
+
+        # ── Area-aware reranking ────────────────────────────────
+        # Boost cases matching the classified doctrinal area and
+        # penalise cases that clearly belong to a different area.
+        # This prevents "murder sentencing" from returning burglary
+        # sentencing authorities.
+        if _case_area_match:
+            for case_id in support_case_ids:
+                if _case_area_match.get(case_id, False):
+                    support_case_scores[case_id] *= 1.6
+                else:
+                    # Stronger demotion for offence-mismatched cases
+                    support_case_scores[case_id] *= 0.35
 
         support_cases = [
             self.case_card(case_id)
@@ -2997,7 +3148,14 @@ class DeterminatorPipeline:
                 "disclaimer": disclaimer,
             }
 
-        local_result = store.query(question, top_k=5, mode="extractive", max_citations=max_citations)
+        local_result = store.query(
+            question,
+            top_k=5,
+            mode="extractive",
+            max_citations=max_citations,
+            classification_area=classification.get("area", ""),
+            offence_keywords=classification.get("criminal_hits", []),
+        )
         top_score = max((c.get("support_score", 0.0) for c in local_result.get("citations", [])), default=0.0)
         use_llm = mode in ("openrouter", "deepseek") and (
             os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("OPENROUTER_API_KEY")
