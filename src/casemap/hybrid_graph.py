@@ -206,6 +206,16 @@ CRIMINAL_QUERY_HINTS = {
     "cyber": ["computer crime hong kong criminal", "online fraud HKSAR"],
     # Money laundering (expanded)
     "proceeds": ["proceeds of crime hong kong", "organized serious crimes ordinance HKSAR"],
+    # Crypto / virtual asset financial crime
+    "bitcoin": ["money laundering hong kong criminal", "proceeds of crime cryptocurrency HKSAR"],
+    "crypto": ["money laundering hong kong criminal", "cryptocurrency virtual asset crime HKSAR"],
+    "cryptocurrency": ["money laundering hong kong criminal", "virtual asset crime HKSAR"],
+    "usdt": ["money laundering hong kong criminal", "proceeds of crime cryptocurrency HKSAR"],
+    "tether": ["money laundering hong kong criminal", "proceeds of crime cryptocurrency HKSAR"],
+    "ethereum": ["money laundering hong kong criminal", "cryptocurrency virtual asset crime HKSAR"],
+    "wallet": ["money laundering hong kong criminal", "proceeds of crime cryptocurrency HKSAR"],
+    "virtual": ["virtual asset crime hong kong", "money laundering cryptocurrency HKSAR"],
+    "stablecoin": ["money laundering hong kong criminal", "virtual asset crime HKSAR"],
     # Tax evasion
     "tax": ["tax evasion hong kong criminal", "inland revenue ordinance HKSAR"],
     "evasion": ["tax evasion hong kong criminal"],
@@ -2092,16 +2102,45 @@ class HybridGraphStore:
             elif node["type"] == "Proposition":
                 searchable.append((node["id"], "Proposition", f"{node.get('label_en', '')} {node.get('statement_en', '')}"))
 
+        # ── Query expansion via CRIMINAL_QUERY_HINTS ────────────
+        # When query tokens match hint keys (e.g. "usdt" → money
+        # laundering), derive extra tokens so that relevant topics and
+        # cases receive a scoring bonus even when the original query
+        # has zero lexical overlap with domain terms.
+        # Domain-common words are excluded so they don't boost every
+        # single node equally and drown out the real signal.
+        _HINT_DOMAIN_STOPWORDS = {
+            "hong", "kong", "criminal", "hksar", "law", "ordinance",
+            "cap", "offence", "charge", "court", "section", "act",
+        }
+        hint_expanded_tokens: set[str] = set()
+        if legal_domain == "criminal":
+            for token in query_tokens:
+                if token in CRIMINAL_QUERY_HINTS:
+                    for hint_query in CRIMINAL_QUERY_HINTS[token]:
+                        hint_expanded_tokens.update(tokenize(hint_query))
+            hint_expanded_tokens -= set(query_tokens)
+            hint_expanded_tokens -= _HINT_DOMAIN_STOPWORDS
+
         lexical_scores: dict[str, float] = {}
         for node_id, kind, text in searchable:
             text_tokens = tokenize(text)
             if not text_tokens:
                 lexical_scores[node_id] = 0.0
                 continue
-            overlap = len(set(query_tokens) & set(text_tokens))
-            score = overlap / max(math.sqrt(len(set(text_tokens)) * len(set(query_tokens))), 1)
+            text_token_set = set(text_tokens)
+            query_token_set = set(query_tokens)
+            overlap = len(query_token_set & text_token_set)
+            score = overlap / max(math.sqrt(len(text_token_set) * len(query_token_set)), 1)
             if kind == "Proposition":
                 score += 0.12
+            # Hint expansion bonus (50% dampening) — bridges lexical
+            # gaps like "usdt" → "money laundering"
+            if hint_expanded_tokens:
+                hint_overlap = len(hint_expanded_tokens & text_token_set)
+                if hint_overlap > 0:
+                    hint_score = hint_overlap / max(math.sqrt(len(text_token_set) * len(hint_expanded_tokens)), 1)
+                    score += hint_score * 0.5
             lexical_scores[node_id] = score
         lexical_norm = normalize_scores(lexical_scores)
 
@@ -2162,6 +2201,14 @@ class HybridGraphStore:
                     len(topic_label_tokens & set(query_tokens)) / max(len(topic_label_tokens), 1)
                     if topic_label_tokens else 0.0
                 )
+                # Also check hint-expanded tokens so that USDT → money
+                # laundering hint fires the topic multiplier for the
+                # "Money Laundering" topic.
+                if topic_overlap < 0.5 and hint_expanded_tokens and topic_label_tokens:
+                    hint_topic_overlap = (
+                        len(topic_label_tokens & hint_expanded_tokens) / max(len(topic_label_tokens), 1)
+                    )
+                    topic_overlap = max(topic_overlap, hint_topic_overlap)
                 # When the topic label strongly matches the query (e.g. "Money
                 # Laundering" for a money laundering question), give its linked
                 # cases a boost comparable to proposition-linked cases so they
@@ -2281,6 +2328,18 @@ class HybridGraphStore:
                 or top_local_support < 0.22
                 or token_coverage < 0.34
             )
+            # When hint expansion triggered a strong topic match
+            # (e.g. "usdt" → money laundering), treat local results
+            # as strong even if raw token_coverage is low — the
+            # query uses slang/crypto terms that won't appear in
+            # case text, but hint expansion already bridged the gap.
+            if weak_local_grounding and hint_expanded_tokens and len(citations) >= 3 and top_local_support >= 0.22:
+                hint_grounding_tokens = set(tokenize(local_grounding_text + " " + matched_topic_labels))
+                hint_coverage = (
+                    len(hint_expanded_tokens & hint_grounding_tokens) / max(len(hint_expanded_tokens), 1)
+                )
+                if hint_coverage >= 0.25:
+                    weak_local_grounding = False
             if not weak_local_grounding:
                 # Check if query tokens map to CRIMINAL_QUERY_HINTS but local
                 # citations lack the domain-specific hint terms. This catches
