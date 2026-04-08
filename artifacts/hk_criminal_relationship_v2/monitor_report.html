@@ -71,7 +71,7 @@
     }
     .progress-bar {
       height: 100%;
-      width: 88%;
+      width: 100%;
       background: linear-gradient(90deg, var(--accent), #fb923c, var(--ok));
     }
     .metric-list, .warning-list {
@@ -106,20 +106,32 @@
       <h1>Hong Kong Criminal Law Relationship Graph</h1>
       <p>This monitor refreshes every 5 minutes so you can leave it open while the criminal-law graph build continues.</p>
       <div class="status-row">
-        <span class="pill"><strong>Status</strong> Running</span>
-        <span class="pill"><strong>Stage</strong> Building Hybrid</span>
-        <span class="pill"><strong>Updated</strong> 2026-04-08T11:10:22.484772+00:00</span>
+        <span class="pill"><strong>Status</strong> Completed</span>
+        <span class="pill"><strong>Stage</strong> Completed</span>
+        <span class="pill"><strong>Updated</strong> 2026-04-08T13:10:16.238598+00:00</span>
       </div>
-      <p>Building the hierarchical criminal-law explorer bundle.</p>
+      <p>Criminal-law graph build completed. Monitor report and exports are ready.</p>
       <div class="progress-track"><div class="progress-bar"></div></div>
-      <p class="summary-number">88%</p>
+      <p class="summary-number">100%</p>
     </section>
     <section class="grid">
       <section class="panel">
         <h2>Live Build Stats</h2>
-        <ul class="metric-list"><li><strong>Node Count:</strong> 1069</li><li><strong>Edge Count:</strong> 2716</li></ul>
+        <ul class="metric-list"><li><strong>Node Count:</strong> 1069</li><li><strong>Edge Count:</strong> 2716</li><li><strong>Case Count:</strong> 764</li><li><strong>Topic Count:</strong> 43</li><li><strong>Uncovered Topics:</strong> 0</li><li><strong>Low Coverage Topics:</strong> 3</li></ul>
       </section>
-      <section class="panel"><h2>Coverage Summary</h2><p>Final monitor coverage appears here once the build completes.</p></section>
+      
+        <section class="panel">
+          <h2>Coverage Summary</h2>
+          <ul class="metric-list">
+            <li><strong>Cases:</strong> 764</li>
+            <li><strong>Topics:</strong> 43</li>
+            <li><strong>Uncovered topics:</strong> 0</li>
+            <li><strong>Low-coverage topics:</strong> 3</li>
+            <li><strong>Embedding backend:</strong> local-hash</li>
+            <li><strong>Embedding records:</strong> 1058</li>
+          </ul>
+        </section>
+        
     </section>
     <section class="grid" style="margin-top: 18px;">
       <section class="panel">
@@ -128,7 +140,7 @@
       </section>
       <section class="panel">
         <h2>Next Actions</h2>
-        <ul class="warning-list"><li>Build still in progress.</li></ul>
+        <ul class="warning-list"><li>Run a second HKLII crawl on the uncovered topics using more specific offence or doctrine queries.</li><li>Feed uncovered topics into NotebookLM or a DeepSeek/OpenRouter enrichment pass if an MCP or API becomes available.</li><li>Review the low-coverage topics before promoting this graph as a full-production criminal-law map.</li></ul>
       </section>
     </section>
   </main>

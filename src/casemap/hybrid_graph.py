@@ -2157,11 +2157,24 @@ class HybridGraphStore:
                             supporting_node_ids.add(paragraph_edge["target"])
                             support_case_scores[paragraph_edge["target"]] += node_score + 0.22
             elif node["type"] == "Topic":
+                topic_label_tokens = set(tokenize(node.get("label_en", node.get("label", ""))))
+                topic_overlap = (
+                    len(topic_label_tokens & set(query_tokens)) / max(len(topic_label_tokens), 1)
+                    if topic_label_tokens else 0.0
+                )
+                # When the topic label strongly matches the query (e.g. "Money
+                # Laundering" for a money laundering question), give its linked
+                # cases a boost comparable to proposition-linked cases so they
+                # rank competitively.
+                if topic_overlap >= 0.5:
+                    topic_multiplier = 1.5 + 0.3 * topic_overlap
+                else:
+                    topic_multiplier = 0.75
                 for edge in self.incoming[node_id]:
                     if edge["type"] == "BELONGS_TO_TOPIC" and self.nodes[edge["source"]]["type"] == "Case":
                         support_case_ids.add(edge["source"])
                         supporting_node_ids.add(edge["source"])
-                        support_case_scores[edge["source"]] += node_score * 0.75
+                        support_case_scores[edge["source"]] += node_score * topic_multiplier
             for edge in self.outgoing[node_id][:8] + self.incoming[node_id][:8]:
                 supporting_node_ids.add(edge["source"])
                 supporting_node_ids.add(edge["target"])
@@ -2250,7 +2263,14 @@ class HybridGraphStore:
                 f"{citation.get('case_name', '')} {citation.get('quote', '')} {citation.get('principle_label', '')}"
                 for citation in citations[:3]
             )
-            local_grounding_tokens = set(tokenize(local_grounding_text))
+            # Include matched topic labels so topic-mediated retrieval
+            # (e.g. "Money Laundering" topic → 30 cases) counts toward coverage.
+            matched_topic_labels = " ".join(
+                self.nodes[nid].get("label_en", self.nodes[nid].get("label", ""))
+                for nid in best_node_ids[:6]
+                if nid in self.nodes and self.nodes[nid]["type"] == "Topic"
+            )
+            local_grounding_tokens = set(tokenize(local_grounding_text + " " + matched_topic_labels))
             token_coverage = (
                 len(distinctive_query_tokens & local_grounding_tokens) / max(len(distinctive_query_tokens), 1)
                 if distinctive_query_tokens
@@ -2327,12 +2347,11 @@ class HybridGraphStore:
                     if not support_cases:
                         warnings.append("Local criminal graph coverage was weak, so live HKLII authorities were retrieved.")
                 else:
-                    if prefer_live_grounding:
-                        citations = []
-                        support_cases = []
-                        suppress_local_summary = True
+                    # Keep local citations as fallback even when live grounding
+                    # was preferred but returned nothing.  Clearing them left
+                    # the user with 0 results despite having relevant cases.
                     if not warnings_from_live:
-                        warnings = ["Local criminal graph coverage was weak, and no live HKLII matches were found."]
+                        warnings = ["Local criminal graph coverage was weak, and no live HKLII matches were found.  Showing best local results."]
             else:
                 warnings = []
         else:

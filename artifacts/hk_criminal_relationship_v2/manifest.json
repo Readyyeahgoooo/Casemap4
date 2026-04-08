@@ -1,6 +1,6 @@
 {
   "title": "Hong Kong Criminal Law Relationship Graph",
-  "generated_at": "2026-04-08T11:10:22.440993+00:00",
+  "generated_at": "2026-04-08T12:27:35.687560+00:00",
   "source_documents": [
     {
       "label": "HKLII API",
@@ -3674,5 +3674,37 @@
         }
       }
     ]
+  },
+  "storage": {
+    "embedding_record_count": 1058,
+    "embedding_dimensions": 256,
+    "embedding_backend": {
+      "backend": "local-hash",
+      "model": "deterministic-token-hash",
+      "dimensions": 256
+    },
+    "chroma_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_criminal_relationship_v2/chroma_records.json",
+    "supabase_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_criminal_relationship_v2/supabase_export.sql",
+    "hybrid_bundle_written": true
+  },
+  "monitor_report": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_criminal_relationship_v2/monitor_report.json",
+  "monitor_dashboard": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_criminal_relationship_v2/monitor_report.html",
+  "build_progress": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_criminal_relationship_v2/build_progress.json",
+  "crawler_warnings": [
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=prevention+of+bribery+ordinance+HKSAR+criminal&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'prevention of bribery ordinance HKSAR criminal': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=criminal+hearsay+ordinance+HKSAR&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'criminal hearsay ordinance HKSAR': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=confiscation+order+HKSAR+criminal&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'confiscation order HKSAR criminal': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=animal+welfare+ordinance+hong+kong&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'animal welfare ordinance hong kong': HTTP Error 500: Internal Server Error",
+    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=waste+disposal+ordinance+HKSAR+prosecution&disablefuzzy=true; retried with an unverified TLS context.",
+    "Search failed for 'waste disposal ordinance HKSAR prosecution': HTTP Error 500: Internal Server Error"
+  ],
+  "case_count": 56,
+  "monitor": {
+    "uncovered_topics": 0,
+    "low_coverage_topics": 3
   }
 }

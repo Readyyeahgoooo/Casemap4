@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Hong Kong Criminal Law Relationship Graph",
-    "generated_at": "2026-04-08T11:10:22.440993+00:00",
+    "generated_at": "2026-04-08T12:27:35.687560+00:00",
     "source_documents": [
       {
         "label": "HKLII API",
@@ -8825,7 +8825,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2022] HKDC 1083",
-          "snippet": "DCCC 1168/2021 & 373/2022 (Consolidated) IN THE DISTRICT COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Burglary, Theft, Sentencing Principles."
+          "snippet": "DCCC 1168/2021 & 373/2022 (Consolidated) IN THE DISTRICT COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Burglary, Sentencing Principles, Theft."
         }
       ],
       "keywords": [
@@ -9554,8 +9554,8 @@
       "id": "case:2016_hkcfa_87",
       "label": "HKSAR v. CHAN KAM SHING",
       "type": "case",
-      "summary": "Press Summary (English) Press Summary (Chinese) IN THE COURT OF FINAL APPEAL OF THE Topics: Secondary Liability, Actus Reus, Manslaughter.",
-      "summary_en": "Press Summary (English) Press Summary (Chinese) IN THE COURT OF FINAL APPEAL OF THE Topics: Secondary Liability, Actus Reus, Manslaughter.",
+      "summary": "Press Summary (English) Press Summary (Chinese) IN THE COURT OF FINAL APPEAL OF THE Topics: Secondary Liability, Manslaughter, Actus Reus.",
+      "summary_en": "Press Summary (English) Press Summary (Chinese) IN THE COURT OF FINAL APPEAL OF THE Topics: Secondary Liability, Manslaughter, Actus Reus.",
       "summary_zh": "",
       "neutral_citation": "[2016] HKCFA 87",
       "court_name": "Court of Final Appeal",
@@ -9582,7 +9582,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2016] HKCFA 87",
-          "snippet": "Press Summary (English) Press Summary (Chinese) IN THE COURT OF FINAL APPEAL OF THE Topics: Secondary Liability, Actus Reus, Manslaughter."
+          "snippet": "Press Summary (English) Press Summary (Chinese) IN THE COURT OF FINAL APPEAL OF THE Topics: Secondary Liability, Manslaughter, Actus Reus."
         },
         {
           "source_id": "source:butterworths_hong_kong_criminal_law_and_procedure_handbook_third_edition_various_authors_z_library_sk_1lib_sk_z_lib_sk",
@@ -10195,7 +10195,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2020] HKCA 516",
-          "snippet": "[English Translation – 英譯本] IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Burglary, Causation, Handling Stolen Goods."
+          "snippet": "[English Translation – 英譯本] IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Burglary, Manslaughter, Causation."
         }
       ],
       "keywords": [
@@ -11013,7 +11013,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2021] HKDC 197",
-          "snippet": "IN THE DISTRICT COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION CRIMINAL CASE NO 1020 OF 2020 Topics: Theft, Robbery."
+          "snippet": "IN THE DISTRICT COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION CRIMINAL CASE NO 1020 OF 2020 Topics: Robbery, Theft."
         }
       ],
       "keywords": [
@@ -12563,7 +12563,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2022] HKCFI 569",
-          "snippet": "[English Translation – 英譯本] IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Actus Reus, Causation, Sentencing Principles."
+          "snippet": "[English Translation – 英譯本] IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Sentencing Principles, Actus Reus, Causation."
         }
       ],
       "keywords": [
@@ -13512,7 +13512,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2023] HKCA 216",
-          "snippet": "CACC 89 & 97/2021 (Heard together) IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Murder, Causation, Manslaughter."
+          "snippet": "CACC 89 & 97/2021 (Heard together) IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Manslaughter, Actus Reus, Causation."
         }
       ],
       "keywords": [
@@ -13724,7 +13724,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2023] HKCFI 595",
-          "snippet": "IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION COURT OF FIRST INSTANCE Topics: Burglary, Robbery, Handling Stolen Goods."
+          "snippet": "IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION COURT OF FIRST INSTANCE Topics: Robbery, Burglary, Handling Stolen Goods."
         }
       ],
       "keywords": [
@@ -18869,7 +18869,7 @@
           "source_label": "HKLII API",
           "source_kind": "api",
           "location": "[2025] HKCA 516",
-          "snippet": "CACC 93/2024 [2025] HKCA 516 IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Murder, Robbery, Manslaughter."
+          "snippet": "CACC 93/2024 [2025] HKCA 516 IN THE HIGH COURT OF THE HONG KONG SPECIAL ADMINISTRATIVE REGION Topics: Robbery, Manslaughter, Theft."
         }
       ],
       "keywords": [
@@ -44668,13 +44668,6 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:13:theft",
-      "target": "case:2022_hkdc_1083",
-      "type": "discusses_case",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
       "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "case:2022_hkdc_1083",
       "type": "discusses_case",
@@ -44685,6 +44678,13 @@
       "source": "source:hklii_api",
       "target": "topic:appeals_sentencing:37:sentencing_principles",
       "type": "covers_topic",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
+      "source": "topic:property_dishonesty:13:theft",
+      "target": "case:2022_hkdc_1083",
+      "type": "discusses_case",
       "weight": 1.0,
       "mentions": 1
     },
@@ -45032,13 +45032,6 @@
       "mentions": 1
     },
     {
-      "source": "topic:general_principles:01:actus_reus",
-      "target": "case:2016_hkcfa_87",
-      "type": "discusses_case",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
       "source": "topic:offences_against_person:08:manslaughter",
       "target": "case:2016_hkcfa_87",
       "type": "discusses_case",
@@ -45049,6 +45042,13 @@
       "source": "source:hklii_api",
       "target": "topic:offences_against_person:08:manslaughter",
       "type": "covers_topic",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
+      "source": "topic:general_principles:01:actus_reus",
+      "target": "case:2016_hkcfa_87",
+      "type": "discusses_case",
       "weight": 1.0,
       "mentions": 1
     },
@@ -45081,14 +45081,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:general_principles:01:actus_reus",
+      "source": "topic:offences_against_person:08:manslaughter",
       "target": "statute:section_89",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:08:manslaughter",
+      "source": "topic:general_principles:01:actus_reus",
       "target": "statute:section_89",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -45116,14 +45116,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:general_principles:01:actus_reus",
+      "source": "topic:offences_against_person:08:manslaughter",
       "target": "statute:criminal_procedure_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:08:manslaughter",
+      "source": "topic:general_principles:01:actus_reus",
       "target": "statute:criminal_procedure_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -45242,6 +45242,13 @@
       "mentions": 1
     },
     {
+      "source": "topic:offences_against_person:08:manslaughter",
+      "target": "case:2020_hkca_516",
+      "type": "discusses_case",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "topic:general_principles:02:causation",
       "target": "case:2020_hkca_516",
       "type": "discusses_case",
@@ -45270,13 +45277,6 @@
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:08:manslaughter",
-      "target": "case:2020_hkca_516",
-      "type": "discusses_case",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
       "source": "case:2020_hkca_516",
       "target": "statute:section_23",
       "type": "cites_statute",
@@ -45291,6 +45291,13 @@
       "mentions": 1
     },
     {
+      "source": "topic:offences_against_person:08:manslaughter",
+      "target": "statute:section_23",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "topic:general_principles:02:causation",
       "target": "statute:section_23",
       "type": "discusses_statute",
@@ -45299,13 +45306,6 @@
     },
     {
       "source": "topic:property_dishonesty:18:handling_stolen_goods",
-      "target": "statute:section_23",
-      "type": "discusses_statute",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
-      "source": "topic:offences_against_person:08:manslaughter",
       "target": "statute:section_23",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -45354,6 +45354,13 @@
       "mentions": 1
     },
     {
+      "source": "topic:offences_against_person:08:manslaughter",
+      "target": "statute:section_3",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "topic:general_principles:02:causation",
       "target": "statute:section_3",
       "type": "discusses_statute",
@@ -45362,13 +45369,6 @@
     },
     {
       "source": "topic:property_dishonesty:18:handling_stolen_goods",
-      "target": "statute:section_3",
-      "type": "discusses_statute",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
-      "source": "topic:offences_against_person:08:manslaughter",
       "target": "statute:section_3",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -45389,6 +45389,13 @@
       "mentions": 1
     },
     {
+      "source": "topic:offences_against_person:08:manslaughter",
+      "target": "statute:juvenile_offenders_ordinance",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "topic:general_principles:02:causation",
       "target": "statute:juvenile_offenders_ordinance",
       "type": "discusses_statute",
@@ -45397,13 +45404,6 @@
     },
     {
       "source": "topic:property_dishonesty:18:handling_stolen_goods",
-      "target": "statute:juvenile_offenders_ordinance",
-      "type": "discusses_statute",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
-      "source": "topic:offences_against_person:08:manslaughter",
       "target": "statute:juvenile_offenders_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -45634,14 +45634,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:13:theft",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "case:2021_hkdc_197",
       "type": "discusses_case",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:13:theft",
       "target": "case:2021_hkdc_197",
       "type": "discusses_case",
       "weight": 1.0,
@@ -46208,6 +46208,13 @@
       "mentions": 1
     },
     {
+      "source": "topic:appeals_sentencing:37:sentencing_principles",
+      "target": "case:2022_hkcfi_569",
+      "type": "discusses_case",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "topic:general_principles:01:actus_reus",
       "target": "case:2022_hkcfi_569",
       "type": "discusses_case",
@@ -46222,16 +46229,16 @@
       "mentions": 1
     },
     {
-      "source": "topic:appeals_sentencing:37:sentencing_principles",
-      "target": "case:2022_hkcfi_569",
-      "type": "discusses_case",
+      "source": "case:2022_hkcfi_569",
+      "target": "statute:section_160",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "case:2022_hkcfi_569",
+      "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "statute:section_160",
-      "type": "cites_statute",
+      "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -46250,16 +46257,16 @@
       "mentions": 1
     },
     {
-      "source": "topic:appeals_sentencing:37:sentencing_principles",
-      "target": "statute:section_160",
-      "type": "discusses_statute",
+      "source": "case:2022_hkcfi_569",
+      "target": "statute:crimes_ordinance",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "case:2022_hkcfi_569",
+      "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "statute:crimes_ordinance",
-      "type": "cites_statute",
+      "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -46278,16 +46285,16 @@
       "mentions": 1
     },
     {
-      "source": "topic:appeals_sentencing:37:sentencing_principles",
-      "target": "statute:crimes_ordinance",
-      "type": "discusses_statute",
+      "source": "case:2022_hkcfi_569",
+      "target": "statute:section_19",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "case:2022_hkcfi_569",
+      "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "statute:section_19",
-      "type": "cites_statute",
+      "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -46300,13 +46307,6 @@
     },
     {
       "source": "topic:general_principles:02:causation",
-      "target": "statute:section_19",
-      "type": "discusses_statute",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
-      "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "statute:section_19",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -46320,6 +46320,13 @@
       "mentions": 1
     },
     {
+      "source": "topic:appeals_sentencing:37:sentencing_principles",
+      "target": "statute:interpretation_and_general_clauses_ordinance",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "topic:general_principles:01:actus_reus",
       "target": "statute:interpretation_and_general_clauses_ordinance",
       "type": "discusses_statute",
@@ -46328,13 +46335,6 @@
     },
     {
       "source": "topic:general_principles:02:causation",
-      "target": "statute:interpretation_and_general_clauses_ordinance",
-      "type": "discusses_statute",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
-      "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "statute:interpretation_and_general_clauses_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -46348,6 +46348,13 @@
       "mentions": 1
     },
     {
+      "source": "topic:appeals_sentencing:37:sentencing_principles",
+      "target": "statute:s_36",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "topic:general_principles:01:actus_reus",
       "target": "statute:s_36",
       "type": "discusses_statute",
@@ -46356,13 +46363,6 @@
     },
     {
       "source": "topic:general_principles:02:causation",
-      "target": "statute:s_36",
-      "type": "discusses_statute",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
-      "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "statute:s_36",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -46376,14 +46376,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:general_principles:02:causation",
+      "source": "topic:appeals_sentencing:37:sentencing_principles",
       "target": "statute:offences_against_the_person_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:appeals_sentencing:37:sentencing_principles",
+      "source": "topic:general_principles:02:causation",
       "target": "statute:offences_against_the_person_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -46733,20 +46733,6 @@
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
-      "target": "case:2023_hkca_216",
-      "type": "discusses_case",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
-      "source": "topic:general_principles:02:causation",
-      "target": "case:2023_hkca_216",
-      "type": "discusses_case",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
       "source": "topic:offences_against_person:08:manslaughter",
       "target": "case:2023_hkca_216",
       "type": "discusses_case",
@@ -46761,23 +46747,23 @@
       "mentions": 1
     },
     {
-      "source": "case:2023_hkca_216",
-      "target": "statute:section_27",
-      "type": "cites_statute",
+      "source": "topic:general_principles:02:causation",
+      "target": "case:2023_hkca_216",
+      "type": "discusses_case",
       "weight": 1.0,
       "mentions": 1
     },
     {
       "source": "topic:offences_against_person:07:murder",
-      "target": "statute:section_27",
-      "type": "discusses_statute",
+      "target": "case:2023_hkca_216",
+      "type": "discusses_case",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:general_principles:02:causation",
+      "source": "case:2023_hkca_216",
       "target": "statute:section_27",
-      "type": "discusses_statute",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -46796,6 +46782,20 @@
       "mentions": 1
     },
     {
+      "source": "topic:general_principles:02:causation",
+      "target": "statute:section_27",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
+      "source": "topic:offences_against_person:07:murder",
+      "target": "statute:section_27",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
       "source": "case:2023_hkca_216",
       "target": "statute:offences_against_the_person_ordinance",
       "type": "cites_statute",
@@ -46803,14 +46803,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
+      "source": "topic:offences_against_person:08:manslaughter",
       "target": "statute:offences_against_the_person_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:08:manslaughter",
+      "source": "topic:offences_against_person:07:murder",
       "target": "statute:offences_against_the_person_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -46880,14 +46880,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "case:2023_hkcfi_595",
       "type": "discusses_case",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "case:2023_hkcfi_595",
       "type": "discusses_case",
       "weight": 1.0,
@@ -46915,14 +46915,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:section_19",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:section_19",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -46978,14 +46978,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:immigration_places_of_detention_order",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:immigration_places_of_detention_order",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47013,14 +47013,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:cap_115",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:cap_115",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47048,14 +47048,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:prison_rules",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:prison_rules",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47083,14 +47083,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:schedule_1",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:schedule_1",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47118,14 +47118,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:prisons_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:prisons_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47153,14 +47153,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:prisons_order",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:prisons_order",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47188,14 +47188,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:cap_234",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:cap_234",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47223,14 +47223,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:immigration_treatment_of_detainees_order",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:immigration_treatment_of_detainees_order",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47258,14 +47258,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:rule_2",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:rule_2",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47293,14 +47293,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:schedule_3",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:schedule_3",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47328,14 +47328,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:rule_9",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:rule_9",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47363,14 +47363,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:rule_34a",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:rule_34a",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47398,14 +47398,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:rule_47a",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:rule_47a",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47433,14 +47433,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:rule_13",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:rule_13",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47468,14 +47468,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:rule_68b",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:rule_68b",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47503,14 +47503,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:road_traffic_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:road_traffic_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47538,14 +47538,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:section_13",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:section_13",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47573,14 +47573,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:noise_control_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:noise_control_ordinance",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47608,14 +47608,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:section_35",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:section_35",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -47643,14 +47643,14 @@
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:15:burglary",
+      "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:rule_191",
       "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:property_dishonesty:14:robbery",
+      "source": "topic:property_dishonesty:15:burglary",
       "target": "statute:rule_191",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -49715,13 +49715,6 @@
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
-      "target": "case:2025_hkca_516",
-      "type": "discusses_case",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
       "source": "topic:property_dishonesty:14:robbery",
       "target": "case:2025_hkca_516",
       "type": "discusses_case",
@@ -49743,16 +49736,16 @@
       "mentions": 1
     },
     {
-      "source": "case:2025_hkca_516",
-      "target": "statute:section_118",
-      "type": "cites_statute",
+      "source": "topic:offences_against_person:07:murder",
+      "target": "case:2025_hkca_516",
+      "type": "discusses_case",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
+      "source": "case:2025_hkca_516",
       "target": "statute:section_118",
-      "type": "discusses_statute",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -49778,16 +49771,16 @@
       "mentions": 1
     },
     {
-      "source": "case:2025_hkca_516",
-      "target": "statute:crimes_ordinance",
-      "type": "cites_statute",
+      "source": "topic:offences_against_person:07:murder",
+      "target": "statute:section_118",
+      "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
+      "source": "case:2025_hkca_516",
       "target": "statute:crimes_ordinance",
-      "type": "discusses_statute",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -49806,16 +49799,16 @@
       "mentions": 1
     },
     {
-      "source": "case:2025_hkca_516",
-      "target": "statute:section_83a",
-      "type": "cites_statute",
+      "source": "topic:offences_against_person:07:murder",
+      "target": "statute:crimes_ordinance",
+      "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
+      "source": "case:2025_hkca_516",
       "target": "statute:section_83a",
-      "type": "discusses_statute",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -49835,6 +49828,13 @@
     },
     {
       "source": "topic:property_dishonesty:13:theft",
+      "target": "statute:section_83a",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
+      "source": "topic:offences_against_person:07:murder",
       "target": "statute:section_83a",
       "type": "discusses_statute",
       "weight": 1.0,
@@ -49862,13 +49862,6 @@
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
-      "target": "statute:section_122",
-      "type": "discusses_statute",
-      "weight": 1.0,
-      "mentions": 1
-    },
-    {
       "source": "topic:property_dishonesty:14:robbery",
       "target": "statute:section_122",
       "type": "discusses_statute",
@@ -49890,16 +49883,16 @@
       "mentions": 1
     },
     {
-      "source": "case:2025_hkca_516",
-      "target": "statute:schedule_1",
-      "type": "cites_statute",
+      "source": "topic:offences_against_person:07:murder",
+      "target": "statute:section_122",
+      "type": "discusses_statute",
       "weight": 1.0,
       "mentions": 1
     },
     {
-      "source": "topic:offences_against_person:07:murder",
+      "source": "case:2025_hkca_516",
       "target": "statute:schedule_1",
-      "type": "discusses_statute",
+      "type": "cites_statute",
       "weight": 1.0,
       "mentions": 1
     },
@@ -49912,6 +49905,13 @@
     },
     {
       "source": "topic:property_dishonesty:13:theft",
+      "target": "statute:schedule_1",
+      "type": "discusses_statute",
+      "weight": 1.0,
+      "mentions": 1
+    },
+    {
+      "source": "topic:offences_against_person:07:murder",
       "target": "statute:schedule_1",
       "type": "discusses_statute",
       "weight": 1.0,
