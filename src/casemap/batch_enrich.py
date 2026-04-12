@@ -45,6 +45,24 @@ from casemap.hklii_crawler import HKLIICrawler
 from casemap.hybrid_graph import _auto_enrich_case_via_llm, _extract_json_payload
 
 
+# Words to strip from topic search queries before sending to HKLII simplesearch.
+# HKLII simplesearch works best with concise legal terms, not full-phrase queries.
+_HKLII_NOISE_WORDS = {
+    "hksar", "hong", "kong", "criminal", "appeal", "court", "sentence",
+    "sentencing", "case", "cases", "law", "ordinance", "section", "cap",
+    "judgment", "judgment", "offence", "offences", "offense", "prosecution",
+    "conviction", "defendant", "applicant", "respondent", "sfc", "icac",
+    "hkcfa", "hkca", "hkcfi", "dc", "v", "vs", "re",
+}
+
+def _clean_search_query(query: str) -> str:
+    """Strip noise words, keeping the core legal concept (2-3 words max)."""
+    words = [w.strip("().,") for w in query.lower().split()]
+    core = [w for w in words if w and w not in _HKLII_NOISE_WORDS and len(w) > 2]
+    # Return first 2 meaningful words to keep query focused
+    return " ".join(core[:2]) if core else query.split()[0]
+
+
 # ── DeepSeek helper ────────────────────────────────────────────
 
 def _call_deepseek(prompt: str, temperature: float = 0) -> str:
@@ -354,10 +372,11 @@ def crawl_and_enrich(
         for query in queries:
             if len(topic_cases) >= max_per_topic:
                 break
+            clean_query = _clean_search_query(query)
             try:
-                results = crawler.search(query)
+                results = crawler.simple_search(clean_query, limit=max_per_topic)
                 for result in results:
-                    path = result.get("path", "")
+                    path = result.path
                     if not path or path in seen_citations:
                         continue
                     seen_citations.add(path)
@@ -365,7 +384,7 @@ def crawl_and_enrich(
                         break
 
                     # Check if already enriched
-                    title = result.get("title", "")
+                    title = result.title
                     if title in existing or path in existing:
                         continue
 
@@ -390,7 +409,7 @@ def crawl_and_enrich(
                     continue
 
                 # Send to DeepSeek for enrichment
-                paragraphs = [{"text": p.text, "paragraph_span": p.paragraph_id} for p in doc.paragraphs]
+                paragraphs = [{"text": p.text, "paragraph_span": p.paragraph_span} for p in doc.paragraphs]
                 if not paragraphs:
                     continue
 
