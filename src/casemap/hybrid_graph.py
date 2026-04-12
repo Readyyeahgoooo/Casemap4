@@ -934,7 +934,7 @@ def _auto_enrich_case_via_llm(case_name: str, neutral_citation: str, paragraphs:
         },
     )
     def _call(ctx=None):
-        kw = {"timeout": 30}
+        kw = {"timeout": 60}
         if ctx is not None:
             kw["context"] = ctx
         with urllib_request.urlopen(request_obj, **kw) as response:

@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import ssl
 import sys
 import time
@@ -48,24 +49,51 @@ from casemap.hybrid_graph import _auto_enrich_case_via_llm, _extract_json_payloa
 # Words to strip from topic search queries before sending to HKLII simplesearch.
 # HKLII simplesearch works best with concise legal terms, not full-phrase queries.
 _HKLII_NOISE_WORDS = {
+    "a", "an", "and", "are", "be", "been", "being", "by", "for", "from",
+    "how", "i", "if", "in", "is", "it", "its", "my", "of", "on", "one",
+    "or", "own", "s", "the", "their", "to", "was", "were", "what", "when",
+    "where", "which", "who", "why", "with",
     "hksar", "hong", "kong", "criminal", "appeal", "court", "sentence",
     "sentencing", "case", "cases", "law", "ordinance", "section", "cap",
-    "judgment", "judgment", "offence", "offences", "offense", "prosecution",
+    "judgment", "judgment", "legal", "liability", "consequence", "penalty",
+    "offence", "offences", "offense", "prosecution",
     "conviction", "defendant", "applicant", "respondent", "sfc", "icac",
     "hkcfa", "hkca", "hkcfi", "dc", "v", "vs", "re",
 }
 
 def _clean_search_query(query: str) -> str:
     """Strip noise words, keeping the core legal concept (2-3 words max)."""
-    words = [w.strip("().,") for w in query.lower().split()]
+    words = re.findall(r"[a-z0-9]+", query.lower())
     core = [w for w in words if w and w not in _HKLII_NOISE_WORDS and len(w) > 2]
     # Return first 2 meaningful words to keep query focused
     return " ".join(core[:2]) if core else query.split()[0]
 
 
+def _search_query_variants(query: str) -> list[str]:
+    """Return concise HKLII search variants, most-specific first."""
+    clean_query = _clean_search_query(query)
+    variants = [clean_query]
+    lowered = query.lower()
+
+    if any(term in lowered for term in ("animal", "dog", "cat", "pet", "cruelty")):
+        variants.extend(["animal cruelty", "unnecessary suffering"])
+
+    # HKLII simplesearch often works better with one legal keyword than a
+    # two-word phrase, so retry the leading concept before giving up.
+    first_word = clean_query.split()[0] if clean_query else ""
+    if first_word:
+        variants.append(first_word)
+
+    deduped: list[str] = []
+    for variant in variants:
+        if variant and variant not in deduped:
+            deduped.append(variant)
+    return deduped
+
+
 # ── DeepSeek helper ────────────────────────────────────────────
 
-def _call_deepseek(prompt: str, temperature: float = 0) -> str:
+def _call_deepseek(prompt: str, temperature: float = 0, timeout: int = 180, retries: int = 3) -> str:
     """Send a prompt to DeepSeek and return the text response."""
     deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
     openrouter_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
@@ -93,19 +121,29 @@ def _call_deepseek(prompt: str, temperature: float = 0) -> str:
     )
 
     def _do(ctx=None):
-        kw = {"timeout": 60}
+        kw = {"timeout": timeout}
         if ctx is not None:
             kw["context"] = ctx
         with urllib_request.urlopen(req, **kw) as resp:
             return resp.read().decode("utf-8")
 
-    try:
+    last_error: Exception | None = None
+    for attempt in range(1, retries + 1):
         try:
-            raw = _do()
-        except (ssl.SSLError, urllib_error.URLError):
-            raw = _do(ssl._create_unverified_context())
-    except Exception as e:
-        raise RuntimeError(f"DeepSeek API call failed: {e}") from e
+            try:
+                raw = _do()
+            except (ssl.SSLError, urllib_error.URLError):
+                raw = _do(ssl._create_unverified_context())
+            break
+        except Exception as e:
+            last_error = e
+            if attempt >= retries:
+                raise RuntimeError(f"DeepSeek API call failed after {retries} attempts: {e}") from e
+            wait_seconds = min(10 * attempt, 30)
+            print(f"[warn] DeepSeek call failed on attempt {attempt}/{retries}: {e}; retrying in {wait_seconds}s")
+            time.sleep(wait_seconds)
+    else:
+        raise RuntimeError(f"DeepSeek API call failed: {last_error}")
 
     parsed = json.loads(raw)
     return parsed.get("choices", [{}])[0].get("message", {}).get("content", "")
@@ -203,6 +241,19 @@ def discover_gaps(
         empty_topics=", ".join(empty_topics[:20]) if empty_topics else "(none)",
     )
 
+    # Skip if a fresh report already exists (generated within last 12 hours)
+    if Path(output_path).exists():
+        try:
+            existing = json.loads(Path(output_path).read_text(encoding="utf-8"))
+            generated_at = existing.get("meta", {}).get("generated_at", "")
+            if generated_at:
+                age = (datetime.now(UTC) - datetime.fromisoformat(generated_at)).total_seconds()
+                if age < 43200:  # 12 hours
+                    print(f"[discover] Reusing existing report (generated {int(age/60)} min ago) — {output_path}")
+                    return existing
+        except Exception:
+            pass
+
     print(f"[discover] Asking DeepSeek to review {topic_count} topics ({case_count} cases)...")
     content = _call_deepseek(prompt)
 
@@ -286,7 +337,14 @@ def run_loop(
 
         # Step 1: Discover gaps
         print(f"\n[round {r}] Phase: DISCOVER")
-        report = discover_gaps(candidates_path=candidates_path, output_path=gap_report_path)
+        try:
+            report = discover_gaps(candidates_path=candidates_path, output_path=gap_report_path)
+        except RuntimeError as e:
+            if not Path(gap_report_path).exists():
+                raise
+            print(f"[warn] Discovery failed: {e}")
+            print(f"[warn] Reusing existing gap report: {gap_report_path}")
+            report = json.loads(Path(gap_report_path).read_text(encoding="utf-8"))
 
         # Step 2: Apply discovered topics as supplementary search targets
         new_topics = apply_discovered_topics(gap_report_path=gap_report_path)
@@ -372,9 +430,10 @@ def crawl_and_enrich(
         for query in queries:
             if len(topic_cases) >= max_per_topic:
                 break
-            clean_query = _clean_search_query(query)
             try:
-                results = crawler.simple_search(clean_query, limit=max_per_topic)
+                results = []
+                for search_query in _search_query_variants(query):
+                    results.extend(crawler.simple_search(search_query, limit=max_per_topic))
                 for result in results:
                     path = result.path
                     if not path or path in seen_citations:
@@ -444,6 +503,7 @@ def crawl_and_enrich(
                 existing[nc] = candidate
                 stats["cases_enriched"] += 1
                 print(f"  [ok] {nc}: {doc.case_name[:50]} -> {len(enrichment.get('principles', []))} principles")
+                _save_candidates(candidates, stats, output)
 
             except Exception as e:
                 print(f"  [err] {path}: {e}")
