@@ -106,14 +106,46 @@ CRIMINAL_AUTHORITY_TREE = [
                         "search_queries": ["murder HKSAR appeal", "murder secondary liability HKSAR", "murder sentencing HKSAR"],
                     },
                     {
+                        "id": "murder_actus_reus",
+                        "label_en": "Actus Reus of Murder",
+                        "label_zh": "謀殺的犯罪行為",
+                        "search_queries": ["actus reus murder HKSAR", "killing unlawful act murder HKSAR", "year and a day rule murder"],
+                    },
+                    {
+                        "id": "murder_mens_rea",
+                        "label_en": "Mens Rea of Murder (Malice Aforethought)",
+                        "label_zh": "謀殺的犯罪意圖（預謀惡意）",
+                        "search_queries": ["malice aforethought HKSAR", "intention to kill HKSAR murder", "grievous bodily harm murder intent HKSAR"],
+                    },
+                    {
+                        "id": "diminished_responsibility",
+                        "label_en": "Defence of Diminished Responsibility",
+                        "label_zh": "減低責任能力辯護",
+                        "search_queries": ["diminished responsibility HKSAR", "abnormality of mind murder HKSAR", "diminished responsibility manslaughter HKSAR"],
+                    },
+                    {
+                        "id": "provocation",
+                        "label_en": "Defence of Provocation",
+                        "label_zh": "挑釁辯護",
+                        "search_queries": ["provocation defence murder HKSAR", "loss of self-control HKSAR", "provocation manslaughter HKSAR"],
+                    },
+                    {
                         "id": "manslaughter",
                         "label_en": "Manslaughter",
                         "label_zh": "誤殺",
                         "search_queries": ["manslaughter HKSAR appeal", "gross negligence manslaughter HKSAR", "unlawful act manslaughter HKSAR"],
                     },
+                    {
+                        "id": "involuntary_manslaughter",
+                        "label_en": "Involuntary Manslaughter",
+                        "label_zh": "非自願誤殺",
+                        "search_queries": ["involuntary manslaughter HKSAR", "constructive manslaughter HKSAR", "unlawful dangerous act manslaughter HKSAR"],
+                    },
                 ],
                 "children": [
                     {"en": "Murder", "zh": "謀殺"},
+                    {"en": "Actus Reus and Mens Rea of Murder", "zh": "謀殺的犯罪行為與意圖"},
+                    {"en": "Diminished responsibility and provocation", "zh": "減低責任能力與挑釁"},
                     {"en": "Manslaughter", "zh": "誤殺"},
                 ],
             },
@@ -212,6 +244,24 @@ CRIMINAL_AUTHORITY_TREE = [
                         "search_queries": ["theft HKSAR appeal", "appropriation dishonesty HKSAR", "handling stolen goods HKSAR"],
                     },
                     {
+                        "id": "theft_appropriation",
+                        "label_en": "Appropriation (Element of Theft)",
+                        "label_zh": "挪佔（盜竊要素）",
+                        "search_queries": ["appropriation theft ordinance HKSAR", "assuming rights owner HKSAR theft", "consent appropriation theft HKSAR"],
+                    },
+                    {
+                        "id": "theft_dishonesty",
+                        "label_en": "Dishonesty (Ivey v Genting Test)",
+                        "label_zh": "不誠實（Ivey v Genting 測試）",
+                        "search_queries": ["dishonesty Ivey Genting HKSAR", "Ghosh test dishonesty HKSAR", "dishonesty theft hong kong"],
+                    },
+                    {
+                        "id": "theft_intention_deprive",
+                        "label_en": "Intention to Permanently Deprive",
+                        "label_zh": "永久剝奪意圖",
+                        "search_queries": ["intention permanently deprive HKSAR theft", "borrowing theft HKSAR", "treating thing as own HKSAR"],
+                    },
+                    {
                         "id": "robbery",
                         "label_en": "Robbery",
                         "label_zh": "搶劫",
@@ -220,6 +270,7 @@ CRIMINAL_AUTHORITY_TREE = [
                 ],
                 "children": [
                     {"en": "Theft and handling stolen goods", "zh": "盜竊與處理贓物"},
+                    {"en": "Appropriation and dishonesty elements", "zh": "挪佔與不誠實要素"},
                     {"en": "Robbery", "zh": "搶劫"},
                 ],
             },
@@ -487,10 +538,30 @@ CRIMINAL_AUTHORITY_TREE = [
                         "label_en": "Insanity, Automatism, and Intoxication",
                         "label_zh": "精神失常、自動行為與醉酒",
                         "search_queries": ["insanity HKSAR criminal", "automatism HKSAR criminal", "intoxication defence HKSAR"],
-                    }
+                    },
+                    {
+                        "id": "insanity_defence",
+                        "label_en": "Insanity (M'Naghten Rules)",
+                        "label_zh": "精神失常辯護（M'Naghten 規則）",
+                        "search_queries": ["insanity M'Naghten HKSAR", "not guilty reason insanity HKSAR", "mental disorder defence HKSAR"],
+                    },
+                    {
+                        "id": "automatism_defence",
+                        "label_en": "Automatism",
+                        "label_zh": "自動行為辯護",
+                        "search_queries": ["automatism defence HKSAR", "involuntary act automatism criminal HKSAR", "sane automatism HKSAR"],
+                    },
+                    {
+                        "id": "intoxication_defence",
+                        "label_en": "Intoxication as a Defence",
+                        "label_zh": "醉酒辯護",
+                        "search_queries": ["intoxication defence HKSAR appeal", "voluntary intoxication specific intent HKSAR", "DPP v Majewski HKSAR"],
+                    },
                 ],
                 "children": [
-                    {"en": "Insanity and intoxication", "zh": "精神失常與醉酒"},
+                    {"en": "Insanity and M'Naghten rules", "zh": "精神失常與M'Naghten規則"},
+                    {"en": "Automatism", "zh": "自動行為"},
+                    {"en": "Intoxication", "zh": "醉酒"},
                 ],
             },
         ],
@@ -793,6 +864,101 @@ CRIMINAL_AUTHORITY_TREE = [
                 ],
                 "children": [
                     {"en": "Occupational safety and employer liability", "zh": "職業安全與僱主責任"},
+                ],
+            },
+        ],
+    },
+    {
+        "id": "financial_regulatory_crimes",
+        "label_en": "Financial and Regulatory Crimes",
+        "label_zh": "金融及規管罪行",
+        "summary_en": "Securities fraud, insider dealing, market misconduct, and financial regulatory offences in Hong Kong.",
+        "summary_zh": "證券欺詐、內幕交易、市場失當行為及金融規管罪行。",
+        "subgrounds": [
+            {
+                "id": "securities_offences",
+                "label_en": "Securities and Market Misconduct",
+                "label_zh": "證券及市場失當行為",
+                "summary_en": "Insider dealing, market manipulation, and disclosure offences under the Securities and Futures Ordinance (Cap. 571).",
+                "summary_zh": "《證券及期貨條例》（第571章）下的內幕交易、操控市場及披露罪行。",
+                "topics": [
+                    {
+                        "id": "insider_dealing",
+                        "label_en": "Insider Dealing",
+                        "label_zh": "內幕交易",
+                        "search_queries": ["insider dealing HKSAR SFC", "securities futures ordinance cap 571 insider HKSAR", "insider trading hong kong criminal"],
+                    },
+                    {
+                        "id": "market_manipulation",
+                        "label_en": "Market Manipulation and False Trading",
+                        "label_zh": "操控市場與虛假交易",
+                        "search_queries": ["market manipulation HKSAR", "false trading securities HKSAR", "market misconduct tribunal HKSAR"],
+                    },
+                ],
+                "children": [
+                    {"en": "Insider dealing", "zh": "內幕交易"},
+                    {"en": "Market manipulation", "zh": "操控市場"},
+                ],
+            },
+            {
+                "id": "aml_regulatory",
+                "label_en": "Anti-Money Laundering Regulatory Offences",
+                "label_zh": "反洗錢規管罪行",
+                "summary_en": "AML compliance failures, suspicious transaction reporting, and AMLO offences.",
+                "summary_zh": "反洗錢合規違規、可疑交易報告及《打擊洗錢條例》罪行。",
+                "topics": [
+                    {
+                        "id": "aml_compliance",
+                        "label_en": "AML Compliance and Reporting Offences",
+                        "label_zh": "反洗錢合規與報告罪行",
+                        "search_queries": ["anti money laundering compliance HKSAR", "suspicious transaction report HKSAR", "AMLO hong kong offence"],
+                    },
+                ],
+                "children": [
+                    {"en": "AML compliance failures", "zh": "反洗錢合規違規"},
+                ],
+            },
+            {
+                "id": "corporate_fraud",
+                "label_en": "Corporate Fraud and Conspiracy to Defraud",
+                "label_zh": "企業詐騙與串謀詐騙",
+                "summary_en": "Complex fraud schemes, Ponzi schemes, and conspiracy to defraud in commercial settings.",
+                "summary_zh": "複雜詐騙計劃、龐氏騙局及商業串謀詐騙。",
+                "topics": [
+                    {
+                        "id": "corporate_fraud",
+                        "label_en": "Corporate Fraud",
+                        "label_zh": "企業詐騙",
+                        "search_queries": ["corporate fraud HKSAR appeal", "conspiracy to defraud company HKSAR", "Ponzi scheme hong kong criminal"],
+                    },
+                    {
+                        "id": "false_accounting",
+                        "label_en": "False Accounting and Financial Statements",
+                        "label_zh": "虛假帳目與財務報表",
+                        "search_queries": ["false accounting HKSAR", "misleading financial statements HKSAR criminal", "audit fraud hong kong"],
+                    },
+                ],
+                "children": [
+                    {"en": "Corporate fraud and Ponzi schemes", "zh": "企業詐騙與龐氏騙局"},
+                    {"en": "False accounting", "zh": "虛假帳目"},
+                ],
+            },
+            {
+                "id": "customs_trade_offences",
+                "label_en": "Customs and Trade Offences",
+                "label_zh": "海關及貿易罪行",
+                "summary_en": "Smuggling, trade sanctions violations, and customs offences.",
+                "summary_zh": "走私、違反貿易制裁及海關罪行。",
+                "topics": [
+                    {
+                        "id": "smuggling",
+                        "label_en": "Smuggling and Customs Offences",
+                        "label_zh": "走私與海關罪行",
+                        "search_queries": ["smuggling HKSAR criminal", "import export ordinance HKSAR offence", "customs excise HKSAR criminal"],
+                    },
+                ],
+                "children": [
+                    {"en": "Smuggling and customs evasion", "zh": "走私與逃避海關"},
                 ],
             },
         ],
