@@ -1,9 +1,9 @@
 {
   "title": "Hong Kong Criminal Law Hierarchical Graph",
-  "generated_at": "2026-04-13T14:42:31.620170+00:00",
-  "node_count": 1669,
-  "edge_count": 6349,
-  "case_count": 1010,
+  "generated_at": "2026-04-13T18:41:11.854001+00:00",
+  "node_count": 2901,
+  "edge_count": 7958,
+  "case_count": 1128,
   "statute_count": 338,
   "topic_count": 60,
   "lineage_count": 12,
@@ -297,12 +297,12 @@
       ]
     }
   ],
-  "paragraph_count": 99,
-  "proposition_count": 99,
-  "enriched_case_count": 53,
+  "paragraph_count": 656,
+  "proposition_count": 656,
+  "enriched_case_count": 196,
   "notes": [
-    "Hybrid hierarchical graph bundle generated from the Casemap relationship graph.",
-    "Hierarchy is represented explicitly as Module -> Subground -> Topic while authorities remain graph-native.",
+    "Merged graph: v2 structure (lineages, topics, modules) + v1+v2 enrichment nodes (paragraphs, propositions).",
+    "v1-only enriched cases are carried forward as standalone case nodes.",
     "Neo4j constraints and import templates are included for database-backed deployment."
   ],
   "neo4j": {
