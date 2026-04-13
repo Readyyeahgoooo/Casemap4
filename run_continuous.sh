@@ -78,7 +78,7 @@ snapshot_artifacts() {
   mkdir -p "$snapshot_dir"
 
   local paths=()
-  for path in \
+  for artifact_path in \
     "$CRIMINAL_OUT" \
     "$CRIMINAL_HYBRID_OUT" \
     "$CIVIL_OUT" \
@@ -89,7 +89,7 @@ snapshot_artifacts() {
     data/batch/enrichment_cache_civil.json \
     data/batch/hallucination_log.json
   do
-    [[ -e "$path" ]] && paths+=("$path")
+    [[ -e "$artifact_path" ]] && paths+=("$artifact_path")
   done
 
   if (( ${#paths[@]} == 0 )); then
