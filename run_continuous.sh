@@ -76,6 +76,8 @@ while true; do
     --hybrid-output-dir "$CRIMINAL_HYBRID_OUT" \
     --max-enrich "$MAX_ENRICH" \
     --max-cases 600 \
+    --discover-lineages \
+    --lineages-path data/batch/discovered_lineages.json \
     >> "$LOG_DIR/criminal_build.log" 2>&1 \
     && log "Criminal graph build done" \
     || log "[WARN] Criminal graph build exited non-zero (continuing)"
@@ -119,6 +121,8 @@ while true; do
         --output-dir "$CIVIL_OUT" \
         --max-enrich 80 \
         --max-cases 400 \
+        --discover-lineages \
+        --lineages-path data/batch/discovered_lineages.json \
         >> "$LOG_DIR/civil_build.log" 2>&1 \
         && log "Civil graph build done" \
         || log "[WARN] Civil graph build exited non-zero (continuing)"
@@ -147,6 +151,8 @@ while true; do
   git add \
     data/batch/candidates_criminal_clean.json \
     data/batch/candidates_civil_clean.json \
+    data/batch/discovered_lineages.json \
+    data/batch/hallucination_log.json \
     data/batch/domain_trees/ \
     2>/dev/null || true
 

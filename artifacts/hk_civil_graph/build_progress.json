@@ -1,0 +1,17 @@
+{
+  "title": "Hong Kong Civil Law Relationship Graph",
+  "updated_at": "2026-04-13T10:36:02.562254+00:00",
+  "status": "completed",
+  "stage": "completed",
+  "message": "Hong Kong Civil Law graph build completed. Monitor report and exports are ready.",
+  "percent": 100,
+  "refresh_seconds": 300,
+  "stats": {
+    "node_count": 151,
+    "edge_count": 215,
+    "case_count": 49,
+    "topic_count": 72,
+    "uncovered_topics": 60,
+    "low_coverage_topics": 10
+  }
+}

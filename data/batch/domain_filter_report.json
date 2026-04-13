@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-04-13T11:08:18.414938+00:00",
+  "input": "data/batch/candidates_civil_batch.json",
+  "target_domain": "civil",
+  "total_candidates": 21,
+  "matched": 18,
+  "cross_domain": 1,
+  "out_of_domain": 2,
+  "domain_breakdown": {
+    "unknown": 2,
+    "criminal": 1
+  },
+  "use_llm": false,
+  "force_reclassify": false
+}

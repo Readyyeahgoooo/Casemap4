@@ -10,6 +10,7 @@ from .criminal_graph import build_criminal_graph_artifacts
 from .domain_graph import build_domain_graph_artifacts
 from .graphrag import RerankedRetriever, build_artifacts
 from .hybrid_graph import HybridGraphStore, build_hybrid_graph_artifacts
+from .lineage_discovery import DISCOVERED_LINEAGES_DEFAULT_PATH, discover_lineages_from_file
 from .relationship_graph import build_relationship_artifacts, export_public_relationship_artifacts
 from .supabase_sync import load_env_file, sync_criminal_artifacts_to_supabase
 
@@ -87,6 +88,8 @@ def build_criminal_graph_command(args: argparse.Namespace) -> int:
         embedding_backend=args.embedding_backend,
         embedding_model=args.embedding_model,
         embedding_dimensions=args.embedding_dimensions,
+        discover_lineages=args.discover_lineages,
+        lineages_path=args.lineages_path or None,
     )
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0
@@ -110,6 +113,8 @@ def build_domain_graph_command(args: argparse.Namespace) -> int:
         embedding_backend=args.embedding_backend,
         embedding_model=args.embedding_model,
         embedding_dimensions=args.embedding_dimensions,
+        discover_lineages=args.discover_lineages,
+        lineages_path=args.lineages_path or None,
     )
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0
@@ -136,6 +141,17 @@ def sync_criminal_supabase_command(args: argparse.Namespace) -> int:
 def hybrid_query_command(args: argparse.Namespace) -> int:
     store = HybridGraphStore.from_file(args.graph)
     result = store.query(args.question, top_k=args.top_k)
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+    return 0
+
+
+def discover_lineages_command(args: argparse.Namespace) -> int:
+    result = discover_lineages_from_file(
+        args.graph,
+        domain_id=args.domain,
+        output_path=args.output,
+        max_topics=args.max_topics,
+    )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return 0
 
@@ -284,6 +300,16 @@ def parser() -> argparse.ArgumentParser:
         default=0,
         help="Optional embedding dimension override when supported by the chosen backend",
     )
+    criminal_parser.add_argument(
+        "--discover-lineages",
+        action="store_true",
+        help="Ask DeepSeek/OpenRouter to discover authority lineages from existing graph authorities before writing artifacts.",
+    )
+    criminal_parser.add_argument(
+        "--lineages-path",
+        default="",
+        help="Path for auto-discovered lineage JSON.",
+    )
     criminal_parser.set_defaults(func=build_criminal_graph_command)
 
     domain_parser = subparsers.add_parser(
@@ -354,7 +380,27 @@ def parser() -> argparse.ArgumentParser:
         default=0,
         help="Optional embedding dimension override when supported by the chosen backend",
     )
+    domain_parser.add_argument(
+        "--discover-lineages",
+        action="store_true",
+        help="Ask DeepSeek/OpenRouter to discover authority lineages from existing graph authorities before writing artifacts.",
+    )
+    domain_parser.add_argument(
+        "--lineages-path",
+        default="",
+        help="Path for auto-discovered lineage JSON. Existing lineages are loaded when this flag is supplied.",
+    )
     domain_parser.set_defaults(func=build_domain_graph_command)
+
+    discover_lineages_parser = subparsers.add_parser(
+        "discover-lineages",
+        help="Discover authority lineages from an existing relationship or hybrid graph JSON using DeepSeek/OpenRouter.",
+    )
+    discover_lineages_parser.add_argument("--graph", required=True, help="Path to relationship_graph.json or hierarchical_graph.json")
+    discover_lineages_parser.add_argument("--domain", default="", help="Legal domain id, such as criminal or civil")
+    discover_lineages_parser.add_argument("--output", default=str(DISCOVERED_LINEAGES_DEFAULT_PATH), help="Output JSON path")
+    discover_lineages_parser.add_argument("--max-topics", type=int, default=None, help="Optional cap on topic count for discovery")
+    discover_lineages_parser.set_defaults(func=discover_lineages_command)
 
     sync_parser = subparsers.add_parser(
         "sync-criminal-supabase",

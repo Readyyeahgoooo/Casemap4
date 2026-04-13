@@ -22,6 +22,8 @@ from .embeddings import create_embedding_backend
 from .graphrag import CASE_RE, STATUTE_RE, slugify, tokenize, top_keywords
 from .hklii_crawler import HKLIICaseDocument, HKLIICrawler, HKLIISearchResult
 from .hybrid_graph import build_hierarchical_graph_bundle, write_hybrid_graph_artifacts
+from .lineage_discovery import DISCOVERED_LINEAGES_DEFAULT_PATH, discover_lineages_from_payload, load_discovered_lineages
+from .relationship_graph import augment_public_payload_with_lineages
 from .source_parser import Passage, SourceDocument, load_source_document
 from .viewer import render_relationship_family_tree, render_relationship_map
 
@@ -1679,6 +1681,8 @@ def build_domain_graph_artifacts(
     embedding_backend: str = "auto",
     embedding_model: str = "",
     embedding_dimensions: int = 0,
+    discover_lineages: bool = False,
+    lineages_path: str | Path | None = None,
 ) -> dict:
     domain_id = normalize_domain_id(domain_id)
     tree = _coerce_domain_tree(tree, domain_id) if tree is not None else load_domain_tree(domain_id, tree_path)
@@ -1737,6 +1741,25 @@ def build_domain_graph_artifacts(
         candidate_registry=candidate_registry,
         progress_callback=update_progress,
     )
+    effective_lineages_path = Path(lineages_path or DISCOVERED_LINEAGES_DEFAULT_PATH)
+    extra_lineages: list[dict] = []
+    if discover_lineages:
+        update_progress(
+            "assembling_graph",
+            f"Discovering {domain_label} authority lineages from existing graph authorities.",
+            node_count=len(payload["nodes"]),
+            edge_count=len(payload["edges"]),
+            lineages_path=str(effective_lineages_path),
+        )
+        discovery = discover_lineages_from_payload(
+            payload,
+            domain_id=domain_id,
+            output_path=effective_lineages_path,
+        )
+        extra_lineages = discovery.get("lineages", [])
+    elif lineages_path:
+        extra_lineages = load_discovered_lineages(effective_lineages_path)
+    augment_public_payload_with_lineages(payload, extra_lineages=extra_lineages)
     update_progress(
         "writing_relationship",
         "Writing relationship graph files and viewer artifacts.",
@@ -1857,6 +1880,8 @@ def build_criminal_graph_artifacts(
     embedding_backend: str = "auto",
     embedding_model: str = "",
     embedding_dimensions: int = 0,
+    discover_lineages: bool = False,
+    lineages_path: str | Path | None = None,
 ) -> dict:
     return build_domain_graph_artifacts(
         domain_id="criminal",
@@ -1871,4 +1896,6 @@ def build_criminal_graph_artifacts(
         embedding_backend=embedding_backend,
         embedding_model=embedding_model,
         embedding_dimensions=embedding_dimensions,
+        discover_lineages=discover_lineages,
+        lineages_path=lineages_path,
     )

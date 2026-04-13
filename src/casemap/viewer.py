@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from html import escape
 
 
 def render_knowledge_map(graph_payload: dict) -> str:
@@ -5661,6 +5662,154 @@ def render_knowledge_graph(bundle: dict) -> str:
       if (match) {{
         selectNode(match.id);
         zoomToNode(match, 1.45);
+      }}
+    }});
+  </script>
+</body>
+</html>"""
+
+
+def render_case_analysis_page(bundle: dict) -> str:
+    meta = bundle.get("meta", {})
+    title = escape(meta.get("title", "Casemap"))
+    case_count = meta.get("case_count", 0)
+    lineage_count = meta.get("lineage_count", 0)
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyse Case Facts - {title}</title>
+  <style>
+    :root {{ color-scheme: light; --ink:#172126; --muted:#5f6f75; --line:#d8e1e3; --panel:#f7faf9; --accent:#2d6a8a; --accent2:#7a5c2e; }}
+    * {{ box-sizing: border-box; }}
+    body {{ margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:#fbfcfb; }}
+    main {{ max-width:1180px; margin:0 auto; padding:28px 18px 48px; }}
+    header {{ display:flex; justify-content:space-between; gap:18px; align-items:flex-start; border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:22px; }}
+    h1 {{ margin:0 0 8px; font-size:30px; line-height:1.1; }}
+    p {{ line-height:1.6; }}
+    .stats {{ display:flex; gap:8px; flex-wrap:wrap; }}
+    .stat {{ border:1px solid var(--line); border-radius:8px; padding:8px 10px; background:white; min-width:96px; }}
+    .stat strong {{ display:block; font-size:18px; }}
+    .grid {{ display:grid; grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr); gap:18px; align-items:start; }}
+    section {{ border:1px solid var(--line); border-radius:8px; background:white; padding:16px; }}
+    textarea {{ width:100%; min-height:260px; resize:vertical; border:1px solid var(--line); border-radius:8px; padding:12px; font:inherit; line-height:1.5; }}
+    .controls {{ display:flex; gap:10px; flex-wrap:wrap; align-items:end; margin-top:12px; }}
+    label {{ display:grid; gap:5px; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }}
+    select, input {{ border:1px solid var(--line); border-radius:8px; padding:9px; font:inherit; min-width:130px; }}
+    button {{ border:0; border-radius:8px; padding:10px 14px; background:var(--accent); color:white; font-weight:700; cursor:pointer; }}
+    button:disabled {{ opacity:.55; cursor:wait; }}
+    .status {{ color:var(--muted); font-size:13px; margin-top:10px; }}
+    .result {{ display:grid; gap:14px; }}
+    .card {{ border:1px solid var(--line); border-radius:8px; padding:14px; background:var(--panel); }}
+    .card h2 {{ margin:0 0 8px; font-size:16px; }}
+    .answer {{ white-space:pre-wrap; line-height:1.65; }}
+    .item {{ border-top:1px solid var(--line); padding-top:10px; margin-top:10px; }}
+    .item:first-child {{ border-top:0; padding-top:0; margin-top:0; }}
+    .meta {{ color:var(--muted); font-size:12px; }}
+    a {{ color:var(--accent); }}
+    .warning {{ color:#8a4c14; }}
+    @media (max-width: 860px) {{ .grid {{ grid-template-columns:1fr; }} header {{ display:block; }} }}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Analyse Case Facts</h1>
+        <p>Paste a factual scenario and Casemap will return graph-grounded principles, authority lineages, similar cases, and paragraph-level HKLII links where available.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>{case_count}</strong><span>Cases</span></div>
+        <div class="stat"><strong>{lineage_count}</strong><span>Lineages</span></div>
+      </div>
+    </header>
+    <div class="grid">
+      <section>
+        <label for="facts">Case Facts</label>
+        <textarea id="facts" placeholder="Describe the facts, parties, conduct, timing, charge, procedural issue, or sentencing context."></textarea>
+        <div class="controls">
+          <label>Mode
+            <select id="mode">
+              <option value="extractive" selected>Extractive</option>
+              <option value="deepseek">DeepSeek</option>
+              <option value="openrouter">OpenRouter</option>
+            </select>
+          </label>
+          <label>Top Cases
+            <select id="topK">
+              <option value="3">3</option>
+              <option value="5" selected>5</option>
+              <option value="8">8</option>
+            </select>
+          </label>
+          <button id="runBtn" type="button">Analyse</button>
+        </div>
+        <div id="status" class="status">Ready.</div>
+      </section>
+      <section class="result" id="result">
+        <div class="card"><h2>Grounded Analysis</h2><div id="answer" class="answer">No analysis yet.</div></div>
+        <div class="card"><h2>Authority Lineage</h2><div id="lineages" class="meta">No lineage selected yet.</div></div>
+        <div class="card"><h2>Supporting Citations</h2><div id="citations" class="meta">No citations yet.</div></div>
+        <div class="card"><h2>Factually Similar Cases</h2><div id="similar" class="meta">No similar cases yet.</div></div>
+        <div class="card"><h2>Warnings</h2><div id="warnings" class="warning">None.</div></div>
+      </section>
+    </div>
+  </main>
+  <script>
+    const factsEl = document.getElementById("facts");
+    const modeEl = document.getElementById("mode");
+    const topKEl = document.getElementById("topK");
+    const runBtn = document.getElementById("runBtn");
+    const statusEl = document.getElementById("status");
+    const answerEl = document.getElementById("answer");
+    const lineagesEl = document.getElementById("lineages");
+    const citationsEl = document.getElementById("citations");
+    const similarEl = document.getElementById("similar");
+    const warningsEl = document.getElementById("warnings");
+    function esc(value) {{ return String(value || "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;"); }}
+    function linksHtml(links) {{ return (links || []).map((link) => `<a target="_blank" rel="noopener" href="${{esc(link.url)}}">${{esc(link.label || "HKLII")}}</a>`).join(" "); }}
+    function renderCitations(citations) {{
+      if (!citations.length) return "No citations returned.";
+      return citations.map((citation) => {{
+        const deep = citation.hklii_deep_link ? `<a target="_blank" rel="noopener" href="${{esc(citation.hklii_deep_link)}}">paragraph link</a>` : linksHtml(citation.links);
+        return `<div class="item"><strong>[${{esc(citation.citation_id)}}] ${{esc(citation.case_name)}}</strong><div class="meta">${{esc(citation.neutral_citation)}} ${{esc(citation.paragraph_span)}} ${{citation.hklii_verified ? "verified" : ""}} ${{deep}}</div><p>${{esc(citation.quote)}}</p></div>`;
+      }}).join("");
+    }}
+    function renderLineages(lineages) {{
+      if (!lineages.length) return "No matched authority lineage.";
+      return lineages.map((lineage) => {{
+        const members = (lineage.members || []).map((member) => `${{esc(member.position || "")}}. ${{esc(member.label)}} ${{esc(member.code || "")}}`).join("<br>");
+        return `<div class="item"><strong>${{esc(lineage.title)}}</strong><div class="meta">${{esc(lineage.confidence_status || "")}} · ${{esc(lineage.source || "")}}</div><p>${{members}}</p></div>`;
+      }}).join("");
+    }}
+    function renderSimilar(cases) {{
+      if (!cases.length) return "No similar cases returned.";
+      return cases.map((item) => `<div class="item"><strong>${{esc(item.case_name || item.label)}}</strong><div class="meta">${{esc(item.neutral_citation)}} · similarity ${{esc(item.similarity_score)}} · ${{linksHtml(item.source_links)}}</div></div>`).join("");
+    }}
+    runBtn.addEventListener("click", async () => {{
+      const facts = factsEl.value.trim();
+      if (!facts) {{ statusEl.textContent = "Paste facts first."; return; }}
+      runBtn.disabled = true;
+      statusEl.textContent = "Analysing against graph evidence...";
+      try {{
+        const response = await fetch("/api/analyse-case", {{
+          method: "POST",
+          headers: {{ "Content-Type": "application/json" }},
+          body: JSON.stringify({{ facts, mode: modeEl.value, top_k: Number(topKEl.value || 5) }}),
+        }});
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || "Request failed");
+        answerEl.textContent = payload.answer || "No grounded answer returned.";
+        lineagesEl.innerHTML = renderLineages(payload.authority_lineage_path || payload.matched_lineages || []);
+        citationsEl.innerHTML = renderCitations(payload.citations || []);
+        similarEl.innerHTML = renderSimilar(payload.factually_similar_cases || []);
+        warningsEl.textContent = (payload.warnings || []).join("\\n") || "None.";
+        statusEl.textContent = `Done. ${{(payload.citations || []).length}} citation(s), ${{(payload.authority_lineage_path || []).length}} lineage path(s).`;
+      }} catch (error) {{
+        statusEl.textContent = error.message || "Analysis failed.";
+      }} finally {{
+        runBtn.disabled = false;
       }}
     }});
   </script>

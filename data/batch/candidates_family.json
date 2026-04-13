@@ -1,0 +1,1803 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T07:17:48.080519+00:00",
+    "domain": "family"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2022] HKFC 230",
+      "case_name": "YYT v. CCM AND OTHERS",
+      "court_code": "Family Court",
+      "decision_date": "2022-10-31T00:00:00+08:00",
+      "judges": [
+        "Coram: Her Honour Judge Elaine Liu in Chambers (Not Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2022/230",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Matrimonial property presumption",
+          "paraphrase_en": "Assets generated or acquired during a marriage using funds earned during the marriage are prima facie considered matrimonial property for the purposes of ancillary relief.",
+          "paragraph_span": "[59]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Beneficial ownership as basis for matrimonial pot",
+          "paraphrase_en": "A determination of beneficial ownership of property held in the name of a third party provides a useful prima facie basis for considering its inclusion in the matrimonial pot for distribution in ancillary relief proceedings. If a spouse is found to be the beneficial owner, the property should prima facie be included, and vice versa.",
+          "paragraph_span": "[63]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Timing for determining matrimonial pot inclusion",
+          "paraphrase_en": "The dispute over whether an asset should be included in or excluded from the matrimonial pot for distribution is better determined at the ancillary relief trial, after all evidence relevant to the statutory factors has been adduced, allowing the court to consider all relevant factors holistically.",
+          "paragraph_span": "[62]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Scope of trial limited by order",
+          "paraphrase_en": "The court's determination in a trial is limited by the scope of the issues as defined by the relevant court order. The court will decline to determine issues not covered by that order.",
+          "paragraph_span": "[68]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "LWH and WSS",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment notes the practice adopted in this case of determining the matrimonial pot issue in the same trial as the beneficial ownership issue."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:08:51.170360+00:00",
+      "paragraph_count": 307,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKFC 117",
+      "case_name": "LN, by his next friend A, LM v. LK, The Executor to the Estate of LC, Deceased",
+      "court_code": "Family Court",
+      "decision_date": "2025-07-25T00:00:00+08:00",
+      "judges": [
+        "Coram : Deputy District Judge Jacqueline Lee in chambers (Not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2025/117",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Objective standard for reasonable financial provision",
+          "paraphrase_en": "The determination of what constitutes reasonable financial provision under the Ordinance is an objective assessment of what the claimant should reasonably receive, not an assessment of whether the deceased acted reasonably.",
+          "paragraph_span": "[25]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden of proof for claimed expenses",
+          "paraphrase_en": "A claim for a specific expense as part of reasonable financial provision must be supported by objective evidence, such as medical reports or fee quotations; a claimant's unsupported assertion is insufficient.",
+          "paragraph_span": "[79]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Relevance of deceased's lifestyle and expectations",
+          "paraphrase_en": "The deceased's established frugal lifestyle and the expectations they set for the claimant's standard of living (such as education at government-aided schools) are relevant factors in assessing what constitutes reasonable maintenance.",
+          "paragraph_span": "[60], [63]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Best interests of a minor claimant",
+          "paraphrase_en": "Proposals for the maintenance and care of a minor claimant must be shown to be in the minor's best interests, and speculative or unimplemented plans may be given little weight.",
+          "paragraph_span": "[30], [53]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Ilott v The Blue Cross and others",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Ilott that reasonable financial provision is determined by an objective standard for the claimant."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:29:14.168659+00:00",
+      "paragraph_count": 135,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 1507",
+      "case_name": "CHINNEY SHUN CHEONG BUILDING SERVICES ENGINEERING LTD (formerly known as CHINNEY E & M (MAINTENANCE) LTD) v. LO KWAI FAN",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-05-03T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au-Yeung J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/1507",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Jurisdiction to vary sale orders",
+          "paraphrase_en": "A court has jurisdiction to provide further directions or vary an existing order for the sale of a property when there has been a material change in circumstances, particularly when the original order contains a liberty to apply clause.",
+          "paragraph_span": "[4]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Basis for varying sale price",
+          "paraphrase_en": "A court may vary the minimum sale price specified in an order if presented with reliable evidence, such as a consistent valuation methodology, demonstrating a material change in the property's market value since the original order was made.",
+          "paragraph_span": "[5]-[6]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Lam Chok Lai v The Official Receiver and Trustee in Bankruptcy of Lam Chok Wai",
+          "target_neutral_citation": "[2021] HKCFI 260",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Lam Chok Lai that the court has jurisdiction to give further directions for a sale due to changed circumstances under a liberty to apply clause."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:29:34.137505+00:00",
+      "paragraph_count": 19,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "family_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "commercial": 0.15,
+          "company": 0.1,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCA 1310",
+      "case_name": "NLC v. YMF",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-09-01T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Yuen JA and B Chu J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/1310",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Joint custody antagonism",
+          "paraphrase_en": "A court will not make a joint custody order if the parents are so antagonistic that they would be unable to agree on most matters, as such an order would be unworkable.",
+          "paragraph_span": "[20]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden to vary custody order",
+          "paraphrase_en": "The party seeking to vary an existing custody order bears the burden of demonstrating why such a variation is necessary.",
+          "paragraph_span": "[23]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Child's views in welfare decisions",
+          "paraphrase_en": "The court must take into account the views of a child, particularly as they grow older, when making any important decisions concerning the child's welfare.",
+          "paragraph_span": "[23]",
+          "cited_statutes": [
+            "Guardianship of Minors Ordinance s.3"
+          ]
+        },
+        {
+          "principle_label": "Distinction between custody and access",
+          "paraphrase_en": "A child's relationship with a parent's new family is more relevant to access arrangements than to decisions concerning custody matters, such as education. The custody order does not determine the time spent with the child, which is governed by the access order.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Appellate interference with findings of fact",
+          "paraphrase_en": "An appellate court will not normally interfere with the findings of fact made by a first instance judge who has seen and heard the witnesses give live evidence.",
+          "paragraph_span": "[28.1]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "PD",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the authority of PD in support of the proposition that a sole custody order does not prevent the non-custodial parent from inputting views or challenging decisions."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:30:40.079576+00:00",
+      "paragraph_count": 104,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "family": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKFC 203",
+      "case_name": "NLC v. YMF",
+      "court_code": "Family Court",
+      "decision_date": "2021-10-11T00:00:00+08:00",
+      "judges": [
+        "Coram : Her Honour Judge Grace Chan in Chambers (not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2021/203",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Status of social welfare officer recommendations",
+          "paraphrase_en": "The court must give due consideration to reports from social welfare officers but is not bound to follow their recommendations; such recommendations do not constitute the court's decision.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Parental right to consultation on major matters",
+          "paraphrase_en": "A parent, regardless of custodial status, retains the right to be informed and consulted about major decisions concerning their child's upbringing, such as education, and may apply to the court to resolve disagreements.",
+          "paragraph_span": "[13]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Child's best interests as paramount consideration",
+          "paraphrase_en": "The court's primary consideration in custody matters is the child's best interests, and all evidence must be evaluated holistically to determine what arrangement serves those interests.",
+          "paragraph_span": "[100]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "General costs practice in children cases",
+          "paraphrase_en": "In applications concerning children, the usual order is for no order as to costs, as the objective is to determine the best arrangement for the child, not to designate a winning or losing party.",
+          "paragraph_span": "[103]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Naziya Aslam v Ali (Custody and Removal)",
+          "target_neutral_citation": "[2009] HKFLR 294",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case to support the principle that the court is not bound by social welfare officer recommendations."
+        },
+        {
+          "target_case_name": "In Re C (A Child)",
+          "target_neutral_citation": "[2016] Fam 253",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case to reinforce the status of social welfare officer recommendations as non-binding on the court."
+        },
+        {
+          "target_case_name": "TPL v WYY (Costs: Children)",
+          "target_neutral_citation": "[2015] HKFLR 75",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the general costs practice established in this case to the present children proceedings."
+        },
+        {
+          "target_case_name": "London Borough of Sutton v Davis (Costs) No.2",
+          "target_neutral_citation": "[1994] 2 FLR 569",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case to clarify that the 'no costs' approach in children cases is a general practice, not a strict principle."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:34:35.940613+00:00",
+      "paragraph_count": 249,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKFC 185",
+      "case_name": "WMW v. CYCH",
+      "court_code": "Family Court",
+      "decision_date": "2022-09-21T00:00:00+08:00",
+      "judges": [
+        "Coram: Deputy District Judge J. Chow in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2022/185",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Interpretation of maintenance agreement clauses",
+          "paraphrase_en": "The meaning of a clause in a maintenance agreement concerning a child's education is determined by its ordinary meaning, focusing on the act of enrollment rather than physical attendance.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Irrelevance of negotiation history",
+          "paraphrase_en": "The court may disregard submissions regarding the parties' negotiation history or how they arrived at specific financial figures in an agreement when such background is not relevant to the legal interpretation of the clause.",
+          "paragraph_span": "[20]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:36:21.994334+00:00",
+      "paragraph_count": 41,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCFI 1447",
+      "case_name": "RE GURUNG CHETBAHADUR",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-05-24T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge To in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/1447",
+      "topic_id": "involuntary_manslaughter",
+      "topic_label": "Involuntary Manslaughter",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Extension of time factors for appeal",
+          "paraphrase_en": "When deciding whether to extend the time limit for appealing a refusal of leave to apply for judicial review, the court considers four key factors: the length of the delay, the reasons for the delay, the merits of the intended appeal, and any prejudice to the respondent if the extension is granted.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Obligation to notify court of address change",
+          "paraphrase_en": "A litigant has a legal obligation to inform the court of any change of address, including changes resulting from being taken into custody, and must bear the consequences of failing to do so, such as not receiving court notices.",
+          "paragraph_span": "[6]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Limited role of court in non-refoulement judicial review",
+          "paraphrase_en": "In a judicial review of a non-refoulement claim, the court's role is not to reassess the claim or evidence anew. Its function is limited to scrutinizing the decision of the primary decision-makers (the Director and the Board) for legal errors, procedural unfairness, or irrationality.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Jagg Singh and Torture Claims Appeal Board/non-Refoulement Claims Petition Office",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the four-factor test established in Jagg Singh for considering an extension of time to appeal."
+        },
+        {
+          "target_case_name": "Karamjit Singh",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Karamjit Singh that a litigant must inform the court of an address change and bears the risk of not doing so."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:30:13.283051+00:00",
+      "paragraph_count": 34,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords",
+          "constitutional_keywords"
+        ],
+        "secondary_domains": [
+          "constitutional"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "family": 0.3,
+          "constitutional": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 1475",
+      "case_name": "EY v. SE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-04-14T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au-Yeung J in Chambers (Not Open to the Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/1475",
+      "topic_id": "criminal_intimidation",
+      "topic_label": "Criminal Intimidation and Blackmail",
+      "module_id": "offences_against_person",
+      "subground_id": "intimidation_threats",
+      "principles": [
+        {
+          "principle_label": "Domestic violence assessment scope",
+          "paraphrase_en": "In proceedings concerning domestic violence, the court's focus is on determining whether the alleged conduct constitutes harassment or intimidation, not on adjudicating ancillary matters such as custody rights or division of matrimonial assets.",
+          "paragraph_span": "[66]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Causation requirement for psychological harm",
+          "paraphrase_en": "For the court to find that domestic violence caused psychological stress to a child, it must be established that the stress was caused solely or primarily by the violent conduct; the mere existence of stress alongside violence is insufficient without proven causation.",
+          "paragraph_span": "[80]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Mutual conflict in domestic violence",
+          "paraphrase_en": "A finding of domestic violence can be made even where both parties engaged in forceful conduct during a conflict, provided the abusive conduct of one party in the form of harassment or intimidation is established.",
+          "paragraph_span": "[58]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Non-physical intimidation as domestic violence",
+          "paraphrase_en": "Conduct that does not involve physical violence may still constitute domestic violence if it reasonably amounts to continued harassment or psychological intimidation from the perspective of the victim.",
+          "paragraph_span": "[66]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:58:54.971214+00:00",
+      "paragraph_count": 216,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKFC 109",
+      "case_name": "FM v. LWY",
+      "court_code": "Family Court",
+      "decision_date": "2025-06-16T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge R So in Chambers (Not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2025/109",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Best interests paramount principle",
+          "paraphrase_en": "In matters concerning the custody, upbringing, or property of a minor, the court's paramount consideration is the welfare and best interests of the child.",
+          "paragraph_span": "[para 3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Children's views not conclusive",
+          "paraphrase_en": "The expressed views and wishes of children are a relevant factor but are not determinative; the court must independently assess what arrangements are in their best interests.",
+          "paragraph_span": "[para 83]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Equality principle in parental relationships",
+          "paraphrase_en": "In considering a child's best interests, the court should recognize the importance of the child maintaining a relationship with both parents, implying an equality of opportunity where appropriate.",
+          "paragraph_span": "[para 89]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Coordination for flexible arrangements",
+          "paraphrase_en": "Parents should discuss and coordinate children's schedules and activities to allow for flexible arrangements that serve the child's best interests, particularly regarding access.",
+          "paragraph_span": "[para 113]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Purpose of usual removal directions",
+          "paraphrase_en": "A standard direction for temporary removal of a child from the jurisdiction is intended to facilitate parental communication and coordination in making holiday plans that are in the child's best interests.",
+          "paragraph_span": "[para 120]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:20:59.191843+00:00",
+      "paragraph_count": 348,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKFC 113",
+      "case_name": "YCKS v. MPKC",
+      "court_code": "Family Court",
+      "decision_date": "2023-06-28T00:00:00+08:00",
+      "judges": [
+        "Coram: Deputy District Judge S. Allison in Chambers (not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2023/113",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Parental consultation rights regardless of custody",
+          "paraphrase_en": "A parent retains the right to be informed and consulted about major decisions concerning their child's upbringing, such as education, irrespective of their custodial status. If disagreements arise with the custodial parent, the non-custodial parent may apply to the court for resolution.",
+          "paragraph_span": "[18]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Child's wishes in custody/access matters",
+          "paraphrase_en": "A court must give real and meaningful consideration to the wishes of a child in custody or access proceedings, especially when the child is mature, thoughtful, and able to express their views rationally and with emotional understanding. Simply acknowledging these wishes and then disregarding them constitutes an error.",
+          "paragraph_span": "[58]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinction between 'no order' and dismissal",
+          "paraphrase_en": "A court's decision to make 'no order' on an application is legally distinct from dismissing it. 'No order' means the court has declined to determine the application on its merits at that time, leaving it as an outstanding issue, whereas dismissal is an adjudication against the application.",
+          "paragraph_span": "[83]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Welfare test for therapeutic intervention",
+          "paraphrase_en": "When considering an order for therapeutic intervention (e.g., family therapy) against a child's objections, the court must conduct a balancing exercise. If the evidence suggests forcing such therapy may cause more harm than good to the child's welfare and existing familial relationships, the court may decline to order it.",
+          "paragraph_span": "[85]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's inherent jurisdiction to restrict applications",
+          "paraphrase_en": "The court possesses an inherent jurisdiction to impose restrictions on future applications, such as requiring a party to obtain the court's leave before filing a fresh application in family proceedings, in order to prevent abuse of process and protect the welfare of the children involved.",
+          "paragraph_span": "[93]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "LEYY v UKWK",
+          "target_neutral_citation": "[2020] HKFC 68",
+          "relationship_type": "CITES",
+          "description": "The present judgment cites this case as an example where the court changed a child's residence and suspended access to protect the child from unfounded allegations."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:21:53.479943+00:00",
+      "paragraph_count": 205,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKFC 49",
+      "case_name": "YHY v. YKM",
+      "court_code": "Family Court",
+      "decision_date": "2024-03-15T00:00:00+08:00",
+      "judges": [
+        "Coram: Deputy District Judge Eugene Yim in Chambers (not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2024/49",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Best interests of the child as paramount consideration",
+          "paraphrase_en": "The court's primary and guiding principle in matters concerning the custody, upbringing, or welfare of a minor is to determine what is in the child's best interests.",
+          "paragraph_span": "[para 46]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No necessity for factual findings on parental allegations where shared care accepted",
+          "paraphrase_en": "Where both parties have accepted in their final proposals that the child will spend significant time with each parent, the court may find it unnecessary to make specific factual findings on mutual allegations of parental unsuitability.",
+          "paragraph_span": "[para 32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Equal sharing of long school holidays as a guiding principle",
+          "paraphrase_en": "In structuring access arrangements, long school holidays should, in principle, be shared equally between the parents, with the division implemented in blocks corresponding to specific holiday periods.",
+          "paragraph_span": "[para 29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Alternative sharing of singular public/school holidays",
+          "paraphrase_en": "Single-day public holidays and school holidays should be shared equally between parents on an alternating basis throughout the academic year.",
+          "paragraph_span": "[para 29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's reliance on expert welfare reports",
+          "paraphrase_en": "The court may accept and rely on the recommendations and reasoned adjustments made by a responsible and conscientious social welfare officer in expert reports concerning child welfare and access arrangements.",
+          "paragraph_span": "[para 63]-[para 64]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:22:32.892803+00:00",
+      "paragraph_count": 181,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate"
+        ],
+        "scores": {
+          "family": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKFC 131",
+      "case_name": "AKYC v. DK",
+      "court_code": "Family Court",
+      "decision_date": "2021-07-05T00:00:00+08:00",
+      "judges": [
+        "Coram: Her Honour Judge Sharon D. Melloy in Chambers (Not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2021/131",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Evidence interpretation for drug exposure",
+          "paraphrase_en": "Evidence showing exposure to a drug can reasonably support an inference that the person consumed it, but such evidence alone cannot prove habitual use or addiction.",
+          "paragraph_span": "[13]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's jurisdiction over minors",
+          "paraphrase_en": "The court has authority to determine matters concerning the custody, upbringing, and property administration of a minor.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Use of non-statutory guidance in children's cases",
+          "paraphrase_en": "In children's proceedings, the court may consider checklists or factors from proposed legislation as a useful, non-exhaustive guide, even if they are not yet enacted, when assessing the child's best interests.",
+          "paragraph_span": "[12]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Prevalence of joint custody orders",
+          "paraphrase_en": "Joint custody orders are not exceptional in current practice, as they are generally accepted to be in the interests of children, even absent statutory reform seen in other jurisdictions.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:22:50.193439+00:00",
+      "paragraph_count": 229,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2020] HKFC 273",
+      "case_name": "TSYV v. LWSV",
+      "court_code": "Family Court",
+      "decision_date": "2021-01-08T00:00:00+08:00",
+      "judges": [
+        "Coram : District Judge A. Tse in Chambers (Not Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2020/273",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Assessment of parental conduct in custody disputes",
+          "paraphrase_en": "In assessing allegations of inappropriate parental conduct, the court must consider whether the behavior, such as the use of 'toilet humour' or physical contact like scratching, indicates a harmful or sexually deviant intention, rather than merely judging the social acceptability of the conduct.",
+          "paragraph_span": "[4]-[12], [59], [62]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Admissibility of further expert evidence",
+          "paraphrase_en": "A party dissatisfied with a single joint expert's report may be permitted to adduce further expert evidence if their reasons are not fanciful and it would be unjust, having regard to the overriding objective, to refuse such permission, particularly where substantial issues are at stake.",
+          "paragraph_span": "[Paragraph discussing Daniels v Walker]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Primacy of the joint expert's report",
+          "paraphrase_en": "A report prepared by a single joint expert should generally constitute the evidence on the issues it covers, and a stiffer test requiring 'good reasons' applies for amplifying or challenging that report through cross-examination or additional evidence, beyond merely having non-fanciful reasons.",
+          "paragraph_span": "[Paragraph discussing Peet v Mid-Kent Healthcare Trust]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Supervision of child access",
+          "paraphrase_en": "When court-ordered supervision of child access is implemented, the supervisors' schedule and conduct should be governed by established guidelines, and the parties should not interfere with the supervisors' operational decisions.",
+          "paragraph_span": "[Paragraph (2)]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's liberty to vary expert instructions",
+          "paraphrase_en": "The court may grant a party liberty to instruct a different expert to observe proceedings, such as child access sessions, replacing a previously appointed expert, with such change taking immediate effect.",
+          "paragraph_span": "[Paragraph 3]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Daniels v Walker",
+          "target_neutral_citation": "[2000] 1 WLR 1382",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Daniels v Walker that permission for further expert evidence may be granted where a party's reasons are not fanciful and refusal would be unjust."
+        },
+        {
+          "target_case_name": "Peet v Mid-Kent Healthcare Trust",
+          "target_neutral_citation": "[2001] EWCA Civ 1703",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Peet that a joint expert's report is primary evidence and a stiffer test of 'good reasons' is needed to adduce additional evidence."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:23:19.759494+00:00",
+      "paragraph_count": 449,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCA 689",
+      "case_name": "TKY v. YSGA",
+      "court_code": "Court of Appeal",
+      "decision_date": "2024-07-17T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Cheung and G Lam JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2024/689",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Gender discrimination in custody decisions",
+          "paraphrase_en": "A custody decision is not discriminatory on the basis of gender if it is based on practical experience and the realities of a child's life, rather than on prejudice or stereotypes.",
+          "paragraph_span": "[15]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "R v Y (Custody)",
+          "target_neutral_citation": "[2010] HKFLR 492",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from R v Y (Custody) that the importance of a mother to a young child is a matter of practical reality, not discrimination."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:23:54.296949+00:00",
+      "paragraph_count": 33,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords",
+          "employment_keywords"
+        ],
+        "secondary_domains": [
+          "employment"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "family": 0.3,
+          "employment": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKFC 262",
+      "case_name": "HKW v. YYC",
+      "court_code": "Family Court",
+      "decision_date": "2024-01-09T00:00:00+08:00",
+      "judges": [
+        "Coram : His Honour Judge S. Lo in Chambers (Not Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2023/262",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Paramountcy of child welfare",
+          "paraphrase_en": "In matters concerning a minor's custody, upbringing, or property, the sole governing principle is that the child's welfare is the paramount consideration, and no presumptions apply.",
+          "paragraph_span": "[1]-[i]",
+          "cited_statutes": [
+            "GMO s.3"
+          ]
+        },
+        {
+          "principle_label": "No presumption in favour of mother",
+          "paraphrase_en": "There is no legal presumption favouring the mother in custody or upbringing matters, and such gender-based views are obsolete and impermissible.",
+          "paragraph_span": "[34]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Equality of parents",
+          "paraphrase_en": "When applying the welfare principle, the court must place competing parents on an equal footing, prohibiting any role or gender discrimination, reflecting modern social values on shared parental responsibility.",
+          "paragraph_span": "[18]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Child's interests over parental authority",
+          "paraphrase_en": "The paramount consideration is the child's best interests, not parental authority, which is a universally recognized modern principle.",
+          "paragraph_hrase_en": "The paramount consideration is the child's best interests, not parental authority, which is a universally recognized modern principle.",
+          "paragraph_span": "[18]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Judicial obligation in parental alienation",
+          "paraphrase_en": "In cases of parental alienation, the court has an obligation to respond with exceptional diligence and take effective measures, avoiding inaction which would reinforce the stronger party's position.",
+          "paragraph_span": "[13]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re F",
+          "target_neutral_citation": "[2012] EWCA Civ 1364",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Re F to support the principle that the child's welfare is paramount and no presumptions apply."
+        },
+        {
+          "target_case_name": "H v N",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites H v N for the proposition that no presumption exists in favour of the mother."
+        },
+        {
+          "target_case_name": "PD v KWW",
+          "target_neutral_citation": "[2010] 4 HKLRD 191",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the reasoning from PD v KWW regarding the equality of parents and the shift away from gender-based presumptions."
+        },
+        {
+          "target_case_name": "Gillick v West Norfolk and Wisbech Area Health Authority",
+          "target_neutral_citation": "[1986] AC 112",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Gillick via PD v KWW for the principle that the child's best interests, not parental authority, are paramount."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:24:59.118300+00:00",
+      "paragraph_count": 176,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords",
+          "employment_keywords"
+        ],
+        "secondary_domains": [
+          "employment"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "family": 0.3,
+          "employment": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKFC 129",
+      "case_name": "AA v. WSC",
+      "court_code": "Family Court",
+      "decision_date": "2023-07-12T00:00:00+08:00",
+      "judges": [
+        "Coram : His Honour Judge S. Lo in Chambers (Not Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2023/129",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Best interests principle application",
+          "paraphrase_en": "When determining matters concerning a minor's custody, upbringing, or property, the court must apply the welfare principle as the paramount consideration.",
+          "paragraph_span": "[1]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Adoption of welfare checklist",
+          "paraphrase_en": "The Family Court consistently applies a welfare checklist, adapted from section 1(3) of the English Children Act 1989, to local circumstances when assessing a child's best interests under the relevant ordinance.",
+          "paragraph_span": "[12]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "H v N",
+          "target_neutral_citation": "[2012] 5 HKLRD 498",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment adopts the correct approach to the 'best interests' principle as set out by Jeremy Poon J in H v N."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:25:51.584273+00:00",
+      "paragraph_count": 173,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKFC 62",
+      "case_name": "ZZ v. LX",
+      "court_code": "Family Court",
+      "decision_date": "2023-03-31T00:00:00+08:00",
+      "judges": [
+        "Coram: His Honour Judge S Lo in Chambers (Not Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2023/62",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Joint custody orders in child's interests",
+          "paraphrase_en": "Orders for joint custody are not exceptional and are generally made when they are in the best interests of the child.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Parental communication without lawyers",
+          "paraphrase_en": "Educated and capable parents should communicate directly about their child's welfare using simple means like email, rather than through lawyers, to avoid unnecessary expense and delay.",
+          "paragraph_span": "[50]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Presumption of parental competence and cooperation",
+          "paraphrase_en": "Competent and loving parents are presumed to be able to make rational decisions in their child's interests and to cooperate on important upbringing matters.",
+          "paragraph_span": "[51]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Equality principle not applicable to access",
+          "paraphrase_en": "The 'Equality Principle' does not apply to determining child access arrangements, which is a distinct issue from custody.",
+          "paragraph_span": "[71]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Status quo as important consideration for access",
+          "paraphrase_en": "Maintaining the child's current living and access arrangements is a very important factor for the court when determining access.",
+          "paragraph_span": "[71]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:26:56.103102+00:00",
+      "paragraph_count": 174,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKFC 165",
+      "case_name": "BN v. GHB",
+      "court_code": "Family Court",
+      "decision_date": "2025-09-30T00:00:00+08:00",
+      "judges": [
+        "Coram: Her Honour Judge Thelma Kwan in Chambers (not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2025/165",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Joint custody as default principle",
+          "paraphrase_en": "Joint custody is the general and encouraged approach in child custody matters, as it serves the child's best interests by involving both parents in major decisions.",
+          "paragraph_span": "[26]-[52]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Insufficiency of poor communication to deny joint custody",
+          "paraphrase_en": "A lack of communication between parents is not, by itself, a sufficient reason to refuse an order for joint custody. One parent cannot obstruct the other's fundamental parental rights merely by asserting an inability or unwillingness to communicate.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Parental duties under joint custody",
+          "paraphrase_en": "A parent with joint custody has a positive duty to proactively and fully inform the other parent about the child's schooling (diaries, notices, events) and health matters, and cannot expect the other parent to discover this information independently after the fact.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden of proof for allegations affecting custody",
+          "paraphrase_en": "A party making serious allegations (such as abuse or stress caused by a custody order) that could affect custody arrangements must provide proof to support those contentions; unsupported allegations will be found not credible.",
+          "paragraph_span": "[42]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "H v A",
+          "target_neutral_citation": "[2005] HKFLR 304",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from H v A that lack of communication is insufficient to deny joint custody."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:27:12.444929+00:00",
+      "paragraph_count": 90,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKFC 226",
+      "case_name": "H v. W",
+      "court_code": "Family Court",
+      "decision_date": "2024-12-13T00:00:00+08:00",
+      "judges": [
+        "Coram : Deputy District Judge Robin Egerton in Chambers (Not Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2024/226",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Paramountcy of child's best interests",
+          "paraphrase_en": "The child's best interests are the overriding and paramount consideration in decisions concerning custody, care and control, and relocation.",
+          "paragraph_span": "[52], [70]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Test for relocation applications",
+          "paraphrase_en": "A parent's application to relocate a child must be genuine, realistic, and not motivated by an intention to exclude the other parent from the child's life.",
+          "paragraph_span": "[56]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No order as to costs in children matters",
+          "paraphrase_en": "In applications concerning children, the general practice and usual order is that there be no order as to costs, to encourage parents to focus on arrangements in the child's best interests.",
+          "paragraph_span": "[83]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "TPL and WYY",
+          "target_neutral_citation": "CACV 47/2014 and CACV 61/2014",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Court of Appeal case for the principle that the usual order in children matters should be no order as to costs."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:27:44.999513+00:00",
+      "paragraph_count": 264,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKFC 72",
+      "case_name": "M,B v. S,S",
+      "court_code": "Family Court",
+      "decision_date": "2022-03-30T00:00:00+08:00",
+      "judges": [
+        "Coram: Deputy District Judge Peter Barnes in Chambers (Not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2022/72",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Paramountcy principle in child matters",
+          "paraphrase_en": "When making orders concerning the custody or education of a child in matrimonial proceedings, the child's best interests are the paramount consideration that the court must apply.",
+          "paragraph_span": "[17]",
+          "cited_statutes": [
+            "Cap. 192 s.19",
+            "Cap. 13 s.3",
+            "Cap. 179"
+          ]
+        },
+        {
+          "principle_label": "Test for authorization of arrest in injunction",
+          "paraphrase_en": "An authorization for arrest can be attached to a court order only if the court is satisfied that the respondent has already caused actual bodily harm to the protected person, or the court reasonably believes the respondent is likely to cause such harm.",
+          "paragraph_span": "[41]",
+          "cited_statutes": [
+            "Cap. 189 s. 5(1)(a)",
+            "Cap. 189 s. 5(1)(b)"
+          ]
+        },
+        {
+          "principle_label": "Test for extending arrest authorization",
+          "paraphrase_en": "The same legal test used for initially authorizing an arrest under a court order applies when the court considers extending that authorization.",
+          "paragraph_span": "[41]",
+          "cited_statutes": [
+            "Cap. 189 s. 7"
+          ]
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:28:25.541226+00:00",
+      "paragraph_count": 83,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKFC 181",
+      "case_name": "WKI also known as IWKV v. CKW also known as WCKW",
+      "court_code": "Family Court",
+      "decision_date": "2022-10-03T00:00:00+08:00",
+      "judges": [
+        "Coram: Deputy District Judge Theresa Chow in Chambers (not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2022/181",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Welfare principle as paramount consideration",
+          "paraphrase_en": "In matters concerning the custody or upbringing of a minor, the child's welfare must be the court's paramount consideration.",
+          "paragraph_span": "[25]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Use of welfare checklist as guideline",
+          "paraphrase_en": "The court may consider the welfare checklist from the English Children Act 1989 as a useful guideline when applying the welfare principle, even though similar local legislation is pending.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Admissibility of covert surveillance evidence in children proceedings",
+          "paraphrase_en": "Covert surveillance evidence is permissible in children proceedings in appropriate cases, with the decision depending on the special circumstances of the individual case and the best interests of the child as the guiding principle.",
+          "paragraph_span": "[104]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Striking out scandalous or irrelevant material from affidavits",
+          "paraphrase_en": "The court has the power to strike out material from an affidavit that is scandalous, irrelevant, or otherwise oppressive.",
+          "paragraph_span": "[para following 52(a)]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Relevance and admissibility balancing exercise",
+          "paraphrase_en": "The degree of relevance required for admissibility is not fixed and may involve balancing the evidence's relevance against considerations such as inconvenience, expense, delay, or oppression, which is akin to exercising discretion.",
+          "paragraph_span": "[para following 52(a)]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Mohammad Amjad v. John M Pickavant & CO",
+          "target_neutral_citation": "[2012] H.K.E.C. 631",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as discussing the principles for striking out scandalous or irrelevant material from affidavits."
+        },
+        {
+          "target_case_name": "PD v KWW",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the presumption from this case that competent, loving parents with sufficient objectivity can cooperate on important child upbringing matters."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:28:43.672772+00:00",
+      "paragraph_count": 389,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKFC 35",
+      "case_name": "SSLT v. SMFC",
+      "court_code": "Family Court",
+      "decision_date": "2025-02-21T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge R So in Chambers (Not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2025/35",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Best interests as paramount consideration",
+          "paraphrase_en": "In matters concerning the custody, upbringing, or access to a child, the court's first and paramount consideration is the best interests of the child.",
+          "paragraph_span": "[69]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consideration of child's wishes and feelings",
+          "paraphrase_en": "When determining the child's best interests, the court must give due consideration to the child's wishes and feelings, having regard to the child's age, understanding, and the circumstances of the case.",
+          "paragraph_span": "[69]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Nature of care and control and access",
+          "paraphrase_en": "The labels 'care and control' and 'access' are functional. During access periods, the parent with access assumes care and control of the child. The parent with substantial access must be consulted on arrangements affecting their access time.",
+          "paragraph_span": "[115]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Flexibility in holiday arrangements",
+          "paraphrase_en": "Pre-determined, fixed dates for long school holiday access may not serve the child's best interests, as children's schedules change with age and activities. Parents should communicate and agree on dates within a reasonable timeframe before the holiday.",
+          "paragraph_span": "[109], [111]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Parental cooperation and communication",
+          "paraphrase_en": "Parents are expected to use their best endeavours to communicate and reach agreements regarding child arrangements, shifting focus from mutual blame to the child's growth and development.",
+          "paragraph_span": "[109], [117]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:29:40.508157+00:00",
+      "paragraph_count": 273,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKFC 100",
+      "case_name": "BKGGB also known as NGGB v. BKND",
+      "court_code": "Family Court",
+      "decision_date": "2021-05-24T00:00:00+08:00",
+      "judges": [
+        "Coram: Deputy District Judge Thelma Kwan in Chambers (not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2021/100",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Paramountcy of child's welfare in relocation",
+          "paraphrase_en": "In cases concerning the relocation of a child, whether external or internal, the only legal test is the paramount principle of the child's welfare. This involves a holistic, non-linear balancing exercise of all relevant factors, assisted by analogy with the welfare checklist.",
+          "paragraph_span": "[82]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Status of Payne v Payne guidance",
+          "paraphrase_en": "The guidance and factors set out in Payne v Payne are not prescriptive rules of law. The only principle of law from that case is the paramountcy of the child's best interests; the rest is guidance to be applied flexibly and with caution, particularly to ensure a gender-neutral approach.",
+          "paragraph_span": "[52], [83]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Joint custody orders",
+          "paraphrase_en": "Orders for joint custody are not exceptional and are, in principle, considered to be in the interests of children.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Approach to shared care arrangements",
+          "paraphrase_en": "In cases where the care of a child is shared between parents, the court should avoid becoming bogged down in arguments over labels attached to the care arrangement and should focus on the practical realities.",
+          "paragraph_span": "[4.15]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "ZJ v XWN (Leave to Appeal: Child Relocation)",
+          "target_neutral_citation": "[2018] HKCA 436",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment relies on this Court of Appeal case to confirm that the only legal principle from Payne v Payne is the paramountcy of the child's welfare."
+        },
+        {
+          "target_case_name": "Payne v Payne",
+          "target_neutral_citation": "[2001] EWCA Civ 166",
+          "relationship_type": "CITES",
+          "description": "The judgment discusses the status of the guidance from this case, noting its factors may have limited utility and should not be applied prescriptively."
+        },
+        {
+          "target_case_name": "K v K (Children: Permanent Removal from Jurisdiction)",
+          "target_neutral_citation": "[2011] EWCA Civ 793",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case, specifically the view of Black LJ, regarding the approach to labeling shared care arrangements."
+        },
+        {
+          "target_case_name": "Re C (A Child) (Internal Relocation)",
+          "target_neutral_citation": "[2016] Fam 253",
+          "relationship_type": "CITES",
+          "description": "This authority was reviewed by the Court of Appeal in ZJ v XWN, which the present judgment follows."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:30:02.240556+00:00",
+      "paragraph_count": 375,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKFC 8",
+      "case_name": "C, RYL (formerly known as S, R) v. C, S",
+      "court_code": "Family Court",
+      "decision_date": "2022-01-11T00:00:00+08:00",
+      "judges": [
+        "Coram: Her Honour Judge Sharon D. Melloy in Chambers (Not open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2022/8",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Variation of custody orders",
+          "paraphrase_en": "A court has the authority to vary an existing custody order, including altering which parent is granted care and control of a child and determining the child's primary residence.",
+          "paragraph_span": "[1]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Joint custody framework",
+          "paraphrase_en": "The court may order joint custody of a child, separating the legal concept of custody from the practical arrangements of care and control and access.",
+          "paragraph_span": "[1]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Immediate implementation of residence change",
+          "paraphrase_en": "A court order varying care and control can mandate the child's move to a new residence to take effect immediately upon the order being made.",
+          "paragraph_span": "[1]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:30:13.285065+00:00",
+      "paragraph_count": 260,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKFC 204",
+      "case_name": "YCKS v. MPKC",
+      "court_code": "Family Court",
+      "decision_date": "2022-09-26T00:00:00+08:00",
+      "judges": [
+        "Coram : Her Honour Judge Grace Chan in Chambers (paper disposal)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2022/204",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Welfare of the child as paramount consideration",
+          "paraphrase_en": "In proceedings concerning the variation of custody or access orders, the court's primary and overriding consideration is the welfare of the child.",
+          "paragraph_span": "[1]-[8]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Reluctance to disturb settled arrangements",
+          "paraphrase_en": "The court is generally reluctant to vary existing custody and access arrangements, especially where they were established by a full trial or subsequent consent order, unless there is a material change in circumstances affecting the child's welfare.",
+          "paragraph_span": "[2]-[3], [6]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Child's views as a relevant factor",
+          "paraphrase_en": "The expressed wishes, feelings, and reactions of the children, particularly when documented in professional reports, are important factors for the court to consider when assessing their welfare in custody and access disputes.",
+          "paragraph_span": "[4]-[5]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Use of expert and welfare reports",
+          "paraphrase_en": "In complex family disputes involving children, the court may direct the preparation of social investigation and clinical psychological reports to obtain independent, expert assessments of the children's circumstances and needs to inform its decision.",
+          "paragraph_span": "[4], [7]-[8]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:30:28.794907+00:00",
+      "paragraph_count": 85,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCA 865",
+      "case_name": "LUI MING LOK v. NG IM FONG LORETTA",
+      "court_code": "Court of Appeal",
+      "decision_date": "2023-07-14T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Cheung, Yuen and Chow JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2023/865",
+      "topic_id": "insanity_intoxication",
+      "topic_label": "Insanity, Automatism, and Intoxication",
+      "module_id": "defences",
+      "subground_id": "mental_condition_intoxication",
+      "principles": [
+        {
+          "principle_label": "Void vs voidable marriage for mental incapacity",
+          "paraphrase_en": "Under modern matrimonial legislation (specifically by the time of the Matrimonial Causes Ordinance 1973), lack of consent due to unsoundness of mind or mental disorder can only render a marriage voidable, not void.",
+          "paragraph_span": "[23]",
+          "cited_statutes": [
+            "MCO 1973"
+          ]
+        },
+        {
+          "principle_label": "Beneficial marriage exception to nullity",
+          "paraphrase_en": "A marriage involving an insane person may not be declared null and void if the marriage is beneficial to that person, such as where the other spouse provides care, and third parties should not be permitted to interfere with it.",
+          "paragraph_span": "[6], [47]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Party's right to assert own incapacity",
+          "paraphrase_en": "A party may bring proceedings to annul a marriage on the ground of their own mental incapacity at the time of the marriage, as such incapacity invalidates the marriage contract due to want of consent.",
+          "paragraph_span": "[46]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Specific over general statutory construction",
+          "paraphrase_en": "In statutory interpretation, where a general enactment covers a situation for which specific provision is made elsewhere in the legislation, it is presumed the situation is intended to be dealt with by the specific provision.",
+          "paragraph_span": "[66]",
+          "cited_statutes": [
+            "DO 1932 s.13(f)",
+            "DO 1932 s.13(c)"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Browning v. Reane",
+          "target_neutral_citation": "(1812) 2 Phill Ecc 69",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Browning v. Reane for the principle that a beneficial marriage to an insane person may not be declared void and to illustrate the historical common law rule."
+        },
+        {
+          "target_case_name": "Turner v Meyers",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Turner v Meyers for the principle that a party can assert their own past mental incapacity to annul a marriage for want of consent."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T02:36:05.183953+00:00",
+      "paragraph_count": 263,
+      "domain_classification": {
+        "domain": "family",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    }
+  ]
+}

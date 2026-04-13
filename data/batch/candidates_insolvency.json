@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T07:17:48.082529+00:00",
+    "domain": "insolvency"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2024] HKCFI 3666",
+      "case_name": "RE LIN YIFAN",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-12-27T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Kent Yee in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/3666",
+      "topic_id": "involuntary_manslaughter",
+      "topic_label": "Involuntary Manslaughter",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Ordinary residence for bankruptcy jurisdiction",
+          "paraphrase_en": "To establish ordinary residence for bankruptcy jurisdiction under section 4(1)(c)(i), the petitioner does not need to show the debtor was resident throughout the entire three-year period, nor that the debtor intended to remain permanently. It requires residence that is not casual or uncertain, but conducted in the ordinary course of the debtor's life.",
+          "paragraph_span": "[9]",
+          "cited_statutes": [
+            "Cap. 6 s.4(1)(c)(i)"
+          ]
+        },
+        {
+          "principle_label": "Place of residence for bankruptcy jurisdiction",
+          "paraphrase_en": "The jurisdictional requirement under section 4(1)(c)(i) can be satisfied by the debtor having a place of residence in Hong Kong at some point during the relevant period, even if it is not the debtor's primary home, such as being able to stay at a relative's residence.",
+          "paragraph_span": "[31]",
+          "cited_statutes": [
+            "Cap. 6 s.4(1)(c)(i)"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re Cao Zhong",
+          "target_neutral_citation": "[2021] HKCFI 3143",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment adopts the interpretation from Re Cao Zhong regarding the requirements for establishing ordinary residence under bankruptcy jurisdiction."
+        },
+        {
+          "target_case_name": "Re Ku Chu Keung",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Re Ku Chu Keung that a place of residence for bankruptcy jurisdiction can include accommodation at a relative's home."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:32:36.454478+00:00",
+      "paragraph_count": 106,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "insolvency": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 3281",
+      "case_name": "RE LI YE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-12-15T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge MK Liu in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/3281",
+      "topic_id": "criminal_intimidation",
+      "topic_label": "Criminal Intimidation and Blackmail",
+      "module_id": "offences_against_person",
+      "subground_id": "intimidation_threats",
+      "principles": [
+        {
+          "principle_label": "Unreasonable excuse for non-compliance",
+          "paraphrase_en": "A bankrupt cannot rely on alleged unlawful acts by third parties as a reasonable excuse for failing to comply with statutory duties under the Bankruptcy Ordinance, especially when no corroborating evidence is provided and no report was made to relevant authorities for protection.",
+          "paragraph_span": "[62]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Suspension order grounds sufficiency",
+          "paraphrase_en": "A court may grant a suspension order under the Bankruptcy Ordinance if sufficient grounds are established, and it is not necessary to rule on every potential ground raised when others already justify the order.",
+          "paragraph_span": "[90]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Maximum suspension period for egregious cases",
+          "paraphrase_en": "The maximum four-year suspension period under bankruptcy law should be reserved for the most serious cases of non-cooperation.",
+          "paragraph_span": "[90]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Official Receiver v Zhi Charles formerly known as Chang Hyun Chi",
+          "target_neutral_citation": "FACV 8/2015",
+          "relationship_type": "CITES",
+          "description": "The judgment references this CFA ruling on the unconstitutionality of a Bankruptcy Ordinance provision concerning physical presence requirements."
+        },
+        {
+          "target_case_name": "Re Leung Yat Tung",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this Court of Appeal case regarding the maximum suspension period being reserved for the most egregious cases."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:57:38.393900+00:00",
+      "paragraph_count": 236,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "insolvency": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 2301",
+      "case_name": "RE KOON WING YEE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-09-07T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Linda Chan J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/2301",
+      "topic_id": "criminal_intimidation",
+      "topic_label": "Criminal Intimidation and Blackmail",
+      "module_id": "offences_against_person",
+      "subground_id": "intimidation_threats",
+      "principles": [
+        {
+          "principle_label": "Bankruptcy appeal hearing standard",
+          "paraphrase_en": "In a short bankruptcy appeal hearing, the court should not determine that the debtor lacks a reasonable prospect of success on appeal and grant a bankruptcy order; instead, the debtor should be given the opportunity to present full submissions on the merits at the substantive appeal hearing.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:02:43.157564+00:00",
+      "paragraph_count": 68,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "insolvency": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 721",
+      "case_name": "RE CHU JIARU",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-03-10T00:00:00+08:00",
+      "judges": [
+        "Before: Recorder Jin Pao SC in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/721",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Creditor's duty to realize security at market value",
+          "paraphrase_en": "Under Hong Kong law, a creditor holding security owes an equitable duty to the surety to realize that security at its market value, unless the contract between them modifies this duty.",
+          "paragraph_span": "[55]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Contractual discretion in valuation",
+          "paraphrase_en": "Where a contract grants an external auditor 'reasonable discretion' and requires them to act in a 'reasonable manner' in choosing a valuation method, the court will not compel the use of multiple methods if the auditor reasonably held the view that one particular method was appropriate.",
+          "paragraph_span": "[67]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Standard for disputing a bankruptcy debt",
+          "paraphrase_en": "A bankruptcy petition can be challenged if the debtor demonstrates a bona fide dispute on substantial grounds regarding the debt claimed, without the court needing to conclusively resolve the underlying dispute.",
+          "paragraph_span": "[86]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's limited role in foreign law disputes",
+          "paraphrase_en": "In bankruptcy proceedings, the court's function is not to usurp the role of a civil court, especially a foreign one, by determining disputed issues of foreign law that are inappropriate for summary determination.",
+          "paragraph_span": "[76], [86]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Threshold for setting aside substituted service",
+          "paraphrase_en": "The test for setting aside a substituted service order is not whether it was 'arguably' liable to be set aside, but whether it was actually wrongly obtained, such as due to material non-disclosure.",
+          "paragraph_span": "[96]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "The China and South Sea Bank v Tan Soon-Gin",
+          "target_neutral_citation": "[1990] 1 HKLR 546",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that a creditor owes an equitable duty to a surety to realize securities at market value."
+        },
+        {
+          "target_case_name": "Re Wang Huimin",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The present case is distinguished from Re Wang Huimin, where the bankruptcy order was annulled because the substituted service order was found to be wrongly obtained due to material non-disclosure."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:20:55.256440+00:00",
+      "paragraph_count": 230,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "insolvency": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2026] HKCFI 1047",
+      "case_name": "RE CHU JIARU",
+      "court_code": "Court of First Instance",
+      "decision_date": "2026-02-16T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Winnie Tsui J in Chambers (open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2026/1047",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Trustee's decision under s.83",
+          "paraphrase_en": "A trustee in bankruptcy makes a 'decision' within the meaning of section 83 of the Bankruptcy Ordinance when they express a definitive position or refusal, as opposed to a tentative view indicated by conditional language.",
+          "paragraph_span": "[58]-[65]",
+          "cited_statutes": [
+            "Cap. 6 s.83"
+          ]
+        },
+        {
+          "principle_label": "Full and effective indemnity requirement",
+          "paraphrase_en": "A bankrupt seeking to use the trustee's name to bring proceedings must provide a full and effective indemnity to cover the trustee's costs and any adverse costs orders, as the bankrupt has no interest in the estate and the creditors' interests are paramount.",
+          "paragraph_span": "[52]-[71]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Nature of indemnity not rigidly upfront",
+          "paraphrase_en": "The requirement for a 'full and effective indemnity' does not necessarily mandate that all costs up to trial be paid upfront, especially when estimating total costs at an early stage is difficult.",
+          "paragraph_span": "[68]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of indemnity provider's capability",
+          "paraphrase_en": "To establish a 'full and effective indemnity', the bankrupt must demonstrate the indemnity provider's financial capability to honour it, which requires evidence of their overall financial condition, not just a single asset snapshot.",
+          "paragraph_span": "[77]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Surplus requirement for being 'aggrieved'",
+          "paraphrase_en": "A bankrupt is only 'aggrieved' by a trustee's decision, and thus has standing to challenge it, if they can prove their estate would have had a surplus after paying all debts but for that decision.",
+          "paragraph_span": "[85]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Dr Vincent Kay-Lo Ip v Dr Andrew Kee-Suan Koh",
+          "target_neutral_citation": "FAMV 8/2001",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that a bankrupt must give a full and effective indemnity to trustees for bringing an action in their names."
+        },
+        {
+          "target_case_name": "Re Tam Mei Kam",
+          "target_neutral_citation": "CACV 197/2016",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes this case on its facts, finding it did not lay down a general principle and is not applicable because the trustees here made a definitive decision."
+        },
+        {
+          "target_case_name": "Re a Debtor, ex parte The Debtor v Dodwell (The Trustee)",
+          "target_neutral_citation": "[1949] 1 Ch 236",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the well-established principle from this case that a bankrupt must prove a surplus would exist to be 'aggrieved' by a trustee's decision."
+        },
+        {
+          "target_case_name": "Re Tang Tim Chue",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Court of Appeal authority as the latest Hong Kong case affirming the surplus requirement for a bankrupt to be 'aggrieved'."
+        },
+        {
+          "target_case_name": "Re Chu Wai Tung",
+          "target_neutral_citation": "[2017] 4 HKLRD 610",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as part of the line of authorities supporting the surplus requirement principle."
+        },
+        {
+          "target_case_name": "Re Kwong Yuet Ping",
+          "target_neutral_citation": "[2021] HKCFI 118",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as further authority supporting the established surplus requirement principle."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:22:53.595679+00:00",
+      "paragraph_count": 190,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "insolvency": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 155",
+      "case_name": "RE WONG SAI CHUNG",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-01-03T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Jonathan Wong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/155",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Judgment clarification procedure",
+          "paraphrase_en": "Where the proper construction of a judgment is in dispute, the appropriate course is for the party to seek clarification from the court that issued the judgment, rather than having the matter determined by a different court (such as a bankruptcy court).",
+          "paragraph_span": "[3.15]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Restrictions on execution of judgment",
+          "paraphrase_en": "A judgment creditor may be prevented from levying execution only in exceptional circumstances, such as when new evidence shows the judgment is invalid, or where the judgment debtor has an undetermined claim against the judgment creditor.",
+          "paragraph_span": "[3.23]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Man Ping Nam v Man Fong Hang (No 2)",
+          "target_neutral_citation": "(2007) 10 HKCFAR 140",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this authority for the proposition that clarification of a judgment should be sought from the court that issued it."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:27:53.004798+00:00",
+      "paragraph_count": 126,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "insolvency": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2799",
+      "case_name": "YEO BOON ANN AND ANOTHER v. MARSPAN LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-09-16T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Mimmie Chan J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2799",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Bankrupt estate property definition",
+          "paraphrase_en": "The estate of a bankrupt comprises all property belonging to or vested in the bankrupt at the commencement of bankruptcy, excluding only property held by the bankrupt on trust for any other person.",
+          "paragraph_span": "[19]",
+          "cited_statutes": [
+            "Cap. 6 s.43"
+          ]
+        },
+        {
+          "principle_label": "Exclusion limited to bare trust",
+          "paraphrase_en": "The exclusion from the bankrupt's estate for property held on trust only applies to property held on a bare trust where the bankrupt has no beneficial interest whatsoever.",
+          "paragraph_span": "[19]",
+          "cited_statutes": [
+            "Cap. 6 s.43(3)"
+          ]
+        },
+        {
+          "principle_label": "Trustee in bankruptcy's position",
+          "paraphrase_en": "Where a bankrupt has a beneficial interest in property, that interest passes to the trustee in bankruptcy, who then holds the property on the same trusts and is entitled to the same beneficial interest as the bankrupt held.",
+          "paragraph_span": "[21]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "The Governors of St Thomas's Hospital v Richardson",
+          "target_neutral_citation": "[1910] 1 KB 271",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle that a bankrupt's beneficial interest in property passes to the trustee in bankruptcy even when the bankrupt holds the property in trust for others."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:28:07.458993+00:00",
+      "paragraph_count": 47,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "insolvency_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1,
+          "insolvency": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 1581",
+      "case_name": "JOINT AND SEVERAL PROVISIONAL LIQUIDATORS OF HSIN CHONG CONSTRUCTION CO LTD (PROVISIONAL LIQUIDATORS APPOINTED) v. THE CHINESE UNIVERSITY OF HONG KONG AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-10-25T00:00:00+08:00",
+      "judges": [
+        "Before : Hon Cheung and Chu JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/1581",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Scope of s.200(3) directions application",
+          "paraphrase_en": "An application for directions under section 200(3) of the Companies (Winding Up and Miscellaneous Provisions) Ordinance is reserved for cases where a genuine difficulty arises in the course of the liquidation.",
+          "paragraph_span": "[4]",
+          "cited_statutes": [
+            "Cap. 32 s.200(3)"
+          ]
+        },
+        {
+          "principle_label": "Segregation requirement for trust monies",
+          "paraphrase_en": "The requirement to segregate trust monies, as discussed in authorities like Lehman, Rayack, and MacJordan, applies in the context of companies holding trust monies that have gone into liquidation, and does not apply to a party not in liquidation.",
+          "paragraph_span": "[4]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Constitution of trust by appropriation",
+          "paraphrase_en": "For a trust to arise, the separate trust fund must be fully constituted prior to insolvency; a mere contractual obligation to create a trust fund is insufficient if no separate fund is actually established.",
+          "paragraph_span": "[47]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Identification vs. segregation of trust assets",
+          "paraphrase_en": "So long as trust assets can be clearly identified, setting them aside in a separate fund is not strictly required for a trust to be valid.",
+          "paragraph_span": "[51]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "MacJordan Construction Ltd v. Brookmount Erostin Ltd",
+          "target_neutral_citation": "[1994] CLC 581",
+          "relationship_type": "CITES",
+          "description": "The judgment cites MacJordan for the principle that a trust fund must be fully constituted prior to insolvency."
+        },
+        {
+          "target_case_name": "Re Kayford Ltd",
+          "target_neutral_citation": "[1975] 1 All ER 604",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Re Kayford for the principle that clear identification of trust assets can suffice without strict segregation."
+        },
+        {
+          "target_case_name": "Hunter v Moss",
+          "target_neutral_citation": "[1994] 1 WLR 452",
+          "relationship_type": "CITES",
+          "description": "The judgment notes that Hunter v Moss chose not to follow MacJordan on the requirement for appropriation of specific assets."
+        },
+        {
+          "target_case_name": "Yew Sang Hong Ltd v. Hong Kong Housing Authority",
+          "target_neutral_citation": "[2008] 3 HKC 290",
+          "relationship_type": "CITES",
+          "description": "The judgment discusses this case regarding arguments about Quistclose trusts and set-off rights in retention money disputes."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:29:43.711943+00:00",
+      "paragraph_count": 164,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "insolvency_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1,
+          "insolvency": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 577",
+      "case_name": "ALLIED EVER HOLDINGS LTD v. LI SHU CHUNG AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-04-27T00:00:00+08:00",
+      "judges": [
+        "Before : Hon Kwan VP, Cheung and Au JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/577",
+      "topic_id": "tax_evasion",
+      "topic_label": "Tax Evasion",
+      "module_id": "public_order_regulatory",
+      "subground_id": "tax_evasion",
+      "principles": [
+        {
+          "principle_label": "Grounds for removal of liquidator",
+          "paraphrase_en": "A liquidator may be removed for misconduct, dereliction of duty, unfitness, inability to perform duties, or where there is a loss of confidence in their professional judgment to a degree that forfeits the court's confidence. This can be shown by evidence of a breach of duty, inefficiency, appearance of partiality, or a conflict of duty.",
+          "paragraph_span": "[6]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's review of liquidator's discretion",
+          "paraphrase_en": "The court will only interfere with a liquidator's exercise of discretion under section 200(5) of the Companies (Winding Up and Miscellaneous Provisions) Ordinance in two categories: first, where the liquidator has not acted in good faith or has acted in a way no reasonable liquidator would have; second, when the liquidator is required to make a specific ruling or decision in the administration.",
+          "paragraph_span": "[4]",
+          "cited_statutes": [
+            "Cap. 32 s.200(5)"
+          ]
+        },
+        {
+          "principle_label": "Test for removal of liquidator",
+          "paraphrase_en": "The key test for removing a liquidator is whether their conduct is such that it forfeits the confidence of the court.",
+          "paragraph_span": "[6]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Liquidator's duty of neutrality",
+          "paraphrase_en": "A liquidator, as an officer of the court, must remain neutral. Adopting an adversarial or hostile position, showing bias, or acting in a high-handed and oppressive manner can constitute an abuse of power and justify removal.",
+          "paragraph_hrase_en": "A liquidator, as an officer of the court, must remain neutral. Adopting an adversarial or hostile position, showing bias, or acting in a high-handed and oppressive manner can constitute an abuse of power and justify removal.",
+          "paragraph_span": "[3.4]-[3.5]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Liquidator's duty to respect court judgments",
+          "paraphrase_en": "A reasonable liquidator is expected to respect and give proper heed to final judgments of the court concerning the company's affairs, and should not keep alive claims that have been conclusively rejected by such judgments.",
+          "paragraph_span": "[7.10]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "HCA 1711/2009 (Main Action)",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the factual findings from the Main Action, which conclusively established the Father's beneficial ownership of the company shares."
+        },
+        {
+          "target_case_name": "CACV 2/2016",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the Court of Appeal's affirmation of the findings from the Main Action regarding beneficial ownership."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:32:50.085281+00:00",
+      "paragraph_count": 254,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "insolvency_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "commercial"
+        ],
+        "scores": {
+          "commercial": 0.15,
+          "company": 0.1,
+          "insolvency": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 546",
+      "case_name": "THE OFFICIAL RECEIVER v. YEN CHING WAI, DAVID (aka DAVID YEN CHING WAI) AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-02-23T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Linda Chan J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/546",
+      "topic_id": "tax_evasion",
+      "topic_label": "Tax Evasion",
+      "module_id": "public_order_regulatory",
+      "subground_id": "tax_evasion",
+      "principles": [
+        {
+          "principle_label": "Liquidator's standard of impartiality",
+          "paraphrase_en": "Liquidators, as officers of the court, are held to a very high standard. They must not only be independent and impartial in fact, but must also be seen to be so, akin to the standard expected of a court or judge.",
+          "paragraph_span": "[68]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Duty to reject baseless claims",
+          "paraphrase_en": "Liquidators must forthwith reject proofs of debt that are clearly without merit, particularly when a court judgment has already determined the relevant issues. Keeping such claims alive to create a false impression of insolvency or to justify their continuation in office constitutes wrongful conduct and demonstrates bias.",
+          "paragraph_span": "[32], [42], [43]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Duty to maintain proper records",
+          "paraphrase_en": "Office-holders must keep proper contemporaneous records of their actions and the reasons for them. Inadequate records make it difficult to discharge their duty to account, and any doubts arising from retrospective reconstructions are likely to be resolved against them.",
+          "paragraph_span": "[b]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Commercial prudence standard",
+          "paraphrase_en": "The test for an office-holder's conduct is whether a reasonably prudent person, in the same circumstances concerning their own affairs, would risk their own money in the same way. They must deploy commercial judgment and cannot act regardless of expense; high-cost transactions with little benefit will be scrutinized closely.",
+          "paragraph_span": "[c]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Misleading the court as misconduct",
+          "paraphrase_en": "Liquidators acting in a way that actively misleads the court, such as misrepresenting the timing of discoveries or raising spurious issues to justify their position, engage in serious misconduct.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re Legend International Resorts Ltd",
+          "target_neutral_citation": "HCCW 1139/2004, 7 March 2011",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Re Legend that liquidators must be and be seen to be independent and impartial, holding them to a standard comparable to a court."
+        },
+        {
+          "target_case_name": "Re Styland",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the reasoning from Re Styland regarding the dual objective of protecting the public and deterrence when setting the starting point for disqualification periods."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:35:24.044204+00:00",
+      "paragraph_count": 262,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "insolvency": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 1662",
+      "case_name": "PATRICK COWLEY AND WONG WING SZE TIFFANY (JOINT AND SEVERAL TRUSTEES IN BANKRUPTCY OF THE PROPERTY OF LAU YU ALSO KNOWN AS JAFFE LAU) v. LAU SZE AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-06-21T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Sara Tong SC"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/1662",
+      "topic_id": "tax_evasion",
+      "topic_label": "Tax Evasion",
+      "module_id": "public_order_regulatory",
+      "subground_id": "tax_evasion",
+      "principles": [
+        {
+          "principle_label": "Presumption of beneficial interest following legal title",
+          "paraphrase_en": "In property disputes, equity follows the law, creating a presumption that the beneficial ownership aligns with the legal ownership. The party claiming a different beneficial interest bears the burden of proof to rebut this presumption.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Elements of common intention constructive trust",
+          "paraphrase_en": "To establish a common intention constructive trust, a claimant must prove: (1) a common intention between the claimant and legal owner at purchase or later that beneficial ownership differs from legal title; (2) detrimental reliance by the claimant on that common intention; and (3) that it would be unconscionable for the legal owner to deny the claimant's interest.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Two limbs for establishing common intention",
+          "paraphrase_en": "A common intention constructive trust can be established under two limbs: first, by evidence of an express agreement or understanding between parties regarding beneficial ownership; second, by inference from the parties' conduct, which may include direct financial contributions to the purchase.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden of proof on party claiming beneficial interest",
+          "paraphrase_en": "When property is registered in another's name, the party asserting a beneficial interest different from the legal title must discharge the legal burden of proving that interest on the balance of probabilities.",
+          "paragraph_span": "[145]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Liu Wai Keung",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as authority for the presumption that beneficial interest follows legal interest and the burden of proof."
+        },
+        {
+          "target_case_name": "Mo Ying",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as authority for the presumption that beneficial interest follows legal interest and the burden of proof."
+        },
+        {
+          "target_case_name": "Primecredit",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as authority for the presumption that beneficial interest follows legal interest and the burden of proof."
+        },
+        {
+          "target_case_name": "Zief Incorporated v Tekchandani Ajai Mohan",
+          "target_neutral_citation": "[2021] 3 HKC 69",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this authority, noting that Recorder Eugene Fung SC similarly held on the relevant legal principles."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:36:36.350960+00:00",
+      "paragraph_count": 257,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "insolvency": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2026] HKCFI 867",
+      "case_name": "RE HUANG GUOZHEN",
+      "court_code": "Court of First Instance",
+      "decision_date": "2026-02-13T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Jonathan Wong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2026/867",
+      "topic_id": "identification_evidence",
+      "topic_label": "Identification Evidence",
+      "module_id": "evidence_procedure",
+      "subground_id": "identification_hearsay",
+      "principles": [
+        {
+          "principle_label": "Evasion of service requirements",
+          "paraphrase_en": "When applying for substituted service of a bankruptcy petition based on evasion of service, the applicant must provide specific grounds for the claim of evasion and detail the efforts made to locate the debtor.",
+          "paragraph_span": "[i]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Curing defective service",
+          "paraphrase_en": "Proper service of an amended petition can, in principle, cure defective service of an original petition, provided the amended service itself is valid.",
+          "paragraph_span": "[3.29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Summary determination of undue influence",
+          "paraphrase_en": "A ground for opposing a bankruptcy petition based on undue influence in the underlying debt is not suitable for summary determination and requires fuller examination.",
+          "paragraph_span": "[4.8]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:07:10.392020+00:00",
+      "paragraph_count": 206,
+      "domain_classification": {
+        "domain": "insolvency",
+        "confidence": 0.3,
+        "signals": [
+          "insolvency_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "insolvency": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    }
+  ]
+}

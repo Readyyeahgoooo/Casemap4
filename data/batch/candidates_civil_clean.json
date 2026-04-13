@@ -1,0 +1,1382 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T11:08:18.411804+00:00",
+    "source": "data/batch/candidates_civil_batch.json",
+    "domain": "civil",
+    "total_candidates": 21,
+    "matched": 18,
+    "cross_domain": 1,
+    "out_of_domain": 2
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2021] HKCFI 1035",
+      "case_name": "YEUNG WAH WAI v. LONG TEAM LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-04-19T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au-Yeung J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/1035",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "commercial",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "commencement_pleadings_service",
+          "topic_id": "writ_originating_summons",
+          "topic_label": "Writs and Originating Summonses",
+          "query": "writ originating summons"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:01:30.770942+00:00",
+      "paragraph_count": 82
+    },
+    {
+      "neutral_citation": "[2022] HKCFI 749",
+      "case_name": "RE YAU, SUNG KEUNG late of Unit A, Ground Floor, 34A Tseng Lam Shue Village, Sai Kung, New Territories, Married Man, deceased (“the Deceased”)",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-03-14T00:00:00+08:00",
+      "judges": [
+        "Before: Master Kent Yee in Chambers (open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/749",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Rectification of wills for mistake",
+          "paraphrase_en": "A court may rectify a will under the relevant ordinance if it fails to accurately carry out the testator's intentions due to a clerical error or a misunderstanding of the testator's instructions.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden to set aside rectification order",
+          "paraphrase_en": "A party seeking to set aside a rectification order must demonstrate substantive grounds for doing so; the court will not grant such an application based on unsubstantiated complaints.",
+          "paragraph_span": "[65]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "probate",
+        "confidence": 0.3,
+        "signals": [
+          "probate_keywords",
+          "generic_civil_keywords:1"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "probate": 0.3
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "commencement_pleadings_service",
+          "topic_id": "writ_originating_summons",
+          "topic_label": "Writs and Originating Summonses",
+          "query": "writ originating summons"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:01:41.741412+00:00",
+      "paragraph_count": 96
+    },
+    {
+      "neutral_citation": "[2022] HKCA 117",
+      "case_name": "SAIF PARTNERS II L P AND ANOTHER v. JOE ZHIXIONG ZHOU",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-01-20T00:00:00+08:00",
+      "judges": [
+        "Before : Hon Cheung, Chu and G Lam JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/117",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Submission to jurisdiction dispenses with service for contempt",
+          "paraphrase_en": "When a party has submitted to the jurisdiction of the court in the main action, personal service of subsequent contempt proceedings arising from that action is not required, even if the party is outside the jurisdiction.",
+          "paragraph_span": "[32]-[33]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Contempt as incidental to court's jurisdiction",
+          "paraphrase_en": "Once a court has established jurisdiction over a person in a claim, that jurisdiction extends to matters incidental to the claim, including enforcement proceedings such as contempt of court.",
+          "paragraph_span": "[33]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Discretion to dispense with service in contempt",
+          "paraphrase_en": "The court has a discretion to dispense with the requirement to serve an originating summons for contempt proceedings.",
+          "paragraph_span": "[37]",
+          "cited_statutes": [
+            "Order 52, rule 3(4) of the Rules of the High Court"
+          ]
+        },
+        {
+          "principle_label": "Contempt as last resort",
+          "paraphrase_en": "Contempt proceedings should only be invoked as a measure of last resort.",
+          "paragraph_span": "[37]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Clarity required for committal orders",
+          "paraphrase_en": "An order cannot be enforced by committal for contempt unless its terms are expressed with sufficient clarity.",
+          "paragraph_span": "[37]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Marketmaker Technology Ltd v CMC Group Plc",
+          "target_neutral_citation": "[2008] EWHC 1556 (QB)",
+          "relationship_type": "CITES",
+          "description": "The judgment references this English authority in its review of principles regarding service of contempt proceedings."
+        },
+        {
+          "target_case_name": "Liao Chen Toh v Loyal International Enterprises Co Ltd",
+          "target_neutral_citation": "[2020] HKCFI 2272",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the approach adopted by Deputy High Court Judge M K Liu in this case."
+        },
+        {
+          "target_case_name": "Crest Home Plc v Marks",
+          "target_neutral_citation": "[1987] AC 829",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that jurisdiction includes matters incidental to the claim, such as enforcement."
+        },
+        {
+          "target_case_name": "Deutsche Bank AG v Sebastian Hold",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this English authority in its discussion of principles related to service and jurisdiction in contempt proceedings."
+        },
+        {
+          "target_case_name": "Mansour v Mansour",
+          "target_neutral_citation": "[1989] 1 FLR 418",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this English Court of Appeal case regarding the court's discretion to dispense with service in contempt proceedings."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.4,
+        "signals": [
+          "civil_procedure_keywords",
+          "generic_civil_keywords:1"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.4
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:02:27.707438+00:00",
+      "paragraph_count": 275
+    },
+    {
+      "neutral_citation": "[2024] HKDC 111",
+      "case_name": "LI JIE v. HONG KONG AIRPORT SERVICES LTD",
+      "court_code": "District Court",
+      "decision_date": "2024-01-19T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge Andrew Li in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/111",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Good reason for writ renewal - innocent mistake",
+          "paraphrase_en": "A failure to properly serve a writ within the required time period, if it results from an innocent mistake, can constitute a 'good reason' justifying the court's discretion to renew the writ's validity.",
+          "paragraph_span": "[18]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Solicitor's neglect as good reason",
+          "paraphrase_en": "Neglect by a solicitor or their managing clerk, leading to a failure to serve a writ within time, can be a valid basis for a court to exercise its discretion to extend the writ's validity.",
+          "paragraph_span": "[18(1)]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Mistaken service after expiry as good reason",
+          "paraphrase_en": "A mistaken belief that a writ has been properly served, when in fact its validity had expired, can constitute a 'good reason' for renewal.",
+          "paragraph_span": "[18(2)]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Application after limitation period",
+          "paraphrase_en": "The principle that an innocent mistake constitutes a good reason for renewing a writ applies even where the relevant limitation period for the action has expired.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Proper service on company registered address",
+          "paraphrase_en": "Serving a writ on a limited company's registered office is a normal and acceptable form of service, and is not improper even if the company's solicitors have requested future correspondence be sent to them, unless those solicitors specifically state they have authority to accept service.",
+          "paragraph_span": "[33]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Amadeaus",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the approach in Amadeaus for determining what constitutes a 'good reason' for renewing a writ."
+        },
+        {
+          "target_case_name": "Holman v George Elliot and Company Limited",
+          "target_neutral_citation": "[1944] KB 591",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Holman that solicitor's neglect can justify the renewal of a writ."
+        },
+        {
+          "target_case_name": "Jones v Jones",
+          "target_neutral_citation": "[1970] 2 QB 576",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Jones v Jones regarding mistaken service after expiry as a good reason."
+        },
+        {
+          "target_case_name": "Tan Kah Eng v Tan Eng Khiam",
+          "target_neutral_citation": "HCA 9640/1999",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the holding from Tan Kah Eng that a mistaken belief about proper service can be a good reason."
+        },
+        {
+          "target_case_name": "Tan Kah Eng v Tan Eng Khiam (Court of Appeal)",
+          "target_neutral_citation": "[2012] 1 HKLRD 329",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the Court of Appeal's approval in Tan Kah Eng that the principles apply even after the limitation period expires."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.55,
+        "signals": [
+          "corporate_party_name",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:5"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.55,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:02:55.438856+00:00",
+      "paragraph_count": 86
+    },
+    {
+      "neutral_citation": "[2024] HKDC 147",
+      "case_name": "SHINE ARCHIT. DESIGN LTD v. YEE WAI FONG AND OTHERS",
+      "court_code": "District Court",
+      "decision_date": "2024-01-24T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Teresa Wu in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/147",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Good reason for non-service",
+          "paraphrase_en": "When determining whether a good reason has been shown for failing to serve a writ within the required time, it is relevant to consider if the non-service resulted from the plaintiff's deliberate choice. If it was a choice, there must be a good reason justifying that deliberate non-compliance with the time limit.",
+          "paragraph_span": "[18]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evidence considered on extension application",
+          "paraphrase_en": "On an application to set aside an ex parte extension of a writ's validity, the court may consider not only the evidence presented at the time of the extension application but also evidence that subsequently comes to light.",
+          "paragraph_span": "[31]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Misapplication of post-event evidence",
+          "paraphrase_en": "It is an error of law to use evidence of events occurring after the date of an application to extend a writ's validity to reassess and nullify a 'good reason' that was prima facie established at the time of the application. This misapplies the principle allowing consideration of subsequent evidence.",
+          "paragraph_span": "[31]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Ganatra",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Ganatra that deliberate non-service requires a good reason for the choice."
+        },
+        {
+          "target_case_name": "China Medical Technologies Inc (in Liq) v Bank of China (Hong Kong) Ltd",
+          "target_neutral_citation": "(2020) 23 HKCFAR 296",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Fok PJ's holding in China Medical Technologies regarding the consideration of evidence on applications concerning writ extensions."
+        },
+        {
+          "target_case_name": "National Commercial Bank v Haque",
+          "target_neutral_citation": "[1994] CLC 230",
+          "relationship_type": "CITES",
+          "description": "The judgment references the English Court of Appeal's decision in Haque as the authority for the principle permitting consideration of subsequent evidence."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.5,
+        "signals": [
+          "corporate_party_name",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:3"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.5,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:03:18.153487+00:00",
+      "paragraph_count": 101
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2422",
+      "case_name": "GOLDTEAM GROUP LTD v. QIN HUI",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-18T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Linda Chan J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2422",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Service validity requires defendant's presence",
+          "paraphrase_en": "For service of a writ under Order 10 to be valid, the defendant must be within the jurisdiction at the time the writ is served, not merely at the time it is placed in a letterbox.",
+          "paragraph_span": "[38]-[41]",
+          "cited_statutes": [
+            "Order 10 rule 1(2)"
+          ]
+        },
+        {
+          "principle_label": "Proof of subsequent knowledge and presence",
+          "paraphrase_en": "A plaintiff may prove valid service by showing that the defendant subsequently came within the jurisdiction and gained knowledge of the writ, thereby curing an initial irregularity.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Invalidity of service without required affidavit",
+          "paraphrase_en": "Service of a writ is invalid if the plaintiff fails to file the affidavit required by Order 10 rule 1(3)(b)(i) when the writ could not have come to the defendant's knowledge within seven days.",
+          "paragraph_span": "[41]",
+          "cited_statutes": [
+            "Order 10 rule 1(3)(b)(i)"
+          ]
+        },
+        {
+          "principle_label": "Rejection of actual knowledge alone",
+          "paraphrase_en": "A defendant's actual knowledge of proceedings alone does not validate service that was irregular because the defendant was outside the jurisdiction at the time of service.",
+          "paragraph_span": "[42]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consideration of 'unless the contrary is shown'",
+          "paraphrase_en": "When assessing service validity, the court must consider the phrase 'unless the contrary is shown' in Order 10 rule 1(3), which relates to the date of service, not the defendant's location.",
+          "paragraph_span": "[45]",
+          "cited_statutes": [
+            "Order 10 rule 1(3)"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Barclays Bank of Swaziland Ltd v Hahn",
+          "target_neutral_citation": "[1989] 1 WLR 506",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment applies and follows the ratio from this House of Lords case that the defendant must be within the jurisdiction at the time of service."
+        },
+        {
+          "target_case_name": "Deng Minghui v Chau Shuk Ling",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the Court of Appeal's holding from this case regarding the invalidity of service when the defendant is outside the jurisdiction."
+        },
+        {
+          "target_case_name": "Luen Tat Watch Band Manufacturer Ltd v Li Shu Chung",
+          "target_neutral_citation": "[2020] HKCFI 984",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as an example where the court applied the ratio from Deng Minghui to find service irregular."
+        },
+        {
+          "target_case_name": "Emperor Prestige Credit Limited v King Pak Fu",
+          "target_neutral_citation": "[2021] HKCFI 403",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case where service was held invalid because the defendant was not in Hong Kong when the writ was placed in the letterbox."
+        },
+        {
+          "target_case_name": "Penrose Industries Ltd v Tam Yan Lung",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment notes this case was held to be wrongly decided for allowing actual knowledge alone to validate irregular service."
+        },
+        {
+          "target_case_name": "Wing Lung Bank Ltd v Ho Man Iam",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case which applied the principle from Barclays Bank regarding the defendant's presence at the time of service."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.55,
+        "signals": [
+          "corporate_party_name",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:10"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.55,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:03:51.892286+00:00",
+      "paragraph_count": 194
+    },
+    {
+      "neutral_citation": "[2026] HKDC 362",
+      "case_name": "BESTSHOP TECHNOLOGY (HONG KONG) COMPANY LTD v. LI QINSHUN AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2026-03-04T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Tony Ko in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2026/362",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Knowledge of proceedings validates service",
+          "paraphrase_en": "A defendant who has actual knowledge of legal proceedings cannot later challenge the validity or effectiveness of the service of those proceedings, regardless of where they were physically located at the time of service.",
+          "paragraph_span": "[42]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Deng Minghui v Chau Shuk Ling",
+          "target_neutral_citation": "[2007] 1 HKLRD 905",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment cites and relies upon the Court of Appeal's holding in this case regarding the effect of a defendant's actual knowledge of proceedings."
+        },
+        {
+          "target_case_name": "Penrose Industries Ltd v Tam Yan Lung",
+          "target_neutral_citation": "HCA 5783/2000, 10 May 2001",
+          "relationship_type": "OVERRULES",
+          "description": "The present judgment, through the cited authority, states that the earlier decision by Yeung J on the effect of a defendant's knowledge was wrongly decided."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "commercial",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name",
+          "generic_civil_keywords:1"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:04:12.358636+00:00",
+      "paragraph_count": 51
+    },
+    {
+      "neutral_citation": "[2021] HKDC 524",
+      "case_name": "TSO YUET KUK v. SURE FAMOUS LTD AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2021-05-14T00:00:00+08:00",
+      "judges": [
+        "Before: Master Matthew Leung in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/524",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Judicial decision-making basis",
+          "paraphrase_en": "Courts must decide cases based on legal principles rather than sympathy alone, determining whether a reason is valid through the administration of justice.",
+          "paragraph_span": "[13]-[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Writ validity significance",
+          "paraphrase_en": "The validity of a writ is not merely a procedural formality but involves substantive legal considerations where finality in litigation should be protected.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Constructive knowledge burden",
+          "paraphrase_en": "A party cannot be fixed with constructive knowledge of a Gazette Notice regarding company deregistration without legal authority establishing such a duty.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Costs following the event",
+          "paraphrase_en": "Costs should generally follow the event, meaning the unsuccessful party bears the costs of the successful party.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Chow Ching Man v Sun Wah Ornament Manufactory Ltd",
+          "target_neutral_citation": "[1996] 2 HKLR 338",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the principle established in Chow Ching Man that cases cannot be decided on sympathy alone but must be determined according to law."
+        },
+        {
+          "target_case_name": "Sealegend Holdings Ltd v China Taiping Insurance (HK) Co Ltd",
+          "target_neutral_citation": "[2013] 4 HKLRD 508",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Sealegend Holdings that writ validity involves substantive considerations and finality in litigation should be protected."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.4,
+        "signals": [
+          "corporate_party_name",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:1"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.4,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:04:31.868424+00:00",
+      "paragraph_count": 122
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 403",
+      "case_name": "EMPEROR PRESTIGE CREDIT LTD v. KING PAK FU",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-02-19T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au-Yeung J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/403",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Overruling of Penrose principle on service knowledge",
+          "paraphrase_en": "The principle established in Penrose Industries Ltd v Tam Yan Lung—that a defendant who acquires actual knowledge of proceedings cannot challenge the regularity or effectiveness of service—has been overruled by the Court of Appeal.",
+          "paragraph_span": "[2]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Service validity under Order 10 rule 1(2)",
+          "paraphrase_en": "For service to be valid under Order 10, rule 1(2) of the Rules of the High Court, the plaintiff must demonstrate that the defendant was residing at the address at the time of service, and mere temporary absence does not invalidate service if the defendant ordinarily resides there.",
+          "paragraph_span": "[25]",
+          "cited_statutes": [
+            "Order 10, rule 1(2)"
+          ]
+        },
+        {
+          "principle_label": "Distinction between service in Hong Kong and outside jurisdiction",
+          "paraphrase_en": "The requirements for substituted service differ depending on whether the defendant is believed to be residing in Hong Kong or outside the jurisdiction; prior unsuccessful attempts at service under Order 11, rule 5A are necessary only when the defendant is outside Hong Kong.",
+          "paragraph_span": "[35]",
+          "cited_statutes": [
+            "Order 11, rule 5A"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Penrose Industries Ltd v Tam Yan Lung",
+          "target_neutral_citation": "[2001] HKEC 586",
+          "relationship_type": "OVERRULES",
+          "description": "The present judgment notes that the Court of Appeal has overruled the principle from Penrose that actual knowledge of proceedings validates irregular service."
+        },
+        {
+          "target_case_name": "Deutsche Bank AG, HK Branch v Zhang Hong Li",
+          "target_neutral_citation": "[2016] 3 HKLRD 303",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Deutsche Bank AG for principles regarding substituted service and the distinction between defendants residing in Hong Kong and those outside the jurisdiction."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name",
+          "generic_civil_keywords:6"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "commencement_pleadings_service",
+          "topic_id": "writ_originating_summons",
+          "topic_label": "Writs and Originating Summonses",
+          "query": "writ originating summons"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:04:53.726259+00:00",
+      "paragraph_count": 78
+    },
+    {
+      "neutral_citation": "[2021] HKDC 45",
+      "case_name": "PASSION MARKETING CO LTD v. FU KA CHUN MARCO",
+      "court_code": "District Court",
+      "decision_date": "2021-01-25T00:00:00+08:00",
+      "judges": [
+        "Before: HH Judge Ko in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/45",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Eshelby rule on amendments",
+          "paraphrase_en": "The Eshelby rule, derived from English law, addresses the amendment of pleadings to add claims for sums that became due after the writ was issued, where the original claim was for an instalment due before the writ.",
+          "paragraph_span": "[22]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Hong Kong approach to amendments curing defects",
+          "paraphrase_en": "Hong Kong law, following Wing Siu, does not permit an amendment to cure a defective claim by adding a necessary factual averment that could not have been pleaded as at the date of the writ.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Strike-out standard for fact-sensitive claims",
+          "paraphrase_en": "The court's summary power to strike out a pleading should only be exercised in plain and obvious cases; where the legal viability of a cause of action is sensitive to the facts, a strike-out order is inappropriate.",
+          "paragraph_span": "[40]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Eshelby v Federated European Bank Ltd",
+          "target_neutral_citation": "[1932] 1 KB 254",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as the origin of the 'Eshelby rule' concerning amendments to pleadings."
+        },
+        {
+          "target_case_name": "Re Hin-Pro International Logistics Ltd",
+          "target_neutral_citation": "[2016] 5 HKLRD 282",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Court of Appeal case for its commentary on the application of the Eshelby rule in winding-up petitions."
+        },
+        {
+          "target_case_name": "Wing Siu",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment states that Hong Kong law has followed the approach in Wing Siu regarding the impermissibility of certain amendments."
+        },
+        {
+          "target_case_name": "Lead Mile Ltd v Sino Peak Finance Ltd",
+          "target_neutral_citation": "[2004] 4 HKC 646",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that an amendment cannot cure a defect by adding a factual averment unavailable at the writ's date."
+        },
+        {
+          "target_case_name": "Telecommunications & Technology Asia (BVI) Ltd v Outblaze Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this unreported case regarding the limits on amendments to cure defective claims."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.55,
+        "signals": [
+          "corporate_party_name",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:4"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.55,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:05:19.131100+00:00",
+      "paragraph_count": 136
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2351",
+      "case_name": "TSE SHIU HOI v. SUN BO",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-16T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Winnie Tsui in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2351",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Test for service by registered post",
+          "paraphrase_en": "Service of a writ by registered post is effective only when the defendant has actual notice of the proceedings, not merely upon delivery to the defendant's last known address.",
+          "paragraph_span": "[35]-[44]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Binding authority and precedent",
+          "paraphrase_en": "A court is not bound to follow a prior appellate decision if it is inconsistent with a substantial line of subsequent first-instance decisions and has been weakened by inconsistency with higher authority.",
+          "paragraph_span": "[35]-[43]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Honour Finance Co Ltd v Chiu Mei Mei",
+          "target_neutral_citation": "[1989] 2 HKLRD 146",
+          "relationship_type": "DOUBTS",
+          "description": "The present judgment declines to follow Honour Finance, finding its authority weakened by inconsistency with other authorities."
+        },
+        {
+          "target_case_name": "Sinokawa Investment (Holdings) Ltd v Li Chun",
+          "target_neutral_citation": "[2006] 3 HKLRD 441",
+          "relationship_type": "APPLIES",
+          "description": "The judgment cites this case as part of the line of authority supporting the 'actual notice' test for service."
+        },
+        {
+          "target_case_name": "Cosec Nominees Ltd v Lau Hon Ming",
+          "target_neutral_citation": "[2001] 2 HKLRD 581",
+          "relationship_type": "CITES",
+          "description": "The judgment references this case as supporting the 'actual notice' test for service of a writ."
+        },
+        {
+          "target_case_name": "Phillip Securities (HK) Ltd v Lam Chi Bin Stanley",
+          "target_neutral_citation": "[2002] 1 HKC 432",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the analysis and principle from this case to support the 'actual notice' test."
+        },
+        {
+          "target_case_name": "Barclays Bank of Swaziland v Hahn",
+          "target_neutral_citation": "[1989] 1 WLR 506",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this House of Lords decision to highlight the inconsistency weakening the authority of Honour Finance."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.45,
+        "signals": [
+          "civil_procedure_keywords",
+          "generic_civil_keywords:2"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.45
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:05:41.081902+00:00",
+      "paragraph_count": 81
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2362",
+      "case_name": "TAIPING SECURITIES (HK) CO LTD v. MYSTERY IDEA LTD AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-13T00:00:00+08:00",
+      "judges": [
+        "Before: Hon K Yeung J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2362",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Retrospective leave to serve out of jurisdiction",
+          "paraphrase_en": "The court possesses the power to grant retrospective permission for service of legal documents outside the jurisdiction.",
+          "paragraph_span": "[37]",
+          "cited_statutes": [
+            "Order 2 rule 1"
+          ]
+        },
+        {
+          "principle_label": "Test for retrospective leave to serve out",
+          "paraphrase_en": "The correct legal test for exercising the discretion to grant retrospective leave is whether there is a 'good reason' or 'good cause', not the stricter test of 'exceptional circumstances'.",
+          "paragraph_span": "[37]-[42]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "China Medical Technologies Inc. v Paul, Weiss, Rifkind, Wharton & Garrison LLP",
+          "target_neutral_citation": "[2019] HKCFI 2631",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the cited case's observation that the power to grant retrospective leave is found in Order 2 rule 1."
+        },
+        {
+          "target_case_name": "Leal v Dunlop Bio‑Processes International Ltd",
+          "target_neutral_citation": "[1984] 1 WLR 874",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment notes that the 'exceptional circumstances' test from this case has been held to be incorrect by the House of Lords."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "commercial",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:06:14.733268+00:00",
+      "paragraph_count": 123
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2158",
+      "case_name": "YUEN SAU PING MERITA v. The personal representative of TSANG WAI YEE BELINDA, deceased AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-03T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Ng J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2158",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Fresh writ issuance after extension refusal",
+          "paraphrase_en": "A plaintiff may issue a new writ against the same defendant after being refused an extension of validity for the original writ, provided no limitation period issues arise.",
+          "paragraph_span": "[14]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.55,
+        "signals": [
+          "civil_procedure_keywords",
+          "generic_civil_keywords:5"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.55
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:06:23.311201+00:00",
+      "paragraph_count": 42
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 2473",
+      "case_name": "SMART EDGE LTD (RECEIVERS AND MANAGERS APPOINTED) v. HG PROPERTY INVESTMENT HK LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-10-04T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Cheng J in Chambers (by paper disposal)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/2473",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Lis pendens exclusion for share sale agreements",
+          "paraphrase_en": "Legal proceedings concerning an agreement for the sale and purchase of company shares do not constitute a lis pendens under the Land Registration Ordinance, even if the company owns land, because such proceedings do not directly relate to land or an interest in land.",
+          "paragraph_span": "[4]",
+          "cited_statutes": [
+            "Cap. 219 s.1A"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Smart Edge Ltd v. HG Property Investment HK Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows and applies the legal position established in the earlier judgment in the same case at specified paragraphs."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "commercial",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:06:34.947470+00:00",
+      "paragraph_count": 40
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 1059",
+      "case_name": "SMART EDGE LTD v. HG PROPERTY INVESTMENT HK LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-04-27T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Cheng J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/1059",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Registrable pending land action requirement",
+          "paraphrase_en": "For an action to be registrable as a pending land action (lis pendens), it must claim a proprietary right in the land itself, not merely seek to restrain the owner from disposing of the property.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Lien over shares vs. proprietary interest in land",
+          "paraphrase_en": "A claim to a lien over the shares of a company does not constitute a claim to a proprietary interest in the company's land.",
+          "paragraph_span": "[51]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Injunction does not create proprietary interest",
+          "paraphrase_en": "An injunction sought to enforce a lien (which is not itself a proprietary interest in land) does not transform that lien into a proprietary interest in land for the purposes of constituting a lis pendens.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Fung Kan Wai & anor v Leung Shui Fat & ors",
+          "target_neutral_citation": "[1999] 4 HKC 70",
+          "relationship_type": "CITES",
+          "description": "The judgment references this case for the principle defining a registrable pending land action and discusses its application."
+        },
+        {
+          "target_case_name": "Calgary and Edmonton Land Co Ltd v Dobinson",
+          "target_neutral_citation": "[1974] 1 Ch 102",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this English authority, as referenced in Fung Kan Wai, for the classic definition of a registrable pending land action."
+        },
+        {
+          "target_case_name": "LY Group Development Ltd v East Canton Ltd",
+          "target_neutral_citation": "[2015] 4 HKLRD 84",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the holding from this case that a lien over company shares is not a proprietary interest in the company's land."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.4,
+        "signals": [
+          "corporate_party_name",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:1"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.4,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:06:55.959166+00:00",
+      "paragraph_count": 109
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 3234",
+      "case_name": "TZG PARTNERS LTD v. PENG GANG AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-10-29T00:00:00+08:00",
+      "judges": [
+        "Before: Hon B Chu J in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/3234",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Forum non conveniens test",
+          "paraphrase_en": "The court will not grant leave to serve proceedings out of jurisdiction unless the plaintiff satisfies it that Hong Kong is clearly and distinctly the more appropriate forum than the alternative, being the forum with the most real and substantial connection to the action.",
+          "paragraph_span": "[86]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Good arguable case requirement for service out",
+          "paraphrase_en": "A plaintiff seeking leave to serve proceedings out of jurisdiction must demonstrate a good arguable case on the merits of its claim.",
+          "paragraph_span": "[90]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Effect of foreign judgment (res judicata)",
+          "paraphrase_en": "A foreign judgment on the merits can found a defence of res judicata in Hong Kong proceedings, precluding re-litigation of the same issues.",
+          "paragraph_span": "[91]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Submission to jurisdiction",
+          "paraphrase_en": "Applying to strike out proceedings for lack of jurisdiction does not, in itself, constitute a submission to the jurisdiction of the court.",
+          "paragraph_span": "[120]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Abuse of process - re-litigation",
+          "paraphrase_en": "Instituting proceedings in Hong Kong on matters that have already been litigated and decided against the plaintiff in a foreign court can constitute an abuse of process and cause hardship to the defendants.",
+          "paragraph_span": "[125]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Rambas Marketing Co LLC v Chow Kam Fai David",
+          "target_neutral_citation": "[2001] 3 HKC 250",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Rambas that 'appropriate forum' means the forum with the most real and substantial connection to the action."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "probate",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "probate_keywords",
+          "generic_civil_keywords:2"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "commercial": 0.15,
+          "company": 0.1,
+          "probate": 0.3
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:07:17.497756+00:00",
+      "paragraph_count": 211
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 1821",
+      "case_name": "LIQUIDITY TECHNOLOGIES LTD AND ANOTHER v. MARK DAVID LAMB AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-09-30T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Kent Yee in Chambers (paper disposal)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/1821",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Valid service of writ requires presence in jurisdiction",
+          "paraphrase_en": "For service of a writ to be valid under Hong Kong rules, the defendant must be physically within the jurisdiction at the time of service. Service attempted when the defendant is outside the jurisdiction is invalid.",
+          "paragraph_span": "[63]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Forum non conveniens first hurdle - natural forum",
+          "paraphrase_en": "In a forum non conveniens application, the defendant must first establish that there is another available forum which is clearly more appropriate for the trial. If this first hurdle is not overcome, the court need not consider the comparative appropriateness of alternative forums.",
+          "paragraph_span": "[79]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Joinder of claims for interests of justice",
+          "paraphrase_en": "Where claims against multiple defendants are factually and legally inseparable, with the liability of some defendants dependent on the establishment of claims against a primary defendant, it is in the interests of justice for all claims to be determined together in a single proceeding.",
+          "paragraph_span": "[94]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Video conferencing for imprisoned witnesses",
+          "paraphrase_en": "When a witness is imprisoned overseas and may be extradited, video conferencing facilities may be the only practical method to secure their live testimony for trial, regardless of where the trial is held.",
+          "paragraph_span": "[77]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.55,
+        "signals": [
+          "corporate_party_name",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:5"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.55,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:07:35.240392+00:00",
+      "paragraph_count": 142
+    },
+    {
+      "neutral_citation": "[2021] HKDC 304",
+      "case_name": "CHEUNG CHUNG YEE v. 王慶培 AND OTHERS",
+      "court_code": "District Court",
+      "decision_date": "2021-03-31T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Ann Lui in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/304",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Adverse possession relation-back principle",
+          "paraphrase_en": "Section 35(1)(b) of the Limitation Ordinance contains a relation-back principle that can produce unfavorable rulings for claimants in adverse possession cases.",
+          "paragraph_span": "[28]",
+          "cited_statutes": [
+            "Cap. 347 s.35(1)(b)"
+          ]
+        },
+        {
+          "principle_label": "Security for costs from court deposit",
+          "paraphrase_en": "Money paid into court as security for an application may be ordered to be held as security for the opposing party's costs of that application, unless the parties agree otherwise.",
+          "paragraph_span": "[50]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.45,
+        "signals": [
+          "civil_procedure_keywords",
+          "land_keywords",
+          "generic_civil_keywords:2"
+        ],
+        "secondary_domains": [
+          "land"
+        ],
+        "scores": {
+          "civil": 0.45,
+          "land": 0.3
+        },
+        "method": "rules"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:08:04.205930+00:00",
+      "paragraph_count": 108
+    }
+  ]
+}

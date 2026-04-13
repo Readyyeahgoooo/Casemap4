@@ -1,0 +1,206 @@
+{
+  "missing_topics": [
+    {
+      "id": "perverting_course_of_justice",
+      "label_en": "Perverting the Course of Justice",
+      "label_zh": "妨礙司法公正",
+      "parent_module": "offences_against_person",
+      "parent_subground": "NEW:intimidation_threats",
+      "search_queries": [
+        "perverting the course of justice",
+        "pervert justice",
+        "obstructing justice"
+      ],
+      "rationale": "A significant common law offence in Hong Kong, frequently prosecuted. It covers a wide range of acts intended to interfere with judicial or investigative processes, distinct from intimidation or blackmail. It should be under a broader 'Offences Against Justice' subground."
+    },
+    {
+      "id": "accessory_after_fact",
+      "label_en": "Accessory After the Fact",
+      "label_zh": "事後從犯",
+      "parent_module": "general_principles",
+      "parent_subground": "participation_inchoate",
+      "search_queries": [
+        "accessory after the fact",
+        "harbouring offender",
+        "assisting offender"
+      ],
+      "rationale": "A distinct form of secondary liability under Hong Kong law (Crimes Ordinance, Cap. 200, s. 90), separate from aiding and abetting (principal or secondary liability). It involves assisting a principal offender after the commission of the crime with knowledge of that crime."
+    },
+    {
+      "id": "wounding_with_intent",
+      "label_en": "Wounding or Causing Grievous Bodily Harm with Intent",
+      "label_zh": "意圖造成身體嚴重傷害而傷人",
+      "parent_module": "offences_against_person",
+      "parent_subground": "non_fatal_violence",
+      "search_queries": [
+        "wounding with intent",
+        "grievous bodily harm with intent",
+        "s.17 Offences against the Person Ordinance"
+      ],
+      "rationale": "A major indictable offence under s.17 of the Offences against the Person Ordinance (Cap. 212), distinct from basic assault or unlawful wounding. It carries a much higher maximum penalty and requires proof of specific intent to cause grievous bodily harm."
+    },
+    {
+      "id": "possession_of_dangerous_drugs",
+      "label_en": "Possession of Dangerous Drugs",
+      "label_zh": "管有危險藥物",
+      "parent_module": "public_order_regulatory",
+      "parent_subground": "dangerous_drugs",
+      "search_queries": [
+        "possession of a dangerous drug",
+        "trafficking versus possession",
+        "Dangerous Drugs Ordinance possession"
+      ],
+      "rationale": "A foundational and frequently charged offence under the Dangerous Drugs Ordinance (Cap. 134), separate from trafficking. It involves distinct legal principles regarding knowledge, control, and the 'container doctrine'. It is a critical sub-topic within drug offences."
+    },
+    {
+      "id": "riot_and_unlawful_assembly",
+      "label_en": "Riot and Unlawful Assembly",
+      "label_zh": "暴動及非法集結",
+      "parent_module": "public_order_regulatory",
+      "parent_subground": "public_order_weapons",
+      "search_queries": [
+        "riot",
+        "unlawful assembly",
+        "Public Order Ordinance Cap. 245"
+      ],
+      "rationale": "Core public order offences under the Public Order Ordinance (Cap. 245), with specific definitions and elements (e.g., common purpose, conduct likely to cause fear). These are distinct from general 'public order' and are highly relevant in the Hong Kong context."
+    },
+    {
+      "id": "perjury",
+      "label_en": "Perjury and False Statements on Oath",
+      "label_zh": "發假誓及作出虛假陳述",
+      "parent_module": "offences_against_person",
+      "parent_subground": "NEW:intimidation_threats",
+      "search_queries": [
+        "perjury",
+        "false statement on oath",
+        "Crimes Ordinance perjury"
+      ],
+      "rationale": "An offence against the administration of justice, criminalising the making of false statements under oath. Governed by Part II of the Crimes Ordinance (Cap. 200). It is a key 'Offence Against Justice' and should be grouped with perverting justice."
+    },
+    {
+      "id": "possession_of_offensive_weapon",
+      "label_en": "Possession of Offensive Weapon",
+      "label_zh": "管有攻擊性武器",
+      "parent_module": "public_order_regulatory",
+      "parent_subground": "public_order_weapons",
+      "search_queries": [
+        "possession of offensive weapon",
+        "offensive weapon in public place",
+        "Summary Offences Ordinance s.17"
+      ],
+      "rationale": "A common public order offence under s.17 of the Summary Offences Ordinance (Cap. 228) and other ordinances. Key legal issues include the definition of 'offensive weapon' (made, adapted, intended) and the place of possession (public/private)."
+    },
+    {
+      "id": "infanticide",
+      "label_en": "Infanticide",
+      "label_zh": "殺嬰罪",
+      "parent_module": "offences_against_person",
+      "parent_subground": "homicide",
+      "search_queries": [
+        "infanticide",
+        "Infanticide Ordinance",
+        "killing of newborn child"
+      ],
+      "rationale": "A specific statutory homicide offence under the Infanticide Ordinance (Cap. 212), applicable where a mother causes the death of her child under 12 months while her mind was disturbed due to childbirth or lactation. It is a partial defence/lesser offence to murder."
+    },
+    {
+      "id": "outraging_public_decency",
+      "label_en": "Outraging Public Decency",
+      "label_zh": "作出有違公德的行為",
+      "parent_module": "public_order_regulatory",
+      "parent_subground": "public_order_weapons",
+      "search_queries": [
+        "outraging public decency",
+        "act outraging public decency",
+        "common law outraging public decency"
+      ],
+      "rationale": "A common law offence preserved in Hong Kong, used for acts that corrupt public morals and are done in public. It covers a range of conduct not always captured by other public order or sexual offence statutes."
+    },
+    {
+      "id": "sentencing_drug_trafficking",
+      "label_en": "Sentencing for Drug Trafficking",
+      "label_zh": "販毒罪量刑",
+      "parent_module": "appeals_sentencing",
+      "parent_subground": "sentencing",
+      "search_queries": [
+        "sentencing drug trafficking",
+        "trafficking quantity",
+        "guideline sentence drug trafficking"
+      ],
+      "rationale": "Sentencing for drug trafficking under the Dangerous Drugs Ordinance is highly structured, based on statutory categories and quantities. It is a major and complex area of sentencing law with extensive case law, deserving its own sub-topic under Sentencing."
+    },
+    {
+      "id": "young_offenders_sentencing",
+      "label_en": "Sentencing of Young Offenders",
+      "label_zh": "青少年罪犯量刑",
+      "parent_module": "appeals_sentencing",
+      "parent_subground": "sentencing",
+      "search_queries": [
+        "sentencing young offender",
+        "rehabilitation young offender",
+        "juvenile sentencing"
+      ],
+      "rationale": "Sentencing principles for offenders under 21 (and particularly under 18) are distinct, with a strong emphasis on rehabilitation. This is governed by specific ordinances and case law, making it a crucial sub-topic within Sentencing Principles."
+    },
+    {
+      "id": "attempted_murder",
+      "label_en": "Attempted Murder",
+      "label_zh": "企圖謀殺",
+      "parent_module": "general_principles",
+      "parent_subground": "participation_inchoate",
+      "search_queries": [
+        "attempted murder",
+        "attempt murder",
+        "charge attempted murder"
+      ],
+      "rationale": "A specific and serious inchoate offence with its own body of case law, particularly regarding the mens rea required (specific intent to kill). It is more specific than the general 'Conspiracy and Attempt' topic and warrants separate identification."
+    }
+  ],
+  "split_suggestions": [
+    {
+      "existing_topic_id": "assault_wounding",
+      "suggested_splits": [
+        "Common Assault and Battery",
+        "Assault Occasioning Actual Bodily Harm (s.39)",
+        "Unlawful Wounding and Inflicting Grievous Bodily Harm (s.19)"
+      ],
+      "rationale": "The current topic combines several distinct offences under the Offences against the Person Ordinance with different elements and penalties: Common Assault (s.40), Assault Occasioning Actual Bodily Harm (s.39), and Unlawful Wounding/Inflicting GBH (s.19). Splitting them allows for precise analysis of their separate actus reus and mens rea requirements."
+    },
+    {
+      "existing_topic_id": "public_order",
+      "suggested_splits": [
+        "Affray",
+        "Fighting in Public Place",
+        "Possession of Unlawful Assembly Tools"
+      ],
+      "rationale": "'Public Order and Weapons' is too broad. Key statutory offences like Affray (Public Order Ordinance s.25) and Fighting in a Public Place (Summary Offences Ordinance s.25) have specific legal definitions. Possession of items for use in an unlawful assembly is another distinct offence. Splitting provides clarity."
+    },
+    {
+      "existing_topic_id": "sexual_offences",
+      "suggested_splits": [
+        "Sexual Assault (Indecent Assault)",
+        "Unlawful Sexual Intercourse with a Minor",
+        "Other Sexual Offences (e.g., gross indecency)"
+      ],
+      "rationale": "The current topic only mentions 'Rape and Consent'. Hong Kong law includes other major sexual offences like Indecent Assault (now Sexual Assault under revised laws) and Unlawful Sexual Intercourse with girls under 16/13 (Crimes Ordinance). These are distinct from rape in elements and sentencing."
+    },
+    {
+      "existing_topic_id": "fraud",
+      "suggested_splits": [
+        "Fraud by False Representation (Theft Ordinance s.16A)",
+        "Obtaining Services by Deception",
+        "Conspiracy to Defraud (Common Law)"
+      ],
+      "rationale": "'Fraud and Deception' encompasses several different offences. The statutory fraud offence under s.16A of the Theft Ordinance is central. Obtaining services by deception is a separate statutory crime. Conspiracy to defraud is a powerful and commonly charged common law offence with its own jurisprudence. A split is necessary for depth."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-04-13T11:03:09.326091+00:00",
+    "domain": "criminal",
+    "tree_path": "",
+    "topic_count": 60,
+    "case_count": 950,
+    "empty_topics_count": 18
+  }
+}

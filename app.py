@@ -12,9 +12,9 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 from casemap.graphrag import RerankedRetriever
-from casemap.hybrid_graph import DeterminatorPipeline, HybridGraphStore, KnowledgeGrowthWriter, _infer_legal_domain
+from casemap.hybrid_graph import DeterminatorPipeline, HybridGraphStore, KnowledgeGrowthWriter, _infer_legal_domain, analyse_case_facts
 from casemap.neo4j_store import Neo4jGraphStore
-from casemap.viewer import render_determinator_page, render_hybrid_hierarchy, render_knowledge_graph, render_relationship_map
+from casemap.viewer import render_case_analysis_page, render_determinator_page, render_hybrid_hierarchy, render_knowledge_graph, render_relationship_map
 
 MVP_ARTIFACT_DIR = BASE_DIR / "artifacts" / "contract_big"
 MVP_GRAPH_PATH = MVP_ARTIFACT_DIR / "graph.json"
@@ -185,6 +185,7 @@ def _not_found(start_response) -> list[bytes]:
             "/tree",
             "/hierarchy",
             "/internal",
+            "/analyse",
             "/mvp",
             "/relationships",
             "/health",
@@ -198,6 +199,7 @@ def _not_found(start_response) -> list[bytes]:
             "/api/relationship-manifest",
             "/api/sample-queries",
             "/api/query?q=offer+acceptance",
+            "/api/analyse-case",
         ],
     }
     return _json_response(start_response, payload, status="404 Not Found")
@@ -280,6 +282,15 @@ def app(environ, start_response):
                 status="503 Service Unavailable",
             )
         return _html_response(start_response, render_hybrid_hierarchy(hybrid_store.bundle, page_mode="internal"))
+
+    if path == "/analyse":
+        if hybrid_store is None:
+            return _html_response(
+                start_response,
+                "<h1>Casemap</h1><p>The case analysis tool is unavailable because the hybrid graph artifact is missing.</p>",
+                status="503 Service Unavailable",
+            )
+        return _html_response(start_response, render_case_analysis_page(hybrid_store.bundle))
 
     if path == "/monitor":
         if selected_monitor_path.exists():
@@ -431,6 +442,24 @@ def app(environ, start_response):
             graph_path, _, _ = _selected_hybrid_paths()
             writer.persist(result["new_knowledge"], hybrid_store, graph_path)
         return _json_response(start_response, result)
+
+    if path == "/api/analyse-case" and method == "POST":
+        if hybrid_store is None:
+            return _json_response(start_response, {"error": "Graph not available"}, status="503 Service Unavailable")
+        body = _read_json_body(environ)
+        facts = str(body.get("facts", body.get("question", ""))).strip()
+        mode = str(body.get("mode", "extractive")).strip() or "extractive"
+        model = str(body.get("model", "")).strip()
+        try:
+            top_k = max(1, min(int(body.get("top_k", 5)), 10))
+        except (TypeError, ValueError):
+            top_k = 5
+        if not facts:
+            return _json_response(start_response, {"error": "Missing facts"}, status="400 Bad Request")
+        return _json_response(
+            start_response,
+            analyse_case_facts(hybrid_store, facts, mode=mode, model=model, top_k=top_k),
+        )
 
     if path == "/api/query":
         if method == "POST" and hybrid_store is not None:

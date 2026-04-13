@@ -1,0 +1,18 @@
+[2026年 4月13日 星期一 19時01分06秒 HKT] Starting CIVIL crawl — domain=civil, max-per-topic=30
+[2026年 4月13日 星期一 19時02分01秒 HKT] Starting CIVIL crawl — domain=civil, max-per-topic=30
+[2026年 4月13日 星期一 19時08分17秒 HKT] CIVIL crawl done. Starting classify-domains...
+[filter] Classifying 21 candidates (target: civil)
+  ✓ 18 matched (civil)
+  ⚠ 1 cross-domain
+  ✗ 2 out-of-domain
+
+  Out-of-domain breakdown:
+    unknown: 2
+    Criminal Law: 1
+
+  → data/batch/candidates_civil_clean.json (18 cases)
+  → data/batch/candidates_cross_domain.json (1 cases)
+  → data/batch/candidates_unknown.json (2 cases)
+
+[done] Report: data/batch/domain_filter_report.json
+[2026年 4月13日 星期一 19時08分18秒 HKT] CIVIL pipeline finished.

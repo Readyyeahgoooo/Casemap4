@@ -1,0 +1,2460 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T07:17:48.078979+00:00",
+    "domain": "contract"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2022] HKCFI 3597",
+      "case_name": "YINGGAO RESOURCES LTD AND ANOTHER v. THE HONGKONG AND SHANGHAI BANKING CORPORATION LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-12-07T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Ng J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/3597",
+      "topic_id": "causation",
+      "topic_label": "Causation",
+      "module_id": "general_principles",
+      "subground_id": "actus_reus_causation",
+      "principles": [
+        {
+          "principle_label": "Remoteness test for concurrent duties",
+          "paraphrase_en": "When a claim in tort for breach of a duty of care arises from and is concurrent with a contractual relationship between the parties, the test for remoteness of damages is the contractual test, not the tortious test.",
+          "paragraph_span": "[44]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Contractual remoteness test (Hadley v Baxendale)",
+          "paraphrase_en": "The test for remoteness of damages in contract consists of two limbs: first, damages arising naturally from the breach; second, damages arising from special circumstances actually known to the contract-breaker at the time of contract.",
+          "paragraph_span": "[45]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assumption of responsibility as limiting principle",
+          "paraphrase_en": "The rule in Hadley v Baxendale is a rebuttable presumption about the parties' intentions, and the concept of assumption of responsibility provides a principled basis for determining whether a party is liable for particular losses, often serving as a limiting principle.",
+          "paragraph_span": "[46]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Causation determination pre-trial",
+          "paraphrase_en": "The issue of causation does not always need to be determined at trial; it can be decided on an interlocutory application (such as striking out or summary judgment) if the facts are sufficiently clear for the court to make a proper determination.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Wellesley Partners LLP v Withers LLP",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Wellesley that the contractual remoteness test governs concurrent tortious and contractual duties arising from the same relationship."
+        },
+        {
+          "target_case_name": "Hadley v Baxendale",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the two-limb test for contractual remoteness of damages established in Hadley v Baxendale."
+        },
+        {
+          "target_case_name": "Galoo Ltd v Bright Grahame Murray (a firm)",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Galoo as an example where causation was determined on a striking out application, not at trial."
+        },
+        {
+          "target_case_name": "Mulvenna v Royal Bank of Scotland Plc",
+          "target_neutral_citation": "[2003] EWCA Civ 1112",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Mulvenna as another example where causation was determined on an application for summary dismissal of a claim."
+        },
+        {
+          "target_case_name": "The Achilleas",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites The Achilleas as an authority where the concept of assumption of responsibility acted as a limiting principle for remoteness."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T20:54:25.571644+00:00",
+      "paragraph_count": 135,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "tort_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "tort",
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "contract": 0.3,
+          "tort": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCA 1130",
+      "case_name": "YINGGAO RESOURCES LTD AND ANOTHER v. THE HONGKONG AND SHANGHAI BANKING CORPORATION LTD",
+      "court_code": "Court of Appeal",
+      "decision_date": "2024-12-06T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Poon CJHC and Hon Barma JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2024/1130",
+      "topic_id": "causation",
+      "topic_label": "Causation",
+      "module_id": "general_principles",
+      "subground_id": "actus_reus_causation",
+      "principles": [
+        {
+          "principle_label": "Remoteness of damage - Hadley v Baxendale application",
+          "paraphrase_en": "For damages to be recoverable for breach of contract, they must arise naturally from the breach (first limb of Hadley v Baxendale) or be within the parties' contemplation at the time of contracting based on special knowledge (second limb). The crucial question is whether the loss was within the defendant's contemplation at the time of contracting based on available information.",
+          "paragraph_span": "[20]-[22], [41]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assumption of responsibility for loss",
+          "paraphrase_en": "A defendant cannot be held to have assumed responsibility for a plaintiff's losses arising from special circumstances or agreements if there is no plea or evidence that the defendant had knowledge of those special circumstances or agreements.",
+          "paragraph_span": "[22]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Objective of contractual damages",
+          "paraphrase_en": "The objective of an award of damages for breach of contract is to place the innocent party, so far as money can achieve, in the same position as if the contract had been performed.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Extension of time for appeal - prejudice",
+          "paraphrase_en": "While prejudice to a would-be respondent is a ground for refusing an extension of time to appeal, the absence of such prejudice is not, by itself, a ground for granting an extension.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Extension of time for appeal - solicitor's error",
+          "paraphrase_en": "A solicitor's conduct in forming a wrong view on the applicable rule for the time for appeal may be inexcusable, particularly if no explanation is provided for how that wrong view was formed.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Hadley & Another v Baxendale & Others",
+          "target_neutral_citation": "(1854) 9 Ex 341, 156 ER 145",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the two-limb test from Hadley v Baxendale to determine whether the claimed damages for breach of contract were too remote."
+        },
+        {
+          "target_case_name": "Richly Bright International Ltd v De Monsa Investments Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the Court of Final Appeal's explanation that both limbs of Hadley v Baxendale express a single principle of liability for contemplated damages."
+        },
+        {
+          "target_case_name": "Secretary for Justice v Hong Kong & Yaumati Ferry Co Ltd & ANOR",
+          "target_neutral_citation": "[2001] 1 HKC 125",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case regarding when a solicitor's error in calculating the appeal time limit is inexcusable."
+        },
+        {
+          "target_case_name": "Galoo Ltd and Others v Bright Grahame Murray (a firm) and Another",
+          "target_neutral_citation": "[1994] 1 WLR 1360 (CA)",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the proposition that causation does not always need to be determined at trial if facts are sufficiently clear."
+        },
+        {
+          "target_case_name": "Mulvenna v Royal Bank of Scotland Plc",
+          "target_neutral_citation": "[2003] EWCA Civ 1112",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case alongside Galoo regarding when causation can be determined without a full trial."
+        },
+        {
+          "target_case_name": "National Australia Bank Ltd v Nemur Varity Pty Ltd",
+          "target_neutral_citation": "[2002] VSCA 18",
+          "relationship_type": "CITES",
+          "description": "The judgment notes this Australian case was cited by the appellant to argue that the first limb of Hadley v Baxendale does not preclude recovery of damages from long-term transactions."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T20:57:47.411959+00:00",
+      "paragraph_count": 125,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "criminal_keywords:1",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "criminal": 0.06,
+          "civil": 0.2,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKDC 684",
+      "case_name": "CHING KWONG FAT v. FUNG DIN CHUNG RICKIE AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2021-06-07T00:00:00+08:00",
+      "judges": [
+        "Coram: His Honour Judge H. Au-Yeung in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/684",
+      "topic_id": "causation",
+      "topic_label": "Causation",
+      "module_id": "general_principles",
+      "subground_id": "actus_reus_causation",
+      "principles": [
+        {
+          "principle_label": "Burden of proof for contributory negligence",
+          "paraphrase_en": "The defendant bears the burden of proving that the plaintiff was contributorily negligent; the court must not be satisfied that the plaintiff failed to take reasonable care for their own safety.",
+          "paragraph_span": "[28]-[51]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of damages for PSLA",
+          "paraphrase_en": "When assessing damages for pain, suffering, and loss of amenities (PSLA), the court should compare the nature and severity of the plaintiff's injuries with those in comparable authorities to determine an appropriate award.",
+          "paragraph_span": "[61]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Treatment of pre-existing conditions in damages",
+          "paraphrase_en": "Medical evidence establishing a pre-existing degenerative condition is relevant to the assessment of damages, particularly when such a condition is identified through diagnostic imaging and not disputed by opposing medical experts.",
+          "paragraph_span": "[64]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The court compares the plaintiff's injuries to those in authorities cited by both counsel to determine the appropriate level of damages for PSLA."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T20:58:29.807013+00:00",
+      "paragraph_count": 169,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "tort_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "tort",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "contract": 0.3,
+          "tort": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 256",
+      "case_name": "YEUNG LAI PING v. SECRETARY FOR JUSTICE",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-03-08T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Cheung JA and Au JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/256",
+      "topic_id": "causation",
+      "topic_label": "Causation",
+      "module_id": "general_principles",
+      "subground_id": "actus_reus_causation",
+      "principles": [
+        {
+          "principle_label": "Employer's duty of care standard",
+          "paraphrase_en": "An employer's duty of care requires the conduct of a reasonable and prudent employer who takes positive thought for worker safety based on what they know or ought to know. The employer must keep reasonably abreast of developing knowledge and apply it, and is held to a higher standard if they possess greater than average knowledge of risks.",
+          "paragraph_span": "[para 86]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Causation as judicial finding",
+          "paraphrase_en": "The establishment of legal causation is ultimately a matter for the trial judge to determine based on the evidence, not a matter for medical experts to decide. The judge is entitled to draw reasonable and logical inferences from expert and factual evidence to find whether a breach of duty caused the injury.",
+          "paragraph_span": "[para 68]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Indivisible injury and apportionment",
+          "paraphrase_en": "Where an injury is found to be truly indivisible, meaning there is no rational basis for an objective apportionment of causative responsibility, the court should not apportion causation for the purpose of quantifying damages. This differs from cases where an injury worsens over time due to exposures for which the defendant is only partially responsible.",
+          "paragraph_span": "[para 90]-[91]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Pleading of material facts",
+          "paraphrase_en": "For a claim to proceed, the Amended Statement of Claim must plead the material facts upon which liability is founded, such that the defendant is made aware of the factual allegations. The specific legal basis of liability (e.g., alternative grounds) is less critical than the pleading of the underlying material facts.",
+          "paragraph_span": "[para 45]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Unpleaded contributory negligence on appeal",
+          "paraphrase_en": "It is generally unfair and contrary to principle to allow a defendant to raise an unpleaded case of contributory negligence on appeal, especially when the allegations are fact-sensitive and the appellate court does not have all relevant facts before it.",
+          "paragraph_span": "[para 100]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Ocean Tramping Co Ltd v Lee Kin-kai",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that causation is a matter for the judge, not for medical experts."
+        },
+        {
+          "target_case_name": "BAE Systems (Operations) Ltd v Konczak",
+          "target_neutral_citation": "[2018] ICR 1",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the test from this case for determining whether an injury is single and indivisible, based on the existence of a rational basis for apportionment."
+        },
+        {
+          "target_case_name": "Flywin Co Ltd v Strong & Associates Ltd",
+          "target_neutral_citation": "(2002) 5 HKCFAR 356",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case to reject the raising of an unpleaded defence of contributory negligence on appeal."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T20:59:42.783611+00:00",
+      "paragraph_count": 304,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "tort_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "tort"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "contract": 0.3,
+          "tort": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 3253",
+      "case_name": "YOICHI KUGA v. SARONIC HOLDINGS LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-11-15T00:00:00+08:00",
+      "judges": [
+        "Before: Master Elizabeth Cheung in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/3253",
+      "topic_id": "causation",
+      "topic_label": "Causation",
+      "module_id": "general_principles",
+      "subground_id": "actus_reus_causation",
+      "principles": [
+        {
+          "principle_label": "Remoteness in undertaking enforcement",
+          "paraphrase_en": "When enforcing a cross-undertaking in damages, the normal principles of remoteness apply. The loss must be of a type that was reasonably foreseeable by the party giving the undertaking at the time the order was made, though the specific extent need not be foreseen unless special knowledge existed.",
+          "paragraph_span": "[15]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Scope of leave to enforce undertaking",
+          "paraphrase_en": "A court's decision to grant leave to enforce a cross-undertaking is not confined to whether a specific defendant should be granted leave, but involves the broader discretionary question of whether the court should permit enforcement of the undertaking at all.",
+          "paragraph_span": "[2]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Causation for undertaking liability",
+          "paraphrase_en": "For a party to be liable under a cross-undertaking, the injunction or order obtained must be an effective cause of the loss suffered by the applicant seeking to enforce the undertaking.",
+          "paragraph_span": "[45]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Characterization of legal expenses",
+          "paraphrase_en": "Legal expenses incurred to determine whether proposed actions comply with an undertaking (governed by Hong Kong law) are not recoverable as enforcement costs if they relate to foreign law advice on the permissibility of those actions under that foreign system, and may instead be characterized as ordinary business operating expenses.",
+          "paragraph_span": "[77]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Gee on Commercial Injunctions",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principles stated in Gee on Commercial Injunctions regarding remoteness of damage in the context of enforcing cross-undertakings."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:00:30.561090+00:00",
+      "paragraph_count": 171,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCFI 1834",
+      "case_name": "NG YAN KIT ALFRED AND ANOTHER v. EVER HONEST INDUSTRIES LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-06-17T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Lok J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/1834",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Test for penalty clause vs liquidated damages",
+          "paraphrase_en": "A clause will be considered a penalty if the stipulated sum is extravagant and unconscionable compared to the greatest conceivable loss from the breach, or if the breach is merely non-payment of money and the stipulated sum exceeds the amount owed.",
+          "paragraph_span": "[i]-[ii]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No duty to mitigate for contractual payment in lieu",
+          "paraphrase_en": "Where a contract provides for payment in lieu of notice upon termination, and the employer lawfully exercises that option, the employee is contractually entitled to the payment and is under no duty to mitigate their loss.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Legitimate interest test for penalty clauses",
+          "paraphrase_en": "The true test for whether a clause is an unenforceable penalty is whether it imposes a detriment on the contract-breaker that is out of all proportion to any legitimate interest of the innocent party in enforcing the primary obligation.",
+          "paragraph_span": "[32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consideration of legitimate interest in employment contracts",
+          "paraphrase_en": "In assessing whether a payment-in-lieu clause in an employment contract is a penalty, the court must consider whether the employer has a legitimate interest in enforcing performance, such as avoiding disruption or difficulty in finding replacement staff.",
+          "paragraph_span": "[40]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Murray v Leisureplay Plc",
+          "target_neutral_citation": "[9]",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as an example where a clause providing for payment of one year's salary upon wrongful termination was held not to be a penalty."
+        },
+        {
+          "target_case_name": "Law Ting Pong Secondary School",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Court of Appeal case concerning a penalty clause in an employment contract and its analysis of legitimate interest."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:28:17.682836+00:00",
+      "paragraph_count": 125,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "probate_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "commercial"
+        ],
+        "scores": {
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 873",
+      "case_name": "LAW TING PONG SECONDARY SCHOOL v. CHEN WAI WAH",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-06-11T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Lam VP, Yuen and Chu JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/873",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Contract interpretation objective approach",
+          "paraphrase_en": "A contract is interpreted by ascertaining the meaning it would convey to a reasonable person possessing all the background knowledge reasonably available to the parties at the time of contracting.",
+          "paragraph_span": "[47]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Penalty clause test (legitimate interest)",
+          "paraphrase_en": "The test for determining if a clause is an unenforceable penalty is whether it imposes a detriment on the contract-breaker that is out of all proportion to the innocent party's legitimate interest in enforcing the primary contractual obligation.",
+          "paragraph_span": "[69]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Penalty doctrine breach requirement",
+          "paraphrase_en": "The penalty doctrine is only engaged where there is a breach of contract; it does not apply to clauses that impose a primary obligation to pay a sum of money.",
+          "paragraph_span": "[71]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Liquidated damages vs penalty construction",
+          "paraphrase_en": "Whether a stipulated sum is a genuine pre-estimate of loss (liquidated damages) or a penalty is a question of construction, to be decided based on the terms and inherent circumstances of the contract as at the time it was made, not at the time of breach.",
+          "paragraph_span": "[67]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Contract formation from multiple documents",
+          "paraphrase_en": "Where multiple documents are provided together as part of an offer, they may collectively constitute the contractual terms if the offer requires acceptance of all documents.",
+          "paragraph_span": "[53]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Investors Compensation Scheme Ltd v West Bromwich Building Society",
+          "target_neutral_citation": "[1998] 1 WLR 896",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the basic principle of contractual interpretation from this case."
+        },
+        {
+          "target_case_name": "Jumbo King Ltd v Faithful Properties Ltd & Ors",
+          "target_neutral_citation": "[1999] 3 HKLRD 757",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the overriding objective in construction of contracts."
+        },
+        {
+          "target_case_name": "Dunlop Pneumatic Tyre Co Ltd v New Garage and Motor Co Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the principle from this case on determining liquidated damages versus penalties as a question of construction."
+        },
+        {
+          "target_case_name": "Ip Ming Kin v Wong Siu Lan",
+          "target_neutral_citation": "CACV 201/2012",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case to highlight that the court is not confined to the contract's terms when assessing a penalty clause."
+        },
+        {
+          "target_case_name": "Cavendish Square Holding BV v Makdessi",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the modern, refined test for penalty clauses established in this UK Supreme Court case."
+        },
+        {
+          "target_case_name": "Day Morris Associates v Voyce & Anor",
+          "target_neutral_citation": "[2003] EWCA Civ 189",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the principle that a contractual acceptance must be a final and unqualified assent to the offer's terms."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:29:00.559968+00:00",
+      "paragraph_count": 169,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "contract_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "contract": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 1421",
+      "case_name": "WASHING BO LAUNDRY LTD v. NG KWOK WAI AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2023-10-18T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge C. W. Ling in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/1421",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Liquidated damages vs penalty test",
+          "paraphrase_en": "A contractual sum payable upon breach will be considered liquidated damages rather than a penalty if the amount is not extravagant, unconscionable, or out of all proportion to the legitimate interest protected by the clause.",
+          "paragraph_span": "[47]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Goodwill quantification context",
+          "paraphrase_en": "The difficulty in quantifying loss of goodwill must be assessed in the specific commercial context of the business, as the impact of a closure differs substantially between types of premises, such as a high-end shopping mall versus a standalone franchised outlet.",
+          "paragraph_span": "[44]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Costs reduction for abandoned claim",
+          "paraphrase_en": "Where a party abandons a claim at trial, the normal rule is that they should pay the costs associated with that claim, but the reduction may be limited if the issues overlap substantially with those that were argued.",
+          "paragraph_span": "[69]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Costs for disproportionate conduct",
+          "paraphrase_en": "The court may consider the manner in which a defence was conducted, and may criticize it as profligate and disproportionate if numerous arguments are advanced but later abandoned, wasting time on irrelevant issues.",
+          "paragraph_span": "[70]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "The One Property Ltd v The Swatch Group (Hong Kong) Ltd",
+          "target_neutral_citation": "[2022] 1 HKLRD 975",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The present judgment distinguishes the case on the basis that the commercial context and impact of a store closure in a high-end shopping mall differs from that of a standalone franchised laundry outlet."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:35:50.147324+00:00",
+      "paragraph_count": 118,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "probate_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 2656",
+      "case_name": "TAIHEI DENGYO KAISHA, LTD v. BOK JOENG HONG KONG CO LTD AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-10-25T00:00:00+08:00",
+      "judges": [
+        "Before: Master Keith Lam in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/2656",
+      "topic_id": "conspiracy_attempt",
+      "topic_label": "Conspiracy and Attempt",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Estoppel from default judgments",
+          "paraphrase_en": "A default judgment creates an estoppel only for issues that were necessarily and with complete precision decided by that judgment. The scope of what is conclusively determined must be scrutinized with extreme particularity.",
+          "paragraph_span": "[25]-[29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of liability post-default judgment",
+          "paraphrase_en": "A default judgment establishing liability does not automatically determine the quantum of damages or equitable compensation. The court must still conduct a proper assessment of the loss for which the defendant is responsible.",
+          "paragraph_span": "[20]-[23]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Liability of non-direct recipients in fraud",
+          "paraphrase_en": "A non-direct recipient (not a first-layer recipient) of fraudulently obtained funds may, in principle, be held liable for the entire defrauded sum, not merely the amount they personally received.",
+          "paragraph_span": "[37]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinguishing liability based on recipient role",
+          "paraphrase_en": "The inference that a recipient was a party to a fraud is more readily drawn against a direct recipient of the majority of the defrauded sum than against a more remote recipient.",
+          "paragraph_span": "[57]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Ozer Properties Ltd v Ghaydi",
+          "target_neutral_citation": "[1988] 1 EGLR 91",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Ozer Properties that a default judgment for damages to be assessed does not necessarily determine specific underlying issues like tenancy status."
+        },
+        {
+          "target_case_name": "Natures Mark HK Ltd v Hongkong Honxintai Trading Co Ltd",
+          "target_neutral_citation": "[2022] HKCFI 1382",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as an authority where a non-direct recipient was held liable for the entire defrauded sum in an email fraud case."
+        },
+        {
+          "target_case_name": "800 Columbia Project Company LLC v Xiang Yang Logistics Ltd",
+          "target_neutral_citation": "[2020] HKCFI 1527",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as a precedent allowing damages against a non-direct recipient for the full loss in a fraud case."
+        },
+        {
+          "target_case_name": "Grupo Torras",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment notes that the cited passage in Natures Mark does not state a principle different from that set out by Mance J in Grupo Torras."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:41:10.438698+00:00",
+      "paragraph_count": 243,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKDC 1164",
+      "case_name": "PANG YU HIM v. SECRETARY FOR JUSTICE",
+      "court_code": "District Court",
+      "decision_date": "2022-12-30T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge Ko in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/1164",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Subjective mental state for misfeasance",
+          "paraphrase_en": "The mental state required for the tort of misfeasance in public office is subjective. It can be established in three ways: (1) targeted malice (specific intent to injure), (2) untargeted malice (knowledge that injury would follow in the ordinary course), or (3) reckless indifference to whether injury would result.",
+          "paragraph_span": "[43]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Material damage as necessary ingredient",
+          "paraphrase_en": "Proof of material damage is a necessary element of the tort of misfeasance in public office. The long-standing common law requirement for special damage should not be disturbed without compelling reasons.",
+          "paragraph_span": "[77]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Exemplary damages for misfeasance",
+          "paraphrase_en": "Exemplary damages may be awarded for misfeasance in public office where compensatory damages are insufficient to mark the court's disapproval and deter future misconduct, but the general policy of law does not encourage such awards where no material damage exists to compensate.",
+          "paragraph_span": "[85]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Heads of damage for malicious prosecution",
+          "paraphrase_en": "In an action for malicious prosecution, damages may be claimed under three heads: damage to the person, damage to property, and damage to reputation, as established in common law.",
+          "paragraph_span": "[] (following Savile v Roberts quote)",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Tang Nin Mun",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Ribeiro JA's observation in Tang Nin Mun regarding the subjective mental state requirement for misfeasance in public office."
+        },
+        {
+          "target_case_name": "Three Rivers",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the House of Lords' ruling in Three Rivers on the subjective mental state variants for establishing misfeasance in public office."
+        },
+        {
+          "target_case_name": "Watkins",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows Watkins in confirming that material damage is a necessary ingredient of the tort of misfeasance in public office."
+        },
+        {
+          "target_case_name": "Kuddus",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes Kuddus, noting that while it established exemplary damages could be awarded for misfeasance, Watkins later clarified the requirement for material damage."
+        },
+        {
+          "target_case_name": "Savile v Roberts",
+          "target_neutral_citation": "(1698) 1 Ld Raym 374",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the ancient authority of Savile v Roberts for the three heads of damage available in malicious prosecution claims."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:02:12.190046+00:00",
+      "paragraph_count": 262,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "contract_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "contract": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCA 1016",
+      "case_name": "THAPA KAMALA v. TONG MING KAY AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2023-09-18T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au and Chow JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2023/1016",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Scope of appellate amendment power",
+          "paraphrase_en": "The Court of Appeal's power to grant leave to amend pleadings should generally be exercised only in connection with its appellate jurisdiction, considering whether the amendment addresses the real questions in controversy and serves a useful purpose for the determination of the appeal.",
+          "paragraph_span": "[32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Malicious prosecution causation requirement",
+          "paraphrase_en": "For a claim of malicious prosecution to succeed, the damages allegedly suffered by the plaintiff must have been caused by, or been within the knowledge or foreseeability of, the defendant.",
+          "paragraph_span": "[(c)]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Effect of biased judicial ruling on reasonable cause",
+          "paraphrase_en": "A judicial finding of apparent bias against the presiding magistrate may be relevant to the issue of whether there was reasonable and probable cause for a prosecution, particularly where the magistrate's prior rulings were relied upon to establish such cause.",
+          "paragraph_span": "[47]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Amendment to cure pleading defects",
+          "paraphrase_en": "A proposed amendment to pleadings should be assessed on whether it can cure the identified defects in the existing pleadings; if it cannot remedy the defects, the amendment serves no useful purpose.",
+          "paragraph_span": "[35]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Galbraith Ruling",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes the Galbraith Ruling's effect on the malicious prosecution claim, noting it cannot stand due to the subsequent finding of apparent bias against the Deputy Magistrate."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:04:45.353645+00:00",
+      "paragraph_count": 132,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "contract_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "contract": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 694",
+      "case_name": "COOMBER, PETER JOHN v. WONG KING WAH",
+      "court_code": "District Court",
+      "decision_date": "2023-05-22T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge Jonathan Wong in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/694",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Judicial immunity for judicial functions",
+          "paraphrase_en": "Judicial officers are immune from civil liability for damages when performing their judicial duties, even if they make errors of fact or law.",
+          "paragraph_span": "[(2)]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:06:34.514826+00:00",
+      "paragraph_count": 158,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "contract_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "contract": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 6475",
+      "case_name": "GERMAN POOL GROUP CO LTD AND OTHERS v. DYSON TECHNOLOGY LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-12-29T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Kent Yee in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/6475",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Specificity in disclosure orders",
+          "paraphrase_en": "A court order requiring disclosure must precisely identify the specific documents or categories of documents to be disclosed. Failure to do so may expose the person making the disclosure list to liability for swearing a false affidavit, even if they acted honestly.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Construction of cross-undertaking governs compensation",
+          "paraphrase_en": "The assessment of compensation payable under a cross-undertaking in damages is determined by the proper construction of the terms of that specific undertaking.",
+          "paragraph_span": "[33]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Undertaking as sole basis for damages claim",
+          "paraphrase_en": "A claim for damages arising from the grant of interlocutory relief can only be made if, and to the extent that, it is permitted by the terms of the undertaking given to the court.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Purpose of cross-undertaking is compensation",
+          "paraphrase_en": "The object of a cross-undertaking in damages is to compensate the party affected by wrongly granted interlocutory relief, not to punish the party who obtained the relief.",
+          "paragraph_span": "[39]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Limited categories for exemplary damages",
+          "paraphrase_en": "Exemplary damages are only available in a few confined categories established at common law, such as cases involving oppressive, arbitrary, or unconstitutional action by government servants.",
+          "paragraph_span": "[54]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Berkeley Administration v McCelland",
+          "target_neutral_citation": "[1990] FSR 381",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case to support the principle that disclosure orders must be precise to avoid liability for a false affidavit."
+        },
+        {
+          "target_case_name": "Al-Rawas v Pegasus Energy Ltd and Ors",
+          "target_neutral_citation": "[2009] 1 All ER 346",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that compensation under a cross-undertaking depends on the construction of its terms."
+        },
+        {
+          "target_case_name": "Rookes v Barnard",
+          "target_neutral_citation": "[1964] 1 All ER 367",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the House of Lords' categorization that confines exemplary damages to specific categories, including oppressive government action."
+        },
+        {
+          "target_case_name": "Columbia Picture Industries Inc",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes the present facts from this case, rejecting the argument that mass publication of an injunction order constitutes a similar misuse falling within an exemplary damages category."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:10:44.063399+00:00",
+      "paragraph_count": 181,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 499",
+      "case_name": "CHAN SHUNG FAI v. CHAN KAM WAH",
+      "court_code": "District Court",
+      "decision_date": "2023-04-18T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Kenneth K. H. Lee in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/499",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Assessment of witness credibility",
+          "paraphrase_en": "A court may find a witness credible and reliable based on candid and coherent testimony, limited cross-examination on key facts, and the opposing counsel's restraint from attacking the witness's credibility in submissions.",
+          "paragraph_span": "[23]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Effect of belated apology on damages",
+          "paraphrase_en": "An apology issued at a very late stage of proceedings, particularly when it appears to be a tactical move rather than genuine, may be considered practically worthless and not a valid basis for reducing an award of damages.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Admission of connection for defamation",
+          "paraphrase_en": "A defendant's own witness statement admitting a clear connection between the publication of defamatory material and a specific event (like an election) can be used to establish the context and purpose of the publication.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Rejection of after-the-fact motive evidence",
+          "paraphrase_en": "A defendant's explanation for their motive, raised for the first time shortly before trial and absent from their original witness statement, may be rejected by the court if it contradicts earlier evidence.",
+          "paragraph_span": "[48]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Use of comparable cases for quantum",
+          "paraphrase_en": "In assessing damages for defamation, the court may consider schedules of comparable cases categorized by the nature of the publication (e.g., media, non-media, internet) to determine an appropriate award.",
+          "paragraph_span": "[50]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Hung Yuen Chan Robert v Sing Tao Ltd & Anor",
+          "target_neutral_citation": "[1996] 4 HKC 539",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from this case that a very late apology may be worthless and not reduce damages."
+        },
+        {
+          "target_case_name": "Chan Iu Seng v Ko Choi Hin & Ors",
+          "target_neutral_citation": "HCA 2901 & 2935/2004, 28 January 2010",
+          "relationship_type": "CITES",
+          "description": "The present judgment cites this case as a comparable authority for assessing damages in a defamation claim involving individuals with public standing."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:11:36.904505+00:00",
+      "paragraph_count": 241,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "tort_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "tort"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "contract": 0.3,
+          "tort": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 105",
+      "case_name": "SILVER UNIVERSE INVESTMENTS LTD v. CHINA TIMES SECURITIES LTD AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-01-27T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Lam VP and Yuen JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/105",
+      "topic_id": "involuntary_manslaughter",
+      "topic_label": "Involuntary Manslaughter",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Burden of proof for mortgage relationship termination",
+          "paraphrase_en": "A mortgagor seeking damages without having repaid the loan bears the burden of proving there was a specific point in time when the mortgagor-mortgagee relationship was effectively terminated through a clear election.",
+          "paragraph_span": "[37]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Interim payment and triable disputes",
+          "paraphrase_en": "Interim payment should not be granted when there exists a triable dispute regarding the adequacy of an alleged acceptance of repudiation.",
+          "paragraph_span": "[39]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Material distinction in unauthorized transfer cases",
+          "paraphrase_en": "A case involving an unauthorized and unlawful transfer of a loan from its inception can be materially distinguished from cases where such initial illegality is not established.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Thanakharn Kasikorn Thai Chamkat (Mahachon) v Akai Holdings Ltd (No 2)",
+          "target_neutral_citation": "(2010) 13 HKCFAR 479",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The present judgment distinguishes Akai on the basis that the transfer of the loan in Akai was unauthorized and unlawful from the beginning, which is a material distinction from the present case."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:36:28.932317+00:00",
+      "paragraph_count": 144,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKDC 999",
+      "case_name": "CHAN YUK PING v. LIEW SHUK FUI",
+      "court_code": "District Court",
+      "decision_date": "2024-06-20T00:00:00+08:00",
+      "judges": [
+        "Before: Master Tessa Chan in Court (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/999",
+      "topic_id": "criminal_intimidation",
+      "topic_label": "Criminal Intimidation and Blackmail",
+      "module_id": "offences_against_person",
+      "subground_id": "intimidation_threats",
+      "principles": [
+        {
+          "principle_label": "Admissibility of background evidence",
+          "paraphrase_en": "Evidence relating to events prior to the actionable period can be considered by the court to establish background context and to assess the consistency of a party's evidence, even if those events themselves cannot form the basis for an award of damages.",
+          "paragraph_span": "[21]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of witness credibility",
+          "paraphrase_en": "A witness's voluntary concession or clarification during re-examination, even on a point not directly challenged, does not necessarily indicate deliberate dishonesty, especially when testifying about numerous and persistent events over time.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evidential weight of undated photographs",
+          "paraphrase_en": "While undated photographs may not be assigned significant evidential weight if the timing cannot be established, they do not necessarily fatally undermine a case, as the court may still accept a witness's oral testimony independently of such photographs.",
+          "paragraph_span": "[25]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Threshold for exemplary damages",
+          "paraphrase_en": "Exemplary damages should only be awarded when compensatory damages (including any aggravated damages) are insufficient to punish the defendant, express the court's disapproval, and deter similar conduct. The court must be satisfied that compensatory damages are inadequate to serve these purposes.",
+          "paragraph_span": "[54]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Basis for pre-judgment interest on general damages",
+          "paraphrase_en": "Pre-judgment interest on general damages may be awarded where the damages are assessed primarily for wrongful conduct that occurred before the writ was issued, meaning the period between the writ and the hearing has not already been compensated for in the damages assessment.",
+          "paragraph_span": "[59]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Lau Tat Wai",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The present judgment cites Lau Tat Wai as a comparable case for assessing the duration of significant suffering relevant to damages."
+        },
+        {
+          "target_case_name": "Yuen Mui Fong",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The present judgment distinguishes the reasoning in Yuen Mui Fong for not awarding pre-judgment interest, finding it inapplicable to the facts of the current case."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:01:52.936908+00:00",
+      "paragraph_count": 121,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "contract_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "contract": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 1018",
+      "case_name": "FULL YING HOLDINGS LTD v. ACTIVE ACCESS HOLDINGS LTD AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-03-17T00:00:00+08:00",
+      "judges": [
+        "Before: Master YW Hew in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/1018",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Date for assessment of damages",
+          "paraphrase_en": "The general rule for assessing damages for breach of a sale contract is to use the date of the breach, but this is not an absolute rule. The court has the power to fix a different date if applying the breach date would cause injustice.",
+          "paragraph_span": "[32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Market rule exception for damages",
+          "paraphrase_en": "The breach-date rule for assessing damages may not be appropriate where the innocent party could not reasonably be expected to mitigate its loss by recourse to the market at the time of the breach.",
+          "paragraph_span": "[34]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Damages where specific performance sought",
+          "paraphrase_en": "Where it is reasonable for a plaintiff to insist on specific performance rather than mitigate, the market price for assessing damages may be taken at the date the plaintiff could reasonably be expected to abandon that insistence, which could be as late as the trial date.",
+          "paragraph_span": "[42]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Allocation of payments between principal and interest",
+          "paraphrase_en": "Where a debtor makes payments without specifying whether they are for principal or interest, and there is insufficient evidence of the parties' intention, the payments should be allocated by operation of law to interest first.",
+          "paragraph_span": "[54]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Costs of adjournment",
+          "paraphrase_en": "Costs thrown away by an adjournment will generally be paid by the party whose application or conduct caused the adjournment.",
+          "paragraph_span": "[68]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Johnson v Agnew",
+          "target_neutral_citation": "[1980] 1 AC 467",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that the breach date is not an absolute rule for assessing damages and the court can fix another date to avoid injustice."
+        },
+        {
+          "target_case_name": "Gestmin SGPS SA v Credit Suisse (UK) Ltd",
+          "target_neutral_citation": "[2013] EWHC 3560",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case in support of the finding that there was no immediately available market for the shares in question."
+        },
+        {
+          "target_case_name": "BOC",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principles from this case (BOC) regarding the allocation of repayments between principal and interest."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:25:57.546418+00:00",
+      "paragraph_count": 129,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCA 963",
+      "case_name": "LEUNG SHUI CHEONG v. AU CHUNG YIN JIMMY",
+      "court_code": "Court of Appeal",
+      "decision_date": "2023-08-11T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Chu VP and Yuen JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2023/963",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Causation in compensation assessment",
+          "paraphrase_en": "When assessing damages for an injury, the court must apply principles of causation to determine what losses are attributable to the specific accident in question, particularly where a subsequent supervening event may break the chain of causation for earlier losses.",
+          "paragraph_span": "[55]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Employer's recovery right under s.25(1)(b)",
+          "paraphrase_en": "Under section 25(1)(b) of the relevant ordinance, an employer's right to recover from a third-party tortfeasor is for the full sum the employer is obliged to pay the employee as a result of the accident, not a reduced sum accounting for the employer's own liability.",
+          "paragraph_span": "[67]",
+          "cited_statutes": [
+            "Section 25(1)(b)"
+          ]
+        },
+        {
+          "principle_label": "Scope of 'any sum' in employer recovery",
+          "paraphrase_en": "The phrase 'any sum which he is obliged to pay as a result of the accident' in section 25(1)(b) provides the employer with a full indemnity from the tortfeasor, covering not only compensation but also interest and costs.",
+          "paragraph_span": "[67]",
+          "cited_statutes": [
+            "Section 25(1)(b)"
+          ]
+        },
+        {
+          "principle_label": "Limitation under s.25(1)(b) proviso",
+          "paraphrase_en": "The proviso to section 25(1)(b) limits the amount recoverable by the employer to the damages that the court opines would have been awarded to the employee absent the Employees' Compensation Ordinance, and does not stipulate any minimum recoverable amount.",
+          "paragraph_span": "[59]",
+          "cited_statutes": [
+            "Section 25(1)(b)"
+          ]
+        },
+        {
+          "principle_label": "Court's role in determining recoverable sum",
+          "paraphrase_en": "The phrase 'in the opinion of the court' in section 25(1)(b) indicates a legislative intent that the court must determine the amount limiting the employer's recovery from the tortfeasor.",
+          "paragraph_span": "[59]",
+          "cited_statutes": [
+            "Section 25(1)(b)"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Wong Man Yip v Wah Kwong Construction Material",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the Court of Appeal's construction in that case that the employer's right of recovery under section 25(1)(b) is a full indemnity covering compensation, interest, and costs."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:28:40.306952+00:00",
+      "paragraph_count": 146,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "contract_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "contract": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 141",
+      "case_name": "LEADER SCREWS MANUFACTURING CO LTD v. HUANG SHUNKUI",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-01-18T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au-Yeung J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/141",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Fiduciary duty definition",
+          "paraphrase_en": "A fiduciary duty arises when the relationship between two parties creates an objective, legitimate expectation recognized by equity that the fiduciary will not use their position in a manner contrary to the principal's interests. This expectation is assessed objectively and does not depend on the subjective beliefs of either party.",
+          "paragraph_span": "[47]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Fiduciary duty of senior employees",
+          "paraphrase_en": "Whether a senior employee or manager owes fiduciary duties to their employer depends on their specific role and functions, particularly in relation to the specific duties they were assigned to perform.",
+          "paragraph_span": "[48]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Breach of duty of fidelity test",
+          "paraphrase_en": "An employee breaches their duty of fidelity when their act undermines the employer's confidence in them and fundamentally damages the employment relationship at its core.",
+          "paragraph_span": "[56]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "TBC International (HK) Ltd v Chan Kwok Sum",
+          "target_neutral_citation": "HCA 10671/1995, 24 March 1997",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that senior employees can owe fiduciary duties based on their specific assigned roles."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:29:06.439899+00:00",
+      "paragraph_count": 113,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "probate_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "commercial"
+        ],
+        "scores": {
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 1396",
+      "case_name": "HING YIP HOLDINGS (HONG KONG) LTD (In Compulsory Liquidation) v. CELLMARK CHINA LTD (In Voluntary Liquidation) (formerly known as Pechiney Far East Limited) AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-05-17T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Mimmie Chan J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/1396",
+      "topic_id": "theft_dishonesty",
+      "topic_label": "Dishonesty (Ivey v Genting Test)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Burden of proof for misappropriation",
+          "paraphrase_en": "The party alleging misappropriation of funds bears the legal burden of proving it on the balance of probabilities. The court cannot infer misappropriation merely from an absence of documentation without sufficient factual evidence about the payments.",
+          "paragraph_span": "[98]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Standard for breach of director's fiduciary duty",
+          "paraphrase_en": "The fiduciary duty of a director to act bona fide in the company's best interests is tested subjectively. A director is in breach only if they did not honestly believe their act or omission was in the company's interests, even if the action involved a reasonable risk of liability such as breach of contract.",
+          "paragraph_span": "[85]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Knowledge requirement for dishonest assistance",
+          "paraphrase_en": "For a finding of dishonest assistance in a breach of trust or fiduciary duty, it is sufficient if the defendant entertained a 'clear suspicion' that funds were being misappropriated. It is not necessary to prove the defendant knew all the detailed facts of the breach.",
+          "paragraph_span": "[106]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Inferring subjective state of mind",
+          "paraphrase_en": "When determining a defendant's subjective state of mind (such as dishonesty), the court may draw inferences from what the person knew, said, and did, including their evidence. The reasonableness of an alleged belief is often determinative of whether the court will accept it.",
+          "paragraph_span": "[108]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Pleading requirement for breach of contract claims",
+          "paraphrase_en": "A claim based on an alleged breach of contract terms (such as trust provisions in banking facilities) cannot be pursued unless it is specifically pleaded that the defendants procured or caused that breach, or assisted others in doing so.",
+          "paragraph_span": "[68]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Regentcrest plc v Cohen",
+          "target_neutral_citation": "[2001] BCC 494",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Regentcrest that the test for a director's breach of fiduciary duty is subjective, based on the director's honest belief."
+        },
+        {
+          "target_case_name": "Twinsectra Ltd v Yardley",
+          "target_neutral_citation": "[2002] 2 AC 164",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the discussion in Twinsectra regarding 'blind-eye knowledge,' where knowledge is imputed if a person deliberately avoids inquiry to avoid confirming a suspicion."
+        },
+        {
+          "target_case_name": "Barlow Clowes International Ltd v Eurotrust International Ltd",
+          "target_neutral_citation": "[2006] 1 WLR 1476",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Barlow Clowes that a 'clear suspicion' of misappropriation is sufficient for dishonesty in assistance claims."
+        },
+        {
+          "target_case_name": "Bilta (UK) Ltd v NatWest Markets plc",
+          "target_neutral_citation": "[2020] EWHC 546 (Ch)",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the explanatory reminders from Bilta regarding how to determine a defendant's subjective state of mind for dishonesty."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:34:13.200102+00:00",
+      "paragraph_count": 317,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "probate_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2225",
+      "case_name": "廈門新景地集團有限公司 formerly known as 廈門市鑫新景地房地產有限公司 v. ETON PROPERTIES LTD AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-03T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Mimmie Chan J in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2225",
+      "topic_id": "criminal_damage_arson",
+      "topic_label": "Criminal Damage and Arson",
+      "module_id": "property_dishonesty",
+      "subground_id": "criminal_damage",
+      "principles": [
+        {
+          "principle_label": "Governing law for enforcement of arbitration award",
+          "paraphrase_en": "The law governing the enforcement of an arbitration award, including a claim for breach of the implied promise to honour that award, is the lex fori (the law of the enforcing court), which in this case is Hong Kong law.",
+          "paragraph_span": "[8], [36], [38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Nature of implied promise to honour award",
+          "paraphrase_en": "The implied promise to honour an arbitration award constitutes a separate and distinct contractual obligation from the obligations under the original underlying contract.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Measure of damages for breach of contract",
+          "paraphrase_en": "The objective of awarding damages for breach of contract is to place the injured party, as far as money can, in the same position they would have been in had the contract been performed.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Pleading standard for damages",
+          "paraphrase_en": "The required level of precision when pleading a head of damage is determined by the need to give fair and sufficient notice of the case to be met by the opposing party.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Functus officio of arbitral tribunal",
+          "paraphrase_en": "Once an arbitral tribunal has fully adjudicated a case and issued its final award, it becomes functus officio and has no jurisdiction to issue further rulings or directions on how the award should be performed.",
+          "paragraph_span": "[44]-[45]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Robinson v Harman",
+          "target_neutral_citation": "(1848) 1 Ex 850",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the classic principle from this case regarding the measure of damages for breach of contract."
+        },
+        {
+          "target_case_name": "Lam Sik Ying v Lam Sik Shi",
+          "target_neutral_citation": "HCA4713/2001, 21 September 2015",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the principle governing the required precision in pleading a head of damage."
+        },
+        {
+          "target_case_name": "D’Almeida Araujo Lda v Sir Frederick Becker & Co Ltd",
+          "target_neutral_citation": "[1953] 2 QB 329",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes or does not apply the conflict of laws principle from this case because the implied promise is governed by Hong Kong law."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:32:47.045096+00:00",
+      "paragraph_count": 105,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKDC 633",
+      "case_name": "HO SAI CHEONG AND ANOTHER v. HONEST GATE COMPANY LTD",
+      "court_code": "District Court",
+      "decision_date": "2024-04-18T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Kay Seto in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/633",
+      "topic_id": "criminal_damage_arson",
+      "topic_label": "Criminal Damage and Arson",
+      "module_id": "property_dishonesty",
+      "subground_id": "criminal_damage",
+      "principles": [
+        {
+          "principle_label": "Default judgment for injunctive relief and damages",
+          "paraphrase_en": "A plaintiff may apply for default judgment, including injunctive relief and damages to be assessed, against a defendant who fails to respond to proceedings, pursuant to Order 19, rule 7 of the Rules of the District Court.",
+          "paragraph_span": "[1]",
+          "cited_statutes": [
+            "Cap. 336H"
+          ]
+        },
+        {
+          "principle_label": "Legal basis for water leakage disputes",
+          "paraphrase_en": "A water leakage dispute between neighbouring property owners can give rise to claims in common law nuisance and negligence, as well as statutory breaches under the Building Management Ordinance and breaches of the Deed of Mutual Covenant.",
+          "paragraph_span": "[2]",
+          "cited_statutes": [
+            "Cap. 344 s.34H"
+          ]
+        },
+        {
+          "principle_label": "Annexation of DMC obligations to property",
+          "paraphrase_en": "The obligations, covenants, terms, and conditions within a Deed of Mutual Covenant are annexed to every part of the lot and the estate, binding all owners and their successors.",
+          "paragraph_span": [
+            "(3)"
+          ],
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Owner's indemnity for loss from overflow or escape",
+          "paraphrase_en": "An owner is obliged to indemnify other owners and occupiers against claims for loss or damage caused by the overflow of water or escape of substances originating from the owner's property, resulting from the owner's act, negligence, or breach of obligations.",
+          "paragraph_span": [
+            "(4)"
+          ],
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Top floor owner's roof maintenance duty",
+          "paraphrase_en": "The owner of the top floor of a building has a specific duty to keep their part of the roof terrace area in good repair and free from leakage to avoid causing loss, damage, nuisance, or annoyance to others.",
+          "paragraph_span": [
+            "(6)"
+          ],
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:33:24.683614+00:00",
+      "paragraph_count": 52,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "tort_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "tort",
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "contract": 0.3,
+          "tort": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKDC 1494",
+      "case_name": "SO HON MING FRANCIS v. CHEUNG LAU SHAU CHUN AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2021-11-29T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge KC Chan in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/1494",
+      "topic_id": "criminal_damage_arson",
+      "topic_label": "Criminal Damage and Arson",
+      "module_id": "property_dishonesty",
+      "subground_id": "criminal_damage",
+      "principles": [
+        {
+          "principle_label": "Measure of damages for breach of tenancy cleaning covenant",
+          "paraphrase_en": "Where a tenant breaches a covenant to return a property in a clean condition, the measure of damages is not the full cleaning cost, but only the extra costs necessitated by the tenant's failure to clean beyond what would have been incurred by the landlord for general preparation for the next tenant.",
+          "paragraph_span": "[35]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Measure of damages for redecoration",
+          "paraphrase_en": "Where a tenant causes damage requiring redecoration, the measure of damages is not the full cost of repainting the entire property, but only the portion attributable to repainting the specific damaged areas, even if the landlord typically performs minor touch-ups between tenancies.",
+          "paragraph_span": "[48]-[49]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden of proof for pre-existing damage",
+          "paraphrase_en": "A landlord claiming for damage to fixtures must prove, on the balance of probabilities, that the items were in good condition at the start of the tenancy. The court may reject such evidence as unreliable if it finds the landlord's failure to notice or record alleged damage at key inspection points to be improbable.",
+          "paragraph_span": "[66]-[68]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Inference from lack of complaint",
+          "paraphrase_en": "A landlord's failure to complain about damage to similar fixtures in the same property during the tenancy or at its termination is inconsistent with a claim that those fixtures were in good condition at the tenancy's commencement and can support a finding that the damage was pre-existing.",
+          "paragraph_span": "[67]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Causation for loss of rental claim",
+          "paraphrase_en": "A claim for loss of rental income due to alleged tenant damage fails if the underlying claim for the cost of repairing that damage is not established. Furthermore, such a claim requires evidence that the necessary repairs would have taken longer than the landlord's usual inter-tenancy maintenance period.",
+          "paragraph_span": "[78]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Burkeman's case",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the measure of damages from Burkeman's case, awarding only the extra costs necessitated by the tenant's failure to clean."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:34:34.425052+00:00",
+      "paragraph_count": 149,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "land",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "contract": 0.3,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 1296",
+      "case_name": "FOUR TREASURE ZHUHAI LTD v. ZHUHAI GREENERY HOTEL COMPANY LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-03-31T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Jonathan Wong in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/1296",
+      "topic_id": "tax_evasion",
+      "topic_label": "Tax Evasion",
+      "module_id": "public_order_regulatory",
+      "subground_id": "tax_evasion",
+      "principles": [
+        {
+          "principle_label": "Mocambique rule justification critique",
+          "paraphrase_en": "The justifications for the Mocambique rule (which prevents courts from adjudicating title to foreign land) based on effectiveness of judgment and comity of nations are not wholly convincing, as damages judgments against defendants are generally effective if the defendant is within the jurisdiction.",
+          "paragraph_span": "[4]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Characterisation approach in conflict of laws",
+          "paraphrase_en": "Characterisation or classification of legal issues is governed by the lex fori, requiring the court to look beyond the formulation of the claim and identify the true issues raised by both claim and defense according to the lex fori, while classifying the relevant rule of law.",
+          "paragraph_span": "[6]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Personal obligation exception to foreign land jurisdiction",
+          "paraphrase_en": "Although a court has no jurisdiction to determine rights over foreign land, it may exercise jurisdiction over personal obligations related to foreign land where it has jurisdiction over the person (through presence, submission, or service out of jurisdiction), and can compel them to deal with their interest in that foreign land.",
+          "paragraph_span": "[8]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Application of personal obligation exception to restitution claims",
+          "paraphrase_en": "The personal obligation exception to the foreign land jurisdiction rule applies not only to specific performance of obligations to transfer foreign land, but also to restitution claims for repayment of contractual payments where consideration has failed, particularly as such rulings have no effect on ownership or possession of the foreign land.",
+          "paragraph_span": "[21]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "British South Africa Co v Companhia de Moçambique",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment discusses and critiques the justifications for the Mocambique rule which prevents courts from adjudicating title to foreign land."
+        },
+        {
+          "target_case_name": "Dicey, Morris and Collins on the Conflict of Laws",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the explanation from this authoritative text regarding the personal obligation exception to jurisdiction over foreign land matters."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:33:51.796803+00:00",
+      "paragraph_count": 228,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 765",
+      "case_name": "FONG KIN WA v. LI HAU YI AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-03-17T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Cheng J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/765",
+      "topic_id": "tax_evasion",
+      "topic_label": "Tax Evasion",
+      "module_id": "public_order_regulatory",
+      "subground_id": "tax_evasion",
+      "principles": [
+        {
+          "principle_label": "Repudiatory breach of contractual obligations",
+          "paraphrase_en": "A failure to provide contractual documents necessary for the other party to complete a due diligence investigation, even by an extended completion date, constitutes a repudiatory breach of contract.",
+          "paragraph_span": "[30]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Judicial determination of necessary issues",
+          "paraphrase_en": "A court is not required to determine every issue agreed upon by the parties if those issues are not necessary or appropriate for the resolution of the case before it.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:38:22.741065+00:00",
+      "paragraph_count": 140,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "contract_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "contract": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 1211",
+      "case_name": "TASTY CATERING GROUP LTD AND ANOTHER v. CHENG HUNG KIT AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-08-23T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Cheung JA and Chu JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/1211",
+      "topic_id": "duress",
+      "topic_label": "Duress and Necessity",
+      "module_id": "defences",
+      "subground_id": "duress_necessity",
+      "principles": [
+        {
+          "principle_label": "Duress not actionable tort for damages",
+          "paraphrase_en": "Duress is not recognized as a standalone tort that provides a basis for a claim for damages.",
+          "paragraph_span": "[12]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Proof of loss essential for tort claims",
+          "paraphrase_en": "Establishing actual loss is a fundamental requirement for claims in tort law generally.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No arguable duress claim without loss",
+          "paraphrase_en": "A claim in duress cannot be reasonably arguable if the claimants fail to demonstrate a reasonably arguable case on the element of loss.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "The Cenk Kaptanoglu",
+          "target_neutral_citation": "[2012] 2 All ER (Comm) 855",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the authority of The Cenk Kaptanoglu in holding that duress is not an actionable tort for damages."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T02:22:50.008395+00:00",
+      "paragraph_count": 102,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCA 324",
+      "case_name": "CHOW KIN HANG ALI v. SECRETARY FOR JUSTICE FOR AND ON BEHALF OF FOOD AND ENVIRONMENTAL HYGIENE DEPARTMENT",
+      "court_code": "Court of Appeal",
+      "decision_date": "2025-04-10T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Chu VP, Au and Chow JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2025/324",
+      "topic_id": "insanity_defence",
+      "topic_label": "Insanity (M'Naghten Rules)",
+      "module_id": "defences",
+      "subground_id": "mental_condition_intoxication",
+      "principles": [
+        {
+          "principle_label": "Definition of 'injury by accident'",
+          "paraphrase_en": "For a claim under the Employees' Compensation Ordinance, 'injury by accident' requires a distinct accident as the cause and a personal injury as the effect. The claimant must prove both elements.",
+          "paragraph_span": "[31]",
+          "cited_statutes": [
+            "Cap. 282"
+          ]
+        },
+        {
+          "principle_label": "Burden of proof for employment accident",
+          "paraphrase_en": "The claimant bears the burden of proving, on a balance of probabilities, that they suffered a personal injury by an accident that arose out of and in the course of their employment.",
+          "paragraph_span": "[1], [18]",
+          "cited_statutes": [
+            "Cap. 282"
+          ]
+        },
+        {
+          "principle_label": "Irrelevance of negligence/breach of contract",
+          "paraphrase_en": "In an employees' compensation claim, allegations of employer negligence or breach of employment contract are irrelevant to establishing entitlement under the Ordinance.",
+          "paragraph_span": "[14]",
+          "cited_statutes": [
+            "Cap. 282"
+          ]
+        },
+        {
+          "principle_label": "Prohibition of double recovery",
+          "paraphrase_en": "Compensation under the Employees' Compensation Ordinance is not payable for periods of absence where the employee has already received full salary, as this would constitute impermissible double recovery.",
+          "paragraph_span": "[41]",
+          "cited_statutes": [
+            "Cap. 282 s.10"
+          ]
+        },
+        {
+          "principle_label": "Proof of loss of earning capacity",
+          "paraphrase_en": "To claim compensation for loss of earning capacity, the claimant must prove that the injury caused a loss of earning capacity, which is not established if the claimant continues to perform duties well and employment termination is unlikely.",
+          "paragraph_span": "[47]",
+          "cited_statutes": [
+            "Cap. 282 s.9"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Sit Wing Yi Sibly v Berton Industrial Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Court of Final Appeal case for the principle that 'injury by accident' encompasses distinct cause (accident) and effect (injury)."
+        },
+        {
+          "target_case_name": "Coleman J's decision",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the procedural principle from this decision that a respondent cannot raise new matters on appeal without a respondent's notice."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T02:45:09.197774+00:00",
+      "paragraph_count": 110,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "tort_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "tort",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "contract": 0.3,
+          "tort": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 4514",
+      "case_name": "SOREMI INVESTMENTS LTD v. CHINA NATIONAL GOLD GROUP HONG KONG LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-09-26T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Eugene Fung J in Chambers (Open to the Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/4514",
+      "topic_id": "prevention_cruelty_animals",
+      "topic_label": "Prevention of Cruelty to Animals Ordinance (Cap. 169)",
+      "module_id": "regulatory_and_welfare_offences",
+      "subground_id": "animal_cruelty",
+      "principles": [
+        {
+          "principle_label": "Definition of 'matter' for arbitration stay",
+          "paraphrase_en": "A 'matter' requiring a stay of court proceedings under an arbitration agreement is a substantial issue that is legally relevant to a claim or defence in the proceedings, and which can be determined by an arbitrator as a discrete dispute. It does not include issues that are peripheral or tangential to the subject matter of the legal proceedings.",
+          "paragraph_span": "[10]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Dishonesty independent of contractual breach",
+          "paraphrase_en": "In a claim for dishonest assistance, the determination of dishonesty is not dependent on establishing a breach of contract. References to a contract in pleadings do not necessarily make contractual breach an essential element of the dishonest assistance claim.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Scope of arbitration agreement determination",
+          "paraphrase_en": "Whether disputes in a legal action fall outside the scope of an arbitration agreement is a matter for judicial determination based on whether the disputes constitute 'matters' covered by the agreement.",
+          "paragraph_span": "[40]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Prevention principle limitation",
+          "paraphrase_en": "The prevention principle (that a person cannot take advantage of their own wrong) cannot be invoked to rewrite factual circumstances or to artificially deem a contract terminated for the purpose of avoiding an arbitration agreement.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Tomolugen",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the definition of 'matter' for arbitration stay purposes as stated by Sundaresh Menon CJ in Tomolugen."
+        },
+        {
+          "target_case_name": "Kensland Realty Ltd v Whale View Investment Ltd",
+          "target_neutral_citation": "(2001) 4 HKCFAR 381",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes the present facts from Kensland Realty, finding that the prevention principle cannot be applied to rewrite the factual circumstances regarding contract termination."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:36:54.301555+00:00",
+      "paragraph_count": 97,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2026] HKCFI 1448",
+      "case_name": "NINTENDO CO., LTD v. CHEN YUAN NING AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2026-03-10T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Kent Yee in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2026/1448",
+      "topic_id": "animal_welfare_sentencing",
+      "topic_label": "Animal Cruelty Sentencing",
+      "module_id": "regulatory_and_welfare_offences",
+      "subground_id": "animal_cruelty",
+      "principles": [
+        {
+          "principle_label": "Compensatory damages principle",
+          "paraphrase_en": "The fundamental aim of damages in intellectual property infringement cases is to place the injured party in the financial position they would have occupied had the wrongful act not occurred.",
+          "paragraph_span": "[62]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Applicability of patent damages principles to copyright",
+          "paraphrase_en": "The principles for assessing compensatory damages established in patent infringement cases are generally applicable to copyright infringement cases, subject to specific statutory considerations like additional damages or conversion damages.",
+          "paragraph_span": "[62]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Corporate liability temporal limitation",
+          "paraphrase_en": "A company cannot be held liable for infringing acts that occurred before its date of incorporation, as it did not exist as a legal entity at that time.",
+          "paragraph_span": "[63]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Apportionment of damages for pre-incorporation acts",
+          "paraphrase_en": "Where a defendant company is incorporated after the commencement of infringing activities, damages payable by that company must be apportioned to exclude liability for the period before its incorporation.",
+          "paragraph_span": "[63]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "General Tire and Rubber Co v Firestone Tyre and Rubber Co. Ltd.",
+          "target_neutral_citation": "[1976] RPC 197",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment adopts and applies the compensatory damages principle established in General Tire for assessing damages in intellectual property infringement cases."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:41:47.038353+00:00",
+      "paragraph_count": 105,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "ip_keywords",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "ip",
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1,
+          "ip": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2284",
+      "case_name": "TECHNIC STAR UNIVERSAL LTD v. TINY LOVE LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-06T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Richard Khaw SC in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2284",
+      "topic_id": "animal_welfare_sentencing",
+      "topic_label": "Animal Cruelty Sentencing",
+      "module_id": "regulatory_and_welfare_offences",
+      "subground_id": "animal_cruelty",
+      "principles": [
+        {
+          "principle_label": "Requirements for late discovery",
+          "paraphrase_en": "A party providing discovery at a very late stage must furnish the court and the opposing side with comprehensive and precise information covering: the reasons for the delayed disclosure; the origin and creators of the documents; their relevance to the issues in the case; and the availability of the document creators for cross-examination at trial.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Strict duty for satisfactory goods",
+          "paraphrase_en": "The duty to supply goods of satisfactory quality under the Sales of Goods Ordinance is strict. It is not a valid defence for the seller to argue that they exercised all possible care or that they relied on an assurance from their own supplier.",
+          "paragraph_span": "[98]",
+          "cited_statutes": [
+            "Sales of Goods Ordinance s.16(2)"
+          ]
+        },
+        {
+          "principle_label": "Anticipatory breach by evincing non-performance",
+          "paraphrase_en": "Where purchase orders have been placed, a party commits an anticipatory breach of contract by indicating, for any reason, that the orders cannot be performed. This demonstrates an intention not to produce the goods, which the other party can then accept as a repudiation.",
+          "paragraph_span": "[104]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Essential elements for conversion/detinue",
+          "paraphrase_en": "A claimant in an action for conversion or detinue must properly plead and prove their title to sue, specifically their possessory title with an immediate right to possession of the goods. The absence of such a plea is fatal to the claim.",
+          "paragraph_span": "[114]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Repudiatory breach by stopping shipments",
+          "paraphrase_en": "A party commits a repudiatory breach of contract by instructing the other party to withhold the shipment of goods under existing purchase orders, thereby preventing performance.",
+          "paragraph_span": "[54]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Hong Lok School Limited & Anor v. Chow Sai Yiu & Anor",
+          "target_neutral_citation": "[2003] 2 HKLRD 782",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principles set out in Hong Lok School regarding the information required from a litigant giving late discovery."
+        },
+        {
+          "target_case_name": "Young & Marten Ltd v McManus Childs Ltd",
+          "target_neutral_citation": "[1969] 1 AC 454 (HL)",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this House of Lords authority to support the principle that specifying a particular manufacturer does not exclude the implied warranty of satisfactory quality."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:47:56.374807+00:00",
+      "paragraph_count": 212,
+      "domain_classification": {
+        "domain": "contract",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "contract_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "contract": 0.3,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    }
+  ]
+}

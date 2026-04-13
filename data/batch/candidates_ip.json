@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T07:17:48.083160+00:00",
+    "domain": "ip"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2025] HKCFI 6258",
+      "case_name": "AUTOMOBILI LAMBORGHINI S.p.A. v. JARVIS MOJO LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-11-14T00:00:00+08:00",
+      "judges": [
+        "Before: DHJC Kent Yee in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/6258",
+      "topic_id": "animal_welfare_sentencing",
+      "topic_label": "Animal Cruelty Sentencing",
+      "module_id": "regulatory_and_welfare_offences",
+      "subground_id": "animal_cruelty",
+      "principles": [
+        {
+          "principle_label": "Notice requirement for ex parte proceedings",
+          "paraphrase_en": "A court may proceed with an application in the absence of a party if satisfied that the absent party had proper notice of the hearing and chose not to attend.",
+          "paragraph_span": "[4]-[5]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Interim injunction procedure",
+          "paraphrase_en": "An interim injunction may be granted pending the determination of a summons for interlocutory injunctions, with directions given for the filing of evidence.",
+          "paragraph_span": "[1]-[2]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Goodwill in trademark/passing off",
+          "paraphrase_en": "Goodwill in a jurisdiction for trademark or passing off claims can be established through extensive promotion, distribution, and sales of products under the marks over a significant period.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinctiveness of registered marks",
+          "paraphrase_en": "Registered trademarks can become distinctive of a plaintiff's specific products through their use in commerce.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:39:59.234091+00:00",
+      "paragraph_count": 46,
+      "domain_classification": {
+        "domain": "ip",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "ip_keywords"
+        ],
+        "secondary_domains": [
+          "civil",
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1,
+          "ip": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    }
+  ]
+}

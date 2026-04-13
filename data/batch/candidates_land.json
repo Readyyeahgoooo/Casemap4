@@ -1,0 +1,1451 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T07:17:48.079732+00:00",
+    "domain": "land"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2021] HKCA 187",
+      "case_name": "WONG LEI AH v. LEE JIM WING",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-02-26T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Lam VP, Cheung and Chu JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/187",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Intention to possess from payment of rent",
+          "paraphrase_en": "A squatter's willingness to pay rent to the owner indicates a lack of the necessary intention to possess the land for the purpose of establishing adverse possession, as it demonstrates the squatter views their possession as deriving from the owner's lawful title.",
+          "paragraph_span": "[1]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Relevance of payments to intention to possess",
+          "paraphrase_en": "Payments made by a squatter, such as for building renovation, improvement funds, or maintenance, are relevant factors to be considered in the overall assessment of whether the requisite intention to possess has been established.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Timing of payments in adverse possession",
+          "paraphrase_en": "The timing of a squatter's payments (e.g., made many years after initial occupation) is a relevant circumstance when evaluating the squatter's intention to possess the land.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Wong Tak Yue v Kung Kwok Wai David",
+          "target_neutral_citation": "(1997-98) 1 HKCFAR 55",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment applies the principle from this case that a squatter's willingness to pay rent indicates a lack of intention to possess."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:04:26.365275+00:00",
+      "paragraph_count": 50,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords",
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "family"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "land": 0.3,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCA 534",
+      "case_name": "WONG CHEE SING (OR WONG CHE SING) (by his next friend WONG TAK KWAN LILIAN) v. HUNG WAH (孔华) TRADING AS TAK HING LUNG MEDICINE CO. AND ANOTHER",
+      "court_code": "Court of Appeal",
+      "decision_date": "2025-06-04T00:00:00+08:00",
+      "judges": [
+        "Before : Hon Kwan VP, Cheung and G Lam JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2025/534",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Requirements for adverse possession",
+          "paraphrase_en": "To establish a claim for adverse possession, a claimant must demonstrate both factual possession of the land and an intention to possess it.",
+          "paragraph_span": "[7]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Factual possession test",
+          "paraphrase_en": "Factual possession requires the alleged possessor to have dealt with the land as an occupying owner would be expected to, and to have excluded others from doing so.",
+          "paragraph_span": "[7]-[8], [25]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Intention to possess vs. intention to own",
+          "paraphrase_en": "The requisite mental element for adverse possession is an intention to possess the land, not an intention to own it. A mistaken belief about one's legal title (e.g., believing oneself to be a purchaser or tenant) does not preclude a claim if the factual elements are met.",
+          "paragraph_span": "[15], [26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Payment of outgoings not determinative",
+          "paraphrase_en": "The failure of a squatter to pay rates, government rent, or deal with building orders is not, by itself, conclusive evidence against a finding of factual possession. The court must consider what the squatter actually did, not what an owner might have done.",
+          "paragraph_span": "[25], [27]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Mistaken claim no bar to adverse possession",
+          "paraphrase_en": "There is no legal principle that prevents a person who mistakenly believes they are a lawful tenant or purchaser from successfully claiming title by adverse possession, provided they establish the necessary factual possession and intention to possess.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "J A Pye (Oxford) Ltd v Graham",
+          "target_neutral_citation": "[2003] 1 AC 419",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this authority for the clarification that the required intention for adverse possession is an intention to possess, not an intention to own."
+        },
+        {
+          "target_case_name": "Powell v McFarlane",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the test from this case for determining factual possession, namely whether the possessor dealt with the land as an occupying owner would."
+        },
+        {
+          "target_case_name": "Cheung Kwong Yuen v Sun Hui Fang",
+          "target_neutral_citation": "[2016] 1 HKLRD 464",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the principle from this case that a mistaken belief about one's legal status does not bar a claim for adverse possession."
+        },
+        {
+          "target_case_name": "Poon Chi Hang v Lai Ho Sun",
+          "target_neutral_citation": "[2019] HKCA 734",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the reasoning from this case that the focus should be on what the squatter actually did, not on what they failed to do (like paying outgoings)."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:05:01.953506+00:00",
+      "paragraph_count": 115,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKDC 95",
+      "case_name": "MA HOW JEE v. THE PERSONAL REPRESENTATIVES OF MAH SHUN CHEW, DECEASED",
+      "court_code": "District Court",
+      "decision_date": "2021-01-26T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Timon Shum in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/95",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Adverse possession - factual possession",
+          "paraphrase_en": "A claimant establishes factual possession for adverse possession by demonstrating exclusive physical control and use of the property, evidenced by acts such as paying rates and utility bills in their name over a substantial period.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Adverse possession - intention to possess",
+          "paraphrase_en": "The intention to possess (animus possidendi) required for adverse possession is demonstrated by acts that clearly manifest an intention to exclude the true owner and treat the property as one's own, such as changing locks and undertaking maintenance.",
+          "paragraph_span": "[47]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:07:01.112402+00:00",
+      "paragraph_count": 111,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "family_keywords",
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "family",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "land": 0.3,
+          "family": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 528",
+      "case_name": "CHOW KWUN CHUNG (in his personal capacity, and as the sole executor of the estate of LEUNG KING, deceased) v. LEUNG YI SZE AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2023-04-28T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge W H Wong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/528",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Common intention constructive trust requirements",
+          "paraphrase_en": "For a common intention constructive trust to be established, there must be a shared understanding or agreement between the parties regarding beneficial ownership of the property. A unilateral belief by one party about ownership, without the other party sharing that intention, is insufficient to create such a trust.",
+          "paragraph_span": "[18]-[19]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Resulting trust and partial contribution",
+          "paraphrase_en": "A resulting trust claim for the entire beneficial interest in a property cannot succeed where the claimant has only contributed partially to the purchase price. There is no legal principle allowing a claimant to 'complete' such a trust by offering to pay the shortfall after the event.",
+          "paragraph_span": "[21]-[22]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Adverse possession and ex turpi causa",
+          "paraphrase_en": "In determining whether the maxim of ex turpi causa (illegality defense) applies to bar an adverse possession claim, courts should adopt a 'range of factors approach' considering all relevant circumstances, rather than a strict 'reliance approach'.",
+          "paragraph_span": "[32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Proportionality in illegality defense",
+          "paraphrase_en": "When applying the illegality defense (ex turpi causa) in property claims, the law should be applied with a due sense of proportionality to avoid overkill, considering the range of relevant factors in each case.",
+          "paragraph_span": "[36.3]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Patel v Mirza",
+          "target_neutral_citation": "[2016] HKSC 42",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the 'range of factors approach' from Patel v Mirza for determining the applicability of the ex turpi causa defense in adverse possession claims."
+        },
+        {
+          "target_case_name": "Tinsley v Miligan",
+          "target_neutral_citation": "[1993] UKHL 3",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment indicates that the previously adopted 'reliance approach' from Tinsley v Miligan has been replaced in Hong Kong by the 'range of factors approach' from Patel v Mirza."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:13:32.553838+00:00",
+      "paragraph_count": 109,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "land": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCFI 1239",
+      "case_name": "YEUNG, ABRAHAM v. SUN KING KAI",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-04-28T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Leung in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/1239",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Objective determination of intention",
+          "paraphrase_en": "The intention of a person, such as that required for establishing a squatter's animus possidendi or a settlor's purpose, must be determined objectively, and self-serving declarations of past or present intention are treated with caution.",
+          "paragraph_span": "[55]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Charitable trust for religion without formal declaration",
+          "paraphrase_en": "A public charitable trust for the advancement of religion can be formed where land is held for the purpose of building a place of public worship, even in the absence of a formal declaration of trust.",
+          "paragraph_span": "[63]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Factual reliance on alleged charity for adverse possession",
+          "paraphrase_en": "In resisting a claim of adverse possession, a party may rely on the factual formation and known existence of an alleged charity over the use of property to challenge the required animus possidendi, regardless of whether a legally enforceable charitable trust is ultimately established.",
+          "paragraph_span": "[64]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Inference from conduct and documentary evidence",
+          "paraphrase_en": "The court can infer a person's intention and the nature of a property arrangement from objective circumstances, contemporaneous documentary evidence, and the conduct of the parties, particularly where personal knowledge is lacking and the opposing evidence is not effectively challenged.",
+          "paragraph_span": "[76]-[77], [91], [116]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Possession consistent with charitable purpose negates adverse possession",
+          "paraphrase_en": "Where a person's use and occupation of property is consistent with and for the purposes of a charitable religious objective, and does not demonstrate an intention to deal with the property in their own name to the exclusion of the world, it is inconsistent with the requisite animus possidendi for adverse possession.",
+          "paragraph_span": "[107], [110]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Powell v McFarlane",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Powell v McFarlane for the principle that evidence of a squatter's own declarations of intention is regarded as self-serving when determining animus possidendi."
+        },
+        {
+          "target_case_name": "Li Kim Sang Victor",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references the case in the context of discussing the validity of a charitable trust over land, though it distinguishes the specific statutory application."
+        },
+        {
+          "target_case_name": "Ma Wah Yan & Another v Dharma Realm Budd",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that a charitable trust for the advancement of religion can exist where land is held for a place of public worship, even without a formal declaration."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:15:01.193582+00:00",
+      "paragraph_count": 193,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "land": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 1354",
+      "case_name": "LAM KWOK HING (as Administrator of the Estate of LAM PING SANG, deceased) v. LAU HA also known as LAU HA LILY AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-04-11T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Alan Kwong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/1354",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Common intention constructive trust analysis",
+          "paraphrase_en": "Where property is legally registered in the names of individuals but the surrounding circumstances indicate a shared understanding that they hold it for the benefit of a collective group, the court may impose a common intention constructive trust in favour of that group, with the registered owners being mere constructive trustees.",
+          "paragraph_span": "[46], [79]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Inference of common intention from nominee arrangement",
+          "paraphrase_en": "A common intention that registered owners hold property as nominees or representatives for a collective body can be inferred from facts such as the registered owners holding senior positions in the beneficiary organization, the property being treated as an asset of that organization by government authorities, and the lack of a familial or close personal relationship between the registered owners.",
+          "paragraph_span": "[58]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Joint tenancy as evidence against personal beneficial ownership",
+          "paraphrase_en": "The fact that property is held under a joint tenancy by individuals who are not close relatives can support a finding that they did not intend to retain personal beneficial ownership, as there would be no logical reason for the last survivor to obtain the entire interest to the exclusion of the others' estates if they were true beneficial owners.",
+          "paragraph_span": "[(2)] (following para 46)",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Proprietary estoppel principles - unconscionability",
+          "paraphrase_en": "The doctrine of proprietary estoppel is not rigidly compartmentalized but is fundamentally governed by the overarching principle that equity seeks to prevent unconscionable conduct, with elements like assurance, reliance, and detriment being interrelated.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Common intention from express discussion",
+          "paraphrase_en": "A court may find the common intention necessary for a constructive trust based on the parties' express discussions regarding how the property is to be held.",
+          "paragraph_span": "[(5)] (following para 10)",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Leung Hang Lin",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the principle that common intention can be found from express discussions about property holding."
+        },
+        {
+          "target_case_name": "Mo Ying",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case alongside Leung Hang Lin for the same principle regarding finding common intention."
+        },
+        {
+          "target_case_name": "Gillett v Holt",
+          "target_neutral_citation": "[2001] Ch 210",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this authority for the overarching principles of proprietary estoppel, particularly that its elements are not watertight and the doctrine aims to prevent unconscionability."
+        },
+        {
+          "target_case_name": "R v Moore",
+          "target_neutral_citation": "[2021] 4 WLR 121",
+          "relationship_type": "CITES",
+          "description": "The judgment references this case, indicating it is pertinent to the point being discussed, though the specific legal point is not detailed in the provided paragraphs."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:15:27.455876+00:00",
+      "paragraph_count": 316,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate"
+        ],
+        "scores": {
+          "civil": 0.1,
+          "land": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKDC 777",
+      "case_name": "HO KWONG YUEN v. YAU YAN MAN",
+      "court_code": "District Court",
+      "decision_date": "2025-05-23T00:00:00+08:00",
+      "judges": [
+        "Coram: His Honour Judge Harold Leong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2025/777",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Severance of joint tenancy",
+          "paraphrase_en": "A joint tenancy can be severed, converting it into a tenancy in common, by one party serving a notice of severance on the other, provided the notice demonstrates an unequivocal intention to sever and the other party raises no objection.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Elements of common intention constructive trust",
+          "paraphrase_en": "A constructive trust based on common intention requires three elements: (1) a common intention between the property owner and the claimant regarding beneficial shares, (2) detrimental reliance by the claimant on that common intention, and (3) unconscionability if the owner were to depart from that intention.",
+          "paragraph_span": "[b]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evidence for common intention",
+          "paraphrase_en": "A finding of a common intention regarding beneficial ownership must be based on evidence of express discussions between the parties, even if the recollection of those discussions is imperfect or their terms imprecise.",
+          "paragraph_span": "[i]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Displacing presumption of resulting trust",
+          "paraphrase_en": "The presumption that 'equity follows the law' (i.e., the presumption of a resulting trust aligning with legal title) can be displaced in exceptional cases by evidence of a change in the parties' common intention at a later date.",
+          "paragraph_span": "[99]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evidential weight of informal documents",
+          "paraphrase_en": "An informal document, such as a power of attorney that is not legally effective for its primary purpose, can still constitute clear and compelling evidence of an express agreement between parties regarding beneficial ownership of property.",
+          "paragraph_hrase_en": "An informal document, such as a power of attorney that is not legally effective for its primary purpose, can still constitute clear and compelling evidence of an express agreement between parties regarding beneficial ownership of property.",
+          "paragraph_span": "[45], [99]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:15:46.285030+00:00",
+      "paragraph_count": 158,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "land": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 274",
+      "case_name": "TSE HO KONG v. LIU WEIRONG",
+      "court_code": "District Court",
+      "decision_date": "2023-03-03T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Joseph Vaughan in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/274",
+      "topic_id": "intention",
+      "topic_label": "Intention and Knowledge",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Severance by unilateral declaration",
+          "paraphrase_en": "A joint tenancy in equity can be severed by a clear declaration of intention to sever made by one joint tenant and communicated to the other joint tenant, even without a final or irrevocable act disposing of the share.",
+          "paragraph_span": "[36], [44]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Severance by course of dealing",
+          "paraphrase_en": "A joint tenancy may be severed by a course of dealing between the joint tenants which evinces a common intention that the property should henceforth be held as tenants in common, even if this does not amount to a formal or enforceable agreement.",
+          "paragraph_span": "[], [36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Severance by court application",
+          "paraphrase_en": "In certain circumstances, an application to court by one joint tenant (such as for sale or partition of the property) can operate as a declaration of intention to sever the joint tenancy.",
+          "paragraph_span": "[26], [30]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No severance by will-making",
+          "paraphrase_en": "A joint tenancy cannot be severed merely by one joint tenant taking steps to make a will, especially if those intentions are not communicated to the other joint tenant.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Discretion to set aside default judgment",
+          "paraphrase_en": "When deciding whether to set aside a default judgment, the court must balance the importance of observing procedural rules against the principle that a party should not be deprived of an adjudication on the merits, particularly where the law is unsettled.",
+          "paragraph_span": "[45]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Williams v Hensman",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principles from Williams v Hensman regarding the three ways a joint tenancy may be severed."
+        },
+        {
+          "target_case_name": "In re Draper’s Conveyance",
+          "target_neutral_citation": "[1969] 1 Ch 486",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the holding that a court application can show an intention inconsistent with a continued joint tenancy and operate as a severance."
+        },
+        {
+          "target_case_name": "Hawskesley v May",
+          "target_neutral_citation": "[1956] 1 QB 304",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the reasoning cited in Hawskesley v May regarding severance by declaration of intention."
+        },
+        {
+          "target_case_name": "Davies v Davies",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes or notes contrary commonwealth authority, including Davies v Davies, which held that mere declaration or commencement of litigation did not effect severance."
+        },
+        {
+          "target_case_name": "Carr v Isard",
+          "target_neutral_citation": "[2007] WTLR 409",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Carr v Isard that a joint tenancy cannot be severed by the making of a will."
+        },
+        {
+          "target_case_name": "Hugo Boss Trademark v Britain Boss International Co Ltd",
+          "target_neutral_citation": "[2015] 3 HKLRD 4",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principles from Hugo Boss regarding the court's discretion to set aside a default judgment."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:17:43.669816+00:00",
+      "paragraph_count": 95,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKDC 1412",
+      "case_name": "POON OI YIN FLORENCE v. WONG KWAN AND OTHERS",
+      "court_code": "District Court",
+      "decision_date": "2024-09-04T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge James Kwan in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/1412",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Adverse possession requirements",
+          "paraphrase_en": "To establish adverse possession of land without legal title, a claimant must demonstrate both factual possession and the intention to possess (animus possidendi) throughout the relevant limitation period.",
+          "paragraph_span": "[44]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Limitation Ordinance application to equitable interests",
+          "paraphrase_en": "The Limitation Ordinance applies to equitable interests in land, including interests in proceeds of sale held on trust, in the same manner as it applies to legal estates, with time running similarly.",
+          "paragraph_span": "[39]",
+          "cited_statutes": [
+            "Cap. 347 s.10(1)"
+          ]
+        },
+        {
+          "principle_label": "Trustee's estate preservation",
+          "paraphrase_en": "When land is held on trust, the trustee's legal estate is not extinguished by limitation periods until every beneficial owner's right of action to recover the land has been time-barred.",
+          "paragraph_span": "[39]",
+          "cited_statutes": [
+            "Cap. 347 s.10(2)"
+          ]
+        },
+        {
+          "principle_label": "Trustee's right to sue for beneficiaries",
+          "paraphrase_en": "Trustees may bring an action to recover land on behalf of beneficiaries with unbarred rights of action, even if the trustees' own right of action would otherwise be time-barred.",
+          "paragraph_span": "[39]",
+          "cited_statutes": [
+            "Cap. 347 s.10(3)"
+          ]
+        },
+        {
+          "principle_label": "State of mind vs objective acts in adverse possession",
+          "paraphrase_en": "A claimant's subjective belief (such as considering themselves a licensee) does not necessarily prevent a finding of adverse possession if their objective acts demonstrate unequivocal possession and assertion of right.",
+          "paragraph_span": "[45]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Powell v McFarlane",
+          "target_neutral_citation": "(1979) 38 P&CR 452",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the two-part test from Powell v McFarlane requiring factual possession and intention to possess for establishing adverse possession."
+        },
+        {
+          "target_case_name": "Wong Tak Yue v Kung Kwok Wai & Another (No 2)",
+          "target_neutral_citation": "(1997-98) 1 HKCFAR 55",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Hong Kong case as additional authority supporting the adverse possession principles established in Powell v McFarlane."
+        },
+        {
+          "target_case_name": "Ho Hang Wan",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the reasoning from Ho Hang Wan that objective acts of possession can override a claimant's subjective licensee mentality."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:37:00.908323+00:00",
+      "paragraph_count": 89,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate",
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "land": 0.3,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKDC 1007",
+      "case_name": "AMPLE HAPPINESS LTD v. SUNRISE ENTERPRISES HOLDINGS LTD",
+      "court_code": "District Court",
+      "decision_date": "2022-09-21T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Kenneth K. H. Lee in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/1007",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Standard for answering title requisitions",
+          "paraphrase_en": "A vendor must provide a satisfactory answer to a purchaser's proper requisition concerning title. The answer must be based on proper conveyancing evidence that establishes, beyond reasonable doubt, that the identified beneficiaries are the only ones and there is no real risk of another beneficiary emerging.",
+          "paragraph_span": "[40.4]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Purchaser's right to raise requisitions",
+          "paraphrase_en": "A purchaser is entitled to raise proper requisitions regarding pre-intermediate root documents without first having to prove a defect in title. If the objections are properly formulated and indicate a defect, the vendor is obligated to respond.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Insufficiency of vendor undertakings",
+          "paraphrase_en": "A purchaser is not bound to accept a vendor's undertaking to provide necessary documents after completion as a substitute for providing those documents before completion, even if such undertakings are common in conveyancing practice.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Time for completion",
+          "paraphrase_en": "Where a contract for sale and purchase specifies a completion date but does not state a time, the time for completion expires at midnight on that date.",
+          "paragraph_span": "[51]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Lo Hung Biu v Lo Shea Chung and another",
+          "target_neutral_citation": "[1997] HKLR",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that a vendor must answer properly formulated requisitions showing a defect in pre-intermediate title."
+        },
+        {
+          "target_case_name": "Sunlink Group (Hong Kong) Co Ltd v Sorrayo Investment Ltd",
+          "target_neutral_citation": "[1999] 2 HKLRD 468",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows this case's reasoning that a purchaser is not bound to accept a vendor's undertaking to provide documents post-completion."
+        },
+        {
+          "target_case_name": "Chu Wing Yip v Leung Siu Yuk",
+          "target_neutral_citation": "[1997] HKLRD 29",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes this case by finding that the mere expectation of an undertaking does not force it upon an unwilling purchaser."
+        },
+        {
+          "target_case_name": "Ip Fung Yee v Norwegian Missionary Society",
+          "target_neutral_citation": "[1998] 1 HKLRD 94",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes this case, noting that normal practice of accepting undertakings does not obligate a purchaser to do so."
+        },
+        {
+          "target_case_name": "Camberra Investment Ltd v Chan Wai Tak",
+          "target_neutral_citation": "Civil Appeal No 75 of 1988",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the principle that completion time expires at midnight when no specific time is stated."
+        },
+        {
+          "target_case_name": "Afovos Shipping Co SA v Pagnan",
+          "target_neutral_citation": "[1983] 1 WLR 195 (HL)",
+          "relationship_type": "CITES",
+          "description": "The judgment notes that the Court of Appeal in Camberra followed this House of Lords decision on the time for completion."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:21:16.731972+00:00",
+      "paragraph_count": 146,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.05,
+          "commercial": 0.15,
+          "company": 0.1,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2026] HKCFI 1157",
+      "case_name": "CHEUNG KA WAI v. LEE YU KWAN JEANETTE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2026-02-24T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Le Pichon in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2026/1157",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Severance by act of alienation",
+          "paraphrase_en": "A severing act of alienation includes a mortgage or charge. If a joint tenant mortgages or charges their interest in jointly held property, this operates to sever the joint tenancy in the same manner as an outright transfer of that tenant's share.",
+          "paragraph_span": "[40]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Charging order effect on joint tenancy",
+          "paraphrase_en": "A charging order has the same effect as an equitable charge and does not involve a conveyance or disposition of a proprietary interest to the chargee. Therefore, a charging order alone may not sever a joint tenancy if it is discharged before the right of survivorship operates.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Application for partition under Partition Ordinance",
+          "paraphrase_en": "Under section 3(1) of the Partition Ordinance (Cap. 352), any person with an interest in property held by two or more persons as joint tenants or tenants in common may institute proceedings for partition.",
+          "paragraph_span": "[44]",
+          "cited_statutes": [
+            "Cap. 352 s.3(1)"
+          ]
+        },
+        {
+          "principle_label": "Distinction between legal and equitable ownership",
+          "paraphrase_en": "Parties may be joint tenants at law but hold the beneficial interest as tenants in common in equity if the evidence demonstrates an intention from the beginning to hold equal, separate shares.",
+          "paragraph_span": "[64]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Severance by declaration of intention",
+          "paraphrase_en": "A clear declaration of an intention to sever a joint tenancy, such as through a court application for payment of a share, can effect severance even if procedural delays occur.",
+          "paragraph_span": "[27]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "First National Securities Limited v Hegerty",
+          "target_neutral_citation": "[1985] QB 850",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Hegerty that a legal charge executed by one joint tenant is an act of alienation sufficient to sever the beneficial joint tenancy."
+        },
+        {
+          "target_case_name": "Ho Wai Kwan",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Ho Wai Kwan for its reasoning that a charging order does not sever a joint tenancy if discharged before the right of survivorship takes effect."
+        },
+        {
+          "target_case_name": "Williams v Hensman",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment notes that Ho Wai Kwan applied the principles from Williams v Hensman regarding severance of a joint tenancy."
+        },
+        {
+          "target_case_name": "In re Wilks, Child v Bulmer",
+          "target_neutral_citation": "[1891] 3 Ch 59",
+          "relationship_type": "DOUBTS",
+          "description": "The judgment expresses doubt about the correctness of In re Wilks, suggesting a modern court would find that a clear declaration of intention to sever is effective."
+        },
+        {
+          "target_case_name": "Malahon Credit Co Ltd v Siu Chun-wah, Alice & Anor",
+          "target_neutral_citation": "[1988] 1 HKLR 196",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows Malahon Credit in recognizing that parties can be joint tenants at law but hold equitable interests as tenants in common based on their original intention."
+        },
+        {
+          "target_case_name": "Mak Pui Ki v Ho Wing Ha",
+          "target_neutral_citation": "[2020] HKCFI 2705",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Mak Pui Ki as a case where the issue of severance by execution of a legal charge/mortgage was considered."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:23:51.492000+00:00",
+      "paragraph_count": 170,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKDC 2011",
+      "case_name": "CHAN SUET YAN, the person appointed to represent the estate of PANG HO TONG, deceased v. TSUI LOK HEI AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2025-12-02T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Bonnie Cheng in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2025/2011",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Burden of proof in adverse possession",
+          "paraphrase_en": "The party claiming title through adverse possession bears the legal burden of proving, with compelling evidence, both factual possession and the requisite intention to possess the land to the exclusion of all others for the statutory period.",
+          "paragraph_span": "[8]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Presumption of possession from paper title",
+          "paraphrase_en": "The registered owner of land is legally presumed to be in possession of that land by virtue of holding the paper title.",
+          "paragraph_span": "[8]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Requirement for clear and compelling evidence",
+          "paraphrase_en": "A court cannot make a finding of fact based on an expert's evidence when there is no clear and compelling direct evidence from the claimant themselves to support that fact.",
+          "paragraph_span": "[57]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evidential significance of acts of possession",
+          "paraphrase_en": "Acts such as cutting vegetation or picking fruit from land are not necessarily sufficient to demonstrate adverse possession, especially where the land has inherent value, and their significance depends on the context and the nature of the land.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Wong Tak Yue v Kung Kwok Wai",
+          "target_neutral_citation": "(1997-98) 1 HKCFAR 55",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the principle from this case that the paper title owner is deemed to be in possession of the land."
+        },
+        {
+          "target_case_name": "Luckway Properties Limited v Liu, Chi Kong & Ors",
+          "target_neutral_citation": "[2024] HKCA 1069",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the test for adverse possession as set out in this case, regarding the burden of proof and the elements of factual possession and intention."
+        },
+        {
+          "target_case_name": "Cadija Unna v S Don Maris Appa",
+          "target_neutral_citation": "[1939] AC 136",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes the present case on the basis that the context of land value and use in Hong Kong is different from the circumstances in the cited Privy Council case."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:32:51.172196+00:00",
+      "paragraph_count": 115,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.1,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKDC 704",
+      "case_name": "KWAN CHI ON v. 張偉雄 AND OTHERS",
+      "court_code": "District Court",
+      "decision_date": "2022-07-18T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Gary C C Lam in Court (Open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/704",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Exclusive possession requirement for adverse possession",
+          "paraphrase_en": "For a squatter to establish adverse possession, they must demonstrate exclusive occupation of the land. The absence of fencing is not determinative; the key question is whether the squatter took steps to exclude others, including the owner or their agents, from the land.",
+          "paragraph_span": "[39]-[41]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Test for excluding others in adverse possession",
+          "paraphrase_en": "The test for establishing adverse possession is not merely whether other persons entered the land, but whether the squatter took any steps to exclude others from the land.",
+          "paragraph_span": "[29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinguishing possession from use",
+          "paraphrase_en": "Mere use of land for a purpose such as farming, without evidence of steps to exclude others, does not constitute exclusive possession required for adverse possession.",
+          "paragraph_span": "[47]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Limited ratio of Wong Tak Yue on intention to possess",
+          "paraphrase_en": "The ratio of Wong Tak Yue v Keung Kwok Wai is limited to the specific situation where a squatter's willingness to pay rent to the owner negates the requisite intention to possess. It does not create a general exception to the rule against hypothetical questions in evidence.",
+          "paragraph_span": "[52]-[53]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Physical difficulty of access not equivalent to exclusive possession",
+          "paraphrase_en": "The fact that land may be physically difficult to access (e.g., on a slope) does not, by itself, amount to exclusive possession for the purpose of adverse possession, especially where various parties have readily entered the land.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Cadija Unna v S Don Maris Appa",
+          "target_neutral_citation": "[1939] AC 136",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The present case is distinguished on the basis that land in Hong Kong is valuable, unlike the swampy land in Ceylon where cutting grass was held to be an act of possession."
+        },
+        {
+          "target_case_name": "Wong Tak Yue v Keung Kwok Wai & anor (No 2)",
+          "target_neutral_citation": "(1997-98) 1 HKCFAR 55",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that a squatter's willingness to pay rent negates the intention to possess, but clarifies its ratio is limited to that specific context."
+        },
+        {
+          "target_case_name": "Pang Moon Wan v Yu Chi Foon",
+          "target_neutral_citation": "DCMP 2331/2015",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the judge's own previous decision to support the interpretation that the ratio of Wong Tak Yue is limited to willingness to pay rent."
+        },
+        {
+          "target_case_name": "Chan Ting On v Multi-Skill Investments Ltd",
+          "target_neutral_citation": "DCCJ 2786/2013",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case to support the point that the context of Wong Tak Yue is very specific and does not create a broad exception."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:33:46.279218+00:00",
+      "paragraph_count": 108,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKDC 843",
+      "case_name": "蕭楗燊 v. DEVI MADHURI AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2025-07-24T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Val Chow in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2025/843",
+      "topic_id": "criminal_damage_arson",
+      "topic_label": "Criminal Damage and Arson",
+      "module_id": "property_dishonesty",
+      "subground_id": "criminal_damage",
+      "principles": [
+        {
+          "principle_label": "Binding effect of signature on contract",
+          "paraphrase_en": "A person of full age and understanding who signs a document with legal effect is generally bound by its terms, even if they did not read or understand its contents. The act of signature signifies assent, and lack of knowledge of the terms is not a valid defense.",
+          "paragraph_span": "[para 16]-[para 20]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Liability for unilateral termination of tenancy",
+          "paraphrase_en": "A tenant who unilaterally terminates a tenancy agreement without the landlord's consent and vacates the premises remains liable to pay rent for the remainder of the contractual term as stipulated in the agreement.",
+          "paragraph_span": "[para 16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of witness credibility",
+          "paraphrase_en": "The court may find a witness's evidence incredible if it contains serious allegations that are inconsistent with common sense or expected procedures, such as a claim that police would refuse to file a formal complaint about harassment.",
+          "paragraph_span": "[para 35]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evaluation of exaggerated claims",
+          "paraphrase_en": "A claim for damages may be rejected if the witness's evidence is exaggerated or inconsistent, such as alleging an inability to conduct business due to harassment while simultaneously stating the harassing conduct was minimal.",
+          "paragraph_span": "[para 36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Common sense assessment of evidence",
+          "paraphrase_en": "The court may find a factual account improbable based on common sense, such as rejecting that a temporary disconnection of power would cause permanent damage to a shutter.",
+          "paragraph_span": "[para 39]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:35:14.474571+00:00",
+      "paragraph_count": 134,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.05,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCA 1902",
+      "case_name": "THE DAIRY FARM CO, LTD v. SECRETARY FOR JUSTICE for and on behalf of THE DIRECTOR OF LANDS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-12-23T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au, G Lam and Chow JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/1902",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Interpretation of rights of way grants",
+          "paraphrase_en": "A right of way granted in general terms, without specifying it is confined to pedestrians, prima facie grants a right for all purposes including vehicular use, unless restrictions can be gathered from the surrounding circumstances.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Instrument to be construed as a whole",
+          "paraphrase_en": "A legal instrument, such as a land grant, must be interpreted by considering all its provisions together as a complete document.",
+          "paragraph_span": "[31]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Change of permitted user affecting rights",
+          "paraphrase_en": "A change in the permitted use of land under a new grant, as compared to a previous lease, can affect the interpretation of ancillary rights (like a right of way) and may rebut inferences drawn from the prior use.",
+          "paragraph_span": "[45]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinct provisions serve distinct purposes",
+          "paraphrase_en": "Where distinct clauses in a grant impose different obligations and confer different rights, they must be interpreted according to their own terms and purposes, even when read as part of the whole instrument.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Kain v Norfolk",
+          "target_neutral_citation": "[1949] 1 Ch 163",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Kain v Norfolk regarding the prima facie interpretation of generally granted rights of way."
+        },
+        {
+          "target_case_name": "St Edmundsbury and Ipswich Diocesan Board of Finance v Clark (No 2)",
+          "target_neutral_citation": "[1973] 3 All ER 902",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case alongside Kain v Norfolk as authority for the principle on interpreting rights of way granted in general terms."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:31:22.804128+00:00",
+      "paragraph_count": 105,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "commercial": 0.15,
+          "company": 0.1,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2026] HKCFI 401",
+      "case_name": "DBS BANK (HONG KONG) LTD v. HONOUR ELITE CORPORATION LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2026-01-16T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au-Yeung J in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2026/401",
+      "topic_id": "prevention_cruelty_animals",
+      "topic_label": "Prevention of Cruelty to Animals Ordinance (Cap. 169)",
+      "module_id": "regulatory_and_welfare_offences",
+      "subground_id": "animal_cruelty",
+      "principles": [
+        {
+          "principle_label": "Prevention principle application",
+          "paraphrase_en": "A party to a contract cannot assert rights that arise as a consequence of its own breach of an obligation owed to the other party.",
+          "paragraph_span": "[53]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Bank's duty of confidentiality exceptions",
+          "paraphrase_en": "A bank's duty of confidentiality to its customer is subject to four exceptions: disclosure under legal compulsion, a duty to the public to disclose, disclosure required by the bank's own interests, or disclosure with the customer's express or implied consent.",
+          "paragraph_span": "[65]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No duty to issue consent letters",
+          "paraphrase_en": "A mortgagee bank has no duty to issue consent letters to allow a mortgagor to lease the mortgaged property, nor a duty to act reasonably in deciding whether to issue such consent.",
+          "paragraph_span": "[61]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Scope of prevention principle breach",
+          "paraphrase_en": "For the prevention principle to apply, the breach relied upon must be a breach of the specific contract that the party is seeking to enforce, not a breach arising from a separate contractual or legal relationship.",
+          "paragraph_span": "[67]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Plaintiff's right to choose defendants",
+          "paraphrase_en": "A plaintiff is entitled to choose which parties to sue and is not required to sue all persons who may be liable for the same cause of action.",
+          "paragraph_span": "[67]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Kensland Realty Ltd v Whale View Investment Ltd",
+          "target_neutral_citation": "(2001) 4 HKCFAR 381",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Kensland Realty that a party cannot benefit from its own wrong to analyze the prevention principle defence."
+        },
+        {
+          "target_case_name": "Tournier",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the established exceptions to a bank's duty of confidentiality as set out in the Tournier case."
+        },
+        {
+          "target_case_name": "Hong Kong Civil Procedure 2025",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the procedural rule from Hong Kong Civil Procedure that a plaintiff need not sue all potentially liable parties."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:29:38.031515+00:00",
+      "paragraph_count": 155,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "corporate_party_name",
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "commercial": 0.15,
+          "company": 0.1,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 666",
+      "case_name": "MAN YU SHING SIMON v. SECRETARY FOR JUSTICE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-02-11T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Kent Yee in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/666",
+      "topic_id": "animal_welfare_sentencing",
+      "topic_label": "Animal Cruelty Sentencing",
+      "module_id": "regulatory_and_welfare_offences",
+      "subground_id": "animal_cruelty",
+      "principles": [
+        {
+          "principle_label": "Burden of proof for adverse possession",
+          "paraphrase_en": "A person claiming adverse possession without documentary title bears the burden of proving an intention to exclude everyone, including the true owner, from the land.",
+          "paragraph_span": "[ ]",
+          "cited_statutes": [
+            "Cap. 347 s.13(1)"
+          ]
+        },
+        {
+          "principle_label": "Requirement of exclusive physical control",
+          "paraphrase_en": "To establish adverse possession, the claimant must demonstrate evidence of enclosures or exclusive physical control over the land throughout the statutory limitation period.",
+          "paragraph_span": "[83]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Joint possession by multiple squatters",
+          "paraphrase_en": "When multiple squatters are in simultaneous possession, they acquire title as joint tenants by default, and a single squatter cannot claim title alone; possession must be singular, though it can be held jointly.",
+          "paragraph_span": "[ ]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consequence of failing to prove adverse possession",
+          "paraphrase_en": "If a claimant fails to prove adverse possession, they cannot invoke statutory provisions that extinguish the owner's title, and the owner's claim for recovery of possession and damages succeeds.",
+          "paragraph_span": "[111]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Requirement of exclusive and singular possession",
+          "paraphrase_en": "Adverse possession requires proof of exclusive and singular possession for the entire statutory period; without it, the owner is not dispossessed and the claim fails.",
+          "paragraph_span": "[127]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:46:02.413560+00:00",
+      "paragraph_count": 164,
+      "domain_classification": {
+        "domain": "land",
+        "confidence": 0.3,
+        "signals": [
+          "land_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "land": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    }
+  ]
+}

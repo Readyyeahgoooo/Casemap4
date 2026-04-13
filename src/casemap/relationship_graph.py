@@ -21,7 +21,7 @@ from .graphrag import (
     tokenize,
     top_keywords,
 )
-from .lineage_data import CURATED_LINEAGES
+from .lineage_data import curated_lineages_for_domain
 from .source_parser import Passage, SourceDocument, load_source_document
 from .viewer import render_relationship_family_tree, render_relationship_map, render_relationship_tree
 
@@ -424,24 +424,45 @@ def _recompute_public_connectivity(public_payload: dict) -> None:
     meta["source_count"] = len(meta.get("source_documents", []))
 
 
-def _augment_public_payload_with_lineages(public_payload: dict) -> None:
+def _lineage_domain_matches(lineage: dict, legal_domain: str) -> bool:
+    if not legal_domain:
+        return True
+    tags = {str(tag).strip().lower() for tag in lineage.get("domain_tags", []) if str(tag).strip()}
+    if not tags:
+        return True
+    return legal_domain in tags or (legal_domain == "civil" and "contract" in tags)
+
+
+def _coerce_extra_lineages(extra_lineages: list[dict] | dict | None) -> list[dict]:
+    if not extra_lineages:
+        return []
+    if isinstance(extra_lineages, dict):
+        raw_lineages = extra_lineages.get("lineages", [])
+    else:
+        raw_lineages = extra_lineages
+    return [dict(item) for item in raw_lineages if isinstance(item, dict)]
+
+
+def _augment_public_payload_with_lineages(public_payload: dict, extra_lineages: list[dict] | dict | None = None) -> None:
     node_lookup = {node["id"]: node for node in public_payload["nodes"]}
     topic_nodes = [node for node in public_payload["nodes"] if node["type"] == "topic"]
+    topic_lookup = {node["id"]: node for node in topic_nodes}
     domain_lookup = {
         node["id"]: node
         for node in public_payload["nodes"]
         if node["type"] == "domain"
     }
-    source_node_id = "source:curated_authority_lineages"
-    source_label = "Curated Authority Lineages"
-    source_reference_label = "Curated lineage note"
+    legal_domain = str(public_payload.get("meta", {}).get("legal_domain", "")).strip().lower()
+    source_node_id = "source:authority_lineages"
+    source_label = "Authority Lineages"
+    source_reference_label = "Authority lineage note"
 
     if source_node_id not in node_lookup:
         source_node = {
             "id": source_node_id,
             "label": source_label,
             "type": "source",
-            "summary": "Curated Hong Kong and UK authority lineages used to structure stare decisis paths in the public tree.",
+            "summary": "Curated and verified auto-discovered authority lineages used to structure stare decisis paths in the public tree.",
             "references": [],
             "links": [],
             "metrics": {"kind": "note"},
@@ -479,12 +500,21 @@ def _augment_public_payload_with_lineages(public_payload: dict) -> None:
         edge.update(extra)
         public_payload["edges"].append(edge)
 
+    lineages_to_apply = curated_lineages_for_domain(legal_domain) + _coerce_extra_lineages(extra_lineages)
     meta_lineages: list[dict] = []
-    for lineage in CURATED_LINEAGES:
-        matched_topics = _match_lineage_topics(lineage, topic_nodes, domain_lookup)
+    for lineage in lineages_to_apply:
+        if not _lineage_domain_matches(lineage, legal_domain):
+            continue
+        if lineage.get("topic_ids"):
+            matched_topics = [topic_lookup[topic_id] for topic_id in lineage.get("topic_ids", []) if topic_id in topic_lookup]
+        else:
+            matched_topics = _match_lineage_topics(lineage, topic_nodes, domain_lookup)
         matched_topic_ids = [topic["id"] for topic in matched_topics]
         matched_topic_labels = [topic["label"] for topic in matched_topics]
+        if not matched_topic_ids:
+            continue
         members: list[dict] = []
+        lineage_source = str(lineage.get("source", "curated")).strip() or "curated"
 
         for position, authority in enumerate(lineage["cases"], start=1):
             authority_type = _lineage_authority_type(authority["label"])
@@ -568,6 +598,7 @@ def _augment_public_payload_with_lineages(public_payload: dict) -> None:
                         "note": authority.get("note", ""),
                         "topic_ids": matched_topic_ids,
                         "topic_labels": matched_topic_labels,
+                        "source": lineage_source,
                     }
                 )
 
@@ -633,6 +664,13 @@ def _augment_public_payload_with_lineages(public_payload: dict) -> None:
                 "topic_labels": matched_topic_labels,
                 "members": members,
                 "codes": sorted({member["code"] for member in members if member.get("code")}),
+                "source": lineage_source,
+                "domain_tags": list(lineage.get("domain_tags", [])),
+                "confidence_status": lineage.get("confidence_status", "established" if lineage_source == "curated" else "preliminary"),
+                "confidence_score": float(lineage.get("confidence_score", 1.0 if lineage_source == "curated" else 0.65)),
+                "created_at": lineage.get("created_at", ""),
+                "last_updated": lineage.get("last_updated", ""),
+                "discovery_rounds": lineage.get("discovery_rounds", []),
             }
         )
 
@@ -649,7 +687,8 @@ def _augment_public_payload_with_lineages(public_payload: dict) -> None:
     if lineage_note not in notes:
         notes.append(lineage_note)
     public_payload["meta"]["lineages"] = meta_lineages
-    public_payload["meta"]["curated_lineage_count"] = len(meta_lineages)
+    public_payload["meta"]["curated_lineage_count"] = sum(1 for lineage in meta_lineages if lineage.get("source") == "curated")
+    public_payload["meta"]["auto_lineage_count"] = sum(1 for lineage in meta_lineages if lineage.get("source") == "auto")
     public_payload["meta"]["lineage_codes"] = {
         "CODI": "Codified by Hong Kong ordinance",
         "APPD": "Applied on the same principle",
@@ -659,6 +698,10 @@ def _augment_public_payload_with_lineages(public_payload: dict) -> None:
         "ORIG": "Originating authority in the lineage",
     }
     _recompute_public_connectivity(public_payload)
+
+
+def augment_public_payload_with_lineages(public_payload: dict, extra_lineages: list[dict] | dict | None = None) -> None:
+    _augment_public_payload_with_lineages(public_payload, extra_lineages=extra_lineages)
 
 
 def _normalized_public_label(value: str) -> str:

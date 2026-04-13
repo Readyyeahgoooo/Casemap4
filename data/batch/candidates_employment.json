@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T07:17:48.082345+00:00",
+    "domain": "employment"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2021] HKCFI 1812",
+      "case_name": "NG HON LAM EDGAR v. THE HONG KONG HOUSING AUTHORITY",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-06-25T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Chow JA (sitting as an additional judge of the Court of First Instance) in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/1812",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Test for unlawful discrimination",
+          "paraphrase_en": "To establish unlawful discrimination, a complainant must first show they were treated differently from a person in a comparable situation based on a prohibited ground, such as sexual orientation. Only after this is shown does the court consider if the differential treatment is justified.",
+          "paragraph_span": "[] (following 'Accordingly, the initial step...')",
+          "cited_statutes": [
+            "Article 25 of the Basic Law",
+            "Articles 22(1) and 1(1) of the Hong Kong Bill of Rights"
+          ]
+        },
+        {
+          "principle_label": "Court's role in analogous situation analysis",
+          "paraphrase_en": "It is a question of law for the court, not a public authority, to decide whether two persons or groups are in a relevantly similar or analogous situation for a discrimination claim, considering the specific context of the differential treatment.",
+          "paragraph_span": "[] (2) (The suggestion that due or significant weight...)",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Unified test for constitutionality and discrimination",
+          "paraphrase_en": "The same test is used to determine if differential treatment is unlawful as is used to determine if incursions into constitutionally protected rights are lawful. In a discrimination context, this is called the 'justification' test.",
+          "paragraph_span": "[] [21]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "First step of justification test",
+          "paraphrase_en": "The first step in justifying differential treatment is to ask whether it pursues a legitimate aim.",
+          "paragraph_span": "[50]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Margin of appreciation in social policy",
+          "paraphrase_en": "In matters of general economic or social strategy, national authorities enjoy a wide margin of appreciation. However, this wide margin does not justify adopting measures that violate the prohibition of discrimination or fail the proportionality requirement.",
+          "paragraph_span": "[] [87]-[88]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "QT v Director of Immigration",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the reasoning from QT regarding the analysis of analogous situations and the unified test for constitutionality and discrimination."
+        },
+        {
+          "target_case_name": "Infinger case",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The court declines to defer judgment pending the appeal in the Infinger case, distinguishing the procedural circumstances and prior delays."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:34:55.198312+00:00",
+      "paragraph_count": 230,
+      "domain_classification": {
+        "domain": "employment",
+        "confidence": 0.3,
+        "signals": [
+          "employment_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "employment": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKFC 28",
+      "case_name": "TKY v. YSGA",
+      "court_code": "Family Court",
+      "decision_date": "2024-02-09T00:00:00+08:00",
+      "judges": [
+        "Before: HH Judge C.K. Chan in Chambers (Not Open to Public) Mode of Hearing: By way of written submissions"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkfc/2024/28",
+      "topic_id": "computer_crimes",
+      "topic_label": "Computer Crimes",
+      "module_id": "public_order_regulatory",
+      "subground_id": "computer_crimes",
+      "principles": [
+        {
+          "principle_label": "Reasonable prospect of appeal test",
+          "paraphrase_en": "The standard for establishing a reasonable prospect of success on appeal requires that the prospects be more than merely fanciful, but they do not need to reach the level of being probable.",
+          "paragraph_span": "[5]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Discrimination in parental suitability assessment",
+          "paraphrase_en": "A ruling may be fundamentally erroneous and discriminatory if it is based on a parent's gender to conclude they are more suitable to meet the needs of children of a particular sex, warranting reconsideration of a care and control order.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of emotional instability and future care",
+          "paraphrase_en": "A parent's isolated behavior during a tense incident, such as raising their voice, does not necessarily constitute reprehensible conduct that must negatively affect the assessment of their future ability to provide good care for children.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "SMSE v KL",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the test for 'reasonable prospect of success' from SMSE v KL to the appeal context."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:29:04.459299+00:00",
+      "paragraph_count": 64,
+      "domain_classification": {
+        "domain": "employment",
+        "confidence": 0.3,
+        "signals": [
+          "employment_keywords"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "employment": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    }
+  ]
+}

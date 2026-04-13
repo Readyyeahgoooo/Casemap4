@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from copy import deepcopy
+
 CURATED_LINEAGES = [
     {
         "id": "interpretation_context_text",
@@ -875,3 +877,90 @@ CURATED_LINEAGES = [
         ],
     },
 ]
+
+
+_LINEAGE_DOMAIN_HINTS: dict[str, set[str]] = {
+    "criminal": {
+        "joint",
+        "enterprise",
+        "secondary",
+        "confession",
+        "voluntariness",
+        "provocation",
+        "identification",
+        "turnbull",
+        "mens",
+        "rea",
+        "intention",
+        "sentencing",
+        "tariff",
+        "drug",
+        "self-defence",
+        "hearsay",
+        "money",
+        "laundering",
+        "dishonesty",
+        "bail",
+    },
+    "contract": {
+        "interpretation",
+        "consideration",
+        "penalty",
+        "undue",
+        "unconscionability",
+        "intermediate",
+        "terms",
+    },
+    "civil": {
+        "estoppel",
+        "negligence",
+        "judicial",
+        "review",
+        "unfair",
+        "prejudice",
+        "mareva",
+        "freezing",
+        "ancillary",
+        "relief",
+    },
+}
+
+
+def infer_lineage_domain_tags(lineage: dict) -> list[str]:
+    """Infer broad legal-domain tags for older curated lineage entries."""
+    explicit = lineage.get("domain_tags") or lineage.get("domains")
+    if explicit:
+        return sorted({str(item).strip().lower() for item in explicit if str(item).strip()})
+
+    text = " ".join(
+        [
+            str(lineage.get("id", "")),
+            str(lineage.get("title", "")),
+            " ".join(str(item) for item in lineage.get("topic_hints", [])),
+        ]
+    ).lower()
+    matched = {
+        domain
+        for domain, hints in _LINEAGE_DOMAIN_HINTS.items()
+        if any(hint in text for hint in hints)
+    }
+    if "contract" in matched:
+        matched.add("civil")
+    return sorted(matched or {"civil"})
+
+
+def curated_lineages_for_domain(domain_id: str | None = None) -> list[dict]:
+    """Return curated lineages with effective domain tags and source metadata."""
+    normalized_domain = (domain_id or "").strip().lower()
+    lineages: list[dict] = []
+    for raw_lineage in CURATED_LINEAGES:
+        lineage = deepcopy(raw_lineage)
+        tags = infer_lineage_domain_tags(lineage)
+        lineage["domain_tags"] = tags
+        lineage.setdefault("source", "curated")
+        lineage.setdefault("confidence_status", "established")
+        lineage.setdefault("confidence_score", 1.0)
+        if normalized_domain and normalized_domain not in tags and not (normalized_domain == "civil" and "contract" in tags):
+            continue
+        lineages.append(lineage)
+    return lineages

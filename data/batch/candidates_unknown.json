@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T11:08:18.413993+00:00",
+    "domain": "unknown"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2023] HKCFI 80",
+      "case_name": "CHEUNG SUEN HEUNG v. HOSPITAL AUTHORITY",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-01-06T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Leung in Chambers (By Paper Disposal)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/80",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "unknown",
+        "confidence": 0.0,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {},
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:03:58.586424+00:00",
+      "paragraph_count": 61
+    },
+    {
+      "neutral_citation": "[2021] HKCA 706",
+      "case_name": "MOK MEI LING REKEI v. LAU MUK FAT",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-05-14T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Cheung, Au JJA and Lisa Wong J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/706",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Exclusion of non-exhibited evidence",
+          "paraphrase_en": "A court cannot rely on documents or pleadings that have not been properly exhibited as evidence in the proceedings.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consideration of unregistered instruments for locus standi",
+          "paraphrase_en": "When determining whether a person has standing to bring an application, the court may consider matters related to instruments that are pending registration.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Effect of sham transactions",
+          "paraphrase_en": "If a transaction is found to be a sham, it is legally ineffective and cannot convey any interest in property.",
+          "paragraph_span": "[b]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Summary determination inappropriate with triable issue",
+          "paraphrase_en": "An originating summons should not be determined summarily if there is at least one triable issue that requires a full trial.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Material factual error as basis for appeal",
+          "paraphrase_en": "A material error of fact that forms a crucial basis for a judge's finding can constitute a valid ground for appeal.",
+          "paragraph_span": "[54]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "unknown",
+        "confidence": 0.0,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {},
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:07:52.118016+00:00",
+      "paragraph_count": 156
+    }
+  ]
+}

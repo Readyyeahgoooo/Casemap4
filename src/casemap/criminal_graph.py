@@ -45,6 +45,8 @@ def build_criminal_graph_artifacts(
     embedding_backend: str = "auto",
     embedding_model: str = "",
     embedding_dimensions: int = 0,
+    discover_lineages: bool = False,
+    lineages_path: str | Path | None = None,
 ) -> dict:
     _sync_patchable_dependencies()
     return _domain_graph.build_criminal_graph_artifacts(
@@ -59,6 +61,8 @@ def build_criminal_graph_artifacts(
         embedding_backend=embedding_backend,
         embedding_model=embedding_model,
         embedding_dimensions=embedding_dimensions,
+        discover_lineages=discover_lineages,
+        lineages_path=lineages_path,
     )
 
 

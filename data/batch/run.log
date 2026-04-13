@@ -1,0 +1,2180 @@
+[2026年 4月13日 星期一 04時39分02秒 HKT] Pipeline starting (PID 83051, caffeinate PID 83099)
+
+============================================================
+  ROUND 1/3
+============================================================
+
+[round 1] Phase: DISCOVER
+[discover] Reusing existing report (generated 22 min ago) — data/batch/gap_report.json
+[apply] 12 new topics ready for next crawl round → data/batch/new_topics_applied.json
+
+[round 1] Phase: CRAWL (12 new topics added)
+[resume] Loaded 1 existing candidates from data/batch/candidates.json
+[batch] Processing 72 topics, max 50 cases each
+
+--- Topic: Actus Reus (actus_reus) ---
+  [ok] [2025] HKCFA 9: HKSAR v. LI QINGBIN (李慶彬) -> 5 principles
+  [ok] [2025] HKCFA 9: HKSAR v. LI QINGBIN (李慶彬) -> 5 principles
+  [ok] [2022] HKCFI 666: HKSAR v. WOO TIM WING -> 2 principles
+  [ok] [2022] HKCFI 666: HKSAR v. WOO TIM WING -> 2 principles
+  [ok] [2021] HKCFA 37: HKSAR v. TONG WAI HUNG (湯偉雄) -> 5 principles
+  [ok] [2024] HKCFI 404: HKSAR v. TANG PUI YEE -> 5 principles
+  [ok] [2024] HKCFI 692: HKSAR v. NAWAZ AKMAL -> 2 principles
+  [ok] [2021] HKCFA 24: HKSAR v. LEUNG CHUNG HANG SIXTUS (梁頌恆) -> 5 principles
+  [ok] [2024] HKCFI 2107: SECRETARY FOR JUSTICE v. LI KWOK WING AND ANOTHER -> 3 principles
+  [ok] [2026] HKCFI 1475: HKSAR v. LAM HOI YAN -> 5 principles
+  [ok] [2022] HKCFI 839: SECRETARY FOR JUSTICE v. HUI CHI FUNG -> 4 principles
+  [ok] [2021] HKCFA 39: HKSAR v. CHO TING KAI (曹挺楷) AND OTHERS -> 3 principles
+  [ok] [2022] HKCFI 2471: SECRETARY FOR JUSTICE v. TANG LIN LING -> 2 principles
+  [ok] [2022] HKCA 83: HKSAR v. CHIN CHIN FAI -> 4 principles
+  [ok] [2024] HKCFI 625: HKSAR v. HUNG SZE HO -> 4 principles
+  [ok] [2024] HKCA 1067: HIGH FASHION NEW MEDIA CORPORATION LTD (suing on b -> 5 principles
+  [ok] [2023] HKCA 216: HKSAR v. C.H.P. AND OTHERS -> 5 principles
+  [ok] [2022] HKCA 659: SAIF PARTNERS II L P AND ANOTHER v. JOE ZHIXIONG Z -> 2 principles
+  [ok] [2022] HKCFI 231: HKSAR v. BORCHERT HOLGER TORSTEN -> 4 principles
+  [ok] [2025] HKCA 718: HKSAR v. YIP KA YU -> 0 principles
+  [ok] [2020] HKDC 614: HKSAR v. LU YANBO -> 4 principles
+  [ok] [2021] HKCFI 2515: HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY AND ANOTHE -> 5 principles
+  [ok] [2025] HKDC 1865: HKSAR v. QUAN MENGFAN -> 3 principles
+  [ok] [2024] HKCFA 14: HKSAR v. TSIM SUM KIT, ADA -> 4 principles
+  [ok] [2021] HKCFI 2200: HKSAR v. TONG YING KIT -> 5 principles
+  [ok] [2024] HKCA 191: HKSAR v. MA CHUN KIT -> 4 principles
+  [ok] [2021] HKCFI 3439: HKSAR v. CHAN WAI HO -> 5 principles
+  [ok] [2022] HKCFI 281: HKSAR v. TSE SUI HING -> 3 principles
+  [ok] [2025] HKCA 935: HKSAR v. TANG KA MAN -> 3 principles
+  [ok] [2023] HKCFI 2791: HKSAR v. LIN LING -> 2 principles
+  [ok] [2022] HKCFI 2269: HKSAR v. WONG WING YI -> 4 principles
+  [ok] [2026] HKCFI 1251: ALLIED WELI DEVELOPMENT LTD (In Liquidation) v. CH -> 4 principles
+  [ok] [2022] HKCFI 3233: RE AN APPLICATION BY MR TIMOTHY WYNN OWEN KC -> 3 principles
+  [ok] [2021] HKCA 1831: HKSAR v. CHUNG CHUN FUNG AND ANOTHER -> 5 principles
+  [ok] [2024] HKDC 1816: HKSAR v. LUNG HON LAM AND ANOTHER -> 5 principles
+  [ok] [2024] HKDC 2057: HKSAR v. FAN TING YAN, YUKI -> 4 principles
+  [ok] [2022] HKCA 1234: HKSAR v. SHUM HIU LUN -> 4 principles
+  [ok] [2021] HKCA 603: HKSAR v. LEUNG MING-CHUNG -> 3 principles
+  [ok] [2024] HKCFI 2855: HKSAR v. LAM LAI SIN -> 4 principles
+  [ok] [2021] HKCFI 727: SAIF PARTNERS II L.P. AND ANOTHER v. JOE ZHIXIONG  -> 2 principles
+  [ok] [2023] HKCA 309: SECRETARY FOR JUSTICE v. WONG WING-YI -> 5 principles
+  [ok] [2021] HKCFI 3778: SECRETARY FOR JUSTICE v. LAI CHEE YING -> 5 principles
+  [ok] [2021] HKCFI 1646: HKSAR v. LAU TING YIN -> 3 principles
+  [ok] [2022] HKCFI 2149: HKSAR v. LI KWAN CHIU -> 3 principles
+  [ok] [2021] HKCFI 3812: HKSAR v. ASIF AHFAQ MEHMOOD AND OTHERS -> 4 principles
+  [ok] [2022] HKCA 1750: HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY -> 3 principles
+  [ok] [2023] HKCA 927: HKSAR v. TSIM SUM-KIT, ADA -> 2 principles
+  [ok] [2023] HKDC 925: HKSAR v LEE CHUNG FAI AND ANOTHER -> 2 principles
+  [ok] [2025] HKCFI 1667: HKSAR v. CHOW KA SHING AND ANOTHER -> 5 principles
+  [ok] [2021] HKCA 348: KOT SEE FOR v. LAM MAN CHEUNG AND ANOTHER -> 5 principles
+  [ok] [2022] HKCFA 27: HKSAR v. CHOY KIN YUE (蔡健瑜) -> 5 principles
+
+--- Topic: Causation (causation) ---
+  [ok] [2023] HKCFI 1965: INVEST GAIN LTD v. NOVEL GOOD LTD -> 3 principles
+  [ok] [2022] HKDC 247: MAK MEI LING v. DR. POON NAI YUN -> 3 principles
+  [ok] [2022] HKCFI 306: YINGGAO RESOURCES LTD AND ANOTHER v. THE HONGKONG  -> 5 principles
+  [ok] [2025] HKDC 1719: KWOK CARMAN v. CHENG SAI WAH -> 3 principles
+  [ok] [2024] HKCFI 1820: HOU HSIAO BING v. REN BAOGEN -> 3 principles
+  [ok] [2022] HKDC 59: CHIU KWAI YUK for herself and on behalf of members -> 3 principles
+  [ok] [2021] HKDC 77: MAK MEI LING v. DR. POON NAI YUN -> 4 principles
+  [ok] [2021] HKCFI 1095: CHAU YUEN HEUNG v. JEKCO ELEVATORS LTD -> 5 principles
+  [ok] [2022] HKCA 799: TANG HO HEI v. CHAN PO MEI -> 4 principles
+  [ok] [2021] HKCFI 852: SUN MING LOK, A MINOR SUING BY HIS MOTHER AND NEXT -> 5 principles
+  [ok] [2024] HKCFI 691: LEUNG KAI CHUN, suing by his mother and next frien -> 0 principles
+  [ok] [2022] HKCFI 3597: YINGGAO RESOURCES LTD AND ANOTHER v. THE HONGKONG  -> 4 principles
+  [ok] [2023] HKCFI 3353: LAM KAI KWONG v. UP CREATION LTD AND ANOTHER -> 3 principles
+  [ok] [2024] HKDC 1689: CHAN KI v. GENERAL SECURITY (H.K.) LTD -> 0 principles
+  [ok] [2025] HKCFA 10: CB v. COMMISSIONER OF POLICE, SECRETARY FOR JUSTIC -> 3 principles
+  [ok] [2021] HKDC 1630: WAT TING CHEONG PAUL v. PROSPER JET LTD t/a LA KAF -> 5 principles
+  [ok] [2024] HKDC 1145: WONG YUN WA, administratrix of the estate of CHAU  -> 4 principles
+  [ok] [2023] HKCFI 1156: KO PUI YEE v. JONES LANG LASALLE MANAGEMENT SERVIC -> 4 principles
+  [ok] [2026] HKCFI 229: POOSAALA RAM PRASAD v. THE HONGKONG AND SHANGHAI B -> 3 principles
+  [ok] [2025] HKCA 954: HKSAR v. NG MA YU KANG AND ANOTHER -> 5 principles
+  [ok] [2025] HKCFI 304: CHINA CANDY HOLDINGS LTD v. HLB HODGSON IMPEY CHEN -> 3 principles
+  [ok] [2023] HKDC 1259: CHAU KA HUNG v. CHUNG CHUN HON -> 4 principles
+  [ok] [2025] HKDC 2183: HE ZHIJUAN v. HONG YIP SERVICE COMPANY LTD -> 0 principles
+  [ok] [2023] HKDC 644: WILMES, FRANZ JOSEF v. QUEEN MARY HOSPITAL -> 4 principles
+  [ok] [2024] HKCA 1130: YINGGAO RESOURCES LTD AND ANOTHER v. THE HONGKONG  -> 5 principles
+  [ok] [2023] HKDC 1249: SEAN LEONARD v. HONG KONG HOSPITAL AUTHORITY AND O -> 4 principles
+  [ok] [2021] HKCA 897: SECURITIES AND FUTURES COMMISSION v. WONG WAI KWON -> 4 principles
+  [ok] [2021] HKDC 684: CHING KWONG FAT v. FUNG DIN CHUNG RICKIE AND ANOTH -> 3 principles
+  [ok] [2025] HKCFI 1600: KWAN KWOK KI v. WONG TUNG HUNG AND OTHERS -> 4 principles
+  [ok] [2022] HKCFI 3028: CHAN KAM CHEUNG v. RONNIE K W CHOI & KEVIN K F LO  -> 0 principles
+  [ok] [2023] HKDC 193: NG WAI TAO v. SIU PATRICK CHUN WAI AND ANOTHER -> 5 principles
+  [ok] [2022] HKDC 1332: CHENG SIU MING v. CHAN YUNG MAN -> 0 principles
+  [ok] [2026] HKDC 602: MOHAMMAD, RAHEES KHAN v. MOK, SIU FAI KENNEDY -> 4 principles
+  [ok] [2021] HKCA 256: YEUNG LAI PING v. SECRETARY FOR JUSTICE -> 5 principles
+  [ok] [2025] HKCFI 453: THE JOINT AND SEVERAL LIQUIDATORS OF DAYS IMPEX LT -> 3 principles
+  [ok] [2021] HKCA 62: INVEST GAIN LTD v. NOVEL GOOD LTD -> 5 principles
+  [ok] [2024] HKCFI 3253: YOICHI KUGA v. SARONIC HOLDINGS LTD -> 4 principles
+  [ok] [2024] HKDC 1052: KAMALJIT KAUR v. FAIRWOOD FAST FOOD LTD -> 5 principles
+  [ok] [2023] HKCA 662: HKSAR v. KWAN HAU CHI, VANESSA -> 5 principles
+  [ok] [2024] HKDC 469: SANDHU HARPREET SINGH (formerly known as HARPREET- -> 2 principles
+  [ok] [2022] HKDC 547: ACTIN TRADING LTD v. THE INCORPORATED OWNERS OF CH -> 5 principles
+  [ok] [2025] HKDC 943: KWOK CARMAN v. CHENG SAI WAH -> 3 principles
+  [ok] [2024] HKCA 528: HKSAR v. ISLAM JAVED IQBAL -> 4 principles
+  [ok] [2025] HKCFI 6157: HUANG WEIHONG v. TAO KEE ENGINEERING COMPANY LTD A -> 0 principles
+  [ok] [2024] HKDC 1024: HKSAR v. SO CHUN MAN -> 4 principles
+  [ok] [2023] HKCFI 818: CHAN PAK YUEN v. LAM MAN KIT -> 2 principles
+  [ok] [2021] HKDC 1456: LAW SIN HA v. CONFIDENTIAL MATERIALS DESTRUCTION S -> 5 principles
+  [ok] [2022] HKCFI 585: B K AMRIT v. G-CLADDS LTD AND ANOTHER -> 4 principles
+  [ok] [2023] HKCFI 1189: TAIPING TRUSTEES LTD v. BOSC INTERNATIONAL COMPANY -> 5 principles
+
+--- Topic: Intention and Knowledge (intention) ---
+  [ok] [2025] HKDC 1208: LEUNG YEE SHAN AND OTHERS v. LEUNG KIN WING -> 4 principles
+  [ok] [2021] HKDC 1511: SIT LAI YUK v. TSE HAU TANG -> 2 principles
+  [ok] [2021] HKCA 187: WONG LEI AH v. LEE JIM WING -> 3 principles
+  [ok] [2024] HKCFA 25: HKSAR v. TAM TAK CHI (譚得志) -> 4 principles
+  [ok] [2025] HKCA 534: WONG CHEE SING (OR WONG CHE SING) (by his next fri -> 5 principles
+  [ok] [2022] HKCFI 3031: CHAN CHUN NI v. CHAN NGAI KEUNG -> 4 principles
+  [ok] [2024] HKCFI 2753: LEUNG YIU MAN v. CHU KUEN -> 4 principles
+  [ok] [2023] HKDC 930: THE CHINESE CULTURAL STUDIES ASSOCIATION formerly  -> 1 principles
+  [ok] [2025] HKCFI 974: PANG KIT PING, the administratrix of the estate of -> 3 principles
+  [ok] [2025] HKCFI 1629: CHAU KWAN LAM v. CHAU KA YEE CARIE -> 5 principles
+  [ok] [2025] HKCFA 4: HKSAR v. TAM TAK CHI (譚得志) -> 5 principles
+  [ok] [2022] HKCFI 1750: SO CHUI WAH v. QU XUANBAI -> 2 principles
+  [ok] [2021] HKDC 95: MA HOW JEE v. THE PERSONAL REPRESENTATIVES OF MAH  -> 2 principles
+  [ok] [2021] HKCFI 2932: HKSAR v. YAN CHUN NAM -> 4 principles
+  [ok] [2023] HKDC 637: LAU WAI KEI v. YIU SZE WAN -> 3 principles
+  [ok] [2023] HKCFI 1039: ZHAI JIN CHENG v. WANG LIJUN AND ANOTHER -> 4 principles
+  [ok] [2024] HKDC 1229: POON MEI YUNG v. CHOI OI YAU -> 5 principles
+  [ok] [2021] HKDC 665: CHEN YUET WA EVA v. CHAN HO HEI -> 5 principles
+  [ok] [2025] HKCFI 2924: NOVEL DAY CREDIT LTD (formerly known as I-ACCESS F -> 5 principles
+  [ok] [2022] HKFC 230: YYT v. CCM AND OTHERS -> 4 principles
+  [ok] [2022] HKCFI 1087: LAI SUK KING v. THE PERSONAL REPRESENTATIVE OF THE -> 5 principles
+  [ok] [2024] HKCFA 15: AD HOC COMMITTEE (comprising CMB Wing Lung Bank Lt -> 5 principles
+  [ok] [2023] HKDC 548: YU WANG YING v. CHAN KEUNG AND OTHERS -> 5 principles
+  [ok] [2024] HKDC 71: CHUI CHI HUNG v. CHUI CHI WAI -> 3 principles
+  [ok] [2022] HKDC 981: HKSAR v. LAI MAN LING AND OTHERS -> 4 principles
+  [ok] [2022] HKFC 179: ZSL v. TMF AND ANOTHER -> 1 principles
+  [ok] [2024] HKDC 1401: SHUM YUK LUN v. CROWN SURPLUS INTERNATIONAL LTD -> 5 principles
+  [ok] [2022] HKDC 610: FUNG PIK WAN v. LAM YAU SUM (formerly known as LAM -> 5 principles
+  [ok] [2025] HKCFI 4248: TSOI SHEK LEUNG v. CHENG FU YING -> 4 principles
+  [ok] [2026] HKDC 78: LI YILIN, the administratrix of the estate of YIP  -> 3 principles
+  [ok] [2023] HKCFI 1583: TAM SUI LIM WILLIAM v. FUNG HO -> 4 principles
+  [ok] [2025] HKCFI 4428: SUM, SIMON, the administrator of the Estate of SUM -> 5 principles
+  [ok] [2023] HKCA 625: CHAN OI KWAN v. CHAN FU WING -> 4 principles
+  [ok] [2024] HKCA 231: HKSAR v. TAM TAK CHI -> 5 principles
+  [ok] [2022] HKCA 1753: HKSAR v. OUSAINOU TOURAY -> 2 principles
+  [ok] [2023] HKDC 528: CHOW KWUN CHUNG (in his personal capacity, and as  -> 4 principles
+  [ok] [2021] HKCFI 2124: WONG YIN TAK v. YIP WAI MAN -> 4 principles
+  [ok] [2025] HKDC 1383: FU LAM LAM v. FU TING TING -> 3 principles
+  [ok] [2026] HKDC 116: LEUNG KAM v. WONG YUK LING -> 5 principles
+  [ok] [2026] HKCFI 923: BARCO INVESTMENTS LTD v. WONG YAN HO (also known a -> 3 principles
+  [ok] [2022] HKCFI 1239: YEUNG, ABRAHAM v. SUN KING KAI -> 5 principles
+  [ok] [2025] HKCFI 1354: LAM KWOK HING (as Administrator of the Estate of L -> 5 principles
+  [ok] [2025] HKDC 777: HO KWONG YUEN v. YAU YAN MAN -> 5 principles
+  [ok] [2025] HKCFI 3891: YES CAPITAL LTD v. YEUNG SE WANG STEPHEN AND ANOTH -> 5 principles
+  [ok] [2021] HKCFI 3595: WAH SUN INVESTMENTS LTD v. WEALTHY BASE PROPERTIES -> 0 principles
+  [ok] [2024] HKCFI 1608: KO YIN FUN v. KO CHI HUNG AND ANOTHER -> 4 principles
+  [ok] [2025] HKCFI 2046: CHENG CHING FONG v. TING SHUK KAY PEGGY, Executrix -> 5 principles
+  [ok] [2025] HKCA 203: KWAN KWAI LIN AND ANOTHER v. YEUNG ON KI -> 3 principles
+  [ok] [2021] HKCFI 2018: THE JOINT AND SEVERAL TRUSTEES OF THE PROPERTY OF  -> 4 principles
+  [ok] [2023] HKDC 274: TSE HO KONG v. LIU WEIRONG -> 5 principles
+
+--- Topic: Recklessness and Dishonesty (recklessness_dishonesty) ---
+  [ok] [2021] HKCFI 2245: HKSAR v. HO HIU LONG -> 5 principles
+  [ok] [2022] HKCFI 3584: HKSAR v. CHAN CHEUK HEI -> 3 principles
+  [ok] [2023] HKCA 1351: HKSAR v. SHAHID MOHAMMAD SULEMAN -> 3 principles
+  [ok] [2025] HKDC 361: HKSAR v. YUEN WAI KIT -> 0 principles
+  [ok] [2024] HKDC 516: HKSAR v. KWONG CHI SING -> 3 principles
+  [ok] [2023] HKDC 174: YIP WAI TAK VIVIAN v. LEE KA WO ESMOND AND OTHERS -> 5 principles
+  [ok] [2023] HKCFI 1847: E & P GLOBAL HOLDINGS LTD (formerly known as SIBER -> 5 principles
+  [ok] [2024] HKCA 390: HKSAR v. YIP KA YU -> 5 principles
+  [ok] [2021] HKCFI 462: WILMES FRANZ JOSEF v. CORONER, WEST KOWLOON COURT -> 3 principles
+  [ok] [2022] HKDC 47: HKSAR v. CHOI KWAN KIN AND ANOTHER -> 2 principles
+  [ok] [2022] HKCFI 2652: GLORY SKY FINANCE LTD v. CHEN JIANHUA AND ANOTHER -> 4 principles
+  [ok] [2023] HKDC 159: HKSAR v CHENG CHUN WAI -> 3 principles
+  [ok] [2025] HKDC 56: HKSAR v. WRIGHT JAMES MICHAEL -> 2 principles
+  [ok] [2025] HKCA 573: HKSAR v. YIP KA YU -> 5 principles
+  [ok] [2021] HKCFI 779: LAM POK (JIMMY) v. LEE HIN LONG (TIMOTHY LEE)AND A -> 2 principles
+  [ok] [2024] HKDC 676: HKSAR v. YU CHI KIT -> 0 principles
+  [ok] [2025] HKCA 870: HKSAR v. CHAN SZE CHUN -> 4 principles
+  [ok] [2022] HKCA 1877: HKSAR v. MEREDITH GERALD SYDNEY -> 3 principles
+  [ok] [2023] HKCA 65: 張侃 v. 尚品匯(香港)國際貿易有限公司 -> 1 principles
+  [ok] [2022] HKCFI 1378: HKSAR v. HOSSAIN AEJAZ -> 3 principles
+  [ok] [2023] HKDC 379: HKSAR v. LAU KAI MAN -> 3 principles
+  [ok] [2025] HKDC 2075: HKSAR v. TANG TAI WAI -> 1 principles
+  [ok] [2024] HKCFI 1434: LO PO WAI, HARRY v. WONG YEE CHUK -> 4 principles
+  [ok] [2022] HKDC 837: HKSAR v. LAU KIT TONG -> 2 principles
+  [ok] [2022] HKDC 1120: WOO KWOK PING v. THE INCORPORATED MANAGEMENT COMMI -> 4 principles
+  [ok] [2021] HKDC 607: HKSAR v. CHAN CHUNG PO BALL -> 0 principles
+  [ok] [2021] HKDC 850: HKSAR v. WHITE NATHAN AND ANOTHER -> 4 principles
+  [ok] [2021] HKDC 818: HKSAR v. TSE MING HIN -> 3 principles
+  [ok] [2024] HKDC 298: HKSAR v. YIU CHI KUEN -> 2 principles
+  [ok] [2024] HKDC 439: HKSAR v. YEUNG MING KIT -> 3 principles
+  [ok] [2021] HKDC 51: HKSAR v. TONG PAK-FAI, SAMMY -> 0 principles
+  [ok] [2021] HKDC 511: HKSAR v. MAN CHI KWONG -> 5 principles
+  [ok] [2021] HKCA 1778: LEUNG CHI CHING CANDY v. YEUNG HON SING -> 5 principles
+  [ok] [2023] HKDC 438: HKSAR v. WONG PUI FUN -> 4 principles
+  [ok] [2022] HKCFI 2600: HKSAR v. PUN KAM HUNG -> 4 principles
+  [ok] [2025] HKDC 1579: HKSAR v. HO KA PO -> 1 principles
+  [ok] [2026] HKCFI 460: NATURAL DAIRY (NZ) HOLDINGS LTD (IN PROVISIONAL LI -> 5 principles
+  [ok] [2022] HKCFI 111: SANTA MONICA EQUITY INC. v. CHRISTELLE FILA NZOLOL -> 4 principles
+  [ok] [2024] HKDC 2087: HKSAR v. WRIGHT JAMES MICHAEL -> 2 principles
+  [ok] [2022] HKDC 731: 張侃 V. 尚品滙(香港)國際貿易有限公司 -> 4 principles
+  [ok] [2024] HKDC 510: HKSAR v. FUNG KA WAI ROGER -> 5 principles
+  [ok] [2021] HKCFI 3008: HKSAR v. WONG KWOK LEE AND OTHERS -> 0 principles
+  [ok] [2025] HKDC 1039: HKSAR v. YOUNG KING CHEUNG JANUARY -> 0 principles
+  [ok] [2023] HKDC 427: HKSAR v. TONG KIN WAI -> 1 principles
+  [ok] [2024] HKDC 1695: BRETON JEAN v. HK BELLAWINGS.JET LTD AND OTHERS -> 5 principles
+  [ok] [2026] HKCFA 2: SAMANTHA JANE BRADLEY v. SIR ELLY KADOORIE & SONS  -> 5 principles
+
+--- Topic: Secondary Liability (secondary_liability) ---
+  [ok] [2021] HKCA 1864: LAW TING PONG SECONDARY SCHOOL v. CHEN WAI WAH -> 2 principles
+  [ok] [2021] HKCA 1076: LAW TING PONG SECONDARY SCHOOL v. CHEN WAI WAH -> 0 principles
+  [ok] [2022] HKCFI 774: LANTAU INTERNATIONAL SCHOOL LTD v. SECRETARY FOR E -> 3 principles
+  [ok] [2022] HKCFI 1834: NG YAN KIT ALFRED AND ANOTHER v. EVER HONEST INDUS -> 4 principles
+  [ok] [2021] HKFC 187: P Y J v. N K S -> 2 principles
+  [ok] [2026] HKDC 401: HKSAR v. KANTHIMA MALEEMAO -> 2 principles
+  [ok] [2021] HKCA 873: LAW TING PONG SECONDARY SCHOOL v. CHEN WAI WAH -> 5 principles
+  [ok] [2025] HKFC 117: LN, by his next friend A, LM v. LK, The Executor t -> 4 principles
+  [ok] [2023] HKCFI 1175: H&M HENNES & MAURITZ GBC AB v. ZOETOP BUSINESS CO  -> 1 principles
+  [ok] [2024] HKCFI 1507: CHINNEY SHUN CHEONG BUILDING SERVICES ENGINEERING  -> 2 principles
+  [ok] [2023] HKCFA 34: LI CHIU WAH JOSEPH v. HONG KONG SOCIETY OF NOTARIE -> 3 principles
+  [ok] [2024] HKCFI 821: BRIGHT SHIPPING LTD v. CHANGHONG GROUP (HK) LTD -> 0 principles
+  [ok] [2022] HKDC 1124: HKSAR v. LAM KWAI SANG -> 3 principles
+  [ok] [2022] HKDC 1285: LAM SHUI KING v. POLLUTION & PROTECTION SERVICES L -> 5 principles
+  [ok] [2022] HKCA 1310: NLC v. YMF -> 5 principles
+  [ok] [2023] HKCA 809: LI CHIU WAH JOSEPH v. HONG KONG SOCIETY OF NOTARIE -> 2 principles
+  [ok] [2025] HKDC 1976: HKSAR v. LAU HO KEI AND OTHERS -> 2 principles
+  [ok] [2022] HKFC 183: CKFG v. WHHK -> 5 principles
+  [ok] [2023] HKFC 11: PYK v. CCLA -> 1 principles
+  [ok] [2025] HKDC 1539: HKSAR v. AN KAM FUNG -> 0 principles
+  [ok] [2021] HKCFA 13: HKSAR v. LAI KAM FUNG (賴錦鋒) -> 3 principles
+  [ok] [2026] HKCA 359: MAKHLOUFI ALI v. TORTURE CLAIMS APPEAL BOARD / NON -> 3 principles
+  [ok] [2023] HKCFI 1192: CHAN YAU LING v. HOUSING APPEAL TRIBUNAL AND ANOTH -> 3 principles
+  [ok] [2024] HKCFI 1201: HKSAR v. KONG TSZ CHUNG RYAN AND ANOTHER -> 5 principles
+  [ok] [2025] HKFC 140: LN, by his next friend A, LM v. LK, The Executor t -> 0 principles
+  [ok] [2023] HKFC 114: CLC v. OIE -> 0 principles
+  [ok] [2021] HKCA 404: SECRETARY FOR JUSTICE v. TONG WAI HUNG AND OTHERS -> 5 principles
+  [ok] [2024] HKDC 1195: HKSAR v. NG KONG FAI AND OTHERS -> 3 principles
+  [ok] [2022] HKDC 724: HKSAR v. SAFDER MAJAD -> 3 principles
+  [ok] [2026] HKCFI 1331: DO THI NGA v. TORTURE CLAIMS APPEAL BOARD / NON-RE -> 2 principles
+  [ok] [2025] HKCFI 1884: HKSAR v. KATA MALUSI NICHOLAS -> 0 principles
+  [ok] [2021] HKFC 203: NLC v. YMF -> 4 principles
+  [ok] [2021] HKCFI 1812: NG HON LAM EDGAR v. THE HONG KONG HOUSING AUTHORIT -> 5 principles
+  [ok] [2026] HKDC 50: HKSAR v. LO WING PING -> 1 principles
+  [ok] [2024] HKCFI 2685: 阮旻僖 v. 中華基督教會基智中學 -> 0 principles
+  [ok] [2025] HKCFI 785: HKSAR v. TANG YIK TSUN -> 3 principles
+  [ok] [2024] HKCFI 2347: TOP GEAR INVESTMENT LTD AND OTHERS v. PACM GROUP ( -> 4 principles
+  [ok] [2023] HKDC 1421: WASHING BO LAUNDRY LTD v. NG KWOK WAI AND ANOTHER -> 4 principles
+  [ok] [2025] HKDC 1867: HKSAR v. FENG KA HO AND ANOTHER -> 3 principles
+  [ok] [2021] HKDC 1288: HKSAR v. THAPA MANISH AND ANOTHER -> 2 principles
+  [ok] [2022] HKFC 185: WMW v. CYCH -> 2 principles
+  [ok] [2022] HKDC 567: HKSAR v. LAU KA CHUN AND ANOTHER -> 3 principles
+  [ok] [2026] HKCFI 1405: RAJESH NARAIN PARMAR v. TORTURE CLAIMS APPEAL BOAR -> 0 principles
+  [ok] [2024] HKDC 1412: POON OI YIN FLORENCE v. WONG KWAN AND OTHERS -> 5 principles
+  [ok] [2023] HKDC 844: HKSAR v. IVANCHENKO DMYTRO -> 4 principles
+  [ok] [2021] HKDC 498: HKSAR v. YUNG KI CHEUNG AND ANOTHER -> 2 principles
+  [ok] [2023] HKCFI 2125: HKSAR v. YU KIN HONG AND ANOTHER -> 1 principles
+  [ok] [2024] HKCFI 3373: THE JOINT AND SEVERAL TRUSTEES OF THE PROPERTY OF  -> 2 principles
+  [ok] [2024] HKDC 70: HKSAR v. LI JINTIAN -> 1 principles
+  [ok] [2022] HKCA 1151: HKSAR v. MA CHUN MAN -> 5 principles
+
+--- Topic: Conspiracy and Attempt (conspiracy_attempt) ---
+  [ok] [2023] HKCFI 3305: MASON GROUP HOLDINGS LTD formerly known as MASON F -> 4 principles
+  [ok] [2023] HKCFI 3337: HKSAR v. LAI CHEE YING AND OTHERS -> 4 principles
+  [ok] [2021] HKDC 715: WONG KEAVEN KA HAY t/a HOI SHING SEAFOOD CO. v. CE -> 0 principles
+  [ok] [2024] HKCFI 3533: HKSAR v. SIT YI KI AND OTHERS -> 0 principles
+  [ok] [2026] HKCFI 1476: HKSAR v. LEUNG YU WING -> 4 principles
+  [ok] [2023] HKCFI 3372: HKSAR v. LEUNG TSZ CHUNG AND OTHERS -> 5 principles
+  [ok] [2021] HKCFI 2096: CHAN WAI KEUNG LAWRENCE v. AU CHI MAN ALBERT AND O -> 4 principles
+  [ok] [2026] HKCA 405: HKSAR v. HU MINGJIE -> 5 principles
+  [ok] [2025] HKCFI 2096: HKSAR v. LI SING YAN -> 4 principles
+  [ok] [2023] HKCFI 2656: TAIHEI DENGYO KAISHA, LTD v. BOK JOENG HONG KONG C -> 4 principles
+  [ok] [2025] HKCFI 1112: HKSAR v. KHO YIN TAK -> 3 principles
+  [ok] [2026] HKCFI 1096: KOO MING KOWN v. THE BAPTIST CONVENTION OF HONG KO -> 5 principles
+  [ok] [2023] HKCA 227: HKSAR v. CHUA SHIRLEY MASIGLA AND OTHERS -> 4 principles
+  [ok] [2026] HKCA 86: HKSAR v. SHING YIU FUNG -> 1 principles
+  [ok] [2025] HKCA 349: HKSAR v. WONG KIN CHUNG -> 5 principles
+  [ok] [2026] HKCFI 747: HKSAR v. LAM YAN YI AND ANOTHER -> 3 principles
+  [ok] [2021] HKCFI 569: HKSAR v. WONG CHING WANG -> 4 principles
+  [ok] [2024] HKCFI 2877: HKSAR v. CHAN TSZ FUNG -> 0 principles
+  [ok] [2023] HKCFI 840: CHAN SHU CHUN AND ANOTHER v. DR KUNG YAN SUM AND O -> 3 principles
+  [ok] [2021] HKCA 1297: HKSAR v. LAM HING CHIT -> 5 principles
+  [ok] [2025] HKCFI 4503: HKSAR v. HUI KWAI CHUNG, DICK AND ANOTHER -> 4 principles
+  [ok] [2021] HKCA 872: HKSAR v. CHUA SHIRLEY MASIGLA AND OTHERS -> 4 principles
+  [ok] [2025] HKCFI 1033: HKSAR v. TONG HO WAN, SEAN -> 3 principles
+  [ok] [2024] HKCFI 3635: HKSAR v. LAI CHUN PONG -> 4 principles
+  [ok] [2025] HKCFI 3380: HKSAR v. NG HO LAM AND ANOTHER -> 1 principles
+  [ok] [2022] HKCA 339: HKSAR v. ARIAS GUARDIA ROBERTO EMILIO -> 5 principles
+  [ok] [2021] HKCA 1709: HKSAR v. NAWAZ SARFRAZ AND ANOTHER -> 3 principles
+  [ok] [2025] HKCFI 5526: SUNNI INTERNATIONAL LTD (IN LIQUIDATION) v. KAO WA -> 3 principles
+  [ok] [2026] HKCFI 1966: TSUI PING SUM AND ANOTHER v. CHAN KA LOK AND OTHER -> 3 principles
+  [ok] [2025] HKCA 447: HKSAR v. LAM TSZ HIM AND ANOTHER -> 3 principles
+  [ok] [2023] HKCFI 188: SINGH BALJIT v. FORWARD & CO., LAWYERS -> 3 principles
+  [ok] [2026] HKCFI 489: HKSAR v. YUNG CHI HANG -> 4 principles
+  [ok] [2023] HKDC 1797: HKSAR v. LAM CHEUK HANG -> 2 principles
+  [ok] [2023] HKCA 458: DINGWAY INVESTMENT LTD (Provisional Liquidators Ap -> 4 principles
+  [ok] [2024] HKCFI 448: HKSAR v. WU SHING HONG -> 2 principles
+  [ok] [2024] HKCA 192: HKSAR v. LAM TSZ KIN, KENT AND ANOTHER -> 4 principles
+  [ok] [2024] HKCA 582: HOI TIN TONG COMPANY LTD v. CHOY KWOK KEUNG -> 5 principles
+  [ok] [2025] HKCFI 334: HKSAR v. RICO PAUL JASON LOPEZ -> 2 principles
+  [ok] [2025] HKCA 520: HKSAR v. ENRIQUEZ ANNA MAE JUSTIMBASTE -> 2 principles
+  [ok] [2024] HKCFI 2417: HKSAR v. KWUN CHI MING -> 3 principles
+  [ok] [2024] HKCFI 1240: HKSAR v. HON CHUN YAM -> 5 principles
+  [ok] [2024] HKCFI 3607: HKSAR v. LAU HON YEE -> 1 principles
+  [ok] [2021] HKCFI 404: HKSAR v. CHOI HOI MING -> 3 principles
+  [ok] [2022] HKCA 328: HKSAR v. LEE YUEN-FOOK AND OTHERS -> 3 principles
+  [ok] [2024] HKCA 1084: HKSAR v. KHALIQ SALMAN (aka KHALIA SALMAN) -> 2 principles
+  [ok] [2025] HKCFI 2723: HKSAR v. SHE SUET YEE AND ANOTHER -> 3 principles
+  [ok] [2025] HKCFI 6282: HKSAR v. MAU KA PO -> 2 principles
+
+--- Topic: Murder (murder) ---
+  [ok] [2022] HKCA 1163: HKSAR v. WONG FUNG -> 4 principles
+  [ok] [2021] HKCA 1656: HKSAR v. TSANG CHEUNG-YAN -> 5 principles
+  [ok] [2020] HKCFI 3106: HKSAR v. CHEUNG KIE-CHUNG -> 0 principles
+  [ok] [2024] HKCFI 2627: HKSAR v. LAM CHIU LAU -> 0 principles
+  [ok] [2024] HKCA 691: PARAMJIT SINGH v. TORTURE CLAIMS APPEAL BOARD / NO -> 3 principles
+  [ok] [2025] HKCFI 1063: HKSAR v. WONG SHUN LAM -> 0 principles
+  [ok] [2021] HKCFA 26: HKSAR v. LIANG YAOQIANG (梁耀強) -> 5 principles
+  [ok] [2025] HKCFI 2917: HKSAR v. HOSSAIN MD IMRAN AND ANOTHER -> 3 principles
+  [ok] [2022] HKCA 978: HKSAR v. WONG CHUN MAN -> 4 principles
+  [ok] [2024] HKCFI 1139: PARAMJIT SINGH v. TORTURE CLAIMS APPEAL BOARD / NO -> 3 principles
+  [ok] [2023] HKCFA 42: HKSAR v. TSANG CHEUNG YAN (曾祥欣) -> 2 principles
+  [ok] [2021] HKCFI 3575: ABOGADO EDNA BARRIENTOS v. TORTURE CLAIMS APPEAL B -> 4 principles
+  [ok] [2021] HKCA 157: HKSAR v. CHOW CHING YIN -> 4 principles
+  [ok] [2025] HKCFI 1885: HKSAR v. CHAN CHI SHING -> 2 principles
+  [ok] [2025] HKCFI 1647: HKSAR v. VALENCIA BERNIE MACATANGAY -> 0 principles
+  [ok] [2022] HKCA 1777: HKSAR v. LAI KAN YAU -> 3 principles
+  [ok] [2021] HKCFI 3115: HKSAR v. LAI KAN YAU -> 4 principles
+  [ok] [2023] HKCFI 831: HKSAR v. CHAN MAN SUM IVAN -> 3 principles
+  [ok] [2022] HKCA 1021: HKSAR v. KWAN TAT YEE -> 5 principles
+  [ok] [2025] HKCA 995: KHAN MOHIB ALI v. TORTURE CLAIMS APPEAL BOARD / NO -> 3 principles
+  [ok] [2023] HKCFI 675: ALI KHAN SAJID alias SAJID ALI KHAN alias RASHID A -> 3 principles
+  [ok] [2024] HKCFI 2735: REYES MILAGROS LAGUA v. TORTURE CLAIMS APPEAL BOAR -> 2 principles
+  [ok] [2024] HKCFI 3359: MALIK MUHAMMAD SARFRAZ v. TORTURE CLAIMS APPEAL BO -> 4 principles
+  [ok] [2025] HKCFI 1397: KHAN MOHIB ALI v. TORTURE CLAIMS APPEAL BOARD / NO -> 2 principles
+  [ok] [2025] HKCFI 4555: PANAGODA LIYANAGE SURANGA DULIP PERERA v. DIRECTOR -> 5 principles
+  [ok] [2023] HKCA 408: HKSAR v. TSIM SUM-KIT, ADA -> 4 principles
+  [ok] [2025] HKCA 788: HKSAR v. LAI KAN YAU -> 0 principles
+  [ok] [2025] HKCFI 1001: HKSAR v. KHAW KIM SUN -> 0 principles
+  [ok] [2023] HKCFA 8: HKSAR v. WONG FUNG (王豐) -> 3 principles
+  [ok] [2022] HKCA 1189: HKSAR v. LIMBU MACHINDRA -> 3 principles
+  [ok] [2022] HKCFI 1503: HKSAR v. SO HON TO, STEPHEN -> 0 principles
+  [ok] [2024] HKCA 1149: HKSAR v. CHEUNG KIE CHUNG -> 5 principles
+  [ok] [2025] HKCFI 5363: IQBAL HASSAN v. TORTURE CLAIMS APPEAL BOARD / NON- -> 3 principles
+  [ok] [2022] HKCFI 369: FERNANDEZ MARICEL BOLOAVIO v. TORTURE CLAIMS APPEA -> 3 principles
+  [ok] [2024] HKCFI 3342: CHARANJEET SINGH v. TORTURE CLAIMS APPEAL BOARD /  -> 1 principles
+  [ok] [2023] HKCFA 44: HKSAR v. KWAN TAT YEE (關達儀) -> 5 principles
+  [ok] [2023] HKCA 370: HKSAR v. LEE WAI MAN -> 2 principles
+  [ok] [2025] HKCFI 4108: HKSAR v. CHAN KWAI SANG -> 4 principles
+  [ok] [2023] HKDC 488: HKSAR v. LAW WAI MAN -> 2 principles
+  [ok] [2020] HKCFI 3116: HKSAR v. ARIF AQIB AND ANOTHER -> 3 principles
+  [ok] [2025] HKCFI 6172: HKSAR v. CHIU CHUNG YUEN -> 0 principles
+  [ok] [2024] HKCFI 420: HKSAR v. CHEUNG MAN KONG -> 3 principles
+  [ok] [2025] HKCFI 3940: MUZAFFAR BILAL v. TORTURE CLAIMS APPEAL BOARD -> 3 principles
+  [ok] [2025] HKCFI 2179: MIA SHAHIN v. TORTURE CLAIMS APPEAL BOARD -> 3 principles
+  [ok] [2022] HKCFA 9: HKSAR v. TAM HO NAM (譚浩南) -> 2 principles
+
+--- Topic: Actus Reus of Murder (murder_actus_reus) ---
+
+--- Topic: Mens Rea of Murder (Malice Aforethought) (murder_mens_rea) ---
+  [ok] [2023] HKCA 163: NG YUI TONG v. CHAN CHI KEUNG -> 1 principles
+  [ok] [2021] HKDC 1449: THE INCORPORATED OWNERS OF SHATIN NEW TOWN AND OTH -> 5 principles
+  [ok] [2021] HKDC 1520: TSUI WAI YIP v. LAM MO CHIU -> 4 principles
+  [ok] [2023] HKDC 551: YIP WAI TAK VIVIAN v. LEE KA WO ESMOND AND ANOTHER -> 5 principles
+  [ok] [2022] HKDC 1036: LEUNG CHI CHING CANDY v. YEUNG HON SING -> 5 principles
+  [ok] [2021] HKCFI 2371: THAPA KAMALA v. TONG MING-KAY (PC4374) AND OTHERS -> 5 principles
+  [ok] [2022] HKDC 385: TSUI WAI YIP v. LAM MO CHIU -> 3 principles
+  [ok] [2022] HKDC 1164: PANG YU HIM v. SECRETARY FOR JUSTICE -> 4 principles
+  [ok] [2025] HKDC 476: LAM CHUNG PING AND OTHERS v. CHAN YUET KUEN AND AN -> 3 principles
+  [ok] [2021] HKCFI 2655: HKSAR v. RAHMAN MD. RAIHAN -> 2 principles
+  [ok] [2023] HKDC 620: LI SAU MUI v. MAN WAI CHEONG -> 5 principles
+  [ok] [2026] HKDC 56: PET LAND AND ANOTHER v. CHOW PO CHU AND ANOTHER -> 5 principles
+  [ok] [2025] HKDC 197: LEUNG CHI CHING CANDY v. YEUNG HON SING -> 3 principles
+  [ok] [2023] HKDC 132: HKSAR v. GURUNG NIRAJ -> 2 principles
+  [ok] [2023] HKCA 721: LAM WAI IP v. THE SECRETARY FOR JUSTICE -> 5 principles
+  [ok] [2022] HKCA 949: WILMES FRANZ JOSEF v. CORONER, WEST KOWLOON COURT -> 3 principles
+  [ok] [2023] HKCA 1016: THAPA KAMALA v. TONG MING KAY AND OTHERS -> 4 principles
+  [ok] [2021] HKCA 464: CHIN KAM CHIU v. FTI CONSULTING, INC AND OTHERS -> 5 principles
+  [ok] [2024] HKCFI 2754: LAI CHEE YING v. TA KUNG PAO (HONG KONG) LTD AND A -> 2 principles
+  [ok] [2023] HKDC 605: KHAN ASAF NAWAZ v. SECRETARY FOR JUSTICE on behalf -> 5 principles
+  [ok] [2021] HKDC 590: PAC FUNG FEATHER CO LTD v. THE INCORPORATED OWNERS -> 5 principles
+  [ok] [2021] HKCFI 1250: PANG SIU WING alias PANG WING v. CHUNGSHAN COMMERC -> 3 principles
+  [ok] [2023] HKDC 694: COOMBER, PETER JOHN v. WONG KING WAH -> 1 principles
+  [ok] [2021] HKDC 1362: THAPA KAMALA v. HO LAI MING (Deputy Special Magist -> 4 principles
+  [ok] [2022] HKCA 1485: HKSAR v. K.D.D.H. -> 0 principles
+  [ok] [2023] HKCFI 2282: CHINA CONCRETE COMPANY LTD v. SECRETARY FOR JUSTIC -> 5 principles
+  [ok] [2025] HKCFI 2788: HO KWAN YIU v. DENNIS KWOK WING HANG AND OTHERS -> 2 principles
+  [ok] [2023] HKDC 995: LI SAU MUI v. MAN WAI CHEONG -> 1 principles
+  [ok] [2022] HKDC 608: THE INCORPORATED OWNERS OF ALLWAY GARDENS v. LAM Y -> 4 principles
+  [ok] [2021] HKCA 631: LO CHI LIK ERIC v. YUEN CHI HO CHRIS -> 4 principles
+  [ok] [2023] HKDC 134: CHIU KEI LEUNG v. CHUI DEON YAU HAN AND ANOTHER -> 3 principles
+  [ok] [2024] HKCA 49: PANG SIU WING alias PANG WING v. CHUNGSHAN COMMERC -> 3 principles
+  [ok] [2023] HKDC 430: WELL BORN REAL ESTATE MANAGEMENT LTD v. LEE TAK LU -> 5 principles
+  [ok] [2023] HKCFI 149: WOON THEAN MUN v. HONG KONG AIRLINES LTD -> 5 principles
+  [ok] [2026] HKDC 24: 莊如芬 v. 黃志輝 AND ANOTHER -> 1 principles
+  [ok] [2026] HKCFI 502: CHAN KWOK KUEN v. LAI YAT HO AND OTHERS -> 2 principles
+  [ok] [2023] HKDC 1229: COOMBER, PETER JOHN v. MR. PANG CHUNG PING -> 3 principles
+  [ok] [2022] HKCFI 779: HO KWAN YIU v. DENNIS KWOK WING HANG AND OTHERS -> 3 principles
+  [ok] [2022] HKCFI 3406: CONVOY COLLATERAL LTD v. CHO KWAI CHEE (also known -> 0 principles
+  [ok] [2021] HKCFI 3884: HONG KONG FAR INFRARED RAYS ASSOCIATION LTD v. LAM -> 0 principles
+  [ok] [2021] HKCA 387: SHENZHEN HONEYCOMB SYSTEM CO LTD v. HCT TECHNOLOGI -> 3 principles
+  [ok] [2025] HKCFI 6475: GERMAN POOL GROUP CO LTD AND OTHERS v. DYSON TECHN -> 5 principles
+  [ok] [2024] HKDC 1811: NGAI WAI YEUNG v. LAU YUN FUNG BERTHA -> 5 principles
+  [ok] [2021] HKCFI 3834: STEPHEN KRUGER v. SECRETARY FOR JUSTICE -> 1 principles
+  [ok] [2023] HKDC 499: CHAN SHUNG FAI v. CHAN KAM WAH -> 5 principles
+
+--- Topic: Defence of Diminished Responsibility (diminished_responsibility) ---
+  [ok] [2022] HKCA 1459: HKSAR v. LEE WAI MAN -> 3 principles
+  [ok] [2021] HKCA 804: HKSAR v. SIU WAI CHEONG -> 3 principles
+  [ok] [2025] HKCFI 5292: HKSAR v. CHEUNG KIE CHUNG -> 0 principles
+  [ok] [2025] HKCFA 1: HKSAR v. LI CHEUNG CHOI -> 5 principles
+  [ok] [2025] HKCFI 4539: HKSAR v. LEE MAN LOK -> 2 principles
+  [ok] [2026] HKCFI 263: HKSAR v. LIU KA KI -> 0 principles
+  [ok] [2025] HKCFI 3111: HKSAR v. TAM WAI MAN STEPHANIE -> 2 principles
+  [ok] [2025] HKCFI 3762: HKSAR v. YANG LEYING -> 2 principles
+  [ok] [2024] HKCA 282: HKSAR v. WONG PO YAN -> 5 principles
+  [ok] [2021] HKCA 1278: HKSAR v. LI CHEUNG CHOI -> 3 principles
+  [ok] [2025] HKCA 1018: HKSAR v. CHEUNG MAN KONG -> 5 principles
+  [ok] [2021] HKCA 182: HKSAR v. WONG MAN YI MANDY -> 4 principles
+  [ok] [2021] HKCFI 3787: HKSAR v. LAM KWOK-WING -> 0 principles
+  [ok] [2023] HKCA 367: HKSAR v. BUI VAN-CUONG -> 3 principles
+  [ok] [2022] HKCFI 2989: HKSAR v. KWOK WAI YIN -> 0 principles
+  [ok] [2020] HKCFI 3029: HKSAR v. CHIU LAI HA -> 2 principles
+  [ok] [2024] HKCFA 20: HKSAR v. LI CHEUNG CHOI (李長再) -> 2 principles
+  [ok] [2025] HKCFI 457: HKSAR v. HO SAI YU -> 3 principles
+  [ok] [2025] HKCFI 6435: HKSAR v. FUNG CHUN KWAI -> 0 principles
+  [ok] [2021] HKCFI 2052: HKSAR v. CHEUNG MEI TAK -> 5 principles
+  [ok] [2024] HKCFI 3211: HKSAR v. LIU SIU TJIN -> 2 principles
+  [ok] [2021] HKCFI 2835: HKSAR v. HO PO KWONG -> 4 principles
+  [ok] [2024] HKCA 290: HKSAR v. LI CHEUNG CHOI -> 2 principles
+  [ok] [2021] HKCFI 2667: HKSAR v. LAW WAN TAK -> 0 principles
+  [ok] [2023] HKCFA 46: HKSAR v. BUI VAN-CUONG -> 1 principles
+  [ok] [2023] HKCA 441: HKSAR v. KWAN TAT YEE -> 2 principles
+  [ok] [2021] HKCFI 19: HKSAR v. NG YAN KIN -> 3 principles
+  [ok] [2023] HKCFI 1755: HKSAR v. CHEN XUEPING -> 4 principles
+  [ok] [2025] HKCA 298: HKSAR v. ISLAM JAVED IQBAL -> 5 principles
+  [ok] [2022] HKCA 316: HKSAR v. WAHAJ FYAZ -> 5 principles
+  [ok] [2023] HKCA 203: HKSAR v. LAI WUN YIN -> 4 principles
+  [ok] [2024] HKCFA 24: HKSAR v. NG NGOI YEE MARGARET (吳靄儀) (D3) -> 4 principles
+  [ok] [2024] HKCA 170: HKSAR v. LO LAI CHAU -> 3 principles
+  [ok] [2025] HKCA 187: HKSAR v. LO LAI CHAU -> 2 principles
+  [ok] [2021] HKCA 796: HKSAR v. CHAN MAN SUM IVAN -> 4 principles
+  [ok] [2021] HKCA 1384: HKSAR v. TAM HO NAM -> 5 principles
+  [ok] [2024] HKCFI 3531: MA CHUN MAN v. COMMISSIONER OF CORRECTIONAL SERVIC -> 5 principles
+  [ok] [2021] HKCFI 493: YUEN TSZ CHUN (as the administrator of the estate  -> 3 principles
+  [ok] [2024] HKDC 2184: SUCCESS LANE DEVELOPMENT LTD v. IFC DEVELOPMENT (S -> 2 principles
+
+--- Topic: Defence of Provocation (provocation) ---
+  [ok] [2025] HKCA 719: HKSAR v. LAI KAN YAU -> 4 principles
+  [ok] [2021] HKCFI 1781: PANG LOK SZE v. DIRECTOR OF PUBLIC PROSECUTIONS -> 3 principles
+  [ok] [2023] HKCFI 1478: SIR ELLY KADOORIE & SONS LTD (FOR AND ON BEHALF OF -> 5 principles
+  [ok] [2024] HKCA 747: SIR ELLY KADOORIE & SONS LTD (FOR AND ON BEHALF OF -> 5 principles
+  [ok] [2023] HKDC 1600: HKSAR v. W.N.M. -> 4 principles
+  [ok] [2025] HKDC 400: HKSAR v. L.L.K. AND ANOTHER -> 3 principles
+  [ok] [2025] HKCFI 6484: HKSAR v. IP CHUN YIN JERRY AND ANOTHER -> 2 principles
+  [ok] [2024] HKCFI 3487: HKSAR v. IU WAI CHEUNG -> 0 principles
+  [ok] [2023] HKCFI 1122: HKSAR v. BU SHUIQIANG -> 3 principles
+  [ok] [2021] HKDC 616: HKSAR v. LAW LAM YING -> 3 principles
+  [ok] [2025] HKCA 323: HKSAR v. XIAO CHUNQIANG -> 4 principles
+  [ok] [2022] HKCA 4: HKSAR v. LIU SUN KONG -> 2 principles
+  [ok] [2023] HKDC 761: HKSAR v. LIMBU SANGAM -> 3 principles
+  [ok] [2024] HKDC 1878: HKSAR v. LU KWOK LEUNG -> 4 principles
+  [ok] [2021] HKDC 886: HKSAR v. HO KA HO -> 2 principles
+  [ok] [2021] HKDC 698: HKSAR v. NG TUNG MO -> 3 principles
+  [ok] [2025] HKDC 1185: HKSAR v. ZHOU FENG -> 3 principles
+  [ok] [2025] HKCFI 318: HKSAR v. MCENTEGART, MARTIN CHRISTIAN -> 0 principles
+  [ok] [2023] HKDC 1324: HKSAR v. ALI KHURRAM -> 0 principles
+  [ok] [2021] HKFC 161: L, T v. M, MD -> 3 principles
+
+--- Topic: Manslaughter (manslaughter) ---
+  [ok] [2021] HKCA 496: HKSAR v. NGAI HON KWONG -> 4 principles
+  [ok] [2025] HKCFI 1218: HKSAR v. PANG YUK TING -> 3 principles
+  [ok] [2025] HKCFI 3570: HKSAR v. CHEUNG HING LOK -> 2 principles
+  [ok] [2022] HKCFI 219: HKSAR v. CHEUNG CHAK-MING -> 3 principles
+  [ok] [2025] HKCFI 5486: HKSAR v. LI WANG PONG, FRANKLIN -> 4 principles
+  [ok] [2025] HKCFI 564: HKSAR v. MAN TAT YAN -> 2 principles
+  [ok] [2021] HKCFI 2978: HKSAR v. KWAN HAU CHI, VANESSA -> 2 principles
+  [ok] [2024] HKCFI 1214: HKSAR v. CHAN KWONG YIU -> 0 principles
+  [ok] [2025] HKCFI 1922: JASPAL SINGH v. TORTURE CLAIMS APPEAL BOARD / NON- -> 4 principles
+  [ok] [2022] HKCA 313: HKSAR v. CHOW HEUNG WING, STEPHEN -> 2 principles
+  [ok] [2021] HKCA 1088: HKSAR v. CHAN HO MING -> 5 principles
+  [ok] [2021] HKDC 1372: HKSAR v. LAU YUN KEUNG -> 0 principles
+  [ok] [2024] HKCFI 1348: HKSAR v. VILLANUEVA JILL NAOMI GARCIA -> 4 principles
+
+--- Topic: Involuntary Manslaughter (involuntary_manslaughter) ---
+  [ok] [2024] HKDC 869: EXXON LTD AND ANOTHER v. ZENG CHENG ENGINEERING CO -> 4 principles
+  [ok] [2025] HKDC 2213: FINE GOLD DEVELOPMENTS LTD v. PERSONS WHOSE PROPER -> 3 principles
+  [ok] [2023] HKCFI 2452: WOO TAK YAN v. SECRETARY FOR JUSTICE / DEPARTMENT  -> 4 principles
+  [ok] [2024] HKCFI 2384: CHOI WAI LUP v. HOUSING APPEAL TRIBUNAL AND ANOTHE -> 0 principles
+  [ok] [2025] HKCFI 3466: AMIN NURUL v. TORTURE CLAIMS APPEAL BOARD / NON-RE -> 0 principles
+  [ok] [2022] HKDC 805: STANDARD CHARTERED BANK (HONG KONG) LTD v. LOK SHE -> 4 principles
+  [ok] [2023] HKCFI 937: HKSAR v. MOK SHU PIU -> 5 principles
+  [ok] [2025] HKCFI 664: WOO TAK YAN v. SECRETARY FOR JUSTICE -> 3 principles
+  [ok] [2021] HKCA 63: HKSAR v. CHAN HO -> 4 principles
+  [ok] [2024] HKCFI 3584: LINE POWER LTD v. CHEN JINHUI -> 0 principles
+  [ok] [2023] HKCFI 2097: MD KAMRUL ISLAM ALIAS MD HARUN v. TORTURE CLAIMS A -> 2 principles
+  [ok] [2022] HKCFI 3678: HKSAR v. HARPAL, SINGH -> 2 principles
+  [ok] [2024] HKCA 583: HKSAR v. AGBANYIM EMEKA PRINCE -> 1 principles
+  [ok] [2021] HKCA 99: HKSAR v. YIU CHI MING -> 4 principles
+  [ok] [2022] HKCFI 1447: RE GURUNG CHETBAHADUR -> 3 principles
+  [ok] [2025] HKCFI 5681: HA CHE WAI v. MEDICAL SUPERINTENDENT OF THE PAMELA -> 5 principles
+  [ok] [2021] HKCA 1188: HKSAR v. MA KA KIN -> 2 principles
+  [ok] [2025] HKCFI 563: NNAJIOFOR OGECHI v. TORTURE CLAIMS APPEAL BOARD /  -> 2 principles
+  [ok] [2023] HKCFI 691: HKSAR v. LAM HOI KIT -> 3 principles
+  [ok] [2021] HKCA 147: HKSAR v. BAGUMA GEORGE -> 3 principles
+  [ok] [2026] HKDC 154: SECRETARY FOR JUSTICE v. WOO TAK YAN -> 0 principles
+  [ok] [2022] HKCFI 1963: HKSAR v. TSUI CHI WAI -> 3 principles
+  [ok] [2023] HKCFI 2143: 林建安 v. 大埔警區刑事調查隊第十二隊譚啟軒督察及另一人 -> 5 principles
+  [ok] [2022] HKCFI 1612: SAM FAI CONSTRUCTION CO LTD v. YAT MING CONSTRUCTI -> 0 principles
+  [ok] [2021] HKCFI 300: HKSAR v. BALAKRISHNAN MAHENDRAN AND ANOTHER -> 2 principles
+  [ok] [2021] HKCA 965: HKSAR v. YIM SHEK WO -> 2 principles
+  [ok] [2024] HKCFI 3666: RE LIN YIFAN -> 2 principles
+  [ok] [2023] HKCA 217: HKSAR v. AGBANYIM EMEKA PRINCE -> 3 principles
+  [ok] [2023] HKCA 692: HKSAR v. TANG YIU CHEONG, JACKIE -> 4 principles
+  [ok] [2021] HKCFI 2761: CHINA FORESTRY HOLDINGS CO LTD (in official liquid -> 3 principles
+  [ok] [2024] HKCA 453: TIAN HONGMEI v. ZHANG WEI AND OTHERS -> 1 principles
+  [ok] [2021] HKCFI 3437: TSUI KOON WAH v. IP MEI HO t/a MICHELLE IP & CO, S -> 5 principles
+  [ok] [2021] HKCFI 2660: ZPMC OFFSHORE SERVICE CO LTD (Formerly known as SH -> 4 principles
+  [ok] [2022] HKCA 1600: HKSAR v. LEUNG CHIU YUN -> 4 principles
+  [ok] [2024] HKCFA 1: HKSAR v.CHAN CHU LEUNG (陳柱良) -> 5 principles
+  [ok] [2022] HKCFI 1183: KOK WAI LEUNG v. HO TIN BUILDING MATERIAL LTD AND  -> 0 principles
+  [ok] [2025] HKDC 1047: CHAN MING KIT v. LUK KWOK KEUNG -> 4 principles
+  [ok] [2021] HKCFI 694: ZHANG QIANG v. CISCO SYSTEMS (HK) LTD -> 5 principles
+  [ok] [2026] HKCFI 1146: YAO GUOLIANG AND ANOTHER v. FOREVER WINNER INTERNT -> 4 principles
+  [ok] [2021] HKMagC 13: HKSAR v. LAM MING LOK -> 3 principles
+  [ok] [2021] HKCA 105: SILVER UNIVERSE INVESTMENTS LTD v. CHINA TIMES SEC -> 3 principles
+  [ok] [2021] HKCA 194: ZQA AND OTHERS v. SCC AND ANOTHER -> 4 principles
+  [ok] [2024] HKCFI 1278: LIU RUISHAN by WU WEIXIA her next friend v. FU YIC -> 4 principles
+  [ok] [2025] HKCFI 359: LAU CHUNG v. HUI KENG YEE AND ANOTHER -> 5 principles
+  [ok] [2024] HKCFI 1983: N v. SECRETARY FOR SECURITY AND OTHERS -> 5 principles
+
+--- Topic: Assault and Wounding (assault_wounding) ---
+  [ok] [2024] HKCA 169: HKSAR v. AU CHUN FOO -> 0 principles
+  [ok] [2023] HKDC 866: HKSAR v. AU CHUN FOO -> 0 principles
+  [ok] [2025] HKDC 1249: HKSAR v. BHUIYAN JASHIM UDDIN -> 0 principles
+  [ok] [2021] HKCFI 3239: HKSAR v. TUNG PAK FAI -> 5 principles
+  [ok] [2023] HKDC 1413: HKSAR v. AU YEUNG KA WAI AND ANOTHER -> 3 principles
+  [ok] [2024] HKDC 2117: HKSAR v. CHUI SIU LUNG -> 2 principles
+  [ok] [2021] HKDC 354: HKSAR v. THE CHEUNG FUNG -> 3 principles
+  [ok] [2021] HKDC 1188: HKSAR v. THAPA MANISH AND ANOTHER -> 0 principles
+  [ok] [2022] HKDC 866: HKSAR v. CHAN MING LEONG AND ANOTHER -> 0 principles
+  [ok] [2021] HKDC 1200: HKSAR v. SHAKEEL AWAIS -> 3 principles
+  [ok] [2023] HKDC 1541: HKSAR v. KO ALEXANDER MING-CHE -> 1 principles
+  [ok] [2026] HKDC 214: HKSAR v. KHAN ILTAF -> 2 principles
+  [ok] [2022] HKCA 1470: HKSAR v. TUNG PAK FAI -> 1 principles
+  [ok] [2025] HKCFI 1659: HKSAR v. CHEUNG KA CHEUNG -> 1 principles
+  [ok] [2023] HKCFI 613: HKSAR v. WONG CHEUNG HEI -> 1 principles
+  [ok] [2021] HKDC 1600: HKSAR v. LAM CHUN YUNG -> 0 principles
+  [ok] [2021] HKDC 1083: HKSAR v. WONG WING SUM -> 2 principles
+  [ok] [2023] HKDC 779: HKSAR v. GURUNG MOHIT -> 2 principles
+  [ok] [2021] HKDC 1085: HKSAR v. CHO KING-CHUN -> 0 principles
+  [ok] [2021] HKCFI 3040: HKSAR v. TAI WAN HOI -> 4 principles
+  [ok] [2025] HKDC 377: HKSAR v. YUEN PAK HUNG -> 3 principles
+  [ok] [2025] HKCFI 1955: HKSAR v. KHAN FAIZAN ALI -> 3 principles
+  [ok] [2024] HKDC 809: HKSAR v. WONG MUK LEUNG -> 0 principles
+  [ok] [2026] HKCFI 773: HKSAR v. L. Z. X. AND ANOTHER -> 5 principles
+  [ok] [2025] HKCFI 4076: HKSAR v. ARIF AQIB -> 4 principles
+  [ok] [2021] HKDC 972: HKSAR v. NIP CHING WAI -> 1 principles
+  [ok] [2021] HKDC 1373: HKSAR v. CHUNG KAM KI -> 4 principles
+  [ok] [2023] HKDC 455: HKSAR v. DA SILVA SANTOS ALEXANDRO -> 1 principles
+  [ok] [2021] HKDC 1125: HKSAR v. MAK SHING HEI AND OTHERS -> 3 principles
+  [ok] [2024] HKDC 1125: HKSAR v. LU A TUNG -> 2 principles
+  [ok] [2021] HKDC 794: HKSAR v. YU PAK SHUN AND ANOTHER -> 0 principles
+  [ok] [2021] HKCFI 2101: HKSAR v. LIU GUOSHENG -> 2 principles
+  [ok] [2024] HKDC 2073: HKSAR v. CHUI SIU LUNG -> 2 principles
+  [ok] [2023] HKCFI 3124: HKSAR v. YU KWAN MAN -> 4 principles
+  [ok] [2024] HKDC 820: HKSAR v. HO MING TAT -> 3 principles
+  [ok] [2025] HKDC 1566: HKSAR v. RASKOTI AMMAR -> 0 principles
+  [ok] [2024] HKCA 1120: HKSAR v. GURUNG ROYAL -> 3 principles
+  [ok] [2021] HKDC 1379: HKSAR v. NG CHEUK YIU -> 0 principles
+  [ok] [2025] HKDC 358: HKSAR v. ALI ZAIN -> 5 principles
+  [ok] [2023] HKDC 377: HKSAR v. ASHRAF TAHIR -> 2 principles
+  [ok] [2024] HKCFI 378: HKSAR v. MEHMOOD ARSHAD AND ANOTHER -> 0 principles
+  [ok] [2024] HKDC 436: HKSAR v. CHUNG WAI CHUNG -> 0 principles
+
+--- Topic: Kidnapping and False Imprisonment (kidnapping) ---
+  [ok] [2024] HKCFI 891: HKSAR v. LAW CHEUK YIN -> 2 principles
+  [ok] [2025] HKCFI 5268: GOLDJET DEVELOPMENT LTD v. RANDAL ALAN WHITECOTTON -> 5 principles
+  [ok] [2025] HKCFI 6423: GOLDJET DEVELOPMENT LTD v. RANDAL ALAN WHITECOTTON -> 4 principles
+  [ok] [2021] HKDC 525: HKSAR v. HASAN MD MEHEDI -> 3 principles
+  [ok] [2021] HKCFI 455: HKSAR v. BALAKRISHNAN MAHENDRAN -> 2 principles
+  [ok] [2024] HKCFI 3011: JOHNSON BENJAMIN v. TORTURE CLAIMS APPEAL BOARD /  -> 1 principles
+  [ok] [2021] HKCA 1253: HKSAR v. HASAN MD MEHEDI -> 0 principles
+  [ok] [2021] HKDC 249: HKSAR v. AZHAR GHAFAR -> 3 principles
+  [ok] [2024] HKCFI 1265: HKSAR v. HO LIN CHUN -> 2 principles
+  [ok] [2022] HKCA 135: OGUZIE IKECHUKWU CHARLES v. TORTURE CLAIMS APPEAL  -> 4 principles
+  [ok] [2025] HKCFI 2647: OMAR JAUFER MOHAMED HARIS v. TORTURE CLAIMS APPEAL -> 3 principles
+  [ok] [2023] HKCA 834: ARMAN AZAM v. TORTURE CLAIMS APPEAL BOARD / NON-RE -> 2 principles
+  [ok] [2024] HKCFI 807: MATABUENA, MARK DIOLA v. TORTURE CLAIMS APPEAL BOA -> 3 principles
+  [ok] [2023] HKCFI 1005: ARMAN AZAM v. TORTURE CLAIMS APPEAL BOARD / NON-RE -> 2 principles
+  [ok] [2022] HKCFI 754: BUTT KAMRAN ALIAS IMRAN ARSHAD v. TORTURE CLAIMS A -> 2 principles
+  [ok] [2024] HKCFI 3079: KULAPU WADUGE CHANDRANI SILVA v. TORTURE CLAIMS AP -> 2 principles
+  [ok] [2024] HKCFI 2356: AKHTAR WALEED v. TORTURE CLAIMS APPEAL BOARD / NON -> 3 principles
+  [ok] [2024] HKCFI 1374: SUMON KHAN v. TORTURE CLAIMS APPEAL BOARD / NON-RE -> 1 principles
+  [ok] [2021] HKCFI 2926: TORTURE CLAIMS APPEAL BOARD v. DIRECTOR OF IMMIGRA -> 4 principles
+  [ok] [2025] HKCFI 1126: MD BAPPY AHAMMED alias AHMED MOHAMMAD BAPPY v. TOR -> 4 principles
+  [ok] [2023] HKCFI 37: RANGI NIRVAIR SINGH v. TORTURE CLAIMS APPEAL BOARD -> 4 principles
+  [ok] [2025] HKCFI 1878: PADILLA JONIE JR ROSEL v. TORTURE CLAIMS APPEAL BO -> 2 principles
+  [ok] [2022] HKCFI 1386: RAHMAN ZIAUR v. TORTURE CLAIMS APPEAL BOARD / NON- -> 3 principles
+  [ok] [2023] HKCFI 360: APPIAH SAMUEL v. TORTURE CLAIMS APPEAL BOARD / NON -> 2 principles
+  [ok] [2025] HKCFI 288: OGBOZOR TOCHUKWU EUGENE v. DIRECTOR OF IMMIGRATION -> 5 principles
+  [ok] [2022] HKCFI 2860: SHARJEEL v. TORTURE CLAIMS APPEAL BOARD / NON REFO -> 3 principles
+  [ok] [2021] HKCFI 719: RE PATEL SAMIR GULAB -> 2 principles
+  [ok] [2022] HKCFI 935: RE ASIF MAHMOOD -> 1 principles
+  [ok] [2024] HKCA 174: RE LUU THI HOA AND OTHERS -> 3 principles
+  [ok] [2021] HKCFI 3178: RE OGBOZOR TOCHUKWU EUGENE -> 1 principles
+  [ok] [2021] HKCFI 1589: ETIK ISWANTI v. TORTURE CLAIM APPEAL BOARD -> 5 principles
+  [ok] [2025] HKCFI 2722: POUTIA HERVE MODESTE v. TORTURE CLAIMS APPEAL BOAR -> 5 principles
+  [ok] [2022] HKCFI 2085: BADAL DAS v. TORTURE CLAIMS APPEAL BOARD / NON-REF -> 3 principles
+  [ok] [2024] HKCFI 495: WONG LUI v. A XIABUZHA AND ANOTHER -> 0 principles
+  [ok] [2026] HKCFI 1058: SIDDIQUE AAMIR v. DIRECTOR OF IMMIGRATION -> 4 principles
+  [ok] [2025] HKCFI 4227: COULIBALY MODIBO v. TORTURE CLAIMS APPEAL BOARD /  -> 1 principles
+  [ok] [2023] HKCA 605: RE SHAH SABIR HUSSAIN -> 2 principles
+  [ok] [2025] HKCFI 204: DINH THI DANG v. TORTURE CLAIMS APPEAL BOARD / NON -> 0 principles
+  [ok] [2024] HKCA 135: RAZA ALI v. TORTURE CLAIMS APPEAL BOARD -> 0 principles
+  [ok] [2024] HKCFI 3047: MEGUIZO CHARITO MORENO v. TORTURE CLAIMS APPEAL BO -> 1 principles
+  [ok] [2024] HKCFI 2835: NAZRUL HOQUE v. TORTURE CLAIMS APPEAL BOARD / NON- -> 2 principles
+  [ok] [2021] HKCFI 479: KHATUN MST MUKTI v. TORTURE CLAIMS APPEAL BOARD /  -> 2 principles
+  [ok] [2021] HKCFI 372: RE MALAIRAJ SATHIYANDIRAN -> 0 principles
+  [ok] [2021] HKCFI 475: SHAH SABIR HUSSAIN v. TORTURE CLAIMS APPEAL BOARD  -> 2 principles
+  [ok] [2023] HKCFI 247: HKSAR v. ADJEI ROBERT (also known as ADJEI KING) -> 5 principles
+  [ok] [2021] HKCFI 2773: ASIF MAHMOOD v. TORTURE CLAIMS APPEAL BOARD/NON-RE -> 2 principles
+  [ok] [2022] HKCFI 430: GURUNG CHETBAHADUR v. TORTURE CLAIMS APPEAL BOARD  -> 0 principles
+  [ok] [2021] HKCA 898: RE VICTOR VITUS CHIZOBA -> 4 principles
+  [ok] [2022] HKCFI 1539: ALAMO MICHAEL MANUEL v. TORTURE CLAIMS APPEAL BOAR -> 2 principles
+
+--- Topic: Criminal Intimidation and Blackmail (criminal_intimidation) ---
+  [ok] [2021] HKDC 1431: HO FREDERICK KWOK LUNG AND ANOTHER v. LAM PING -> 0 principles
+  [ok] [2021] HKDC 1653: HKSAR v. FONG HUNG SHUN -> 3 principles
+  [ok] [2022] HKCFI 3760: HKSAR v. HOSSAIN, AEJAZ -> 0 principles
+  [ok] [2022] HKDC 917: MTM LAB JAPAN LTD AND OTHERS v. ABACUS LTD AND ANO -> 2 principles
+  [ok] [2022] HKDC 1413: HKSAR v. ZHAO HONG SHING also known as CHIU HONG S -> 5 principles
+  [ok] [2022] HKCFI 698: HKSAR v. YEUNG WAI CHUN -> 4 principles
+  [ok] [2024] HKDC 1471: HKSAR v. L.F. -> 4 principles
+  [ok] [2025] HKCA 804: HKSAR v. L.F. -> 0 principles
+  [ok] [2023] HKDC 602: HKSAR v. KWONG TSZ HO -> 4 principles
+  [ok] [2025] HKDC 952: 周瑛偉 v. 李錦棠 -> 4 principles
+  [ok] [2024] HKDC 777: HKSAR v. GHALE DIL RAJ -> 3 principles
+  [ok] [2024] HKDC 1591: HKSAR v. L.F. -> 3 principles
+  [ok] [2021] HKDC 1214: HKSAR v. NASIR MUHAMMAD -> 3 principles
+  [ok] [2025] HKCFI 5291: HKSAR v. CHAN YAT HANG AND OTHERS -> 2 principles
+  [ok] [2021] HKCFI 2002: HAN’S REAL ESTATE (HONG KONG) LTD AND OTHERS v. AP -> 5 principles
+  [ok] [2023] HKCFI 3281: RE LI YE -> 3 principles
+  [ok] [2024] HKDC 1008: HKSAR v. NG YAT CHIU -> 3 principles
+  [ok] [2025] HKDC 94: CHUI LAP PAN AND ANOTHER v. CHUNG CHEUK WAI -> 4 principles
+  [ok] [2026] HKCFI 576: AU MAN LEUNG v. AU CHI YUEN AND OTHERS -> 0 principles
+  [ok] [2024] HKDC 2144: HENZULEA MARIAN NICOLAE v. YAO LIQIONG -> 1 principles
+  [ok] [2021] HKCFI 2533: HKSAR v. LAM KIM WAN -> 0 principles
+  [ok] [2023] HKCFI 93: HUI CHI MING v. KOON WING YEE -> 5 principles
+  [ok] [2025] HKCFI 1475: EY v. SE -> 4 principles
+  [ok] [2024] HKDC 422: CHAN WOON WAH t/a NGAI HING DECORATION COMPANY v.  -> 4 principles
+  [ok] [2023] HKDC 111: HKSAR v. LUK HO MAN -> 1 principles
+  [ok] [2024] HKCFI 2965: HKSAR v. YUAN JOSEPH -> 0 principles
+  [ok] [2023] HKCFI 1864: HOSSAIN AEJAZ v. DIRECTOR OF IMMIGRATION -> 2 principles
+  [ok] [2023] HKCFI 3238: TO KIN WAH AND OTHERS v. TO KAM CHAU AND ANOTHER -> 3 principles
+  [ok] [2023] HKCA 952: SHABIR SOHAIL v. PERMANENT SECRETARY FOR SECURITY  -> 4 principles
+  [ok] [2026] HKCFI 1575: CITYLINKERS GROUP LTD v. CENTURY CROWN INVESTMENT  -> 5 principles
+  [ok] [2025] HKDC 1352: HKSAR v. CHOI KWOK WAI -> 1 principles
+  [ok] [2022] HKCA 1792: RE HANGILI GEDARA IMALKA PRIYADARSHANIE -> 4 principles
+  [ok] [2024] HKDC 1781: HKSAR v. YAM KOON FAI -> 3 principles
+  [ok] [2021] HKCFI 3512: HKSAR v. CHAN HO -> 1 principles
+  [ok] [2024] HKDC 999: CHAN YUK PING v. LIEW SHUK FUI -> 5 principles
+  [ok] [2021] HKCFI 3496: LEE KAM TAI v. CHAN KAM WAH -> 4 principles
+  [ok] [2021] HKCFI 3265: NISHAN SINGH v. TORTURE CLAIMS APPEAL BOARD / NON  -> 0 principles
+  [ok] [2021] HKDC 660: HKSAR v. CHENG MAN KIT -> 2 principles
+  [ok] [2025] HKDC 1356: HKSAR v. TSE YEE TING, JIMMY -> 1 principles
+  [ok] [2023] HKCFI 2301: RE KOON WING YEE -> 1 principles
+  [ok] [2025] HKCA 943: HKSAR v. LAU KAM HUNG -> 3 principles
+  [ok] [2021] HKCFI 2022: HKSAR v. LIMBU JOHN -> 1 principles
+  [ok] [2023] HKCFI 1709: HKSAR v. CHUNG TSZ YING -> 3 principles
+  [ok] [2022] HKDC 517: HKSAR v. LAI KWAI SANG -> 3 principles
+
+--- Topic: Rape and Consent (rape_consent) ---
+  [ok] [2023] HKCFI 2968: HKSAR v. CHOW KA WAI -> 3 principles
+  [ok] [2023] HKCFI 2344: HKSAR v. CHAN SZE CHUN -> 4 principles
+  [ok] [2025] HKCA 516: HKSAR v. IQBAL ASIF -> 5 principles
+  [ok] [2020] HKCFI 3138: HKSAR v. LAI YUK MAN -> 3 principles
+  [ok] [2025] HKCFI 3462: HKSAR v. CHEUNG YUK LIN -> 5 principles
+  [ok] [2024] HKCA 382: HKSAR v. CHOW KA WAI -> 3 principles
+  [ok] [2025] HKCFI 1958: HKSAR v. YUEN HO SUM -> 3 principles
+  [ok] [2025] HKCFI 2972: HKSAR v. JIN ZHENMING -> 2 principles
+  [ok] [2025] HKCA 126: HKSAR v. IQBAL ASIF -> 2 principles
+  [ok] [2021] HKCFI 2631: HKSAR v. L.G.P. -> 2 principles
+  [ok] [2023] HKCFI 3287: HKSAR v. HUNG HING LUEN -> 3 principles
+  [ok] [2025] HKCFI 2991: HKSAR v. LO TAK SHING -> 1 principles
+  [ok] [2021] HKCFI 980: HKSAR v. ROXAS MARK ANGELO MIGUEL LAZARO -> 4 principles
+  [ok] [2024] HKCFI 2602: HKSAR v. CHUN KWONG KAU -> 4 principles
+  [ok] [2023] HKCFI 1408: HKSAR v. TSANG CHIU YU -> 0 principles
+  [ok] [2024] HKCFI 3506: HKSAR v. MAHMOOD MUBEEN -> 0 principles
+  [ok] [2024] HKCFI 3012: HKSAR v. L.K.H. -> 3 principles
+  [ok] [2024] HKCA 844: HKSAR v. HUNG HING LUEN -> 3 principles
+  [ok] [2023] HKCFI 3091: HKSAR v. WONG CHUN CHUEN -> 2 principles
+  [ok] [2023] HKCFI 2586: HKSAR v. IQBAL ASIF -> 0 principles
+  [ok] [2022] HKCA 1495: HKSAR v. AMIR AFTAB -> 3 principles
+  [ok] [2024] HKCA 32: HKSAR v. AMIR AFTAB -> 3 principles
+  [ok] [2022] HKCFI 3388: NC v. TORTURE CLAIMS APPEAL BOARD -> 5 principles
+  [ok] [2025] HKCFI 648: HKSAR v. L.C.K. -> 3 principles
+  [ok] [2023] HKCFI 1048: I AND OTHERS v. TORTURE CLAIMS APPEAL BOARD / NON- -> 5 principles
+  [ok] [2021] HKCFI 2143: NANGOBI SOPHIE v. TOTURE CLAIMS APPEAL BOARD / NON -> 0 principles
+  [ok] [2023] HKCFI 2683: HKSAR v. YIP KA YU -> 0 principles
+  [ok] [2023] HKCA 202: HKSAR v. CHAK KONG FAI -> 3 principles
+  [ok] [2024] HKCA 627: HKSAR v. S.H.S. -> 1 principles
+  [ok] [2021] HKCFI 1581: PARUSSALLA GAMARALALAGE THANUJA DARSHANI AMARAPALI -> 3 principles
+  [ok] [2025] HKCA 826: HKSAR v. LAM SIU FUNG, ANDY -> 5 principles
+  [ok] [2025] HKCFI 509: WARNAKULASURIYA RENUKA DAMA YAN THI TISERA COLOMBA -> 2 principles
+  [ok] [2021] HKCFI 3650: HKSAR v. CHEUNG TSZ HONG -> 0 principles
+  [ok] [2025] HKCFI 1656: HKSAR v. QIAN PING -> 2 principles
+  [ok] [2021] HKCFI 2142: KHADKA KRISHNA MAYA v. TOTURE CLAIMS APPEAL BOARD  -> 0 principles
+  [ok] [2021] HKCFI 819: HKSAR v. SO TSZ CHUN -> 2 principles
+  [ok] [2025] HKCA 452: HKSAR v. TIQUIA JOEL M -> 3 principles
+  [ok] [2022] HKCFI 591: NOVA LIYASANTI v. ORTURE CLAIMS APPEAL BOARD / NON -> 2 principles
+  [ok] [2021] HKCA 1589: HKSAR v. FUNG HOI YEUNG -> 5 principles
+  [ok] [2021] HKCA 391: HKSAR v. A -> 3 principles
+  [ok] [2024] HKCFI 3592: HKSAR v. EKSTROM PATRIK TOBIAS -> 0 principles
+  [ok] [2025] HKCA 88: RE NGUYEN THANH THINH -> 0 principles
+  [ok] [2023] HKCFI 2964: S v. TORTURE CLAIMS APPEAL BOARD / NON-REFOULEMENT -> 4 principles
+  [ok] [2023] HKCFI 2534: HKSAR v. S.H.S. -> 0 principles
+  [ok] [2021] HKCA 499: HKSAR v. CHAK KONG FAI -> 5 principles
+
+--- Topic: Theft (theft) ---
+  [ok] [2021] HKDC 1005: HKSAR v. NGUYEN THE VINH (also known as YUEN SAI W -> 0 principles
+  [ok] [2024] HKDC 1268: HKSAR v. NG KONG FAI -> 2 principles
+  [ok] [2021] HKDC 1450: HKSAR v. CHO KA YEUNG -> 2 principles
+  [ok] [2025] HKCA 567: HKSAR v. CHEUNG KA ON -> 3 principles
+  [ok] [2021] HKDC 373: HKSAR v. CHIN CHIN FAI AND ANOTHER -> 0 principles
+  [ok] [2021] HKDC 175: HKSAR v. CHING WA WAI -> 5 principles
+  [ok] [2022] HKDC 321: HKSAR v. CHOI HIU HUNG -> 0 principles
+  [ok] [2021] HKDC 1120: HKSAR v. WONG KAI CHUN -> 0 principles
+  [ok] [2021] HKDC 380: HKSAR v. SIU CHOI SHING -> 5 principles
+  [ok] [2021] HKDC 1114: HKSAR v. LO TSZ FUNG -> 0 principles
+  [ok] [2024] HKDC 2040: HKSAR v. AZEEM NASIR -> 2 principles
+  [ok] [2025] HKDC 1530: HKSAR v. LAI HOI YAN VIVIAN -> 4 principles
+  [ok] [2021] HKDC 85: HKSAR v. YUEN KA KUI AND ANOTHER -> 1 principles
+  [ok] [2021] HKDC 302: HKSAR v. RAMOS JR FREDJEWELL A -> 0 principles
+  [ok] [2023] HKDC 1714: HKSAR v. TSANG WING YAM -> 0 principles
+  [ok] [2025] HKCFI 2116: HKSAR v. TAM LAI YIN -> 5 principles
+  [ok] [2024] HKCFI 2733: LAU KWOK HUNG (AS THE ADMINISTRATOR OF THE ESTATE  -> 0 principles
+  [ok] [2026] HKCFI 955: HKSAR v. SHUM LOK MAN -> 3 principles
+  [ok] [2021] HKDC 303: HKSAR v. CHAN CHUN SING, WILSON -> 0 principles
+  [ok] [2023] HKDC 1764: HKSAR v. NG KAI MAN AND ANOTHER -> 0 principles
+  [ok] [2024] HKDC 953: HKSAR v. CHAN WAN CHI, JENNY -> 3 principles
+  [ok] [2022] HKDC 746: HKSAR v. TURBAT UNDRAKHBAYAR AND ANOTHER -> 2 principles
+  [ok] [2023] HKDC 1654: HKSAR v. MD EMON SHA -> 2 principles
+  [ok] [2021] HKDC 902: HKSAR v. DASHPAL SINGH -> 1 principles
+  [ok] [2024] HKDC 603: HKSAR v. CHAN YEE MAN AND OTHERS -> 1 principles
+  [ok] [2021] HKDC 1031: HKSAR v. NGAI MING YIN -> 4 principles
+  [ok] [2021] HKDC 370: HKSAR v. TANG YIU WING -> 0 principles
+  [ok] [2021] HKDC 969: HKSAR v. VO HUU PHUOC (ALSO KNOWN AS MO MAN FUK) -> 1 principles
+  [ok] [2022] HKDC 1437: HKSAR v. KO CHUN FUNG -> 2 principles
+  [ok] [2022] HKDC 1192: HKSAR v. NGO YING KIT (also known as NG YING KIT) -> 2 principles
+  [ok] [2024] HKDC 667: HKSAR v. LEE HO KONG -> 4 principles
+  [ok] [2021] HKDC 1367: HKSAR v. HO HING PAN, RONALD -> 3 principles
+  [ok] [2021] HKCFI 2839: HKSAR v. TONG CHI LING ERIC -> 3 principles
+  [ok] [2022] HKCFI 2548: HKSAR v. TARSEM SINGH -> 3 principles
+  [ok] [2021] HKDC 923: HKSAR v. AU KIN WAH (also known as AU WA AND AU KI -> 0 principles
+  [ok] [2022] HKDC 1422: HKSAR v. LAI TAK FAI -> 2 principles
+  [ok] [2022] HKDC 204: HKSAR v. MOK CHI WAI -> 1 principles
+  [ok] [2025] HKDC 1318: HKSAR v. TSE WING KIT -> 3 principles
+  [ok] [2025] HKCFI 1252: HKSAR v. LI PO LAI -> 5 principles
+  [ok] [2021] HKDC 382: HKSAR v. NGAN TIN HUNG (also known as NGAI TIN HUN -> 4 principles
+  [ok] [2024] HKDC 1965: HKSAR v. LO TSZ HO, VINCENT -> 0 principles
+  [ok] [2020] HKCFI 2915: HKSAR v. SINGH POPINDER AND OTHERS -> 5 principles
+  [ok] [2025] HKDC 282: HKSAR v. NGUYEN XUAN CUONG (also known as YUEN KWO -> 3 principles
+  [ok] [2024] HKDC 801: HKSAR v. YAU WAI KWONG -> 0 principles
+  [ok] [2023] HKDC 958: HKSAR v. TAM WAN YAN also known as PHAM BICH THUY  -> 1 principles
+  [ok] [2024] HKDC 1354: HKSAR v. KO CHUN FUNG -> 2 principles
+  [ok] [2024] HKCA 1191: HKSAR v. CHEUNG KA ON -> 4 principles
+  [ok] [2023] HKDC 856: HKSAR v. CHEUNG CHUEN SANG -> 0 principles
+
+--- Topic: Appropriation (Element of Theft) (theft_appropriation) ---
+  [ok] [2025] HKCA 451: HKSAR v. MA CHUN KIT -> 4 principles
+  [ok] [2023] HKCFI 721: RE CHU JIARU -> 5 principles
+  [ok] [2022] HKDC 1007: AMPLE HAPPINESS LTD v. SUNRISE ENTERPRISES HOLDING -> 4 principles
+  [ok] [2021] HKDC 919: HKSAR v. HOSSAIN SHEIKH AFJAL -> 3 principles
+  [ok] [2025] HKCFI 6193: YANG YUEGUANG v. DRAGON HILL DEVELOPMENT LTD AND A -> 3 principles
+  [ok] [2024] HKCFI 370: HIP HING CONSTRUCTION COMPANY LTD v. HONG KONG AIR -> 4 principles
+  [ok] [2025] HKDC 295: HKSAR v. CHEUNG HING CHIK -> 4 principles
+  [ok] [2021] HKCFI 1426: HKSAR v. SATHAK, ABDUL KADER ANEES RAHMAN -> 5 principles
+  [ok] [2026] HKCFI 1047: RE CHU JIARU -> 5 principles
+  [ok] [2024] HKCA 612: RE NGUYEN VAN CUONG -> 3 principles
+  [ok] [2025] HKCA 951: HKSAR v. CHU KA LOK -> 4 principles
+  [ok] [2026] HKCFI 1157: CHEUNG KA WAI v. LEE YU KWAN JEANETTE -> 5 principles
+  [ok] [2026] HKDC 16: HKSAR v. CHIN CHOK LOON -> 5 principles
+  [ok] [2023] HKDC 1676: FUNG LAI HAN v. CHAN LAI ON -> 5 principles
+  [ok] [2021] HKCFI 588: NU LOOK IPI ENTERPRISES LTD v. CHAN SIU MUI and TA -> 2 principles
+  [ok] [2024] HKCFI 2344: HO SUK LING DORIS v. YEUNG WUN YEE -> 3 principles
+  [ok] [2021] HKCFI 461: ALPHA & LEADER ASSOCIATES LTD v. VICTORY MEGA TRAD -> 0 principles
+  [ok] [2020] HKCA 922: TSOI v. CHEUNG -> 5 principles
+  [ok] [2024] HKCFI 1525: CCMD OVERSEAS LTD v. SINOM INVESTMENTS LTD AND ANO -> 3 principles
+  [ok] [2025] HKCFI 1018: FULL YING HOLDINGS LTD v. ACTIVE ACCESS HOLDINGS L -> 5 principles
+  [ok] [2026] HKDC 238: HKSAR v. LUI CHUN YIP -> 3 principles
+  [ok] [2021] HKCFI 560: TRENUS OCEANWAY LTD v. RICHLAND INTERNATIONAL LTD  -> 2 principles
+  [ok] [2024] HKDC 1628: CHAN WING YAN AND ANOTHER v. JP-EX CRYPTO ASSET PL -> 5 principles
+  [ok] [2023] HKCFI 1430: HIP HING CONSTRUCTION COMPANY LTD v. HONG KONG AIR -> 5 principles
+  [ok] [2021] HKDC 1259: YAU FAT SHING t/a YAU YIM KEE FRUIT IMPORTER v. LE -> 4 principles
+  [ok] [2024] HKCFI 949: TECHTRONIC PRODUCT DEVELOPMENT LTD AND ANOTHER v.  -> 5 principles
+  [ok] [2025] HKCFI 155: RE WONG SAI CHUNG -> 2 principles
+  [ok] [2021] HKCFI 2799: YEO BOON ANN AND ANOTHER v. MARSPAN LTD AND ANOTHE -> 3 principles
+  [ok] [2022] HKCFI 298: MOHAMMED HANIF v. TORTURE CLAIMS APPEAL BOARD / NO -> 3 principles
+  [ok] [2023] HKCA 963: LEUNG SHUI CHEONG v. AU CHUNG YIN JIMMY -> 5 principles
+  [ok] [2023] HKDC 1805: HKSAR v. WOO KA MING -> 3 principles
+  [ok] [2021] HKCFI 141: LEADER SCREWS MANUFACTURING CO LTD v. HUANG SHUNKU -> 3 principles
+  [ok] [2024] HKCA 403: NORMAN GUY DONALD AND ANOTHER v. LEE MICHAEL CHAK  -> 4 principles
+  [ok] [2021] HKCA 1581: JOINT AND SEVERAL PROVISIONAL LIQUIDATORS OF HSIN  -> 4 principles
+  [ok] [2024] HKCFI 2691: CHINA CONSTRUCTION BANK (ASIA) CORPORATION LTD v.  -> 2 principles
+  [ok] [2024] HKCFI 259: THE JOINT AND SEVERAL LIQUIDATORS OF GREEN ELITE L -> 5 principles
+  [ok] [2025] HKCFI 1317: Y AND ANOTHER v. GI AND ANOTHER -> 2 principles
+  [ok] [2024] HKCA 709: ALPHA & LEADER ASSOCIATES LTD v. VICTORY MEGA TRAD -> 4 principles
+  [ok] [2024] HKDC 1182: LUI KWONG SHING trading as WAI SING ENGINEERING CO -> 5 principles
+  [ok] [2022] HKDC 32: SMARTEK E & M ENGINEERING (HK) LTD v. WIN WIN WAY  -> 5 principles
+  [ok] [2024] HKDC 1361: HKSAR v. LEUNG CHI KIT -> 4 principles
+  [ok] [2023] HKCA 1193: LEADER SCREWS MANUFACTURING COMPANY LTD v. HUANG S -> 2 principles
+  [ok] [2022] HKCFI 1152: HKSAR v. LEE HEUNG YEE -> 5 principles
+  [ok] [2021] HKCFI 2040: BLUESUN CAPITAL LTD v. TEWOO GROUP FINANCE NO 3 LT -> 3 principles
+  [ok] [2021] HKCFI 1252: WONG TO YICK WOOD LOCK OINTMENT LTD v. IMPERIAL CH -> 5 principles
+  [ok] [2025] HKDC 2011: CHAN SUET YAN, the person appointed to represent t -> 4 principles
+  [ok] [2024] HKDC 1181: CHAPMAN INTERNATIONAL MACAO COMMERCIAL OFFSHORE LT -> 4 principles
+  [ok] [2021] HKCA 169: KWOK CHEUK KIN v. PRESIDENT OF LEGISLATIVE COUNCIL -> 4 principles
+  [ok] [2022] HKDC 704: KWAN CHI ON v. 張偉雄 AND OTHERS -> 5 principles
+
+--- Topic: Dishonesty (Ivey v Genting Test) (theft_dishonesty) ---
+  [ok] [2021] HKCFI 1396: HING YIP HOLDINGS (HONG KONG) LTD (In Compulsory L -> 5 principles
+  [ok] [2025] HKCFI 2218: MAMMY PANCAKE COMPANY LTD v. CARLA DAY LTD AND OTH -> 2 principles
+  [ok] [2022] HKCA 852: GALLERIA (HONG KONG), LTD AND ANOTHER v. DBS BANK  -> 2 principles
+  [ok] [2021] HKCFI 483: POLYLINE DEVELOPMENT LTD v. CHING LIN CHUEN AND OT -> 5 principles
+  [ok] [2021] HKCFI 944: TANG YUAN YI v. TOKYO INTERNATIONAL INVESTMENT LTD -> 4 principles
+  [ok] [2021] HKCFI 2303: KWONG YI LING (suing on behalf of herself and all  -> 1 principles
+  [ok] [2024] HKCA 133: THE LAW SOCIETY OF HONG KONG v. A SOLICITOR -> 2 principles
+  [ok] [2021] HKCA 121: HKSAR v. ALI NAZAKAT -> 4 principles
+  [ok] [2023] HKCFI 3071: WELLSON SILK TRADING LTD v. CHEUNG WAI YING AND OT -> 3 principles
+  [ok] [2022] HKCFA 7: HKSAR v. CHAN KAM CHING (陳鑑清) -> 4 principles
+  [ok] [2021] HKDC 630: HKSAR v. RAMAN KUMAR (also known as RAMAN KUMAR) -> 0 principles
+  [ok] [2021] HKCFI 814: KWOK HIU KWAN v. CONVOY GLOBAL HOLDINGS LTD AND OT -> 5 principles
+  [ok] [2022] HKDC 445: HKSAR v. TSE LOI FUK -> 5 principles
+  [ok] [2025] HKCFI 3033: NEW SPARKLE ROLL INTERNATIONAL GROUP LTD v. ZHENG  -> 3 principles
+  [ok] [2022] HKCFI 2127: LAW YIU WAI RAY AND ANOTHER v. CHEUNG YING MAN als -> 5 principles
+  [ok] [2022] HKCA 427: CHINA MEDICAL TECHNOLOGIES, INC (IN LIQUIDATION) A -> 2 principles
+  [ok] [2026] HKCFI 35: RICH ENGINEERING LTD v. FIRE SERVICE INSTALLATION  -> 3 principles
+  [ok] [2025] HKCFI 380: ZOU GEBING v. HONG KONG XINXIN INFORMATION LTD -> 5 principles
+  [ok] [2022] HKCFI 3256: RE ZPMC-RED BOX ENERGY SERVICES LTD -> 2 principles
+  [ok] [2023] HKDC 431: HKSAR v. LEUNG TING FUNG -> 2 principles
+  [ok] [2022] HKCFI 2561: LAU TUNG HOI KENT v. LAU TUNG KUEN -> 3 principles
+  [ok] [2023] HKCA 461: CHINACHEM CHARITABLE FOUNDATION LTD v. CHAN WAI TO -> 3 principles
+  [ok] [2021] HKCA 1846: CLARK QUANTUM KENT (formerly known as John Mohamma -> 5 principles
+  [ok] [2021] HKDC 1012: HKSAR v. LEUNG WAI MING -> 1 principles
+  [ok] [2025] HKCFI 967: TSE MAN YIU AND OTHERS v. TSE MAN WAI AND ANOTHER -> 4 principles
+  [ok] [2025] HKCA 932: THE LAW SOCIETY OF HONG KONG v. JIM YIU MING AND A -> 2 principles
+  [ok] [2026] HKCFI 1238: ORIENTAL TEXTILE PRODUCTS LTD v. ASIA TELEVISION H -> 1 principles
+  [ok] [2022] HKCFI 977: JSP INTERNATIONAL S.R.O. v. ALACRITY LTD AND OTHER -> 2 principles
+  [ok] [2026] HKDC 230: EVERCARE HEALTH LTD v. SO LAI KAN also known as GO -> 3 principles
+  [ok] [2021] HKCFI 2881: HKSAR v. CHAN SHEK LUN -> 0 principles
+  [ok] [2023] HKCFI 308: HKSAR v. LUI WAI LOK -> 0 principles
+  [ok] [2025] HKCA 190: HKSAR v. LAM TSZ HIM AND ANOTHER -> 2 principles
+  [ok] [2025] HKDC 2105: KWOK LAI SHEUNG v. MORE INSURANCE BROKER COMPANY L -> 0 principles
+  [ok] [2023] HKCFI 2156: CHINA MEDICAL TECHNOLOGIES INC (In Liquidation) AN -> 5 principles
+  [ok] [2021] HKDC 236: HKSAR v. LAM SEE CHUNG STEPHEN -> 4 principles
+  [ok] [2021] HKCA 611: GALLERIA (HONG KONG), LTD (IN COMPULSORY LIQUIDATI -> 5 principles
+  [ok] [2021] HKCFI 94: HKSAR v. YEUNG SARAH SUM YEE -> 2 principles
+  [ok] [2025] HKDC 63: HKSAR v. LO WAN -> 3 principles
+  [ok] [2022] HKDC 1132: HKSAR v. CHUCK SZE MING AND ANOTHER -> 2 principles
+  [ok] [2025] HKDC 51: HKSAR v. TANG KWOK KEUNG (also known as LI CHING K -> 2 principles
+  [ok] [2022] HKCA 41: CHINA MEDICAL TECHNOLOGIES, INC. (IN LIQUIDATION)  -> 4 principles
+  [ok] [2025] HKDC 1514: HKSAR v. MUTUNGI DORCUS -> 0 principles
+  [ok] [2025] HKDC 1236: HKSAR v. TSUI KING WA -> 3 principles
+  [ok] [2025] HKCFI 1066: HKSAR v. WONG TIK ON -> 4 principles
+  [ok] [2021] HKDC 771: HKSAR v. TONG CHIU CHUEN -> 4 principles
+  [ok] [2023] HKDC 1825: HKSAR v. ATREYA BONEY -> 3 principles
+
+--- Topic: Intention to Permanently Deprive (theft_intention_deprive) ---
+  [ok] [2023] HKCFI 3315: CHINA PING AN INSURANCE OVERSEAS (HOLDINGS) LTD v. -> 4 principles
+  [ok] [2025] HKCFI 1868: CHINA SHANSHUI CEMENT GROUP LTD AND OTHERS v. ZHAN -> 0 principles
+
+--- Topic: Robbery (robbery) ---
+  [ok] [2022] HKCFI 3514: HKSAR v. GURUNG ASHISH AND ANOTHER -> 0 principles
+  [ok] [2025] HKCFI 1047: HKSAR v. LEONG HOW SENG -> 5 principles
+  [ok] [2021] HKCFI 2705: HKSAR v.SO CHI-MING -> 4 principles
+  [ok] [2021] HKCFI 280: HKSAR v. MUHAMMAD YAMIN BUTT -> 0 principles
+  [ok] [2023] HKCFI 1096: HKSAR v. CHONG CHIN TONG AND OTHERS -> 5 principles
+  [ok] [2023] HKCFI 2744: HKSAR v. LAM MAN CHUNG AND OTHERS -> 5 principles
+  [ok] [2026] HKCA 68: HKSAR v. XIE BINLONG -> 1 principles
+  [ok] [2024] HKCA 70: HKSAR v. TSANG HON HANG AND ANOTHER -> 2 principles
+  [ok] [2026] HKCFI 189: HKSAR v. NGUYEN TSZ BO, TRAVIS AND ANOTHER -> 4 principles
+  [ok] [2021] HKCA 1431: HKSAR v. LIMBU BINOD -> 2 principles
+  [ok] [2022] HKCFI 296: HKSAR v. LO CHI WAI AND ANOTHER -> 4 principles
+  [ok] [2025] HKCFI 2153: HKSAR v. PRABHAT -> 3 principles
+  [ok] [2024] HKCA 493: HKSAR v. LAM MAN CHUNG AND ANOTHER -> 2 principles
+  [ok] [2023] HKCFI 3335: HKSAR v. SINGH AJAYPAL AND OTHERS -> 2 principles
+  [ok] [2022] HKDC 832: HKSAR v. WONG SZE SING also known as WONG PAK YIN  -> 0 principles
+  [ok] [2021] HKCFI 2110: HKSAR v. WONG HONG -> 0 principles
+  [ok] [2022] HKDC 519: HKSAR v. NGUYEN THANH PHONG -> 3 principles
+  [ok] [2024] HKCFI 3213: HKSAR v. YU YEUK NAM AND ANOTHER -> 0 principles
+  [ok] [2021] HKCFI 810: HKSAR v. LIMBU BINOD -> 3 principles
+  [ok] [2021] HKCFI 1268: HKSAR v. CHU KING-SHING, DANNY -> 4 principles
+  [ok] [2021] HKDC 507: HKSAR v. HAIDER USMAN -> 4 principles
+  [ok] [2025] HKCFI 1733: HKSAR v. WU MAN HUNG -> 0 principles
+  [ok] [2022] HKCFI 2950: HKSAR v. BUNGCHAN JENNERONG AND ANOTHER -> 0 principles
+  [ok] [2025] HKCFI 1352: HKSAR v. XIE BINLONG -> 5 principles
+  [ok] [2024] HKCA 21: HKSAR v. YIP WING FAT -> 3 principles
+  [ok] [2021] HKCFI 2056: HKSAR v. LEE PAK WING ALMOND -> 4 principles
+  [ok] [2021] HKDC 124: HKSAR v. LAU KA CHUN, EDDY -> 2 principles
+  [ok] [2025] HKDC 95: HKSAR v. YIP NGOK CHIN -> 0 principles
+  [ok] [2023] HKCFI 1384: HKSAR v. PUN LOKENDRA BAHADUR -> 3 principles
+  [ok] [2024] HKCFI 79: HKSAR v. WONG SHING CHI AND OTHERS -> 5 principles
+  [ok] [2023] HKDC 299: HKSAR v. CHUNG TIK HIN AND OTHERS -> 5 principles
+  [ok] [2025] HKCFI 5696: HKSAR v. CHAN WANG HO -> 3 principles
+  [ok] [2021] HKCFI 2426: HKSAR v. SAHIL KUMAR AND ANOTHER -> 2 principles
+  [ok] [2023] HKCA 783: HKSAR v. LEUNG HO HIN AND ANOTHER -> 2 principles
+  [ok] [2024] HKCFI 2595: HKSAR v. CHAN SIU TAT AND OTHERS -> 0 principles
+  [ok] [2024] HKCFI 598: HKSAR v. SUEN KA CHUN -> 3 principles
+  [ok] [2023] HKCA 102: HKSAR v. SAHIL KUMAR AND ANOTHER -> 3 principles
+  [ok] [2023] HKDC 1024: HKSAR v. ILYAS GUL SHARE CHAND AND OTHERS -> 3 principles
+  [ok] [2024] HKCFI 197: HKSAR v. WONG KAI CHUNG -> 4 principles
+  [ok] [2022] HKCFI 3515: HKSAR v. GHALE RAJ -> 5 principles
+  [ok] [2025] HKCFI 1976: HKSAR v. GHULAM MUSTAFA AND OTHERS -> 2 principles
+  [ok] [2023] HKDC 1710: HKSAR v. GURUNG ASHIS AND ANOTHER -> 4 principles
+  [ok] [2021] HKCFI 3323: HKSAR v. YUE LEONG FONG AND OTHERS -> 4 principles
+  [ok] [2023] HKCFI 2171: HKSAR v. CHAN KING LUNG AND OTHERS -> 3 principles
+  [ok] [2023] HKCFI 1771: HKSAR v. THAPA KRISHNA KUMAR -> 2 principles
+  [ok] [2024] HKCFI 489: HKSAR v. LAL VIPAN AND ANOTHER -> 3 principles
+
+--- Topic: Burglary (burglary) ---
+  [ok] [2021] HKDC 1645: HKSAR v. MAHMOOD AZHAR -> 2 principles
+  [ok] [2021] HKDC 218: HKSAR v. LEUNG PUI (also known as LEUNG WA-FAI) AN -> 0 principles
+  [ok] [2024] HKDC 860: HKSAR v. LEE CHUN CHEUNG -> 3 principles
+  [ok] [2021] HKDC 1465: HKSAR v. FRANCISCO CHEVIE REBONG AND ANOTHER -> 4 principles
+  [ok] [2024] HKDC 315: HKSAR v. TIAN HONGLIANG AND ANOTHER -> 4 principles
+  [ok] [2021] HKDC 144: HKSAR v. CHAN CHI CHUN AND ANOTHER -> 2 principles
+  [ok] [2021] HKDC 129: HKSAR v. SO MA-TAI -> 1 principles
+  [ok] [2025] HKDC 1612: HKSAR v. RANAWEERA ARACHCHILAGE RUWAN N ARACHCHILA -> 4 principles
+  [ok] [2021] HKDC 221: HKSAR v. LAU PAK LUN (also known as LAU FUK CHUEN  -> 0 principles
+  [ok] [2024] HKDC 514: HKSAR v. YIM YAU YIU also known as LUI CHI YUNG -> 1 principles
+  [ok] [2021] HKDC 637: HKSAR v. ZHANG RENJUN -> 3 principles
+  [ok] [2021] HKDC 707: HKSAR v. WONG CHUN YIN AND ANOTHER -> 3 principles
+  [ok] [2021] HKDC 666: HKSAR v. CHUNG CHI-YIN -> 0 principles
+  [ok] [2021] HKDC 1357: HKSAR v. LEUNG HO CHUN -> 0 principles
+  [ok] [2021] HKDC 1656: HKSAR v. NAWAZ SHAMIR SUGUITAN AND OTHERS -> 0 principles
+  [ok] [2021] HKDC 259: HKSAR v. LUI CHO YIU AND OTHERS -> 2 principles
+  [ok] [2024] HKDC 398: HKSAR v. CHEUNG WING KIN -> 0 principles
+  [ok] [2021] HKDC 937: HKSAR v. LEE HO KONG AND ANOTHER -> 2 principles
+  [ok] [2021] HKDC 159: HKSAR v. CHAN WING LUN -> 0 principles
+  [ok] [2022] HKDC 1193: HKSAR v. HAU PAK KWAN -> 2 principles
+  [ok] [2021] HKDC 459: HKSAR v. LIMBU GOPAL -> 4 principles
+  [ok] [2021] HKDC 294: HKSAR v. PANG SIU HANG -> 0 principles
+  [ok] [2025] HKDC 204: HKSAR v. GURUNG LOK BAHADUR -> 3 principles
+  [ok] [2021] HKDC 958: HKSAR v. WU HOI KWONG -> 3 principles
+  [ok] [2025] HKDC 416: HKSAR v. CHOW WAN HI -> 2 principles
+  [ok] [2022] HKDC 1356: HKSAR v. CHAN YUEN SHING (also known as CHAN YUEN  -> 3 principles
+  [ok] [2021] HKDC 80: HKSAR v. WUN SHU-FAI (also known as WAN SHU-FAI) -> 0 principles
+  [ok] [2021] HKDC 295: HKSAR v. YU TSZ FUNG -> 0 principles
+  [ok] [2025] HKDC 2118: HKSAR v. GUAN XINGHUA -> 2 principles
+  [ok] [2023] HKDC 218: HKSAR v. WEI QINGCHANG AND ANOTHER -> 5 principles
+  [ok] [2022] HKDC 796: HKSAR v. LAU PO SING -> 2 principles
+  [ok] [2023] HKDC 1186: HKSAR v. CHIU SIU MAN, MASCOT -> 5 principles
+  [ok] [2021] HKDC 242: HKSAR v. CHAN HIU KIN -> 4 principles
+  [ok] [2024] HKDC 1020: HKSAR v. SINGH SATINDER PAL -> 0 principles
+  [ok] [2024] HKDC 1919: HKSAR v. WANG BAO -> 3 principles
+  [ok] [2025] HKDC 79: HKSAR v. SINGH LAIK -> 4 principles
+  [ok] [2022] HKCFI 3536: HKSAR v. LAI MING LEONG -> 2 principles
+  [ok] [2021] HKDC 216: HKSAR v. WAN WAI FUNG -> 3 principles
+  [ok] [2025] HKDC 253: HKSAR v. REN MINGHU -> 4 principles
+  [ok] [2021] HKDC 677: HKSAR v. NAVNEET SINGH -> 1 principles
+  [ok] [2021] HKDC 706: HKSAR v. MUHAMMAD SHEHBAZ (also known as MUHMMAD S -> 3 principles
+  [ok] [2021] HKDC 530: HKSAR v. TSE LOK LAI, TONY AND ANOTHER -> 3 principles
+  [ok] [2024] HKDC 2190: HKSAR v. HUI YEE LUNG -> 0 principles
+  [ok] [2022] HKDC 285: HKSAR v. TSE CHUN WAH AND ANOTHER -> 3 principles
+  [ok] [2024] HKDC 450: HKSAR v. WUN SHU FAI (aka WAN SHU FAI) -> 3 principles
+  [ok] [2026] HKCA 414: HKSAR v. GADARA JASPAL SINGH -> 3 principles
+  [ok] [2024] HKCA 1164: HKSAR v. PINTO -> 3 principles
+  [ok] [2021] HKDC 1072: HKSAR v. NG WAI KIT -> 2 principles
+
+--- Topic: Fraud and Deception (fraud) ---
+  [ok] [2021] HKCA 1093: R STAHL INC (a company incorporated in the United  -> 5 principles
+  [ok] [2023] HKCA 513: CHEN JINHUI v. WONG KAM SAN (黃錦新), by his guardian -> 3 principles
+  [ok] [2021] HKCA 1047: LU YONGLIANG v. BANK OF CHINA LIMITED, DONGGUAN BR -> 4 principles
+  [ok] [2024] HKCFI 2820: CTBC BANK CO LTD v. INDUSTRIAL AND COMMERCIAL BANK -> 3 principles
+  [ok] [2024] HKCFI 2074: MINTING DOME HOLDING LLC v. DENG JIE AND ANOTHER -> 3 principles
+  [ok] [2024] HKDC 400: HKSAR v. CHUNG HIU TUNG -> 4 principles
+  [ok] [2023] HKCA 1338: TANG GANG AND OTHERS v. WONG SAI CHUNG -> 4 principles
+  [ok] [2022] HKCFI 3011: TANG GANG AND OTHERS v. WONG SAI CHUNG -> 5 principles
+  [ok] [2023] HKDC 1217: HKSAR v. WU TIN LONG, MIKE -> 2 principles
+  [ok] [2022] HKCA 1745: SECRETARY FOR JUSTICE v. KONG CHI-KIU -> 3 principles
+  [ok] [2023] HKCA 496: SECRETARY FOR JUSTICE v. CHUNG PUI-KIT, BILLY -> 4 principles
+  [ok] [2023] HKCFI 1228: TOBII TECHNOLOGY INC v. HONG KONG TEAM LIGHT INTER -> 1 principles
+  [ok] [2024] HKDC 659: HKSAR v. LI SUET YING -> 2 principles
+  [ok] [2021] HKCA 2012: HKSAR v. LAM SEE CHUNG STEPHEN -> 4 principles
+  [ok] [2025] HKCFI 5475: SUEN WAI MO v. LAM HONG KI AND OTHERS -> 5 principles
+  [ok] [2025] HKDC 568: HKSAR v. LI KA WING -> 5 principles
+  [ok] [2021] HKDC 43: BAYI STEEL INTERNATIONAL MINERAL CORPORATION v. HO -> 3 principles
+  [ok] [2025] HKDC 1116: HKSAR v. CHENG MING LIM -> 2 principles
+  [ok] [2023] HKCFI 2229: HUA SHE ASSET MANAGEMENT (SHANGHAI) COMPANY LTD v. -> 5 principles
+  [ok] [2023] HKCFI 740: TSANG TSE TO v. SUN BON INTERNATIONAL LOGISTIC LTD -> 3 principles
+  [ok] [2023] HKCFI 3043: WONG SHU KEUNG v. KAM LUEN CONSOLIDATOR LTD -> 3 principles
+  [ok] [2025] HKCA 997: ANZ COMMODITY TRADING PTY LTD v. EXCELLENCE RAISE  -> 4 principles
+  [ok] [2023] HKDC 1564: HKSAR v. FOK TSZ HIN -> 2 principles
+  [ok] [2021] HKCA 325: NICHOLAS V.A. SCHEBEK-FUERSTENBERG v. YIP WAI SANG -> 4 principles
+  [ok] [2024] HKDC 1328: HKSAR v. LEE LAI PING -> 0 principles
+  [ok] [2022] HKCA 1655: RE SUN FUNG TIMBER CO LTD -> 3 principles
+  [ok] [2024] HKDC 1100: LIN XUEQIN v. META-LUCI-HERAWATI -> 4 principles
+  [ok] [2024] HKDC 894: SHENZHEN HIFROZEN INTERNATIONAL LOGISTICS DEVELOPM -> 3 principles
+  [ok] [2021] HKCA 100: WANG PENGYING v. NG WING FAI AND OTHERS -> 4 principles
+  [ok] [2023] HKCA 223: HKSAR v. LEUNG CHUN-HEI -> 0 principles
+  [ok] [2024] HKDC 1743: HKSAR v. JHAMAL AZAD -> 4 principles
+  [ok] [2025] HKDC 869: HKSAR v. TSEA WAI HUNG -> 4 principles
+  [ok] [2025] HKDC 1615: HKSAR v. WAN KWUN HO -> 3 principles
+  [ok] [2021] HKCFI 426: SIME DARBY HONG KONG FINANCE LTD v. FDK LTD AND AN -> 2 principles
+  [ok] [2021] HKCFI 1902: KOT SEE FOR v. LAM MAN CHEUNG AND OTHERS -> 0 principles
+  [ok] [2021] HKDC 1328: HKSAR v. CHEUNG KWOK HUNG -> 3 principles
+  [ok] [2025] HKCFI 4997: CHINA MEDICAL TECHNOLOGIES, INC (IN LIQUIDATION) A -> 1 principles
+  [ok] [2023] HKDC 1512: HKSAR v. LAI YUK KWONG AND ANOTHER -> 0 principles
+  [ok] [2025] HKCA 1051: GRADE ONE LTD AND OTHERS v. CHOW CHIN YUI, ANGELA  -> 3 principles
+  [ok] [2026] HKCFI 902: G, G v. CNG AND SIL -> 5 principles
+  [ok] [2022] HKDC 272: WONG LEE MEI MAY v. SINCERITY INTERNATIONAL GROUP  -> 0 principles
+  [ok] [2021] HKDC 230: HKSAR v. LAM SEE CHUNG STEPHEN -> 2 principles
+
+--- Topic: Forgery and Counterfeiting (forgery) ---
+  [ok] [2025] HKCFI 4612: HKSAR v. SHAHEEN, MOEEN -> 1 principles
+  [ok] [2022] HKCFI 2135: CHINA CONSTRUCTION BANK (ASIA) CORPORATION LTD v.  -> 2 principles
+  [ok] [2023] HKCA 781: LI NGAN KWAN AND ANOTHER v. GAO LI HUI AND OTHERS -> 4 principles
+  [ok] [2024] HKCFI 3033: SUNRICH TRADERS LTD AND ANOTHER v. KUMAR VASWANI A -> 3 principles
+  [ok] [2023] HKCFI 2332: FUNG SHING CHUNG v. CHOI KING HUNG -> 4 principles
+  [ok] [2023] HKCFI 1559: SUNRICH TRADERS LTD AND ANOTHER v. KUMAR VASWANI A -> 1 principles
+  [ok] [2021] HKCFI 2878: LI NGAN KWAN AND OTHERS v. GAO LI HUI AND OTHERS -> 4 principles
+  [ok] [2024] HKDC 2074: NG KOON FAI v. TO CHUNG YIN AND ANOTHER -> 4 principles
+  [ok] [2025] HKDC 429: NG KOON FAI v. TO CHUNG YIN AND ANOTHER -> 2 principles
+  [ok] [2021] HKDC 1002: EGO FINANCE LTD v. JU LUI AND OTHERS -> 0 principles
+  [ok] [2021] HKDC 1580: HKSAR v. LEE MAN TAI -> 2 principles
+  [ok] [2024] HKCA 298: LI NGAN KWAN AND ANOTHER v. GAO LI HUI AND OTHERS -> 3 principles
+  [ok] [2024] HKCFI 979: FUNG SHING CHUNG v. CHOI KING HUNG -> 4 principles
+  [ok] [2021] HKDC 843: HKSAR v. SUN PO TAK -> 2 principles
+  [ok] [2021] HKDC 1067: HKSAR v. LUI YU ON -> 0 principles
+  [ok] [2023] HKCA 1353: LAM WAI LIK ERIC AND OTHERS v. TAM SUET MUI -> 5 principles
+  [ok] [2025] HKDC 1815: HKSAR v. LAI KING MAN -> 0 principles
+  [ok] [2025] HKDC 81: HKSAR v. WAN CHEUK HAANG -> 1 principles
+  [ok] [2023] HKDC 627: HKSAR v. YU SING MONG -> 3 principles
+  [ok] [2022] HKCFI 171: LI NGAN KWAN AND OTHERS v. GAO LI HUI AND OTHERS -> 3 principles
+  [ok] [2024] HKDC 259: MA HON WAI AND ANOTHER v. TSUI EDWARD AND ANOTHER -> 4 principles
+  [ok] [2021] HKDC 780: HKSAR v. HO LAP SANG -> 0 principles
+  [ok] [2025] HKCFI 5583: DAH SING BANK, LTD v. GOLDEN GEAR LTD AND OTHERS -> 5 principles
+  [ok] [2021] HKCFI 2385: RE CHAN CHUN CHUEN -> 0 principles
+  [ok] [2024] HKDC 743: HKSAR v. CHOW KA CHUN -> 1 principles
+  [ok] [2022] HKCA 468: VER, ROGER KEITH v. OKEX FINTECH CO LTD (formerly  -> 4 principles
+  [ok] [2022] HKCFI 1071: WONG WAI HUNG v. LAM WAI MO AND ANOTHER -> 4 principles
+  [ok] [2022] HKCFI 2984: LEE SAI HOI v. LI SIN MAN AND ANOTHER -> 3 principles
+  [ok] [2023] HKDC 312: HKSAR v. YAU WING CHEONG -> 3 principles
+  [ok] [2023] HKCFI 957: FUNG YIM v. CHINA INDUSTRIAL SECURITIES INTERNATIO -> 4 principles
+  [ok] [2023] HKCA 628: YUEN OI YEE LISA v. NGAI NGOK LEONG -> 0 principles
+  [ok] [2022] HKCFI 737: MULTIFOR ENTERPRISE DEVELOPMENT LTD v. HO CHOW PIN -> 1 principles
+  [ok] [2024] HKCFI 3552: NG YIU CHI v. NG KWOK PIU PHILIP -> 4 principles
+  [ok] [2021] HKCFI 231: LANDWAY INVESTMENTS LTD v. AREA ASIA LTD -> 4 principles
+  [ok] [2023] HKDC 924: HKSAR v. CHEUNG CHI CHIU -> 2 principles
+  [ok] [2023] HKCA 726: HKSAR v. WONG KAM SHING -> 3 principles
+  [ok] [2024] HKCA 108: HU LAN v. DAVID GOLDEN -> 5 principles
+  [ok] [2022] HKCFI 1659: CHAN SUNNY as executor of the estate of deceased K -> 3 principles
+  [ok] [2026] HKCFI 885: TONG PAK LUNG v. TONG CHOI YUEN -> 0 principles
+  [ok] [2021] HKDC 1410: HKSAR v. FUNG KING YEE -> 3 principles
+  [ok] [2021] HKDC 65: HKSAR v. TONG YIU FUNG -> 3 principles
+  [ok] [2025] HKDC 1161: PACIFIC ACE FINANCE LTD v. DELAY, GILDA H. AND ANO -> 2 principles
+  [ok] [2023] HKCFI 3347: KO TUNG MUNG AND ANOTHER v. WONG KA CHUN -> 4 principles
+  [ok] [2024] HKCFI 857: HKSAR v. WONG KA KEUNG AND OTHERS -> 1 principles
+
+--- Topic: Handling Stolen Goods (handling_stolen) ---
+  [ok] [2025] HKDC 705: HKSAR v. CHEUNG WAI YEE -> 0 principles
+  [ok] [2025] HKDC 1524: HKSAR v. DONG JIAHAO -> 0 principles
+  [ok] [2021] HKCFI 2952: HKSAR v. NONES CARMELITA GALAY AND ANOTHER -> 4 principles
+  [ok] [2023] HKCA 796: HKSAR v. AKRAM MUHAMMAD -> 2 principles
+  [ok] [2023] HKDC 79: HKSAR v. PHAN BAO -> 2 principles
+  [ok] [2022] HKDC 539: HKSAR v. JIM HOI MING -> 3 principles
+  [ok] [2024] HKCFI 2986: HKSAR v. LI YANG -> 3 principles
+  [ok] [2024] HKCFI 2650: HKSAR v. LAI CHI WAH -> 5 principles
+  [ok] [2021] HKDC 553: HKSAR v. MAK PAK LAM -> 5 principles
+  [ok] [2025] HKCFI 487: HKSAR v. LI CHEUK KWAN, ERIC -> 0 principles
+  [ok] [2021] HKDC 732: HKSAR v. LAM NAM -> 2 principles
+  [ok] [2023] HKDC 346: HKSAR v. SY MANUEL Jr. CAMA AND ANOTHER -> 3 principles
+  [ok] [2023] HKDC 1308: HKSAR v. ZUNIGA ELVIN RAMON L -> 1 principles
+  [ok] [2021] HKCA 1529: HKSAR v. WONG CHUN YIN AND ANOTHER -> 4 principles
+  [ok] [2022] HKDC 563: HKSAR v. YAU KA LEUNG -> 4 principles
+  [ok] [2024] HKDC 673: HKSAR v. TAI WAI YIN -> 3 principles
+  [ok] [2020] HKDC 950: HKSAR v. LAKHVIR SINGH AND OTHERS -> 1 principles
+  [ok] [2024] HKDC 95: HKSAR v. WONG MING CHUN -> 3 principles
+  [ok] [2023] HKCFI 174: AKRAM MUHAMMAD v. DIRECTOR OF IMMIGRATION -> 2 principles
+  [ok] [2022] HKCFI 1092: SUYATMI v. TORTURE CLAIMS APPEAL BOARD -> 3 principles
+  [ok] [2024] HKDC 1497: HKSAR v. CHUI TAK MAN -> 4 principles
+  [ok] [2021] HKDC 1015: HKSAR v. NGAI KAI LEONG AND OTHERS -> 4 principles
+  [ok] [2021] HKCFI 1447: SALAH UDDIN v. TORTURE CLAIMS APPEAL BOARD -> 3 principles
+  [ok] [2021] HKDC 1622: HKSAR v. LAU YIU FAI -> 2 principles
+  [ok] [2023] HKDC 781: HKSAR v. FONG TAK CHI -> 2 principles
+  [ok] [2024] HKDC 1971: HKSAR v. LEE WANG KAM (also known as LEE CHI WANG) -> 4 principles
+  [ok] [2024] HKCA 871: HKSAR v. WONG MING CHUN -> 4 principles
+  [ok] [2023] HKDC 1598: HKSAR v. TSANG WING HONG -> 0 principles
+  [ok] [2022] HKCA 1333: HKSAR v. CHIANG KAM WING AND ANOTHER -> 5 principles
+  [ok] [2024] HKDC 74: HKSAR v. LEE CHUN LOK AND ANOTHER -> 3 principles
+  [ok] [2021] HKDC 993: HKSAR v. KONG TING SHAN -> 3 principles
+  [ok] [2022] HKCA 779: DITTA ALLAH v. DIRECTOR OF IMMIGRATION -> 5 principles
+  [ok] [2024] HKDC 697: HKSAR v. LIAO JIAHENG AND OTHERS -> 4 principles
+  [ok] [2021] HKDC 1563: HKSAR v. CHIANG KAM WING AND ANOTHER -> 2 principles
+
+--- Topic: Criminal Damage and Arson (criminal_damage_arson) ---
+  [ok] [2021] HKCA 1138: FONG CHAK KWAN v. ASCENTIC LTD AND OTHERS -> 5 principles
+  [ok] [2021] HKCFI 2840: WANG HAIHONG AND OTHERS v. J.P. MORGAN SECURITIES  -> 5 principles
+  [ok] [2023] HKCA 1277: CHAN CHIU TUNG v. CHENG KA FAI PHILIP -> 4 principles
+  [ok] [2021] HKDC 994: CHAN CHIU TUNG v. CHENG KA FAI PHILIP AND OTHERS -> 3 principles
+  [ok] [2022] HKCFA 12: EMPLOYEES COMPENSATION ASSISTANCE FUND BOAR v. FON -> 5 principles
+  [ok] [2021] HKCA 1146: MEMORAN CO LTD v. THE INCORPORATED OWNERS OF MEI H -> 0 principles
+  [ok] [2021] HKDC 1416: CHAN CHIU TUNG v. CHENG KA FAI PHILIP AND OTHERS -> 4 principles
+  [ok] [2021] HKCFI 3101: HKSAR v. BUTT, AZIZ AKBAR -> 3 principles
+  [ok] [2022] HKCFI 862: GURUNG BISHAN v. PROFIT SPREAD LTD AND ANOTHER -> 4 principles
+  [ok] [2024] HKDC 2092: SANDHU JATINDER SINGH v. MA SHIU MING AND ANOTHER -> 4 principles
+  [ok] [2024] HKDC 1706: CHEUNG KWAN HO v. MAN CHEUNG LAM AND ANOTHER -> 5 principles
+  [ok] [2023] HKCFI 1579: ALTRANS FAST CARGO LTD (AS ASSIGNEE OF LIFESTYLE L -> 5 principles
+  [ok] [2024] HKCFI 1272: SHUN HONG LTD (formerly known as BRUCKNER LTD) v.  -> 4 principles
+  [ok] [2025] HKDC 1909: HKSAR v. PANG SHEK FAI -> 0 principles
+  [ok] [2021] HKCFI 2668: ASAHI IWASAWA & ASSOCIATES MANAGEMENT CONSULTANTS  -> 4 principles
+  [ok] [2021] HKCFI 2225: 廈門新景地集團有限公司 formerly known as 廈門市鑫新景地房地產有限公司 v. ET -> 5 principles
+  [ok] [2025] HKCFI 4370: HKSAR v. YEUNG MAN HIN -> 0 principles
+  [ok] [2024] HKDC 1590: HKSAR v. KWOK HON MAN -> 0 principles
+  [ok] [2021] HKCFI 2076: HKSAR v. THAJUDEEN MOHAMED SIYAN -> 3 principles
+  [ok] [2024] HKDC 633: HO SAI CHEONG AND ANOTHER v. HONEST GATE COMPANY L -> 5 principles
+  [ok] [2023] HKDC 397: HKSAR v. REHMAN MUGHAL ZIA UR -> 2 principles
+  [ok] [2022] HKDC 978: HKSAR v. LEUNG MAN CHUN -> 3 principles
+  [ok] [2024] HKDC 950: CHEVALIER (HK) LTD v. CHAN WING CHING AND ANOTHER -> 4 principles
+  [ok] [2024] HKCFI 915: HKSAR v. VANDAMME, BASTIEN MATTHIEU JACQUES ROGER -> 4 principles
+  [ok] [2021] HKDC 1494: SO HON MING FRANCIS v. CHEUNG LAU SHAU CHUN AND AN -> 5 principles
+  [ok] [2021] HKDC 1389: HKSAR v. TSANG MAN FUNG -> 3 principles
+  [ok] [2022] HKCFA 4: EMPLOYEES COMPENSATION ASSISTANCE FUND BOARD v. FO -> 3 principles
+  [ok] [2025] HKDC 843: 蕭楗燊 v. DEVI MADHURI AND ANOTHER -> 5 principles
+  [ok] [2024] HKDC 1579: CHINA FAIR LAND (QINGDAO) LTD v. LO SUM SUM -> 5 principles
+  [ok] [2021] HKCA 1416: XU YING v. XU WEIHONG -> 4 principles
+  [ok] [2024] HKDC 1457: HKSAR v. TANG MAN KIT -> 0 principles
+  [ok] [2025] HKCFI 922: LIN HO PIN AND OTHERS v. JAMES TING-YEH YANG -> 4 principles
+  [ok] [2025] HKDC 1299: HKSAR v. CHAN HO YIN -> 4 principles
+  [ok] [2023] HKCFI 420: LO WAI KEUNG v. HANNOVER RÜCK SE -> 1 principles
+  [ok] [2022] HKCFI 1341: HKSAR v. SO SIU YUEN -> 4 principles
+  [ok] [2026] HKCrC 1: RE INQUEST INTO THE DEATHS OF 39 PERSONS ARISING O -> 4 principles
+  [ok] [2021] HKDC 359: HKSAR v. YEUNG LAP WAI -> 3 principles
+  [ok] [2021] HKCA 794: SECRETARY FOR JUSTICE v. CHAN YIP WAN -> 4 principles
+  [ok] [2024] HKDC 509: SUCCESS LANE DEVELOPMENT LTD v. FERGURSON HONG KON -> 3 principles
+  [ok] [2022] HKCFI 362: SILVERCORD LTD v. THE SWATCH GROUP (HONG KONG) LTD -> 5 principles
+  [ok] [2021] HKDC 1446: HKSAR v. RAJPAL -> 5 principles
+  [ok] [2024] HKDC 1062: H & W DEVELOPMENT (HK) LTD (formerly known as EAGL -> 0 principles
+  [ok] [2025] HKDC 1048: HANG YUE ENGINEERING LTD AND ANOTHER v. TSE KING Y -> 5 principles
+  [ok] [2025] HKDC 1656: HKSAR v. LAW FU WING -> 2 principles
+
+--- Topic: Drug Trafficking (drug_trafficking) ---
+  [ok] [2021] HKCA 916: HKSAR v. KWUN SUM YEUNG -> 0 principles
+  [ok] [2026] HKCFI 1676: HKSAR v. SOHAIB MOHAMMAD -> 2 principles
+  [ok] [2021] HKCFI 2756: HKSAR v. DIAO JUN-HUA -> 3 principles
+  [ok] [2025] HKDC 2191: HKSAR v. HO WAI TAT -> 3 principles
+  [ok] [2025] HKDC 1259: HKSAR v. KWOK KEI TAI, KORAY -> 2 principles
+  [ok] [2026] HKCA 558: HKSAR v. TANG CHIU SING, KELVIN -> 3 principles
+  [ok] [2023] HKCA 926: HKSAR v. CHAN CHUN HEI -> 4 principles
+  [ok] [2025] HKCFI 2875: HKSAR v. SIPIKILLI RIDONI -> 3 principles
+  [ok] [2021] HKCA 181: HKSAR v. CHENG CHI WAI -> 3 principles
+  [ok] [2021] HKCA 1265: HKSAR v. CHUNG HO YIN -> 5 principles
+  [ok] [2021] HKDC 1510: HKSAR v. LEE CHUN-PANG -> 5 principles
+  [ok] [2022] HKDC 1110: HKSAR v. CHEUNG CHI HIN AND ANOTHER -> 2 principles
+  [ok] [2021] HKCFI 3616: HKSAR v. TSOI FOR -> 1 principles
+  [ok] [2025] HKCFI 526: HKSAR v. CHOW WAI KWOK -> 4 principles
+  [ok] [2025] HKDC 1640: HKSAR v. TANG SIU PANG AND ANOTHER -> 2 principles
+  [ok] [2025] HKCFI 5152: HKSAR v. GGOLOLA EDWARD -> 4 principles
+  [ok] [2022] HKCA 1042: SECRETARY FOR JUSTICE v. PASTANA CARVALHO ANDREZA  -> 4 principles
+  [ok] [2022] HKCA 258: HKSAR v. FONG YAU HEUNG -> 3 principles
+  [ok] [2025] HKCA 328: HKSAR v. POON CHI KEUNG -> 4 principles
+  [ok] [2025] HKCFI 2921: HKSAR v. VU NHAN KHIEN -> 3 principles
+  [ok] [2021] HKCFI 3328: HKSAR v. LEUNG HO TAK -> 1 principles
+  [ok] [2025] HKCFI 5747: HKSAR v. HUI KWAN HO -> 3 principles
+  [ok] [2023] HKCFI 3330: HKSAR v. CHAN YUK KWAN -> 1 principles
+  [ok] [2025] HKCFI 4842: HKSAR v. CELESTIN HENSLEY FRANCO -> 4 principles
+  [ok] [2022] HKCFI 297: HKSAR v. NOR UMI SABIHA BINTI TAURAN TURKI -> 1 principles
+  [ok] [2021] HKDC 999: HKSAR v. CHENG CHI SHING -> 2 principles
+  [ok] [2021] HKCFI 2554: HKSAR v. POOTORNPHAI JAKKRIT -> 1 principles
+  [ok] [2024] HKDC 225: HKSAR v. WONG TSZ KIN AND ANOTHER -> 2 principles
+  [ok] [2024] HKDC 393: HKSAR v. LAU WING WA -> 4 principles
+  [ok] [2025] HKCFI 1056: HKSAR v. LEUNG WING LUN -> 2 principles
+  [ok] [2025] HKDC 1343: HKSAR v. LAI WA -> 0 principles
+  [ok] [2022] HKCA 936: HKSAR v. RASHIDI MDENGE RUKIA YUSUFU -> 1 principles
+  [ok] [2022] HKCFI 2595: HKSAR v. HUANG RUIFANG -> 4 principles
+  [ok] [2023] HKDC 267: HKSAR v. LI KA-MING -> 0 principles
+  [ok] [2025] HKCFI 4244: HKSAR v. LAM SIU FUNG AND ANOTHER -> 5 principles
+  [ok] [2021] HKCFI 3325: HKSAR v. NG HANG WAI -> 0 principles
+  [ok] [2024] HKCFI 669: HKSAR v. WONG WING HONG, RICKY -> 2 principles
+  [ok] [2021] HKCFI 2555: HKSAR v. NIGEL PATRICK STEVENSON -> 3 principles
+  [ok] [2025] HKDC 1152: HKSAR v. FU CHUN KIT AND ANOTHER -> 2 principles
+  [ok] [2023] HKDC 142: HKSAR v. CHOW HOI YAM AND ANOTHER -> 5 principles
+  [ok] [2024] HKDC 1509: HKSAR v. CHOI MAN SUM -> 3 principles
+  [ok] [2021] HKCA 345: HKSAR v. JAVIER DUVAN AMADO PEREZ -> 2 principles
+  [ok] [2025] HKDC 258: HKSAR v. KO CHUN YIN -> 0 principles
+  [ok] [2023] HKDC 368: HKSAR v. TAM KWOK-WING -> 0 principles
+  [ok] [2021] HKDC 312: HKSAR v. GOMEZ BECERRA DEIBER -> 0 principles
+  [ok] [2022] HKDC 143: HKSAR v. CHAN MAN-YUK -> 3 principles
+  [ok] [2021] HKCA 1896: HKSAR v. CHU HO WA AND ANOTHER -> 4 principles
+  [ok] [2026] HKCA 127: HKSAR v. CEDENO MEJIAS ANGEL RAFAEL -> 2 principles
+  [ok] [2026] HKCFI 1141: HKSAR v. YUE HIN FUNG -> 0 principles
+  [ok] [2021] HKCFI 3326: HKSAR v. CHAN CHI HANG -> 0 principles
+
+--- Topic: Public Order and Weapons (public_order) ---
+  [ok] [2021] HKCFI 1089: SATHAIAH SUBBAIAH v. TORTURE CLAIMS APPEAL BOARD -> 3 principles
+  [ok] [2023] HKCA 975: HKSAR v. LAU CHI FUNG -> 3 principles
+  [ok] [2022] HKDC 377: HKSAR v. TSANG CHUN KIT -> 2 principles
+  [ok] [2025] HKCFI 5850: FAEEM AHMAD v. TORTURE CLAIMS APPEAL BOARD -> 5 principles
+  [ok] [2023] HKCA 177: SECRETARY FOR JUSTICE v. AU YUK TING MELISSA -> 3 principles
+  [ok] [2022] HKCFI 1136: HKSAR v. WONG JI YUET -> 2 principles
+  [ok] [2025] HKCFI 3317: KAMAL YEAMIN AHMED v. TORTURE CLAIMS APPEAL BOARD  -> 4 principles
+  [ok] [2022] HKCA 794: ZFY v. SCHC -> 5 principles
+  [ok] [2022] HKCA 1780: HKSAR v. LUI SAI YU -> 4 principles
+  [ok] [2020] HKCA 990: SECRETARY FOR JUSTICE v. CHUNG KA HO -> 5 principles
+  [ok] [2021] HKCA 510: SECRETARY FOR JUSTICE v. POON YUNG WAI -> 3 principles
+  [ok] [2023] HKCFA 19: HKSAR v. MAK WING WA (麥永華) -> 4 principles
+  [ok] [2021] HKDC 234: HKSAR v. FONG CHI HUNG AND OTHERS -> 3 principles
+  [ok] [2022] HKCA 861: HKSAR v. LEUNG JANNELLE ROSALYNNE -> 0 principles
+  [ok] [2022] HKCFI 1895: HKSAR v. FU CHI ON AND OTHERS -> 5 principles
+  [ok] [2021] HKCA 1362: SECRETARY FOR JUSTICE v. LEUNG WING HONG -> 4 principles
+  [ok] [2021] HKDC 447: HKSAR v. LAI CHEE YING AND OTHERS -> 5 principles
+  [ok] [2021] HKCA 807: SECRETARY FOR JUSTICE v. TONG WAI HUNG -> 1 principles
+  [ok] [2022] HKCFI 2845: HKSAR v. LAU TSZ-LUNG, KELVIN AND ANOTHER -> 0 principles
+  [ok] [2025] HKDC 1415: HKSAR v. CHEUNG YUK MING AND OTHERS -> 2 principles
+  [ok] [2020] HKCFI 2425: HKSAR v. NG MAN YUEN AVERY AND OTHERS -> 5 principles
+  [ok] [2021] HKDC 547: HKSAR v. WONG CHI FUNG AND OTHERS -> 2 principles
+  [ok] [2022] HKCFI 686: HKSAR v. CHOI YUK WAN -> 5 principles
+  [ok] [2021] HKDC 457: HKSAR v. LAI CHEE YING AND OTHERS -> 5 principles
+  [ok] [2023] HKCFA 6: HKSAR v. MAK WING WA (麥永華) -> 2 principles
+  [ok] [2021] HKCFI 225: HKSAR v. LAU KA TUNG -> 4 principles
+  [ok] [2022] HKCA 239: HKSAR v. WONG CHI FUNG AND ANOTHER -> 5 principles
+  [ok] [2021] HKCA 1137: HKSAR v. AU NOK HIN -> 5 principles
+  [ok] [2021] HKCFI 1101: HKSAR v. LAU KA TUNG -> 2 principles
+  [ok] [2024] HKCFI 2575: HKSAR v. CHUNG SUET YING -> 0 principles
+  [ok] [2021] HKDC 390: HKSAR v. CHOI TSZ CHUNG -> 1 principles
+  [ok] [2021] HKCFA 17: HKSAR v. LO KIN MAN (盧建民) -> 2 principles
+  [ok] [2021] HKDC 645: HKSAR v. CHAN HO WUN AND OTHERS -> 5 principles
+  [ok] [2021] HKDC 1324: HKSAR v. CHAN HO WUN AND OTHERS -> 5 principles
+  [ok] [2022] HKCFI 849: HKSAR v. LAU SZE MAN -> 5 principles
+  [ok] [2021] HKCA 540: SECRETARY FOR JUSTICE v. CHOW KIN NOK -> 5 principles
+  [ok] [2022] HKCFA 14: HKSAR v. CHOY KIN YUE (蔡健瑜) -> 2 principles
+  [ok] [2023] HKDC 1463: HKSAR v. CHEUNG KING SANG KINSON AND OTHERS -> 4 principles
+  [ok] [2023] HKCFI 1794: HKSAR v. LI CHI WANG -> 3 principles
+  [ok] [2024] HKDC 1874: TSANG CHI ON v. YAU CHI LOK -> 0 principles
+  [ok] [2021] HKDC 1100: HKSAR v. CHAN HO WUN AND OTHERS -> 5 principles
+  [ok] [2022] HKDC 320: HKSAR v. CHUNG KIN PING ALLAN -> 5 principles
+  [ok] [2021] HKCA 293: HKSAR v. LEE PING HEI AND ANOTHER -> 4 principles
+
+--- Topic: Bribery and Misconduct in Public Office (bribery_misconduct) ---
+  [ok] [2024] HKCFI 681: 蘇書幼 v. 律政司 AND ANOTHER -> 2 principles
+  [ok] [2024] HKCFI 422: HKSAR v. LAM CHEUK TING -> 5 principles
+  [ok] [2025] HKCA 517: HKSAR v. HA BUT YEE -> 0 principles
+  [ok] [2025] HKCFI 4682: CHINA NATIONAL GOLD GROUP HONG KONG LTD v. THE HON -> 0 principles
+  [ok] [2023] HKDC 1560: HKSAR v. WONG CHI MING -> 2 principles
+  [ok] [2025] HKCFI 6332: DUBAI (INTERNATIONAL) DJIBOUTI FZE v. CHINA MERCHA -> 5 principles
+  [ok] [2025] HKCFI 6495: HKSAR v. ZSA SING TAK -> 2 principles
+  [ok] [2025] HKCA 1068: CHINA NATIONAL GOLD GROUP HONG KONG LTD v. THE HON -> 0 principles
+  [ok] [2023] HKCA 474: RE AURE JONILYN CELSO -> 1 principles
+  [ok] [2025] HKCA 843: RE MAHMOOD ASJAD -> 0 principles
+  [ok] [2021] HKDC 841: HKSAR v. PANG CHUN KIN -> 3 principles
+  [ok] [2023] HKCFI 445: DAIMLER AG (FORMERLY KNOWN AS MERCEDES BENZ AG) v. -> 3 principles
+  [ok] [2021] HKDC 1560: HKSAR v. YEOH KIM LOONG, EUGENE AND ANOTHER -> 5 principles
+  [ok] [2022] HKCA 677: RE SITI HAYANI -> 3 principles
+  [ok] [2024] HKCFA 18: HKSAR v. LAM CHEUK TING (林卓廷) -> 2 principles
+  [ok] [2024] HKCFI 1539: HKSAR v. T. K. C. -> 3 principles
+  [ok] [2022] HKCA 26: HKSAR v. CHUKWULETA SUNDAY FREEDALINE AND ANOTHER -> 3 principles
+  [ok] [2023] HKDC 1265: HKSAR v LAU CHING MAN (D1) LEE CHUNG FAI (D2) WONG -> 4 principles
+  [ok] [2025] HKCFI 6244: IDREES AMIR v. TORTURE CLAIMS APPEAL BOARD -> 1 principles
+  [ok] [2025] HKCFI 4350: YUEN TSZ CHUN FRANK and CHAN HOI YAN, the Joint an -> 4 principles
+  [ok] [2021] HKCFI 1395: SINO BRIGHT ENTERPRISES CO, LTD v. SECRETARY FOR J -> 3 principles
+  [ok] [2024] HKCA 175: RE RANGI NIRVAIR SINGH -> 0 principles
+  [ok] [2025] HKCFI 6027: SAJJAD HUSSAIN v. TORTURE CLAIMS APPEAL BOARD / NO -> 4 principles
+  [ok] [2021] HKCFI 3214: HKSAR v. LEUNG KAM WAI AND ANOTHER -> 3 principles
+  [ok] [2022] HKCFI 132: AB v. X AND OTHERS -> 5 principles
+  [ok] [2021] HKCFI 3168: ELEGANT MARK INVESTMENT LTD v. DAI YUMIN -> 4 principles
+  [ok] [2021] HKCA 1933: HKSAR v. LEUNG YUK WING -> 0 principles
+  [ok] [2024] HKCA 367: RE DAO THI NGOAN -> 4 principles
+  [ok] [2023] HKCFI 243: HUSSAIN BABAR v. TORTURE CLAIMS APPEAL BOARD / NON -> 2 principles
+  [ok] [2022] HKCFI 3392: SUKHWINDER SINGH v. TORTURE CLAIMS APPEAL BOARD/ N -> 2 principles
+  [ok] [2021] HKCFI 3024: HKSAR v. CHEN KEEN (alias JACK CHEN)AND OTHERS -> 5 principles
+  [ok] [2025] HKCA 492: RINDA YULIATI v. TORTURE CLAIMS APPEAL BOARD / NON -> 0 principles
+  [ok] [2026] HKCFI 299: DONG VAN CHUNG v. TORTURE CLAIMS APPEAL BOARD / NO -> 2 principles
+  [ok] [2022] HKCFI 138: SITI HAYANI v. TORTURE CLAIMS APPEAL BOARD /NON-RE -> 3 principles
+  [ok] [2024] HKCA 103: HKSAR v. XU ZHUO AND ANOTHER -> 3 principles
+  [ok] [2023] HKCFI 3014: IQBAL SHAHID v. TORTURE CLAIMS APPEAL BOARD -> 3 principles
+  [ok] [2021] HKCA 861: ELUBE DEWAYALAGE KUSUMALATHA WEERATHUNGA v. TOTURE -> 3 principles
+  [ok] [2024] HKCFI 2414: SARKAR MOHAMMAD MAHBUB ALAM v. TORTURE CLAIMS APPE -> 3 principles
+  [ok] [2022] HKCFI 3200: LOUA CECE v. TORTURE CLAIMS APPEAL BOARD/ NON-REFO -> 2 principles
+  [ok] [2022] HKDC 1440: HKSAR v. THAPA PARVIN BAHADUR -> 1 principles
+  [ok] [2024] HKCFI 3594: RINDA YULIATI v. TORTURE CLAIMS APPEAL BOARD / NON -> 2 principles
+  [ok] [2024] HKCA 315: HKSAR v. HA BUT YEE -> 0 principles
+  [ok] [2022] HKCA 986: RE NGUYEN VAN DAT -> 5 principles
+  [ok] [2021] HKCFI 3861: MASUN MD SOHIDUL ISLAM v. TORTURE CLAIMS APPEAL BO -> 3 principles
+  [ok] [2024] HKCFI 2949: NGUYEN BICH THUY v. TORTURE CLAIMS APPEAL BOARD /  -> 3 principles
+  [ok] [2023] HKCFI 1208: HKSAR v. HA BUT-YEE -> 3 principles
+  [ok] [2025] HKCFI 3311: SRI WAHYUNINGSIH v. TORTURE CLAIMS APPEAL BOARD /  -> 2 principles
+
+--- Topic: Money Laundering (money_laundering) ---
+  [ok] [2025] HKDC 1670: HKSAR v. TAO CHING CHUNG -> 1 principles
+  [ok] [2025] HKDC 1700: HKSAR v. HO CHI HO AND ANOTHER -> 3 principles
+  [ok] [2025] HKDC 2052: HKSAR v. LI HO YIN -> 5 principles
+  [ok] [2026] HKDC 247: HKSAR v. WU JING -> 4 principles
+  [ok] [2025] HKDC 919: HKSAR v. WAN MINQIANG -> 2 principles
+  [ok] [2025] HKDC 2138: HKSAR v. DING SHOUFENG -> 2 principles
+  [ok] [2025] HKDC 595: HKSAR v. YIP LONG TIM -> 3 principles
+  [ok] [2024] HKDC 2093: HKSAR v. YU TSZ SANG -> 0 principles
+  [ok] [2026] HKDC 349: HKSAR v. WEN KELONG -> 0 principles
+  [ok] [2021] HKDC 391: HKSAR v. CHOW LAI YING, CANDY -> 3 principles
+  [ok] [2022] HKCFI 3379: SECRETARY FOR JUSTICE v. DING SHAOXIONG -> 3 principles
+  [ok] [2026] HKDC 109: HKSAR v. CHAU HIU KANG -> 3 principles
+  [ok] [2025] HKDC 2199: HKSAR v. MA ZHIFANG -> 3 principles
+  [ok] [2023] HKCFI 2634: HKSAR v. MAN KAM FAI AND ANOTHER -> 4 principles
+  [ok] [2022] HKDC 1116: HKSAR v. LI SHUANGKAI AND OTHERS -> 3 principles
+  [ok] [2025] HKDC 1807: HKSAR v. TSE CHI LUNG -> 1 principles
+  [ok] [2024] HKDC 1915: HKSAR v. MOK KA WING -> 3 principles
+  [ok] [2026] HKDC 108: HKSAR v. CHAU HIU KANG -> 1 principles
+  [ok] [2025] HKDC 2096: HKSAR v. HUI MIU MIU -> 2 principles
+  [ok] [2025] HKDC 1606: HKSAR v. CHIU WAI CHUNG -> 3 principles
+  [ok] [2022] HKDC 1057: HKSAR v. BISCOCHO MARIJANE LUCBAN AND ANOTHER -> 0 principles
+  [ok] [2025] HKDC 1068: HKSAR v. TONG PUI YING (ALSO KNOWN AS CHAN MEI PO) -> 3 principles
+  [ok] [2025] HKDC 1357: HKSAR v. TSE YEE TING, JIMMY -> 2 principles
+  [ok] [2026] HKDC 46: HKSAR v. MOK HOI TIK AND OTHERS -> 3 principles
+  [ok] [2024] HKCFA 8: TAM SZE LEUNG AND OTHERS v. COMMISSIONER OF POLICE -> 5 principles
+  [ok] [2024] HKDC 1570: HKSAR v. CHEUNG PO YI -> 0 principles
+  [ok] [2025] HKDC 628: HKSAR v. JUWARIYAH SUGIYO -> 1 principles
+  [ok] [2024] HKDC 489: HKSAR v. CHIU WING HUNG -> 3 principles
+  [ok] [2025] HKCA 760: HKSAR v. HUI CHAK YI -> 1 principles
+  [ok] [2025] HKDC 1310: HKSAR v. CHAN YIN LUN AND ANOTHER -> 0 principles
+  [ok] [2025] HKDC 1830: HKSAR v. BASHIR ZAHID -> 3 principles
+  [ok] [2023] HKCA 1021: SECRETARY FOR JUSTICE v. SHIN DONG KI AND OTHERS -> 3 principles
+  [ok] [2025] HKDC 2137: HKSAR v. GURUNG TIKARAM -> 4 principles
+  [ok] [2025] HKCA 65: SECRETARY FOR JUSTICE v. SHIN DONG KI AND OTHERS -> 5 principles
+  [ok] [2025] HKDC 1951: HKSAR v. WU KWOK CHU -> 2 principles
+  [ok] [2025] HKDC 745: HKSAR v. WONG CHIU SANG -> 1 principles
+  [ok] [2025] HKDC 300: HKSAR v. KWAN YIN WAH -> 3 principles
+  [ok] [2025] HKDC 1510: HKSAR v. TONG CHIN PANG -> 0 principles
+  [ok] [2023] HKCFI 2726: HKSAR v. NG WING WA -> 5 principles
+  [ok] [2025] HKDC 603: HKSAR v. ZHANG HONGPING -> 2 principles
+  [ok] [2024] HKDC 2039: HKSAR v. CHEUNG KWAN PO -> 4 principles
+  [ok] [2025] HKDC 105: HKSAR v. LO WING HONG -> 1 principles
+  [ok] [2023] HKDC 1398: HKSAR v. WONG KIM PING AND ANOTHER -> 0 principles
+  [ok] [2025] HKDC 328: HKSAR v. CHAN NOK WAI -> 0 principles
+  [ok] [2024] HKCA 1062: HKSAR v. TSANG YIU KONG -> 0 principles
+  [ok] [2025] HKCFI 2752: HKSAR v. HIDHAYATHULLA HAMEED ABDUL CADER -> 3 principles
+  [ok] [2024] HKDC 117: HKSAR v. KWOK CHI YIU AND OTHERS -> 3 principles
+
+--- Topic: Computer Crimes (computer_crimes) ---
+  [ok] [2023] HKFC 41: TKM also known as WTKM v. WHG -> 0 principles
+  [ok] [2025] HKFC 109: FM v. LWY -> 5 principles
+  [ok] [2025] HKCFI 388: CHING TO YUEN LTD v. THE INCORPORATED OWNERS OF PR -> 5 principles
+  [ok] [2023] HKFC 113: YCKS v. MPKC -> 5 principles
+  [ok] [2023] HKFC 202: TRH v. KCS -> 4 principles
+  [ok] [2023] HKFC 83: CHK v. CKT -> 0 principles
+  [ok] [2024] HKFC 49: YHY v. YKM -> 5 principles
+  [ok] [2021] HKFC 131: AKYC v. DK -> 4 principles
+  [ok] [2024] HKFC 82: TRH v. KCS -> 1 principles
+  [ok] [2020] HKFC 273: TSYV v. LWSV -> 5 principles
+  [ok] [2022] HKFC 61: WKI also known as IWKV v. CKW also known as WCKW -> 3 principles
+  [ok] [2022] HKCA 889: WKI also known as IWKV v. CKW also known as WCKW -> 0 principles
+  [ok] [2024] HKFC 143: HKW v. YYC -> 0 principles
+  [ok] [2024] HKCA 689: TKY v. YSGA -> 1 principles
+  [ok] [2021] HKCFI 278: C v. S -> 5 principles
+  [ok] [2022] HKFC 271: LPYY v. FWHF -> 0 principles
+  [ok] [2025] HKFC 111: FCCV v. LSY -> 4 principles
+  [ok] [2023] HKFC 262: HKW v. YYC -> 5 principles
+  [ok] [2023] HKFC 18: HMC v. CWY -> 0 principles
+  [ok] [2021] HKCFI 1662: C v. S -> 0 principles
+  [ok] [2022] HKFC 153: CXW v. WY -> 5 principles
+  [ok] [2023] HKFC 129: AA v. WSC -> 2 principles
+  [ok] [2022] HKCFI 1553: C v. S -> 0 principles
+  [ok] [2025] HKDC 263: CHAN LOI SUN AND OTHERS v. CHAN YUET（OR YUT）WO TSO -> 4 principles
+  [ok] [2023] HKFC 182: TRH v. KCS -> 0 principles
+  [ok] [2023] HKFC 145: KHH v. PKH -> 4 principles
+  [ok] [2023] HKFC 62: ZZ v. LX -> 5 principles
+  [ok] [2025] HKFC 165: BN v. GHB -> 4 principles
+  [ok] [2021] HKCFI 1008: WGL v. ASB -> 0 principles
+  [ok] [2022] HKFC 174: WSSA v. SYH -> 4 principles
+  [ok] [2024] HKFC 226: H v. W -> 3 principles
+  [ok] [2024] HKFC 100: T, RH v. K, CS -> 0 principles
+  [ok] [2021] HKFC 88: LCH v. JMC -> 4 principles
+  [ok] [2022] HKFC 72: M,B v. S,S -> 3 principles
+  [ok] [2022] HKFC 181: WKI also known as IWKV v. CKW also known as WCKW -> 5 principles
+  [ok] [2024] HKFC 170: WKI aka IWKV v. CKW aka WCKW -> 0 principles
+  [ok] [2024] HKFC 28: TKY v. YSGA -> 3 principles
+  [ok] [2023] HKFC 125: WSSA v. SYH -> 3 principles
+  [ok] [2023] HKFC 91: DAP v. WPYC -> 0 principles
+  [ok] [2025] HKFC 35: SSLT v. SMFC -> 5 principles
+  [ok] [2021] HKFC 100: BKGGB also known as NGGB v. BKND -> 4 principles
+  [ok] [2022] HKFC 8: C, RYL (formerly known as S, R) v. C, S -> 3 principles
+  [ok] [2022] HKFC 204: YCKS v. MPKC -> 4 principles
+  [ok] [2022] HKFC 57: DH v. EMG -> 3 principles
+  [ok] [2021] HKCFI 1842: RE CHINA ALL ACCESS (HOLDINGS) LTD -> 1 principles
+  [ok] [2024] HKCA 735: WSSA v. SYH -> 4 principles
+  [ok] [2022] HKCA 1902: THE DAIRY FARM CO, LTD v. SECRETARY FOR JUSTICE fo -> 4 principles
+  [ok] [2024] HKFC 122: H v. W -> 4 principles
+  [ok] [2022] HKFC 203: A v. B -> 0 principles
+  [ok] [2024] HKCFI 1617: THE INCORPORATED OWNERS OF WAH CHUN INDUSTRIAL CEN -> 0 principles
+
+--- Topic: Tax Evasion (tax_evasion) ---
+  [ok] [2026] HKDC 111: GORDON CHAN v. CHAN CI KA CINDY -> 3 principles
+  [ok] [2024] HKCA 161: HKSAR v. MORROW JR, CHARLES RAYMOND -> 3 principles
+  [ok] [2021] HKCA 577: ALLIED EVER HOLDINGS LTD v. LI SHU CHUNG AND OTHER -> 5 principles
+  [ok] [2025] HKCFI 938: KEENACT LTD AND OTHERS v. ELENA SIIVINEN (formerly -> 0 principles
+  [ok] [2023] HKCFI 1292: PACIFIC RAINBOW INTERNATIONAL INC v. SHENZHEN WOLV -> 4 principles
+  [ok] [2023] HKFC 34: PMCL also known as LMC also known as KLMC v. AKK a -> 4 principles
+  [ok] [2025] HKCFI 1296: FOUR TREASURE ZHUHAI LTD v. ZHUHAI GREENERY HOTEL  -> 4 principles
+  [ok] [2021] HKCA 1037: KOO MING KOWN AND ANOTHER v. THE COMMISSIONER OF I -> 2 principles
+  [ok] [2023] HKCFI 2931: X AND ANOTHER v. Y -> 5 principles
+  [ok] [2023] HKCFI 1872: QINHE ENERGY HOLDINGS LTD v. PENG FEI INVESTMENT I -> 3 principles
+  [ok] [2022] HKCFA 18: THE COMMISSIONER OF INLAND REVENUE v. KOO MING KOW -> 4 principles
+  [ok] [2024] HKCFI 546: THE OFFICIAL RECEIVER v. YEN CHING WAI, DAVID (aka -> 5 principles
+  [ok] [2026] HKCFI 1130: CHEN YUNG NGAI KENNETH, one of the joint and sever -> 4 principles
+  [ok] [2021] HKCFI 306: TTI GLOBAL RESOURCES HONG KONG LTD v. HONGKONG MYP -> 4 principles
+  [ok] [2021] HKCA 630: HKSAR v. TAI YIU TING AND OTHERS -> 5 principles
+  [ok] [2024] HKCFI 1662: PATRICK COWLEY AND WONG WING SZE TIFFANY (JOINT AN -> 4 principles
+  [ok] [2021] HKCA 941: LEUNG PING CHIU, ROY, appointed by Order dated 12  -> 3 principles
+  [ok] [2022] HKCA 309: HKSAR v. LOW LING LEE -> 4 principles
+  [ok] [2025] HKFC 105: PMCL also known as LMC also known as KLMC v. AKK a -> 3 principles
+  [ok] [2025] HKCFA 20: HKSAR v. MAK KWONG YIU, CHAN LAI YEE, WONG SHUK ON -> 5 principles
+  [ok] [2025] HKCFI 6291: HKSAR v. LAI CHEE YING AND OTHERS -> 5 principles
+  [ok] [2023] HKCFI 765: FONG KIN WA v. LI HAU YI AND ANOTHER -> 2 principles
+  [ok] [2021] HKCFI 606: AUTONOMOUS NON-COMMERCIAL ORGANIZATION “ORGANIZING -> 0 principles
+
+--- Topic: Self-defence and Reasonable Force (self_defence_reasonable_force) ---
+
+--- Topic: Duress and Necessity (duress) ---
+
+--- Topic: Insanity, Automatism, and Intoxication (insanity_intoxication) ---
+
+--- Topic: Insanity (M'Naghten Rules) (insanity_defence) ---
+
+--- Topic: Automatism (automatism_defence) ---
+
+--- Topic: Intoxication as a Defence (intoxication_defence) ---
+
+--- Topic: Confessions (confessions) ---
+
+--- Topic: Identification Evidence (identification_evidence) ---
+
+--- Topic: Hearsay (hearsay) ---
+
+--- Topic: Arrest, Search, and Fair Trial (investigative_powers) ---
+
+--- Topic: Expert Evidence (expert_evidence) ---
+
+--- Topic: Character and Similar Fact Evidence (character_evidence) ---
+
+--- Topic: Bail and Remand (bail) ---
+
+--- Topic: Conviction Appeals (appeal_standards) ---
+
+--- Topic: Sentencing Principles (sentencing_principles) ---
+
+--- Topic: Confiscation and Proceeds (confiscation_orders) ---
+
+--- Topic: Prevention of Cruelty to Animals Ordinance (Cap. 169) (prevention_cruelty_animals) ---
+
+--- Topic: Animal Cruelty Sentencing (animal_welfare_sentencing) ---
+
+--- Topic: Dangerous Driving and Road Traffic Offences (dangerous_driving) ---
+
+--- Topic: Environmental Offences (environmental_crimes) ---
+
+--- Topic: Occupational Safety Offences (workplace_safety) ---
+
+--- Topic: Insider Dealing (insider_dealing) ---
+
+--- Topic: Market Manipulation and False Trading (market_manipulation) ---
+
+--- Topic: AML Compliance and Reporting Offences (aml_compliance) ---
+
+--- Topic: Corporate Fraud (corporate_fraud) ---
+
+--- Topic: False Accounting and Financial Statements (false_accounting) ---
+
+--- Topic: Smuggling and Customs Offences (smuggling) ---
+
+--- Topic: National Security Offences (national_security_offences) ---
+
+--- Topic: Perjury and Perverting the Course of Justice (perjury_perverting_justice) ---
+
+--- Topic: Triad-Related Offences (triad_related_offences) ---
+
+--- Topic: Gambling Offences (gambling_offences) ---
+
+--- Topic: Immigration Offences (immigration_offences) ---
+
+--- Topic: Intellectual Property Crimes (intellectual_property_crimes) ---
+
+--- Topic: Prostitution-Related Offences (prostitution_related_offences) ---
+
+--- Topic: Contempt of Court (contempt_of_court) ---
+
+--- Topic: Endangering Life at Sea and Related Offences (endangering_life_at_sea) ---
+
+--- Topic: Firearms and Ammunition Offences (firearms_and_ammunition_offences) ---
+
+--- Topic: Child Pornography and Protection Offences (child_pornography_and_protection) ---
+
+--- Topic: Corporate Manslaughter and Gross Negligence (corporate_manslaughter) ---
+
+[done] {
+  "topics_processed": 72,
+  "cases_crawled": 1895,
+  "cases_enriched": 1341,
+  "errors": 0
+}
+
+[round 1] Total candidates after round: 1342
+
+============================================================
+  ROUND 2/3
+============================================================
+
+[round 2] Phase: DISCOVER
+[discover] Reusing existing report (generated 348 min ago) — data/batch/gap_report.json
+[apply] 12 new topics ready for next crawl round → data/batch/new_topics_applied.json
+
+[round 2] Phase: CRAWL (12 new topics added)
+[resume] Loaded 1342 existing candidates from data/batch/candidates.json
+[batch] Processing 72 topics, max 50 cases each
+
+--- Topic: Actus Reus (actus_reus) ---
+
+--- Topic: Causation (causation) ---
+
+--- Topic: Intention and Knowledge (intention) ---
+
+--- Topic: Recklessness and Dishonesty (recklessness_dishonesty) ---
+
+--- Topic: Secondary Liability (secondary_liability) ---
+
+--- Topic: Conspiracy and Attempt (conspiracy_attempt) ---
+
+--- Topic: Murder (murder) ---
+
+--- Topic: Actus Reus of Murder (murder_actus_reus) ---
+
+--- Topic: Mens Rea of Murder (Malice Aforethought) (murder_mens_rea) ---
+
+--- Topic: Defence of Diminished Responsibility (diminished_responsibility) ---
+
+--- Topic: Defence of Provocation (provocation) ---
+
+--- Topic: Manslaughter (manslaughter) ---
+
+--- Topic: Involuntary Manslaughter (involuntary_manslaughter) ---
+
+--- Topic: Assault and Wounding (assault_wounding) ---
+
+--- Topic: Kidnapping and False Imprisonment (kidnapping) ---
+
+--- Topic: Criminal Intimidation and Blackmail (criminal_intimidation) ---
+
+--- Topic: Rape and Consent (rape_consent) ---
+
+--- Topic: Theft (theft) ---
+
+--- Topic: Appropriation (Element of Theft) (theft_appropriation) ---
+
+--- Topic: Dishonesty (Ivey v Genting Test) (theft_dishonesty) ---
+
+--- Topic: Intention to Permanently Deprive (theft_intention_deprive) ---
+
+--- Topic: Robbery (robbery) ---
+
+--- Topic: Burglary (burglary) ---
+
+--- Topic: Fraud and Deception (fraud) ---
+
+--- Topic: Forgery and Counterfeiting (forgery) ---
+
+--- Topic: Handling Stolen Goods (handling_stolen) ---
+
+--- Topic: Criminal Damage and Arson (criminal_damage_arson) ---
+
+--- Topic: Drug Trafficking (drug_trafficking) ---
+
+--- Topic: Public Order and Weapons (public_order) ---
+
+--- Topic: Bribery and Misconduct in Public Office (bribery_misconduct) ---
+
+--- Topic: Money Laundering (money_laundering) ---
+
+--- Topic: Computer Crimes (computer_crimes) ---
+
+--- Topic: Tax Evasion (tax_evasion) ---
+
+--- Topic: Self-defence and Reasonable Force (self_defence_reasonable_force) ---
+
+--- Topic: Duress and Necessity (duress) ---
+
+--- Topic: Insanity, Automatism, and Intoxication (insanity_intoxication) ---
+
+--- Topic: Insanity (M'Naghten Rules) (insanity_defence) ---
+
+--- Topic: Automatism (automatism_defence) ---
+
+--- Topic: Intoxication as a Defence (intoxication_defence) ---
+
+--- Topic: Confessions (confessions) ---
+
+--- Topic: Identification Evidence (identification_evidence) ---
+
+--- Topic: Hearsay (hearsay) ---
+
+--- Topic: Arrest, Search, and Fair Trial (investigative_powers) ---
+
+--- Topic: Expert Evidence (expert_evidence) ---
+
+--- Topic: Character and Similar Fact Evidence (character_evidence) ---
+
+--- Topic: Bail and Remand (bail) ---
+
+--- Topic: Conviction Appeals (appeal_standards) ---
+
+--- Topic: Sentencing Principles (sentencing_principles) ---
+
+--- Topic: Confiscation and Proceeds (confiscation_orders) ---
+
+--- Topic: Prevention of Cruelty to Animals Ordinance (Cap. 169) (prevention_cruelty_animals) ---
+
+--- Topic: Animal Cruelty Sentencing (animal_welfare_sentencing) ---
+
+--- Topic: Dangerous Driving and Road Traffic Offences (dangerous_driving) ---
+
+--- Topic: Environmental Offences (environmental_crimes) ---
+
+--- Topic: Occupational Safety Offences (workplace_safety) ---
+
+--- Topic: Insider Dealing (insider_dealing) ---
+
+--- Topic: Market Manipulation and False Trading (market_manipulation) ---
+
+--- Topic: AML Compliance and Reporting Offences (aml_compliance) ---
+
+--- Topic: Corporate Fraud (corporate_fraud) ---
+
+--- Topic: False Accounting and Financial Statements (false_accounting) ---
+
+--- Topic: Smuggling and Customs Offences (smuggling) ---
+
+--- Topic: National Security Offences (national_security_offences) ---
+
+--- Topic: Perjury and Perverting the Course of Justice (perjury_perverting_justice) ---
+
+--- Topic: Triad-Related Offences (triad_related_offences) ---
+
+--- Topic: Gambling Offences (gambling_offences) ---
+
+--- Topic: Immigration Offences (immigration_offences) ---
+
+--- Topic: Intellectual Property Crimes (intellectual_property_crimes) ---
+
+--- Topic: Prostitution-Related Offences (prostitution_related_offences) ---
+
+--- Topic: Contempt of Court (contempt_of_court) ---
+
+--- Topic: Endangering Life at Sea and Related Offences (endangering_life_at_sea) ---
+
+--- Topic: Firearms and Ammunition Offences (firearms_and_ammunition_offences) ---
+
+--- Topic: Child Pornography and Protection Offences (child_pornography_and_protection) ---
+
+--- Topic: Corporate Manslaughter and Gross Negligence (corporate_manslaughter) ---
+
+[done] {
+  "topics_processed": 72,
+  "cases_crawled": 1895,
+  "cases_enriched": 0,
+  "errors": 0
+}
+
+[round 2] Total candidates after round: 1342
+
+============================================================
+  ROUND 3/3
+============================================================
+
+[round 3] Phase: DISCOVER
+[discover] Reusing existing report (generated 349 min ago) — data/batch/gap_report.json
+[apply] 12 new topics ready for next crawl round → data/batch/new_topics_applied.json
+
+[round 3] Phase: CRAWL (12 new topics added)
+[resume] Loaded 1342 existing candidates from data/batch/candidates.json
+[batch] Processing 72 topics, max 50 cases each
+
+--- Topic: Actus Reus (actus_reus) ---
+
+--- Topic: Causation (causation) ---
+
+--- Topic: Intention and Knowledge (intention) ---
+
+--- Topic: Recklessness and Dishonesty (recklessness_dishonesty) ---
+
+--- Topic: Secondary Liability (secondary_liability) ---
+
+--- Topic: Conspiracy and Attempt (conspiracy_attempt) ---
+
+--- Topic: Murder (murder) ---
+
+--- Topic: Actus Reus of Murder (murder_actus_reus) ---
+
+--- Topic: Mens Rea of Murder (Malice Aforethought) (murder_mens_rea) ---
+
+--- Topic: Defence of Diminished Responsibility (diminished_responsibility) ---
+
+--- Topic: Defence of Provocation (provocation) ---
+
+--- Topic: Manslaughter (manslaughter) ---
+
+--- Topic: Involuntary Manslaughter (involuntary_manslaughter) ---
+
+--- Topic: Assault and Wounding (assault_wounding) ---
+
+--- Topic: Kidnapping and False Imprisonment (kidnapping) ---
+
+--- Topic: Criminal Intimidation and Blackmail (criminal_intimidation) ---
+
+--- Topic: Rape and Consent (rape_consent) ---
+
+--- Topic: Theft (theft) ---
+
+--- Topic: Appropriation (Element of Theft) (theft_appropriation) ---
+
+--- Topic: Dishonesty (Ivey v Genting Test) (theft_dishonesty) ---
+
+--- Topic: Intention to Permanently Deprive (theft_intention_deprive) ---
+
+--- Topic: Robbery (robbery) ---
+
+--- Topic: Burglary (burglary) ---
+
+--- Topic: Fraud and Deception (fraud) ---
+
+--- Topic: Forgery and Counterfeiting (forgery) ---
+
+--- Topic: Handling Stolen Goods (handling_stolen) ---
+
+--- Topic: Criminal Damage and Arson (criminal_damage_arson) ---
+
+--- Topic: Drug Trafficking (drug_trafficking) ---
+
+--- Topic: Public Order and Weapons (public_order) ---
+
+--- Topic: Bribery and Misconduct in Public Office (bribery_misconduct) ---
+
+--- Topic: Money Laundering (money_laundering) ---
+
+--- Topic: Computer Crimes (computer_crimes) ---
+
+--- Topic: Tax Evasion (tax_evasion) ---
+  [ok] [2021] HKCA 1798: AUTONOMOUS NON-COMMERCIAL ORGANIZATION “ORGANIZING -> 4 principles
+  [ok] [2025] HKDC 2120: THE COMMISSIONER OF INLAND REVENUE v. DRACO HUMAN  -> 5 principles
+  [ok] [2022] HKCFI 2932: BESINS HEALTHCARE (HONG KONG) LTD v. COMMISSIONER  -> 5 principles
+  [ok] [2021] HKDC 582: YEUNG CHIU SING RICKY AND ANOTHER v. TSUI TACK KON -> 2 principles
+  [ok] [2023] HKCFI 2585: ICBC INTERNATIONAL WEALTH INVESTMENT LTD v. ROLLCA -> 4 principles
+  [ok] [2023] HKCFI 3368: TSANG WING WAI MICHAEL v. SUNLINK COMMERCIAL LTD -> 0 principles
+  [ok] [2022] HKCFI 170: UBIQUITI NETWORKS INTERNATIONAL LTD v. THE COMMISS -> 0 principles
+  [ok] [2022] HKCFI 3637: A1 AND ANOTHER v. W1 AND ANOTHER -> 0 principles
+  [ok] [2022] HKCFI 3173: A1 AND ANOTHER v. W1 AND ANOTHER -> 2 principles
+  [ok] [2023] HKCFI 2370: UPPLAN COMPANY LTD v. LI HO MING AND ANOTHER -> 1 principles
+  [ok] [2025] HKCA 398: RANDEEP S GREWAL v. COMMISSIONER OF INLAND REVENUE -> 5 principles
+  [ok] [2024] HKCFI 2590: CHAPMAN DEVELOPMENT LTD v. COMMISSIONER OF INLAND  -> 3 principles
+  [ok] [2025] HKFC 173: LCTD v. CKMC -> 5 principles
+  [ok] [2025] HKCA 956: CHAPMAN DEVELOPMENT LTD v. COMMISSIONER OF INLAND  -> 5 principles
+  [ok] [2022] HKCFI 3730: HKSAR v. ANDAYA JASMIN MARQUEZ -> 5 principles
+  [ok] [2022] HKDC 350: YEUNG CHIU SING RICKY AND ANOTHER v. TSUI TACK KON -> 0 principles
+  [ok] [2021] HKCFI 870: GIANT HARVEST LTD v. NAN HAI CORPORATION LTD AND A -> 0 principles
+  [ok] [2023] HKCFI 3109: RANDEEP S GREWAL v. COMMISSIONER OF INLAND REVENUE -> 4 principles
+  [ok] [2022] HKDC 607: LEUNG WAI CHEUNG v. OCTEL NETWORKS LTD AND OTHERS -> 4 principles
+  [ok] [2021] HKCA 1833: KOO MING KOWN MURAKAMI TADAO v. THE COMMISSIONER O -> 0 principles
+  [ok] [2025] HKCFI 1060: A v. B -> 3 principles
+
+--- Topic: Self-defence and Reasonable Force (self_defence_reasonable_force) ---
+  [ok] [2023] HKCFI 1723: HKSAR v. LEE WAI KIN -> 5 principles
+  [ok] [2022] HKCFI 2062: HKSAR v. TSUI WING CHUEN -> 3 principles
+  [ok] [2021] HKCA 168: HKSAR v. SHUM MAN FAI -> 3 principles
+  [ok] [2023] HKCA 1007: HKSAR v. DA SILVA SANTOS ALEXANDRO -> 0 principles
+  [ok] [2023] HKMagC 9: HKSAR v. KWONG TAK WING -> 4 principles
+  [ok] [2022] HKCFI 975: HKSAR v. KWONG SIDNEY SYI RAN -> 3 principles
+  [ok] [2025] HKCFI 6102: HKSAR v. GUERRERO, ADRIEN FRANCISCO -> 5 principles
+  [ok] [2022] HKDC 847: HKSAR v. CHAN MING LEONG AND ANOTHER -> 5 principles
+  [ok] [2024] HKCFI 203: HKSAR v. CLEMENT, RICHARD MARK -> 5 principles
+  [ok] [2020] HKCFI 1808: HKSAR v. YUNG WAI SHING AND ANOTHER -> 3 principles
+  [ok] [2024] HKCFI 723: HKSAR v. MAKAR, GERGES NAROZ FANOUS -> 5 principles
+  [ok] [2024] HKCA 518: HKSAR v. HUI CHI MING -> 0 principles
+  [ok] [2021] HKCFI 2564: HKSAR v. DANIEL PIKE -> 3 principles
+  [ok] [2021] HKCFI 2538: HKSAR v. CHAN HIU KEI CHRISTIE -> 1 principles
+  [ok] [2022] HKDC 526: HKSAR v. LUO QINGPING AND ANOTHER -> 3 principles
+  [ok] [2026] HKDC 180: HKSAR v. TSE KOON KIT AND ANOTHER -> 2 principles
+  [ok] [2026] HKCFI 614: LIN RUIQING as the Administratrix of the estate of -> 5 principles
+  [ok] [2024] HKCA 1167: HKSAR v. HUI CHI MING -> 3 principles
+  [ok] [2021] HKCA 511: HKSAR v. HAN CHIN CHOU -> 3 principles
+  [ok] [2020] HKCFI 3111: HKSAR v. CHAN YI CHUN -> 4 principles
+  [ok] [2023] HKDC 396: HKSAR v. DA SILVA SANTOS ALEXANDRO -> 4 principles
+  [ok] [2024] HKDC 911: HKSAR v. CHAN CHIN HO -> 2 principles
+  [ok] [2022] HKCFI 3687: LAM WAI WING v. MISS YIM SHUN YEE ADA, THE CORONER -> 5 principles
+  [ok] [2025] HKDC 2050: HKSAR v. CHEUNG HANG PO AND OTHERS -> 0 principles
+  [ok] [2025] HKCFI 4260: HKSAR v. OTREMBA, ANDREW JOHN -> 5 principles
+  [ok] [2021] HKCFI 3499: HKSAR v. LI CHUNG MAN, ALFRED -> 0 principles
+  [ok] [2024] HKDC 1948: HKSAR v. SINGH JAGJIT -> 0 principles
+  [ok] [2021] HKDC 494: HKSAR v. CHOI PING CHIU -> 1 principles
+  [ok] [2024] HKCFI 1484: HKSAR v. ONDREKA, ADAM -> 5 principles
+  [ok] [2022] HKCA 218: HKSAR v. CHAN MAN SUM, IVAN -> 4 principles
+  [ok] [2022] HKCFI 288: HKSAR v. BICKETT SAMUEL PHILLIP -> 2 principles
+  [ok] [2024] HKCFI 2544: HKSAR v. CHEUNG CHUN FU -> 2 principles
+  [ok] [2022] HKDC 1014: HKSAR v. LIU HENRY HAN YUN -> 0 principles
+  [ok] [2025] HKDC 543: HKSAR v. LAM YUK AND ANOTHER -> 3 principles
+  [ok] [2022] HKCA 20: HKSAR v. SHUM MAN FAI -> 3 principles
+
+--- Topic: Duress and Necessity (duress) ---
+  [ok] [2024] HKCA 22: HKSAR v. THUO PENINAH WANGARI -> 5 principles
+  [ok] [2021] HKCA 1211: TASTY CATERING GROUP LTD AND ANOTHER v. CHENG HUNG -> 3 principles
+  [ok] [2024] HKCFI 2773: FINE VISION OPPORTUNITY III LTD v. XINYUAN REAL ES -> 5 principles
+  [ok] [2025] HKDC 103: LIP CHUNG SHEK v. LEE WAI KWAN EDMUND -> 2 principles
+  [ok] [2024] HKCFI 424: LKF v. ZTISL -> 5 principles
+  [ok] [2022] HKCFI 1450: PAN SUTONG v. BANK OF CHINA LTD (Trading as “Bank  -> 4 principles
+  [ok] [2026] HKCFI 993: CHAN BENAMI HOLDINGS LTD v. CHI CHI HUNG, KENNETH -> 5 principles
+  [ok] [2022] HKCFI 950: RE DAI YUMIN -> 5 principles
+  [ok] [2024] HKCA 872: HKSAR v. YUEN HOI LAM -> 3 principles
+  [ok] [2020] HKCFI 2477: CHENG HUNG KIT AND OTHERS v. TASTY CATERING GROUP  -> 1 principles
+  [ok] [2024] HKCA 526: HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY -> 3 principles
+  [ok] [2022] HKCA 603: HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY -> 3 principles
+  [ok] [2021] HKCA 779: RE LI XIAOMING -> 3 principles
+  [ok] [2026] HKCFI 749: GUANGHUA SS HOLDINGS LTD v. CHEN JIANAN -> 2 principles
+  [ok] [2023] HKCFI 3086: CHEN WU v. XIE FEI -> 5 principles
+  [ok] [2022] HKCA 1515: HKSAR v. THUO PENINAH WANGARI -> 0 principles
+  [ok] [2024] HKCFI 2630: NG TUNG v. GRAND WAYFAIR INVESTMENT COMPANY LTD -> 3 principles
+  [ok] [2025] HKCA 751: HKSAR v. GWALA NHLANHLA JOHANNES -> 1 principles
+  [ok] [2025] HKDC 547: SUN HUNG KAI CREDIT LTD v. GUAN WENNA -> 4 principles
+  [ok] [2025] HKDC 393: LIU TSAN CHING v. PAK TIM YING TIFFANY -> 0 principles
+  [ok] [2022] HKCA 142: RE LI XIAOMING -> 5 principles
+  [ok] [2022] HKCFI 1630: 張鵬舉 v. 原翠美 -> 4 principles
+  [ok] [2021] HKCFI 3218: 莫懿 V. 宏大香港資產管理有限公司 AND ANOTHER -> 2 principles
+  [ok] [2021] HKCFI 2966: WEALTHY TECH GROUP HOLDINGS LTD v. YUNG MAY FONG B -> 2 principles
+  [ok] [2024] HKCFI 2133: FAIRWING INVESTMENT LTD v. CHAU SAU NGOR AND ANOTH -> 5 principles
+  [ok] [2021] HKCFI 968: HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY AND ANOTHE -> 0 principles
+  [ok] [2025] HKCFI 3823: GLOBAL SPARKLE HOLDINGS IV LTD v. GE YIYANG AND AN -> 5 principles
+  [ok] [2025] HKCFI 1371: THE HONGKONG AND SHANGHAI BANKING CORPORATION LTD  -> 4 principles
+  [ok] [2024] HKCFI 1380: 储惠敏 v. KWOK CHING CHING AND ANOTHER -> 5 principles
+  [ok] [2021] HKCA 1651: HKSAR v. CHAN HOI WING -> 3 principles
+  [ok] [2025] HKCFI 5164: ZHANG, FENGQIU v. CHAN, KA YUNG AND ANOTHER -> 4 principles
+  [ok] [2024] HKDC 1913: HUNG TAT A. I. GARMENT MACHINERY COMPANY LTD v. HO -> 3 principles
+  [ok] [2025] HKCFI 2485: APPOTECH LTD v. 深圳今日芯科技有限公司 -> 4 principles
+  [ok] [2021] HKCFI 3922: YEUNG SUI YEE v. TSANG YEE MING -> 3 principles
+  [ok] [2021] HKCFI 480: ROBERT VON PALACE KOLBATSCHENKO AND ANOTHER v. LEE -> 4 principles
+  [ok] [2021] HKCFI 3822: SPEEDY FINANCE LTD v. ZHANG XIAOPING -> 2 principles
+  [ok] [2022] HKCFI 3476: DM v. COMMISSIONER OF CUSTOMS & EXCISE AND ANOTHER -> 5 principles
+  [ok] [2024] HKCA 640: SHAUN WINSTON JUSTIN BOWERS v. MARBURY RIDGE LTD -> 3 principles
+  [ok] [2025] HKDC 1123: TSANG YUEN WANG t/a Second Brother（二師兄） v. LEUNG W -> 3 principles
+  [ok] [2025] HKCFI 4518: LI KWAN HO v. TSOI KA YIN -> 0 principles
+  [ok] [2025] HKDC 1450: HUNG TAT A. I. GARMENT MACHINERY COMPANY LTD v. HO -> 4 principles
+  [ok] [2022] HKCA 853: TASTY CATERING GROUP LTD AND ANOTHER v. CHENG HUNG -> 0 principles
+  [ok] [2025] HKCFI 723: FU TAT CREDIT LTD v. LAU WAI MAN -> 3 principles
+  [ok] [2022] HKCFI 949: RE CHANCHAL -> 0 principles
+  [ok] [2025] HKCFI 4554: ZHAN YIFENG v. PANG KA SHING -> 3 principles
+  [ok] [2023] HKCA 1200: 張鵬舉 v. 原翠美 -> 4 principles
+
+--- Topic: Insanity, Automatism, and Intoxication (insanity_intoxication) ---
+  [ok] [2023] HKCA 865: LUI MING LOK v. NG IM FONG LORETTA -> 4 principles
+  [ok] [2024] HKCFA 21: LUI MING LOK (雷明樂) v. NG IM FONG LORETTA (伍艷芳), th -> 4 principles
+  [ok] [2024] HKCFI 569: HKSAR v. YEUNG FONG CHU -> 3 principles
+  [ok] [2023] HKCFA 11: HKSAR v. CHEN KEEN (alias JACK CHEN) (陳克恩) -> 4 principles
+  [ok] [2022] HKCA 1222: HKSAR v. CHAN CHU LEUNG -> 3 principles
+  [ok] [2024] HKCFI 1811: CHAN SAU WAI SHIRLEY v. JEN KIT JOSEPHINE, the adm -> 5 principles
+  [ok] [2021] HKCFI 2436: CAP10 /2020 ANGELA CHEN v. WAI WAI CHEN -> 4 principles
+  [ok] [2023] HKCFA 7: THE SECRETARY FOR JUSTICE v. TAM KIT-I -> 5 principles
+  [ok] [2022] HKCFI 1255: LIU SHIH TENG, THE ADMINISTRATOR OF THE ESTATE OF  -> 5 principles
+  [ok] [2022] HKCFI 474: LIU SHIH TENG, the administrator of the estate of  -> 5 principles
+  [ok] [2025] HKCA 965: A v. B -> 0 principles
+  [ok] [2021] HKCFI 1851: RE RAFZAAL AHMED -> 3 principles
+  [ok] [2021] HKCFI 1203: H v. L -> 3 principles
+  [ok] [2022] HKDC 462: HKSAR v. LAW SIU KIN -> 2 principles
+  [ok] [2025] HKDC 1859: HKSAR v. CHOW WAI MAN -> 3 principles
+  [ok] [2022] HKDC 637: HKSAR v. SINGH GURINDER -> 0 principles
+  [ok] [2024] HKDC 403: HKSAR v. CHENG TSE HONG -> 0 principles
+  [ok] [2025] HKCFI 4558: MARINA BAY SANDS PTE LTD v. TSANG YEUK KWAN -> 3 principles
+  [ok] [2025] HKCA 919: HKSAR v. POON CHI KEUNG -> 0 principles
+  [ok] [2022] HKDC 1101: HKSAR v. GUO RONG -> 4 principles
+  [ok] [2022] HKDC 937: HKSAR v. LAM HO WING -> 2 principles
+  [ok] [2025] HKCFI 934: HKSAR v. CHEUNG FUK WANG -> 0 principles
+
+--- Topic: Insanity (M'Naghten Rules) (insanity_defence) ---
+  [ok] [2022] HKCFI 1482: FINE TALENT FINANCE LTD v. THE ESTATE OF LEUNG PAK -> 5 principles
+  [ok] [2023] HKDC 1472: 史超 v. 均富有限公司 AND ANOTHER -> 3 principles
+  [ok] [2023] HKCFI 656: RE LYM -> 4 principles
+  [ok] [2024] HKCFI 2299: RE LYM -> 0 principles
+  [ok] [2025] HKDC 1581: HKSAR v. SHUM HON YIN DOMINIC -> 5 principles
+  [ok] [2023] HKDC 582: AMPOFO MOSEN ANTI v. NG CHING MEI -> 2 principles
+  [ok] [2024] HKCFI 3001: SECRETARY FOR JUSTICE v. LI KWOK WING AND ANOTHER -> 3 principles
+  [ok] [2025] HKCA 324: CHOW KIN HANG ALI v. SECRETARY FOR JUSTICE FOR AND -> 5 principles
+  [ok] [2021] HKCFI 1412: HKSAR v. NG YAN KIN -> 0 principles
+  [ok] [2021] HKCFI 2203: RE NLS -> 5 principles
+  [ok] [2021] HKCFI 132: LEUNG WAI KUEN v. PRELIMINARY INVESTIGATION COMMIT -> 3 principles
+  [ok] [2022] HKCFI 1800: CHIN LING WAH by her son and next friend SHUM LUI  -> 3 principles
+  [ok] [2024] HKCA 573: LCSJ v. LSHA AND ANOTHER -> 4 principles
+  [ok] [2023] HKDC 1459: HKSAR v. LAN XUFENG -> 4 principles
+  [ok] [2024] HKCFI 3097: POON CHI FAI v. POON CHI HUNG, WILLIAM AND OTHERS -> 4 principles
+  [ok] [2025] HKCFI 4889: AHMED SIDDIQUE v. HONG KONG SAR GOVERNMENT -> 2 principles
+  [ok] [2023] HKCFI 2460: ASIM HAFIZ TAHIR MAHMOOD v. DIRECTOR OF IMMIGRATIO -> 3 principles
+  [ok] [2024] HKDC 417: HKSAR v. CHENG HIU TUNG -> 0 principles
+  [ok] [2025] HKCFI 2986: HKSAR v. MIO CHIU HING -> 4 principles
+  [ok] [2023] HKCFI 820: 吳振權 v. 香港特別行政區政府 -> 2 principles
+  [ok] [2021] HKDC 704: HKSAR v. L.S.Y. -> 2 principles
+  [ok] [2024] HKCFI 1795: TSO TAK LEE v. TSO CHUI YAN ADMINISTRATRIX OF THE  -> 4 principles
+  [ok] [2021] HKDC 1505: HKSAR v. CHEUNG CHI HUNG -> 0 principles
+
+--- Topic: Automatism (automatism_defence) ---
+
+--- Topic: Intoxication as a Defence (intoxication_defence) ---
+  [ok] [2022] HKDC 915: HKSAR v. TAM YING YUEN -> 2 principles
+  [ok] [2025] HKDC 392: HKSAR v. BRAR HARVIR SINGH AND ANOTHER -> 3 principles
+  [ok] [2022] HKCFI 2916: KRISHAN KUMAR v. TORTURE CLAIMS APPEAL BOARD / NON -> 3 principles
+  [ok] [2025] HKDC 1189: HKSAR v. FU CHUN KIT -> 5 principles
+  [ok] [2021] HKDC 298: HKSAR v. SIT KIN WA (also known as SIT KIN WAH) -> 2 principles
+  [ok] [2023] HKDC 848: HKSAR v. FENG JINMING -> 3 principles
+  [ok] [2025] HKCFI 1248: HKSAR v. KWAN CHUNG KI -> 0 principles
+  [ok] [2023] HKCA 352: SECRETARY FOR JUSTICE v. LAW SIU KIN -> 0 principles
+  [ok] [2023] HKCA 243: SECRETARY FOR JUSTICE v. TAM YING YUEN -> 4 principles
+  [ok] [2022] HKDC 461: HKSAR v. WONG WAI CHUN -> 4 principles
+
+--- Topic: Confessions (confessions) ---
+  [ok] [2021] HKCFI 1245: LAI KWOK KEUNG v. LEUNG WAN MING AND ANOTHER -> 4 principles
+  [ok] [2021] HKCA 1216: HKSAR v. WONG ZHI -> 2 principles
+  [ok] [2021] HKCA 1872: HKSAR v. ALI HAIDAR -> 3 principles
+  [ok] [2021] HKCFI 1119: HKSAR v. HERNANDEZ BORJAS RAUL ORLANDO -> 4 principles
+  [ok] [2021] HKDC 348: HKSAR v. IP WAI HUNG -> 2 principles
+  [ok] [2023] HKCFI 3151: HKSAR v. MUHAMMAD, ASHIQ -> 0 principles
+  [ok] [2021] HKDC 265: HKSAR v. LO PING KEUNG -> 1 principles
+  [ok] [2022] HKCFI 1163: SANG CHEOL WOO v. YOO SHIN CHOI (naturalized name  -> 4 principles
+  [ok] [2021] HKDC 615: HKSAR v. CHEUNG HO LUN -> 1 principles
+  [ok] [2021] HKDC 113: HKSAR v. YEUNG KWOK FAI, ANDY -> 3 principles
+  [ok] [2021] HKCFI 3820: HKSAR v. ASIF AHFAQ MEHMOOD AND OTHERS -> 3 principles
+  [ok] [2024] HKCA 466: HKSAR v. LI CHEUK WAH -> 4 principles
+  [ok] [2022] HKDC 224: HKSAR v LEE KIN YIP -> 2 principles
+  [ok] [2021] HKCA 119: YAU LAI WAH v. WONG KAN YU -> 3 principles
+  [ok] [2021] HKCFI 1276: HKSAR v. LAU KA HO -> 2 principles
+  [ok] [2025] HKDC 1791: HKSAR v. CHEUNG SIU LEUNG -> 0 principles
+  [ok] [2021] HKCA 467: XIE JING FENG v. HONG KONG SAR GOVERNMENT -> 5 principles
+  [ok] [2023] HKDC 385: HKSAR v. LEE CHEUK HO -> 3 principles
+  [ok] [2024] HKCA 547: HKSAR v. SIU HIU FUNG -> 2 principles
+  [ok] [2026] HKCA 404: CHEN JINHUI v. HUANG YUEXIA, the person appointed  -> 5 principles
+  [ok] [2024] HKCA 719: HKSAR v. LAM HOI KIT -> 2 principles
+  [ok] [2023] HKCFI 1749: HKSAR v. CHAN CHIN CHING -> 4 principles
+  [ok] [2024] HKDC 318: HKSAR v. BUGTAQUEN MERLYN QUILA -> 3 principles
+  [ok] [2021] HKDC 1567: HKSAR v. TAM WING CHUEN -> 2 principles
+  [ok] [2023] HKCFI 1764: HKSAR v. KHALIQ SALMAN (also known as KHALIA SALMA -> 2 principles
+  [ok] [2021] HKCA 385: HKSAR v. “M” -> 2 principles
+  [ok] [2025] HKDC 2082: HKSAR v. MUHAMMAD BILAL -> 2 principles
+  [ok] [2025] HKCFI 1433: HKSAR v. THONG HIU KIN -> 0 principles
+  [ok] [2022] HKDC 1286: HKSAR v. YUN YU -> 3 principles
+  [ok] [2024] HKCFI 1002: HKSAR v. LAU KA YIU -> 0 principles
+  [ok] [2023] HKDC 329: HKSAR v. TSUI KING BUN -> 3 principles
+  [ok] [2025] HKDC 113: HKSAR v. SO MAN HO -> 3 principles
+  [ok] [2021] HKCFI 2307: HKSAR v. LAM WAI FUNG -> 4 principles
+  [ok] [2025] HKCA 646: CHEN JINHUI v. WONG KAM SAN, by his guardian ad li -> 4 principles
+  [ok] [2023] HKDC 752: HKSAR v. LAW NGO HIN -> 0 principles
+  [ok] [2023] HKDC 54: HKSAR v. CHOI YE IN -> 0 principles
+
+--- Topic: Identification Evidence (identification_evidence) ---
+  [ok] [2022] HKCA 106: HKSAR v. SINGH POPINDER AND OTHERS -> 1 principles
+  [ok] [2025] HKCA 176: HKSAR v. OKAFOR CHRISTIAN -> 5 principles
+  [ok] [2024] HKCFI 139: HKSAR v. YIP SIN WAH -> 4 principles
+  [ok] [2026] HKDC 330: HKSAR v. SO CHIN CHING AND OTHERS -> 5 principles
+  [ok] [2021] HKCFI 2432: HKSAR v. SINGH POPINDER AND OTHERS -> 4 principles
+  [ok] [2021] HKCA 703: HKSAR v. ASHRIF MEHMOOD -> 5 principles
+  [ok] [2022] HKCA 1030: HKSAR v. ARIF AQIB AND ANOTHER -> 5 principles
+  [ok] [2023] HKCA 1313: HKSAR v. CHOY KAM KUEN AND ANOTHER -> 3 principles
+  [ok] [2025] HKCFI 6434: HKSAR v. SIDHU, BALVEER SINGH -> 0 principles
+  [ok] [2022] HKDC 1220: HKSAR v. SINGH BALBIR -> 3 principles
+  [ok] [2025] HKDC 1457: HKSAR v. ALE MAGAR KRISHPOO AND ANOTHER -> 3 principles
+  [ok] [2023] HKDC 1191: HKSAR v. VERGNES CLEMENT VINCENT CHRISTOPHE -> 0 principles
+  [ok] [2021] HKCFI 2155: WONG HON LUNG V. CHIEF EXECUTIVE OF HKSAR -> 1 principles
+  [ok] [2021] HKCFI 523: HKSAR v. ALI HAIDER -> 0 principles
+  [ok] [2024] HKCA 754: RE AMMAR ABDLMOEEN HUSSEIN IBRAHIM -> 2 principles
+  [ok] [2023] HKDC 1709: HKSAR v. GURUNG ASHIS AND ANOTHER -> 3 principles
+  [ok] [2021] HKCFI 124: HKSAR v. KRISHAN, KUMAR AND ANOTHER -> 1 principles
+  [ok] [2023] HKCFI 1756: HKSAR v. TSE KI CHUNG -> 3 principles
+  [ok] [2021] HKCFI 3116: HKSAR v. SULDAAN, YUSUF SULDAAN -> 3 principles
+  [ok] [2021] HKDC 827: HKSAR v. DASHPAL SINGH -> 4 principles
+  [ok] [2025] HKCFI 3967: HKSAR v. ARIF AQIB -> 3 principles
+  [ok] [2022] HKDC 296: HKSAR v ABAD WILBERT MAGAN -> 3 principles
+  [ok] [2023] HKCFI 958: HKSAR v. SANJAY, KUMAR AND ANOTHER -> 1 principles
+  [ok] [2022] HKDC 634: HKSAR v. CHEN JINGWEI AND ANOTHER -> 4 principles
+  [ok] [2022] HKDC 1145: HKSAR v. KO KANG SUK AND ANOTHER -> 2 principles
+  [ok] [2025] HKCA 1109: HKSAR v. TAI TIN HO, ZAFAR AND ANOTHER -> 5 principles
+  [ok] [2026] HKCFI 867: RE HUANG GUOZHEN -> 3 principles
+  [ok] [2023] HKDC 1866: HKSAR v. NJIE EBOU -> 2 principles
+  [ok] [2021] HKCA 239: HKSAR v. IP TUNG TAI -> 0 principles
+
+--- Topic: Hearsay (hearsay) ---
+
+--- Topic: Arrest, Search, and Fair Trial (investigative_powers) ---
+
+--- Topic: Expert Evidence (expert_evidence) ---
+
+--- Topic: Character and Similar Fact Evidence (character_evidence) ---
+
+--- Topic: Bail and Remand (bail) ---
+
+--- Topic: Conviction Appeals (appeal_standards) ---
+
+--- Topic: Sentencing Principles (sentencing_principles) ---
+
+--- Topic: Confiscation and Proceeds (confiscation_orders) ---
+  [ok] [2022] HKCA 454: THE SECRETARY FOR JUSTICE v. TAM KIT-I -> 5 principles
+  [ok] [2025] HKCA 274: HKSAR v. HA BUT YEE -> 2 principles
+  [ok] [2022] HKCA 988: THE SECRETARY FOR JUSTICE v. TAM KIT-I -> 2 principles
+  [ok] [2025] HKCFI 3294: HKSAR v. LAM CHUNG YIU CHARLES -> 5 principles
+  [ok] [2021] HKDC 1302: HKSAR v. ZHENG ZHI LONG -> 4 principles
+  [ok] [2021] HKDC 142: HKSAR v. WONG PUI TING HEIDI -> 3 principles
+  [ok] [2021] HKCFI 60: HKSAR v. YIK SIU-HUNG AND OTHERS -> 2 principles
+  [ok] [2023] HKDC 1284: WONG, CHI HUNG v. LO, WING PUN AND ANOTHER -> 5 principles
+  [ok] [2021] HKCFI 2159: SECRETARY FOR JUSTICE v. CAI KANG GANG AND ANOTHER -> 5 principles
+  [ok] [2022] HKCFA 19: THE SECRETARY FOR JUSTICE v. TAM KIT-I -> 2 principles
+  [ok] [2023] HKDC 1663: WONG, CHI HUNG v. LO, WING PUN AND ANOTHER -> 4 principles
+  [ok] [2021] HKDC 968: HKSAR v. SO WING YIU -> 4 principles
+  [ok] [2022] HKCFI 3658: SECRETARY FOR JUSTICE v. TAM KIT-I -> 5 principles
+  [ok] [2026] HKCFI 606: O KIN TUEN v. COMMISSIONER OF CUSTOMS AND EXCISE -> 4 principles
+  [ok] [2021] HKCFI 2804: LAI CHEE-YING v. SECRETARY FOR SECURITY -> 5 principles
+  [ok] [2021] HKCFI 3118: TAM SZE LEUNG AND OTHERS v. COMMISSIONER OF POLICE -> 3 principles
+  [ok] [2026] HKCFI 227: CHENG YIU TONG v. THE COMMISSIONER OF POLICE -> 5 principles
+  [ok] [2023] HKCFA 24: THE SECRETARY FOR JUSTICE v. TAM KIT-I -> 0 principles
+  [ok] [2025] HKCFI 4569: RE MR TIMOTHY WYNN OWEN KC -> 2 principles
+  [ok] [2025] HKCA 370: WONG, CHI HUNG v. LO, WING PUN AND ANOTHER -> 5 principles
+  [ok] [2025] HKDC 2005: HKSAR v. ROBIAH SITI -> 0 principles
+  [ok] [2024] HKCFI 3185: SITI RUMANI v. TORTURE CLAIMS APPEAL BOARD / NON-R -> 2 principles
+  [ok] [2022] HKCA 90: HKSAR v. MUSAH HAKEEM TAHIRU alias TAHIRU MUSA HAK -> 0 principles
+  [ok] [2022] HKCA 1819: TAM KIT I v. THE SECRETARY FOR JUSTICE -> 2 principles
+  [ok] [2021] HKCFI 827: ABDUL RAHAMAN v. TORTURE CLAIMS APPEAL BOARD NON-R -> 4 principles
+  [ok] [2022] HKCFI 3395: DIOCARES MARILOU BANGSOY v. TORTURE CLAIMS APPEAL  -> 2 principles
+  [ok] [2024] HKCFI 1690: ALI ZULFIKAR v. TORTURE CLAIMS APPEAL BOARD / NON- -> 0 principles
+  [ok] [2024] HKCFI 2510: FAIYAZ AHMED alias SHAJAHAN SHAIKH v. TORTURE CLAI -> 2 principles
+  [ok] [2021] HKCFI 1490: RE LE THI HUONG -> 4 principles
+  [ok] [2021] HKCFI 644: LE THI HUONG v. TORTURE CLAIMS APPEAL BOARD / NON- -> 3 principles
+
+--- Topic: Prevention of Cruelty to Animals Ordinance (Cap. 169) (prevention_cruelty_animals) ---
+  [ok] [2024] HKCFI 591: 張煥堯 v. 商務及經濟發展局 AND OTHERS -> 0 principles
+  [ok] [2023] HKMagC 2: HKSAR v. CHOW HANG TUNG AND OTHERS -> 3 principles
+  [ok] [2026] HKCFI 401: DBS BANK (HONG KONG) LTD v. HONOUR ELITE CORPORATI -> 5 principles
+  [ok] [2026] HKCFI 1608: THE HONGKONG AND SHANGHAI BANKING CORPORATION LTD  -> 5 principles
+  [ok] [2022] HKCFI 3150: 郭卓堅 v. 政府醫衛局局長盧寵茂先生 -> 3 principles
+  [ok] [2022] HKCFI 2525: HKSAR v. KWOK WING KIN AND OTHERS -> 5 principles
+  [ok] [2024] HKDC 10: WING FAT BUILDING CONSTRUCTION LTD v. C. Y. HON CO -> 4 principles
+  [ok] [2022] HKFC 94: L, ACHY v. Y, C -> 2 principles
+  [ok] [2024] HKCFI 553: HKSAR v. CHOW HANG TUNG AND OTHERS -> 3 principles
+  [ok] [2023] HKCFI 2644: HKSAR v. CHAN WAN YIU -> 2 principles
+  [ok] [2023] HKCFA 30: HKSAR v. KWOK WING KIN AND OTHERS -> 5 principles
+  [ok] [2022] HKCFI 3159: 吳振權 v. 香港特別行政區政府 -> 2 principles
+  [ok] [2022] HKCFI 3209: HKSAR v. YU CHUN WING -> 4 principles
+  [ok] [2021] HKCA 1629: DENNIS KWOK HON MING v. POON SUI CHEONG ALBERT AND -> 3 principles
+  [ok] [2026] HKCFI 1227: ISLAM SAIFUL v. TORTURE CLAIMS APPEAL BOARD / NON- -> 2 principles
+  [ok] [2025] HKCFA 3: HKSAR v. TANG NGOK KWAN (鄧岳君), TSUI HON KWONG (徐漢光 -> 3 principles
+  [ok] [2022] HKCFI 688: LAW YEE MEI v. CHIEF EXECUTIVE OF HONG KONG SAR AN -> 4 principles
+  [ok] [2023] HKCFI 1950: SECRETARY FOR JUSTICE v. PERSONS CONDUCTING THEMSE -> 5 principles
+  [ok] [2026] HKCFI 1604: DBS BANK (HONG KONG) LTD v. HONOUR ELITE CORPORATI -> 1 principles
+  [ok] [2023] HKCA 237: HUANG QINGZHAN v. CHINA DING YI FENG HOLDINGS LTD -> 2 principles
+  [ok] [2022] HKCFI 3225: KWOK CHEUK KIN v. SECRETARY FOR HEALTH -> 5 principles
+  [ok] [2025] HKCFI 4514: SOREMI INVESTMENTS LTD v. CHINA NATIONAL GOLD GROU -> 4 principles
+  [ok] [2022] HKCFI 1757: HKSAR v. CHANG HOO CHANG -> 2 principles
+  [ok] [2023] HKCFI 738: NGUYEN THI NHUNG v. TORTURE CLAIMS APPEAL BOARD/ N -> 2 principles
+  [ok] [2023] HKCFI 1518: TSANG HO MING v. COMMISSIONER OF POLICE AND ANOTHE -> 4 principles
+  [ok] [2022] HKCFI 2300: 董旺建 v. 香港特別行政區行政長官及另一人 -> 3 principles
+  [ok] [2022] HKCFI 1885: HKSAR v. CHENG KIN FAI -> 3 principles
+
+--- Topic: Animal Cruelty Sentencing (animal_welfare_sentencing) ---
+  [ok] [2025] HKDC 559: HKSAR v TABOR DEXTER VALERA -> 1 principles
+  [ok] [2024] HKDC 1566: HKSAR v. LAU KWAN LING -> 1 principles
+  [ok] [2022] HKCA 686: SECRETARY FOR JUSTICE v. CHEUNG KIM LUN -> 3 principles
+  [ok] [2022] HKCA 1169: GALLETIS DOMINICA DOSCA v. TORTURE CLAIMS APPEAL B -> 3 principles
+  [ok] [2025] HKCFI 6258: AUTOMOBILI LAMBORGHINI S.p.A. v. JARVIS MOJO LTD A -> 4 principles
+  [ok] [2022] HKCA 802: HKSAR v. KHAW KIM SUN -> 5 principles
+  [ok] [2022] HKCFI 2337: VU NGOC DAN v. TORTURE CLAIMS APPEAL BOARD / NON-R -> 4 principles
+  [ok] [2022] HKCFI 1417: HKSAR v. CHEUNG HIN MING -> 2 principles
+  [ok] [2021] HKDC 1597: HKSAR v. LEE PAK TO -> 2 principles
+  [ok] [2026] HKCFI 1448: NINTENDO CO., LTD v. CHEN YUAN NING AND OTHERS -> 4 principles
+  [ok] [2021] HKCA 2003: CHEUNG TAK WING v. COMMUNICATIONS AUTHORITY AND AN -> 2 principles
+  [ok] [2022] HKCFI 2751: PARMINDER SINGH v. TORTURE CLAIMS APPEAL BOARD / N -> 2 principles
+  [ok] [2023] HKCFI 2077: UGBE KENNETH NGOZI v. TORTURE CLAIMS APPEAL BOARD  -> 2 principles
+  [ok] [2024] HKCFI 1635: GURUNG KUMAR v. TORTURE CLAIMS APPEAL BOARD / NON- -> 1 principles
+  [ok] [2025] HKDC 1625: HKSAR v. AL HAMD WAEEL ALI MAHMOUD -> 2 principles
+  [ok] [2023] HKDC 1855: HKSAR v. SIRICHEUNVICHIT PAWAT -> 2 principles
+  [ok] [2023] HKDC 404: HKSAR v. LIAQAT ALI KHAN -> 3 principles
+  [ok] [2023] HKCFI 2472: ANACHEBE CHIBUZOR REUBEN v. TORTURE CLAIMS APPEAL  -> 2 principles
+  [ok] [2024] HKCA 1009: GURUNG KUMAR v. TORTURE CLAIMS APPEAL BOARD / NON- -> 5 principles
+  [ok] [2022] HKCFI 1405: HKSAR v. SO WAI HANG -> 0 principles
+  [ok] [2023] HKDC 166: HKSAR v. TSANG KAI YIU -> 2 principles
+  [ok] [2025] HKCFI 1662: HKSAR v. NG JUSTIN -> 4 principles
+  [ok] [2021] HKCFI 520: GALLETIS DOMINICA DOSCA v. TORTURE CLAIMS APPEAL B -> 2 principles
+  [ok] [2024] HKDC 1248: HKSAR v. LOR HAO HING -> 3 principles
+  [ok] [2022] HKDC 282: CHI YUM BUDDHIST HALL ASSOCIATION LTD v. YU LIK WA -> 2 principles
+  [ok] [2023] HKDC 633: CHEUK CHI WAI AND ANOTHER v. HSU MAN NAI AND OTHER -> 0 principles
+  [ok] [2025] HKCFI 2343: NG YAU SING AND OTHERS v. FALCON INSURANCE COMPANY -> 1 principles
+  [ok] [2025] HKCFI 666: MAN YU SHING SIMON v. SECRETARY FOR JUSTICE -> 5 principles
+  [ok] [2025] HKDC 1306: HKSAR v. LAM MAN YIN -> 3 principles
+  [ok] [2024] HKCFI 3536: HKSAR v. KHAW KIM SUN -> 3 principles
+  [ok] [2023] HKCFI 2079: NAEEM MUHAMMAD v. HONG KONG SAR GOVERNMENT -> 2 principles
+  [ok] [2025] HKCFI 4942: CHAN KWOK KUEN v. LAI YAT HO AND OTHERS -> 4 principles
+  [ok] [2021] HKCFI 2284: TECHNIC STAR UNIVERSAL LTD v. TINY LOVE LTD -> 5 principles
+  [ok] [2024] HKCFA 32: HUI CHUN PING v. HUI KAU MO -> 4 principles
+
+--- Topic: Dangerous Driving and Road Traffic Offences (dangerous_driving) ---
+  [ok] [2021] HKDC 867: HKSAR v. WONG KA SHING -> 4 principles
+  [ok] [2021] HKDC 308: HKSAR v. WONG YEE KI -> 5 principles
+  [ok] [2022] HKDC 947: HKSAR v. LI TAI WAI -> 1 principles
+  [ok] [2024] HKDC 317: HKSAR v. KWOK CHING KAN -> 0 principles
+  [ok] [2025] HKCA 674: SECRETARY FOR JUSTICE v. KO KIN MING -> 0 principles
+  [ok] [2022] HKDC 1022: HKSAR v. CHAN CHUN HEI -> 0 principles
+
+--- Topic: Environmental Offences (environmental_crimes) ---
+
+--- Topic: Occupational Safety Offences (workplace_safety) ---
+
+--- Topic: Insider Dealing (insider_dealing) ---
+
+--- Topic: Market Manipulation and False Trading (market_manipulation) ---
+
+--- Topic: AML Compliance and Reporting Offences (aml_compliance) ---
+  [ok] [2023] HKCFI 387: SCHUTZ, GILLES YVES RENE v. HAI CLOUD EXCHANGE (HK -> 3 principles
+  [ok] [2023] HKDC 1674: ZEUS AIRCRAFT OWNER 2 LTD AND ANOTHER v. POLAR PAY -> 5 principles
+  [ok] [2022] HKDC 766: OPERA NATIONAL DE PARIS v. SUN BON INTERNAITONAL L -> 0 principles
+  [ok] [2026] HKCFI 1474: HKSAR v. KWAN KIM FUNG -> 4 principles
+  [ok] [2024] HKDC 1596: CHEUNG YIU LEUNG v. CHEUNG CHONG MONEY EXCHANGE O/ -> 4 principles
+  [ok] [2023] HKCFI 1828: LI XIUHUA v. FT ELECTRONIC CO LTD AND OTHERS -> 2 principles
+  [ok] [2024] HKCFI 572: REMX LIMITED Plaintiff and LAE TECHNOLOGIES HONG K -> 5 principles
+  [ok] [2026] HKCFI 201: LI CHUNG HONG ERIC v. TUNG CHUN WAI AND OTHERS -> 3 principles
+  [ok] [2021] HKDC 1034: HKSAR v. RAHAYU NIKE -> 3 principles
+  [ok] [2023] HKCFI 3123: 安徽海牛進出口貿易有限公司 v. SMART STAR HONOR LTD AND ANOTHER -> 4 principles
+  [ok] [2022] HKCFI 1487: RE NERICO BROTHERS LTD -> 0 principles
+  [ok] [2022] HKDC 1405: OPERA NATIONAL DE PARIS v. SUN BON INTERNATIONAL L -> 0 principles
+  [ok] [2023] HKCFI 1026: JUMBO FAIR LTD AND OTHERS v. PACM SERIES 235 LTD -> 4 principles
+  [ok] [2024] HKCFI 3710: CHEN YUNG NGAI KENNETH AND ANOTHER v. OLDHAM, LI & -> 5 principles
+  [ok] [2023] HKCA 960: TAI SHING LEE VICTOR t/a LUCKY RENMINBI EXCHANGE F -> 3 principles
+  [ok] [2025] HKDC 1646: HKSAR v. RAI RAJ MANI -> 0 principles
+
+--- Topic: Corporate Fraud (corporate_fraud) ---
+
+--- Topic: False Accounting and Financial Statements (false_accounting) ---
+
+--- Topic: Smuggling and Customs Offences (smuggling) ---
+
+--- Topic: National Security Offences (national_security_offences) ---
+
+--- Topic: Perjury and Perverting the Course of Justice (perjury_perverting_justice) ---
+
+--- Topic: Triad-Related Offences (triad_related_offences) ---
+
+--- Topic: Gambling Offences (gambling_offences) ---
+
+--- Topic: Immigration Offences (immigration_offences) ---
+
+--- Topic: Intellectual Property Crimes (intellectual_property_crimes) ---
+
+--- Topic: Prostitution-Related Offences (prostitution_related_offences) ---
+
+--- Topic: Contempt of Court (contempt_of_court) ---
+
+--- Topic: Endangering Life at Sea and Related Offences (endangering_life_at_sea) ---
+
+--- Topic: Firearms and Ammunition Offences (firearms_and_ammunition_offences) ---
+
+--- Topic: Child Pornography and Protection Offences (child_pornography_and_protection) ---
+
+--- Topic: Corporate Manslaughter and Gross Negligence (corporate_manslaughter) ---
+
+[done] {
+  "topics_processed": 72,
+  "cases_crawled": 2409,
+  "cases_enriched": 335,
+  "errors": 0
+}
+
+[round 3] Total candidates after round: 1677
+
+============================================================
+  LOOP COMPLETE — 3 rounds finished
+  Run 'review' to generate Codex task, then 'merge' after review.
+============================================================
+[2026年 4月13日 星期一 13時08分44秒 HKT] Pipeline finished OK

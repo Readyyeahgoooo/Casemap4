@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T11:08:18.413506+00:00"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2024] HKCA 688",
+      "case_name": "SECRETARY FOR JUSTICE v. PERSONS CONDUCTING THEMSELVES IN ANY OF THE ACTS PROHIBITED UNDER PARAGRAPH 1(a), (b), (c) OR (d) OF THE INDORSEMENT OF CLAIM",
+      "court_code": "Court of Appeal",
+      "decision_date": "2024-07-18T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Poon CJHC and Chu VP in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2024/688",
+      "topic_id": "writ_originating_summons",
+      "topic_label": "Writs and Originating Summonses",
+      "module_id": "civil_procedure",
+      "subground_id": "commencement_pleadings_service",
+      "principles": [
+        {
+          "principle_label": "Filing opposition does not confer party status",
+          "paraphrase_en": "Merely filing grounds of opposition to an injunction application does not automatically grant a person the status of a formal party to the proceedings or the right to make oral submissions at the hearing.",
+          "paragraph_span": "[7]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Service order does not create joinder",
+          "paraphrase_en": "A substituted service order that allows a person to be served with documents and to file grounds of opposition does not, by its terms, constitute that person as a formal party to the action. Party status requires a proper joinder application.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Totally without merit applications",
+          "paraphrase_en": "Where an application for permission to appeal is found to be totally without merit, the court may order that no party may request the matter be reconsidered at an oral inter partes hearing.",
+          "paragraph_span": "[31]",
+          "cited_statutes": [
+            "Order 59, rule 2A(8)"
+          ]
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name",
+          "civil_procedure_keywords"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "criminal": 0.35,
+          "civil": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T11:05:58.454089+00:00",
+      "paragraph_count": 62
+    }
+  ]
+}

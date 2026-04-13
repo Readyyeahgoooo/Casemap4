@@ -1,0 +1,3120 @@
+{
+  "meta": {
+    "generated_at": "2026-04-13T07:17:48.077997+00:00",
+    "domain": "civil"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2022] HKCA 799",
+      "case_name": "TANG HO HEI v. CHAN PO MEI",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-06-08T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Chu and Au JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/799",
+      "topic_id": "causation",
+      "topic_label": "Causation",
+      "module_id": "general_principles",
+      "subground_id": "actus_reus_causation",
+      "principles": [
+        {
+          "principle_label": "Thin skull rule application",
+          "paraphrase_en": "A negligent defendant is liable for the full extent of the plaintiff's injuries, even if the plaintiff had a pre-existing susceptibility or condition that made the consequences more severe than they would have been for an ordinary person.",
+          "paragraph_span": "[60]-[61]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "De minimis non curat lex inapplicability",
+          "paraphrase_en": "The legal principle that the law does not concern itself with trifles (de minimis) does not logically extend from property damage to personal injury; minimal damage to objects does not preclude significant injury to a person.",
+          "paragraph_span": "[37]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Statutory construction - in pari materia",
+          "paraphrase_en": "Statutes that deal with the same or similar subject matter (in pari materia) should be construed together as forming a single, coherent system, interpreting and reinforcing each other, even if their primary nature (e.g., penal vs. regulatory) differs.",
+          "paragraph_span": "[64]-[69]",
+          "cited_statutes": [
+            "Cap. 200",
+            "Cap. 295"
+          ]
+        },
+        {
+          "principle_label": "Causation - expert agreement on delay",
+          "paraphrase_en": "Where expert evidence from both parties agrees that a delay in a hazardous environment could cause or worsen injury, and the plaintiff's evidence establishes such a delay occurred, a specific finding on the precise duration of the delay is not necessary to establish causation.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "CMY v Tam Siu Wing",
+          "target_neutral_citation": "[2008] 4 HKLRD 604",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from CMY v Tam that a negligent defendant must take the victim as found, rejecting the argument that it is limited to physical peculiarities."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T20:53:32.758533+00:00",
+      "paragraph_count": 183,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 1778",
+      "case_name": "LEUNG CHI CHING CANDY v. YEUNG HON SING",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-11-26T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Chu JA and Au JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/1778",
+      "topic_id": "recklessness_dishonesty",
+      "topic_label": "Recklessness and Dishonesty",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Qualified privilege and malice",
+          "paraphrase_en": "The defence of qualified privilege is defeated by malice if the defendant knew or would have known the defamatory statements were false, indicating publication was not for a proper purpose.",
+          "paragraph_span": "[23]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Standard for inferring malice",
+          "paraphrase_en": "Courts should be very slow to infer that a defendant was actuated by improper motives to defeat privilege, unless satisfied the defendant did not believe the statement was true or was indifferent to its truth.",
+          "paragraph_span": "[41]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Irrelevant defamatory matter and malice",
+          "paraphrase_en": "Irrelevant defamatory matter incorporated in a privileged statement is a factor to be considered in deciding whether malice can be inferred, based on whether the defendant did not believe it true or knew it was irrelevant.",
+          "paragraph_span": "[43]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Subjective test for malice",
+          "paraphrase_en": "To find malice defeating qualified privilege, a subjective test dependent on the defendant's state of mind and intention at the time of publication must be applied.",
+          "paragraph_span": "[68]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Presumption of judicial integrity",
+          "paraphrase_en": "There is a presumption of judicial integrity and impartiality; cogent evidence is required to rebut it, and allegations to the contrary should not be made lightly.",
+          "paragraph_span": "[88]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:24:34.059360+00:00",
+      "paragraph_count": 176,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2026] HKCFA 2",
+      "case_name": "SAMANTHA JANE BRADLEY v. SIR ELLY KADOORIE & SONS LIMITED (FOR AND ON BEHALF OF ITSELF, ITS CURRENT AND FORMER OFFICERS, EMPLOYEES AND AGENTS, INCLUDING ITS LEGAL REPRESENTATIVES, MESSRS SIMMONS & SIMMONS)",
+      "court_code": "Court of Final Appeal",
+      "decision_date": "2026-01-09T00:00:00+08:00",
+      "judges": [
+        "Before: Chief Justice Cheung, Mr Justice Lam PJ, Mr Justice Bokhary NPJ, Mr Justice Chan NPJ and Lord Neuberger of Abbotsbury NPJ"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfa/2026/2",
+      "topic_id": "recklessness_dishonesty",
+      "topic_label": "Recklessness and Dishonesty",
+      "module_id": "general_principles",
+      "subground_id": "mens_rea_fault",
+      "principles": [
+        {
+          "principle_label": "Freestanding injunction jurisdiction",
+          "paraphrase_en": "A court has jurisdiction to grant a freestanding injunction to restrain harassment, even if the applicant lacks a personal cause of action, where it is just and convenient to do so to uphold the administration of justice or prevent abuse of process.",
+          "paragraph_span": "[11]-[12], [32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Broadmoor jurisdiction for statutory authorities",
+          "paraphrase_en": "A statutory authority (or public authority) can apply for an injunction to prevent conduct that interferes with its performance of statutory functions, and the court may grant it where just and convenient, even without the authority having a personal cause of action.",
+          "paragraph_span": "[47], [55]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Employer's duty to prevent workplace harassment",
+          "paraphrase_en": "An employer's common law duty to provide a safe workplace extends to taking reasonable steps to prevent reasonably foreseeable harassment of an employee by third parties, including fellow employees or customers, analogous to the duty to prevent physical assault.",
+          "paragraph_span": "[70], [73]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Injunction in aid of Attorney General's duty",
+          "paraphrase_en": "An injunction may be granted on the application of the Attorney General (or Secretary for Justice) to ensure obedience to the law, even though the Attorney General lacks a personal cause of action, based on the public duty to enforce the law.",
+          "paragraph_span": "[45], [86]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinction between negligence and contract claims for harassment",
+          "paraphrase_en": "For a negligence claim based on workplace harassment, the employee must prove actionable psychiatric injury, whereas for a breach of contract claim, damage need not be proven as contractual breaches are actionable per se.",
+          "paragraph_span": "[76]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Broadmoor Special Hospital Authority v Robinson",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment adopts the principle from Broadmoor that a statutory authority can seek an injunction to prevent interference with its statutory duties."
+        },
+        {
+          "target_case_name": "Abbasi v Newcastle upon Tyne Hospitals NHS Foundation Trust",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the Supreme Court's reasoning in Abbasi regarding the Broadmoor jurisdiction and its limitations on third-party standing."
+        },
+        {
+          "target_case_name": "R v Rollins",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Rollins as endorsing Lord Woolf MR's statement of principle in Broadmoor regarding injunctions for public authorities."
+        },
+        {
+          "target_case_name": "Walsh v Securicor Ireland Ltd",
+          "target_neutral_citation": "[1993] 2 IR 507",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Walsh as an example where employers were held responsible for failing to prevent foreseeable criminal assaults on employees."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:27:26.242438+00:00",
+      "paragraph_count": 570,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKDC 1285",
+      "case_name": "LAM SHUI KING v. POLLUTION & PROTECTION SERVICES LTD AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2022-11-07T00:00:00+08:00",
+      "judges": [
+        "Coram: Master Louise Chan in Chambers (Paper Disposal)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/1285",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Constructive knowledge burden and test",
+          "paraphrase_en": "The burden of proving that a plaintiff had constructive knowledge of a material fact rests on the party asserting it, and the test for such knowledge is objective.",
+          "paragraph_span": "[21]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Nature of knowledge for limitation",
+          "paraphrase_en": "The knowledge required to start a limitation period is a state of mind with a sufficient degree of certainty to justify taking preliminary steps towards a claim, such as seeking advice. It can include a reasonably firm belief that warrants investigation, not absolute certainty.",
+          "paragraph_span": "[31]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of plaintiff's understanding",
+          "paraphrase_en": "When assessing whether a plaintiff had the requisite knowledge, the court must consider the plaintiff's intelligence in understanding the information available to them.",
+          "paragraph_span": "[31]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Plaintiff's duty to investigate",
+          "paraphrase_en": "A plaintiff is expected to make reasonable investigations based on information available and cannot expect a defendant to provide every detail to absolve them of this duty.",
+          "paragraph_span": "[40]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Prejudice and merits in limitation",
+          "paraphrase_en": "When deciding on an extension of time, the court considers the prejudice to a defendant from losing a limitation defence. The court may take an overall view of the claim's prospects of success, but cannot make a final determination on the merits at the interlocutory stage.",
+          "paragraph_span": [
+            "[47]"
+          ],
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Nash v Eli Lilly & Co",
+          "target_neutral_citation": "[1993] 4 All ER 383",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Nash regarding the nature of knowledge required to start the limitation period."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:30:24.617455+00:00",
+      "paragraph_count": 120,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 1192",
+      "case_name": "CHAN YAU LING v. HOUSING APPEAL TRIBUNAL AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-06-21T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Coleman J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/1192",
+      "topic_id": "secondary_liability",
+      "topic_label": "Secondary Liability",
+      "module_id": "general_principles",
+      "subground_id": "participation_inchoate",
+      "principles": [
+        {
+          "principle_label": "Policy application and discretion",
+          "paraphrase_en": "A decision-maker entrusted with discretion may adopt a guiding policy but must not apply it rigidly to the point of fettering that discretion. The policy must allow for exceptions and consideration of the specific circumstances of each case.",
+          "paragraph_span": "[34]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consideration of individual circumstances",
+          "paraphrase_en": "A tribunal must give proper consideration to the particular circumstances of a case and not allow a general policy to automatically determine the outcome without such consideration.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Tribunal's implied discretion",
+          "paraphrase_en": "Where a tribunal holds a hearing on a matter, it is unlikely that it considered itself to have no discretion in the outcome, as that would render the hearing redundant.",
+          "paragraph_span": "[62]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:32:22.770360+00:00",
+      "paragraph_count": 115,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 5363",
+      "case_name": "IQBAL HASSAN v. TORTURE CLAIMS APPEAL BOARD / NON-REFOULEMENT CLAIMS PETITION OFFICE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-12-05T00:00:00+08:00",
+      "judges": [
+        "Order by Deputy High Court Judge (Non-refoulement Claims) Teresa Wu :"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/5363",
+      "topic_id": "murder",
+      "topic_label": "Murder",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Assessment of persecution risk",
+          "paraphrase_en": "A non-refoulement claim based on persecution requires the claimant to demonstrate a well-founded fear of persecution for a reason protected under law. The decision-maker must assess whether there is a real chance or real risk of harm amounting to persecution.",
+          "paragraph_span": "[10]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Credibility and fabrication of claims",
+          "paraphrase_en": "A decision-maker may reject a non-refoulement claim in its entirety if satisfied that the claim has been fabricated. The assessment can be based on findings that supporting documents are wholly fabricated or materially altered and do not support the claimant's account.",
+          "paragraph_span": "[10]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Substantive consideration of core elements",
+          "paraphrase_en": "A tribunal or board fulfills its duty by giving substantive consideration to the core elements of an applicant's case, as evidenced in its written decision.",
+          "paragraph_span": "[1]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:56:29.746821+00:00",
+      "paragraph_count": 30,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKDC 1449",
+      "case_name": "THE INCORPORATED OWNERS OF SHATIN NEW TOWN AND OTHERS v. CHEUNG KWOK KEUNG AND OTHERS",
+      "court_code": "District Court",
+      "decision_date": "2021-11-19T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge Andrew Li in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/1449",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Qualified privilege for common interest communications",
+          "paraphrase_en": "Communications made for the genuine purpose of sharing information in which the recipients have a common interest (such as building management affairs among owners) are made on a privileged occasion, attracting qualified privilege.",
+          "paragraph_span": "[112]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Defeat of qualified privilege by malice",
+          "paraphrase_en": "Qualified privilege is defeated if the defendant did not have an honest belief in the truth of the communication, was recklessly indifferent to its truth or falsity, or was motivated by a desire to injure the plaintiff.",
+          "paragraph_span": "[112], [115]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Reckless indifference to truth",
+          "paraphrase_en": "A defendant may be found to be recklessly indifferent to the truth or falsity of a defamatory allegation if, in circumstances where community standards recognize a moral obligation to verify serious allegations, they publish without any idea whether the allegation is true or false.",
+          "paragraph_span": "[101]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Scope of BMO section 29A defence",
+          "paraphrase_en": "The statutory defence under section 29A of the Buildings Management Ordinance adds nothing to the common law defences of qualified privilege and honest comment, and it only applies where a defendant acts in good faith and in a reasonable manner.",
+          "paragraph_span": "[114], [132]",
+          "cited_statutes": [
+            "BMO s.29A"
+          ]
+        },
+        {
+          "principle_label": "Discretion to grant injunction in defamation",
+          "paraphrase_en": "The court may exercise its discretion to grant an injunction in a defamation case where there is evidence of the defendant's hostility, intransigence, and a tendency to make casual accusations against the plaintiff.",
+          "paragraph_span": "[119]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Law Kin Man Freeman v Chan Kin Hung",
+          "target_neutral_citation": "DCCJ 4563/2007",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from this case regarding reckless indifference to truth in the context of a moral obligation to verify serious allegations."
+        },
+        {
+          "target_case_name": "Horrocks v Lowe",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the standard for reckless indifference to truth as discussed in the authority of Horrocks v Lowe."
+        },
+        {
+          "target_case_name": "Leung Chi Chong Candy",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the holding from this case on the relationship between the BMO section 29A defence and the common law defences of qualified privilege and honest comment."
+        },
+        {
+          "target_case_name": "Au Yee Ming Ivan v Ng Fei Tip",
+          "target_neutral_citation": "DCCJ 4595/2008",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as an example where the court exercised its discretion to grant an injunction in a defamation action concerning building management."
+        },
+        {
+          "target_case_name": "Bonnard v Perryman",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the test from Bonnard v Perryman regarding the grant of interim injunctions in defamation cases."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T21:59:45.435436+00:00",
+      "paragraph_count": 554,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKDC 1036",
+      "case_name": "LEUNG CHI CHING CANDY v. YEUNG HON SING",
+      "court_code": "District Court",
+      "decision_date": "2022-09-30T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge MK Liu in Chambers (Open to Public) (Remote Hearing)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/1036",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Scope of remission to arbitral tribunal",
+          "paraphrase_en": "When a court remits an arbitral award back to the tribunal for a specific purpose, the tribunal's authority is limited to that particular issue and does not extend to a general reassessment of the entire matter.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Arbitrators' duty to demonstrate consideration of issues",
+          "paraphrase_en": "Arbitrators must clearly demonstrate in their award that they have considered and determined specific issues raised by the parties, such as whether expenses were unrecoverable or reimbursable.",
+          "paragraph_span": "['Whether or not...']",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Interpretation of court remission orders",
+          "paraphrase_en": "The scope of a remission order from an appellate court is determined primarily by the language of the order itself, and in the absence of limiting words, it may encompass the entire issue as originally formulated.",
+          "paragraph_span": "[12]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Limits on fresh evidence in remitted arbitral proceedings",
+          "paraphrase_en": "When an award is remitted to arbitrators for a narrow, specific issue, parties are not entitled to lead fresh evidence on that remitted issue even if the remission order contains no express prohibition against new evidence.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Determining scope of remitter",
+          "paraphrase_en": "The precise scope of a remitter should be determined by reference to the appellate court's judgment and the pleadings that were before that court at the time of the appeal.",
+          "paragraph_span": "[22]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Sans Souci",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the Privy Council's holding in Sans Souci regarding the narrow scope of remitted issues and restrictions on fresh evidence in arbitral proceedings."
+        },
+        {
+          "target_case_name": "Court of Appeal case",
+          "target_neutral_citation": "[2021] HKCA 864",
+          "relationship_type": "FOLLOWS",
+          "description": "The judgment follows the Court of Appeal's approach in determining the scope of a remitter by reference to the appellate judgment and contemporaneous pleadings."
+        },
+        {
+          "target_case_name": "Ladd v Marshall",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references the Ladd v Marshall test as the standard the Court of Appeal would apply when considering the admissibility of new evidence on appeal."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:01:00.399150+00:00",
+      "paragraph_count": 170,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCA 721",
+      "case_name": "LAM WAI IP v. THE SECRETARY FOR JUSTICE",
+      "court_code": "Court of Appeal",
+      "decision_date": "2023-06-09T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Yuen JA and G Lam JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2023/721",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Malicious prosecution - prosecutor identification",
+          "paraphrase_en": "For a claim of malicious prosecution, the plaintiff must properly identify who the prosecutor is. The claim can be brought against the Secretary for Justice as the prosecuting authority, not just against the police officers who conducted the investigation.",
+          "paragraph_span": "[8]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Malicious prosecution - effect of claimant's guilt",
+          "paraphrase_en": "If it is found as a fact that the claimant was actually guilty of the offence charged, this can negate the absence of reasonable and probable cause in a malicious prosecution claim, even if the prosecutor did not believe the claimant was guilty at the time of prosecution.",
+          "paragraph_span": "[14]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Malicious prosecution - reasonable and probable cause assessment",
+          "paraphrase_en": "The decision to prosecute has reasonable and probable cause when there is clear evidence supporting the charges, such as police testimony about finding illegal substances on the defendant's person during a search.",
+          "paragraph_span": "[50]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Malicious prosecution - malice and honest belief",
+          "paraphrase_en": "An investigating officer's honest belief in the guilt of the claimant does not automatically negate the existence of malice in a malicious prosecution claim, particularly if the prosecution case was tainted by serious illegality.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Malicious prosecution - factual basis for claim",
+          "paraphrase_en": "A claim for malicious prosecution based on alleged evidence fabrication requires the plaintiff to establish that the evidence was indeed fabricated, not merely that there are inconsistencies or alternative explanations for the evidence.",
+          "paragraph_span": "[13]-[14], [19]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Martin v Watson",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references Martin v Watson as establishing principles regarding who can be considered a prosecutor for malicious prosecution claims."
+        },
+        {
+          "target_case_name": "Ministry of Justice (Sued as Home Office) v Scott",
+          "target_neutral_citation": "[2009] EWCA Civ 1215",
+          "relationship_type": "CITES",
+          "description": "Cited as an example applying the principle from Martin v Watson where prison officers giving false evidence could be considered to have procured prosecution."
+        },
+        {
+          "target_case_name": "The Commissioner of the Police of the Metropolis v Copeland",
+          "target_neutral_citation": "[2014] EWCA Civ 1014",
+          "relationship_type": "CITES",
+          "description": "Cited as authority that bad faith of investigating officers can be relevant to establishing malice in malicious prosecution claims."
+        },
+        {
+          "target_case_name": "Rees v Commissioner of Police for the Metropolis",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Rees that honest belief in guilt does not negate malice when the prosecution is tainted by serious illegality."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:04:09.923074+00:00",
+      "paragraph_count": 179,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "criminal_keywords:2"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.12,
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 464",
+      "case_name": "CHIN KAM CHIU v. FTI CONSULTING, INC AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-04-09T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Cheung JA and Au JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/464",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Expert witness qualification requirements",
+          "paraphrase_en": "There is no legal requirement for an expert witness in legal proceedings to hold specific professional qualifications such as being a certified public accountant; a claim cannot be founded merely on the expert's lack of a particular certification.",
+          "paragraph_span": "[14]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Elements of malicious prosecution",
+          "paraphrase_en": "For a claim of malicious prosecution to succeed, the plaintiff must plead and prove that the defendant initiated or set the law in motion regarding the prosecution, that the prosecution was without reasonable and probable cause, and that the defendant was actuated by malice.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Expert report insufficient for prosecution initiation",
+          "paraphrase_en": "Merely providing an expert report that is later found insufficient to secure a conviction does not, by itself, constitute initiating a prosecution or 'setting the law in motion' for the purpose of a malicious prosecution claim.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Pleading standard for malice inference",
+          "paraphrase_en": "In a malicious prosecution claim, the statement of claim must plead with sufficient particularity the facts from which malice is to be inferred; a failure to meet this pleading standard cannot be remedied by submissions alone.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's duty on unmeritorious claims",
+          "paraphrase_en": "Where a claim is fundamentally defective in law and no viable amendment can cure its deficiencies, the court is entitled to strike it out as being wholly and indisputably bad.",
+          "paragraph_span": "[30]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:05:03.480666+00:00",
+      "paragraph_count": 54,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name",
+          "criminal_keywords:1"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "criminal": 0.06,
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 605",
+      "case_name": "KHAN ASAF NAWAZ v. SECRETARY FOR JUSTICE on behalf of COMMISSIONER OF POLICE",
+      "court_code": "District Court",
+      "decision_date": "2023-07-07T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge Ko in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/605",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Elements of malicious prosecution",
+          "paraphrase_en": "To succeed in an action for malicious prosecution, the claimant must prove four elements: that the defendant initiated a criminal prosecution against them; that the prosecution ended in the claimant's favour; that the prosecution was without reasonable and probable cause; and that it was motivated by malice. The burden of proof for all elements rests on the claimant.",
+          "paragraph_span": "[1]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Joint enterprise liability without presence",
+          "paraphrase_en": "For liability under joint criminal enterprise, it is not a legal requirement that the accused be physically present at the scene of the crime. Liability can arise from an arrangement or understanding between parties, and presence together merely strengthens the case for such liability.",
+          "paragraph_span": "[para 18]-[para 34]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Reasonable and probable cause assessment timing",
+          "paraphrase_en": "The existence of reasonable and probable cause for a prosecution is assessed based on the evidence available at the time of charging. The absence of further incriminating evidence after the charge is laid is irrelevant to this assessment.",
+          "paragraph_span": "[para 37]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Malice distinct from honest belief",
+          "paraphrase_en": "An honest belief in the guilt of the accused does not automatically negate the existence of malice in a malicious prosecution claim. Malice can be established if the prosecution was conducted with an improper motive or through knowingly wrongful means.",
+          "paragraph_span": "[43]-[para 50]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Police duty post-charge transfer",
+          "paraphrase_en": "The police may still be considered as prosecuting an offence for the purpose of tort liability even after transferring the case to an independent prosecutor, as they retain a duty to inform the prosecutor of relevant matters that subsequently come to light.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Osland",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites McHugh J's statement from Osland regarding liability in joint enterprise not invariably requiring presence at the scene."
+        },
+        {
+          "target_case_name": "McAuliffe v R",
+          "target_neutral_citation": "(1995) 183 CLR 108",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the High Court of Australia's reasoning in McAuliffe regarding liability for acts done in pursuit of a common purpose."
+        },
+        {
+          "target_case_name": "HKSAR v Chan Kam Shing",
+          "target_neutral_citation": "(2016) 19 HKCFAR 640",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this CFA case, where a murder conviction was upheld despite the appellant not being present during the attack."
+        },
+        {
+          "target_case_name": "Rees v Commissioner of Police for the Metropolis",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Rees for the principle that honest belief in guilt does not negate malice if the prosecution is tainted by serious wrongdoing."
+        },
+        {
+          "target_case_name": "Clifford v Chief Constable of Hertfordshire Constabulary",
+          "target_neutral_citation": "[2008] EWHC 3154",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Clifford via a textbook for the principle on police continuing duty after transferring a prosecution."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:05:48.131476+00:00",
+      "paragraph_count": 241,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2026] HKCFI 502",
+      "case_name": "CHAN KWOK KUEN v. LAI YAT HO AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2026-01-26T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Gary CC Lam in Chambers (Open to public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2026/502",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Indemnity costs for non-disclosure",
+          "paraphrase_en": "There is no automatic rule that costs must be awarded on an indemnity basis when an ex parte order is discharged due to material non-disclosure. An indemnity basis is typically appropriate only if the non-disclosure was deliberate or seriously culpable.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evidence requirement for factual claims",
+          "paraphrase_en": "A factual assertion made in support of a legal application must be supported by evidence from a person with direct knowledge of that fact. An affirmation from a solicitor, without evidence from the client, may be insufficient to establish the client's state of knowledge.",
+          "paragraph_span": "[5]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Hong Kong Civil Procedure 2026",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the commentary in Hong Kong Civil Procedure 2026 regarding the principles for awarding costs on an indemnity basis following the discharge of an ex parte order."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:09:32.640176+00:00",
+      "paragraph_count": 49,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 1229",
+      "case_name": "COOMBER, PETER JOHN v. MR. PANG CHUNG PING",
+      "court_code": "District Court",
+      "decision_date": "2023-10-11T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge Jonathan Wong in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/1229",
+      "topic_id": "murder_mens_rea",
+      "topic_label": "Mens Rea of Murder (Malice Aforethought)",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Striking out frivolous claims",
+          "paraphrase_en": "The court has the power to strike out a statement of claim and dismiss an action where the claim is frivolous, vexatious, or discloses no reasonable cause of action, particularly when it is part of a pattern of unmeritorious litigation.",
+          "paragraph_span": "[1.4]-[1.8]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Misfeasance in public office as cause of action",
+          "paraphrase_en": "A plaintiff may rely on the tort of misfeasance in public office as a cause of action against members and staff of the judiciary whom the plaintiff alleges to have committed wrongful acts in their official capacity.",
+          "paragraph_span": "[1.2]-[1.3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Res judicata / Abuse of process",
+          "paraphrase_en": "Where a plaintiff has previously commenced multiple actions against different parties arising from the same underlying events, and those prior actions have been dismissed, the court may view subsequent related actions as an abuse of process.",
+          "paragraph_span": "[1.1]-[1.3], [1.7]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Coomber, Peter John v. Mr. Wong King Wah",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The present judgment references the prior related action DCCJ 1956/2022, which was dismissed by the same judge."
+        },
+        {
+          "target_case_name": "Coomber, Peter John v. Ms. Lau Yin Ha Eva & Ms. Cheung Man Ying Sandy",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The present judgment references the prior related action DCCJ 3416/2022, which was also dismissed by the same judge."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:09:47.844917+00:00",
+      "paragraph_count": 59,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 2452",
+      "case_name": "WOO TAK YAN v. SECRETARY FOR JUSTICE / DEPARTMENT OF JUSTICE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-09-29T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Winnie Tsui in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/2452",
+      "topic_id": "involuntary_manslaughter",
+      "topic_label": "Involuntary Manslaughter",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Tribunal's duty to inquire",
+          "paraphrase_en": "A tribunal has an obligation to investigate any matter it considers relevant to a claim under its statutory powers, which may affect the exercise of its discretion to enter judgment.",
+          "paragraph_span": "[29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Discretion on entering judgment",
+          "paraphrase_en": "A tribunal may decline to exercise its discretion to enter judgment against a party when relevant matters require further inquiry, even if there are queries about a party's assertions.",
+          "paragraph_span": "[29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinguishing authorities on facts",
+          "paraphrase_en": "A legal authority relied upon by a party may be distinguished and not followed if the factual circumstances of the present case are materially different.",
+          "paragraph_span": "[29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Justification as triable issue",
+          "paraphrase_en": "Whether a defendant's actions (such as removal of belongings) were justified is a matter to be determined at trial, not suitable for summary disposal.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The deputy adjudicator distinguished the authority relied on by the claimant based on the factual circumstances of the present case."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:27:50.466860+00:00",
+      "paragraph_count": 82,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 1278",
+      "case_name": "LIU RUISHAN by WU WEIXIA her next friend v. FU YICK FAI",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-05-14T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Jonathan Wong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/1278",
+      "topic_id": "involuntary_manslaughter",
+      "topic_label": "Involuntary Manslaughter",
+      "module_id": "offences_against_person",
+      "subground_id": "homicide",
+      "principles": [
+        {
+          "principle_label": "Recovery of medical expenses from wrongdoer",
+          "paraphrase_en": "Medical expenses incurred for treating a plaintiff are recoverable from the wrongdoer, and recovered amounts should be repaid to the Hospital Authority to avoid the government subsidizing the wrongdoer's insurer.",
+          "paragraph_span": "[1]-[2]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Recovery of expenses for necessary services",
+          "paraphrase_en": "A plaintiff can recover out-of-pocket expenses for necessary services freely given by a friend, without altering the friendly character of those services, provided the services were necessary.",
+          "paragraph_span": "[4]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Entitlement to reasonable medical expenses",
+          "paraphrase_en": "A plaintiff is entitled to recover all expenses reasonably incurred for medical treatment resulting from injuries, including the reasonable choice of private or overseas hospitals.",
+          "paragraph_span": "[6]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Disallowance of fund manager costs for modest future loss",
+          "paraphrase_en": "Fund manager costs for managing an award for future loss are not necessary or allowable when the future loss amount is not particularly large and the future period is not particularly long.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Schneider v Eisovitch",
+          "target_neutral_citation": "[1960] 2 QB 430",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the case for the principle on recovering expenses for necessary services freely provided by a friend."
+        },
+        {
+          "target_case_name": "Lai Pui Ling v Ho Chi Keung",
+          "target_neutral_citation": "[2016] 3 HKLRD 329",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the reasoning from this case to disallow a claim for fund manager costs due to the modest size and duration of the future loss award."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:37:07.602917+00:00",
+      "paragraph_count": 208,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 3079",
+      "case_name": "KULAPU WADUGE CHANDRANI SILVA v. TORTURE CLAIMS APPEAL BOARD / NON-REFOULEMENT CLAIMS PETITION OFFICE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-11-29T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge K.W. Lung in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/3079",
+      "topic_id": "kidnapping",
+      "topic_label": "Kidnapping and False Imprisonment",
+      "module_id": "offences_against_person",
+      "subground_id": "kidnapping_false_imprisonment",
+      "principles": [
+        {
+          "principle_label": "Multi-factorial risk assessment for non-refoulement",
+          "paraphrase_en": "When determining a non-refoulement claim, the decision-making body must assess the applicant's risk by considering multiple factors, including past experiences, the probability of future harm, the availability of state protection, and the feasibility of internal relocation.",
+          "paragraph_span": "[20]-[21]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Partial acceptance of evidence does not determine outcome",
+          "paraphrase_en": "The fact that a tribunal accepts some parts of an applicant's factual evidence (such as forming a general background to the claim) does not automatically mean the tribunal must find a real risk of harm upon return. The overall assessment depends on the evaluation of all applicable risk factors.",
+          "paragraph_span": "[21]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re: Kartini",
+          "target_neutral_citation": "[2019] HKCA 1022",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the legal principles established in Re: Kartini regarding the proper approach to assessing non-refoulement claims."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:48:02.524483+00:00",
+      "paragraph_count": 44,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 2356",
+      "case_name": "AKHTAR WALEED v. TORTURE CLAIMS APPEAL BOARD / NON-REFOULEMENT CLAIMS PETITION OFFICE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-09-23T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge K.W. Lung in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/2356",
+      "topic_id": "kidnapping",
+      "topic_label": "Kidnapping and False Imprisonment",
+      "module_id": "offences_against_person",
+      "subground_id": "kidnapping_false_imprisonment",
+      "principles": [
+        {
+          "principle_label": "Risk assessment for non-refoulement claims",
+          "paraphrase_en": "When assessing the risk of harm for a non-refoulement claim, the decision-maker must consider whether the risk is both real and foreseeable, not merely speculative. The absence of past physical harm can be a relevant factor in this assessment.",
+          "paragraph_span": "[10]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "State protection availability",
+          "paraphrase_en": "A claim for non-refoulement protection may fail if the claimant's home country has a functioning government and legal system capable of providing reasonable protection against the alleged persecutors.",
+          "paragraph_span": "[10]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Internal relocation viability",
+          "paraphrase_en": "If a claimant can reasonably and safely relocate within their home country to avoid the risk of harm, this may negate the need for non-refoulement protection.",
+          "paragraph_span": "[10]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re: Kartini",
+          "target_neutral_citation": "[2019] HKCA 1022",
+          "relationship_type": "CITES",
+          "description": "The present judgment references this Court of Appeal case as relevant authority on non-refoulement principles."
+        },
+        {
+          "target_case_name": "Re: Sharma Poonam",
+          "target_neutral_citation": "[2019] HKCA 804",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Court of Appeal decision as established precedent on non-refoulement matters."
+        },
+        {
+          "target_case_name": "Salim Ahmed alias MD Salim",
+          "target_neutral_citation": "[2020] HKCA 244",
+          "relationship_type": "CITES",
+          "description": "The judgment references this Court of Appeal case as part of the relevant legal framework for non-refoulement claims."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:48:17.407715+00:00",
+      "paragraph_count": 45,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 2835",
+      "case_name": "NAZRUL HOQUE v. TORTURE CLAIMS APPEAL BOARD / NON-REFOULEMENT CLAIMS PETITION OFFICE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-11-04T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge K.W. Lung in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/2835",
+      "topic_id": "kidnapping",
+      "topic_label": "Kidnapping and False Imprisonment",
+      "module_id": "offences_against_person",
+      "subground_id": "kidnapping_false_imprisonment",
+      "principles": [
+        {
+          "principle_label": "Credibility assessment in non-refoulement claims",
+          "paraphrase_en": "The Torture Claims Appeal Board is entitled to reject a claimant's entire account of persecution if it finds the claimant not credible based on implausibilities in various aspects of their evidence.",
+          "paragraph_span": "[11]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Rejection of claims based on factual findings",
+          "paraphrase_en": "When the Board rejects a claimant's core factual assertion (such as membership in a political party), it can consequently reject all related claims of adverse actions allegedly stemming from that membership.",
+          "paragraph_span": "[11]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re: Kartini",
+          "target_neutral_citation": "[2019] HKCA 1022",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this Court of Appeal authority, though the specific holding is not detailed in the provided paragraphs."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:53:00.069437+00:00",
+      "paragraph_count": 35,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2002",
+      "case_name": "HAN’S REAL ESTATE (HONG KONG) LTD AND OTHERS v. APEX CONSTRUCTION HOLDINGS CO LTD AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-07-26T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Winnie Tsui in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2002",
+      "topic_id": "criminal_intimidation",
+      "topic_label": "Criminal Intimidation and Blackmail",
+      "module_id": "offences_against_person",
+      "subground_id": "intimidation_threats",
+      "principles": [
+        {
+          "principle_label": "Duty of full and frank disclosure in ex parte applications",
+          "paraphrase_en": "A party applying for an injunction without notice to the other side has an obligation to disclose all material facts completely and honestly.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consequence of breach of disclosure duty",
+          "paraphrase_en": "The general rule following a breach of the duty of full and frank disclosure is that the court should discharge the order obtained and refuse to renew it until trial.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's discretion to continue injunction despite breach",
+          "paraphrase_en": "Despite the general rule, the court retains the discretion to continue or re-grant an injunction obtained in breach of the disclosure duty, but this power should be used sparingly, considering the need to protect justice and the public interest in enforcing disclosure obligations.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Basis for assessing falsity in injunction applications",
+          "paraphrase_en": "When determining whether statements in support of an injunction are false, the court's task is to examine the underlying evidence (such as trial transcripts and affirmations), not the legal rulings or outcomes of related proceedings.",
+          "paragraph_span": "[50]-[52]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Court's role in interim falsity determination",
+          "paraphrase_en": "On an application to discharge an injunction for alleged falsity, the court can decide the issue based on the available written evidence and transcripts without needing to adjourn for a full trial, as it is not making final credibility findings at that stage.",
+          "paragraph_span": "[53]-[55]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:57:25.127542+00:00",
+      "paragraph_count": 232,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKDC 94",
+      "case_name": "CHUI LAP PAN AND ANOTHER v. CHUNG CHEUK WAI",
+      "court_code": "District Court",
+      "decision_date": "2025-01-14T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Alfred Cheng in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2025/94",
+      "topic_id": "criminal_intimidation",
+      "topic_label": "Criminal Intimidation and Blackmail",
+      "module_id": "offences_against_person",
+      "subground_id": "intimidation_threats",
+      "principles": [
+        {
+          "principle_label": "Striking out procedure requirements",
+          "paraphrase_en": "A court should not strike out a claim under Order 18 rule 19 of the Rules of the District Court without giving the defendant due notice and opportunity to submit evidence in opposition.",
+          "paragraph_span": "[29]",
+          "cited_statutes": [
+            "Rules of the District Court Order 18 rule 19(1)(b) & (c)"
+          ]
+        },
+        {
+          "principle_label": "Elements of tort of intimidation",
+          "paraphrase_en": "To establish the tort of intimidation, three elements must be proven: (1) an unlawful threat; (2) an intention to cause harm to the claimant through that threat; and (3) actual damage suffered by the claimant.",
+          "paragraph_span": "[31]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Summary rejection threshold for defences",
+          "paraphrase_en": "A court should not summarily reject a defence unless it is clearly unbelievable based on the existing evidence, even when temporal proximity suggests a connection to alleged unlawful conduct.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Proper filing of evidence with pleadings",
+          "paraphrase_en": "A statement filed together with a Defence and Counterclaim is inappropriately filed if it is not clearly intended as evidence from a specific party, and should instead be treated as evidence only when properly affirmed and submitted by that party.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Lau Tat Wai v Yip Lai Kuen Joey",
+          "target_neutral_citation": "[2013] 2 HKLRD 1197",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the three-element test for the tort of intimidation established in this case."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:58:05.900205+00:00",
+      "paragraph_count": 85,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKDC 422",
+      "case_name": "CHAN WOON WAH t/a NGAI HING DECORATION COMPANY v. WONG CHI PING",
+      "court_code": "District Court",
+      "decision_date": "2024-03-19T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Alan Kwong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/422",
+      "topic_id": "criminal_intimidation",
+      "topic_label": "Criminal Intimidation and Blackmail",
+      "module_id": "offences_against_person",
+      "subground_id": "intimidation_threats",
+      "principles": [
+        {
+          "principle_label": "Collateral attack prohibition",
+          "paraphrase_en": "A party cannot challenge the correctness of a final judgment from a competent tribunal in subsequent proceedings if they did not appeal that judgment when they had the opportunity to do so.",
+          "paragraph_span": "[a]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Finality of tribunal judgments",
+          "paraphrase_en": "A decision from a competent tribunal, such as the Small Claims Tribunal, constitutes a final judgment that binds the parties on the matters it decided.",
+          "paragraph_span": "[a]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Independent consideration of evidence",
+          "paraphrase_en": "A court may independently assess the evidence underlying a prior tribunal decision, even while acknowledging the finality of that decision, to reach its own conclusion.",
+          "paragraph_span": "[b]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden of proof for allegations",
+          "paraphrase_en": "A party making a serious allegation, such as the fabrication of a threatening letter, must provide sufficient evidence to support it; the court cannot make a finding based on the allegation alone without corroboration.",
+          "paragraph_span": "[5]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "SCTC 28854/2017 (Chan Woon Wah t/a Ngai Hing Decoration Company v. Wong Chi Ping)",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment treats the prior Small Claims Tribunal decision as a final and binding determination on the issue of the HK$50,000 loan."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T22:59:11.095425+00:00",
+      "paragraph_count": 224,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCA 1193",
+      "case_name": "LEADER SCREWS MANUFACTURING COMPANY LTD v. HUANG SHUNKUI",
+      "court_code": "Court of Appeal",
+      "decision_date": "2023-10-19T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Barma JA and Au JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2023/1193",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Post-judgment Mareva injunction asset ownership",
+          "paraphrase_en": "Assets subject to a post-judgment Mareva injunction remain the property of the defendant until they are taken in execution, and remain available to satisfy any costs orders in favor of the plaintiff.",
+          "paragraph_span": "[39]-[40]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Security for costs pending appeal - overriding principle",
+          "paraphrase_en": "The court's primary consideration in an application for security for costs pending appeal is whether it is just to grant such security based on the specific facts of the case.",
+          "paragraph_span": "[44]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Ming Hsieh",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the general principle from Ming Hsieh regarding asset ownership under Mareva injunctions to the context of post-judgment injunctions."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:31:41.607076+00:00",
+      "paragraph_count": 95,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 1252",
+      "case_name": "WONG TO YICK WOOD LOCK OINTMENT LTD v. IMPERIAL CHARITY HALL MEDICINES LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-05-05T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge MK Liu in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/1252",
+      "topic_id": "theft_appropriation",
+      "topic_label": "Appropriation (Element of Theft)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Goodwill in trade marks and get-up",
+          "paraphrase_en": "Substantial goodwill can exist in a registered trade mark, an unregistered mark, and the overall get-up or presentation of a product.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Damage presumed in passing-off",
+          "paraphrase_en": "Once passing-off is established, the court is generally entitled to presume that the plaintiff has suffered some damage, unless the specific circumstances indicate otherwise.",
+          "paragraph_span": "[23]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Test for likelihood of confusion",
+          "paraphrase_en": "The legal threshold for establishing a likelihood of confusion is met not by a mere possibility, but if a number of ordinary consumers would be caused to reasonably doubt or wonder whether the defendant's goods share the same origin as the plaintiff's.",
+          "paragraph_span": "[30]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Defendant's intention as a factor",
+          "paraphrase_en": "In the global assessment of likelihood of confusion, the defendant's intention is a relevant factor, including whether they copied the plaintiff's mark or deliberately adopted a similar sign.",
+          "paragraph_span": "[101]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Imperfect recollection principle",
+          "paraphrase_en": "When assessing deceptive similarity, the court must consider the imperfect recollection of the average consumer, and a defendant's argument based on minute, detailed differences between marks is misconceived if it ignores this principle.",
+          "paragraph_span": "[44]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "British Telecommunications Plc v One in a Million Ltd",
+          "target_neutral_citation": "[1999] FSR 1",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the proposition that a name can be an instrument of deception in two scenarios."
+        },
+        {
+          "target_case_name": "Tsit Wing (Hong Kong) Co Ltd v TWG Tea Co Pte Ltd (No 2)",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the test for likelihood of confusion as articulated by Gummow NPJ in this case."
+        },
+        {
+          "target_case_name": "Specsavers International Healthcare Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that the defendant's intention is a factor in the global appreciation test for confusion."
+        },
+        {
+          "target_case_name": "Wong To Yick Wood Lock Ointment Limited v Singapore Medicine Co (a firm) & Ors",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle of imperfect recollection established in this earlier case involving the same plaintiff."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:32:33.495635+00:00",
+      "paragraph_count": 165,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCA 852",
+      "case_name": "GALLERIA (HONG KONG), LTD AND ANOTHER v. DBS BANK LTD., HONG KONG BRANCH Defendant",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-06-14T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan Ag CJHC, Cheung JA and Au JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/852",
+      "topic_id": "theft_dishonesty",
+      "topic_label": "Dishonesty (Ivey v Genting Test)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Two-stage test for dishonest assistance",
+          "paraphrase_en": "The correct approach to assess dishonesty in a dishonest assistance claim involves a two-stage test: first, ascertain what the defendant actually knew, and second, objectively assess whether, based on that knowledge, the defendant's conduct was dishonest.",
+          "paragraph_span": "[29]-[30]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Knowing receipt barred by valid contract",
+          "paraphrase_en": "A claim in knowing receipt cannot succeed where the defendant's receipt of the property was made pursuant to a valid and binding contract, unless that contract has been set aside.",
+          "paragraph_span": "[39]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Criterion Properties v Stratford UK Properties",
+          "target_neutral_citation": "[2004] 1 WLR 1846",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Criterion that a knowing receipt claim is barred by a valid and binding contract governing the receipt."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:34:32.175270+00:00",
+      "paragraph_count": 78,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 380",
+      "case_name": "ZOU GEBING v. HONG KONG XINXIN INFORMATION LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-01-21T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge MK Liu in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/380",
+      "topic_id": "theft_dishonesty",
+      "topic_label": "Dishonesty (Ivey v Genting Test)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Proprietary injunction requirement",
+          "paraphrase_en": "A proprietary injunction must be tied to a specific asset under the defendant's control or its traceable proceeds, over which the plaintiff asserts a proprietary claim.",
+          "paragraph_span": "[13]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Knowing receipt requirement",
+          "paraphrase_en": "For liability in knowing receipt, the defendant must have actually received the property in question; merely benefiting in an abstract sense is insufficient.",
+          "paragraph_span": "[] (1)",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Threshold for proprietary injunction",
+          "paraphrase_en": "The threshold for establishing the substantive merits of a claim when seeking a proprietary injunction is lower than for a Mareva injunction; the applicant need only show a serious question to be tried.",
+          "paragraph_span": "[32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No automatic balance of convenience for trust property",
+          "paraphrase_en": "There is no general rule that the balance of convenience automatically favors preserving trust property once a serious issue to be tried is shown in a proprietary injunction application; each case depends on its own facts.",
+          "paragraph_span": "[34]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Risk of inadequate compensation",
+          "paraphrase_en": "The court may consider whether there is a real risk that a party would be unable to obtain adequate compensation if an injunction is later found to have been wrongly granted or refused.",
+          "paragraph_span": "[35]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Pacific Rainbow International Inc v Shenzhen Wolverine Tech Ltd & Ors",
+          "target_neutral_citation": "HCA 3023/2016, 2 May 2017",
+          "relationship_type": "CITES",
+          "description": "The judgment references this case for the proposition that the threshold for a proprietary injunction is lower than for a Mareva injunction."
+        },
+        {
+          "target_case_name": "李明實, 方壘 and史洪源 (suing on behalf of themselves and the other employees employed by or by the Group of Companies under和利時科技集團有限公司) (Hollysys Group Limited) and Ors v Ace Lead Profits Limited and Another",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the Court of Appeal's decision from this case to reject a general principle that balance of convenience readily favors preserving trust property."
+        },
+        {
+          "target_case_name": "Heitkamp & Thumann KG v Living Profit Trading Development Ltd & Ors",
+          "target_neutral_citation": "[2018] HKCFI 1006",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes this case as involving email fraud and not establishing a general principle for proprietary injunctions."
+        },
+        {
+          "target_case_name": "A v C",
+          "target_neutral_citation": "[1981] QB 956",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes this case as concerning discovery in aid of a Mareva injunction for trust property, not a general principle for proprietary injunctions."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:38:00.245968+00:00",
+      "paragraph_count": 190,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCFI 3256",
+      "case_name": "RE ZPMC-RED BOX ENERGY SERVICES LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-10-21T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Cheng J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/3256",
+      "topic_id": "theft_dishonesty",
+      "topic_label": "Dishonesty (Ivey v Genting Test)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Onus for establishing cross-claim in winding-up",
+          "paraphrase_en": "The company bears the burden of proving that its cross-claim against the petitioner is genuine, serious, and substantial, requiring supporting details to show it is based on substantial grounds.",
+          "paragraph_span": "[33]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Test for disputed debt petition",
+          "paraphrase_en": "The standard for assessing whether a cross-claim is sufficient to resist a winding-up petition is essentially the same as the test applied in a disputed debt petition: whether the debt is disputed in good faith and on substantial grounds.",
+          "paragraph_span": "[33]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re Sinom (Hong Kong) Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the test for a disputed debt petition as established in Re Sinom (Hong Kong) Ltd."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:38:11.155708+00:00",
+      "paragraph_count": 213,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 611",
+      "case_name": "GALLERIA (HONG KONG), LTD (IN COMPULSORY LIQUIDATION) AND ANOTHER v. DBS BANK LTD., HONG KONG BRANCH",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-04-30T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Cheung JA and Au JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/611",
+      "topic_id": "theft_dishonesty",
+      "topic_label": "Dishonesty (Ivey v Genting Test)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Blind-eye knowledge and dishonesty",
+          "paraphrase_en": "Suspicions that do not meet the threshold for establishing blind-eye knowledge are not irrelevant to the assessment of dishonesty in dishonest assistance claims. The court must first ascertain all relevant facts, including the defendant's knowledge and beliefs, as part of the dishonesty test.",
+          "paragraph_span": "[ ]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Two-stage test for dishonesty",
+          "paraphrase_en": "The test for dishonesty in dishonest assistance involves two stages: first, ascertaining what the defendant knew (including facts and beliefs), and second, objectively assessing whether their conduct was dishonest based on that knowledge.",
+          "paragraph_span": "[155]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of evidence for dishonesty",
+          "paraphrase_en": "Contemporaneous documents constitute highly important evidence in determining a defendant's knowledge and state of mind for claims of dishonest assistance.",
+          "paragraph_span": "[155]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Knowledge threshold for fraudulent trading",
+          "paraphrase_en": "For liability in fraudulent trading, mere knowledge of a number of fraudulent transactions is insufficient. The defendant must be found to be a party to carrying on the business for a fraudulent purpose.",
+          "paragraph_span": "[ ]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Standard for knowing receipt",
+          "paraphrase_en": "The standard of unconscionability for knowing receipt is lower than the standard of dishonesty required for dishonest assistance, and the two should not be conflated.",
+          "paragraph_span": "[ ]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:41:14.109799+00:00",
+      "paragraph_count": 398,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCA 41",
+      "case_name": "CHINA MEDICAL TECHNOLOGIES, INC. (IN LIQUIDATION) AND OTHERS v. SAMSON TSANG TAK YUNG AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-01-19T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Au and Chow JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/41",
+      "topic_id": "theft_dishonesty",
+      "topic_label": "Dishonesty (Ivey v Genting Test)",
+      "module_id": "property_dishonesty",
+      "subground_id": "theft_robbery",
+      "principles": [
+        {
+          "principle_label": "Inference of dissipation risk from dishonesty",
+          "paraphrase_en": "When the alleged dishonesty is central to the claim against a defendant, the court may infer a real risk of asset dissipation from establishing a good arguable case of that dishonesty to the required standard.",
+          "paragraph_span": "[46]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Delay in seeking Mareva relief",
+          "paraphrase_en": "Delay in applying for a Mareva injunction may not be considered prejudicial if the applicant was unable to properly formulate a good arguable case earlier, for instance due to impediments in investigation such as lack of records or non-cooperation from relevant parties.",
+          "paragraph_span": "[55]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Ex parte injunction justification",
+          "paraphrase_en": "An ex parte without notice application for an injunction requires justification, such as urgency or a need for confidentiality. The absence of such factors constitutes a procedural irregularity that can be grounds for setting the injunction aside.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Evidence for risk of dissipation",
+          "paraphrase_en": "Establishing a real risk of asset dissipation depends on the specific facts of the case, and no general guidelines can be laid down. Factors considered are often not direct evidence of dissipation but relate to the nature of the defendant's assets and the circumstances of the case.",
+          "paragraph_span": "[39]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Lakatamia Shipping Co Ltd v Toshiko Morimoto",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Lakatamia that a good arguable case of central dishonesty can support an inference of a real risk of dissipation."
+        },
+        {
+          "target_case_name": "Gee on Commercial Injunction",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the textbook for its discussion on the requirement of 'solid evidence' of a risk of dissipation and the fact-specific nature of the inquiry."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-12T23:42:13.796418+00:00",
+      "paragraph_count": 256,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 1093",
+      "case_name": "R STAHL INC (a company incorporated in the United States of America) v. AJ DEVELOPMENT LTD",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-07-30T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Barma and G Lam JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/1093",
+      "topic_id": "fraud",
+      "topic_label": "Fraud and Deception",
+      "module_id": "property_dishonesty",
+      "subground_id": "fraud_deception",
+      "principles": [
+        {
+          "principle_label": "Fraud exception scope for summary judgment",
+          "paraphrase_en": "The fraud exception in Order 14, which excludes summary judgment procedures, is only engaged when the plaintiff's claim is based on an allegation of fraud committed by the specific defendant against whom judgment is sought, not merely because fraud by a third party is involved in the factual background.",
+          "paragraph_span": "[26]-[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of fraud exception engagement",
+          "paraphrase_en": "Whether the fraud exception applies is assessed by considering all relevant materials available at the hearing of the summary judgment application, including pleadings and affidavit evidence, not just the statement of claim.",
+          "paragraph_span": "[15]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Unjust enrichment claims and fraud exception",
+          "paraphrase_en": "A plaintiff who confines its claim to restitution based on unjust enrichment or payment under mistake of fact, without alleging fraud or dishonesty against the defendant recipient, is not barred by the fraud exception from applying for summary judgment, even if the money was transferred due to fraud by a third party.",
+          "paragraph_span": "[21]-[26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Rationale for limiting fraud exception",
+          "paraphrase_en": "The fraud exception should not exclude an action from summary judgment merely because it contains an allegation of fraud against a third party, as this provides no protection to the defendant (who is not accused of fraud) or to the absent third party (who is not bound by the findings).",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Limitation on reliance on admissions under Order 27",
+          "paraphrase_en": "Where Order 14 is excluded by the fraud exception or where there are triable issues, a plaintiff cannot rely on limited admissions by the defendant to obtain judgment under Order 27 rule 3, even if other ingredients of the cause of action are not seriously disputed.",
+          "paragraph_span": "[39]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "A‑1 Business Ltd v Chau Cham Wong Patrick",
+          "target_neutral_citation": "[2009] 5 HKLRD 579",
+          "relationship_type": "CITES",
+          "description": "Cited as an example where the fraud exception was assessed based on all relevant materials, including subsequent pleadings and affidavit evidence."
+        },
+        {
+          "target_case_name": "Universal Capital Bank",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "Applied in subsequent cases to hold that the fraud exception is not engaged when the claim is confined to unjust enrichment without alleging fraud against the defendant."
+        },
+        {
+          "target_case_name": "Arrow ECS Norway AS v M Yang Trading Ltd & others",
+          "target_neutral_citation": "HCA 239/2016",
+          "relationship_type": "APPLIES",
+          "description": "Applied Universal Capital Bank in a telephone/email scam case where the claim was based on mistake of fact and unjust enrichment."
+        },
+        {
+          "target_case_name": "Laerdal Medical Ltd v Hong Kong Haocheng International Trade Ltd",
+          "target_neutral_citation": "HCA 2193/2016",
+          "relationship_type": "APPLIES",
+          "description": "Applied Universal Capital Bank, holding that establishing the fraud perpetrated on the plaintiff is not necessary for a claim against the recipient."
+        },
+        {
+          "target_case_name": "Ferrari North America, Inc v Changhon International Energy Co Ltd & others",
+          "target_neutral_citation": "[2018] HKCFI 1603",
+          "relationship_type": "FOLLOWS",
+          "description": "Followed the same approach that a plaintiff confining its claim to unjust enrichment is entitled to apply for summary judgment."
+        },
+        {
+          "target_case_name": "Sony Corporation & another v Anand & others (No 2)",
+          "target_neutral_citation": "[1982] FSR 200",
+          "relationship_type": "CITES",
+          "description": "Cited for the proposition that the fraud exception applies to claims based on fraud committed on the plaintiff, not against others such as the public."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:01:33.588909+00:00",
+      "paragraph_count": 106,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 1228",
+      "case_name": "TOBII TECHNOLOGY INC v. HONG KONG TEAM LIGHT INTERNATIONAL LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-05-12T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Jonathan Chang SC (Paper Disposal)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/1228",
+      "topic_id": "fraud",
+      "topic_label": "Fraud and Deception",
+      "module_id": "property_dishonesty",
+      "subground_id": "fraud_deception",
+      "principles": [
+        {
+          "principle_label": "Indemnity costs for discontinued fraud claims",
+          "paraphrase_en": "The court should not automatically award indemnity costs against a party who discontinues an action containing fraud allegations. An order for indemnity costs requires a specific finding that the fraud allegations were unfounded, unsupported by evidence, or should not have been made, not merely the fact of discontinuance.",
+          "paragraph_span": "[24]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Xu Zhiqiang & Ors v Ng Kwok On & Ors",
+          "target_neutral_citation": "[2018] HKCFI 274",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Xu Zhiqiang that discontinuance alone is insufficient to justify an order for indemnity costs in fraud cases."
+        },
+        {
+          "target_case_name": "Clutterbuck",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references Clutterbuck as a case that did not establish a general principle for awarding indemnity costs upon discontinuance."
+        },
+        {
+          "target_case_name": "Jarvis",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references Jarvis as a case that did not establish a general principle for awarding indemnity costs upon discontinuance."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:04:43.134132+00:00",
+      "paragraph_count": 66,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCA 325",
+      "case_name": "NICHOLAS V.A. SCHEBEK-FUERSTENBERG v. YIP WAI SANG AND ANOTHER",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-03-15T00:00:00+08:00",
+      "judges": [
+        "Before : Hon Lam VP, Cheung and Au JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/325",
+      "topic_id": "fraud",
+      "topic_label": "Fraud and Deception",
+      "module_id": "property_dishonesty",
+      "subground_id": "fraud_deception",
+      "principles": [
+        {
+          "principle_label": "Burden of proof for fraud",
+          "paraphrase_en": "The plaintiff bears the burden of establishing, on the balance of probabilities, that they were a victim of fraud committed by the defendant.",
+          "paragraph_span": "[3.3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of evidence for fraudulent misrepresentation",
+          "paraphrase_en": "A court must consider all the evidence to determine whether a plaintiff has proven that a defendant made a fraudulent misrepresentation; the plaintiff's own evidence must be credible and probable.",
+          "paragraph_span": "[4.5]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Effect of signed agreement on prior representations",
+          "paraphrase_en": "Where a party signs a written agreement that contains terms contrary to prior oral representations, and does not seek clarification on the discrepancy, it undermines the claim that they relied on those prior representations.",
+          "paragraph_span": "[4.4]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Inference from transaction documentation",
+          "paraphrase_en": "The details a plaintiff includes on a bank transfer document (like the 'Remarks' section) can be used to infer their knowledge about the transaction and counter claims of being misled about fundamental details, such as the account holder's identity.",
+          "paragraph_span": "[3.3]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:07:58.930321+00:00",
+      "paragraph_count": 108,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCFI 2984",
+      "case_name": "LEE SAI HOI v. LI SIN MAN AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-09-29T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Douglas Lam SC in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/2984",
+      "topic_id": "forgery",
+      "topic_label": "Forgery and Counterfeiting",
+      "module_id": "property_dishonesty",
+      "subground_id": "forgery_counterfeiting",
+      "principles": [
+        {
+          "principle_label": "Balance of convenience for interlocutory injunction",
+          "paraphrase_en": "The court should grant an interlocutory injunction by adopting the course that presents the lower risk of injustice if the court's initial assessment later proves to be incorrect.",
+          "paragraph_span": "[14]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Effect of fraudulent misrepresentation on contract",
+          "paraphrase_en": "A fraudulent misrepresentation can invalidate a transaction if the person making the misrepresentation was either a party to the contract or an agent of such a party.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Materiality of non-disclosure for injunction discharge",
+          "paraphrase_en": "For a court to discharge an injunction based on non-disclosure, the information not disclosed must be sufficiently material; a failure to mention a well-established legal principle known to the court and opposing counsel may not meet this threshold.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Music Advance Ltd v Incorporated Owners of Argyle Centre",
+          "target_neutral_citation": "[2010] 2 HKLRD 1041",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle from Music Advance Ltd regarding the assessment of balance of convenience for granting an interlocutory injunction."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:18:24.277465+00:00",
+      "paragraph_count": 181,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2840",
+      "case_name": "WANG HAIHONG AND OTHERS v. J.P. MORGAN SECURITIES (ASIA PACIFIC LTD) AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-09-28T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Paul Lam SC in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2840",
+      "topic_id": "criminal_damage_arson",
+      "topic_label": "Criminal Damage and Arson",
+      "module_id": "property_dishonesty",
+      "subground_id": "criminal_damage",
+      "principles": [
+        {
+          "principle_label": "Striking out statute-barred claims",
+          "paraphrase_en": "A defendant may apply to strike out a claim as frivolous, vexatious, and an abuse of process on the ground that it is barred by the applicable limitation period.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Accrual of cause of action in tort",
+          "paraphrase_en": "In tort, a cause of action accrues when the plaintiff first suffers actual damage, not purely contingent damage.",
+          "paragraph_span": "[32]-[33]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Actual vs. purely contingent damage",
+          "paraphrase_en": "Damage sufficient to start the limitation period must be actual, not purely contingent. A purely contingent liability does not constitute actual damage, but a claimant may suffer actual damage before a contingency occurs if there is an immediate measurable loss.",
+          "paragraph_span": "[47]-[51]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Measure of damages for fraudulent share inducement",
+          "paraphrase_en": "The measure of damages when a person is induced by fraud to purchase shares is the difference between the price paid and the real value (not the market value) of the shares at the time of allotment.",
+          "paragraph_span": "[61]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "First suffering loss in share diminution",
+          "paraphrase_en": "A plaintiff first suffers loss and damage for the purpose of limitation when there is a real and actual diminution in the value of their shares.",
+          "paragraph_span": "[59]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Kensland Realty Ltd v Tai, Tang & Chong",
+          "target_neutral_citation": "(2008) 11 HKCFAR 237",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from Kensland that a cause of action in tort accrues when the plaintiff first incurs actual damage."
+        },
+        {
+          "target_case_name": "Nykredit Mortgage Bank Plc v. Edward Erdman Group Ltd (No.2)",
+          "target_neutral_citation": "[1997] 1 WLR 1627",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Lord Nicholls' reasoning on when a statutory obligation to pay compensation arises."
+        },
+        {
+          "target_case_name": "Maharaj v Johnson",
+          "target_neutral_citation": "[2015] PNLR 27",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment distinguishes Maharaj, noting its ruling was specific to its statute's wording and does not lay down a general principle applicable here."
+        },
+        {
+          "target_case_name": "Wardley Australia Ltd v Western Australia",
+          "target_neutral_citation": "(1992) 175 CLR 514",
+          "relationship_type": "CITES",
+          "description": "The judgment cites the Australian High Court's view on the accrual of concurrent causes of action under statute and common law."
+        },
+        {
+          "target_case_name": "Forster v Outred & Co",
+          "target_neutral_citation": "[1982] 1 WLR 86",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies Forster as an example where actual damage occurred upon executing a mortgage deed, not when a contingent payment was later demanded."
+        },
+        {
+          "target_case_name": "Potts v Miller",
+          "target_neutral_citation": "(1940) 64 CLR 282",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the 'rule in Potts v Miller' for measuring damages in cases of fraudulent inducement to buy shares."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:28:59.374751+00:00",
+      "paragraph_count": 153,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKDC 950",
+      "case_name": "CHEVALIER (HK) LTD v. CHAN WING CHING AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2024-06-20T00:00:00+08:00",
+      "judges": [
+        "Before: Master Y. H. Chan in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/950",
+      "topic_id": "criminal_damage_arson",
+      "topic_label": "Criminal Damage and Arson",
+      "module_id": "property_dishonesty",
+      "subground_id": "criminal_damage",
+      "principles": [
+        {
+          "principle_label": "Scope of recovery under ECO s.25(1)(b)",
+          "paraphrase_en": "The phrase 'any sum' in Section 25(1)(b) of the Employees' Compensation Ordinance is interpreted broadly, allowing a claimant to recover not only compensation or indemnity but also costs incurred as a result of the accident.",
+          "paragraph_span": "[20]",
+          "cited_statutes": [
+            "Cap. 282 s.25(1)(b)"
+          ]
+        },
+        {
+          "principle_label": "Recovery of legal costs in contribution claims",
+          "paraphrase_en": "A claim under Section 25(1)(b) of the Employees' Compensation Ordinance and Section 3 of the Civil Liability (Contribution) Ordinance can include both costs paid to the claimant and the claimant's own legal costs incurred in defending the claim.",
+          "paragraph_span": "[21]",
+          "cited_statutes": [
+            "Cap. 282 s.25(1)(b)",
+            "Cap. 377 s.3"
+          ]
+        },
+        {
+          "principle_label": "Apportionment and insolvent co-tortfeasors",
+          "paraphrase_en": "When apportioning liability among co-tortfeasors, if one defendant is insolvent, the solvent defendants should bear the insolvent defendant's share of the contribution in proportion to their respective shares of liability.",
+          "paragraph_span": "[30]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Just and equitable apportionment calculation",
+          "paraphrase_en": "The court must determine a just and equitable apportionment of liability between defendants, and when one defendant is insolvent, the solvent defendant's total liability is calculated as their initial share plus a proportion of the insolvent defendant's share based on the solvent defendant's initial share of responsibility.",
+          "paragraph_span": "[33]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Wah Kwong Construction Material v Wong Man Yip",
+          "target_neutral_citation": "CACV 54/1994",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the Court of Appeal's interpretation of 'any sum' under Section 25(1)(b) of the Employees' Compensation Ordinance as being broad enough to include costs."
+        },
+        {
+          "target_case_name": "Hong Kong Red Cross v The Hong Kong Federation of Youth Groups",
+          "target_neutral_citation": "DCCJ 2233/2007",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the principle established in this case that claims under relevant ordinances include recovery of costs paid to the claimant and the claimant's own legal costs."
+        },
+        {
+          "target_case_name": "China Ping an Insurance (Hong Kong) Co Ltd v Chong Tin Po",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the reasoning from this case to determine that the claimed legal costs are reasonable."
+        },
+        {
+          "target_case_name": "Aberdeen Winner Investment Co Ltd v The Incorporated Owners of Albert House and Another",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The present judgment applies the Court of Appeal's principle regarding how to handle the insolvency of a co-tortfeasor when apportioning liability among defendants."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:34:04.810721+00:00",
+      "paragraph_count": 66,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKDC 1579",
+      "case_name": "CHINA FAIR LAND (QINGDAO) LTD v. LO SUM SUM",
+      "court_code": "District Court",
+      "decision_date": "2024-09-26T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Isaac Chan in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/1579",
+      "topic_id": "criminal_damage_arson",
+      "topic_label": "Criminal Damage and Arson",
+      "module_id": "property_dishonesty",
+      "subground_id": "criminal_damage",
+      "principles": [
+        {
+          "principle_label": "Witness credibility and knowledge limits",
+          "paraphrase_en": "A witness may be truthful and honest, but their evidence can still be unreliable if it concerns subjective matters or events outside their personal knowledge.",
+          "paragraph_span": "[17]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Causation for loss of rent",
+          "paraphrase_en": "A plaintiff can recover loss of rent for a vacancy period if they prove the defendant's breach (e.g., water seepage) actually caused the vacancy by reducing the pool of willing tenants and necessitating repair work.",
+          "paragraph_span": "[(l)], [(f)]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Burden of proving causation",
+          "paraphrase_en": "The plaintiff bears the burden of proving actual causation between the defendant's breach and the claimed loss; a brief vacancy period without such evidence is considered within normal market expectations and not recoverable.",
+          "paragraph_span": "[(e)]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Corporate claim for rental loss and general damages",
+          "paraphrase_en": "A corporate plaintiff is permitted to claim both loss of rent and general damages for property-related breaches.",
+          "paragraph_span": "[63]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Pre-judgment interest start date",
+          "paraphrase_en": "Parties may agree, for simplicity, that pre-judgment interest runs on the entire awarded sum from a single date, such as the approximate midpoint between the cause of action and the trial, subject to arguments about litigation delay.",
+          "paragraph_span": "[70]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Toy Victory (Asia) Limited",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows Toy Victory (Asia) Limited in allowing a corporate plaintiff to claim both rental loss and general damages."
+        },
+        {
+          "target_case_name": "Crystal Bright",
+          "target_neutral_citation": "",
+          "relationship_type": "DISTINGUISHES",
+          "description": "The judgment notes that Crystal Bright was distinguished in the reasoning of Toy Victory (Asia) Limited, which it follows."
+        },
+        {
+          "target_case_name": "Century Way Investment Limited",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Century Way Investment Limited as one of the authorities relied upon by Toy Victory (Asia) Limited."
+        },
+        {
+          "target_case_name": "Well Force Co Ltd v Boomway (Hong Kong) Ltd",
+          "target_neutral_citation": "HCA 4480/1994",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this unreported 1998 case as an authority referenced by Toy Victory (Asia) Limited."
+        },
+        {
+          "target_case_name": "Gwong Leung Property Holdings Ltd v Wong Kwok Tsoi",
+          "target_neutral_citation": "[2022] HKDC 946",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this 2022 District Court case as also referring to the same line of authorities on corporate claims for damages."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T00:35:34.878063+00:00",
+      "paragraph_count": 174,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 6332",
+      "case_name": "DUBAI (INTERNATIONAL) DJIBOUTI FZE v. CHINA MERCHANTS PORT HOLDINGS COMPANY LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-12-18T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Mimmie Chan J in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/6332",
+      "topic_id": "bribery_misconduct",
+      "topic_label": "Bribery and Misconduct in Public Office",
+      "module_id": "public_order_regulatory",
+      "subground_id": "corruption_misconduct",
+      "principles": [
+        {
+          "principle_label": "Abuse of process and Aldi Stores guideline",
+          "paraphrase_en": "A claimant who withholds a second claim against the same defendant while pursuing the first claim is at high risk of being found to have abused the court's process. Proper disclosure requires more than just warning the defendant; it must enable the court to manage the issues fairly for both sides.",
+          "paragraph_span": "[24]-[25.1]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Strike-out power and abuse of process",
+          "paraphrase_en": "The court's power to strike out proceedings to prevent abuse of process is part of its inherent case management powers. A breach of the Aldi Stores guideline can be a factor justifying a strike-out, even if not a self-standing legal ground.",
+          "paragraph_span": "[27]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Cause of action definition",
+          "paraphrase_en": "A cause of action comprises every material fact that must be proved to entitle the plaintiff to succeed, and every fact that the defendant would have a right to contest.",
+          "paragraph_span": "[27]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Same cause of action test",
+          "paraphrase_en": "The mere fact that two claims are both grounded in contract, or seek similar relief, does not automatically mean they constitute the same cause of action. Determining whether claims are the same is a matter of fact and degree.",
+          "paragraph_span": "[34]-[40]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Procurement of breach of contract - inconsistent dealing",
+          "paraphrase_en": "Actionable interference with contractual rights is not confined to direct procurement or inducement. 'Continued' inconsistent dealing after notice of the contract can be a method of establishing procurement, but mere continuance alone, without persuasion, encouragement, or assistance, is insufficient for liability.",
+          "paragraph_span": "[52]-[53]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Aldi Stores Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment discusses the guideline from this case regarding the risk of abuse of process when a claimant withholds a second claim."
+        },
+        {
+          "target_case_name": "Stuart v Goldberg Linde",
+          "target_neutral_citation": "[2008] 1 WLR 823",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Sedley LJ's holding that a claimant keeping a second claim in reserve while prosecuting the first is at high risk of abuse of process."
+        },
+        {
+          "target_case_name": "MW High Tech Projects UK Ltd v Outotec (USA) Inc",
+          "target_neutral_citation": "[2023] EWHC 2885 (TCC)",
+          "relationship_type": "CITES",
+          "description": "The judgment notes this case reviewed the authorities in Aldi Stores and Stuart."
+        },
+        {
+          "target_case_name": "Arta Properties Ltd v Li Fu Yat Tso",
+          "target_neutral_citation": "HCA 2741/1998, 5 January 2007",
+          "relationship_type": "CITES",
+          "description": "The judgment references this case on whether a proposed amendment constitutes a new cause of action."
+        },
+        {
+          "target_case_name": "DC Thomson & Co Ltd v Deakin",
+          "target_neutral_citation": "[1952] Ch 646",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case for the principle that actionable interference is not confined to direct procurement and discusses 'continued' inconsistent dealing."
+        },
+        {
+          "target_case_name": "Natuzzi SPA v De Coro Ltd",
+          "target_neutral_citation": "[2007] 3 HKC 74",
+          "relationship_type": "CITES",
+          "description": "The judgment applies and cites Lam J's holding that actionable interference is not confined to direct procurement, citing DC Thomson v Deakin."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:01:09.919749+00:00",
+      "paragraph_count": 179,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2024] HKCFI 2414",
+      "case_name": "SARKAR MOHAMMAD MAHBUB ALAM v. TORTURE CLAIMS APPEAL BOARD / NON-REFOULEMENT CLAIMS PETITION OFFICE",
+      "court_code": "Court of First Instance",
+      "decision_date": "2024-10-04T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge K.W. Lung in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2024/2414",
+      "topic_id": "bribery_misconduct",
+      "topic_label": "Bribery and Misconduct in Public Office",
+      "module_id": "public_order_regulatory",
+      "subground_id": "corruption_misconduct",
+      "principles": [
+        {
+          "principle_label": "Non-refoulement assessment framework",
+          "paraphrase_en": "When assessing a non-refoulement claim, the decision-maker must evaluate the risk of persecution under Article 33 of the Refugee Convention, the risk of torture, and the risks under Articles 2 and 3 of the Hong Kong Bill of Rights.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Internal relocation viability assessment",
+          "paraphrase_en": "A claimant's assertion that internal relocation is not viable must be assessed by considering whether the alleged persecutors could locate the claimant through their networks in the proposed relocation area.",
+          "paragraph_span": "[7]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "State protection assessment",
+          "paraphrase_en": "When a claimant asserts that state protection is unavailable, the decision-maker must consider whether the claimant reasonably believes that authorities are aligned with the persecutor and that reporting would disclose the claimant's identity and location to the persecutor.",
+          "paragraph_span": "[7]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Re: Kartini",
+          "target_neutral_citation": "[2019] HKCA 1022",
+          "relationship_type": "CITES",
+          "description": "The judgment references Re: Kartini as authority regarding non-refoulement principles, though the specific application is not detailed in the provided paragraphs."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:08:05.309648+00:00",
+      "paragraph_count": 44,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.2
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 306",
+      "case_name": "TTI GLOBAL RESOURCES HONG KONG LTD v. HONGKONG MYPHONE TECHNOLOGY CO LTD AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-02-10T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge To in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/306",
+      "topic_id": "tax_evasion",
+      "topic_label": "Tax Evasion",
+      "module_id": "public_order_regulatory",
+      "subground_id": "tax_evasion",
+      "principles": [
+        {
+          "principle_label": "Amendment of pleadings before appeal",
+          "paraphrase_en": "Order 20 rule 8 of the Rules of the High Court permits parties to amend pleadings at any stage to determine the real questions in controversy, and such amendments are common even before an appeal.",
+          "paragraph_span": "[7]",
+          "cited_statutes": [
+            "Rules of the High Court Order 20 rule 8"
+          ]
+        },
+        {
+          "principle_label": "Unjust enrichment - 'at the expense of'",
+          "paraphrase_en": "The requirement that enrichment be 'at the expense of' the plaintiff is satisfied not only by direct transfer but also when the defendant obtains a benefit traceable to the plaintiff's asset.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Test for granting leave to defend",
+          "paraphrase_en": "The test for granting leave to defend is not whether the defendant's assertions are believed, but whether they are believable or capable of being believed. If they are, leave to defend must be given.",
+          "paragraph_span": "[3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Illegality defense - reliance principle",
+          "paraphrase_en": "A party to an illegal arrangement cannot enforce a claim if they must rely on their own illegal conduct as an essential element of that claim. Conversely, if the claim can be asserted without relying on the illegality, it may succeed.",
+          "paragraph_span": "[57]-[61]",
+          "cited_statutes": [
+            "People's Republic Regulations on Foreign Exchange Administration Article 45"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Tang Yuan Yi v Tokyo International Investment Limited",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case as an example where amendment of pleadings before an appeal is common practice."
+        },
+        {
+          "target_case_name": "Far East Bank and Trust Co v King Poo Koo",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references this case where the court rejected the argument that a plaintiff could not rely on an amended pleading."
+        },
+        {
+          "target_case_name": "Lipkin Gorman (A Firm) v Karpnale Ltd",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the House of Lords' principle regarding when enrichment is considered 'at the expense of' the plaintiff."
+        },
+        {
+          "target_case_name": "Tinsley v Milligan",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the illegality principle from this House of Lords case regarding when a party can enforce a claim despite involvement in illegal conduct."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T01:35:57.914093+00:00",
+      "paragraph_count": 131,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 4554",
+      "case_name": "ZHAN YIFENG v. PANG KA SHING",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-09-30T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Gary CC Lam in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/4554",
+      "topic_id": "duress",
+      "topic_label": "Duress and Necessity",
+      "module_id": "defences",
+      "subground_id": "duress_necessity",
+      "principles": [
+        {
+          "principle_label": "Appeal from Master's decision - de novo hearing",
+          "paraphrase_en": "In an appeal against a Master's decision, the Court conducts a fresh consideration of the matter and is not restricted by the scope of the notice of appeal or the absence of a cross-appeal.",
+          "paragraph_span": "[65]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Real prospect of success for defence",
+          "paraphrase_en": "A court may find that a defendant has a real prospect of successfully establishing a defence, such as duress or that a transaction was a sham, based on the version of events presented in the defendant's evidence.",
+          "paragraph_span": "[71]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Knowledge of proceedings via service on agents",
+          "paraphrase_en": "A party may be found to have knowledge of legal proceedings, such as an injunction, if the relevant order was served on that party's agents or counterparties in a transaction, as it is highly likely the information would be communicated.",
+          "paragraph_span": "[78]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Bank of Qingdao Co., Ltd. v OOO Securities (HK) Group Limited",
+          "target_neutral_citation": "[2025] HKCFI 2223",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the principle established in that case regarding the nature of an appeal from a Master's decision."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T02:35:07.712631+00:00",
+      "paragraph_count": 195,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2022] HKCA 1169",
+      "case_name": "GALLETIS DOMINICA DOSCA v. TORTURE CLAIMS APPEAL BOARD/ NON-REFOULEMENT CLAIMS PETITION OFFICE",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-09-20T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Chow JA and Ng J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/1169",
+      "topic_id": "animal_welfare_sentencing",
+      "topic_label": "Animal Cruelty Sentencing",
+      "module_id": "regulatory_and_welfare_offences",
+      "subground_id": "animal_cruelty",
+      "principles": [
+        {
+          "principle_label": "No absolute right to free legal representation in USM",
+          "paraphrase_en": "A claimant under the Unified Screening Mechanism does not possess an absolute right to free legal representation throughout all stages of the non-refoulement proceedings.",
+          "paragraph_span": "[22]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Fairness assessment in non-refoulement proceedings",
+          "paraphrase_en": "The assessment of whether procedural fairness was breached involves examining the specific circumstances, including whether the claimant had legal assistance at earlier stages, whether decisions were translated, and whether the adjudicating body was fully aware of the relevant documents.",
+          "paragraph_span": "[22]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Legal basis for non-refoulement risk",
+          "paraphrase_en": "The risk of persecution in non-refoulement claims is assessed with reference to the non-refoulement principle under Article 33 of the 1951 Convention relating to the Status of Refugees.",
+          "paragraph_span": "[4]",
+          "cited_statutes": [
+            "Article 33 of the 1951 Convention relating to the Status of Refugees"
+          ]
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:39:44.157885+00:00",
+      "paragraph_count": 41,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [],
+        "secondary_domains": [],
+        "scores": {
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKDC 1674",
+      "case_name": "ZEUS AIRCRAFT OWNER 2 LTD AND ANOTHER v. POLAR PAY LTD",
+      "court_code": "District Court",
+      "decision_date": "2023-12-05T00:00:00+08:00",
+      "judges": [
+        "Coram: His Honour Judge Harold Leong in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/1674",
+      "topic_id": "aml_compliance",
+      "topic_label": "AML Compliance and Reporting Offences",
+      "module_id": "financial_regulatory_crimes",
+      "subground_id": "aml_regulatory",
+      "principles": [
+        {
+          "principle_label": "Bona fide purchaser defense elements",
+          "paraphrase_en": "The elements of 'good faith' and 'without notice' in the bona fide purchaser defense are not to be considered separately in practice, as it is difficult to conceive of a situation where a defendant lacks notice yet still acts in bad faith.",
+          "paragraph_span": "[23]-[23]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Unifying test for bona fide purchaser",
+          "paraphrase_en": "The overarching test for the bona fide purchaser defense is whether, considering all facts known to the defendant, the defendant acted in a commercially unacceptable manner.",
+          "paragraph_span": "[23]-[23]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of commercial acceptability",
+          "paraphrase_en": "A defendant's conduct is not commercially unacceptable merely because a transaction lacks a one-to-one correspondence in fund movements, especially where an industry-wide settlement practice is known to exist and is recognized by regulatory authorities.",
+          "paragraph_span": "[32]-[32]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Industry practice as evidence of good faith",
+          "paraphrase_en": "Evidence that a particular business practice is common within an industry and known to the relevant regulatory authority can support a finding that a defendant acted in good faith and without notice.",
+          "paragraph_span": "[43]-[43]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consequence of finding no commercially unacceptable conduct",
+          "paraphrase_en": "If a court finds no evidence that a defendant acted in a commercially unacceptable way, it must conclude on the balance of probabilities that the defendant acted in good faith and without notice, defeating claims based on the lack of such a defense.",
+          "paragraph_span": "[71]-[71]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:57:00.053627+00:00",
+      "paragraph_count": 106,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.2,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.2,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 3123",
+      "case_name": "安徽海牛進出口貿易有限公司 v. SMART STAR HONOR LTD AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-12-08T00:00:00+08:00",
+      "judges": [
+        "Before: Master James Kwan in Chambers (Open to Public)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/3123",
+      "topic_id": "aml_compliance",
+      "topic_label": "AML Compliance and Reporting Offences",
+      "module_id": "financial_regulatory_crimes",
+      "subground_id": "aml_regulatory",
+      "principles": [
+        {
+          "principle_label": "Pleading requirement for summary judgment",
+          "paraphrase_en": "A defendant who has already filed a defence cannot rely on an unpleaded defence to resist an application for summary judgment.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Establishing enrichment at expense",
+          "paraphrase_en": "Enrichment at the expense of another is generally established by direct transfer, but can also be proved if the defendant's benefit is traceable to the plaintiff's asset.",
+          "paragraph_span": "[49]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Trial requirement for regulatory compliance assessment",
+          "paraphrase_en": "Whether a party acted in a commercially acceptable way for a licensed operator, for purposes of determining good faith, requires exploration at trial and cannot be determined solely on affirmation evidence.",
+          "paragraph_span": "[91]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Standard for triable issue on bona fide purchaser defence",
+          "paraphrase_en": "A court cannot conclude that no triable issue exists regarding a bona fide purchaser for value without notice defence unless it can be properly determined at trial after full discovery and oral evidence.",
+          "paragraph_span": "[95]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Kaefer",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the general principle laid down in Kaefer regarding the prohibition of relying on unpleaded defences in summary judgment applications."
+        },
+        {
+          "target_case_name": "Lipkin Gorman (A Firm) v Karpnale Ltd",
+          "target_neutral_citation": "[1991] 2 AC 548",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the House of Lords' principle on establishing enrichment at the expense of another through direct transfer or traceable assets."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T03:58:57.396048+00:00",
+      "paragraph_count": 172,
+      "domain_classification": {
+        "domain": "civil",
+        "confidence": 0.15,
+        "signals": [
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "civil": 0.15,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      }
+    }
+  ]
+}

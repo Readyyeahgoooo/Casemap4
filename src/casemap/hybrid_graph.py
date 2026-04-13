@@ -17,6 +17,7 @@ from .criminal_enrichment_data import CURATED_CRIMINAL_CASE_ENRICHMENTS
 from .embeddings import create_embedding_backend
 from .graphrag import normalize_scores, slugify, tokenize
 from .hklii_crawler import HKLIICrawler
+from .lineage_discovery import append_hallucination_log
 from .relationship_graph import export_public_relationship_payload
 
 CASE_EDGE_TYPES = {"CITES", "FOLLOWS", "APPLIES", "DISTINGUISHES", "OVERRULES", "DOUBTS"}
@@ -557,6 +558,37 @@ def _court_score(court_level: str, lineage_count: int, typed_links: int, degree:
     return round(min(score, 1.6), 4)
 
 
+def _first_hklii_url(links: list[dict] | None) -> str:
+    for link in links or []:
+        url = str(link.get("url", "")).strip()
+        if "hklii" in url.lower() and "/search" not in url.lower() and "search?" not in url.lower():
+            return url
+    return ""
+
+
+def _hklii_deep_link(links: list[dict] | None, paragraph_span: str = "", para_start: int | None = None) -> str:
+    hklii_url = _first_hklii_url(links)
+    if not hklii_url:
+        return ""
+    para_number = para_start
+    if not para_number:
+        match = re.search(r"\[(\d+)\]", paragraph_span or "")
+        if match:
+            para_number = int(match.group(1))
+    return f"{hklii_url}#p{para_number}" if para_number else hklii_url
+
+
+def _cosine_similarity(left: list[float], right: list[float]) -> float:
+    if not left or not right or len(left) != len(right):
+        return 0.0
+    dot = sum(a * b for a, b in zip(left, right))
+    mag_left = math.sqrt(sum(a * a for a in left))
+    mag_right = math.sqrt(sum(b * b for b in right))
+    if mag_left <= 0 or mag_right <= 0:
+        return 0.0
+    return max(0.0, dot / (mag_left * mag_right))
+
+
 def _extract_openrouter_message_text(content: object) -> str:
     if isinstance(content, str):
         return content.strip()
@@ -1020,6 +1052,7 @@ def _auto_enrich_cases_in_bundle(
 
         if not case_doc or not case_doc.paragraphs:
             continue
+        case_node["hklii_verified"] = True
 
         # Fill missing metadata
         if not case_node.get("neutral_citation") and case_doc.neutral_citation:
@@ -1536,8 +1569,16 @@ def build_hierarchical_graph_bundle(
                 "title": lineage["title"],
                 "codes": lineage.get("codes", []),
                 "topic_ids": list(lineage.get("topic_ids", [])),
+                "topic_labels": list(lineage.get("topic_labels", [])),
+                "topic_hints": list(lineage.get("topic_hints", [])),
+                "source": lineage.get("source", "curated"),
+                "confidence_status": lineage.get("confidence_status", "established" if lineage.get("source", "curated") == "curated" else "preliminary"),
+                "confidence_score": float(lineage.get("confidence_score", 1.0 if lineage.get("source", "curated") == "curated" else 0.65)),
+                "created_at": lineage.get("created_at", ""),
+                "last_updated": lineage.get("last_updated", ""),
+                "discovery_rounds": lineage.get("discovery_rounds", []),
                 "legal_domain": legal_domain,
-                "domain_tags": list(domain_tags),
+                "domain_tags": list(lineage.get("domain_tags") or domain_tags),
             }
         )
         for topic_id in lineage.get("topic_ids", []):
@@ -1615,6 +1656,11 @@ def build_hierarchical_graph_bundle(
                     "paragraph_span": principle.get("paragraph_span", ""),
                     "public_excerpt": principle.get("statement_en", ""),
                     "text_private": principle.get("statement_en", ""),
+                    "hklii_deep_link": _hklii_deep_link(
+                        case_node.get("source_links", []),
+                        principle.get("paragraph_span", ""),
+                        principle.get("para_start"),
+                    ),
                     "embedding": [],
                     "principle_ids": [proposition_id],
                     "legal_domain": legal_domain,
@@ -1939,6 +1985,29 @@ def build_hierarchical_graph_bundle(
             }
         )
 
+    lineage_summaries: list[dict] = []
+    for lineage_node in sorted(
+        (node for node in bundle_nodes if node["type"] == "AuthorityLineage"),
+        key=lambda item: item.get("title", item.get("label", "")),
+    ):
+        member_edges = [edge for edge in outgoing.get(lineage_node["id"], []) if edge["type"] == "HAS_MEMBER"]
+        lineage_summaries.append(
+            {
+                "id": lineage_node["id"].removeprefix("lineage:"),
+                "node_id": lineage_node["id"],
+                "title": lineage_node.get("title", lineage_node.get("label", "")),
+                "member_count": len(member_edges),
+                "topic_ids": list(lineage_node.get("topic_ids", [])),
+                "topic_labels": list(lineage_node.get("topic_labels", [])),
+                "topic_hints": list(lineage_node.get("topic_hints", lineage_node.get("topic_labels", []))),
+                "codes": list(lineage_node.get("codes", [])),
+                "source": lineage_node.get("source", "curated"),
+                "confidence_status": lineage_node.get("confidence_status", "established"),
+                "confidence_score": lineage_node.get("confidence_score", 1.0),
+                "domain_tags": list(lineage_node.get("domain_tags", [])),
+            }
+        )
+
     bundle = {
         "meta": {
             "title": effective_title,
@@ -1949,6 +2018,7 @@ def build_hierarchical_graph_bundle(
             "statute_count": sum(1 for node in bundle_nodes if node["type"] == "Statute"),
             "topic_count": sum(1 for node in bundle_nodes if node["type"] == "Topic"),
             "lineage_count": sum(1 for node in bundle_nodes if node["type"] == "AuthorityLineage"),
+            "lineages": lineage_summaries,
             "paragraph_count": sum(1 for node in bundle_nodes if node["type"] == "Paragraph"),
             "proposition_count": sum(1 for node in bundle_nodes if node["type"] == "Proposition"),
             "enriched_case_count": sum(1 for node in bundle_nodes if node["type"] == "Case" and node.get("enrichment_status") != "case_only"),
@@ -2081,7 +2151,10 @@ class HybridGraphStore:
     def case_card(self, case_id: str) -> dict:
         card = self.case_cards.get(case_id)
         if card:
-            return card
+            derived = dict(card.get("derived_relationships", {}))
+            if "factually_similar" not in derived:
+                derived["factually_similar"] = self.find_similar_cases(case_id, top_k=5)
+            return {**card, "derived_relationships": derived}
         node = self.nodes.get(case_id)
         if not node or node["type"] != "Case":
             raise KeyError(case_id)
@@ -2144,9 +2217,135 @@ class HybridGraphStore:
                 "upstream_authorities": [],
                 "downstream_applications": [],
                 "same_lineage_cases": [],
+                "factually_similar": self.find_similar_cases(case_id, top_k=5),
                 "statutory_interpretations": [],
             },
         }
+
+    def _case_similarity_payload(self, node: dict, score: float) -> dict:
+        return {
+            "id": node["id"],
+            "case_id": node["id"],
+            "case_name": node.get("case_name", node.get("label", "")),
+            "label": node.get("label", node.get("case_name", "")),
+            "neutral_citation": node.get("neutral_citation", ""),
+            "summary_en": node.get("summary_en", ""),
+            "source_links": node.get("source_links", []),
+            "hklii_verified": bool(node.get("hklii_verified") or _first_hklii_url(node.get("source_links", []))),
+            "similarity_score": round(score, 6),
+        }
+
+    def find_similar_cases(self, case_id: str, top_k: int = 5, exclude_same_lineage: bool = True) -> list[dict]:
+        source = self.nodes.get(case_id)
+        if not source or source.get("type") != "Case":
+            return []
+        source_lineages = set(source.get("lineage_ids", []))
+        source_embedding = source.get("summary_embedding", [])
+        source_tokens = set(tokenize(f"{source.get('case_name', '')} {source.get('summary_en', '')} {' '.join(source.get('topic_paths', []))}"))
+        scored: list[tuple[float, dict]] = []
+        for node in self.nodes.values():
+            if node.get("type") != "Case" or node["id"] == case_id:
+                continue
+            if exclude_same_lineage and source_lineages and (source_lineages & set(node.get("lineage_ids", []))):
+                continue
+            score = _cosine_similarity(source_embedding, node.get("summary_embedding", []))
+            if score <= 0:
+                target_tokens = set(tokenize(f"{node.get('case_name', '')} {node.get('summary_en', '')} {' '.join(node.get('topic_paths', []))}"))
+                overlap = len(source_tokens & target_tokens)
+                score = overlap / max(math.sqrt(len(source_tokens) * len(target_tokens)), 1) if source_tokens and target_tokens else 0.0
+            if score > 0:
+                scored.append((score, node))
+        return [self._case_similarity_payload(node, score) for score, node in sorted(scored, key=lambda item: item[0], reverse=True)[: max(1, min(int(top_k or 5), 20))]]
+
+    def find_similar_cases_for_text(self, text: str, top_k: int = 5) -> list[dict]:
+        query = (text or "").strip()
+        if not query:
+            return []
+        query_embedding: list[float] = []
+        if self._embedding_backend is not None:
+            try:
+                query_embedding = self._embedding_backend.embed(query)
+            except Exception:
+                query_embedding = []
+        query_tokens = set(tokenize(query))
+        scored: list[tuple[float, dict]] = []
+        for node in self.nodes.values():
+            if node.get("type") != "Case":
+                continue
+            score = _cosine_similarity(query_embedding, node.get("summary_embedding", []))
+            if score <= 0:
+                target_tokens = set(tokenize(f"{node.get('case_name', '')} {node.get('summary_en', '')} {' '.join(node.get('topic_paths', []))}"))
+                overlap = len(query_tokens & target_tokens)
+                score = overlap / max(math.sqrt(len(query_tokens) * len(target_tokens)), 1) if query_tokens and target_tokens else 0.0
+            if score > 0:
+                scored.append((score, node))
+        return [self._case_similarity_payload(node, score) for score, node in sorted(scored, key=lambda item: item[0], reverse=True)[: max(1, min(int(top_k or 5), 20))]]
+
+    def _lineage_detail(self, lineage_node_id: str) -> dict:
+        lineage = self.nodes.get(lineage_node_id, {})
+        member_edges = sorted(
+            [edge for edge in self.outgoing.get(lineage_node_id, []) if edge["type"] == "HAS_MEMBER"],
+            key=lambda edge: edge.get("position") or 0,
+        )
+        members = []
+        for edge in member_edges:
+            node = self.nodes.get(edge["target"])
+            if not node:
+                continue
+            members.append(
+                {
+                    "id": node["id"],
+                    "case_id": node["id"] if node["type"] == "Case" else "",
+                    "label": node.get("case_name", node.get("label", "")),
+                    "type": node["type"],
+                    "neutral_citation": node.get("neutral_citation", ""),
+                    "position": edge.get("position"),
+                    "code": edge.get("code", ""),
+                    "treatment": edge.get("treatment", ""),
+                    "note": edge.get("note", ""),
+                    "source_links": node.get("source_links", []),
+                    "hklii_verified": bool(node.get("hklii_verified") or _first_hklii_url(node.get("source_links", []))),
+                }
+            )
+        return {
+            "id": lineage_node_id.removeprefix("lineage:"),
+            "node_id": lineage_node_id,
+            "title": lineage.get("title", lineage.get("label", "")),
+            "codes": lineage.get("codes", []),
+            "topic_ids": lineage.get("topic_ids", []),
+            "topic_labels": lineage.get("topic_labels", []),
+            "source": lineage.get("source", "curated"),
+            "confidence_status": lineage.get("confidence_status", "established"),
+            "confidence_score": lineage.get("confidence_score", 1.0),
+            "members": members,
+            "member_count": len(members),
+        }
+
+    def _match_lineages(self, scoring_tokens: list[str] | set[str], limit: int = 5) -> list[dict]:
+        token_set = set(scoring_tokens)
+        if not token_set:
+            return []
+        scored: list[tuple[float, str]] = []
+        for node in self.nodes.values():
+            if node.get("type") != "AuthorityLineage":
+                continue
+            topic_labels = list(node.get("topic_labels", []))
+            if not topic_labels:
+                for edge in self.outgoing.get(node["id"], []):
+                    if edge["type"] == "ABOUT_TOPIC" and edge["target"] in self.nodes:
+                        topic_labels.append(self.nodes[edge["target"]].get("label_en", self.nodes[edge["target"]].get("label", "")))
+            member_text = []
+            for edge in self.outgoing.get(node["id"], []):
+                if edge["type"] != "HAS_MEMBER":
+                    continue
+                member = self.nodes.get(edge["target"], {})
+                member_text.append(f"{member.get('case_name', member.get('label', ''))} {edge.get('note', '')} {edge.get('treatment', '')}")
+            lineage_tokens = set(tokenize(f"{node.get('title', node.get('label', ''))} {' '.join(topic_labels)} {' '.join(member_text)}"))
+            overlap = len(token_set & lineage_tokens)
+            if overlap:
+                score = overlap / max(math.sqrt(len(token_set) * len(lineage_tokens)), 1)
+                scored.append((score, node["id"]))
+        return [self._lineage_detail(lineage_id) | {"match_score": round(score, 6)} for score, lineage_id in sorted(scored, key=lambda item: item[0], reverse=True)[:limit]]
 
     def focus_graph(self, node_id: str, depth: int = 1) -> dict:
         if node_id not in self.nodes:
@@ -2251,6 +2450,8 @@ class HybridGraphStore:
                 "sources": [],
                 "citations": [],
                 "authority_path": [],
+                "authority_lineage_path": [],
+                "matched_lineages": [],
                 "supporting_nodes": [],
                 "retrieval_trace": {"query_tokens": [], "matched_node_ids": []},
                 "warnings": [],
@@ -2476,6 +2677,8 @@ class HybridGraphStore:
             for node_id in sorted(combined_scores, key=combined_scores.get, reverse=True)
             if combined_scores[node_id] > 0
         ][: max(bounded_top_k * 2, 8)]
+        lineage_match_tokens = set(scoring_tokens) | set(hint_expanded_tokens) | set(area_boost_tokens)
+        matched_lineages = self._match_lineages(lineage_match_tokens, limit=5)
 
         supporting_node_ids: set[str] = set(best_node_ids[:bounded_top_k])
         support_case_ids: set[str] = set()
@@ -2544,6 +2747,15 @@ class HybridGraphStore:
                     support_case_ids.add(edge["target"])
                     support_case_scores[edge["target"]] += node_score * 0.15
 
+        for lineage in matched_lineages:
+            supporting_node_ids.add(lineage["node_id"])
+            for member in lineage.get("members", []):
+                member_id = member.get("id", "")
+                if member.get("type") == "Case" and member_id in self.nodes:
+                    support_case_ids.add(member_id)
+                    supporting_node_ids.add(member_id)
+                    support_case_scores[member_id] += 0.25
+
         # ── Area-aware reranking ────────────────────────────────
         # Boost cases matching the classified doctrinal area and
         # penalise cases that clearly belong to a different area.
@@ -2577,6 +2789,8 @@ class HybridGraphStore:
         for card in support_cases:
             case_score = support_case_scores.get(card["id"], 0.0)
             lineage_titles = sorted({entry["lineage_title"] for entry in card.get("lineage_memberships", []) if entry.get("lineage_title")})
+            lineage_ids = sorted({entry["lineage_id"] for entry in card.get("lineage_memberships", []) if entry.get("lineage_id")})
+            matched_lineage_ids = sorted(set(lineage_ids) & {item["id"] for item in matched_lineages})
             principles = card.get("principles", [])
             if principles:
                 for position, principle in enumerate(principles[:3], start=1):
@@ -2595,6 +2809,9 @@ class HybridGraphStore:
                             "hklii_deep_link": principle.get("hklii_deep_link", ""),
                             "links": card["metadata"]["source_links"],
                             "lineage_titles": lineage_titles,
+                            "lineage_ids": lineage_ids,
+                            "matched_lineage_ids": matched_lineage_ids,
+                            "hklii_verified": bool(principle.get("hklii_deep_link") or _first_hklii_url(card["metadata"].get("source_links", []))),
                             "support_score": round(case_score + (0.06 / position), 6),
                         }
                     )
@@ -2613,6 +2830,9 @@ class HybridGraphStore:
                             "hklii_deep_link": "",
                             "links": card["metadata"]["source_links"],
                             "lineage_titles": lineage_titles,
+                            "lineage_ids": lineage_ids,
+                            "matched_lineage_ids": matched_lineage_ids,
+                            "hklii_verified": bool(_first_hklii_url(card["metadata"].get("source_links", []))),
                             "support_score": round(case_score, 6),
                         }
                     )
@@ -2755,6 +2975,7 @@ class HybridGraphStore:
         for index, citation in enumerate(citations, start=1):
             citation.setdefault("retrieval_origin", "bundle")
             citation.setdefault("legal_domain", legal_domain)
+            citation.setdefault("hklii_verified", bool(citation.get("hklii_deep_link") or _first_hklii_url(citation.get("links", []))))
             citation["citation_id"] = f"C{index}"
 
         if citations:
@@ -2821,6 +3042,20 @@ class HybridGraphStore:
                 }
             ]
 
+        authority_lineage_path = matched_lineages[:]
+        if not authority_lineage_path:
+            seen_lineage_ids: set[str] = set()
+            for card in support_cases:
+                for membership in card.get("lineage_memberships", []):
+                    lineage_node_id = membership.get("lineage_node_id") or f"lineage:{membership.get('lineage_id', '')}"
+                    if lineage_node_id in self.nodes and lineage_node_id not in seen_lineage_ids:
+                        seen_lineage_ids.add(lineage_node_id)
+                        authority_lineage_path.append(self._lineage_detail(lineage_node_id))
+                    if len(authority_lineage_path) >= 3:
+                        break
+                if len(authority_lineage_path) >= 3:
+                    break
+
         sources = []
         seen_cases: set[str] = set()
         for citation in citations:
@@ -2840,6 +3075,7 @@ class HybridGraphStore:
                     "citation_ids": [entry["citation_id"] for entry in citations if entry["case_id"] == case_id],
                     "retrieval_origin": citation.get("retrieval_origin", "bundle"),
                     "legal_domain": citation.get("legal_domain", legal_domain),
+                    "hklii_verified": bool(citation.get("hklii_verified")),
                 }
             )
 
@@ -2850,6 +3086,8 @@ class HybridGraphStore:
             "sources": sources,
             "citations": citations,
             "authority_path": authority_path,
+            "authority_lineage_path": authority_lineage_path,
+            "matched_lineages": matched_lineages,
             "supporting_nodes": [
                 {
                     "id": node_id,
@@ -2884,6 +3122,183 @@ class HybridGraphStore:
             },
             "legal_domain": legal_domain,
         }
+
+
+_CASE_NAME_MENTION_RE = re.compile(r"\b([A-Z][A-Za-z'().&\- ]{1,90}\s+v\.?\s+[A-Z][A-Za-z'().&\- ]{1,120})")
+
+_CASE_ANALYSIS_PROMPT = """You are a Hong Kong legal analysis assistant.
+
+You must answer only from the supplied graph evidence, matched authority lineages, and factually similar cases.
+Rules:
+- Cite only supplied citation IDs such as [C1] and supplied lineage IDs.
+- Do not invent case names, neutral citations, paragraph numbers, or HKLII links.
+- If the evidence is incomplete, say which issue is not safely grounded.
+- Keep the answer educational and not legal advice.
+
+User facts:
+{facts}
+
+Graph citations:
+{citations}
+
+Matched lineages:
+{lineages}
+
+Factually similar cases:
+{similar_cases}
+
+Return a concise structured analysis."""
+
+
+def validate_grounded_answer(
+    answer: str,
+    *,
+    allowed_citation_ids: set[str],
+    allowed_case_names: set[str],
+    context: str = "case_analysis",
+) -> tuple[list[str], list[dict]]:
+    warnings: list[str] = []
+    log_entries: list[dict] = []
+    cited_ids = set(re.findall(r"\[C\d+\]", answer or ""))
+    unknown_citations = sorted(cited_id for cited_id in cited_ids if cited_id.strip("[]") not in allowed_citation_ids)
+    if unknown_citations:
+        warnings.append(f"Removed confidence in {len(unknown_citations)} unsupported citation marker(s): {', '.join(unknown_citations)}.")
+        log_entries.append({"context": context, "type": "unknown_citation_marker", "values": unknown_citations})
+
+    normalized_allowed = {_normalize_label(name) for name in allowed_case_names if name}
+    unknown_cases: list[str] = []
+    for match in _CASE_NAME_MENTION_RE.findall(answer or ""):
+        normalized = _normalize_label(match)
+        if normalized and normalized not in normalized_allowed:
+            unknown_cases.append(match.strip())
+    if unknown_cases:
+        unique_unknown = sorted(set(unknown_cases))
+        warnings.append(f"Detected {len(unique_unknown)} case name(s) not present in the supplied graph evidence.")
+        log_entries.append({"context": context, "type": "unknown_case_name", "values": unique_unknown})
+    if log_entries:
+        append_hallucination_log(log_entries)
+    return warnings, log_entries
+
+
+def _case_analysis_llm(
+    facts: str,
+    query_result: dict,
+    similar_cases: list[dict],
+    *,
+    mode: str = "deepseek",
+    model: str = "",
+) -> tuple[str, str]:
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
+    openrouter_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    if mode == "deepseek" and deepseek_key:
+        endpoint = DEEPSEEK_API_ENDPOINT
+        api_key = deepseek_key
+        selected_model = model.strip() or DEEPSEEK_DEFAULT_MODEL
+    elif openrouter_key:
+        endpoint = OPENROUTER_API_ENDPOINT
+        api_key = openrouter_key
+        selected_model = model.strip() or os.environ.get("OPENROUTER_MODEL", "").strip() or OPENROUTER_DEFAULT_MODEL
+    elif deepseek_key:
+        endpoint = DEEPSEEK_API_ENDPOINT
+        api_key = deepseek_key
+        selected_model = model.strip() or DEEPSEEK_DEFAULT_MODEL
+    else:
+        raise RuntimeError("No LLM API key configured for case analysis.")
+
+    citation_lines = []
+    for citation in query_result.get("citations", [])[:10]:
+        citation_lines.append(
+            f"[{citation.get('citation_id', '')}] {citation.get('case_name', '')} {citation.get('neutral_citation', '')} "
+            f"{citation.get('paragraph_span', '')}: {citation.get('quote', '')[:360]}"
+        )
+    lineage_lines = []
+    for lineage in query_result.get("authority_lineage_path", [])[:5]:
+        member_names = " -> ".join(member.get("label", "") for member in lineage.get("members", [])[:8])
+        lineage_lines.append(f"- {lineage.get('id', '')}: {lineage.get('title', '')} ({lineage.get('confidence_status', '')}) {member_names}")
+    similar_lines = [
+        f"- {case.get('case_name', case.get('label', ''))} {case.get('neutral_citation', '')}: score {case.get('similarity_score', 0)}"
+        for case in similar_cases[:8]
+    ]
+    prompt = _CASE_ANALYSIS_PROMPT.format(
+        facts=facts.strip(),
+        citations="\n".join(citation_lines) or "(none)",
+        lineages="\n".join(lineage_lines) or "(none)",
+        similar_cases="\n".join(similar_lines) or "(none)",
+    )
+    request = urllib_request.Request(
+        endpoint,
+        data=json.dumps({"model": selected_model, "temperature": 0, "messages": [{"role": "user", "content": prompt}]}).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+    )
+    try:
+        with urllib_request.urlopen(request, timeout=OPENROUTER_TIMEOUT_SECONDS) as response:
+            raw = response.read().decode("utf-8", "ignore")
+    except urllib_error.HTTPError as exc:
+        body = exc.read().decode("utf-8", "ignore") if hasattr(exc, "read") else ""
+        raise RuntimeError(f"Case analysis HTTP {exc.code}: {body[:240]}") from exc
+    parsed = json.loads(raw)
+    choices = parsed.get("choices", [])
+    if not choices:
+        raise RuntimeError("Case analysis LLM returned no choices.")
+    return _extract_openrouter_message_text(choices[0].get("message", {}).get("content", "")), selected_model
+
+
+def analyse_case_facts(
+    store: "HybridGraphStore",
+    facts: str,
+    *,
+    mode: str = "extractive",
+    model: str = "",
+    top_k: int = 5,
+) -> dict:
+    bounded_top_k = max(1, min(int(top_k or 5), 10))
+    query_result = store.query(facts, top_k=bounded_top_k, mode="extractive", max_citations=max(8, bounded_top_k))
+    similar_cases = store.find_similar_cases_for_text(facts, top_k=bounded_top_k)
+    warnings = list(query_result.get("warnings", []))
+    answer = query_result.get("answer", "")
+    answer_mode = "extractive_case_analysis"
+    model_used = ""
+    if mode in {"deepseek", "openrouter"} and query_result.get("citations"):
+        try:
+            answer, model_used = _case_analysis_llm(facts, query_result, similar_cases, mode=mode, model=model)
+            answer_mode = f"{mode}_case_analysis"
+        except Exception as exc:
+            warnings.append(f"Case analysis LLM skipped: {exc}")
+    elif not query_result.get("citations"):
+        warnings.append("No verified citations were available, so only retrieval metadata is shown.")
+
+    allowed_citation_ids = {citation.get("citation_id", "") for citation in query_result.get("citations", [])}
+    allowed_case_names = {citation.get("case_name", "") for citation in query_result.get("citations", [])}
+    allowed_case_names |= {case.get("case_name", case.get("label", "")) for case in similar_cases}
+    hallucination_warnings, log_entries = validate_grounded_answer(
+        answer,
+        allowed_citation_ids=allowed_citation_ids,
+        allowed_case_names=allowed_case_names,
+    )
+    warnings.extend(hallucination_warnings)
+    return {
+        "facts": facts.strip(),
+        "answer": answer.strip(),
+        "answer_mode": answer_mode,
+        "model_used": model_used,
+        "citations": query_result.get("citations", []),
+        "sources": query_result.get("sources", []),
+        "matched_lineages": query_result.get("matched_lineages", []),
+        "authority_lineage_path": query_result.get("authority_lineage_path", []),
+        "factually_similar_cases": similar_cases,
+        "retrieval_trace": query_result.get("retrieval_trace", {}),
+        "warnings": warnings,
+        "hallucination_log_entries": log_entries,
+        "disclaimer": (
+            "This tool provides legal information for educational purposes only and does not constitute legal advice. "
+            "Always consult a qualified Hong Kong lawyer for advice on specific facts."
+        ),
+    }
 
 
 # ---------------------------------------------------------------------------
