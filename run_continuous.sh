@@ -195,7 +195,16 @@ except:
     print('?')
 " 2>/dev/null)
     git commit -m "auto(cycle ${CYCLE}): graph rebuild — ${CRIMINAL_COUNT} criminal candidates, $(date '+%Y-%m-%d %H:%M')"
-    git push && log "Pushed — Vercel will redeploy" || log "[WARN] git push failed"
+    # Try SSH push first; fall back to HTTPS if SSH port is blocked
+    if git push 2>&1; then
+      log "Pushed via SSH — Vercel will redeploy"
+    else
+      log "[WARN] SSH push failed — retrying via HTTPS"
+      HTTPS_REMOTE="https://github.com/Readyyeahgoooo/Casemap4.git"
+      git push "$HTTPS_REMOTE" HEAD:codex/multi-domain-framework 2>&1 \
+        && log "Pushed via HTTPS — Vercel will redeploy" \
+        || log "[WARN] Both SSH and HTTPS push failed; will retry next cycle"
+    fi
   fi
 
   # ────────────────────────────────────────────────────────────────────────────
