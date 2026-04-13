@@ -16,12 +16,14 @@ SLEEP_HOURS=6          # pause between full cycles
 CRAWL_ROUNDS=2         # batch_enrich rounds per cycle (discover + crawl)
 MAX_PER_TOPIC=50       # HKLII cases to pull per topic per round
 MAX_ENRICH=120         # max DeepSeek enrichments per graph build
+MAX_TOTAL_HYBRID_NODES=10000  # soft cap; prunes only low-value case-only shells
 CRIMINAL_CANDIDATES="data/batch/candidates_criminal_clean.json"
 CIVIL_CANDIDATES="data/batch/candidates_civil_batch.json"
 CIVIL_TREE="data/batch/domain_trees/civil_tree.json"
 CRIMINAL_OUT="artifacts/hk_criminal_relationship_v2"
 CRIMINAL_HYBRID_OUT="artifacts/hk_criminal_hybrid_v2"
 CIVIL_OUT="artifacts/hk_civil_graph"
+CIVIL_HYBRID_OUT="artifacts/hk_civil_hybrid_v1"
 LOG_DIR="data/batch"
 
 # ── Env ──────────────────────────────────────────────────────────────────────
@@ -82,6 +84,7 @@ snapshot_artifacts() {
     "$CRIMINAL_OUT" \
     "$CRIMINAL_HYBRID_OUT" \
     "$CIVIL_OUT" \
+    "$CIVIL_HYBRID_OUT" \
     "$CRIMINAL_CANDIDATES" \
     data/batch/candidates_civil_clean.json \
     data/batch/discovered_lineages.json \
@@ -100,6 +103,32 @@ snapshot_artifacts() {
   tar -czf "$snapshot_path" "${paths[@]}" 2>/dev/null \
     && log "Snapshot saved: $snapshot_path" \
     || log "[WARN] Snapshot failed: $snapshot_path"
+}
+
+preserve_previous_hybrid() {
+  local hybrid_dir="$1"
+  local previous_path="$hybrid_dir/hierarchical_graph_prev.json"
+  if [[ -f "$hybrid_dir/hierarchical_graph.json" ]]; then
+    cp "$hybrid_dir/hierarchical_graph.json" "$previous_path"
+  fi
+}
+
+merge_previous_hybrid() {
+  local label="$1"
+  local hybrid_dir="$2"
+  local log_file="$3"
+  local previous_path="$hybrid_dir/hierarchical_graph_prev.json"
+  if [[ ! -f "$previous_path" || ! -f "$hybrid_dir/hierarchical_graph.json" ]]; then
+    return 0
+  fi
+  python3 -m casemap merge-hybrid-graph \
+    --graph "$hybrid_dir/hierarchical_graph.json" \
+    --previous "$previous_path" \
+    --output-dir "$hybrid_dir" \
+    --max-total-nodes "$MAX_TOTAL_HYBRID_NODES" \
+    >> "$log_file" 2>&1 \
+    && log "$label cumulative merge done" \
+    || log "[WARN] $label cumulative merge failed"
 }
 
 # ── Main loop ────────────────────────────────────────────────────────────────
@@ -128,7 +157,8 @@ while true; do
   # PHASE 2: CRIMINAL — rebuild graph & hybrid artifacts
   # ────────────────────────────────────────────────────────────────────────────
   section "PHASE 2 — CRIMINAL GRAPH BUILD"
-  python3 -m casemap build-domain-graph \
+  preserve_previous_hybrid "$CRIMINAL_HYBRID_OUT"
+  if python3 -m casemap build-domain-graph \
     --domain criminal \
     --candidates "$CRIMINAL_CANDIDATES" \
     --output-dir "$CRIMINAL_OUT" \
@@ -138,9 +168,12 @@ while true; do
     --discover-lineages \
     --lineages-path data/batch/discovered_lineages.json \
     --enrichment-cache data/batch/enrichment_cache_criminal.json \
-    >> "$LOG_DIR/criminal_build.log" 2>&1 \
-    && log "Criminal graph build done" \
-    || log "[WARN] Criminal graph build exited non-zero (continuing)"
+    >> "$LOG_DIR/criminal_build.log" 2>&1; then
+    log "Criminal graph build done"
+    merge_previous_hybrid "Criminal" "$CRIMINAL_HYBRID_OUT" "$LOG_DIR/criminal_build.log"
+  else
+    log "[WARN] Criminal graph build exited non-zero (continuing)"
+  fi
 
   # ────────────────────────────────────────────────────────────────────────────
   # PHASE 3: CIVIL — crawl (if tree exists)
@@ -174,19 +207,24 @@ while true; do
     if [[ -f "$CIVIL_CLEAN" ]]; then
       section "PHASE 4 — CIVIL GRAPH BUILD"
       # Add civil artifact files to gitignore whitelist if not done yet
-      python3 -m casemap build-domain-graph \
+      preserve_previous_hybrid "$CIVIL_HYBRID_OUT"
+      if python3 -m casemap build-domain-graph \
         --domain civil \
         --tree "$CIVIL_TREE" \
         --candidates "$CIVIL_CLEAN" \
         --output-dir "$CIVIL_OUT" \
+        --hybrid-output-dir "$CIVIL_HYBRID_OUT" \
         --max-enrich 80 \
         --max-cases 400 \
         --discover-lineages \
         --lineages-path data/batch/discovered_lineages.json \
         --enrichment-cache data/batch/enrichment_cache_civil.json \
-        >> "$LOG_DIR/civil_build.log" 2>&1 \
-        && log "Civil graph build done" \
-        || log "[WARN] Civil graph build exited non-zero (continuing)"
+        >> "$LOG_DIR/civil_build.log" 2>&1; then
+        log "Civil graph build done"
+        merge_previous_hybrid "Civil" "$CIVIL_HYBRID_OUT" "$LOG_DIR/civil_build.log"
+      else
+        log "[WARN] Civil graph build exited non-zero (continuing)"
+      fi
     fi
   else
     log "[SKIP] No civil tree at $CIVIL_TREE — skipping civil phases"
@@ -244,6 +282,9 @@ print(f'Snapshot: {snapshot[\"node_count\"]} nodes, {snapshot[\"case_count\"]} c
   # Stage civil if it exists (may not be whitelisted yet)
   if [[ -d "$CIVIL_OUT" ]]; then
     git add -f artifacts/hk_civil_graph/ 2>/dev/null || true
+  fi
+  if [[ -d "$CIVIL_HYBRID_OUT" ]]; then
+    git add -f "$CIVIL_HYBRID_OUT"/ 2>/dev/null || true
   fi
 
   # Stage updated candidate files for data persistence

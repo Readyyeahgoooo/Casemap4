@@ -9,7 +9,7 @@ from wsgiref.simple_server import make_server
 from .criminal_graph import build_criminal_graph_artifacts
 from .domain_graph import build_domain_graph_artifacts
 from .graphrag import RerankedRetriever, build_artifacts
-from .hybrid_graph import HybridGraphStore, build_hybrid_graph_artifacts
+from .hybrid_graph import HybridGraphStore, build_hybrid_graph_artifacts, merge_with_previous_artifact, write_hybrid_graph_artifacts
 from .lineage_discovery import DISCOVERED_LINEAGES_DEFAULT_PATH, discover_lineages_from_file
 from .relationship_graph import build_relationship_artifacts, export_public_relationship_artifacts
 from .supabase_sync import load_env_file, sync_criminal_artifacts_to_supabase
@@ -69,6 +69,18 @@ def build_hybrid_graph_command(args: argparse.Namespace) -> int:
         embedding_model=args.embedding_model,
         embedding_dimensions=args.embedding_dimensions,
     )
+    print(json.dumps(manifest, indent=2, ensure_ascii=False))
+    return 0
+
+
+def merge_hybrid_graph_command(args: argparse.Namespace) -> int:
+    bundle = json.loads(Path(args.graph).read_text(encoding="utf-8"))
+    merged = merge_with_previous_artifact(
+        bundle,
+        args.previous,
+        max_total_nodes=args.max_total_nodes,
+    )
+    manifest = write_hybrid_graph_artifacts(merged, args.output_dir)
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0
 
@@ -244,6 +256,21 @@ def parser() -> argparse.ArgumentParser:
         help="Optional embedding dimension override when supported by the chosen backend",
     )
     hybrid_parser.set_defaults(func=build_hybrid_graph_command)
+
+    merge_hybrid_parser = subparsers.add_parser(
+        "merge-hybrid-graph",
+        help="Merge a freshly built hierarchical graph with the previous artifact, preserving prior authorities",
+    )
+    merge_hybrid_parser.add_argument("--graph", required=True, help="Path to the freshly built hierarchical_graph.json")
+    merge_hybrid_parser.add_argument("--previous", required=True, help="Path to the previous hierarchical_graph.json")
+    merge_hybrid_parser.add_argument("--output-dir", required=True, help="Directory to write merged hybrid artifacts")
+    merge_hybrid_parser.add_argument(
+        "--max-total-nodes",
+        type=int,
+        default=10000,
+        help="Soft cap for merged graph size; prunes only low-value unenriched case-only shells",
+    )
+    merge_hybrid_parser.set_defaults(func=merge_hybrid_graph_command)
 
     criminal_parser = subparsers.add_parser(
         "build-criminal-graph",

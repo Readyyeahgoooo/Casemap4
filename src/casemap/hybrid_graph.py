@@ -2201,6 +2201,255 @@ def export_public_projection(bundle: dict, title: str | None = None) -> dict:
     return public_projection
 
 
+def _edge_merge_key(edge: dict) -> tuple[str, str, str, str]:
+    metadata = {key: value for key, value in edge.items() if key not in {"source", "target", "type"}}
+    return (
+        str(edge.get("source", "")),
+        str(edge.get("target", "")),
+        str(edge.get("type", "")),
+        json.dumps(metadata, sort_keys=True, ensure_ascii=False, separators=(",", ":")),
+    )
+
+
+def _lineage_meta_summaries(nodes: list[dict], edges: list[dict]) -> list[dict]:
+    outgoing: defaultdict[str, list[dict]] = defaultdict(list)
+    for edge in edges:
+        outgoing[edge.get("source", "")].append(edge)
+    summaries: list[dict] = []
+    for lineage_node in sorted(
+        (node for node in nodes if node.get("type") == "AuthorityLineage"),
+        key=lambda item: item.get("title", item.get("label", "")),
+    ):
+        member_edges = [edge for edge in outgoing.get(lineage_node["id"], []) if edge.get("type") == "HAS_MEMBER"]
+        summaries.append(
+            {
+                "id": lineage_node["id"].removeprefix("lineage:"),
+                "node_id": lineage_node["id"],
+                "title": lineage_node.get("title", lineage_node.get("label", "")),
+                "member_count": len(member_edges),
+                "topic_ids": list(lineage_node.get("topic_ids", [])),
+                "topic_labels": list(lineage_node.get("topic_labels", [])),
+                "topic_hints": list(lineage_node.get("topic_hints", lineage_node.get("topic_labels", []))),
+                "codes": list(lineage_node.get("codes", [])),
+                "source": lineage_node.get("source", "curated"),
+                "confidence_status": lineage_node.get("confidence_status", "established"),
+                "confidence_score": lineage_node.get("confidence_score", 1.0),
+                "domain_tags": list(lineage_node.get("domain_tags", [])),
+            }
+        )
+    return summaries
+
+
+def _repair_orphan_topic_paths(bundle: dict) -> dict:
+    nodes_by_id = {node["id"]: node for node in bundle.get("nodes", []) if node.get("id")}
+    topic_paths = {
+        node.get("path")
+        for node in nodes_by_id.values()
+        if node.get("type") == "Topic" and node.get("path")
+    }
+    added_paths = 0
+    removed_paths = 0
+    case_nodes = {
+        node["id"]: node
+        for node in nodes_by_id.values()
+        if node.get("type") == "Case"
+    }
+
+    for edge in bundle.get("edges", []):
+        if edge.get("type") != "BELONGS_TO_TOPIC":
+            continue
+        case_node = case_nodes.get(edge.get("source"))
+        topic_node = nodes_by_id.get(edge.get("target"))
+        if not case_node or not topic_node or topic_node.get("type") != "Topic":
+            continue
+        topic_path = topic_node.get("path")
+        if topic_path and topic_path not in case_node.setdefault("topic_paths", []):
+            case_node["topic_paths"].append(topic_path)
+            added_paths += 1
+
+    if topic_paths:
+        for case_node in case_nodes.values():
+            original_paths = list(case_node.get("topic_paths", []))
+            repaired_paths: list[str] = []
+            for topic_path in original_paths:
+                if topic_path in topic_paths and topic_path not in repaired_paths:
+                    repaired_paths.append(topic_path)
+            removed_paths += len(original_paths) - len(repaired_paths)
+            case_node["topic_paths"] = repaired_paths
+
+    for case_id, card in bundle.get("case_cards", {}).items():
+        case_node = case_nodes.get(case_id)
+        if not case_node:
+            continue
+        metadata = card.setdefault("metadata", {})
+        metadata["topic_paths"] = sorted(case_node.get("topic_paths", []))
+        metadata["authority_score"] = case_node.get("authority_score", metadata.get("authority_score", 0.0))
+        metadata["lineage_ids"] = sorted(case_node.get("lineage_ids", metadata.get("lineage_ids", [])))
+        metadata["enrichment_status"] = case_node.get("enrichment_status", metadata.get("enrichment_status", "case_only"))
+
+    return {"added_topic_paths": added_paths, "removed_orphan_topic_paths": removed_paths}
+
+
+def _drop_low_value_case_shells(bundle: dict, max_total_nodes: int | None) -> dict:
+    if not max_total_nodes or max_total_nodes <= 0:
+        return {"max_total_nodes": max_total_nodes, "pruned_case_only_nodes": 0, "cap_applied": False}
+    nodes = bundle.get("nodes", [])
+    if len(nodes) <= max_total_nodes:
+        return {"max_total_nodes": max_total_nodes, "pruned_case_only_nodes": 0, "cap_applied": False}
+
+    nodes_by_id = {node["id"]: node for node in nodes if node.get("id")}
+    protected_case_ids: set[str] = set()
+    for node in nodes:
+        if node.get("type") != "Case":
+            continue
+        if node.get("enrichment_status") != "case_only" or node.get("lineage_ids"):
+            protected_case_ids.add(node["id"])
+
+    for edge in bundle.get("edges", []):
+        edge_type = edge.get("type")
+        source = edge.get("source")
+        target = edge.get("target")
+        if edge_type == "PART_OF" and target in nodes_by_id and nodes_by_id[target].get("type") == "Case":
+            protected_case_ids.add(target)
+        if edge_type == "HAS_MEMBER" and target in nodes_by_id and nodes_by_id[target].get("type") == "Case":
+            protected_case_ids.add(target)
+        if edge_type in CASE_EDGE_TYPES | TREATMENT_EDGE_TYPES:
+            if source in nodes_by_id and nodes_by_id[source].get("type") == "Case":
+                protected_case_ids.add(source)
+            if target in nodes_by_id and nodes_by_id[target].get("type") == "Case":
+                protected_case_ids.add(target)
+
+    candidates = [
+        node
+        for node in nodes
+        if node.get("type") == "Case"
+        and node.get("enrichment_status", "case_only") == "case_only"
+        and node.get("id") not in protected_case_ids
+    ]
+    candidates.sort(
+        key=lambda node: (
+            float(node.get("authority_score") or 0.0),
+            int(node.get("degree") or 0),
+            node.get("decision_date", ""),
+            node.get("case_name", node.get("label", "")),
+        )
+    )
+    trim_count = min(len(nodes) - max_total_nodes, len(candidates))
+    if trim_count <= 0:
+        return {"max_total_nodes": max_total_nodes, "pruned_case_only_nodes": 0, "cap_applied": False}
+
+    dropped_ids = {node["id"] for node in candidates[:trim_count]}
+    bundle["nodes"] = [node for node in nodes if node.get("id") not in dropped_ids]
+    bundle["edges"] = [
+        edge for edge in bundle.get("edges", [])
+        if edge.get("source") not in dropped_ids and edge.get("target") not in dropped_ids
+    ]
+    for case_id in dropped_ids:
+        bundle.get("case_cards", {}).pop(case_id, None)
+    return {"max_total_nodes": max_total_nodes, "pruned_case_only_nodes": trim_count, "cap_applied": True}
+
+
+def _recalculate_hybrid_meta(bundle: dict, merge_meta: dict | None = None) -> dict:
+    nodes = bundle.get("nodes", [])
+    node_ids = {node["id"] for node in nodes if node.get("id")}
+    bundle["case_cards"] = {
+        case_id: card
+        for case_id, card in bundle.get("case_cards", {}).items()
+        if case_id in node_ids
+    }
+    meta = dict(bundle.get("meta", {}))
+    meta.update(
+        {
+            "node_count": len(nodes),
+            "edge_count": len(bundle["edges"]),
+            "case_count": sum(1 for node in nodes if node.get("type") == "Case"),
+            "statute_count": sum(1 for node in nodes if node.get("type") == "Statute"),
+            "topic_count": sum(1 for node in nodes if node.get("type") == "Topic"),
+            "lineage_count": sum(1 for node in nodes if node.get("type") == "AuthorityLineage"),
+            "lineages": _lineage_meta_summaries(nodes, bundle["edges"]),
+            "paragraph_count": sum(1 for node in nodes if node.get("type") == "Paragraph"),
+            "proposition_count": sum(1 for node in nodes if node.get("type") == "Proposition"),
+            "enriched_case_count": sum(
+                1
+                for node in nodes
+                if node.get("type") == "Case" and node.get("enrichment_status") != "case_only"
+            ),
+        }
+    )
+    if merge_meta:
+        meta.setdefault("cumulative_merge", {}).update(merge_meta)
+    bundle["meta"] = meta
+    return bundle
+
+
+def merge_with_previous_artifact(
+    new_bundle: dict,
+    previous_graph_path: str | Path,
+    *,
+    max_total_nodes: int | None = 10_000,
+) -> dict:
+    """Merge a freshly generated hybrid bundle with the previous published artifact.
+
+    The fresh bundle wins for matching ids. Previous-only nodes, edges, and case
+    cards are retained so an unlucky crawl/build cycle cannot make the published
+    graph shrink. If ``max_total_nodes`` is exceeded, only low-value unenriched
+    case-only shells are pruned; enriched cases, lineage members, and cited
+    authorities are preserved.
+    """
+    previous_path = Path(previous_graph_path).expanduser()
+    if not previous_path.exists():
+        return _recalculate_hybrid_meta(_clone_public(new_bundle), {"enabled": True, "previous_found": False})
+
+    previous_bundle = json.loads(previous_path.read_text(encoding="utf-8"))
+    previous_nodes = previous_bundle.get("nodes", [])
+    new_nodes = new_bundle.get("nodes", [])
+    new_node_ids = {node["id"] for node in new_nodes if node.get("id")}
+    merged_nodes = [_clone_public(node) for node in new_nodes]
+    merged_nodes.extend(_clone_public(node) for node in previous_nodes if node.get("id") not in new_node_ids)
+    node_ids = {node["id"] for node in merged_nodes if node.get("id")}
+
+    edge_by_key: dict[tuple[str, str, str, str], dict] = {}
+    for edge in previous_bundle.get("edges", []):
+        edge_by_key[_edge_merge_key(edge)] = _clone_public(edge)
+    for edge in new_bundle.get("edges", []):
+        edge_by_key[_edge_merge_key(edge)] = _clone_public(edge)
+    new_edge_keys: set[tuple[str, str, str, str]] = set()
+    merged_edges: list[dict] = []
+    for edge in new_bundle.get("edges", []):
+        key = _edge_merge_key(edge)
+        if key in edge_by_key and key not in new_edge_keys:
+            merged_edges.append(edge_by_key[key])
+            new_edge_keys.add(key)
+    merged_edges.extend(edge for key, edge in edge_by_key.items() if key not in new_edge_keys)
+
+    merged_case_cards = {
+        **_clone_public(previous_bundle.get("case_cards", {})),
+        **_clone_public(new_bundle.get("case_cards", {})),
+    }
+    merged_bundle = {
+        **_clone_public(new_bundle),
+        "nodes": merged_nodes,
+        "edges": merged_edges,
+        "case_cards": merged_case_cards,
+    }
+
+    topic_repair = _repair_orphan_topic_paths(merged_bundle)
+    cap_status = _drop_low_value_case_shells(merged_bundle, max_total_nodes)
+    merge_meta = {
+        "enabled": True,
+        "previous_found": True,
+        "previous_path": str(previous_path),
+        "previous_node_count": len(previous_nodes),
+        "previous_edge_count": len(previous_bundle.get("edges", [])),
+        "fresh_node_count": len(new_nodes),
+        "fresh_edge_count": len(new_bundle.get("edges", [])),
+        "retained_previous_only_nodes": sum(1 for node in previous_nodes if node.get("id") not in new_node_ids),
+        **topic_repair,
+        **cap_status,
+    }
+    return _recalculate_hybrid_meta(merged_bundle, merge_meta)
+
+
 def write_hybrid_graph_artifacts(bundle: dict, output_dir: str | Path) -> dict:
     output_path = Path(output_dir).expanduser().resolve()
     output_path.mkdir(parents=True, exist_ok=True)

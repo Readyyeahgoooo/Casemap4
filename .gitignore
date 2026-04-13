@@ -71,3 +71,9 @@ artifacts/*
 !artifacts/hk_civil_graph/supabase_export.sql
 !artifacts/hk_civil_graph/chroma_records.json
 !artifacts/hk_civil_graph/embedding_records.json
+!artifacts/hk_civil_hybrid_v1/
+!artifacts/hk_civil_hybrid_v1/hierarchical_graph.json
+!artifacts/hk_civil_hybrid_v1/manifest.json
+!artifacts/hk_civil_hybrid_v1/neo4j_constraints.cypher
+!artifacts/hk_civil_hybrid_v1/neo4j_import.cypher
+!artifacts/hk_civil_hybrid_v1/public_projection.json
