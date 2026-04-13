@@ -193,9 +193,47 @@ while true; do
   fi
 
   # ────────────────────────────────────────────────────────────────────────────
-  # PHASE 5: COMMIT + PUSH → triggers Vercel redeploy
+  # PHASE 5: SNAPSHOT BACKUP (append-only timestamped archive)
   # ────────────────────────────────────────────────────────────────────────────
-  section "PHASE 5 — GIT COMMIT + PUSH"
+  section "PHASE 5 — SNAPSHOT BACKUP"
+  SNAPSHOT_DIR="data/batch/snapshots"
+  mkdir -p "$SNAPSHOT_DIR"
+  TS=$(date '+%Y%m%d_%H%M%S')
+  if [[ -f "$CRIMINAL_HYBRID_OUT/hierarchical_graph.json" ]]; then
+    python3 -c "
+import json
+g = json.load(open('$CRIMINAL_HYBRID_OUT/hierarchical_graph.json'))
+meta = g.get('meta', {})
+snapshot = {
+    'cycle': ${CYCLE},
+    'timestamp': '${TS}',
+    'node_count': meta.get('node_count', 0),
+    'case_count': meta.get('case_count', 0),
+    'paragraph_count': meta.get('paragraph_count', 0),
+    'proposition_count': meta.get('proposition_count', 0),
+    'enriched_case_count': meta.get('enriched_case_count', 0),
+    'lineage_count': meta.get('lineage_count', 0),
+    'statute_count': meta.get('statute_count', 0),
+}
+with open('$SNAPSHOT_DIR/build_history.jsonl', 'a') as f:
+    f.write(json.dumps(snapshot) + '\n')
+print(f'Snapshot: {snapshot[\"node_count\"]} nodes, {snapshot[\"case_count\"]} cases, {snapshot[\"paragraph_count\"]} paras')
+" >> "$LOG_DIR/continuous.log" 2>&1 || true
+    # Keep last 10 compressed graph snapshots
+    SNAP_COUNT=$(ls "$SNAPSHOT_DIR"/graph_criminal_*.json.gz 2>/dev/null | wc -l | tr -d ' ')
+    if (( SNAP_COUNT >= 10 )); then
+      OLDEST=$(ls "$SNAPSHOT_DIR"/graph_criminal_*.json.gz 2>/dev/null | head -1)
+      rm -f "$OLDEST"
+      log "Pruned oldest snapshot: $OLDEST"
+    fi
+    gzip -c "$CRIMINAL_HYBRID_OUT/hierarchical_graph.json" > "$SNAPSHOT_DIR/graph_criminal_${TS}.json.gz"
+    log "Saved graph snapshot: graph_criminal_${TS}.json.gz"
+  fi
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # PHASE 6: COMMIT + PUSH → triggers Vercel redeploy
+  # ────────────────────────────────────────────────────────────────────────────
+  section "PHASE 6 — GIT COMMIT + PUSH"
 
   # Stage all whitelisted artifact files
   git add \
