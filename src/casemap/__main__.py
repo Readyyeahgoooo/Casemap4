@@ -462,7 +462,13 @@ def parser() -> argparse.ArgumentParser:
         dest="prune_prefix_cases",
         help="Keep older cases already stored under the same prefix instead of pruning them after sync",
     )
-    sync_parser.set_defaults(prune_prefix_cases=True)
+    sync_parser.add_argument(
+        "--prune-prefix-cases",
+        action="store_true",
+        dest="prune_prefix_cases",
+        help="Delete Supabase case JSON files under the prefix that were not uploaded in this sync",
+    )
+    sync_parser.set_defaults(prune_prefix_cases=False)
     sync_parser.set_defaults(func=sync_criminal_supabase_command)
 
     hybrid_query_parser = subparsers.add_parser(

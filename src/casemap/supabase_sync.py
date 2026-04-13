@@ -434,7 +434,7 @@ def sync_criminal_artifacts_to_supabase(
     max_cases: int = 40,
     embedding_backend: str = "sentence-transformers",
     embedding_model: str = "",
-    prune_prefix_cases: bool = True,
+    prune_prefix_cases: bool = False,
 ) -> dict:
     config = SupabaseConfig.from_env()
     relationship_path = Path(relationship_graph_path).expanduser().resolve()

@@ -3,6 +3,7 @@
 __pycache__/
 *.pyc
 data/cache/
+data/batch/snapshots/
 .kiro/
 .vscode/
 .env

@@ -69,6 +69,39 @@ trim_hklii_cache() {
   fi
 }
 
+snapshot_artifacts() {
+  local label="$1"
+  local ts
+  ts=$(date '+%Y%m%d_%H%M%S')
+  local snapshot_dir="$LOG_DIR/snapshots"
+  local snapshot_path="$snapshot_dir/${ts}_${label}.tgz"
+  mkdir -p "$snapshot_dir"
+
+  local paths=()
+  for path in \
+    "$CRIMINAL_OUT" \
+    "$CRIMINAL_HYBRID_OUT" \
+    "$CIVIL_OUT" \
+    "$CRIMINAL_CANDIDATES" \
+    data/batch/candidates_civil_clean.json \
+    data/batch/discovered_lineages.json \
+    data/batch/enrichment_cache_criminal.json \
+    data/batch/enrichment_cache_civil.json \
+    data/batch/hallucination_log.json
+  do
+    [[ -e "$path" ]] && paths+=("$path")
+  done
+
+  if (( ${#paths[@]} == 0 )); then
+    log "[WARN] Snapshot skipped; no artifact paths found"
+    return 0
+  fi
+
+  tar -czf "$snapshot_path" "${paths[@]}" 2>/dev/null \
+    && log "Snapshot saved: $snapshot_path" \
+    || log "[WARN] Snapshot failed: $snapshot_path"
+}
+
 # ── Main loop ────────────────────────────────────────────────────────────────
 CYCLE=0
 
@@ -76,6 +109,7 @@ while true; do
   CYCLE=$((CYCLE + 1))
   section "CYCLE ${CYCLE} START"
   log "Cycle ${CYCLE} beginning"
+  snapshot_artifacts "cycle_${CYCLE}_prebuild"
 
   # ────────────────────────────────────────────────────────────────────────────
   # PHASE 1: CRIMINAL — crawl + discover gaps
