@@ -44,6 +44,31 @@ echo $$ > "$LOG_DIR/continuous.pid"
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
 section() { echo; echo "══════════════════════════════════════════════════"; echo "  $*"; echo "══════════════════════════════════════════════════"; }
 
+# Rotate a log file: keep last MAX_LINES lines (default 5000)
+rotate_log() {
+  local file="$1" max="${2:-5000}"
+  [[ -f "$file" ]] || return 0
+  local lines
+  lines=$(wc -l < "$file")
+  if (( lines > max )); then
+    tail -n "$max" "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
+    log "Rotated $file (was $lines lines, kept last $max)"
+  fi
+}
+
+# Trim HKLII cache: delete oldest files when count exceeds MAX_CACHE (default 5000)
+trim_hklii_cache() {
+  local cache_dir="data/cache/hklii" max="${1:-5000}"
+  [[ -d "$cache_dir" ]] || return 0
+  local count
+  count=$(ls "$cache_dir" | wc -l)
+  if (( count > max )); then
+    local to_delete=$(( count - max ))
+    ls -t "$cache_dir" | tail -n "$to_delete" | xargs -I{} rm -f "$cache_dir/{}"
+    log "Trimmed HKLII cache: removed $to_delete oldest files (kept $max)"
+  fi
+}
+
 # ── Main loop ────────────────────────────────────────────────────────────────
 CYCLE=0
 
@@ -172,6 +197,16 @@ except:
     git commit -m "auto(cycle ${CYCLE}): graph rebuild — ${CRIMINAL_COUNT} criminal candidates, $(date '+%Y-%m-%d %H:%M')"
     git push && log "Pushed — Vercel will redeploy" || log "[WARN] git push failed"
   fi
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # LOG ROTATION + CACHE TRIM (keep disk usage low)
+  # ────────────────────────────────────────────────────────────────────────────
+  rotate_log "$LOG_DIR/continuous.log"       5000
+  rotate_log "$LOG_DIR/criminal_build.log"   3000
+  rotate_log "$LOG_DIR/criminal_loop.log"    3000
+  rotate_log "$LOG_DIR/civil_build.log"      3000
+  rotate_log "$LOG_DIR/civil_crawl.log"      3000
+  trim_hklii_cache 5000
 
   # ────────────────────────────────────────────────────────────────────────────
   # SLEEP before next cycle
