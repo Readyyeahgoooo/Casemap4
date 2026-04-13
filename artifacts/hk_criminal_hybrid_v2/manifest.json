@@ -1,15 +1,305 @@
 {
   "title": "Hong Kong Criminal Law Hierarchical Graph",
-  "generated_at": "2026-04-08T13:10:15.603075+00:00",
-  "node_count": 2375,
-  "edge_count": 4935,
-  "case_count": 912,
-  "statute_count": 253,
-  "topic_count": 43,
-  "lineage_count": 0,
-  "paragraph_count": 560,
-  "proposition_count": 560,
-  "enriched_case_count": 162,
+  "generated_at": "2026-04-13T14:42:31.620170+00:00",
+  "node_count": 1669,
+  "edge_count": 6349,
+  "case_count": 1010,
+  "statute_count": 338,
+  "topic_count": 60,
+  "lineage_count": 12,
+  "lineages": [
+    {
+      "id": "bail_risk_principles",
+      "node_id": "lineage:bail_risk_principles",
+      "title": "Bail: Risk Assessment and Grounds for Refusal",
+      "member_count": 3,
+      "topic_ids": [
+        "topic:evidence_procedure:46:bail_and_remand"
+      ],
+      "topic_labels": [
+        "Bail and Remand"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "confession_voluntariness",
+      "node_id": "lineage:confession_voluntariness",
+      "title": "Confessions and Voluntariness",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:evidence_procedure:40:confessions"
+      ],
+      "topic_labels": [
+        "Confessions"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "dishonesty_ghosh_ivey",
+      "node_id": "lineage:dishonesty_ghosh_ivey",
+      "title": "Dishonesty: From Ghosh to Ivey",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:property_dishonesty:20:dishonesty_ivey_v_genting_test"
+      ],
+      "topic_labels": [
+        "Dishonesty (Ivey v Genting Test)"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DPRT",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "drug_knowledge_possession",
+      "node_id": "lineage:drug_knowledge_possession",
+      "title": "Drug Trafficking: Knowledge and Possession",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:public_order_regulatory:28:drug_trafficking"
+      ],
+      "topic_labels": [
+        "Drug Trafficking"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "hearsay_res_gestae",
+      "node_id": "lineage:hearsay_res_gestae",
+      "title": "Hearsay: Res Gestae and Modern Exceptions",
+      "member_count": 3,
+      "topic_ids": [
+        "topic:evidence_procedure:41:identification_evidence"
+      ],
+      "topic_labels": [
+        "Identification Evidence"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "identification_turnbull",
+      "node_id": "lineage:identification_turnbull",
+      "title": "Identification Evidence: Turnbull Warnings",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:evidence_procedure:41:identification_evidence"
+      ],
+      "topic_labels": [
+        "Identification Evidence"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "joint_enterprise_liability",
+      "node_id": "lineage:joint_enterprise_liability",
+      "title": "Joint Enterprise / Secondary Liability",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:general_principles:06:conspiracy_and_attempt"
+      ],
+      "topic_labels": [
+        "Conspiracy and Attempt"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DPRT",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "mens_rea_intention",
+      "node_id": "lineage:mens_rea_intention",
+      "title": "Mens Rea: Intention and Foresight",
+      "member_count": 5,
+      "topic_ids": [
+        "topic:offences_against_person:09:mens_rea_of_murder_malice_aforethought"
+      ],
+      "topic_labels": [
+        "Mens Rea of Murder (Malice Aforethought)"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "money_laundering_knowledge",
+      "node_id": "lineage:money_laundering_knowledge",
+      "title": "Money Laundering: Knowledge and Reasonable Grounds",
+      "member_count": 3,
+      "topic_ids": [
+        "topic:public_order_regulatory:31:money_laundering"
+      ],
+      "topic_labels": [
+        "Money Laundering"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "provocation_reasonable_man",
+      "node_id": "lineage:provocation_reasonable_man",
+      "title": "Provocation: The Reasonable Man Test",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:offences_against_person:11:defence_of_provocation"
+      ],
+      "topic_labels": [
+        "Defence of Provocation"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "self_defence_proportionality",
+      "node_id": "lineage:self_defence_proportionality",
+      "title": "Self-Defence and Reasonable Force",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:defences:34:self_defence_and_reasonable_force"
+      ],
+      "topic_labels": [
+        "Self-defence and Reasonable Force"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    },
+    {
+      "id": "sentencing_tariff_principles",
+      "node_id": "lineage:sentencing_tariff_principles",
+      "title": "Sentencing: Tariff and Deterrence Principles",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:appeals_sentencing:48:sentencing_principles"
+      ],
+      "topic_labels": [
+        "Sentencing Principles"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "criminal"
+      ]
+    }
+  ],
+  "paragraph_count": 99,
+  "proposition_count": 99,
+  "enriched_case_count": 53,
   "notes": [
     "Hybrid hierarchical graph bundle generated from the Casemap relationship graph.",
     "Hierarchy is represented explicitly as Module -> Subground -> Topic while authorities remain graph-native.",
@@ -26,6 +316,6 @@
   ],
   "viewer_heading_public": "Hong Kong Criminal Law Hierarchical Knowledge Graph",
   "viewer_heading_internal": "Hong Kong Criminal Law Internal Hierarchy Explorer",
-  "viewer_intro_public": "A criminal-law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
-  "viewer_intro_internal": "This internal criminal-law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links."
+  "viewer_intro_public": "A Hong Kong Criminal Law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
+  "viewer_intro_internal": "This internal Hong Kong Criminal Law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links."
 }

@@ -1,72 +1,219 @@
 {
   "title": "Hong Kong Criminal Law Relationship Graph",
-  "generated_at": "2026-04-08T13:10:16.237612+00:00",
-  "case_count": 764,
-  "topic_count": 43,
-  "uncovered_topics": [],
+  "generated_at": "2026-04-13T14:42:33.306101+00:00",
+  "case_count": 997,
+  "topic_count": 60,
+  "uncovered_topics": [
+    {
+      "topic_id": "topic:evidence_procedure:43:arrest_search_and_fair_trial",
+      "label_en": "Arrest, Search, and Fair Trial",
+      "label_zh": "拘捕、搜查與公平審訊",
+      "search_queries": [
+        "arrest search HKSAR criminal",
+        "fair trial HKSAR criminal appeal",
+        "disclosure criminal HKSAR"
+      ]
+    },
+    {
+      "topic_id": "topic:evidence_procedure:45:character_and_similar_fact_evidence",
+      "label_en": "Character and Similar Fact Evidence",
+      "label_zh": "品格與類似事實證據",
+      "search_queries": [
+        "similar fact evidence HKSAR criminal",
+        "character evidence HKSAR",
+        "propensity evidence criminal HKSAR"
+      ]
+    },
+    {
+      "topic_id": "topic:evidence_procedure:46:bail_and_remand",
+      "label_en": "Bail and Remand",
+      "label_zh": "保釋與還柙",
+      "search_queries": [
+        "bail HKSAR criminal",
+        "remand custody HKSAR",
+        "bail application criminal HKSAR"
+      ]
+    },
+    {
+      "topic_id": "topic:regulatory_and_welfare_offences:53:environmental_offences",
+      "label_en": "Environmental Offences",
+      "label_zh": "環境罪行",
+      "search_queries": [
+        "water pollution HKSAR criminal",
+        "waste disposal ordinance HKSAR prosecution",
+        "environmental protection HKSAR criminal"
+      ]
+    },
+    {
+      "topic_id": "topic:financial_regulatory_crimes:56:market_manipulation_and_false_trading",
+      "label_en": "Market Manipulation and False Trading",
+      "label_zh": "操控市場與虛假交易",
+      "search_queries": [
+        "market manipulation HKSAR",
+        "false trading securities HKSAR",
+        "market misconduct tribunal HKSAR"
+      ]
+    },
+    {
+      "topic_id": "topic:financial_regulatory_crimes:59:false_accounting_and_financial_statement",
+      "label_en": "False Accounting and Financial Statements",
+      "label_zh": "虛假帳目與財務報表",
+      "search_queries": [
+        "false accounting HKSAR",
+        "misleading financial statements HKSAR criminal",
+        "audit fraud hong kong"
+      ]
+    },
+    {
+      "topic_id": "topic:financial_regulatory_crimes:60:smuggling_and_customs_offences",
+      "label_en": "Smuggling and Customs Offences",
+      "label_zh": "走私與海關罪行",
+      "search_queries": [
+        "smuggling HKSAR criminal",
+        "import export ordinance HKSAR offence",
+        "customs excise HKSAR criminal"
+      ]
+    }
+  ],
   "low_coverage_topics": [
     {
-      "topic_id": "topic:evidence_procedure:29:confessions",
-      "label_en": "Confessions",
+      "topic_id": "topic:public_order_regulatory:32:computer_crimes",
+      "label_en": "Computer Crimes",
       "case_count": 1
     },
     {
-      "topic_id": "topic:evidence_procedure:30:identification_evidence",
-      "label_en": "Identification Evidence",
+      "topic_id": "topic:defences:35:duress_and_necessity",
+      "label_en": "Duress and Necessity",
       "case_count": 2
     },
     {
-      "topic_id": "topic:regulatory_and_welfare_offences:43:occupational_safety_offences",
-      "label_en": "Occupational Safety Offences",
+      "topic_id": "topic:defences:38:automatism",
+      "label_en": "Automatism",
       "case_count": 2
+    },
+    {
+      "topic_id": "topic:appeals_sentencing:47:conviction_appeals",
+      "label_en": "Conviction Appeals",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:regulatory_and_welfare_offences:50:prevention_of_cruelty_to_animals_ordinan",
+      "label_en": "Prevention of Cruelty to Animals Ordinance (Cap. 169)",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:regulatory_and_welfare_offences:54:occupational_safety_offences",
+      "label_en": "Occupational Safety Offences",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:financial_regulatory_crimes:55:insider_dealing",
+      "label_en": "Insider Dealing",
+      "case_count": 2
+    },
+    {
+      "topic_id": "topic:financial_regulatory_crimes:57:aml_compliance_and_reporting_offences",
+      "label_en": "AML Compliance and Reporting Offences",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:financial_regulatory_crimes:58:corporate_fraud",
+      "label_en": "Corporate Fraud",
+      "case_count": 1
     }
   ],
   "cases_missing_principles": [
-    "[2021] HKDC 315",
-    "[2021] HKDC 1178",
-    "[2022] HKDC 1083",
-    "[2023] HKDC 218",
-    "[2023] HKDC 1588",
-    "[2018] HKCA 159",
-    "[2024] HKDC 315",
-    "[2024] HKDC 398",
-    "[2008] HKCU 932",
-    "HKSAR v. CHAN SUNG WING",
-    "[1984] HKLR 247",
-    "LO KWONG YIN v. HKSAR",
-    "HKSAR v. CHAN KAM SHING",
-    "[2016] HCA 30",
-    "[2012] QB 160",
-    "[1975] QB 773",
-    "[2003] UKPC 10",
-    "[1997] LQR 453",
-    "[1954] AC 378",
-    "[1989] QB 775",
-    "HKSAR v. CHAN MAN-SUM, IVAN",
-    "[2021] HKCFI 2833",
-    "[2019] HKCFA 2",
-    "[2018] HKCFA 36",
-    "[2020] HKCA 516",
-    "[1996] AC 1",
-    "[2013] NICA 23",
-    "[2020] HKCFI 2425",
-    "[1980] HKLR 466",
-    "[1974] AC 104"
+    "[2020] HKCFI 3106",
+    "[2021] HKDC 80",
+    "[2021] HKDC 218",
+    "[2021] HKDC 219",
+    "[2021] HKDC 51",
+    "[2020] HKCA 1087",
+    "[1984] HKC 1",
+    "[2018] HKDC 1412",
+    "[2013] HKCA 169",
+    "[2012] HKCA 247",
+    "[2021] HKDC 159",
+    "[2019] HKDC 1739",
+    "[2020] HKDC 197",
+    "[2020] HKCFI 1560",
+    "[2019] HKDC 892",
+    "[2019] HKDC 425",
+    "[2019] HKDC 273",
+    "[2019] HKDC 986",
+    "[2021] HKDC 294",
+    "[2021] HKDC 295",
+    "[2021] HKDC 221",
+    "[2021] HKDC 302",
+    "[2004] HKCU 1497",
+    "[1935] AC 462",
+    "[2008] HKEC 2071",
+    "[2020] HKCA 679",
+    "[1894] AC 57",
+    "[2021] HKDC 607",
+    "[2021] HKDC 303",
+    "[2021] HKDC 312"
   ],
   "warnings": [
-    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=prevention+of+bribery+ordinance+HKSAR+criminal&disablefuzzy=true; retried with an unverified TLS context.",
-    "Search failed for 'prevention of bribery ordinance HKSAR criminal': HTTP Error 500: Internal Server Error",
-    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=criminal+hearsay+ordinance+HKSAR&disablefuzzy=true; retried with an unverified TLS context.",
-    "Search failed for 'criminal hearsay ordinance HKSAR': HTTP Error 500: Internal Server Error",
-    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=confiscation+order+HKSAR+criminal&disablefuzzy=true; retried with an unverified TLS context.",
-    "Search failed for 'confiscation order HKSAR criminal': HTTP Error 500: Internal Server Error",
-    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=animal+welfare+ordinance+hong+kong&disablefuzzy=true; retried with an unverified TLS context.",
-    "Search failed for 'animal welfare ordinance hong kong': HTTP Error 500: Internal Server Error",
-    "SSL verification failed for https://www.hklii.hk/api/simplesearch?searchstring=waste+disposal+ordinance+HKSAR+prosecution&disablefuzzy=true; retried with an unverified TLS context.",
-    "Search failed for 'waste disposal ordinance HKSAR prosecution': HTTP Error 500: Internal Server Error"
+    "Search failed for 'actus reus murder HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'killing unlawful act murder HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'year and a day rule murder': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'malice aforethought HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'intention to kill HKSAR murder': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'grievous bodily harm murder intent HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'diminished responsibility HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'abnormality of mind murder HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'diminished responsibility manslaughter HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'provocation defence murder HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'loss of self-control HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'provocation manslaughter HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'involuntary manslaughter HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'constructive manslaughter HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unlawful dangerous act manslaughter HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'appropriation theft ordinance HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'assuming rights owner HKSAR theft': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'consent appropriation theft HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'dishonesty Ivey Genting HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Ghosh test dishonesty HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'dishonesty theft hong kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'intention permanently deprive HKSAR theft': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'borrowing theft HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'treating thing as own HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'prevention of bribery ordinance HKSAR criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'insanity M'Naghten HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'not guilty reason insanity HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mental disorder defence HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'automatism defence HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'involuntary act automatism criminal HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'sane automatism HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'intoxication defence HKSAR appeal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'voluntary intoxication specific intent HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'DPP v Majewski HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'criminal hearsay ordinance HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'confiscation order HKSAR criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'animal welfare ordinance hong kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'waste disposal ordinance HKSAR prosecution': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'insider dealing HKSAR SFC': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'securities futures ordinance cap 571 insider HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'insider trading hong kong criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'market manipulation HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'false trading securities HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'market misconduct tribunal HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'anti money laundering compliance HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'suspicious transaction report HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'AMLO hong kong offence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'corporate fraud HKSAR appeal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'conspiracy to defraud company HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Ponzi scheme hong kong criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'false accounting HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'misleading financial statements HKSAR criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'audit fraud hong kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'smuggling HKSAR criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'import export ordinance HKSAR offence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'customs excise HKSAR criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>"
   ],
   "storage": {
-    "embedding_record_count": 1058,
+    "embedding_record_count": 1393,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",
@@ -78,8 +225,8 @@
     "hybrid_bundle_written": true
   },
   "next_actions": [
-    "Run a second HKLII crawl on the uncovered topics using more specific offence or doctrine queries.",
+    "Run a second HKLII crawl on the uncovered Hong Kong Criminal Law topics using more specific doctrine queries.",
     "Feed uncovered topics into NotebookLM or a DeepSeek/OpenRouter enrichment pass if an MCP or API becomes available.",
-    "Review the low-coverage topics before promoting this graph as a full-production criminal-law map."
+    "Review the low-coverage topics before promoting this graph as a full-production Hong Kong Criminal Law map."
   ]
 }

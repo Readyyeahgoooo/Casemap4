@@ -1,26 +1,656 @@
 {
   "title": "Hong Kong Civil Law Relationship Graph",
-  "generated_at": "2026-04-13T10:36:02.531795+00:00",
+  "generated_at": "2026-04-13T15:17:32.160875+00:00",
   "source_documents": [
     {
       "label": "HKLII API",
       "kind": "api",
       "path": "https://www.hklii.hk/api"
+    },
+    {
+      "label": "Authority Lineages",
+      "kind": "note"
     }
   ],
   "source_count": 1,
-  "passage_count": 1170,
-  "retained_case_count": 49,
-  "retained_statute_count": 19,
+  "passage_count": 11107,
+  "retained_case_count": 388,
+  "retained_statute_count": 110,
   "public_mode": true,
   "notes": [
     "Primary Hong Kong Civil Law judgments were fetched from HKLII's public API.",
     "Supplemental textbook passages were used to improve topic coverage and backfill missing authorities.",
-    "NotebookLM is optional in this build; uncovered topics are surfaced in monitor_report.json for later enrichment."
+    "NotebookLM is optional in this build; uncovered topics are surfaced in monitor_report.json for later enrichment.",
+    "Curated lineage paths add Hong Kong and UK authority sequences with FLLW, APPD, DIST, and CODI edges."
   ],
-  "lineages": [],
-  "curated_lineage_count": 0,
-  "lineage_codes": [],
+  "lineages": [
+    {
+      "id": "interpretation_context_text",
+      "title": "Contractual Interpretation: \"Context vs. Text\"",
+      "topic_ids": [
+        "topic:contract_law:13:contractual_terms_and_interpretation"
+      ],
+      "topic_labels": [
+        "Contractual Terms and Interpretation"
+      ],
+      "members": [
+        {
+          "node_id": "case:investors_compensation_scheme_ltd_v_west_bromwich_building_socie",
+          "label": "Investors Compensation Scheme Ltd v West Bromwich Building Society",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "Originating UK authority for Lord Hoffmann's contextual principles."
+        },
+        {
+          "node_id": "case:sinoearn_international_ltd_v_hyundai_ccecc_joint_venture",
+          "label": "Sinoearn International Ltd v Hyundai-CCECC Joint Venture",
+          "type": "case",
+          "position": 2,
+          "code": "FLLW",
+          "treatment": "adopted",
+          "note": "Hong Kong CFA endorsement of the contextual approach."
+        },
+        {
+          "node_id": "case:rainy_sky_sa_v_kookmin_bank",
+          "label": "Rainy Sky SA v Kookmin Bank",
+          "type": "case",
+          "position": 3,
+          "code": "APPD",
+          "treatment": "relevant authority",
+          "note": "Commercial common-sense peak in the UK line."
+        },
+        {
+          "node_id": "case:fully_profit_asia_ltd_v_secretary_for_justice",
+          "label": "Fully Profit (Asia) Ltd v Secretary for Justice",
+          "type": "case",
+          "position": 4,
+          "code": "FLLW",
+          "treatment": "followed",
+          "note": "Hong Kong treatment following Rainy Sky."
+        },
+        {
+          "node_id": "case:arnold_v_britton",
+          "label": "Arnold v Britton",
+          "type": "case",
+          "position": 5,
+          "code": "DIST",
+          "treatment": "qualified",
+          "note": "Textualist correction emphasizing contractual language."
+        },
+        {
+          "node_id": "case:sany_heavy_industry_hk_ltd_v_sany_kenton_hk_ltd",
+          "label": "Sany Heavy Industry (HK) Ltd v Sany-Kenton (HK) Ltd",
+          "type": "case",
+          "position": 6,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Recent Hong Kong application of the textualist correction."
+        },
+        {
+          "node_id": "case:wood_v_capita",
+          "label": "Wood v Capita",
+          "type": "case",
+          "position": 7,
+          "code": "APPD",
+          "treatment": "qualified",
+          "note": "Modern unitary synthesis balancing text and context."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "DIST",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil",
+        "contract"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "consideration_practical_benefit",
+      "title": "Consideration and Variations: \"Practical Benefit\"",
+      "topic_ids": [
+        "topic:contract_law:12:contract_formation"
+      ],
+      "topic_labels": [
+        "Contract Formation"
+      ],
+      "members": [
+        {
+          "node_id": "case:stilk_v_myrick",
+          "label": "Stilk v Myrick",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "Traditional existing-duty rule."
+        },
+        {
+          "node_id": "case:williams_v_roffey_bros_nicholls",
+          "label": "Williams v Roffey Bros & Nicholls",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "qualified",
+          "note": "UK practical-benefit exception to the traditional rule."
+        },
+        {
+          "node_id": "case:ubc_construction_ltd_v_sung_foo_kee_ltd",
+          "label": "UBC (Construction) Ltd v Sung Foo Kee Ltd",
+          "type": "case",
+          "position": 3,
+          "code": "FLLW",
+          "treatment": "adopted",
+          "note": "Hong Kong adoption of Williams v Roffey."
+        },
+        {
+          "node_id": "case:re_selectmove",
+          "label": "Re Selectmove",
+          "type": "case",
+          "position": 4,
+          "code": "DIST",
+          "treatment": "qualified",
+          "note": "Refused to extend practical benefit to part-payment of debt."
+        },
+        {
+          "node_id": "case:chong_cheng_lin_courtney_v_cathay_pacific_airways_ltd",
+          "label": "Chong Cheng Lin Courtney v Cathay Pacific Airways Ltd",
+          "type": "case",
+          "position": 5,
+          "code": "FLLW",
+          "treatment": "followed",
+          "note": "Hong Kong follow-on treatment of the Selectmove limitation."
+        },
+        {
+          "node_id": "case:mwb_business_exchange_centres_ltd_v_rock_advertising_ltd",
+          "label": "MWB Business Exchange Centres Ltd v Rock Advertising Ltd",
+          "type": "case",
+          "position": 6,
+          "code": "DIST",
+          "treatment": "relevant authority",
+          "note": "Illustrates continuing caution in this area."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "DIST",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil",
+        "contract"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "penalty_clauses_modern_test",
+      "title": "Penalty Clauses: \"Modern Test\"",
+      "topic_ids": [
+        "topic:contract_law:19:damages_penalties_and_liquidated_damages"
+      ],
+      "topic_labels": [
+        "Damages, Penalties and Liquidated Damages"
+      ],
+      "members": [
+        {
+          "node_id": "case:dunlop_pneumatic_tyre_co_ltd_v_new_garage_motor_co_ltd",
+          "label": "Dunlop Pneumatic Tyre Co Ltd v New Garage & Motor Co Ltd",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "Classic genuine pre-estimate versus deterrent framing."
+        },
+        {
+          "node_id": "case:cavendish_square_holding_bv_v_el_makdessi",
+          "label": "Cavendish Square Holding BV v El Makdessi",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "qualified",
+          "note": "Modern legitimate-interest and proportionality test."
+        },
+        {
+          "node_id": "case:law_ting_pong_secondary_school_v_chen_wai_mick",
+          "label": "Law Ting Pong Secondary School v Chen Wai-mick",
+          "type": "case",
+          "position": 3,
+          "code": "FLLW",
+          "treatment": "adopted",
+          "note": "Hong Kong adoption of the Makdessi test."
+        },
+        {
+          "node_id": "case:china_great_wall_amc_international_holdings_co_ltd_v_royal_inves",
+          "label": "China Great Wall AMC (International) Holdings Co Ltd v Royal-Investment Group Corp",
+          "type": "case",
+          "position": 4,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Hong Kong application refining the Law Ting Pong line."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil",
+        "contract"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "undue_influence_etridge",
+      "title": "Undue Influence: \"Etridge\"",
+      "topic_ids": [
+        "topic:contract_law:17:illegality_and_public_policy"
+      ],
+      "topic_labels": [
+        "Illegality and Public Policy"
+      ],
+      "members": [
+        {
+          "node_id": "case:royal_bank_of_scotland_v_etridge_no_2",
+          "label": "Royal Bank of Scotland v Etridge (No 2)",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "Set the modern bank-procedure approach to constructive notice."
+        },
+        {
+          "node_id": "case:li_sau_keung_v_bank_of_china_hong_kong_ltd",
+          "label": "Li Sau Keung v Bank of China (Hong Kong) Ltd",
+          "type": "case",
+          "position": 2,
+          "code": "FLLW",
+          "treatment": "followed",
+          "note": "Hong Kong follow-on application."
+        }
+      ],
+      "codes": [
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil",
+        "contract"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "unconscionability_statutory",
+      "title": "Unconscionability: \"Statutory\"",
+      "topic_ids": [
+        "topic:contract_law:17:illegality_and_public_policy"
+      ],
+      "topic_labels": [
+        "Illegality and Public Policy"
+      ],
+      "members": [
+        {
+          "node_id": "statute:unconscionable_contracts_ordinance_cap_458",
+          "label": "Unconscionable Contracts Ordinance (Cap. 458)",
+          "type": "statute",
+          "position": 1,
+          "code": "CODI",
+          "treatment": "codified",
+          "note": "Statutory foundation of the Hong Kong doctrine."
+        },
+        {
+          "node_id": "case:shum_kong_v_chan_man_fai",
+          "label": "Shum Kong v Chan Man-fai",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Seminal Hong Kong interpretation of the Ordinance."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "CODI"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil",
+        "contract"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "intermediate_terms_hongkong_fir",
+      "title": "Breach and Termination: \"Intermediate Terms\"",
+      "topic_ids": [
+        "topic:contract_law:18:repudiatory_breach_and_termination"
+      ],
+      "topic_labels": [
+        "Repudiatory Breach and Termination"
+      ],
+      "members": [
+        {
+          "node_id": "case:hongkong_fir_shipping_co_ltd_v_kawasaki_kisen_kaisha_ltd",
+          "label": "Hongkong Fir Shipping Co Ltd v Kawasaki Kisen Kaisha Ltd",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "Foundational innominate-term authority with Hong Kong facts."
+        },
+        {
+          "node_id": "case:billion_star_development_ltd_v_wong_tak_fai",
+          "label": "Billion Star Development Ltd v Wong Tak-fai",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Modern Hong Kong application on termination rights."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil",
+        "contract",
+        "criminal"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "negligence_duty_of_care",
+      "title": "Negligence: Duty of Care",
+      "topic_ids": [
+        "topic:tort_law:24:contributory_negligence"
+      ],
+      "topic_labels": [
+        "Contributory Negligence"
+      ],
+      "members": [
+        {
+          "node_id": "case:donoghue_v_stevenson",
+          "label": "Donoghue v Stevenson",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "House of Lords — neighbour principle; duty of care owed to those who ought reasonably to be in contemplation as affected by acts or omissions."
+        },
+        {
+          "node_id": "case:anns_v_merton_london_borough_council",
+          "label": "Anns v Merton London Borough Council",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Two-stage test: sufficient proximity? Any policy reasons to limit duty? Enabled significant expansion of duty."
+        },
+        {
+          "node_id": "case:caparo_industries_plc_v_dickman",
+          "label": "Caparo Industries plc v Dickman",
+          "type": "case",
+          "position": 3,
+          "code": "DIST",
+          "treatment": "qualified",
+          "note": "House of Lords — three-stage test: (1) foreseeable harm, (2) proximity, (3) fair just and reasonable. Replaced Anns incrementalism."
+        },
+        {
+          "node_id": "case:luen_hing_fat_cooked_food_stall_v_yau_tsim_mong_district_board",
+          "label": "Luen Hing Fat Cooked Food Stall v Yau Tsim Mong District Board",
+          "type": "case",
+          "position": 4,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Hong Kong Court of Final Appeal applied Caparo three-stage test as the applicable framework."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "DIST",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "judicial_review_wednesbury_proportionality",
+      "title": "Judicial Review: From Wednesbury to Proportionality",
+      "topic_ids": [
+        "topic:constitutional_administrative_law:62:basic_law_and_bill_of_rights"
+      ],
+      "topic_labels": [
+        "Basic Law and Bill of Rights"
+      ],
+      "members": [
+        {
+          "node_id": "case:associated_provincial_picture_houses_ltd_v_wednesbury_corporatio",
+          "label": "Associated Provincial Picture Houses Ltd v Wednesbury Corporation",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "Court of Appeal — unreasonableness: decision so unreasonable that no reasonable authority could ever have come to it."
+        },
+        {
+          "node_id": "case:council_of_civil_service_unions_v_minister_for_civil_service",
+          "label": "Council of Civil Service Unions v Minister for Civil Service",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "House of Lords — three grounds of review: illegality, irrationality, procedural impropriety."
+        },
+        {
+          "node_id": "case:hysan_development_co_ltd_v_town_planning_board",
+          "label": "Hysan Development Co Ltd v Town Planning Board",
+          "type": "case",
+          "position": 3,
+          "code": "DIST",
+          "treatment": "qualified",
+          "note": "Hong Kong Court of Final Appeal — proportionality test applies for BOR/Basic Law rights; Wednesbury applies for non-rights matters."
+        },
+        {
+          "node_id": "case:leung_kwok_hung_v_hksar",
+          "label": "Leung Kwok Hung v HKSAR",
+          "type": "case",
+          "position": 4,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Court of Final Appeal applied proportionality to freedom of assembly restrictions under Basic Law."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "DIST",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "unfair_prejudice_minority_shareholders",
+      "title": "Unfair Prejudice and Minority Shareholder Protection",
+      "topic_ids": [
+        "topic:company_commercial_law:39:company_restoration_and_records"
+      ],
+      "topic_labels": [
+        "Company Restoration and Records"
+      ],
+      "members": [
+        {
+          "node_id": "case:o_neill_v_phillips",
+          "label": "O'Neill v Phillips",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "House of Lords — unfair prejudice requires conduct unfair in a commercial sense; legitimate expectations from informal understanding enforceable."
+        },
+        {
+          "node_id": "case:re_kong_thai_sawmill_miri_sdn_bhd",
+          "label": "Re Kong Thai Sawmill (Miri) Sdn Bhd",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Hong Kong Privy Council — just and equitable winding up; loss of mutual confidence in small quasi-partnership company."
+        },
+        {
+          "node_id": "case:re_kam_kwan_lai",
+          "label": "Re Kam Kwan Lai",
+          "type": "case",
+          "position": 3,
+          "code": "FLLW",
+          "treatment": "followed",
+          "note": "Hong Kong Court of First Instance — applied Companies Ordinance s.724 unfair prejudice; buyout remedy ordered."
+        },
+        {
+          "node_id": "case:re_chime_communications_ltd",
+          "label": "Re Chime Communications Ltd",
+          "type": "case",
+          "position": 4,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Court of Appeal — scope of unfair prejudice petition under Cap.622; management exclusion and valuation principles."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    },
+    {
+      "id": "ancillary_relief_equality",
+      "title": "Ancillary Relief: From Discretion to Equality",
+      "topic_ids": [
+        "topic:family_law:53:ancillary_relief_and_maintenance"
+      ],
+      "topic_labels": [
+        "Ancillary Relief and Maintenance"
+      ],
+      "members": [
+        {
+          "node_id": "case:white_v_white",
+          "label": "White v White",
+          "type": "case",
+          "position": 1,
+          "code": "ORIG",
+          "treatment": "originating authority",
+          "note": "House of Lords — yardstick of equality as check on discretion; no bias against non-money earner; outcome should not discriminate."
+        },
+        {
+          "node_id": "case:miller_v_miller_mcfarlane_v_mcfarlane",
+          "label": "Miller v Miller; McFarlane v McFarlane",
+          "type": "case",
+          "position": 2,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "House of Lords — sharing principle, compensation principle, and needs; sharing based on equal partnership of marriage."
+        },
+        {
+          "node_id": "case:lkw_v_dd",
+          "label": "LKW v DD",
+          "type": "case",
+          "position": 3,
+          "code": "FLLW",
+          "treatment": "followed",
+          "note": "Hong Kong Court of Final Appeal — adopted White/Miller framework; equal sharing as starting point; departure requires good reason."
+        },
+        {
+          "node_id": "case:sph_v_sa",
+          "label": "SPH v SA",
+          "type": "case",
+          "position": 4,
+          "code": "APPD",
+          "treatment": "applied",
+          "note": "Hong Kong Court of Appeal applied LKW v DD — factors justifying departure from equal sharing in long and short marriages."
+        }
+      ],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "domain_tags": [
+        "civil"
+      ],
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "created_at": "",
+      "last_updated": "",
+      "discovery_rounds": []
+    }
+  ],
+  "curated_lineage_count": 10,
+  "lineage_codes": {
+    "CODI": "Codified by Hong Kong ordinance",
+    "APPD": "Applied on the same principle",
+    "FLLW": "Followed or adopted in Hong Kong",
+    "DIST": "Distinguished or qualified",
+    "DPRT": "Departed from prior authority",
+    "ORIG": "Originating authority in the lineage"
+  },
   "viewer_heading_public": "Hong Kong Civil Law Hierarchical Knowledge Graph",
   "viewer_heading_internal": "Hong Kong Civil Law Internal Hierarchy Explorer",
   "viewer_intro_public": "A Hong Kong Civil Law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
@@ -29,8 +659,8 @@
   "domain_tags": [
     "civil"
   ],
-  "node_count": 151,
-  "edge_count": 215,
+  "node_count": 582,
+  "edge_count": 1284,
   "authority_tree": {
     "id": "authority_tree:hk_civil_law",
     "label_en": "Hong Kong Civil Law Knowledge Graph",
@@ -89,13 +719,53 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2021_hkcfi_306",
-              "case:2023_hkcfi_3123"
+              "case:2021_hkcfi_1035",
+              "case:2021_hkcfi_2158",
+              "case:2021_hkcfi_2351",
+              "case:2021_hkcfi_2362",
+              "case:2021_hkcfi_2422",
+              "case:2021_hkcfi_3234",
+              "case:2021_hkcfi_403",
+              "case:2021_hkdc_304",
+              "case:2021_hkdc_45",
+              "case:2021_hkdc_524",
+              "case:2022_hkca_117",
+              "case:2022_hkcfi_749",
+              "case:2023_hkcfi_1059",
+              "case:2023_hkcfi_2473",
+              "case:2024_hkcfi_1821",
+              "case:2024_hkdc_111",
+              "case:2024_hkdc_147",
+              "case:2026_hkdc_362"
             ],
             "statute_ids": [
-              "statute:anti_money_laundering_and_counter_terrorist_financing_ordinance",
-              "statute:order_20",
-              "statute:section_30",
+              "statute:cap_336",
+              "statute:cap_4",
+              "statute:cap_481",
+              "statute:companies_ordinance",
+              "statute:high_court_ordinance",
+              "statute:land_registration_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:non_contentious_probate_rules",
+              "statute:o_10",
+              "statute:o_32",
+              "statute:o_6",
+              "statute:o_12",
+              "statute:order_12",
+              "statute:order_18",
+              "statute:order_88",
+              "statute:section_23a",
+              "statute:wills_ordinance",
+              "statute:rule_1",
+              "statute:rule_12",
+              "statute:rule_2",
+              "statute:rule_40",
+              "statute:rule_8",
+              "statute:s_48",
+              "statute:section_2",
+              "statute:section_751",
+              "statute:sections_643",
+              "statute:the_rules_of_the_district_court",
               "statute:the_rules_of_the_high_court"
             ],
             "source_ids": [
@@ -103,8 +773,8 @@
             ],
             "metrics": {
               "topics": 3,
-              "cases": 2,
-              "statutes": 4,
+              "cases": 18,
+              "statutes": 28,
               "sources": 1,
               "lineages": 0
             },
@@ -151,23 +821,17 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2023_hkca_1193",
-              "case:2023_hkcfi_3123",
-              "case:2025_hkcfi_6332"
+              "case:2021_hkca_1846",
+              "case:2022_hkcfi_306"
             ],
-            "statute_ids": [
-              "statute:anti_money_laundering_and_counter_terrorist_financing_ordinance",
-              "statute:limitation_ordinance",
-              "statute:section_4",
-              "statute:section_30"
-            ],
+            "statute_ids": [],
             "source_ids": [
               "source:hklii_api"
             ],
             "metrics": {
               "topics": 4,
-              "cases": 3,
-              "statutes": 4,
+              "cases": 2,
+              "statutes": 0,
               "sources": 1,
               "lineages": 0
             },
@@ -217,24 +881,36 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2025_hkcfi_1128"
+            ],
+            "statute_ids": [
+              "statute:limitation_ordinance",
+              "statute:probate_and_administration_ordinance",
+              "statute:trustee_ordinance",
+              "statute:section_2",
+              "statute:section_20",
+              "statute:section_52",
+              "statute:sections_33"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 4,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 1,
+              "statutes": 7,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           }
         ],
         "metrics": {
           "subgrounds": 3,
           "topics": 11,
-          "cases": 4,
-          "statutes": 6,
+          "cases": 21,
+          "statutes": 34,
           "sources": 1,
           "lineages": 0
         }
@@ -340,24 +1016,67 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2021_hkca_325",
+              "case:2020_hkcfi_2477",
+              "case:2021_hkca_1211",
+              "case:2021_hkca_1450",
+              "case:2021_hkcfi_1552",
+              "case:2021_hkcfi_2422",
               "case:2021_hkcfi_2840",
-              "case:2022_hkcfi_2984"
+              "case:2021_hkcfi_2966",
+              "case:2021_hkcfi_3822",
+              "case:2022_hkcfi_1450",
+              "case:2022_hkcfi_977",
+              "case:2023_hkcfi_3043",
+              "case:2024_hkcfi_2133",
+              "case:2024_hkcfi_2630",
+              "case:2024_hkcfi_2773",
+              "case:2025_hkcfi_3823",
+              "case:2025_hkdc_547",
+              "case:2026_hkcfa_9",
+              "case:2026_hkcfi_749",
+              "case:2026_hkcfi_993"
             ],
             "statute_ids": [
+              "statute:bankruptcy_ordinance",
+              "statute:bankruptcy_rules",
+              "statute:cap_32",
+              "statute:cap_4",
+              "statute:cap_6",
               "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
+              "statute:companies_winding_up_rules",
+              "statute:companies_ordinance",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:employees_compensation_ordinance",
+              "statute:high_court_ordinance",
+              "statute:legal_aid_regulations",
               "statute:limitation_ordinance",
-              "statute:section_4",
+              "statute:money_lenders_ordinance",
+              "statute:order_14",
+              "statute:order_83a",
+              "statute:order_86",
               "statute:securities_and_futures_ordinance",
-              "statute:section_40"
+              "statute:rule_1",
+              "statute:rule_48",
+              "statute:rule_5",
+              "statute:s_102",
+              "statute:section_17",
+              "statute:section_20",
+              "statute:section_26",
+              "statute:section_27",
+              "statute:section_3",
+              "statute:section_35",
+              "statute:section_4",
+              "statute:section_40",
+              "statute:section_49",
+              "statute:the_rules_of_the_high_court"
             ],
             "source_ids": [
               "source:hklii_api"
             ],
             "metrics": {
               "topics": 3,
-              "cases": 3,
-              "statutes": 5,
+              "cases": 19,
+              "statutes": 32,
               "sources": 1,
               "lineages": 0
             },
@@ -419,8 +1138,8 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 10,
-          "cases": 3,
-          "statutes": 5,
+          "cases": 19,
+          "statutes": 32,
           "sources": 1,
           "lineages": 0
         }
@@ -476,28 +1195,45 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2024_hkdc_950",
-              "case:2025_hkdc_94"
+              "case:2021_hkcfi_1095",
+              "case:2021_hkcfi_2225",
+              "case:2021_hkdc_1630",
+              "case:2022_hkcfi_306",
+              "case:2023_hkcfi_1156",
+              "case:2023_hkcfi_1965",
+              "case:2023_hkcfi_3353",
+              "case:2024_hkdc_1145",
+              "case:2024_hkdc_1689",
+              "case:2025_hkcfi_304",
+              "case:2025_hkdc_2183",
+              "case:2026_hkcfi_229"
             ],
             "statute_ids": [
-              "statute:cap_336",
-              "statute:civil_liability_contribution_ordinance",
+              "statute:cap_4",
+              "statute:control_of_exemption_clauses_ordinance",
               "statute:employees_compensation_ordinance",
-              "statute:law_amendment_and_reform_consolidation_ordinance",
-              "statute:order_14",
+              "statute:legal_aid_regulations",
+              "statute:lifts_and_escalators_safety_ordinance",
+              "statute:lifts_and_escalators_ordinance",
+              "statute:limitation_ordinance",
+              "statute:matrimonial_proceedings_and_property_ordinance",
+              "statute:o38",
               "statute:order_18",
-              "statute:section_25",
-              "statute:section_3",
-              "statute:section_19",
-              "statute:the_rules_of_the_district_court"
+              "statute:order_1a",
+              "statute:section_4",
+              "statute:section_6",
+              "statute:section_7",
+              "statute:sections_7",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
             ],
             "source_ids": [
               "source:hklii_api"
             ],
             "metrics": {
               "topics": 3,
-              "cases": 2,
-              "statutes": 10,
+              "cases": 12,
+              "statutes": 17,
               "sources": 1,
               "lineages": 0
             },
@@ -542,22 +1278,53 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2021_hkcfi_2840"
+              "case:2021_hkcfi_2225",
+              "case:2021_hkcfi_2840",
+              "case:2021_hkdc_385",
+              "case:2022_hkca_1855",
+              "case:2022_hkcfi_306",
+              "case:2022_hkcfi_3301",
+              "case:2022_hkcfi_3355",
+              "case:2022_hkcfi_946",
+              "case:2022_hkdc_1309",
+              "case:2022_hkdc_409",
+              "case:2023_hkca_594",
+              "case:2023_hkcfi_3342",
+              "case:2023_hkdc_912",
+              "case:2025_hkcfa_6",
+              "case:2025_hkcfi_2642",
+              "case:2026_hkca_204",
+              "case:2026_hkcfi_291"
             ],
             "statute_ids": [
+              "statute:cap_4",
               "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
+              "statute:companies_ordinance",
+              "statute:employees_compensation_ordinance",
+              "statute:high_court_ordinance",
+              "statute:lands_resumption_ordinance",
+              "statute:lands_tribunal_ordinance",
+              "statute:legal_aid_regulations",
               "statute:limitation_ordinance",
-              "statute:section_4",
+              "statute:order_59",
+              "statute:railways_ordinance",
+              "statute:roads_works_use_and_compensation_ordinance",
               "statute:securities_and_futures_ordinance",
-              "statute:section_40"
+              "statute:s_827",
+              "statute:section_10",
+              "statute:section_11",
+              "statute:section_4",
+              "statute:section_40",
+              "statute:section_49",
+              "statute:the_rules_of_the_high_court"
             ],
             "source_ids": [
               "source:hklii_api"
             ],
             "metrics": {
               "topics": 3,
-              "cases": 1,
-              "statutes": 5,
+              "cases": 17,
+              "statutes": 20,
               "sources": 1,
               "lineages": 0
             },
@@ -595,24 +1362,54 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2025_hkcfi_388",
+              "case:2026_hkcfa_2"
+            ],
+            "statute_ids": [
+              "statute:cap_362",
+              "statute:cap_4",
+              "statute:cap_634",
+              "statute:chapter_10",
+              "statute:competition_ordinance",
+              "statute:disability_discrimination_ordinance",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:high_court_ordinance",
+              "statute:landlord_and_tenant_consolidation_ordinance",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:order_15",
+              "statute:personal_data_privacy_ordinance",
+              "statute:private_columbaria_ordinance",
+              "statute:race_discrimination_ordinance",
+              "statute:sex_discrimination_ordinance",
+              "statute:section_13f",
+              "statute:section_21l",
+              "statute:section_4",
+              "statute:section_6",
+              "statute:section_64",
+              "statute:sections_2",
+              "statute:sections_7",
+              "statute:sections_70b",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 2,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 2,
+              "statutes": 24,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           }
         ],
         "metrics": {
           "subgrounds": 3,
           "topics": 8,
-          "cases": 3,
-          "statutes": 15,
+          "cases": 29,
+          "statutes": 49,
           "sources": 1,
           "lineages": 0
         }
@@ -711,17 +1508,54 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2021_hkcfi_1552",
+              "case:2021_hkcfi_399",
+              "case:2021_hkdc_172",
+              "case:2022_hkcfi_1710",
+              "case:2022_hkcfi_977",
+              "case:2022_hkdc_1095",
+              "case:2022_hkdc_303",
+              "case:2024_hkdc_21",
+              "case:2024_hkdc_217",
+              "case:2024_hkdc_537",
+              "case:2025_hkcfi_1128",
+              "case:2026_hkcfa_9"
+            ],
+            "statute_ids": [
+              "statute:cap_163",
+              "statute:cap_336",
+              "statute:companies_ordinance",
+              "statute:district_court_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:limitation_ordinance",
+              "statute:order_14",
+              "statute:order_15",
+              "statute:order_19",
+              "statute:order_32",
+              "statute:order_83a",
+              "statute:probate_and_administration_ordinance",
+              "statute:trustee_ordinance",
+              "statute:section_2",
+              "statute:section_20",
+              "statute:section_50",
+              "statute:section_52",
+              "statute:section_827",
+              "statute:sections_33",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 3,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 12,
+              "statutes": 21,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           },
           {
             "id": "subground:property_land_law:building_management_possession",
@@ -755,25 +1589,33 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2021_hkdc_304"
+            ],
+            "statute_ids": [
+              "statute:cap_4",
+              "statute:order_88",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 2,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 1,
+              "statutes": 3,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           }
         ],
         "metrics": {
           "subgrounds": 3,
           "topics": 7,
-          "cases": 0,
-          "statutes": 0,
-          "sources": 0,
+          "cases": 13,
+          "statutes": 23,
+          "sources": 1,
           "lineages": 0
         }
       },
@@ -827,17 +1669,43 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2021_hkca_1450",
+              "case:2021_hkcfi_378",
+              "case:2021_hkcfi_814",
+              "case:2025_hkcfi_5278"
+            ],
+            "statute_ids": [
+              "statute:cap_32",
+              "statute:cap_4",
+              "statute:companies_ordinance",
+              "statute:evidence_ordinance",
+              "statute:high_court_ordinance",
+              "statute:limitation_ordinance",
+              "statute:money_lenders_ordinance",
+              "statute:section_465",
+              "statute:securities_and_futures_ordinance",
+              "statute:rule_1",
+              "statute:s_212",
+              "statute:s_727",
+              "statute:s_903",
+              "statute:s48",
+              "statute:section_131",
+              "statute:section_20",
+              "statute:section_26",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 3,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 4,
+              "statutes": 18,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           },
           {
             "id": "subground:company_commercial_law:winding_up_insolvency",
@@ -875,17 +1743,49 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2023_hkcfi_1478",
+              "case:2026_hkcfa_2"
+            ],
+            "statute_ids": [
+              "statute:cap_362",
+              "statute:cap_4",
+              "statute:cap_634",
+              "statute:chapter_10",
+              "statute:chapter_6",
+              "statute:chapter_9",
+              "statute:competition_ordinance",
+              "statute:disability_discrimination_ordinance",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:high_court_ordinance",
+              "statute:landlord_and_tenant_consolidation_ordinance",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:order_14a",
+              "statute:order_15",
+              "statute:personal_data_privacy_ordinance",
+              "statute:race_discrimination_ordinance",
+              "statute:sex_discrimination_ordinance",
+              "statute:section_13f",
+              "statute:section_21l",
+              "statute:section_4",
+              "statute:section_6",
+              "statute:section_64",
+              "statute:sections_2",
+              "statute:sections_7",
+              "statute:sections_70b",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 2,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 2,
+              "statutes": 26,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           },
           {
             "id": "subground:company_commercial_law:commercial_transactions",
@@ -947,9 +1847,9 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 9,
-          "cases": 0,
-          "statutes": 0,
-          "sources": 0,
+          "cases": 6,
+          "statutes": 41,
+          "sources": 1,
           "lineages": 0
         }
       },
@@ -1041,28 +1941,17 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [
-              "case:2024_hkdc_950"
-            ],
-            "statute_ids": [
-              "statute:civil_liability_contribution_ordinance",
-              "statute:employees_compensation_ordinance",
-              "statute:law_amendment_and_reform_consolidation_ordinance",
-              "statute:section_25",
-              "statute:section_3",
-              "statute:section_19"
-            ],
-            "source_ids": [
-              "source:hklii_api"
-            ],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
             "metrics": {
               "topics": 2,
-              "cases": 1,
-              "statutes": 6,
-              "sources": 1,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
               "lineages": 0
             },
-            "coverage": "mapped"
+            "coverage": "placeholder"
           },
           {
             "id": "subground:employment_law:mpf_restraint_trade",
@@ -1096,24 +1985,56 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2023_hkcfi_1478",
+              "case:2026_hkcfa_2"
+            ],
+            "statute_ids": [
+              "statute:cap_362",
+              "statute:cap_4",
+              "statute:cap_634",
+              "statute:chapter_10",
+              "statute:chapter_6",
+              "statute:chapter_9",
+              "statute:competition_ordinance",
+              "statute:disability_discrimination_ordinance",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:high_court_ordinance",
+              "statute:landlord_and_tenant_consolidation_ordinance",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:order_14a",
+              "statute:order_15",
+              "statute:personal_data_privacy_ordinance",
+              "statute:race_discrimination_ordinance",
+              "statute:sex_discrimination_ordinance",
+              "statute:section_13f",
+              "statute:section_21l",
+              "statute:section_4",
+              "statute:section_6",
+              "statute:section_64",
+              "statute:sections_2",
+              "statute:sections_7",
+              "statute:sections_70b",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 2,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 2,
+              "statutes": 26,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           }
         ],
         "metrics": {
           "subgrounds": 3,
           "topics": 6,
-          "cases": 1,
-          "statutes": 6,
+          "cases": 2,
+          "statutes": 26,
           "sources": 1,
           "lineages": 0
         }
@@ -1166,17 +2087,49 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2023_hkcfi_1478",
+              "case:2026_hkcfa_2"
+            ],
+            "statute_ids": [
+              "statute:cap_362",
+              "statute:cap_4",
+              "statute:cap_634",
+              "statute:chapter_10",
+              "statute:chapter_6",
+              "statute:chapter_9",
+              "statute:competition_ordinance",
+              "statute:disability_discrimination_ordinance",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:high_court_ordinance",
+              "statute:landlord_and_tenant_consolidation_ordinance",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:order_14a",
+              "statute:order_15",
+              "statute:personal_data_privacy_ordinance",
+              "statute:race_discrimination_ordinance",
+              "statute:sex_discrimination_ordinance",
+              "statute:section_13f",
+              "statute:section_21l",
+              "statute:section_4",
+              "statute:section_6",
+              "statute:section_64",
+              "statute:sections_2",
+              "statute:sections_7",
+              "statute:sections_70b",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 2,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 2,
+              "statutes": 26,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           },
           {
             "id": "subground:family_law:children_welfare",
@@ -1214,17 +2167,51 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2023_hkcfi_1478",
+              "case:2025_hkcfi_388",
+              "case:2026_hkcfa_2"
+            ],
+            "statute_ids": [
+              "statute:cap_362",
+              "statute:cap_4",
+              "statute:cap_634",
+              "statute:chapter_10",
+              "statute:chapter_6",
+              "statute:chapter_9",
+              "statute:competition_ordinance",
+              "statute:disability_discrimination_ordinance",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:high_court_ordinance",
+              "statute:landlord_and_tenant_consolidation_ordinance",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:order_14a",
+              "statute:order_15",
+              "statute:personal_data_privacy_ordinance",
+              "statute:private_columbaria_ordinance",
+              "statute:race_discrimination_ordinance",
+              "statute:sex_discrimination_ordinance",
+              "statute:section_13f",
+              "statute:section_21l",
+              "statute:section_4",
+              "statute:section_6",
+              "statute:section_64",
+              "statute:sections_2",
+              "statute:sections_7",
+              "statute:sections_70b",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 2,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 3,
+              "statutes": 27,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           },
           {
             "id": "subground:family_law:family_protection",
@@ -1274,9 +2261,9 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 6,
-          "cases": 0,
-          "statutes": 0,
-          "sources": 0,
+          "cases": 3,
+          "statutes": 27,
+          "sources": 1,
           "lineages": 0
         }
       },
@@ -1500,25 +2487,62 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2021_hkcfi_1552",
+              "case:2021_hkcfi_399",
+              "case:2021_hkdc_172",
+              "case:2022_hkcfi_1710",
+              "case:2022_hkcfi_977",
+              "case:2022_hkdc_1095",
+              "case:2022_hkdc_303",
+              "case:2024_hkdc_21",
+              "case:2024_hkdc_217",
+              "case:2024_hkdc_537",
+              "case:2025_hkcfi_1128",
+              "case:2026_hkcfa_9"
+            ],
+            "statute_ids": [
+              "statute:cap_163",
+              "statute:cap_336",
+              "statute:companies_ordinance",
+              "statute:district_court_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:limitation_ordinance",
+              "statute:order_14",
+              "statute:order_15",
+              "statute:order_19",
+              "statute:order_32",
+              "statute:order_83a",
+              "statute:probate_and_administration_ordinance",
+              "statute:trustee_ordinance",
+              "statute:section_2",
+              "statute:section_20",
+              "statute:section_50",
+              "statute:section_52",
+              "statute:section_827",
+              "statute:sections_33",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 3,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 12,
+              "statutes": 21,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           }
         ],
         "metrics": {
           "subgrounds": 2,
           "topics": 5,
-          "cases": 0,
-          "statutes": 0,
-          "sources": 0,
+          "cases": 12,
+          "statutes": 21,
+          "sources": 1,
           "lineages": 0
         }
       },
@@ -1570,17 +2594,49 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [],
-            "statute_ids": [],
-            "source_ids": [],
+            "case_ids": [
+              "case:2023_hkcfi_1478",
+              "case:2026_hkcfa_2"
+            ],
+            "statute_ids": [
+              "statute:cap_362",
+              "statute:cap_4",
+              "statute:cap_634",
+              "statute:chapter_10",
+              "statute:chapter_6",
+              "statute:chapter_9",
+              "statute:competition_ordinance",
+              "statute:disability_discrimination_ordinance",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:high_court_ordinance",
+              "statute:landlord_and_tenant_consolidation_ordinance",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:order_14a",
+              "statute:order_15",
+              "statute:personal_data_privacy_ordinance",
+              "statute:race_discrimination_ordinance",
+              "statute:sex_discrimination_ordinance",
+              "statute:section_13f",
+              "statute:section_21l",
+              "statute:section_4",
+              "statute:section_6",
+              "statute:section_64",
+              "statute:sections_2",
+              "statute:sections_7",
+              "statute:sections_70b",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
             "metrics": {
               "topics": 2,
-              "cases": 0,
-              "statutes": 0,
-              "sources": 0,
+              "cases": 2,
+              "statutes": 26,
+              "sources": 1,
               "lineages": 0
             },
-            "coverage": "placeholder"
+            "coverage": "mapped"
           },
           {
             "id": "subground:arbitration_adr:mediation_settlement",
@@ -1634,16 +2690,17 @@
         "metrics": {
           "subgrounds": 2,
           "topics": 4,
-          "cases": 0,
-          "statutes": 0,
-          "sources": 0,
+          "cases": 2,
+          "statutes": 26,
+          "sources": 1,
           "lineages": 0
         }
       }
     ]
   },
+  "auto_lineage_count": 0,
   "storage": {
-    "embedding_record_count": 140,
+    "embedding_record_count": 570,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",
@@ -1657,12 +2714,232 @@
   "monitor_report": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/monitor_report.json",
   "monitor_dashboard": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/monitor_report.html",
   "build_progress": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/build_progress.json",
-  "crawler_warnings": [],
-  "case_count": 9,
+  "crawler_warnings": [
+    "Search failed for 'writ originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Rules of High Court writ': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'District Court originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'pleadings amendment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'statement of claim amendment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unpleaded defence summary judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'service out of jurisdiction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'substituted service': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'jurisdiction challenge civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'discovery disclosure civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'specific discovery': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'litigation privilege discovery': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'strike out pleadings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'no triable issue summary judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'interlocutory injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mareva injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Anton Piller order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'security for costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'company plaintiff security costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Order 23 security for costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'civil burden of proof': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trial evidence civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'hearsay civil evidence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'costs follow event': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'taxation of costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'enforcement of judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'garnishee order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'charging order civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'leave to appeal civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Limitation Ordinance Cap. 347': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'extension of time civil appeal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract formation offer acceptance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'consideration intention contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'certainty contract terms': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract interpretation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'implied terms contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'incorporation exclusion clause': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Contracts Rights of Third Parties Ordinance Cap. 623': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'third party rights contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'privity contract Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Misrepresentation Ordinance Cap. 284': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fraudulent misrepresentation damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mistake contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'duress undue influence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unconscionable bargain contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract illegality public policy': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'illegal contract restitution': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restraint of trade contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'repudiatory breach termination': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'anticipatory breach contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'affirmation termination contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract damages remoteness': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'penalty clause liquidated damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mitigation contract damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'specific performance contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'injunction breach of contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable remedies contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Sale of Goods Ordinance Cap. 26': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'implied terms sale of goods': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'rejection goods breach': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach of duty negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'standard of care negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'causation negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'remoteness damage negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'thin skull rule': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contributory negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'apportionment negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Law Amendment Reform Consolidation Ordinance contributory negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'personal injury damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'loss of earnings personal injury': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'pain suffering loss amenity': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Occupiers Liability Ordinance Cap. 314': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupiers liability': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'visitor duty occupier': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'vicarious liability': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'professional negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'solicitor negligence duty': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'private nuisance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'nuisance injunction damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'water seepage nuisance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Defamation Ordinance Cap. 21': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'defamation qualified privilege': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'libel slander damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'sale and purchase property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'good title conveyancing': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Landlord Tenant Consolidation Ordinance Cap. 7': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'forfeiture lease relief': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'tenancy possession arrears': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mortgage priority land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Land Registration Ordinance Cap. 128': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable mortgage property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'co-ownership property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'resulting trust property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'constructive trust land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'easement right of way': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restrictive covenant land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'building covenant property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Building Management Ordinance Cap. 344': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'deed of mutual covenant': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'incorporated owners building management': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'adverse possession': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'limitation adverse possession': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'squatter possession land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fiduciary duty director': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach directors duties': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unfair prejudice Companies Ordinance Cap. 622': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'derivative action company': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'minority shareholder unfair prejudice': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'company restoration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Companies Registry restoration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'inspection company records': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'winding up petition': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Companies Winding Up Cap. 32': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'statutory demand winding up': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Bankruptcy Ordinance Cap. 6': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'receivership company': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trustee in bankruptcy': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'banking letter of credit': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'bank duty customer': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'guarantee indemnity bank': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'insurance indemnity subrogation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Insurance Ordinance Cap. 41': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'policy interpretation insurance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'agency authority contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'apparent authority agent': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach warranty authority': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Securities Futures Ordinance Cap. 571 civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'market misconduct tribunal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'SFC injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Employment Ordinance Cap. 57 wages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'employment contract terms': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'employee contractor status': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'wrongful dismissal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unreasonable dismissal Employment Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'termination employment contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Sex Discrimination Ordinance Cap. 480 employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Disability Discrimination Ordinance Cap. 487 employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Race Discrimination Ordinance Cap. 602': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Employees Compensation Ordinance Cap. 282': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'work injury compensation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupational injury employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mandatory Provident Fund Cap. 485': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'MPF contribution employer': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'MPF Schemes Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restraint of trade employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'non-compete employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'confidential information employee injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Matrimonial Causes Ordinance Cap. 179': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'divorce petition unreasonable behaviour': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'matrimonial causes Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'ancillary relief': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Matrimonial Proceedings Property Ordinance Cap. 192': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'maintenance spouse children': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'child custody welfare': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'care and control access': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Guardianship of Minors Ordinance Cap. 13': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'child relocation Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'access order child': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'best interests child relocation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Domestic Cohabitation Relationships Violence Ordinance Cap. 189': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'non-molestation order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupation order domestic violence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'family injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'injunction matrimonial proceedings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'molestation injunction family': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'promptness judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'alternative remedy judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'public law error judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Wednesbury unreasonableness Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'error of law judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'natural justice procedural fairness': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'right to be heard administrative': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'bias apparent bias judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'substantive legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'procedural legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Basic Law judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Hong Kong Bill of Rights Ordinance Cap. 383': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'proportionality constitutional rights': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'certiorari mandamus prohibition': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'declaration judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'damages public law': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'wills probate testamentary capacity': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'probate caveat': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'valid will Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'intestacy estate administration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'administrator estate': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Inheritance Provision Family Dependants Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fiduciary duty trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach of trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trustee duty account': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'constructive trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'resulting trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'common intention constructive trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable tracing': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'account of profits fiduciary': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable compensation breach trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Arbitration Ordinance Cap. 609 stay': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'arbitration agreement stay proceedings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'kompetenz kompetenz arbitration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'enforcement arbitral award': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'setting aside arbitral award': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'New York Convention award Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mediation Ordinance Cap. 620': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mediation confidentiality': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'without prejudice mediation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'sanctioned payment costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'without prejudice save as to costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkca/2025/677: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1578: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/517: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  "case_count": 78,
   "candidates_registry": "data/batch/candidates_civil_clean.json",
-  "candidate_registry_count": 37,
+  "candidate_registry_count": 77,
   "monitor": {
-    "uncovered_topics": 60,
+    "uncovered_topics": 53,
     "low_coverage_topics": 10
   }
 }

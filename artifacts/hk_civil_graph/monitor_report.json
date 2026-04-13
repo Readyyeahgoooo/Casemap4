@@ -1,9 +1,19 @@
 {
   "title": "Hong Kong Civil Law Relationship Graph",
-  "generated_at": "2026-04-13T10:36:02.561234+00:00",
-  "case_count": 49,
+  "generated_at": "2026-04-13T15:17:32.281147+00:00",
+  "case_count": 388,
   "topic_count": 72,
   "uncovered_topics": [
+    {
+      "topic_id": "topic:civil_procedure:02:pleadings_and_amendment",
+      "label_en": "Pleadings and Amendment",
+      "label_zh": "狀書及修訂",
+      "search_queries": [
+        "pleadings amendment",
+        "statement of claim amendment",
+        "unpleaded defence summary judgment"
+      ]
+    },
     {
       "topic_id": "topic:civil_procedure:03:service_and_jurisdiction",
       "label_en": "Service and Jurisdiction",
@@ -12,6 +22,26 @@
         "service out of jurisdiction",
         "substituted service",
         "jurisdiction challenge civil"
+      ]
+    },
+    {
+      "topic_id": "topic:civil_procedure:04:discovery_and_disclosure",
+      "label_en": "Discovery and Disclosure",
+      "label_zh": "文件透露及披露",
+      "search_queries": [
+        "discovery disclosure civil",
+        "specific discovery",
+        "litigation privilege discovery"
+      ]
+    },
+    {
+      "topic_id": "topic:civil_procedure:06:interim_injunctions",
+      "label_en": "Interim Injunctions",
+      "label_zh": "臨時禁制令",
+      "search_queries": [
+        "interlocutory injunction",
+        "Mareva injunction",
+        "Anton Piller order"
       ]
     },
     {
@@ -32,16 +62,6 @@
         "costs follow event",
         "taxation of costs",
         "Calderbank offer costs"
-      ]
-    },
-    {
-      "topic_id": "topic:civil_procedure:10:enforcement_of_judgments",
-      "label_en": "Enforcement of Judgments",
-      "label_zh": "判決執行",
-      "search_queries": [
-        "enforcement of judgment",
-        "garnishee order",
-        "charging order civil"
       ]
     },
     {
@@ -82,16 +102,6 @@
         "Contracts Rights of Third Parties Ordinance Cap. 623",
         "third party rights contract",
         "privity contract Hong Kong"
-      ]
-    },
-    {
-      "topic_id": "topic:contract_law:16:mistake_duress_and_undue_influence",
-      "label_en": "Mistake, Duress and Undue Influence",
-      "label_zh": "錯誤、脅迫及不當影響",
-      "search_queries": [
-        "mistake contract",
-        "duress undue influence",
-        "unconscionable bargain contract"
       ]
     },
     {
@@ -175,16 +185,6 @@
       ]
     },
     {
-      "topic_id": "topic:tort_law:28:private_nuisance",
-      "label_en": "Private Nuisance",
-      "label_zh": "私人滋擾",
-      "search_queries": [
-        "private nuisance",
-        "nuisance injunction damages",
-        "water seepage nuisance"
-      ]
-    },
-    {
       "topic_id": "topic:tort_law:29:defamation_and_privilege",
       "label_en": "Defamation and Privilege",
       "label_zh": "誹謗及特權",
@@ -225,16 +225,6 @@
       ]
     },
     {
-      "topic_id": "topic:property_land_law:33:co_ownership_and_trusts_of_land",
-      "label_en": "Co-ownership and Trusts of Land",
-      "label_zh": "共同擁有及土地信託",
-      "search_queries": [
-        "co-ownership property",
-        "resulting trust property",
-        "constructive trust land"
-      ]
-    },
-    {
       "topic_id": "topic:property_land_law:34:easements_and_covenants",
       "label_en": "Easements and Covenants",
       "label_zh": "地役權及契諾",
@@ -255,26 +245,6 @@
       ]
     },
     {
-      "topic_id": "topic:property_land_law:36:adverse_possession",
-      "label_en": "Adverse Possession",
-      "label_zh": "逆權管有",
-      "search_queries": [
-        "adverse possession",
-        "limitation adverse possession",
-        "squatter possession land"
-      ]
-    },
-    {
-      "topic_id": "topic:company_commercial_law:37:directors_duties",
-      "label_en": "Directors' Duties",
-      "label_zh": "董事責任",
-      "search_queries": [
-        "directors duties Companies Ordinance Cap. 622",
-        "fiduciary duty director",
-        "breach directors duties"
-      ]
-    },
-    {
       "topic_id": "topic:company_commercial_law:38:unfair_prejudice_and_derivative_actions",
       "label_en": "Unfair Prejudice and Derivative Actions",
       "label_zh": "不公平損害及衍生訴訟",
@@ -292,16 +262,6 @@
         "company restoration",
         "Companies Registry restoration",
         "inspection company records"
-      ]
-    },
-    {
-      "topic_id": "topic:company_commercial_law:40:winding_up_petitions",
-      "label_en": "Winding Up Petitions",
-      "label_zh": "清盤呈請",
-      "search_queries": [
-        "winding up petition",
-        "Companies Winding Up Cap. 32",
-        "statutory demand winding up"
       ]
     },
     {
@@ -375,6 +335,26 @@
       ]
     },
     {
+      "topic_id": "topic:employment_law:48:employment_discrimination",
+      "label_en": "Employment Discrimination",
+      "label_zh": "僱傭歧視",
+      "search_queries": [
+        "Sex Discrimination Ordinance Cap. 480 employment",
+        "Disability Discrimination Ordinance Cap. 487 employment",
+        "Race Discrimination Ordinance Cap. 602"
+      ]
+    },
+    {
+      "topic_id": "topic:employment_law:49:employees_compensation",
+      "label_en": "Employees' Compensation",
+      "label_zh": "僱員補償",
+      "search_queries": [
+        "Employees Compensation Ordinance Cap. 282",
+        "work injury compensation",
+        "occupational injury employment"
+      ]
+    },
+    {
       "topic_id": "topic:employment_law:50:mpf_obligations",
       "label_en": "MPF Obligations",
       "label_zh": "強積金責任",
@@ -382,26 +362,6 @@
         "Mandatory Provident Fund Cap. 485",
         "MPF contribution employer",
         "MPF Schemes Ordinance"
-      ]
-    },
-    {
-      "topic_id": "topic:employment_law:51:restraint_of_trade",
-      "label_en": "Restraint of Trade",
-      "label_zh": "營業限制",
-      "search_queries": [
-        "restraint of trade employment",
-        "non-compete employment",
-        "confidential information employee injunction"
-      ]
-    },
-    {
-      "topic_id": "topic:family_law:52:divorce_and_matrimonial_causes",
-      "label_en": "Divorce and Matrimonial Causes",
-      "label_zh": "離婚及婚姻訴訟",
-      "search_queries": [
-        "Matrimonial Causes Ordinance Cap. 179",
-        "divorce petition unreasonable behaviour",
-        "matrimonial causes Hong Kong"
       ]
     },
     {
@@ -422,16 +382,6 @@
         "child custody welfare",
         "care and control access",
         "Guardianship of Minors Ordinance Cap. 13"
-      ]
-    },
-    {
-      "topic_id": "topic:family_law:55:relocation_and_access",
-      "label_en": "Relocation and Access",
-      "label_zh": "遷移及探視",
-      "search_queries": [
-        "child relocation Hong Kong",
-        "access order child",
-        "best interests child relocation"
       ]
     },
     {
@@ -545,16 +495,6 @@
       ]
     },
     {
-      "topic_id": "topic:probate_trusts_equity:67:constructive_and_resulting_trusts",
-      "label_en": "Constructive and Resulting Trusts",
-      "label_zh": "構定及歸復信託",
-      "search_queries": [
-        "constructive trust",
-        "resulting trust",
-        "common intention constructive trust"
-      ]
-    },
-    {
       "topic_id": "topic:probate_trusts_equity:68:tracing_and_equitable_remedies",
       "label_en": "Tracing and Equitable Remedies",
       "label_zh": "追蹤及衡平法補救",
@@ -562,16 +502,6 @@
         "equitable tracing",
         "account of profits fiduciary",
         "equitable compensation breach trust"
-      ]
-    },
-    {
-      "topic_id": "topic:arbitration_adr:69:arbitration_agreements_and_stay",
-      "label_en": "Arbitration Agreements and Stay",
-      "label_zh": "仲裁協議及擱置程序",
-      "search_queries": [
-        "Arbitration Ordinance Cap. 609 stay",
-        "arbitration agreement stay proceedings",
-        "kompetenz kompetenz arbitration"
       ]
     },
     {
@@ -607,91 +537,311 @@
   ],
   "low_coverage_topics": [
     {
-      "topic_id": "topic:civil_procedure:01:writs_and_originating_summonses",
-      "label_en": "Writs and Originating Summonses",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:civil_procedure:02:pleadings_and_amendment",
-      "label_en": "Pleadings and Amendment",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:civil_procedure:04:discovery_and_disclosure",
-      "label_en": "Discovery and Disclosure",
-      "case_count": 1
-    },
-    {
       "topic_id": "topic:civil_procedure:05:summary_judgment_and_strike_out",
       "label_en": "Summary Judgment and Strike Out",
       "case_count": 1
     },
     {
-      "topic_id": "topic:civil_procedure:06:interim_injunctions",
-      "label_en": "Interim Injunctions",
+      "topic_id": "topic:civil_procedure:07:security_for_costs",
+      "label_en": "Security for Costs",
       "case_count": 1
     },
     {
-      "topic_id": "topic:tort_law:23:causation_and_remoteness",
-      "label_en": "Causation and Remoteness",
+      "topic_id": "topic:civil_procedure:10:enforcement_of_judgments",
+      "label_en": "Enforcement of Judgments",
       "case_count": 1
     },
     {
       "topic_id": "topic:tort_law:24:contributory_negligence",
       "label_en": "Contributory Negligence",
+      "case_count": 2
+    },
+    {
+      "topic_id": "topic:tort_law:28:private_nuisance",
+      "label_en": "Private Nuisance",
+      "case_count": 2
+    },
+    {
+      "topic_id": "topic:property_land_law:36:adverse_possession",
+      "label_en": "Adverse Possession",
       "case_count": 1
     },
     {
-      "topic_id": "topic:tort_law:25:personal_injury_damages",
-      "label_en": "Personal Injury Damages",
-      "case_count": 1
+      "topic_id": "topic:company_commercial_law:40:winding_up_petitions",
+      "label_en": "Winding Up Petitions",
+      "case_count": 2
     },
     {
-      "topic_id": "topic:employment_law:48:employment_discrimination",
-      "label_en": "Employment Discrimination",
-      "case_count": 1
+      "topic_id": "topic:employment_law:51:restraint_of_trade",
+      "label_en": "Restraint of Trade",
+      "case_count": 2
     },
     {
-      "topic_id": "topic:employment_law:49:employees_compensation",
-      "label_en": "Employees' Compensation",
-      "case_count": 1
+      "topic_id": "topic:family_law:52:divorce_and_matrimonial_causes",
+      "label_en": "Divorce and Matrimonial Causes",
+      "case_count": 2
+    },
+    {
+      "topic_id": "topic:arbitration_adr:69:arbitration_agreements_and_stay",
+      "label_en": "Arbitration Agreements and Stay",
+      "case_count": 2
     }
   ],
   "cases_missing_principles": [
-    "[2020] HKCFI 1133",
-    "[1980] HKC 377",
-    "[2018] HKCFI 975",
-    "[1963] AC 758",
-    "[2015] PNLR 27",
-    "[2020] HKCA 886",
-    "[2019] HKCFI 381",
-    "[2021] HKCFI 1347",
-    "[2020] HKCFI 398",
-    "[2022] HKCFI 1659",
-    "[2019] HKCA 119",
-    "[2020] HKCFI 773",
-    "[2021] HKCFI 3664",
-    "[2021] HKCA 89",
-    "[2020] HKCFI 268",
-    "[2023] HKCFI 1711",
-    "[2020] HKCA 698",
-    "[2022] HKCFI 1070",
+    "[2020] HKCFI 2477",
+    "[2017] EWHC 1025",
+    "[2009] EWHC 476",
+    "[2021] HKCA 1846",
+    "[1990] RPC 656",
+    "[2011] HKEC 648",
+    "[2021] HKCFI 399",
+    "[2018] HKCFI 1480",
+    "[2001] HKEC 586",
+    "[2019] HKCFI 2329",
+    "[2021] HKCFI 378",
+    "[1982] QB 1053",
+    "[2019] HKCFI 1068",
+    "[1999] CLC 1469",
+    "[2007] VSC 57",
+    "[2001] IRLR 758",
+    "[2001] CLC 221",
+    "[2008] EWHC 2613",
+    "[1996] AC 563",
+    "[1989] BCLC 498",
+    "[2010] EWHC 1872",
+    "[1975] QC 373",
+    "[1997] HKLRD 1327",
+    "[2021] HKDC 172",
     "[1996] AC 669",
-    "[2018] HKCFI 1603",
-    "[2023] HKCFI 740",
-    "[2004] QB 985",
-    "[2022] HKCA 807",
-    "[2021] HKDC 1431",
-    "[2021] HKCA 1211",
-    "[2023] HKCFI 2995",
-    "[1986] HKC 78",
-    "[2020] HKCFI 1620",
-    "[2025] HKCFI 483",
-    "[2023] EWHC 2885"
+    "[2020] HKDC 629",
+    "[2020] HKDC 661",
+    "[1988] HKC 377",
+    "[2018] HKCA 323",
+    "[1985] AC 809"
   ],
-  "warnings": [],
+  "warnings": [
+    "Search failed for 'writ originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Rules of High Court writ': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'District Court originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'pleadings amendment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'statement of claim amendment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unpleaded defence summary judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'service out of jurisdiction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'substituted service': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'jurisdiction challenge civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'discovery disclosure civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'specific discovery': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'litigation privilege discovery': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'strike out pleadings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'no triable issue summary judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'interlocutory injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mareva injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Anton Piller order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'security for costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'company plaintiff security costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Order 23 security for costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'civil burden of proof': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trial evidence civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'hearsay civil evidence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'costs follow event': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'taxation of costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'enforcement of judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'garnishee order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'charging order civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'leave to appeal civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Limitation Ordinance Cap. 347': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'extension of time civil appeal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract formation offer acceptance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'consideration intention contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'certainty contract terms': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract interpretation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'implied terms contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'incorporation exclusion clause': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Contracts Rights of Third Parties Ordinance Cap. 623': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'third party rights contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'privity contract Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Misrepresentation Ordinance Cap. 284': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fraudulent misrepresentation damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mistake contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'duress undue influence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unconscionable bargain contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract illegality public policy': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'illegal contract restitution': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restraint of trade contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'repudiatory breach termination': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'anticipatory breach contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'affirmation termination contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract damages remoteness': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'penalty clause liquidated damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mitigation contract damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'specific performance contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'injunction breach of contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable remedies contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Sale of Goods Ordinance Cap. 26': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'implied terms sale of goods': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'rejection goods breach': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach of duty negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'standard of care negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'causation negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'remoteness damage negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'thin skull rule': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contributory negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'apportionment negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Law Amendment Reform Consolidation Ordinance contributory negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'personal injury damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'loss of earnings personal injury': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'pain suffering loss amenity': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Occupiers Liability Ordinance Cap. 314': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupiers liability': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'visitor duty occupier': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'vicarious liability': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'professional negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'solicitor negligence duty': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'private nuisance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'nuisance injunction damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'water seepage nuisance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Defamation Ordinance Cap. 21': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'defamation qualified privilege': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'libel slander damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'sale and purchase property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'good title conveyancing': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Landlord Tenant Consolidation Ordinance Cap. 7': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'forfeiture lease relief': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'tenancy possession arrears': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mortgage priority land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Land Registration Ordinance Cap. 128': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable mortgage property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'co-ownership property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'resulting trust property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'constructive trust land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'easement right of way': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restrictive covenant land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'building covenant property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Building Management Ordinance Cap. 344': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'deed of mutual covenant': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'incorporated owners building management': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'adverse possession': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'limitation adverse possession': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'squatter possession land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fiduciary duty director': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach directors duties': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unfair prejudice Companies Ordinance Cap. 622': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'derivative action company': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'minority shareholder unfair prejudice': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'company restoration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Companies Registry restoration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'inspection company records': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'winding up petition': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Companies Winding Up Cap. 32': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'statutory demand winding up': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Bankruptcy Ordinance Cap. 6': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'receivership company': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trustee in bankruptcy': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'banking letter of credit': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'bank duty customer': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'guarantee indemnity bank': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'insurance indemnity subrogation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Insurance Ordinance Cap. 41': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'policy interpretation insurance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'agency authority contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'apparent authority agent': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach warranty authority': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Securities Futures Ordinance Cap. 571 civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'market misconduct tribunal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'SFC injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Employment Ordinance Cap. 57 wages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'employment contract terms': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'employee contractor status': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'wrongful dismissal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unreasonable dismissal Employment Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'termination employment contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Sex Discrimination Ordinance Cap. 480 employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Disability Discrimination Ordinance Cap. 487 employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Race Discrimination Ordinance Cap. 602': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Employees Compensation Ordinance Cap. 282': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'work injury compensation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupational injury employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mandatory Provident Fund Cap. 485': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'MPF contribution employer': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'MPF Schemes Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restraint of trade employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'non-compete employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'confidential information employee injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Matrimonial Causes Ordinance Cap. 179': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'divorce petition unreasonable behaviour': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'matrimonial causes Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'ancillary relief': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Matrimonial Proceedings Property Ordinance Cap. 192': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'maintenance spouse children': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'child custody welfare': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'care and control access': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Guardianship of Minors Ordinance Cap. 13': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'child relocation Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'access order child': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'best interests child relocation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Domestic Cohabitation Relationships Violence Ordinance Cap. 189': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'non-molestation order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupation order domestic violence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'family injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'injunction matrimonial proceedings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'molestation injunction family': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'promptness judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'alternative remedy judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'public law error judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Wednesbury unreasonableness Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'error of law judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'natural justice procedural fairness': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'right to be heard administrative': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'bias apparent bias judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'substantive legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'procedural legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Basic Law judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Hong Kong Bill of Rights Ordinance Cap. 383': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'proportionality constitutional rights': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'certiorari mandamus prohibition': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'declaration judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'damages public law': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'wills probate testamentary capacity': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'probate caveat': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'valid will Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'intestacy estate administration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'administrator estate': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Inheritance Provision Family Dependants Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fiduciary duty trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach of trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trustee duty account': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'constructive trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'resulting trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'common intention constructive trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable tracing': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'account of profits fiduciary': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable compensation breach trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Arbitration Ordinance Cap. 609 stay': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'arbitration agreement stay proceedings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'kompetenz kompetenz arbitration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'enforcement arbitral award': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'setting aside arbitral award': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'New York Convention award Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mediation Ordinance Cap. 620': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mediation confidentiality': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'without prejudice mediation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'sanctioned payment costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'without prejudice save as to costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkca/2025/677: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1578: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/517: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
   "storage": {
-    "embedding_record_count": 140,
+    "embedding_record_count": 570,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",
