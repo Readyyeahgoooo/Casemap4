@@ -1,7 +1,7 @@
 """Batch enrichment orchestrator for scaling to 50K+ cases.
 
 Workflow:
-  1. Crawl HKLII en-masse per topic from CRIMINAL_AUTHORITY_TREE
+  1. Crawl HKLII en-masse per topic from a domain authority tree
   2. Send candidate paragraphs to DeepSeek for principle extraction
   3. Write enrichment candidates to JSON for Codex review
   4. After Codex review, merge verified enrichments into the build
@@ -9,19 +9,19 @@ Workflow:
 
 Usage:
   # Phase 0: discover gaps (DeepSeek reviews tree, suggests missing areas)
-  python -m casemap.batch_enrich discover --output data/batch/gap_report.json
+  python -m casemap.batch_enrich discover --domain criminal --output data/batch/gap_report.json
 
   # Phase 1: crawl + DeepSeek enrichment (token-heavy, delegated to DeepSeek)
-  python -m casemap.batch_enrich crawl --max-per-topic 50 --output data/batch/candidates.json
+  python -m casemap.batch_enrich crawl --domain criminal --max-per-topic 50 --output data/batch/candidates.json
 
   # Phase 2: Codex review (run via Codex task)
-  python -m casemap.batch_enrich review --input data/batch/candidates.json --output data/batch/reviewed.json
+  python -m casemap.batch_enrich review --domain criminal --input data/batch/candidates.json --output data/batch/reviewed.json
 
   # Phase 3: merge verified into enrichment data
-  python -m casemap.batch_enrich merge --input data/batch/reviewed.json
+  python -m casemap.batch_enrich merge --domain criminal --input data/batch/reviewed.json
 
   # Full loop: discover → crawl → review → merge (repeat)
-  python -m casemap.batch_enrich loop --rounds 3 --max-per-topic 30
+  python -m casemap.batch_enrich loop --domain criminal --rounds 3 --max-per-topic 30
 """
 from __future__ import annotations
 
@@ -41,9 +41,9 @@ from urllib import request as urllib_request
 # Ensure src/ is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from casemap.criminal_law_data import CRIMINAL_AUTHORITY_TREE
 from casemap.domain_classifier import classify_domain_rules
 from casemap.domain_filter import run_domain_filter
+from casemap.domain_graph import default_domain_label, iter_domain_topics, load_domain_tree, normalize_domain_id
 from casemap.hklii_crawler import HKLIICrawler
 from casemap.hybrid_graph import _auto_enrich_case_via_llm, _extract_json_payload
 
@@ -122,8 +122,9 @@ def _is_quarantined(candidate: dict, target_domain: str = "criminal") -> bool:
         return True
     classification = candidate.get("domain_classification") or {}
     domain = classification.get("domain")
+    secondary_domains = set(classification.get("secondary_domains") or [])
     confidence = float(classification.get("confidence") or 0)
-    return bool(domain and domain != target_domain and confidence >= 0.6)
+    return bool(domain and domain != target_domain and target_domain not in secondary_domains and confidence >= 0.6)
 
 
 def _is_classified_non_target(candidate: dict, target_domain: str = "criminal") -> bool:
@@ -131,7 +132,8 @@ def _is_classified_non_target(candidate: dict, target_domain: str = "criminal") 
         return True
     classification = candidate.get("domain_classification") or {}
     domain = classification.get("domain")
-    return bool(domain and domain != target_domain)
+    secondary_domains = set(classification.get("secondary_domains") or [])
+    return bool(domain and domain != target_domain and target_domain not in secondary_domains)
 
 
 def _summarize_domains(candidates: list[dict]) -> dict[str, int]:
@@ -203,10 +205,10 @@ def _call_deepseek(prompt: str, temperature: float = 0, timeout: int = 180, retr
 
 # ── Gap discovery ──────────────────────────────────────────────
 
-_DISCOVER_PROMPT = """You are a Hong Kong criminal law expert reviewing a knowledge-graph topic tree.
+_DISCOVER_PROMPT = """You are a {domain_label} expert reviewing a knowledge-graph topic tree.
 
 Below is the CURRENT topic tree (each topic with its case count from HKLII).
-Your job: identify MISSING areas of Hong Kong criminal law that should be added.
+Your job: identify MISSING areas of {domain_label} that should be added.
 
 ## Current Topic Tree
 {tree_summary}
@@ -220,7 +222,7 @@ Your job: identify MISSING areas of Hong Kong criminal law that should be added.
 1. Identify 5-15 MISSING sub-topics, offence types, or doctrines NOT covered above.
 2. For each, provide: a topic ID (snake_case), English label, Chinese label, which existing module/subground it belongs under (or suggest a new one), and 2-3 HKLII search queries.
 3. Also identify any existing topics that should be SPLIT into finer sub-concepts.
-4. Focus on Hong Kong criminal law. Include: financial crimes, regulatory offences, national security, immigration, intellectual property, triads, gambling, prostitution, perjury, perverting justice, etc.
+4. Focus only on the {domain_label} domain (`{domain_id}`). Avoid turning this into a general legal-domain catch-all.
 
 Return ONLY a JSON object:
 {{
@@ -246,8 +248,16 @@ Return ONLY a JSON object:
 """
 
 
-def _build_tree_summary(candidates_path: str | None = None) -> tuple[str, int, int, list[str]]:
+def _build_tree_summary(
+    candidates_path: str | None = None,
+    *,
+    domain_id: str = "criminal",
+    tree_path: str | Path | None = None,
+) -> tuple[str, int, int, list[str]]:
     """Build a text summary of the current topic tree with case counts."""
+    domain_id = normalize_domain_id(domain_id)
+    tree = load_domain_tree(domain_id, tree_path)
+
     # Count cases per topic from candidates file if available
     topic_cases: dict[str, int] = {}
     total_cases = 0
@@ -255,7 +265,7 @@ def _build_tree_summary(candidates_path: str | None = None) -> tuple[str, int, i
         try:
             data = json.loads(Path(candidates_path).read_text(encoding="utf-8"))
             for c in data.get("candidates", []):
-                if _is_classified_non_target(c):
+                if _is_classified_non_target(c, target_domain=domain_id):
                     continue
                 tid = c.get("topic_id", "unknown")
                 topic_cases[tid] = topic_cases.get(tid, 0) + 1
@@ -267,16 +277,19 @@ def _build_tree_summary(candidates_path: str | None = None) -> tuple[str, int, i
     topic_count = 0
     empty_topics = []
 
-    for module in CRIMINAL_AUTHORITY_TREE:
-        lines.append(f"\n### {module['label_en']} ({module['id']})")
+    for module in tree["modules"]:
+        module_id = module.get("id", "")
+        lines.append(f"\n### {module.get('label_en', module_id)} ({module_id})")
         for sg in module.get("subgrounds", []):
-            lines.append(f"  #### {sg['label_en']} ({sg['id']})")
+            subground_id = sg.get("id", "")
+            lines.append(f"  #### {sg.get('label_en', subground_id)} ({subground_id})")
             for topic in sg.get("topics", []):
-                count = topic_cases.get(topic["id"], 0)
-                lines.append(f"    - {topic['label_en']} [{topic['id']}] — {count} cases")
+                topic_id = topic.get("id", "")
+                count = topic_cases.get(topic_id, 0)
+                lines.append(f"    - {topic.get('label_en', topic_id)} [{topic_id}] — {count} cases")
                 topic_count += 1
                 if count == 0:
-                    empty_topics.append(topic["label_en"])
+                    empty_topics.append(topic.get("label_en", topic_id))
 
     return "\n".join(lines), topic_count, total_cases, empty_topics
 
@@ -284,11 +297,21 @@ def _build_tree_summary(candidates_path: str | None = None) -> tuple[str, int, i
 def discover_gaps(
     candidates_path: str = "data/batch/candidates.json",
     output_path: str = "data/batch/gap_report.json",
+    domain_id: str = "criminal",
+    tree_path: str | Path | None = None,
 ) -> dict:
     """Ask DeepSeek to identify missing topics/areas in the current tree."""
-    tree_summary, topic_count, case_count, empty_topics = _build_tree_summary(candidates_path)
+    domain_id = normalize_domain_id(domain_id)
+    domain_label = default_domain_label(domain_id)
+    tree_summary, topic_count, case_count, empty_topics = _build_tree_summary(
+        candidates_path,
+        domain_id=domain_id,
+        tree_path=tree_path,
+    )
 
     prompt = _DISCOVER_PROMPT.format(
+        domain_id=domain_id,
+        domain_label=domain_label,
         tree_summary=tree_summary,
         topic_count=topic_count,
         case_count=case_count,
@@ -318,6 +341,8 @@ def discover_gaps(
 
     report["meta"] = {
         "generated_at": datetime.now(UTC).isoformat(),
+        "domain": domain_id,
+        "tree_path": str(tree_path) if tree_path else "",
         "topic_count": topic_count,
         "case_count": case_count,
         "empty_topics_count": len(empty_topics),
@@ -344,7 +369,7 @@ def apply_discovered_topics(
 ) -> list[dict]:
     """Apply discovered missing topics as synthetic entries for the next crawl round.
 
-    This does NOT modify criminal_law_data.py directly — it writes a supplementary
+    This does NOT modify source authority-tree data directly — it writes a supplementary
     topics file that the crawler reads alongside the main tree. Codex reviews the
     gap report and decides which to keep permanently.
     """
@@ -382,8 +407,11 @@ def run_loop(
     max_per_topic: int = 30,
     candidates_path: str = "data/batch/candidates.json",
     gap_report_path: str = "data/batch/gap_report.json",
+    domain_id: str = "criminal",
+    tree_path: str | Path | None = None,
 ):
     """Full self-improving loop: discover → crawl → discover → crawl ..."""
+    domain_id = normalize_domain_id(domain_id)
     for r in range(1, rounds + 1):
         print(f"\n{'='*60}")
         print(f"  ROUND {r}/{rounds}")
@@ -392,7 +420,12 @@ def run_loop(
         # Step 1: Discover gaps
         print(f"\n[round {r}] Phase: DISCOVER")
         try:
-            report = discover_gaps(candidates_path=candidates_path, output_path=gap_report_path)
+            report = discover_gaps(
+                candidates_path=candidates_path,
+                output_path=gap_report_path,
+                domain_id=domain_id,
+                tree_path=tree_path,
+            )
         except RuntimeError as e:
             if not Path(gap_report_path).exists():
                 raise
@@ -408,6 +441,8 @@ def run_loop(
         crawl_and_enrich(
             max_per_topic=max_per_topic,
             output_path=candidates_path,
+            domain_id=domain_id,
+            tree_path=tree_path,
             extra_topics=new_topics,
         )
 
@@ -425,12 +460,41 @@ def run_loop(
     print(f"{'='*60}")
 
 
-def _iter_topics():
+def _iter_topics(tree: dict | None = None, domain_id: str = "criminal", tree_path: str | Path | None = None):
     """Yield (module_id, subground_id, topic) for every topic in the tree."""
-    for module in CRIMINAL_AUTHORITY_TREE:
-        for subground in module.get("subgrounds", []):
-            for topic in subground.get("topics", []):
-                yield module["id"], subground["id"], topic
+    tree = tree or load_domain_tree(domain_id, tree_path)
+    for topic in iter_domain_topics(tree):
+        yield topic["module_id"], topic["subground_id"], topic
+
+
+def _candidate_index_keys(candidate: dict) -> set[str]:
+    keys: set[str] = set()
+    for key in ("neutral_citation", "case_name", "source_url"):
+        value = str(candidate.get(key) or "").strip()
+        if value:
+            keys.add(value)
+            keys.add(value.lower())
+            if value.startswith("https://www.hklii.hk/"):
+                keys.add(value.replace("https://www.hklii.hk", "", 1))
+    return keys
+
+
+def _add_cross_reference(candidate: dict, *, domain_id: str, module_id: str, subground_id: str, topic: dict, query: str = "") -> bool:
+    refs = candidate.setdefault("cross_references", [])
+    ref = {
+        "domain": normalize_domain_id(domain_id),
+        "module_id": module_id,
+        "subground_id": subground_id,
+        "topic_id": topic.get("id", ""),
+        "topic_label": topic.get("label_en", ""),
+        "query": query,
+    }
+    key = (ref["domain"], ref["topic_id"], ref["query"])
+    for existing in refs:
+        if (existing.get("domain"), existing.get("topic_id"), existing.get("query", "")) == key:
+            return False
+    refs.append(ref)
+    return True
 
 
 def crawl_and_enrich(
@@ -439,33 +503,45 @@ def crawl_and_enrich(
     delay_between_topics: float = 1.0,
     skip_existing: bool = True,
     extra_topics: list[dict] | None = None,
+    domain_id: str = "criminal",
+    tree_path: str | Path | None = None,
 ) -> dict:
     """Phase 1: Crawl HKLII for each topic, enrich via DeepSeek, write candidates."""
+    domain_id = normalize_domain_id(domain_id)
+    tree = load_domain_tree(domain_id, tree_path)
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
 
     # Load existing to allow incremental runs
     existing: dict[str, dict] = {}
+    existing_by_key: dict[str, dict] = {}
+    loaded_candidates: list[dict] = []
     if skip_existing and output.exists():
         try:
             data = json.loads(output.read_text(encoding="utf-8"))
-            existing = {c["neutral_citation"]: c for c in data.get("candidates", []) if c.get("neutral_citation")}
+            loaded_candidates = list(data.get("candidates", []))
+            existing = {c["neutral_citation"]: c for c in loaded_candidates if c.get("neutral_citation")}
+            for candidate in loaded_candidates:
+                for key in _candidate_index_keys(candidate):
+                    existing_by_key[key] = candidate
             print(f"[resume] Loaded {len(existing)} existing candidates from {output_path}")
         except Exception:
             pass
 
     crawler = HKLIICrawler()
-    candidates: list[dict] = list(existing.values())
+    candidates: list[dict] = loaded_candidates or list(existing.values())
     stats = {
         "topics_processed": 0,
         "cases_crawled": 0,
         "cases_enriched": 0,
         "quarantined_count": 0,
+        "cross_references_added": 0,
+        "target_domain": domain_id,
         "domain_breakdown": {},
         "errors": 0,
     }
 
-    topics = list(_iter_topics())
+    topics = list(_iter_topics(tree=tree, domain_id=domain_id, tree_path=tree_path))
 
     # Append any dynamically discovered topics from the discover phase
     if extra_topics:
@@ -474,7 +550,7 @@ def crawl_and_enrich(
             subground_id = et.get("parent_subground", "discovered")
             topics.append((module_id, subground_id, et))
 
-    print(f"[batch] Processing {len(topics)} topics, max {max_per_topic} cases each")
+    print(f"[batch] Processing {len(topics)} {domain_id} topics, max {max_per_topic} cases each")
 
     for module_id, subground_id, topic in topics:
         topic_id = topic["id"]
@@ -507,6 +583,23 @@ def crawl_and_enrich(
 
                     # Check if already enriched
                     title = result.title
+                    existing_candidate = (
+                        existing_by_key.get(title)
+                        or existing_by_key.get(title.lower())
+                        or existing_by_key.get(path)
+                        or existing_by_key.get(f"https://www.hklii.hk{path}")
+                    )
+                    if existing_candidate:
+                        if _add_cross_reference(
+                            existing_candidate,
+                            domain_id=domain_id,
+                            module_id=module_id,
+                            subground_id=subground_id,
+                            topic=topic,
+                            query=query,
+                        ):
+                            stats["cross_references_added"] += 1
+                        continue
                     if title in existing or path in existing:
                         continue
 
@@ -527,7 +620,21 @@ def crawl_and_enrich(
 
                 doc = docs[0]
                 nc = doc.neutral_citation or ""
-                if nc in existing:
+                existing_candidate = (
+                    (existing.get(nc) if nc else None)
+                    or (existing_by_key.get(nc) if nc else None)
+                    or existing_by_key.get(doc.case_name.lower())
+                )
+                if existing_candidate:
+                    if _add_cross_reference(
+                        existing_candidate,
+                        domain_id=domain_id,
+                        module_id=module_id,
+                        subground_id=subground_id,
+                        topic=topic,
+                        query=case_info.get("query", ""),
+                    ):
+                        stats["cross_references_added"] += 1
                     continue
 
                 # Send to DeepSeek for enrichment
@@ -549,13 +656,15 @@ def crawl_and_enrich(
                 )
                 domain = domain_classification.get("domain", "unknown")
                 stats["domain_breakdown"][domain] = stats["domain_breakdown"].get(domain, 0) + 1
+                secondary_domains = set(domain_classification.get("secondary_domains") or [])
                 is_quarantined = (
-                    domain != "criminal"
+                    domain != domain_id
+                    and domain_id not in secondary_domains
                     and float(domain_classification.get("confidence") or 0) >= 0.6
                 )
                 if is_quarantined:
                     stats["quarantined_count"] += 1
-                    domain_classification["quarantine_reason"] = "non_criminal_inline_rule"
+                    domain_classification["quarantine_reason"] = "non_target_inline_rule"
 
                 candidate = {
                     "neutral_citation": nc,
@@ -574,6 +683,8 @@ def crawl_and_enrich(
                     "assignment_status": "candidate",
                     "enrichment_status": "quarantined" if is_quarantined else "candidate",
                     "domain_classification": domain_classification,
+                    "target_domain": domain_id,
+                    "cross_references": [],
                     "review_status": "pending",  # pending / verified / rejected
                     "review_notes": "",
                     "enriched_at": datetime.now(UTC).isoformat(),
@@ -581,7 +692,10 @@ def crawl_and_enrich(
                 }
 
                 candidates.append(candidate)
-                existing[nc] = candidate
+                if nc:
+                    existing[nc] = candidate
+                for key in _candidate_index_keys(candidate):
+                    existing_by_key[key] = candidate
                 stats["cases_enriched"] += 1
                 status = "quarantine" if is_quarantined else "ok"
                 print(f"  [{status}] {nc}: {doc.case_name[:50]} -> {len(principles)} principles ({domain})")
@@ -603,10 +717,16 @@ def crawl_and_enrich(
 
 def _save_candidates(candidates: list[dict], stats: dict, output: Path):
     """Write candidates to disk atomically."""
+    neutral_citation_index = {
+        c["neutral_citation"]: index
+        for index, c in enumerate(candidates)
+        if c.get("neutral_citation")
+    }
     payload = {
         "meta": {
             "generated_at": datetime.now(UTC).isoformat(),
             "stats": stats,
+            "neutral_citation_index": neutral_citation_index,
         },
         "candidates": candidates,
     }
@@ -619,23 +739,25 @@ def generate_codex_review(
     input_path: str = "data/batch/candidates.json",
     output_path: str = "data/batch/codex_review_task.md",
     batch_size: int = 30,
+    target_domain: str = "criminal",
 ):
     """Phase 2: Generate a Codex task markdown that reviews candidate enrichments."""
+    target_domain = normalize_domain_id(target_domain)
     if input_path == "data/batch/candidates.json":
-        clean_path = Path("data/batch/candidates_criminal_clean.json")
+        clean_path = Path(f"data/batch/candidates_{target_domain}_clean.json")
         if clean_path.exists():
             input_path = str(clean_path)
             print(f"[review] Using domain-filtered input: {input_path}")
 
     data = json.loads(Path(input_path).read_text(encoding="utf-8"))
     all_candidates = data.get("candidates", [])
-    quarantined = [c for c in all_candidates if _is_quarantined(c)]
+    quarantined = [c for c in all_candidates if _is_quarantined(c, target_domain=target_domain)]
     candidates = [
         c for c in all_candidates
-        if c.get("review_status") == "pending" and not _is_quarantined(c)
+        if c.get("review_status") == "pending" and not _is_quarantined(c, target_domain=target_domain)
     ]
     if quarantined:
-        print(f"[review] Skipping {len(quarantined)} quarantined/non-criminal candidates")
+        print(f"[review] Skipping {len(quarantined)} quarantined/non-{target_domain} candidates")
 
     if not candidates:
         print("[review] No pending candidates to review")
@@ -695,32 +817,35 @@ def generate_codex_review(
 
 def merge_reviewed(
     input_path: str = "data/batch/reviewed.json",
-    enrichment_file: str = "src/casemap/criminal_enrichment_data.py",
+    enrichment_file: str | None = None,
+    target_domain: str = "criminal",
 ):
     """Phase 3: Merge verified enrichments into curated data."""
+    target_domain = normalize_domain_id(target_domain)
     data = json.loads(Path(input_path).read_text(encoding="utf-8"))
     verified = []
     skipped_domain = 0
     for candidate in data.get("candidates", []):
         if candidate.get("review_status") != "verified":
             continue
-        if _is_quarantined(candidate):
+        if _is_quarantined(candidate, target_domain=target_domain):
             skipped_domain += 1
             continue
         classification = candidate.get("domain_classification") or {}
         domain = classification.get("domain")
-        if domain and domain != "criminal":
+        secondary_domains = set(classification.get("secondary_domains") or [])
+        if domain and domain != target_domain and target_domain not in secondary_domains:
             skipped_domain += 1
             continue
         verified.append(candidate)
 
     if not verified:
         if skipped_domain:
-            print(f"[merge] Skipped {skipped_domain} verified candidates outside criminal domain")
+            print(f"[merge] Skipped {skipped_domain} verified candidates outside {target_domain} domain")
         print("[merge] No verified candidates to merge")
         return
     if skipped_domain:
-        print(f"[merge] Skipped {skipped_domain} verified candidates outside criminal domain")
+        print(f"[merge] Skipped {skipped_domain} verified candidates outside {target_domain} domain")
 
     # Generate Python dict entries for each verified case
     entries = []
@@ -739,18 +864,26 @@ def merge_reviewed(
         }
         entries.append(entry)
 
-    # Write to a separate file that can be imported
-    output_path = "src/casemap/batch_enrichment_data.py"
+    # Write to a separate file that can be imported. Do not clobber curated
+    # hand-written enrichment modules unless the caller explicitly passes a path.
+    output_path = enrichment_file or f"src/casemap/{target_domain}_enrichment_data.py"
+    output = Path(output_path)
+    if enrichment_file is None and output.exists():
+        existing_text = output.read_text(encoding="utf-8")
+        if "Auto-generated verified batch enrichments" not in existing_text:
+            output_path = f"src/casemap/{target_domain}_batch_enrichment_data.py"
+            output = Path(output_path)
     lines = [
         "\"\"\"Auto-generated verified batch enrichments. Do not edit manually.\"\"\"",
         "from __future__ import annotations",
         "",
         f"# Generated: {datetime.now(UTC).isoformat()}",
+        f"# Domain: {target_domain}",
         f"# Verified cases: {len(entries)}",
         "",
         "BATCH_ENRICHMENTS: list[dict] = " + json.dumps(entries, indent=4, ensure_ascii=False),
     ]
-    Path(output_path).write_text("\n".join(lines), encoding="utf-8")
+    output.write_text("\n".join(lines), encoding="utf-8")
     print(f"[merge] Written {len(entries)} verified enrichments to {output_path}")
 
 
@@ -762,6 +895,8 @@ def main():
     disc_p = sub.add_parser("discover", help="Ask DeepSeek to find missing topics")
     disc_p.add_argument("--candidates", default="data/batch/candidates.json")
     disc_p.add_argument("--output", default="data/batch/gap_report.json")
+    disc_p.add_argument("--domain", default="criminal", help="Target legal domain to analyze")
+    disc_p.add_argument("--tree", default="", help="Optional JSON authority tree path")
 
     # apply
     apply_p = sub.add_parser("apply", help="Apply discovered topics for next crawl")
@@ -774,16 +909,21 @@ def main():
     crawl_p.add_argument("--output", default="data/batch/candidates.json")
     crawl_p.add_argument("--delay", type=float, default=1.0)
     crawl_p.add_argument("--extra-topics", default="", help="Path to extra topics JSON from discover phase")
+    crawl_p.add_argument("--domain", default="criminal", help="Target legal domain to crawl")
+    crawl_p.add_argument("--tree", default="", help="Optional JSON authority tree path")
 
     # review
     review_p = sub.add_parser("review", help="Generate Codex review task")
     review_p.add_argument("--input", default="data/batch/candidates.json")
     review_p.add_argument("--output", default="data/batch/codex_review_task.md")
     review_p.add_argument("--batch-size", type=int, default=30)
+    review_p.add_argument("--domain", default="criminal", help="Target legal domain to review")
 
     # merge
     merge_p = sub.add_parser("merge", help="Merge Codex-reviewed enrichments")
     merge_p.add_argument("--input", default="data/batch/reviewed.json")
+    merge_p.add_argument("--domain", default="criminal", help="Target legal domain to merge")
+    merge_p.add_argument("--output", default="", help="Optional enrichment Python output path")
 
     # classify-domains
     classify_p = sub.add_parser("classify-domains", help="Classify and quarantine candidates by legal domain")
@@ -798,10 +938,18 @@ def main():
     loop_p.add_argument("--rounds", type=int, default=3)
     loop_p.add_argument("--max-per-topic", type=int, default=30)
     loop_p.add_argument("--candidates", default="data/batch/candidates.json")
+    loop_p.add_argument("--gap-report", default="data/batch/gap_report.json")
+    loop_p.add_argument("--domain", default="criminal", help="Target legal domain to crawl")
+    loop_p.add_argument("--tree", default="", help="Optional JSON authority tree path")
 
     args = parser.parse_args()
     if args.command == "discover":
-        discover_gaps(candidates_path=args.candidates, output_path=args.output)
+        discover_gaps(
+            candidates_path=args.candidates,
+            output_path=args.output,
+            domain_id=args.domain,
+            tree_path=args.tree or None,
+        )
     elif args.command == "apply":
         apply_discovered_topics(gap_report_path=args.input, output_path=args.output)
     elif args.command == "crawl":
@@ -813,15 +961,22 @@ def main():
             output_path=args.output,
             delay_between_topics=args.delay,
             extra_topics=extra or None,
+            domain_id=args.domain,
+            tree_path=args.tree or None,
         )
     elif args.command == "review":
         generate_codex_review(
             input_path=args.input,
             output_path=args.output,
             batch_size=args.batch_size,
+            target_domain=args.domain,
         )
     elif args.command == "merge":
-        merge_reviewed(input_path=args.input)
+        merge_reviewed(
+            input_path=args.input,
+            enrichment_file=args.output or None,
+            target_domain=args.domain,
+        )
     elif args.command == "classify-domains":
         run_domain_filter(
             input_path=args.input,
@@ -835,6 +990,9 @@ def main():
             rounds=args.rounds,
             max_per_topic=args.max_per_topic,
             candidates_path=args.candidates,
+            gap_report_path=args.gap_report,
+            domain_id=args.domain,
+            tree_path=args.tree or None,
         )
     else:
         parser.print_help()

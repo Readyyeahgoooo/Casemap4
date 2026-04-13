@@ -1569,7 +1569,12 @@ def build_hierarchical_graph_bundle(
             previous_member_id = member_node["id"]
             previous_member_type = member["type"]
 
-    curated_enrichments = CURATED_CASE_ENRICHMENTS if legal_domain == "contract" else CURATED_CRIMINAL_CASE_ENRICHMENTS
+    if legal_domain == "contract":
+        curated_enrichments = CURATED_CASE_ENRICHMENTS
+    elif legal_domain == "criminal":
+        curated_enrichments = CURATED_CRIMINAL_CASE_ENRICHMENTS
+    else:
+        curated_enrichments = []
     for enrichment in curated_enrichments:
         case_node = ensure_case(
             enrichment["case_name"],
