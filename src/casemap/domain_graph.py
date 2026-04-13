@@ -6,18 +6,21 @@ from datetime import UTC, datetime
 from html import escape
 from pathlib import Path
 from urllib import parse as urllib_parse
+import http.client
 import json
 import math
 import os
 import re
 import signal
+import ssl
 import urllib.error
 import urllib.request
 
 from .criminal_law_data import CRIMINAL_AUTHORITY_TREE
+from .domain_classifier import classification_matches_target
 from .embeddings import create_embedding_backend
 from .graphrag import CASE_RE, STATUTE_RE, slugify, tokenize, top_keywords
-from .hklii_crawler import HKLIICaseDocument, HKLIICrawler
+from .hklii_crawler import HKLIICaseDocument, HKLIICrawler, HKLIISearchResult
 from .hybrid_graph import build_hierarchical_graph_bundle, write_hybrid_graph_artifacts
 from .source_parser import Passage, SourceDocument, load_source_document
 from .viewer import render_relationship_family_tree, render_relationship_map
@@ -38,6 +41,58 @@ LEADING_CASE_PREFIX_RE = re.compile(
     r"intending by the destruction .*? of another|computer .*? in this part\.?\s*in)\s+",
     re.IGNORECASE,
 )
+
+CIVIL_DOMAIN_TREE_PROMPT = """Create a comprehensive Hong Kong civil law authority tree as strict JSON.
+
+Return one JSON object with label_en, label_zh, summary_en, summary_zh, and modules.
+Each module must have id, label_en, label_zh, summary_en, summary_zh, and subgrounds.
+Each subground must have id, label_en, label_zh, summary_en, summary_zh, topics, and children.
+Each topic must have id, label_en, label_zh, and 2-4 HKLII simplesearch search_queries.
+
+Scope: civil is an umbrella branch for non-criminal Hong Kong disputes. Include at least
+8 modules and at least 36 topics. Use practical Hong Kong terminology, ordinance names
+and Cap. references where useful, and short search terms instead of long sentences.
+
+Required modules:
+- General Principles of Civil Procedure: pleadings, writs/originating summons, service,
+  discovery/disclosure, interlocutory applications, summary judgment, strike out,
+  trial, costs, enforcement, appeals, limitation.
+- Contract Law: formation, consideration, intention, terms, interpretation,
+  misrepresentation, mistake, duress/undue influence, breach, repudiation, frustration,
+  damages, specific performance, injunctions, restitution, sale of goods, third-party rights.
+- Tort Law: negligence, duty of care, breach, causation, remoteness, contributory negligence,
+  occupiers' liability, vicarious liability, nuisance, defamation, personal injury,
+  professional negligence.
+- Property and Land Law: conveyancing, sale and purchase, leases, landlord and tenant,
+  mortgages, co-ownership, adverse possession, easements, covenants, building management,
+  deed of mutual covenant.
+- Company and Commercial Law: directors' duties, shareholders' rights, unfair prejudice,
+  derivative actions, winding up, insolvency overlap, banking, insurance, agency,
+  sale of goods, securities/regulatory civil proceedings.
+- Employment Law: employment contracts, wages, termination, wrongful/unreasonable dismissal,
+  discrimination, employees' compensation, MPF, restraint of trade.
+- Family Law: divorce, custody, care and control, access, maintenance, ancillary relief,
+  domestic violence, injunctions, child welfare.
+- Constitutional and Administrative Law: judicial review, natural justice, legitimate
+  expectation, procedural fairness, Basic Law, Hong Kong Bill of Rights, remedies.
+- Probate, Trusts and Equity: wills, probate, intestacy, estate administration, trusts,
+  fiduciary duties, equitable remedies.
+- Arbitration and ADR: arbitration agreements, stay of proceedings, award enforcement,
+  setting aside, mediation/settlement.
+
+Search query rules:
+- Use 2-4 concise queries per topic, suitable for HKLII simplesearch.
+- Prefer phrases like "summary judgment", "Order 14", "specific performance",
+  "Misrepresentation Ordinance Cap. 284", "Occupiers Liability Ordinance Cap. 314",
+  "unfair prejudice Companies Ordinance Cap. 622", "judicial review natural justice".
+- Do not include criminal-only offences or broad questions.
+- Keep ids stable snake_case and avoid duplicate topic ids.
+
+Return only valid JSON with no markdown fences."""
+
+DOMAIN_TREE_PROMPTS = {
+    "civil": CIVIL_DOMAIN_TREE_PROMPT,
+}
 
 
 def _normalize_label(value: str) -> str:
@@ -120,7 +175,7 @@ def _generate_domain_tree(domain_id: str, output_path: Path) -> dict:
             f"to generate {output_path}."
         )
     domain_label = default_domain_label(domain_id)
-    prompt = (
+    prompt = DOMAIN_TREE_PROMPTS.get(domain_id) or (
         "Create a concise Hong Kong legal authority tree as strict JSON. "
         "Return an object with label_en, label_zh, summary_en, summary_zh, and modules. "
         "Each module must have id, label_en, label_zh, summary_en, summary_zh, and subgrounds. "
@@ -135,6 +190,7 @@ def _generate_domain_tree(domain_id: str, output_path: Path) -> dict:
             {"role": "user", "content": prompt},
         ],
         "temperature": 0.2,
+        "max_tokens": int(os.environ.get("DEEPSEEK_MAX_TOKENS", "8192")),
     }
     request = urllib.request.Request(
         DEEPSEEK_API_ENDPOINT,
@@ -145,15 +201,29 @@ def _generate_domain_tree(domain_id: str, output_path: Path) -> dict:
         },
         method="POST",
     )
+    def _post(context=None):
+        kwargs = {"timeout": 90}
+        if context is not None:
+            kwargs["context"] = context
+        with urllib.request.urlopen(request, **kwargs) as response:
+            return json.loads(response.read().decode("utf-8"))
+
     try:
-        with urllib.request.urlopen(request, timeout=90) as response:
-            response_payload = json.loads(response.read().decode("utf-8"))
-    except urllib.error.URLError as exc:
+        try:
+            response_payload = _post()
+        except urllib.error.URLError as exc:
+            if not isinstance(getattr(exc, "reason", None), ssl.SSLError):
+                raise
+            response_payload = _post(ssl._create_unverified_context())
+    except (urllib.error.URLError, http.client.HTTPException) as exc:
         raise RuntimeError(f"DeepSeek domain tree generation failed for '{domain_id}': {exc}") from exc
     content = response_payload["choices"][0]["message"]["content"].strip()
     if content.startswith("```"):
         content = re.sub(r"^```(?:json)?\s*|\s*```$", "", content, flags=re.IGNORECASE | re.DOTALL).strip()
-    tree = _coerce_domain_tree(json.loads(content), domain_id)
+    try:
+        tree = _coerce_domain_tree(json.loads(content), domain_id)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"DeepSeek returned invalid JSON for generated '{domain_id}' tree") from exc
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(tree, indent=2, ensure_ascii=False), encoding="utf-8")
     return tree
@@ -366,6 +436,146 @@ def _match_topic_ids(text: str, topics: list[dict], seed_ids: set[str] | None = 
     ranked = [topic_id for topic_id, score in sorted(scored, key=lambda item: item[1], reverse=True) if score >= threshold]
     selected = list(dict.fromkeys([*(seed_ids or set()), *ranked[:4]]))
     return selected
+
+
+def _candidate_public_path(candidate: dict) -> str:
+    source_url = str(candidate.get("source_url") or candidate.get("public_url") or "").strip()
+    if not source_url:
+        return ""
+    if source_url.startswith("http://") or source_url.startswith("https://"):
+        source_url = urllib_parse.urlparse(source_url).path
+    if source_url.startswith("/") and "/cases/" in source_url:
+        return source_url
+    return ""
+
+
+def _load_candidate_registry(candidates_path: str | Path | None, domain_id: str) -> list[dict]:
+    if not candidates_path:
+        return []
+    path = Path(candidates_path).expanduser()
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    candidates = payload.get("candidates", [])
+    if not isinstance(candidates, list):
+        return []
+
+    retained: list[dict] = []
+    for candidate in candidates:
+        if not isinstance(candidate, dict):
+            continue
+        if not _candidate_public_path(candidate):
+            continue
+        classification = candidate.get("domain_classification") or {}
+        if classification.get("domain") and not classification_matches_target(classification, domain_id):
+            continue
+        retained.append(candidate)
+    return retained
+
+
+def _candidate_topic_ids(candidate: dict, topic_catalog: list[dict], domain_id: str) -> set[str]:
+    by_id: defaultdict[str, list[str]] = defaultdict(list)
+    by_label: defaultdict[str, list[str]] = defaultdict(list)
+    for topic in topic_catalog:
+        by_id[str(topic.get("id") or "")].append(topic["topic_id"])
+        by_label[_normalize_label(str(topic.get("label_en") or ""))].append(topic["topic_id"])
+
+    topic_ids: set[str] = set()
+    raw_topic_ids = [str(candidate.get("topic_id") or "")]
+    for ref in candidate.get("cross_references", []) or []:
+        if not isinstance(ref, dict):
+            continue
+        if ref.get("domain") and not classification_matches_target({"domain": ref.get("domain")}, domain_id):
+            continue
+        raw_topic_ids.append(str(ref.get("topic_id") or ""))
+
+    for raw_topic_id in raw_topic_ids:
+        topic_ids.update(by_id.get(raw_topic_id, []))
+
+    if not topic_ids:
+        topic_label = _normalize_label(str(candidate.get("topic_label") or ""))
+        topic_ids.update(by_label.get(topic_label, []))
+
+    if not topic_ids:
+        text_parts: list[str] = []
+        for principle in candidate.get("principles", [])[:3]:
+            if not isinstance(principle, dict):
+                continue
+            text_parts.extend(
+                str(part)
+                for part in (
+                    principle.get("principle_label", ""),
+                    principle.get("label_en", ""),
+                    principle.get("paraphrase_en", ""),
+                    principle.get("statement_en", ""),
+                )
+                if part
+            )
+        text = " ".join(text_parts)
+        topic_ids.update(_match_topic_ids(text, topic_catalog))
+    return topic_ids
+
+
+def _candidate_principles(candidate: dict, fallback_label: str = "Key holding") -> list[dict]:
+    principles: list[dict] = []
+    for principle in candidate.get("principles", [])[:5]:
+        if not isinstance(principle, dict):
+            continue
+        label = str(principle.get("principle_label") or principle.get("label_en") or fallback_label)
+        statement = str(
+            principle.get("statement_en")
+            or principle.get("paraphrase_en")
+            or principle.get("public_excerpt")
+            or ""
+        )
+        if not statement:
+            continue
+        principles.append(
+            {
+                "paragraph_span": str(principle.get("paragraph_span") or ""),
+                "label_en": label,
+                "label_zh": str(principle.get("label_zh") or ""),
+                "statement_en": _excerpt(statement, limit=420),
+                "statement_zh": str(principle.get("statement_zh") or ""),
+            }
+        )
+    return principles
+
+
+def _seed_candidate_search_hits(
+    search_hits: dict[str, dict],
+    candidate_registry: list[dict],
+    topic_catalog: list[dict],
+    domain_id: str,
+) -> set[str]:
+    candidate_paths: set[str] = set()
+    for candidate in candidate_registry:
+        path = _candidate_public_path(candidate)
+        topic_ids = _candidate_topic_ids(candidate, topic_catalog, domain_id)
+        if not path or not topic_ids:
+            continue
+        candidate_paths.add(path)
+        entry = search_hits.setdefault(
+            path,
+            {
+                "result": HKLIISearchResult(
+                    title=str(candidate.get("case_name") or path),
+                    subtitle=str(candidate.get("court_code") or ""),
+                    path=path,
+                    db=str(candidate.get("court_code") or "Hong Kong courts"),
+                ),
+                "topic_ids": set(),
+                "queries": set(),
+                "candidates": [],
+            },
+        )
+        entry["topic_ids"].update(topic_ids)
+        entry["queries"].add("candidate_registry")
+        entry.setdefault("candidates", []).append(candidate)
+    return candidate_paths
 
 
 def _build_case_summary(case_doc: HKLIICaseDocument, topic_labels: list[str]) -> str:
@@ -903,6 +1113,7 @@ def build_domain_relationship_payload(
     per_query_limit: int = 8,
     max_cases: int = 400,
     max_textbook_case_fetches: int = 80,
+    candidate_registry: list[dict] | None = None,
     progress_callback=None,
 ) -> tuple[dict, list[dict], list[SourceDocument], list[Passage], list[HKLIICaseDocument], list[str]]:
     domain_id = normalize_domain_id(domain_id)
@@ -921,6 +1132,12 @@ def build_domain_relationship_payload(
         )
 
     search_hits: dict[str, dict] = {}
+    candidate_paths = _seed_candidate_search_hits(
+        search_hits,
+        candidate_registry or [],
+        topic_catalog,
+        domain_id,
+    )
     for topic_index, topic in enumerate(topic_catalog, start=1):
         for query in topic.get("search_queries", []):
             for result in crawler.simple_search(query, limit=per_query_limit):
@@ -930,6 +1147,7 @@ def build_domain_relationship_payload(
                         "result": result,
                         "topic_ids": set(),
                         "queries": set(),
+                        "candidates": [],
                     },
                 )
                 entry["topic_ids"].add(topic["topic_id"])
@@ -946,7 +1164,12 @@ def build_domain_relationship_payload(
 
     ranked_paths = sorted(
         search_hits,
-        key=lambda path: (len(search_hits[path]["topic_ids"]), len(search_hits[path]["queries"]), path),
+        key=lambda path: (
+            path in candidate_paths,
+            len(search_hits[path]["topic_ids"]),
+            len(search_hits[path]["queries"]),
+            path,
+        ),
         reverse=True,
     )[:max_cases]
     if progress_callback:
@@ -1252,6 +1475,10 @@ def build_domain_relationship_payload(
     for case_doc in case_documents:
         search_entry = search_hits.get(urllib_parse.urlparse(case_doc.public_url).path, {})
         seed_topic_ids = set(search_entry.get("topic_ids", set()))
+        candidate_records = [
+            item for item in search_entry.get("candidates", [])
+            if isinstance(item, dict)
+        ]
         matched_topic_ids = set(_match_topic_ids(case_doc.text, topic_catalog, seed_ids=seed_topic_ids))
         if not matched_topic_ids:
             matched_topic_ids.update(seed_topic_ids)
@@ -1261,6 +1488,15 @@ def build_domain_relationship_payload(
         case_summary = _build_case_summary(case_doc, topic_labels)
         case_id = f"case:{slugify(case_doc.neutral_citation or case_doc.case_name)[:80]}"
         fetched_case_ids[_normalize_label(_clean_case_candidate(case_doc.case_name))] = case_id
+        candidate_principles: list[dict] = []
+        for candidate in candidate_records[:2]:
+            candidate_principles.extend(_candidate_principles(candidate, topic_labels[0] if topic_labels else "Key holding"))
+        candidate_domain_tags = [
+            str((candidate.get("domain_classification") or {}).get("domain") or "")
+            for candidate in candidate_records
+        ]
+        domain_tags = list(dict.fromkeys([domain_id, *[tag for tag in candidate_domain_tags if tag]]))
+        candidate_classification = candidate_records[0].get("domain_classification", {}) if candidate_records else {}
         case_node = add_node(
             {
                 "id": case_id,
@@ -1280,11 +1516,15 @@ def build_domain_relationship_payload(
                     _reference_payload(HKLII_SOURCE_ID, HKLII_SOURCE_LABEL, "api", case_doc.neutral_citation or case_doc.public_url, case_summary)
                 ],
                 "keywords": top_keywords(f"{case_doc.case_name} {case_summary}"),
-                "principles": _build_case_principles(case_doc, topic_labels),
+                "principles": candidate_principles or _build_case_principles(case_doc, topic_labels),
+                "domain_classification": candidate_classification,
+                "target_domain": domain_id,
+                "domain_tags": domain_tags,
                 "metrics": {
                     "paragraphs": len(case_doc.paragraphs),
                     "seed_topics": len(seed_topic_ids),
                     "matched_queries": len(search_entry.get("queries", set())),
+                    "candidate_registry_hits": len(candidate_records),
                     "cited_cases": len(case_doc.cited_cases),
                     "cited_statutes": len(case_doc.cited_statutes),
                 },
@@ -1485,6 +1725,7 @@ def build_domain_graph_artifacts(
         source_path_count=len(source_paths),
         embedding_backend=embedding_backend,
     )
+    candidate_registry = _load_candidate_registry(candidates_path, domain_id)
     payload, topic_catalog, sources, passages, case_documents, crawler_warnings = build_domain_relationship_payload(
         domain_id=domain_id,
         tree=tree,
@@ -1493,6 +1734,7 @@ def build_domain_graph_artifacts(
         per_query_limit=per_query_limit,
         max_cases=max_cases,
         max_textbook_case_fetches=max_textbook_case_fetches,
+        candidate_registry=candidate_registry,
         progress_callback=update_progress,
     )
     update_progress(
@@ -1562,6 +1804,7 @@ def build_domain_graph_artifacts(
     manifest["case_count"] = len(case_documents)
     if candidates_path:
         manifest["candidates_registry"] = str(Path(candidates_path).expanduser())
+        manifest["candidate_registry_count"] = len(candidate_registry)
     manifest["monitor"] = {
         "uncovered_topics": len(monitor["uncovered_topics"]),
         "low_coverage_topics": len(monitor["low_coverage_topics"]),

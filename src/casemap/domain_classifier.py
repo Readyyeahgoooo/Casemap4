@@ -28,9 +28,9 @@ LEGAL_DOMAINS = {
         "description": "Substantive criminal offences, defences, evidence, procedure, sentencing.",
     },
     "civil": {
-        "label_en": "Civil Litigation",
+        "label_en": "Civil Law and Procedure",
         "label_zh": "民事訴訟",
-        "description": "General civil procedure, injunctions, enforcement, limitation.",
+        "description": "Umbrella civil branch covering civil procedure plus non-criminal private and public law disputes.",
     },
     "contract": {
         "label_en": "Contract Law",
@@ -102,6 +102,67 @@ LEGAL_DOMAINS = {
 
 # ── Rule-based signals ─────────────────────────────────────────
 
+CIVIL_UMBRELLA_DOMAINS = frozenset(
+    {
+        "civil",
+        "contract",
+        "tort",
+        "commercial",
+        "company",
+        "land",
+        "family",
+        "employment",
+        "constitutional",
+        "tax",
+        "insolvency",
+        "arbitration",
+        "ip",
+        "probate",
+    }
+)
+
+_TARGET_CONFIDENCE_THRESHOLDS = {
+    "criminal": 0.6,
+    "civil": 0.2,
+}
+
+
+def domain_matches_target(domain_id: str | None, target_domain: str) -> bool:
+    """Return whether a classified domain belongs in the requested target branch."""
+    domain = (domain_id or "").strip().lower().replace("-", "_")
+    target = (target_domain or "").strip().lower().replace("-", "_")
+    if not domain or domain == "unknown" or not target:
+        return False
+    if domain == target:
+        return True
+    if target == "civil":
+        return domain in CIVIL_UMBRELLA_DOMAINS
+    return False
+
+
+def classification_matches_target(
+    classification: dict | None,
+    target_domain: str,
+    *,
+    include_secondary: bool = True,
+) -> bool:
+    """Return whether a classification should be retained for a target branch."""
+    classification = classification or {}
+    if domain_matches_target(classification.get("domain"), target_domain):
+        return True
+    if include_secondary:
+        return any(
+            domain_matches_target(domain, target_domain)
+            for domain in classification.get("secondary_domains", []) or []
+        )
+    return False
+
+
+def target_confidence_threshold(target_domain: str) -> float:
+    """Confidence needed for a rule-based match in a target branch."""
+    target = (target_domain or "").strip().lower().replace("-", "_")
+    return _TARGET_CONFIDENCE_THRESHOLDS.get(target, 0.25)
+
 # Strong criminal indicators
 # Case-number/court-list codes that are specific to criminal proceedings.
 # Neutral citation court codes such as HKCA, HKCFA, HKCFI, and HKDC are generic
@@ -129,18 +190,33 @@ _CIVIL_PARTIES_RE = re.compile(
 )
 _CIVIL_KEYWORD_RE = re.compile(
     r"\b(breach\s+of\s+contract|specific\s+performance|injunction|damages|"
-    r"negligence|duty\s+of\s+care|nuisance|defamation|"
+    r"pleading|statement\s+of\s+claim|writ|originating\s+summons|service\s+of\s+process|"
+    r"discovery|disclosure|summary\s+judgment|strike\s+out|default\s+judgment|"
+    r"security\s+for\s+costs|costs|taxation\s+of\s+costs|enforcement|garnishee|"
+    r"interlocutory\s+injunction|mareva|anton\s+piller|limitation\s+period|"
+    r"misrepresentation|repudiat|frustration|contractual\s+terms?|exemption\s+clause|"
+    r"penalty\s+clause|liquidated\s+damages|quantum\s+meruit|estoppel|"
+    r"negligence|duty\s+of\s+care|breach\s+of\s+duty|causation|remoteness|"
+    r"contributory\s+negligence|personal\s+injury|occupiers?\s+liability|"
+    r"vicarious\s+liability|nuisance|defamation|"
     r"winding\s+up|liquidat|bankruptcy|petition|receiver|"
     r"plaintiff|defendant|claimant|counterclaim|"
-    r"lease|tenancy|conveyancing|adverse\s+possession|"
-    r"divorce|custody|maintenance|matrimonial|"
-    r"employment\s+ordinance|unfair\s+dismissal|discrimination|"
+    r"lease|tenancy|conveyancing|adverse\s+possession|easement|mortgage|"
+    r"co-ownership|deed\s+of\s+mutual\s+covenant|building\s+management|"
+    r"directors?\s+dut(?:y|ies)|shareholders?\s+rights?|unfair\s+prejudice|"
+    r"derivative\s+action|minority\s+shareholder|company\s+restoration|"
+    r"sale\s+of\s+goods|banking|letters?\s+of\s+credit|insurance|indemnity|subrogation|agency|"
+    r"divorce|custody|care\s+and\s+control|ancillary\s+relief|maintenance|matrimonial|"
+    r"domestic\s+violence|non-molestation|"
+    r"employment\s+ordinance|wrongful\s+dismissal|unreasonable\s+dismissal|"
+    r"unfair\s+dismissal|discrimination|mandatory\s+provident\s+fund|mpf|"
     r"arbitrat|mediat|tribunal|"
-    r"judicial\s+review|certiorari|mandamus|"
+    r"judicial\s+review|certiorari|mandamus|natural\s+justice|legitimate\s+expectation|"
+    r"procedural\s+fairness|bill\s+of\s+rights|basic\s+law|"
     r"stamp\s+duty|profits\s+tax|salaries\s+tax|"
     r"trademark|copyright|patent|"
     r"will|probate|intestacy|trust|"
-    r"insurance|indemnity|subrogation)\b", re.IGNORECASE
+    r"trustee|estate\s+administration)\b", re.IGNORECASE
 )
 
 # Domain-specific statute mappings
@@ -153,22 +229,42 @@ _STATUTE_DOMAIN_MAP = {
     "cap 60": ("criminal",),
     # Civil/Commercial
     "cap 32": ("company", "insolvency", "civil"),  # Companies / winding-up legacy references
+    "cap 336": ("civil",),  # High Court Ordinance
     "cap 347": ("civil",),  # Limitation Ordinance
     "cap 4": ("civil",),  # District Court Ordinance
     "cap 6": ("civil", "insolvency"),  # Bankruptcy Ordinance / shared evidence references
+    "cap 26": ("contract", "commercial"),  # Sale of Goods Ordinance
+    "cap 71": ("contract",),  # Control of Exemption Clauses Ordinance
+    "cap 284": ("contract",),  # Misrepresentation Ordinance
+    "cap 457": ("contract",),  # Supply of Services (Implied Terms) Ordinance
+    "cap 623": ("contract",),  # Contracts (Rights of Third Parties) Ordinance
+    "cap 314": ("tort",),  # Occupiers Liability Ordinance
+    "cap 21": ("tort",),  # Defamation Ordinance
     # Company
     "cap 622": ("company",),
     # Land
     "cap 219": ("land",),  # Conveyancing and Property Ordinance
-    "cap 7": ("land",),  # Land Registration Ordinance
+    "cap 7": ("land",),  # Landlord and Tenant (Consolidation) Ordinance
+    "cap 128": ("land",),  # Land Registration Ordinance
+    "cap 344": ("land",),  # Building Management Ordinance
     # Family
+    "cap 13": ("family",),  # Guardianship of Minors Ordinance
+    "cap 16": ("family",),  # Separation and Maintenance Orders Ordinance
     "cap 179": ("family",),  # Matrimonial Causes Ordinance
-    "cap 192": ("family",),  # Marriage Ordinance
-    "cap 189": ("family",),  # Guardianship of Minors Ordinance
+    "cap 181": ("family",),  # Marriage Ordinance
+    "cap 189": ("family",),  # Domestic and Cohabitation Relationships Violence Ordinance
+    "cap 192": ("family",),  # Matrimonial Proceedings and Property Ordinance
     # Employment
     "cap 57": ("employment",),  # Employment Ordinance
-    "cap 509": ("employment",),  # Disability Discrimination
+    "cap 282": ("employment", "tort"),  # Employees' Compensation Ordinance
+    "cap 485": ("employment",),  # Mandatory Provident Fund Schemes Ordinance
+    "cap 487": ("employment",),  # Disability Discrimination
     "cap 480": ("employment",),  # Sex Discrimination
+    "cap 527": ("employment",),  # Family Status Discrimination
+    "cap 602": ("employment",),  # Race Discrimination
+    # Constitutional / administrative
+    "cap 383": ("constitutional",),  # Hong Kong Bill of Rights Ordinance
+    "cap 442": ("constitutional",),  # Administrative Appeals Board Ordinance
     # Tax
     "cap 112": ("tax",),  # Inland Revenue Ordinance
     "cap 117": ("tax",),  # Stamp Duty Ordinance
@@ -233,10 +329,25 @@ def classify_domain_rules(
     if civil_hits:
         # Map to specific domains
         civil_text = " ".join(civil_hits).lower()
+        if any(
+            w in civil_text
+            for w in (
+                "pleading", "statement of claim", "writ", "originating summons",
+                "service of process", "discovery", "disclosure", "summary judgment",
+                "strike out", "default judgment", "security for costs", "costs",
+                "enforcement", "garnishee", "injunction", "mareva", "anton piller",
+                "limitation period",
+            )
+        ):
+            domain_scores["civil"] += 0.35
+            signals.append("civil_procedure_keywords")
         if any(w in civil_text for w in ("divorce", "custody", "maintenance", "matrimonial")):
             domain_scores["family"] += 0.3
             signals.append("family_keywords")
-        if any(w in civil_text for w in ("employment", "dismissal", "discrimination")):
+        if any(w in civil_text for w in ("care and control", "ancillary relief", "domestic violence", "non-molestation")):
+            domain_scores["family"] += 0.3
+            signals.append("family_keywords")
+        if any(w in civil_text for w in ("employment", "dismissal", "discrimination", "provident fund", "mpf")):
             domain_scores["employment"] += 0.3
             signals.append("employment_keywords")
         if any(w in civil_text for w in ("winding", "liquidat", "bankruptcy", "receiver")):
@@ -245,24 +356,30 @@ def classify_domain_rules(
         if any(w in civil_text for w in ("arbitrat", "mediat")):
             domain_scores["arbitration"] += 0.3
             signals.append("arbitration_keywords")
-        if any(w in civil_text for w in ("judicial review", "certiorari", "mandamus")):
+        if any(w in civil_text for w in ("judicial review", "certiorari", "mandamus", "natural justice", "legitimate expectation", "procedural fairness", "bill of rights", "basic law")):
             domain_scores["constitutional"] += 0.3
             signals.append("constitutional_keywords")
-        if any(w in civil_text for w in ("lease", "tenancy", "conveyancing", "adverse")):
+        if any(w in civil_text for w in ("lease", "tenancy", "conveyancing", "adverse", "easement", "mortgage", "co-ownership", "deed of mutual covenant", "building management")):
             domain_scores["land"] += 0.3
             signals.append("land_keywords")
         if any(w in civil_text for w in ("trademark", "copyright", "patent")):
             domain_scores["ip"] += 0.3
             signals.append("ip_keywords")
-        if any(w in civil_text for w in ("will", "probate", "intestacy", "trust")):
+        if any(w in civil_text for w in ("will", "probate", "intestacy", "trust", "trustee", "estate administration")):
             domain_scores["probate"] += 0.3
             signals.append("probate_keywords")
-        if any(w in civil_text for w in ("negligence", "duty of care", "nuisance", "defamation")):
+        if any(w in civil_text for w in ("negligence", "duty of care", "breach of duty", "causation", "remoteness", "contributory negligence", "personal injury", "occupiers", "vicarious", "nuisance", "defamation")):
             domain_scores["tort"] += 0.3
             signals.append("tort_keywords")
-        if any(w in civil_text for w in ("breach of contract", "specific performance", "damages")):
+        if any(w in civil_text for w in ("breach of contract", "specific performance", "misrepresentation", "repudiat", "frustration", "contractual", "exemption clause", "penalty clause", "liquidated damages", "quantum meruit", "estoppel")):
             domain_scores["contract"] += 0.3
             signals.append("contract_keywords")
+        if any(w in civil_text for w in ("sale of goods", "banking", "letter of credit", "insurance", "indemnity", "subrogation", "agency")):
+            domain_scores["commercial"] += 0.3
+            signals.append("commercial_keywords")
+        if any(w in civil_text for w in ("director", "shareholder", "unfair prejudice", "derivative action", "company restoration")):
+            domain_scores["company"] += 0.3
+            signals.append("company_keywords")
         if any(w in civil_text for w in ("stamp duty", "profits tax", "salaries tax")):
             domain_scores["tax"] += 0.3
             signals.append("tax_keywords")
@@ -270,6 +387,7 @@ def classify_domain_rules(
         remaining = len(civil_hits) - sum(1 for s in signals if s != "corporate_party_name" and not s.startswith("criminal"))
         if remaining > 0:
             domain_scores["civil"] += min(0.2, remaining * 0.05)
+            signals.append(f"generic_civil_keywords:{remaining}")
 
     # 5. Statutes cited
     for statute in (statutes_cited or []):
@@ -316,7 +434,7 @@ Text excerpt: {text_snippet}
 
 Legal domains:
 - criminal: Criminal offences, defences, evidence, procedure, sentencing
-- civil: General civil procedure, injunctions, enforcement
+- civil: General civil procedure, injunctions, enforcement, limitation
 - contract: Formation, breach, remedies
 - tort: Negligence, nuisance, defamation, personal injury
 - commercial: Sale of goods, insurance, banking, agency
@@ -439,22 +557,40 @@ def classify_domain(
 def _has_strong_target_signal(classification: dict, target_domain: str) -> bool:
     """Accept lower-confidence target matches only when the signals are specific."""
     signals = classification.get("signals", [])
-    if target_domain != "criminal":
+    target_domain = (target_domain or "").strip().lower().replace("-", "_")
+
+    if target_domain == "criminal":
+        if "criminal_party_name" in signals:
+            return True
+        if any(signal.startswith("statute:") and "criminal" in signal for signal in signals):
+            return True
+        for signal in signals:
+            if not signal.startswith("criminal_keywords:"):
+                continue
+            try:
+                if int(signal.split(":", 1)[1]) >= 3:
+                    return True
+            except (IndexError, ValueError):
+                continue
         return False
 
-    if "criminal_party_name" in signals:
-        return True
-    if any(signal.startswith("statute:") and "criminal" in signal for signal in signals):
-        return True
-    for signal in signals:
-        if not signal.startswith("criminal_keywords:"):
-            continue
-        try:
-            if int(signal.split(":", 1)[1]) >= 3:
+    if target_domain == "civil":
+        domain = str(classification.get("domain") or "")
+        if domain_matches_target(domain, "civil"):
+            if any(signal in {"civil_procedure_keywords", "corporate_party_name"} for signal in signals):
                 return True
-        except (IndexError, ValueError):
-            continue
+            if any(signal.endswith("_keywords") and not signal.startswith("criminal") for signal in signals):
+                return True
+            if any(signal.startswith("statute:") and "criminal" not in signal for signal in signals):
+                return True
+        return False
+
+    if any(signal.startswith("statute:") and target_domain in signal for signal in signals):
+        return True
+    if any(signal == f"{target_domain}_keywords" for signal in signals):
+        return True
     return False
+
 
 def filter_candidates_by_domain(
     candidates: list[dict],
@@ -480,9 +616,13 @@ def filter_candidates_by_domain(
 
         # Build text snippet from principles
         snippets = []
+        statutes_cited: list[str] = []
         for p in candidate.get("principles", [])[:3]:
             snippets.append(p.get("principle_label", ""))
             snippets.append(p.get("paraphrase_en", ""))
+            snippets.append(p.get("statement_en", ""))
+            snippets.append(p.get("public_excerpt", ""))
+            statutes_cited.extend(str(item) for item in p.get("cited_statutes", []) or [])
         text_snippet = " ".join(snippets)
 
         existing_classification = candidate.get("domain_classification") or {}
@@ -497,21 +637,31 @@ def filter_candidates_by_domain(
         else:
             classification = classify_domain(
                 case_name, nc, text_snippet,
+                statutes_cited=statutes_cited,
                 use_llm_for_ambiguous=use_llm_for_ambiguous,
             )
 
         candidate["domain_classification"] = classification
 
         confidence = float(classification.get("confidence") or 0)
+        primary_matches = domain_matches_target(classification.get("domain"), target_domain)
+        secondary_matches = any(
+            domain_matches_target(domain, target_domain)
+            for domain in classification.get("secondary_domains", []) or []
+        )
+        confident_match = (
+            confidence >= target_confidence_threshold(target_domain)
+            or _has_strong_target_signal(classification, target_domain)
+        )
         if (
-            classification["domain"] == target_domain
-            and (confidence >= 0.6 or _has_strong_target_signal(classification, target_domain))
+            primary_matches
+            and confident_match
         ):
             matched.append(candidate)
-        elif classification["domain"] == target_domain:
+        elif primary_matches:
             candidate["domain_classification"]["quarantine_reason"] = "low_confidence_target_domain"
             cross_domain.append(candidate)
-        elif target_domain in classification.get("secondary_domains", []):
+        elif secondary_matches:
             candidate["domain_classification"]["quarantine_reason"] = "cross_domain"
             cross_domain.append(candidate)
         else:

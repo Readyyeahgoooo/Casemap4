@@ -41,7 +41,7 @@ from urllib import request as urllib_request
 # Ensure src/ is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from casemap.domain_classifier import classify_domain_rules
+from casemap.domain_classifier import classification_matches_target, classify_domain_rules
 from casemap.domain_filter import run_domain_filter
 from casemap.domain_graph import default_domain_label, iter_domain_topics, load_domain_tree, normalize_domain_id
 from casemap.hklii_crawler import HKLIICrawler
@@ -110,30 +110,34 @@ def _classify_candidate_domain(
     paragraphs: list[dict],
     principles: list[dict] | None = None,
 ) -> dict:
+    statutes_cited: list[str] = []
+    for principle in principles or []:
+        statutes_cited.extend(str(item) for item in principle.get("cited_statutes", []) or [])
     return classify_domain_rules(
         case_name=case_name,
         neutral_citation=neutral_citation,
         text_snippet=_domain_text_snippet(case_name, paragraphs, principles),
+        statutes_cited=statutes_cited,
     )
 
 
 def _is_quarantined(candidate: dict, target_domain: str = "criminal") -> bool:
     if candidate.get("enrichment_status") == "quarantined":
-        return True
+        classification = candidate.get("domain_classification") or {}
+        return not classification_matches_target(classification, target_domain)
     classification = candidate.get("domain_classification") or {}
     domain = classification.get("domain")
-    secondary_domains = set(classification.get("secondary_domains") or [])
     confidence = float(classification.get("confidence") or 0)
-    return bool(domain and domain != target_domain and target_domain not in secondary_domains and confidence >= 0.6)
+    return bool(domain and not classification_matches_target(classification, target_domain) and confidence >= 0.6)
 
 
 def _is_classified_non_target(candidate: dict, target_domain: str = "criminal") -> bool:
     if candidate.get("enrichment_status") == "quarantined":
-        return True
+        classification = candidate.get("domain_classification") or {}
+        return not classification_matches_target(classification, target_domain)
     classification = candidate.get("domain_classification") or {}
     domain = classification.get("domain")
-    secondary_domains = set(classification.get("secondary_domains") or [])
-    return bool(domain and domain != target_domain and target_domain not in secondary_domains)
+    return bool(domain and not classification_matches_target(classification, target_domain))
 
 
 def _summarize_domains(candidates: list[dict]) -> dict[str, int]:
@@ -656,10 +660,8 @@ def crawl_and_enrich(
                 )
                 domain = domain_classification.get("domain", "unknown")
                 stats["domain_breakdown"][domain] = stats["domain_breakdown"].get(domain, 0) + 1
-                secondary_domains = set(domain_classification.get("secondary_domains") or [])
                 is_quarantined = (
-                    domain != domain_id
-                    and domain_id not in secondary_domains
+                    not classification_matches_target(domain_classification, domain_id)
                     and float(domain_classification.get("confidence") or 0) >= 0.6
                 )
                 if is_quarantined:
@@ -832,9 +834,7 @@ def merge_reviewed(
             skipped_domain += 1
             continue
         classification = candidate.get("domain_classification") or {}
-        domain = classification.get("domain")
-        secondary_domains = set(classification.get("secondary_domains") or [])
-        if domain and domain != target_domain and target_domain not in secondary_domains:
+        if classification.get("domain") and not classification_matches_target(classification, target_domain):
             skipped_domain += 1
             continue
         verified.append(candidate)

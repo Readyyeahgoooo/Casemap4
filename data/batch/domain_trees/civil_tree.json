@@ -1,0 +1,802 @@
+{
+  "id": "authority_tree:hk_civil_law",
+  "domain_id": "civil",
+  "label_en": "Hong Kong Civil Law Knowledge Graph",
+  "label_zh": "香港民事法知識圖譜",
+  "summary_en": "Authority tree for Hong Kong civil law, covering civil procedure and major non-criminal dispute areas including contract, tort, land, company, employment, family, administrative law, probate, trusts, and arbitration.",
+  "summary_zh": "涵蓋民事程序及主要非刑事爭議範疇的香港民事法權威樹，包括合約、侵權、土地、公司、僱傭、家事、行政法、遺產信託及仲裁。",
+  "modules": [
+    {
+      "id": "civil_procedure",
+      "label_en": "General Principles of Civil Procedure",
+      "label_zh": "民事程序總則",
+      "summary_en": "Core procedural stages from commencement and pleadings through interlocutory applications, trial, costs, enforcement, and appeals.",
+      "summary_zh": "由展開法律程序及狀書至非正審申請、審訊、訟費、執行及上訴的核心程序。",
+      "subgrounds": [
+        {
+          "id": "commencement_pleadings_service",
+          "label_en": "Commencement, Pleadings and Service",
+          "label_zh": "開展程序、狀書及送達",
+          "summary_en": "Writs, originating summonses, pleadings, amendments, parties, and service of proceedings.",
+          "summary_zh": "傳訊令狀、原訴傳票、狀書、修訂、訴訟方及送達。",
+          "topics": [
+            {
+              "id": "writ_originating_summons",
+              "label_en": "Writs and Originating Summonses",
+              "label_zh": "傳訊令狀及原訴傳票",
+              "search_queries": ["writ originating summons", "Rules of High Court writ", "District Court originating summons"]
+            },
+            {
+              "id": "pleadings_amendment",
+              "label_en": "Pleadings and Amendment",
+              "label_zh": "狀書及修訂",
+              "search_queries": ["pleadings amendment", "statement of claim amendment", "unpleaded defence summary judgment"]
+            },
+            {
+              "id": "service_jurisdiction",
+              "label_en": "Service and Jurisdiction",
+              "label_zh": "送達及司法管轄權",
+              "search_queries": ["service out of jurisdiction", "substituted service", "jurisdiction challenge civil"]
+            }
+          ],
+          "children": [{"en": "commencement", "zh": "開展程序"}, {"en": "pleadings", "zh": "狀書"}, {"en": "service", "zh": "送達"}]
+        },
+        {
+          "id": "interlocutory_case_management",
+          "label_en": "Interlocutory Applications and Case Management",
+          "label_zh": "非正審申請及案件管理",
+          "summary_en": "Discovery, disclosure, summary disposal, injunctions, security for costs, and case management powers.",
+          "summary_zh": "文件透露、披露、簡易處置、禁制令、訟費保證及案件管理權力。",
+          "topics": [
+            {
+              "id": "discovery_disclosure",
+              "label_en": "Discovery and Disclosure",
+              "label_zh": "文件透露及披露",
+              "search_queries": ["discovery disclosure civil", "specific discovery", "litigation privilege discovery"]
+            },
+            {
+              "id": "summary_judgment_strike_out",
+              "label_en": "Summary Judgment and Strike Out",
+              "label_zh": "簡易判決及剔除",
+              "search_queries": ["Order 14 summary judgment", "strike out pleadings", "no triable issue summary judgment"]
+            },
+            {
+              "id": "interim_injunctions",
+              "label_en": "Interim Injunctions",
+              "label_zh": "臨時禁制令",
+              "search_queries": ["interlocutory injunction", "Mareva injunction", "Anton Piller order"]
+            },
+            {
+              "id": "security_for_costs",
+              "label_en": "Security for Costs",
+              "label_zh": "訟費保證",
+              "search_queries": ["security for costs", "company plaintiff security costs", "Order 23 security for costs"]
+            }
+          ],
+          "children": [{"en": "discovery", "zh": "文件透露"}, {"en": "summary disposal", "zh": "簡易處置"}, {"en": "injunctions", "zh": "禁制令"}]
+        },
+        {
+          "id": "trial_costs_enforcement_appeals",
+          "label_en": "Trial, Costs, Enforcement and Appeals",
+          "label_zh": "審訊、訟費、執行及上訴",
+          "summary_en": "Trial conduct, evidential burdens, costs, enforcement tools, limitation, and civil appeals.",
+          "summary_zh": "審訊進行、舉證責任、訟費、執行工具、時效及民事上訴。",
+          "topics": [
+            {
+              "id": "trial_evidence_burden",
+              "label_en": "Trial Evidence and Burden of Proof",
+              "label_zh": "審訊證據及舉證責任",
+              "search_queries": ["civil burden of proof", "trial evidence civil", "hearsay civil evidence"]
+            },
+            {
+              "id": "costs_taxation",
+              "label_en": "Costs and Taxation",
+              "label_zh": "訟費及評定",
+              "search_queries": ["costs follow event", "taxation of costs", "Calderbank offer costs"]
+            },
+            {
+              "id": "enforcement_judgment",
+              "label_en": "Enforcement of Judgments",
+              "label_zh": "判決執行",
+              "search_queries": ["enforcement of judgment", "garnishee order", "charging order civil"]
+            },
+            {
+              "id": "civil_appeals_limitation",
+              "label_en": "Civil Appeals and Limitation",
+              "label_zh": "民事上訴及時效",
+              "search_queries": ["leave to appeal civil", "Limitation Ordinance Cap. 347", "extension of time civil appeal"]
+            }
+          ],
+          "children": [{"en": "trial", "zh": "審訊"}, {"en": "costs", "zh": "訟費"}, {"en": "enforcement", "zh": "執行"}, {"en": "appeals", "zh": "上訴"}]
+        }
+      ]
+    },
+    {
+      "id": "contract_law",
+      "label_en": "Contract Law",
+      "label_zh": "合約法",
+      "summary_en": "Formation, terms, vitiating factors, breach, termination, remedies, restitution, and statutory contract regimes.",
+      "summary_zh": "涵蓋合約成立、條款、影響合約效力因素、違約、終止、補救、返還及法定合約制度。",
+      "subgrounds": [
+        {
+          "id": "formation_terms_interpretation",
+          "label_en": "Formation, Terms and Interpretation",
+          "label_zh": "成立、條款及詮釋",
+          "summary_en": "Offer and acceptance, consideration, intention, incorporation, implied terms, and contractual construction.",
+          "summary_zh": "要約與承諾、代價、締約意圖、納入條款、隱含條款及合約詮釋。",
+          "topics": [
+            {
+              "id": "contract_formation",
+              "label_en": "Contract Formation",
+              "label_zh": "合約成立",
+              "search_queries": ["contract formation offer acceptance", "consideration intention contract", "certainty contract terms"]
+            },
+            {
+              "id": "contractual_terms_interpretation",
+              "label_en": "Contractual Terms and Interpretation",
+              "label_zh": "合約條款及詮釋",
+              "search_queries": ["contract interpretation", "implied terms contract", "incorporation exclusion clause"]
+            },
+            {
+              "id": "third_party_rights",
+              "label_en": "Third Party Rights",
+              "label_zh": "第三者權利",
+              "search_queries": ["Contracts Rights of Third Parties Ordinance Cap. 623", "third party rights contract", "privity contract Hong Kong"]
+            }
+          ],
+          "children": [{"en": "formation", "zh": "成立"}, {"en": "terms", "zh": "條款"}, {"en": "interpretation", "zh": "詮釋"}]
+        },
+        {
+          "id": "vitiating_factors",
+          "label_en": "Vitiating Factors",
+          "label_zh": "影響合約效力因素",
+          "summary_en": "Misrepresentation, mistake, duress, undue influence, unconscionability, and illegality.",
+          "summary_zh": "失實陳述、錯誤、脅迫、不當影響、不合情理及非法性。",
+          "topics": [
+            {
+              "id": "misrepresentation",
+              "label_en": "Misrepresentation",
+              "label_zh": "失實陳述",
+              "search_queries": ["misrepresentation contract", "Misrepresentation Ordinance Cap. 284", "fraudulent misrepresentation damages"]
+            },
+            {
+              "id": "mistake_duress_undue_influence",
+              "label_en": "Mistake, Duress and Undue Influence",
+              "label_zh": "錯誤、脅迫及不當影響",
+              "search_queries": ["mistake contract", "duress undue influence", "unconscionable bargain contract"]
+            },
+            {
+              "id": "illegality_public_policy",
+              "label_en": "Illegality and Public Policy",
+              "label_zh": "非法性及公共政策",
+              "search_queries": ["contract illegality public policy", "illegal contract restitution", "restraint of trade contract"]
+            }
+          ],
+          "children": [{"en": "misrepresentation", "zh": "失實陳述"}, {"en": "mistake", "zh": "錯誤"}, {"en": "duress", "zh": "脅迫"}]
+        },
+        {
+          "id": "breach_remedies_contract",
+          "label_en": "Breach, Termination and Remedies",
+          "label_zh": "違約、終止及補救",
+          "summary_en": "Repudiation, termination, damages, penalties, specific performance, injunctions, restitution, and sale of goods remedies.",
+          "summary_zh": "毀約、終止、損害賠償、罰款條款、強制履行、禁制令、返還及貨品售賣補救。",
+          "topics": [
+            {
+              "id": "repudiatory_breach_termination",
+              "label_en": "Repudiatory Breach and Termination",
+              "label_zh": "根本違約及終止",
+              "search_queries": ["repudiatory breach termination", "anticipatory breach contract", "affirmation termination contract"]
+            },
+            {
+              "id": "contract_damages_penalties",
+              "label_en": "Damages, Penalties and Liquidated Damages",
+              "label_zh": "損害賠償、罰款及約定損害賠償",
+              "search_queries": ["contract damages remoteness", "penalty clause liquidated damages", "mitigation contract damages"]
+            },
+            {
+              "id": "specific_performance_injunction",
+              "label_en": "Specific Performance and Injunctions",
+              "label_zh": "強制履行及禁制令",
+              "search_queries": ["specific performance contract", "injunction breach of contract", "equitable remedies contract"]
+            },
+            {
+              "id": "sale_of_goods_contract",
+              "label_en": "Sale of Goods",
+              "label_zh": "貨品售賣",
+              "search_queries": ["Sale of Goods Ordinance Cap. 26", "implied terms sale of goods", "rejection goods breach"]
+            }
+          ],
+          "children": [{"en": "breach", "zh": "違約"}, {"en": "termination", "zh": "終止"}, {"en": "remedies", "zh": "補救"}]
+        }
+      ]
+    },
+    {
+      "id": "tort_law",
+      "label_en": "Tort Law",
+      "label_zh": "侵權法",
+      "summary_en": "Negligence, personal injury, occupiers' liability, vicarious liability, nuisance, defamation, and professional negligence.",
+      "summary_zh": "疏忽、個人傷害、佔用人法律責任、轉承責任、滋擾、誹謗及專業疏忽。",
+      "subgrounds": [
+        {
+          "id": "negligence_elements",
+          "label_en": "Negligence Elements",
+          "label_zh": "疏忽要素",
+          "summary_en": "Duty of care, breach, causation, remoteness, defences, and apportionment.",
+          "summary_zh": "謹慎責任、違反責任、因果關係、損害距離、抗辯及分擔責任。",
+          "topics": [
+            {
+              "id": "duty_breach_negligence",
+              "label_en": "Duty and Breach of Care",
+              "label_zh": "謹慎責任及違反責任",
+              "search_queries": ["duty of care negligence", "breach of duty negligence", "standard of care negligence"]
+            },
+            {
+              "id": "causation_remoteness_negligence",
+              "label_en": "Causation and Remoteness",
+              "label_zh": "因果關係及損害距離",
+              "search_queries": ["causation negligence", "remoteness damage negligence", "thin skull rule"]
+            },
+            {
+              "id": "contributory_negligence",
+              "label_en": "Contributory Negligence",
+              "label_zh": "共同疏忽",
+              "search_queries": ["contributory negligence", "apportionment negligence", "Law Amendment Reform Consolidation Ordinance contributory negligence"]
+            }
+          ],
+          "children": [{"en": "duty", "zh": "責任"}, {"en": "breach", "zh": "違反"}, {"en": "causation", "zh": "因果關係"}]
+        },
+        {
+          "id": "personal_injury_occupiers_professional",
+          "label_en": "Personal Injury, Occupiers and Professional Negligence",
+          "label_zh": "個人傷害、佔用人及專業疏忽",
+          "summary_en": "Assessment of personal injury claims, occupiers' liability, vicarious liability, and professional negligence.",
+          "summary_zh": "個人傷害申索評估、佔用人責任、轉承責任及專業疏忽。",
+          "topics": [
+            {
+              "id": "personal_injury_damages",
+              "label_en": "Personal Injury Damages",
+              "label_zh": "個人傷害損害賠償",
+              "search_queries": ["personal injury damages", "loss of earnings personal injury", "pain suffering loss amenity"]
+            },
+            {
+              "id": "occupiers_liability",
+              "label_en": "Occupiers' Liability",
+              "label_zh": "佔用人法律責任",
+              "search_queries": ["Occupiers Liability Ordinance Cap. 314", "occupiers liability", "visitor duty occupier"]
+            },
+            {
+              "id": "vicarious_professional_negligence",
+              "label_en": "Vicarious and Professional Negligence",
+              "label_zh": "轉承及專業疏忽",
+              "search_queries": ["vicarious liability", "professional negligence", "solicitor negligence duty"]
+            }
+          ],
+          "children": [{"en": "personal injury", "zh": "個人傷害"}, {"en": "occupiers", "zh": "佔用人"}, {"en": "professional negligence", "zh": "專業疏忽"}]
+        },
+        {
+          "id": "nuisance_defamation",
+          "label_en": "Nuisance and Defamation",
+          "label_zh": "滋擾及誹謗",
+          "summary_en": "Private nuisance, public nuisance in civil proceedings, defamation, privilege, and remedies.",
+          "summary_zh": "私人滋擾、民事程序中的公眾滋擾、誹謗、特權及補救。",
+          "topics": [
+            {
+              "id": "private_nuisance",
+              "label_en": "Private Nuisance",
+              "label_zh": "私人滋擾",
+              "search_queries": ["private nuisance", "nuisance injunction damages", "water seepage nuisance"]
+            },
+            {
+              "id": "defamation_privilege",
+              "label_en": "Defamation and Privilege",
+              "label_zh": "誹謗及特權",
+              "search_queries": ["Defamation Ordinance Cap. 21", "defamation qualified privilege", "libel slander damages"]
+            }
+          ],
+          "children": [{"en": "nuisance", "zh": "滋擾"}, {"en": "defamation", "zh": "誹謗"}]
+        }
+      ]
+    },
+    {
+      "id": "property_land_law",
+      "label_en": "Property and Land Law",
+      "label_zh": "物業及土地法",
+      "summary_en": "Conveyancing, leases, mortgages, co-ownership, easements, covenants, building management, and adverse possession.",
+      "summary_zh": "物業轉易、租賃、按揭、共同擁有權、地役權、契諾、建築物管理及逆權管有。",
+      "subgrounds": [
+        {
+          "id": "conveyancing_leases",
+          "label_en": "Conveyancing and Leases",
+          "label_zh": "物業轉易及租賃",
+          "summary_en": "Sale and purchase, completion, title, landlord and tenant disputes, forfeiture, and relief.",
+          "summary_zh": "買賣、完成交易、業權、業主租客爭議、沒收租賃及濟助。",
+          "topics": [
+            {
+              "id": "conveyancing_sale_purchase",
+              "label_en": "Conveyancing Sale and Purchase",
+              "label_zh": "物業買賣及轉易",
+              "search_queries": ["Conveyancing Property Ordinance Cap. 219", "sale and purchase property", "good title conveyancing"]
+            },
+            {
+              "id": "leases_tenancy_forfeiture",
+              "label_en": "Leases, Tenancy and Forfeiture",
+              "label_zh": "租賃、租住權及沒收",
+              "search_queries": ["Landlord Tenant Consolidation Ordinance Cap. 7", "forfeiture lease relief", "tenancy possession arrears"]
+            }
+          ],
+          "children": [{"en": "conveyancing", "zh": "物業轉易"}, {"en": "leases", "zh": "租賃"}]
+        },
+        {
+          "id": "land_interests",
+          "label_en": "Land Interests",
+          "label_zh": "土地權益",
+          "summary_en": "Mortgages, co-ownership, trusts of land, easements, restrictive covenants, registration, and priorities.",
+          "summary_zh": "按揭、共同擁有、土地信託、地役權、限制性契諾、註冊及優先次序。",
+          "topics": [
+            {
+              "id": "mortgages_priorities",
+              "label_en": "Mortgages and Priorities",
+              "label_zh": "按揭及優先次序",
+              "search_queries": ["mortgage priority land", "Land Registration Ordinance Cap. 128", "equitable mortgage property"]
+            },
+            {
+              "id": "co_ownership_trusts_land",
+              "label_en": "Co-ownership and Trusts of Land",
+              "label_zh": "共同擁有及土地信託",
+              "search_queries": ["co-ownership property", "resulting trust property", "constructive trust land"]
+            },
+            {
+              "id": "easements_covenants",
+              "label_en": "Easements and Covenants",
+              "label_zh": "地役權及契諾",
+              "search_queries": ["easement right of way", "restrictive covenant land", "building covenant property"]
+            }
+          ],
+          "children": [{"en": "mortgages", "zh": "按揭"}, {"en": "co-ownership", "zh": "共同擁有"}, {"en": "easements", "zh": "地役權"}]
+        },
+        {
+          "id": "building_management_possession",
+          "label_en": "Building Management and Possession",
+          "label_zh": "建築物管理及管有",
+          "summary_en": "Deeds of mutual covenant, incorporated owners, management disputes, adverse possession, and possession claims.",
+          "summary_zh": "公契、業主立案法團、管理爭議、逆權管有及管有申索。",
+          "topics": [
+            {
+              "id": "building_management_dmc",
+              "label_en": "Building Management and Deeds of Mutual Covenant",
+              "label_zh": "建築物管理及公契",
+              "search_queries": ["Building Management Ordinance Cap. 344", "deed of mutual covenant", "incorporated owners building management"]
+            },
+            {
+              "id": "adverse_possession",
+              "label_en": "Adverse Possession",
+              "label_zh": "逆權管有",
+              "search_queries": ["adverse possession", "limitation adverse possession", "squatter possession land"]
+            }
+          ],
+          "children": [{"en": "building management", "zh": "建築物管理"}, {"en": "possession", "zh": "管有"}]
+        }
+      ]
+    },
+    {
+      "id": "company_commercial_law",
+      "label_en": "Company and Commercial Law",
+      "label_zh": "公司及商業法",
+      "summary_en": "Company governance, shareholder remedies, winding up, insolvency, banking, insurance, agency, and commercial transactions.",
+      "summary_zh": "公司管治、股東補救、清盤、無力償債、銀行、保險、代理及商業交易。",
+      "subgrounds": [
+        {
+          "id": "company_governance_shareholders",
+          "label_en": "Company Governance and Shareholders",
+          "label_zh": "公司管治及股東",
+          "summary_en": "Directors' duties, shareholder rights, unfair prejudice, derivative actions, and company restoration.",
+          "summary_zh": "董事責任、股東權利、不公平損害、衍生訴訟及公司恢復註冊。",
+          "topics": [
+            {
+              "id": "directors_duties",
+              "label_en": "Directors' Duties",
+              "label_zh": "董事責任",
+              "search_queries": ["directors duties Companies Ordinance Cap. 622", "fiduciary duty director", "breach directors duties"]
+            },
+            {
+              "id": "unfair_prejudice_derivative",
+              "label_en": "Unfair Prejudice and Derivative Actions",
+              "label_zh": "不公平損害及衍生訴訟",
+              "search_queries": ["unfair prejudice Companies Ordinance Cap. 622", "derivative action company", "minority shareholder unfair prejudice"]
+            },
+            {
+              "id": "company_restoration_records",
+              "label_en": "Company Restoration and Records",
+              "label_zh": "公司恢復註冊及紀錄",
+              "search_queries": ["company restoration", "Companies Registry restoration", "inspection company records"]
+            }
+          ],
+          "children": [{"en": "directors", "zh": "董事"}, {"en": "shareholders", "zh": "股東"}, {"en": "remedies", "zh": "補救"}]
+        },
+        {
+          "id": "winding_up_insolvency",
+          "label_en": "Winding Up and Insolvency",
+          "label_zh": "清盤及無力償債",
+          "summary_en": "Winding up petitions, statutory demands, bankruptcy, receivership, liquidators, and insolvency-related civil remedies.",
+          "summary_zh": "清盤呈請、法定要求償債書、破產、接管人、清盤人及無力償債相關民事補救。",
+          "topics": [
+            {
+              "id": "winding_up_petitions",
+              "label_en": "Winding Up Petitions",
+              "label_zh": "清盤呈請",
+              "search_queries": ["winding up petition", "Companies Winding Up Cap. 32", "statutory demand winding up"]
+            },
+            {
+              "id": "bankruptcy_receivership",
+              "label_en": "Bankruptcy and Receivership",
+              "label_zh": "破產及接管",
+              "search_queries": ["Bankruptcy Ordinance Cap. 6", "receivership company", "trustee in bankruptcy"]
+            }
+          ],
+          "children": [{"en": "winding up", "zh": "清盤"}, {"en": "bankruptcy", "zh": "破產"}, {"en": "receivership", "zh": "接管"}]
+        },
+        {
+          "id": "commercial_transactions",
+          "label_en": "Commercial Transactions",
+          "label_zh": "商業交易",
+          "summary_en": "Sale of goods, banking, letters of credit, insurance, agency, guarantees, and securities/regulatory civil proceedings.",
+          "summary_zh": "貨品售賣、銀行、信用證、保險、代理、擔保及證券或監管民事程序。",
+          "topics": [
+            {
+              "id": "banking_letters_credit",
+              "label_en": "Banking and Letters of Credit",
+              "label_zh": "銀行及信用證",
+              "search_queries": ["banking letter of credit", "bank duty customer", "guarantee indemnity bank"]
+            },
+            {
+              "id": "insurance_indemnity_subrogation",
+              "label_en": "Insurance, Indemnity and Subrogation",
+              "label_zh": "保險、彌償及代位權",
+              "search_queries": ["insurance indemnity subrogation", "Insurance Ordinance Cap. 41", "policy interpretation insurance"]
+            },
+            {
+              "id": "agency_commercial_authority",
+              "label_en": "Agency and Commercial Authority",
+              "label_zh": "代理及商業權限",
+              "search_queries": ["agency authority contract", "apparent authority agent", "breach warranty authority"]
+            },
+            {
+              "id": "securities_civil_regulatory",
+              "label_en": "Securities Civil and Regulatory Proceedings",
+              "label_zh": "證券民事及監管程序",
+              "search_queries": ["Securities Futures Ordinance Cap. 571 civil", "market misconduct tribunal", "SFC injunction"]
+            }
+          ],
+          "children": [{"en": "banking", "zh": "銀行"}, {"en": "insurance", "zh": "保險"}, {"en": "agency", "zh": "代理"}, {"en": "securities", "zh": "證券"}]
+        }
+      ]
+    },
+    {
+      "id": "employment_law",
+      "label_en": "Employment Law",
+      "label_zh": "僱傭法",
+      "summary_en": "Employment contracts, wages, termination, dismissal claims, discrimination, employees' compensation, MPF, and restraints.",
+      "summary_zh": "僱傭合約、工資、終止、解僱申索、歧視、僱員補償、強積金及限制性條款。",
+      "subgrounds": [
+        {
+          "id": "employment_contracts_termination",
+          "label_en": "Employment Contracts and Termination",
+          "label_zh": "僱傭合約及終止",
+          "summary_en": "Employment status, wages, contractual duties, termination, dismissal, and severance.",
+          "summary_zh": "僱傭身份、工資、合約責任、終止、解僱及遣散。",
+          "topics": [
+            {
+              "id": "employment_contract_wages",
+              "label_en": "Employment Contract and Wages",
+              "label_zh": "僱傭合約及工資",
+              "search_queries": ["Employment Ordinance Cap. 57 wages", "employment contract terms", "employee contractor status"]
+            },
+            {
+              "id": "dismissal_termination",
+              "label_en": "Dismissal and Termination",
+              "label_zh": "解僱及終止",
+              "search_queries": ["wrongful dismissal", "unreasonable dismissal Employment Ordinance", "termination employment contract"]
+            }
+          ],
+          "children": [{"en": "contract", "zh": "合約"}, {"en": "termination", "zh": "終止"}]
+        },
+        {
+          "id": "employment_discrimination_compensation",
+          "label_en": "Discrimination and Compensation",
+          "label_zh": "歧視及補償",
+          "summary_en": "Workplace discrimination, employees' compensation, occupational injury claims, and tribunal proceedings.",
+          "summary_zh": "職場歧視、僱員補償、工傷申索及審裁處程序。",
+          "topics": [
+            {
+              "id": "employment_discrimination",
+              "label_en": "Employment Discrimination",
+              "label_zh": "僱傭歧視",
+              "search_queries": ["Sex Discrimination Ordinance Cap. 480 employment", "Disability Discrimination Ordinance Cap. 487 employment", "Race Discrimination Ordinance Cap. 602"]
+            },
+            {
+              "id": "employees_compensation",
+              "label_en": "Employees' Compensation",
+              "label_zh": "僱員補償",
+              "search_queries": ["Employees Compensation Ordinance Cap. 282", "work injury compensation", "occupational injury employment"]
+            }
+          ],
+          "children": [{"en": "discrimination", "zh": "歧視"}, {"en": "compensation", "zh": "補償"}]
+        },
+        {
+          "id": "mpf_restraint_trade",
+          "label_en": "MPF and Restraint of Trade",
+          "label_zh": "強積金及營業限制",
+          "summary_en": "Mandatory provident fund disputes and post-employment restraints.",
+          "summary_zh": "強積金爭議及離職後限制。",
+          "topics": [
+            {
+              "id": "mpf_obligations",
+              "label_en": "MPF Obligations",
+              "label_zh": "強積金責任",
+              "search_queries": ["Mandatory Provident Fund Cap. 485", "MPF contribution employer", "MPF Schemes Ordinance"]
+            },
+            {
+              "id": "restraint_of_trade_employment",
+              "label_en": "Restraint of Trade",
+              "label_zh": "營業限制",
+              "search_queries": ["restraint of trade employment", "non-compete employment", "confidential information employee injunction"]
+            }
+          ],
+          "children": [{"en": "MPF", "zh": "強積金"}, {"en": "restraints", "zh": "限制"}]
+        }
+      ]
+    },
+    {
+      "id": "family_law",
+      "label_en": "Family Law",
+      "label_zh": "家事法",
+      "summary_en": "Divorce, children, maintenance, ancillary relief, domestic violence, and family injunctions.",
+      "summary_zh": "離婚、子女、贍養、附屬濟助、家庭暴力及家事禁制令。",
+      "subgrounds": [
+        {
+          "id": "matrimonial_financial",
+          "label_en": "Matrimonial and Financial Relief",
+          "label_zh": "婚姻及財務濟助",
+          "summary_en": "Divorce, separation, maintenance, ancillary relief, and matrimonial property.",
+          "summary_zh": "離婚、分居、贍養、附屬濟助及婚姻財產。",
+          "topics": [
+            {
+              "id": "divorce_matrimonial_causes",
+              "label_en": "Divorce and Matrimonial Causes",
+              "label_zh": "離婚及婚姻訴訟",
+              "search_queries": ["Matrimonial Causes Ordinance Cap. 179", "divorce petition unreasonable behaviour", "matrimonial causes Hong Kong"]
+            },
+            {
+              "id": "ancillary_relief_maintenance",
+              "label_en": "Ancillary Relief and Maintenance",
+              "label_zh": "附屬濟助及贍養",
+              "search_queries": ["ancillary relief", "Matrimonial Proceedings Property Ordinance Cap. 192", "maintenance spouse children"]
+            }
+          ],
+          "children": [{"en": "divorce", "zh": "離婚"}, {"en": "maintenance", "zh": "贍養"}, {"en": "property", "zh": "財產"}]
+        },
+        {
+          "id": "children_welfare",
+          "label_en": "Children and Welfare",
+          "label_zh": "子女及福利",
+          "summary_en": "Custody, care and control, access, guardianship, relocation, and welfare principles.",
+          "summary_zh": "管養權、照顧及管束、探視、監護、遷移及福利原則。",
+          "topics": [
+            {
+              "id": "custody_care_control",
+              "label_en": "Custody, Care and Control",
+              "label_zh": "管養、照顧及管束",
+              "search_queries": ["child custody welfare", "care and control access", "Guardianship of Minors Ordinance Cap. 13"]
+            },
+            {
+              "id": "children_relocation_access",
+              "label_en": "Relocation and Access",
+              "label_zh": "遷移及探視",
+              "search_queries": ["child relocation Hong Kong", "access order child", "best interests child relocation"]
+            }
+          ],
+          "children": [{"en": "custody", "zh": "管養"}, {"en": "access", "zh": "探視"}, {"en": "welfare", "zh": "福利"}]
+        },
+        {
+          "id": "family_protection",
+          "label_en": "Family Protection",
+          "label_zh": "家庭保護",
+          "summary_en": "Domestic violence, non-molestation orders, occupation orders, and protective injunctions.",
+          "summary_zh": "家庭暴力、非騷擾令、佔用令及保護性禁制令。",
+          "topics": [
+            {
+              "id": "domestic_violence_orders",
+              "label_en": "Domestic Violence Orders",
+              "label_zh": "家庭暴力命令",
+              "search_queries": ["Domestic Cohabitation Relationships Violence Ordinance Cap. 189", "non-molestation order", "occupation order domestic violence"]
+            },
+            {
+              "id": "family_injunctions",
+              "label_en": "Family Injunctions",
+              "label_zh": "家事禁制令",
+              "search_queries": ["family injunction", "injunction matrimonial proceedings", "molestation injunction family"]
+            }
+          ],
+          "children": [{"en": "domestic violence", "zh": "家庭暴力"}, {"en": "injunctions", "zh": "禁制令"}]
+        }
+      ]
+    },
+    {
+      "id": "constitutional_administrative_law",
+      "label_en": "Constitutional and Administrative Law",
+      "label_zh": "憲制及行政法",
+      "summary_en": "Judicial review, procedural fairness, legitimate expectation, Basic Law, Bill of Rights, and administrative remedies.",
+      "summary_zh": "司法覆核、程序公義、合理期望、基本法、人權法案及行政法補救。",
+      "subgrounds": [
+        {
+          "id": "judicial_review_procedure",
+          "label_en": "Judicial Review Procedure",
+          "label_zh": "司法覆核程序",
+          "summary_en": "Leave, standing, promptness, alternative remedies, and public law boundaries.",
+          "summary_zh": "許可、申請資格、迅速性、其他補救及公法界線。",
+          "topics": [
+            {
+              "id": "judicial_review_leave_standing",
+              "label_en": "Leave and Standing",
+              "label_zh": "許可及申請資格",
+              "search_queries": ["judicial review leave standing", "promptness judicial review", "alternative remedy judicial review"]
+            },
+            {
+              "id": "public_law_error",
+              "label_en": "Public Law Error",
+              "label_zh": "公法錯誤",
+              "search_queries": ["public law error judicial review", "Wednesbury unreasonableness Hong Kong", "error of law judicial review"]
+            }
+          ],
+          "children": [{"en": "leave", "zh": "許可"}, {"en": "standing", "zh": "資格"}, {"en": "public law", "zh": "公法"}]
+        },
+        {
+          "id": "fairness_rights_remedies",
+          "label_en": "Fairness, Rights and Remedies",
+          "label_zh": "公義、權利及補救",
+          "summary_en": "Natural justice, procedural fairness, legitimate expectation, constitutional rights, and public law remedies.",
+          "summary_zh": "自然公義、程序公義、合理期望、憲制權利及公法補救。",
+          "topics": [
+            {
+              "id": "natural_justice_fairness",
+              "label_en": "Natural Justice and Procedural Fairness",
+              "label_zh": "自然公義及程序公義",
+              "search_queries": ["natural justice procedural fairness", "right to be heard administrative", "bias apparent bias judicial review"]
+            },
+            {
+              "id": "legitimate_expectation",
+              "label_en": "Legitimate Expectation",
+              "label_zh": "合理期望",
+              "search_queries": ["legitimate expectation", "substantive legitimate expectation", "procedural legitimate expectation"]
+            },
+            {
+              "id": "basic_law_bill_rights",
+              "label_en": "Basic Law and Bill of Rights",
+              "label_zh": "基本法及人權法案",
+              "search_queries": ["Basic Law judicial review", "Hong Kong Bill of Rights Ordinance Cap. 383", "proportionality constitutional rights"]
+            },
+            {
+              "id": "public_law_remedies",
+              "label_en": "Public Law Remedies",
+              "label_zh": "公法補救",
+              "search_queries": ["certiorari mandamus prohibition", "declaration judicial review", "damages public law"]
+            }
+          ],
+          "children": [{"en": "fairness", "zh": "公義"}, {"en": "rights", "zh": "權利"}, {"en": "remedies", "zh": "補救"}]
+        }
+      ]
+    },
+    {
+      "id": "probate_trusts_equity",
+      "label_en": "Probate, Trusts and Equity",
+      "label_zh": "遺產、信託及衡平法",
+      "summary_en": "Wills, probate, intestacy, estate administration, trusts, fiduciary duties, tracing, and equitable remedies.",
+      "summary_zh": "遺囑、遺囑認證、無遺囑繼承、遺產管理、信託、受信責任、追蹤及衡平法補救。",
+      "subgrounds": [
+        {
+          "id": "succession_estates",
+          "label_en": "Succession and Estates",
+          "label_zh": "繼承及遺產",
+          "summary_en": "Wills, testamentary capacity, probate, intestacy, family provision, and estate administration.",
+          "summary_zh": "遺囑、立遺囑能力、遺囑認證、無遺囑繼承、家庭供養及遺產管理。",
+          "topics": [
+            {
+              "id": "wills_probate_capacity",
+              "label_en": "Wills, Probate and Capacity",
+              "label_zh": "遺囑、認證及能力",
+              "search_queries": ["wills probate testamentary capacity", "probate caveat", "valid will Hong Kong"]
+            },
+            {
+              "id": "intestacy_estate_administration",
+              "label_en": "Intestacy and Estate Administration",
+              "label_zh": "無遺囑繼承及遺產管理",
+              "search_queries": ["intestacy estate administration", "administrator estate", "Inheritance Provision Family Dependants Ordinance"]
+            }
+          ],
+          "children": [{"en": "wills", "zh": "遺囑"}, {"en": "probate", "zh": "認證"}, {"en": "estates", "zh": "遺產"}]
+        },
+        {
+          "id": "trusts_equitable_remedies",
+          "label_en": "Trusts and Equitable Remedies",
+          "label_zh": "信託及衡平法補救",
+          "summary_en": "Express trusts, resulting trusts, constructive trusts, fiduciary duties, tracing, account, and equitable compensation.",
+          "summary_zh": "明示信託、歸復信託、構定信託、受信責任、追蹤、交代帳目及衡平法補償。",
+          "topics": [
+            {
+              "id": "trusts_fiduciary_duties",
+              "label_en": "Trusts and Fiduciary Duties",
+              "label_zh": "信託及受信責任",
+              "search_queries": ["fiduciary duty trust", "breach of trust", "trustee duty account"]
+            },
+            {
+              "id": "constructive_resulting_trusts",
+              "label_en": "Constructive and Resulting Trusts",
+              "label_zh": "構定及歸復信託",
+              "search_queries": ["constructive trust", "resulting trust", "common intention constructive trust"]
+            },
+            {
+              "id": "equitable_tracing_remedies",
+              "label_en": "Tracing and Equitable Remedies",
+              "label_zh": "追蹤及衡平法補救",
+              "search_queries": ["equitable tracing", "account of profits fiduciary", "equitable compensation breach trust"]
+            }
+          ],
+          "children": [{"en": "trusts", "zh": "信託"}, {"en": "fiduciary", "zh": "受信"}, {"en": "tracing", "zh": "追蹤"}]
+        }
+      ]
+    },
+    {
+      "id": "arbitration_adr",
+      "label_en": "Arbitration and ADR",
+      "label_zh": "仲裁及替代爭議解決",
+      "summary_en": "Arbitration agreements, stays, award enforcement, setting aside, mediation, settlement, and costs consequences.",
+      "summary_zh": "仲裁協議、擱置法律程序、裁決執行、撤銷裁決、調解、和解及訟費後果。",
+      "subgrounds": [
+        {
+          "id": "arbitration_procedure_awards",
+          "label_en": "Arbitration Procedure and Awards",
+          "label_zh": "仲裁程序及裁決",
+          "summary_en": "Arbitration agreements, stay of court proceedings, tribunal jurisdiction, enforcement, and setting aside.",
+          "summary_zh": "仲裁協議、擱置法院程序、仲裁庭管轄權、執行及撤銷。",
+          "topics": [
+            {
+              "id": "arbitration_agreement_stay",
+              "label_en": "Arbitration Agreements and Stay",
+              "label_zh": "仲裁協議及擱置程序",
+              "search_queries": ["Arbitration Ordinance Cap. 609 stay", "arbitration agreement stay proceedings", "kompetenz kompetenz arbitration"]
+            },
+            {
+              "id": "award_enforcement_setting_aside",
+              "label_en": "Award Enforcement and Setting Aside",
+              "label_zh": "裁決執行及撤銷",
+              "search_queries": ["enforcement arbitral award", "setting aside arbitral award", "New York Convention award Hong Kong"]
+            }
+          ],
+          "children": [{"en": "agreement", "zh": "協議"}, {"en": "stay", "zh": "擱置"}, {"en": "awards", "zh": "裁決"}]
+        },
+        {
+          "id": "mediation_settlement",
+          "label_en": "Mediation and Settlement",
+          "label_zh": "調解及和解",
+          "summary_en": "Mediation confidentiality, settlement agreements, sanctioned offers, Calderbank letters, and costs consequences.",
+          "summary_zh": "調解保密、和解協議、附帶條款付款、Calderbank 信件及訟費後果。",
+          "topics": [
+            {
+              "id": "mediation_confidentiality",
+              "label_en": "Mediation Confidentiality",
+              "label_zh": "調解保密",
+              "search_queries": ["Mediation Ordinance Cap. 620", "mediation confidentiality", "without prejudice mediation"]
+            },
+            {
+              "id": "settlement_costs_consequences",
+              "label_en": "Settlement and Costs Consequences",
+              "label_zh": "和解及訟費後果",
+              "search_queries": ["Calderbank offer costs", "sanctioned payment costs", "without prejudice save as to costs"]
+            }
+          ],
+          "children": [{"en": "mediation", "zh": "調解"}, {"en": "settlement", "zh": "和解"}, {"en": "costs", "zh": "訟費"}]
+        }
+      ]
+    }
+  ]
+}

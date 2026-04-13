@@ -133,6 +133,8 @@ class HKLIICrawler:
         return None
 
     def simple_search(self, query: str, limit: int = 10) -> list[HKLIISearchResult]:
+        if limit <= 0:
+            return []
         try:
             payload = self._request_json(
                 "simplesearch",
