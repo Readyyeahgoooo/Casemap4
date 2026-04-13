@@ -1683,6 +1683,7 @@ def build_domain_graph_artifacts(
     embedding_dimensions: int = 0,
     discover_lineages: bool = False,
     lineages_path: str | Path | None = None,
+    enrichment_cache_path: str | Path | None = None,
 ) -> dict:
     domain_id = normalize_domain_id(domain_id)
     tree = _coerce_domain_tree(tree, domain_id) if tree is not None else load_domain_tree(domain_id, tree_path)
@@ -1784,6 +1785,7 @@ def build_domain_graph_artifacts(
             embedding_model=embedding_model,
             embedding_dimensions=embedding_dimensions,
             max_enrich=max_enrich,
+            enrichment_cache_path=enrichment_cache_path,
         )
         write_hybrid_graph_artifacts(bundle, hybrid_output_dir)
 
@@ -1882,6 +1884,7 @@ def build_criminal_graph_artifacts(
     embedding_dimensions: int = 0,
     discover_lineages: bool = False,
     lineages_path: str | Path | None = None,
+    enrichment_cache_path: str | Path | None = None,
 ) -> dict:
     return build_domain_graph_artifacts(
         domain_id="criminal",
@@ -1898,4 +1901,5 @@ def build_criminal_graph_artifacts(
         embedding_dimensions=embedding_dimensions,
         discover_lineages=discover_lineages,
         lineages_path=lineages_path,
+        enrichment_cache_path=enrichment_cache_path,
     )

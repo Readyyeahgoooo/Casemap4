@@ -1000,6 +1000,125 @@ def _auto_enrich_case_via_llm(case_name: str, neutral_citation: str, paragraphs:
     return empty_payload
 
 
+# ── Enrichment Cache ──────────────────────────────────────────────────────────
+
+def save_enrichment_cache(
+    bundle_nodes: list[dict],
+    bundle_edges: list[dict],
+    path: str | Path,
+) -> int:
+    """Persist per-case paragraph/proposition nodes and associated edges.
+
+    Returns the number of cases stored.  The cache is keyed by case node id so
+    future builds can inject previously enriched data without re-calling DeepSeek.
+    """
+    # Build paragraph-id → case-id mapping (paragraphs store case_id directly)
+    para_ids: set[str] = set()
+    para_to_case: dict[str, str] = {}
+    for node in bundle_nodes:
+        if node["type"] == "Paragraph":
+            para_ids.add(node["id"])
+            if node.get("case_id"):
+                para_to_case[node["id"]] = node["case_id"]
+
+    # Supplement para→case via PART_OF edges in case the field was missing
+    for edge in bundle_edges:
+        if edge["type"] == "PART_OF" and edge["source"] in para_ids:
+            para_to_case.setdefault(edge["source"], edge["target"])
+
+    # Map proposition-id → case-id via SUPPORTS edges (paragraph → proposition)
+    prop_ids: set[str] = set()
+    prop_to_case: dict[str, str] = {}
+    for edge in bundle_edges:
+        if edge["type"] == "SUPPORTS" and edge["source"] in para_ids:
+            prop_to_case[edge["target"]] = para_to_case.get(edge["source"], "")
+    for node in bundle_nodes:
+        if node["type"] == "Proposition" and node["id"] in prop_to_case:
+            prop_ids.add(node["id"])
+
+    cache: dict[str, dict] = {}
+
+    for node in bundle_nodes:
+        if node["type"] == "Paragraph" and node["id"] in para_to_case:
+            case_id = para_to_case[node["id"]]
+            # Omit heavy embedding vector — not needed for cache
+            entry = {k: v for k, v in node.items() if k != "embedding"}
+            cache.setdefault(case_id, {"paragraphs": [], "propositions": [], "edges": []})["paragraphs"].append(entry)
+        elif node["type"] == "Proposition" and node["id"] in prop_to_case:
+            case_id = prop_to_case[node["id"]]
+            if case_id:
+                cache.setdefault(case_id, {"paragraphs": [], "propositions": [], "edges": []})["propositions"].append(node)
+
+    for edge in bundle_edges:
+        src_enrichment = edge["source"] in para_ids or edge["source"] in prop_ids
+        tgt_enrichment = edge["target"] in para_ids or edge["target"] in prop_ids
+        if src_enrichment or tgt_enrichment:
+            case_id = (
+                para_to_case.get(edge["source"])
+                or para_to_case.get(edge["target"])
+                or prop_to_case.get(edge["source"])
+                or prop_to_case.get(edge["target"])
+                or ""
+            )
+            if case_id:
+                cache.setdefault(case_id, {"paragraphs": [], "propositions": [], "edges": []})["edges"].append(edge)
+        elif edge.get("reason") == "auto-enrichment lineage":
+            # Case-to-case relationship edges discovered during enrichment
+            case_id = edge["source"]
+            cache.setdefault(case_id, {"paragraphs": [], "propositions": [], "edges": []})["edges"].append(edge)
+
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    Path(path).write_text(json.dumps(cache, separators=(",", ":")))
+    return len(cache)
+
+
+def load_enrichment_cache(path: str | Path) -> dict[str, dict]:
+    """Load enrichment cache from *path*; returns ``{}`` when the file does not exist."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text())
+    except Exception:
+        return {}
+
+
+def _inject_enrichment_cache(
+    bundle_nodes: list[dict],
+    bundle_edges: list[dict],
+    add_node,
+    add_edge,
+    pre_enriched: dict[str, dict],
+) -> int:
+    """Inject cached paragraph/proposition nodes/edges for previously enriched cases.
+
+    Marks each matched case as ``auto_enriched`` so that
+    ``_auto_enrich_cases_in_bundle`` will skip it.
+
+    Returns the number of cases injected.
+    """
+    case_lookup: dict[str, dict] = {n["id"]: n for n in bundle_nodes if n["type"] == "Case"}
+    injected = 0
+    for case_id, cached in pre_enriched.items():
+        case_node = case_lookup.get(case_id)
+        if case_node is None:
+            continue
+        for para_node in cached.get("paragraphs", []):
+            add_node({**para_node, "embedding": []})
+        for prop_node in cached.get("propositions", []):
+            add_node(prop_node)
+        for edge in cached.get("edges", []):
+            add_edge(
+                edge["source"],
+                edge["target"],
+                edge["type"],
+                **{k: v for k, v in edge.items() if k not in {"source", "target", "type"}},
+            )
+        case_node["enrichment_status"] = "auto_enriched"
+        injected += 1
+    return injected
+
+
 def _auto_enrich_cases_in_bundle(
     bundle_nodes: list[dict],
     bundle_edges: list[dict],
@@ -1194,6 +1313,7 @@ def build_hierarchical_graph_bundle(
     embedding_model: str = "",
     embedding_dimensions: int = 0,
     max_enrich: int = 80,
+    enrichment_cache_path: str | Path | None = None,
 ) -> dict:
     public_projection = (
         relationship_payload
@@ -1701,6 +1821,12 @@ def build_hierarchical_graph_bundle(
                 target_node = ensure_statute(relationship["target_label"])
                 add_edge(case_node["id"], target_node["id"], relationship["type"], explanation=relationship["description"], curated=True)
 
+    # ── Inject cached enrichments from previous builds ───────────
+    if enrichment_cache_path:
+        pre_enriched = load_enrichment_cache(enrichment_cache_path)
+        if pre_enriched:
+            _inject_enrichment_cache(bundle_nodes, bundle_edges, add_node, add_edge, pre_enriched)
+
     # ── Auto-enrich unenriched cases via HKLII + LLM ──────────────
     if os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("OPENROUTER_API_KEY"):
         _auto_enrich_cases_in_bundle(
@@ -1710,6 +1836,10 @@ def build_hierarchical_graph_bundle(
             domain_tags=list(domain_tags),
             max_enrich=max_enrich,
         )
+
+    # ── Persist enrichment results for next build ─────────────────
+    if enrichment_cache_path:
+        save_enrichment_cache(bundle_nodes, bundle_edges, enrichment_cache_path)
 
     try:
         _populate_summary_embeddings(

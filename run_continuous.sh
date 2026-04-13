@@ -103,6 +103,7 @@ while true; do
     --max-cases 600 \
     --discover-lineages \
     --lineages-path data/batch/discovered_lineages.json \
+    --enrichment-cache data/batch/enrichment_cache_criminal.json \
     >> "$LOG_DIR/criminal_build.log" 2>&1 \
     && log "Criminal graph build done" \
     || log "[WARN] Criminal graph build exited non-zero (continuing)"
@@ -148,6 +149,7 @@ while true; do
         --max-cases 400 \
         --discover-lineages \
         --lineages-path data/batch/discovered_lineages.json \
+        --enrichment-cache data/batch/enrichment_cache_civil.json \
         >> "$LOG_DIR/civil_build.log" 2>&1 \
         && log "Civil graph build done" \
         || log "[WARN] Civil graph build exited non-zero (continuing)"
@@ -179,6 +181,8 @@ while true; do
     data/batch/discovered_lineages.json \
     data/batch/hallucination_log.json \
     data/batch/domain_trees/ \
+    data/batch/enrichment_cache_criminal.json \
+    data/batch/enrichment_cache_civil.json \
     2>/dev/null || true
 
   # Only commit if there are staged changes

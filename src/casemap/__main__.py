@@ -90,6 +90,7 @@ def build_criminal_graph_command(args: argparse.Namespace) -> int:
         embedding_dimensions=args.embedding_dimensions,
         discover_lineages=args.discover_lineages,
         lineages_path=args.lineages_path or None,
+        enrichment_cache_path=args.enrichment_cache or None,
     )
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0
@@ -115,6 +116,7 @@ def build_domain_graph_command(args: argparse.Namespace) -> int:
         embedding_dimensions=args.embedding_dimensions,
         discover_lineages=args.discover_lineages,
         lineages_path=args.lineages_path or None,
+        enrichment_cache_path=args.enrichment_cache or None,
     )
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0
@@ -310,6 +312,11 @@ def parser() -> argparse.ArgumentParser:
         default="",
         help="Path for auto-discovered lineage JSON.",
     )
+    criminal_parser.add_argument(
+        "--enrichment-cache",
+        default="",
+        help="Path to enrichment cache JSON. Cached paragraph/proposition nodes are injected at build start; new enrichments are saved here after build completes.",
+    )
     criminal_parser.set_defaults(func=build_criminal_graph_command)
 
     domain_parser = subparsers.add_parser(
@@ -389,6 +396,11 @@ def parser() -> argparse.ArgumentParser:
         "--lineages-path",
         default="",
         help="Path for auto-discovered lineage JSON. Existing lineages are loaded when this flag is supplied.",
+    )
+    domain_parser.add_argument(
+        "--enrichment-cache",
+        default="",
+        help="Path to enrichment cache JSON. Cached paragraph/proposition nodes are injected at build start; new enrichments are saved here after build completes.",
     )
     domain_parser.set_defaults(func=build_domain_graph_command)
 
