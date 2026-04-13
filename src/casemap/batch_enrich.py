@@ -42,6 +42,8 @@ from urllib import request as urllib_request
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from casemap.criminal_law_data import CRIMINAL_AUTHORITY_TREE
+from casemap.domain_classifier import classify_domain_rules
+from casemap.domain_filter import run_domain_filter
 from casemap.hklii_crawler import HKLIICrawler
 from casemap.hybrid_graph import _auto_enrich_case_via_llm, _extract_json_payload
 
@@ -61,11 +63,11 @@ _HKLII_NOISE_WORDS = {
     "hkcfa", "hkca", "hkcfi", "dc", "v", "vs", "re",
 }
 
+
 def _clean_search_query(query: str) -> str:
     """Strip noise words, keeping the core legal concept (2-3 words max)."""
     words = re.findall(r"[a-z0-9]+", query.lower())
     core = [w for w in words if w and w not in _HKLII_NOISE_WORDS and len(w) > 2]
-    # Return first 2 meaningful words to keep query focused
     return " ".join(core[:2]) if core else query.split()[0]
 
 
@@ -78,8 +80,6 @@ def _search_query_variants(query: str) -> list[str]:
     if any(term in lowered for term in ("animal", "dog", "cat", "pet", "cruelty")):
         variants.extend(["animal cruelty", "unnecessary suffering"])
 
-    # HKLII simplesearch often works better with one legal keyword than a
-    # two-word phrase, so retry the leading concept before giving up.
     first_word = clean_query.split()[0] if clean_query else ""
     if first_word:
         variants.append(first_word)
@@ -89,6 +89,58 @@ def _search_query_variants(query: str) -> list[str]:
         if variant and variant not in deduped:
             deduped.append(variant)
     return deduped
+
+
+def _domain_text_snippet(case_name: str, paragraphs: list[dict], principles: list[dict] | None = None) -> str:
+    """Build a small rule-classifier snippet without sending extra LLM calls."""
+    parts = [case_name]
+    for principle in (principles or [])[:3]:
+        parts.append(principle.get("principle_label", ""))
+        parts.append(principle.get("label_en", ""))
+        parts.append(principle.get("paraphrase_en", ""))
+        parts.append(principle.get("public_excerpt", ""))
+    for paragraph in paragraphs[:5]:
+        parts.append(paragraph.get("text", ""))
+    return " ".join(part for part in parts if part)[:5000]
+
+
+def _classify_candidate_domain(
+    case_name: str,
+    neutral_citation: str,
+    paragraphs: list[dict],
+    principles: list[dict] | None = None,
+) -> dict:
+    return classify_domain_rules(
+        case_name=case_name,
+        neutral_citation=neutral_citation,
+        text_snippet=_domain_text_snippet(case_name, paragraphs, principles),
+    )
+
+
+def _is_quarantined(candidate: dict, target_domain: str = "criminal") -> bool:
+    if candidate.get("enrichment_status") == "quarantined":
+        return True
+    classification = candidate.get("domain_classification") or {}
+    domain = classification.get("domain")
+    confidence = float(classification.get("confidence") or 0)
+    return bool(domain and domain != target_domain and confidence >= 0.6)
+
+
+def _is_classified_non_target(candidate: dict, target_domain: str = "criminal") -> bool:
+    if candidate.get("enrichment_status") == "quarantined":
+        return True
+    classification = candidate.get("domain_classification") or {}
+    domain = classification.get("domain")
+    return bool(domain and domain != target_domain)
+
+
+def _summarize_domains(candidates: list[dict]) -> dict[str, int]:
+    summary: dict[str, int] = {}
+    for candidate in candidates:
+        classification = candidate.get("domain_classification") or {}
+        domain = classification.get("domain") or "unclassified"
+        summary[domain] = summary.get(domain, 0) + 1
+    return dict(sorted(summary.items(), key=lambda item: (-item[1], item[0])))
 
 
 # ── DeepSeek helper ────────────────────────────────────────────
@@ -203,6 +255,8 @@ def _build_tree_summary(candidates_path: str | None = None) -> tuple[str, int, i
         try:
             data = json.loads(Path(candidates_path).read_text(encoding="utf-8"))
             for c in data.get("candidates", []):
+                if _is_classified_non_target(c):
+                    continue
                 tid = c.get("topic_id", "unknown")
                 topic_cases[tid] = topic_cases.get(tid, 0) + 1
                 total_cases += 1
@@ -241,14 +295,14 @@ def discover_gaps(
         empty_topics=", ".join(empty_topics[:20]) if empty_topics else "(none)",
     )
 
-    # Skip if a fresh report already exists (generated within last 12 hours)
+    # Skip if a fresh report already exists (generated within last 12 hours).
     if Path(output_path).exists():
         try:
             existing = json.loads(Path(output_path).read_text(encoding="utf-8"))
             generated_at = existing.get("meta", {}).get("generated_at", "")
             if generated_at:
                 age = (datetime.now(UTC) - datetime.fromisoformat(generated_at)).total_seconds()
-                if age < 43200:  # 12 hours
+                if age < 43200:
                     print(f"[discover] Reusing existing report (generated {int(age/60)} min ago) — {output_path}")
                     return existing
         except Exception:
@@ -360,8 +414,10 @@ def run_loop(
         # Summary
         if Path(candidates_path).exists():
             data = json.loads(Path(candidates_path).read_text(encoding="utf-8"))
-            total = len(data.get("candidates", []))
+            candidates = data.get("candidates", [])
+            total = len(candidates)
             print(f"\n[round {r}] Total candidates after round: {total}")
+            print(f"[round {r}] Domain distribution: {json.dumps(_summarize_domains(candidates), ensure_ascii=False)}")
 
     print(f"\n{'='*60}")
     print(f"  LOOP COMPLETE — {rounds} rounds finished")
@@ -400,7 +456,14 @@ def crawl_and_enrich(
 
     crawler = HKLIICrawler()
     candidates: list[dict] = list(existing.values())
-    stats = {"topics_processed": 0, "cases_crawled": 0, "cases_enriched": 0, "errors": 0}
+    stats = {
+        "topics_processed": 0,
+        "cases_crawled": 0,
+        "cases_enriched": 0,
+        "quarantined_count": 0,
+        "domain_breakdown": {},
+        "errors": 0,
+    }
 
     topics = list(_iter_topics())
 
@@ -477,6 +540,22 @@ def crawl_and_enrich(
                     neutral_citation=nc,
                     paragraphs=paragraphs,
                 )
+                principles = enrichment.get("principles", [])
+                domain_classification = _classify_candidate_domain(
+                    case_name=doc.case_name,
+                    neutral_citation=nc,
+                    paragraphs=paragraphs,
+                    principles=principles,
+                )
+                domain = domain_classification.get("domain", "unknown")
+                stats["domain_breakdown"][domain] = stats["domain_breakdown"].get(domain, 0) + 1
+                is_quarantined = (
+                    domain != "criminal"
+                    and float(domain_classification.get("confidence") or 0) >= 0.6
+                )
+                if is_quarantined:
+                    stats["quarantined_count"] += 1
+                    domain_classification["quarantine_reason"] = "non_criminal_inline_rule"
 
                 candidate = {
                     "neutral_citation": nc,
@@ -489,10 +568,12 @@ def crawl_and_enrich(
                     "topic_label": topic_label,
                     "module_id": module_id,
                     "subground_id": subground_id,
-                    "principles": enrichment.get("principles", []),
+                    "principles": principles,
                     "relationships": enrichment.get("relationships", []),
                     "assignment_confidence": 0.6,
                     "assignment_status": "candidate",
+                    "enrichment_status": "quarantined" if is_quarantined else "candidate",
+                    "domain_classification": domain_classification,
                     "review_status": "pending",  # pending / verified / rejected
                     "review_notes": "",
                     "enriched_at": datetime.now(UTC).isoformat(),
@@ -502,7 +583,8 @@ def crawl_and_enrich(
                 candidates.append(candidate)
                 existing[nc] = candidate
                 stats["cases_enriched"] += 1
-                print(f"  [ok] {nc}: {doc.case_name[:50]} -> {len(enrichment.get('principles', []))} principles")
+                status = "quarantine" if is_quarantined else "ok"
+                print(f"  [{status}] {nc}: {doc.case_name[:50]} -> {len(principles)} principles ({domain})")
                 _save_candidates(candidates, stats, output)
 
             except Exception as e:
@@ -539,8 +621,21 @@ def generate_codex_review(
     batch_size: int = 30,
 ):
     """Phase 2: Generate a Codex task markdown that reviews candidate enrichments."""
+    if input_path == "data/batch/candidates.json":
+        clean_path = Path("data/batch/candidates_criminal_clean.json")
+        if clean_path.exists():
+            input_path = str(clean_path)
+            print(f"[review] Using domain-filtered input: {input_path}")
+
     data = json.loads(Path(input_path).read_text(encoding="utf-8"))
-    candidates = [c for c in data.get("candidates", []) if c.get("review_status") == "pending"]
+    all_candidates = data.get("candidates", [])
+    quarantined = [c for c in all_candidates if _is_quarantined(c)]
+    candidates = [
+        c for c in all_candidates
+        if c.get("review_status") == "pending" and not _is_quarantined(c)
+    ]
+    if quarantined:
+        print(f"[review] Skipping {len(quarantined)} quarantined/non-criminal candidates")
 
     if not candidates:
         print("[review] No pending candidates to review")
@@ -604,11 +699,28 @@ def merge_reviewed(
 ):
     """Phase 3: Merge verified enrichments into curated data."""
     data = json.loads(Path(input_path).read_text(encoding="utf-8"))
-    verified = [c for c in data.get("candidates", []) if c.get("review_status") == "verified"]
+    verified = []
+    skipped_domain = 0
+    for candidate in data.get("candidates", []):
+        if candidate.get("review_status") != "verified":
+            continue
+        if _is_quarantined(candidate):
+            skipped_domain += 1
+            continue
+        classification = candidate.get("domain_classification") or {}
+        domain = classification.get("domain")
+        if domain and domain != "criminal":
+            skipped_domain += 1
+            continue
+        verified.append(candidate)
 
     if not verified:
+        if skipped_domain:
+            print(f"[merge] Skipped {skipped_domain} verified candidates outside criminal domain")
         print("[merge] No verified candidates to merge")
         return
+    if skipped_domain:
+        print(f"[merge] Skipped {skipped_domain} verified candidates outside criminal domain")
 
     # Generate Python dict entries for each verified case
     entries = []
@@ -673,6 +785,14 @@ def main():
     merge_p = sub.add_parser("merge", help="Merge Codex-reviewed enrichments")
     merge_p.add_argument("--input", default="data/batch/reviewed.json")
 
+    # classify-domains
+    classify_p = sub.add_parser("classify-domains", help="Classify and quarantine candidates by legal domain")
+    classify_p.add_argument("--input", default="data/batch/candidates.json")
+    classify_p.add_argument("--domain", default="criminal", help="Target domain to keep")
+    classify_p.add_argument("--use-llm", action="store_true", help="Use DeepSeek for ambiguous cases")
+    classify_p.add_argument("--force-reclassify", action="store_true", help="Ignore existing high-confidence classifications")
+    classify_p.add_argument("--no-trees", action="store_true", help="Skip topic-tree generation for non-criminal domains (trees generated by default)")
+
     # loop
     loop_p = sub.add_parser("loop", help="Full self-improving loop: discover → crawl → repeat")
     loop_p.add_argument("--rounds", type=int, default=3)
@@ -702,6 +822,14 @@ def main():
         )
     elif args.command == "merge":
         merge_reviewed(input_path=args.input)
+    elif args.command == "classify-domains":
+        run_domain_filter(
+            input_path=args.input,
+            target_domain=args.domain,
+            use_llm=args.use_llm,
+            generate_trees=not args.no_trees,
+            force_reclassify=args.force_reclassify,
+        )
     elif args.command == "loop":
         run_loop(
             rounds=args.rounds,
