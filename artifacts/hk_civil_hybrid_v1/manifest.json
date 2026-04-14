@@ -1,0 +1,279 @@
+{
+  "title": "Hong Kong Civil Law Hierarchical Graph",
+  "generated_at": "2026-04-14T06:15:31.011282+00:00",
+  "node_count": 1416,
+  "edge_count": 2620,
+  "case_count": 1007,
+  "statute_count": 288,
+  "topic_count": 72,
+  "lineage_count": 10,
+  "lineages": [
+    {
+      "id": "ancillary_relief_equality",
+      "node_id": "lineage:ancillary_relief_equality",
+      "title": "Ancillary Relief: From Discretion to Equality",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:family_law:53:ancillary_relief_and_maintenance"
+      ],
+      "topic_labels": [
+        "Ancillary Relief and Maintenance"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    },
+    {
+      "id": "intermediate_terms_hongkong_fir",
+      "node_id": "lineage:intermediate_terms_hongkong_fir",
+      "title": "Breach and Termination: \"Intermediate Terms\"",
+      "member_count": 2,
+      "topic_ids": [
+        "topic:contract_law:18:repudiatory_breach_and_termination"
+      ],
+      "topic_labels": [
+        "Repudiatory Breach and Termination"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract",
+        "criminal"
+      ]
+    },
+    {
+      "id": "consideration_practical_benefit",
+      "node_id": "lineage:consideration_practical_benefit",
+      "title": "Consideration and Variations: \"Practical Benefit\"",
+      "member_count": 6,
+      "topic_ids": [
+        "topic:contract_law:12:contract_formation"
+      ],
+      "topic_labels": [
+        "Contract Formation"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "interpretation_context_text",
+      "node_id": "lineage:interpretation_context_text",
+      "title": "Contractual Interpretation: \"Context vs. Text\"",
+      "member_count": 7,
+      "topic_ids": [
+        "topic:contract_law:13:contractual_terms_and_interpretation"
+      ],
+      "topic_labels": [
+        "Contractual Terms and Interpretation"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "judicial_review_wednesbury_proportionality",
+      "node_id": "lineage:judicial_review_wednesbury_proportionality",
+      "title": "Judicial Review: From Wednesbury to Proportionality",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:constitutional_administrative_law:62:basic_law_and_bill_of_rights"
+      ],
+      "topic_labels": [
+        "Basic Law and Bill of Rights"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    },
+    {
+      "id": "negligence_duty_of_care",
+      "node_id": "lineage:negligence_duty_of_care",
+      "title": "Negligence: Duty of Care",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:tort_law:24:contributory_negligence"
+      ],
+      "topic_labels": [
+        "Contributory Negligence"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    },
+    {
+      "id": "penalty_clauses_modern_test",
+      "node_id": "lineage:penalty_clauses_modern_test",
+      "title": "Penalty Clauses: \"Modern Test\"",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:contract_law:19:damages_penalties_and_liquidated_damages"
+      ],
+      "topic_labels": [
+        "Damages, Penalties and Liquidated Damages"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "unconscionability_statutory",
+      "node_id": "lineage:unconscionability_statutory",
+      "title": "Unconscionability: \"Statutory\"",
+      "member_count": 2,
+      "topic_ids": [
+        "topic:contract_law:17:illegality_and_public_policy"
+      ],
+      "topic_labels": [
+        "Illegality and Public Policy"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "CODI"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "undue_influence_etridge",
+      "node_id": "lineage:undue_influence_etridge",
+      "title": "Undue Influence: \"Etridge\"",
+      "member_count": 2,
+      "topic_ids": [
+        "topic:contract_law:17:illegality_and_public_policy"
+      ],
+      "topic_labels": [
+        "Illegality and Public Policy"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "unfair_prejudice_minority_shareholders",
+      "node_id": "lineage:unfair_prejudice_minority_shareholders",
+      "title": "Unfair Prejudice and Minority Shareholder Protection",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:company_commercial_law:39:company_restoration_and_records"
+      ],
+      "topic_labels": [
+        "Company Restoration and Records"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    }
+  ],
+  "paragraph_count": 0,
+  "proposition_count": 0,
+  "enriched_case_count": 1,
+  "notes": [
+    "Hybrid hierarchical graph bundle generated from the Casemap relationship graph.",
+    "Hierarchy is represented explicitly as Module -> Subground -> Topic while authorities remain graph-native.",
+    "Neo4j constraints and import templates are included for database-backed deployment."
+  ],
+  "neo4j": {
+    "vector_dimensions": 1536,
+    "constraints_file": "neo4j_constraints.cypher",
+    "import_file": "neo4j_import.cypher"
+  },
+  "legal_domain": "civil",
+  "domain_tags": [
+    "civil"
+  ],
+  "viewer_heading_public": "Hong Kong Civil Law Hierarchical Knowledge Graph",
+  "viewer_heading_internal": "Hong Kong Civil Law Internal Hierarchy Explorer",
+  "viewer_intro_public": "A Hong Kong Civil Law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
+  "viewer_intro_internal": "This internal Hong Kong Civil Law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links."
+}

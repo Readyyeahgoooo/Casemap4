@@ -1,158 +1,52 @@
 {
   "title": "Hong Kong Criminal Law Relationship Graph",
-  "generated_at": "2026-04-13T14:42:33.306101+00:00",
-  "case_count": 997,
+  "generated_at": "2026-04-14T03:23:05.859374+00:00",
+  "case_count": 1157,
   "topic_count": 60,
-  "uncovered_topics": [
-    {
-      "topic_id": "topic:evidence_procedure:43:arrest_search_and_fair_trial",
-      "label_en": "Arrest, Search, and Fair Trial",
-      "label_zh": "拘捕、搜查與公平審訊",
-      "search_queries": [
-        "arrest search HKSAR criminal",
-        "fair trial HKSAR criminal appeal",
-        "disclosure criminal HKSAR"
-      ]
-    },
-    {
-      "topic_id": "topic:evidence_procedure:45:character_and_similar_fact_evidence",
-      "label_en": "Character and Similar Fact Evidence",
-      "label_zh": "品格與類似事實證據",
-      "search_queries": [
-        "similar fact evidence HKSAR criminal",
-        "character evidence HKSAR",
-        "propensity evidence criminal HKSAR"
-      ]
-    },
-    {
-      "topic_id": "topic:evidence_procedure:46:bail_and_remand",
-      "label_en": "Bail and Remand",
-      "label_zh": "保釋與還柙",
-      "search_queries": [
-        "bail HKSAR criminal",
-        "remand custody HKSAR",
-        "bail application criminal HKSAR"
-      ]
-    },
+  "uncovered_topics": [],
+  "low_coverage_topics": [
     {
       "topic_id": "topic:regulatory_and_welfare_offences:53:environmental_offences",
       "label_en": "Environmental Offences",
-      "label_zh": "環境罪行",
-      "search_queries": [
-        "water pollution HKSAR criminal",
-        "waste disposal ordinance HKSAR prosecution",
-        "environmental protection HKSAR criminal"
-      ]
-    },
-    {
-      "topic_id": "topic:financial_regulatory_crimes:56:market_manipulation_and_false_trading",
-      "label_en": "Market Manipulation and False Trading",
-      "label_zh": "操控市場與虛假交易",
-      "search_queries": [
-        "market manipulation HKSAR",
-        "false trading securities HKSAR",
-        "market misconduct tribunal HKSAR"
-      ]
-    },
-    {
-      "topic_id": "topic:financial_regulatory_crimes:59:false_accounting_and_financial_statement",
-      "label_en": "False Accounting and Financial Statements",
-      "label_zh": "虛假帳目與財務報表",
-      "search_queries": [
-        "false accounting HKSAR",
-        "misleading financial statements HKSAR criminal",
-        "audit fraud hong kong"
-      ]
-    },
-    {
-      "topic_id": "topic:financial_regulatory_crimes:60:smuggling_and_customs_offences",
-      "label_en": "Smuggling and Customs Offences",
-      "label_zh": "走私與海關罪行",
-      "search_queries": [
-        "smuggling HKSAR criminal",
-        "import export ordinance HKSAR offence",
-        "customs excise HKSAR criminal"
-      ]
-    }
-  ],
-  "low_coverage_topics": [
-    {
-      "topic_id": "topic:public_order_regulatory:32:computer_crimes",
-      "label_en": "Computer Crimes",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:defences:35:duress_and_necessity",
-      "label_en": "Duress and Necessity",
       "case_count": 2
-    },
-    {
-      "topic_id": "topic:defences:38:automatism",
-      "label_en": "Automatism",
-      "case_count": 2
-    },
-    {
-      "topic_id": "topic:appeals_sentencing:47:conviction_appeals",
-      "label_en": "Conviction Appeals",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:regulatory_and_welfare_offences:50:prevention_of_cruelty_to_animals_ordinan",
-      "label_en": "Prevention of Cruelty to Animals Ordinance (Cap. 169)",
-      "case_count": 1
     },
     {
       "topic_id": "topic:regulatory_and_welfare_offences:54:occupational_safety_offences",
       "label_en": "Occupational Safety Offences",
       "case_count": 1
-    },
-    {
-      "topic_id": "topic:financial_regulatory_crimes:55:insider_dealing",
-      "label_en": "Insider Dealing",
-      "case_count": 2
-    },
-    {
-      "topic_id": "topic:financial_regulatory_crimes:57:aml_compliance_and_reporting_offences",
-      "label_en": "AML Compliance and Reporting Offences",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:financial_regulatory_crimes:58:corporate_fraud",
-      "label_en": "Corporate Fraud",
-      "case_count": 1
     }
   ],
   "cases_missing_principles": [
+    "[2019] HKCFI 2108",
+    "[1987] HKLR 221",
+    "[2003] HKLRD 542",
+    "[1994] AC 117",
+    "[2020] HKCA 767",
+    "[2020] HKDC 1152",
     "[2020] HKCFI 3106",
-    "[2021] HKDC 80",
+    "[2021] HKDC 217",
+    "[2020] HKCA 746",
     "[2021] HKDC 218",
-    "[2021] HKDC 219",
-    "[2021] HKDC 51",
     "[2020] HKCA 1087",
-    "[1984] HKC 1",
-    "[2018] HKDC 1412",
+    "[2020] HKCA 788",
+    "[1987] QB 426",
+    "[1914] AC 599",
+    "[1976] AC 574",
+    "[1984] HKLR 419",
+    "[1977] HKLR 531",
+    "[1982] AC 204",
+    "[2019] HKCA 1244",
+    "[2012] UKPC 8",
     "[2013] HKCA 169",
     "[2012] HKCA 247",
-    "[2021] HKDC 159",
+    "[2001] QB 862",
     "[2019] HKDC 1739",
     "[2020] HKDC 197",
     "[2020] HKCFI 1560",
     "[2019] HKDC 892",
     "[2019] HKDC 425",
     "[2019] HKDC 273",
-    "[2019] HKDC 986",
-    "[2021] HKDC 294",
-    "[2021] HKDC 295",
-    "[2021] HKDC 221",
-    "[2021] HKDC 302",
-    "[2004] HKCU 1497",
-    "[1935] AC 462",
-    "[2008] HKEC 2071",
-    "[2020] HKCA 679",
-    "[1894] AC 57",
-    "[2021] HKDC 607",
-    "[2021] HKDC 303",
-    "[2021] HKDC 312"
+    "[2019] HKDC 986"
   ],
   "warnings": [
     "Search failed for 'actus reus murder HKSAR': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
@@ -213,7 +107,7 @@
     "Search failed for 'customs excise HKSAR criminal': <urlopen error [Errno 8] nodename nor servname provided, or not known>"
   ],
   "storage": {
-    "embedding_record_count": 1393,
+    "embedding_record_count": 1631,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",

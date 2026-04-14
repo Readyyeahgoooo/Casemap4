@@ -1,7 +1,7 @@
 {
   "title": "Hong Kong Civil Law Relationship Graph",
-  "generated_at": "2026-04-13T15:17:32.281147+00:00",
-  "case_count": 388,
+  "generated_at": "2026-04-14T06:15:31.508531+00:00",
+  "case_count": 1007,
   "topic_count": 72,
   "uncovered_topics": [
     {
@@ -22,46 +22,6 @@
         "service out of jurisdiction",
         "substituted service",
         "jurisdiction challenge civil"
-      ]
-    },
-    {
-      "topic_id": "topic:civil_procedure:04:discovery_and_disclosure",
-      "label_en": "Discovery and Disclosure",
-      "label_zh": "文件透露及披露",
-      "search_queries": [
-        "discovery disclosure civil",
-        "specific discovery",
-        "litigation privilege discovery"
-      ]
-    },
-    {
-      "topic_id": "topic:civil_procedure:06:interim_injunctions",
-      "label_en": "Interim Injunctions",
-      "label_zh": "臨時禁制令",
-      "search_queries": [
-        "interlocutory injunction",
-        "Mareva injunction",
-        "Anton Piller order"
-      ]
-    },
-    {
-      "topic_id": "topic:civil_procedure:08:trial_evidence_and_burden_of_proof",
-      "label_en": "Trial Evidence and Burden of Proof",
-      "label_zh": "審訊證據及舉證責任",
-      "search_queries": [
-        "civil burden of proof",
-        "trial evidence civil",
-        "hearsay civil evidence"
-      ]
-    },
-    {
-      "topic_id": "topic:civil_procedure:09:costs_and_taxation",
-      "label_en": "Costs and Taxation",
-      "label_zh": "訟費及評定",
-      "search_queries": [
-        "costs follow event",
-        "taxation of costs",
-        "Calderbank offer costs"
       ]
     },
     {
@@ -142,16 +102,6 @@
         "specific performance contract",
         "injunction breach of contract",
         "equitable remedies contract"
-      ]
-    },
-    {
-      "topic_id": "topic:contract_law:21:sale_of_goods",
-      "label_en": "Sale of Goods",
-      "label_zh": "貨品售賣",
-      "search_queries": [
-        "Sale of Goods Ordinance Cap. 26",
-        "implied terms sale of goods",
-        "rejection goods breach"
       ]
     },
     {
@@ -305,16 +255,6 @@
       ]
     },
     {
-      "topic_id": "topic:company_commercial_law:45:securities_civil_and_regulatory_proceedi",
-      "label_en": "Securities Civil and Regulatory Proceedings",
-      "label_zh": "證券民事及監管程序",
-      "search_queries": [
-        "Securities Futures Ordinance Cap. 571 civil",
-        "market misconduct tribunal",
-        "SFC injunction"
-      ]
-    },
-    {
       "topic_id": "topic:employment_law:46:employment_contract_and_wages",
       "label_en": "Employment Contract and Wages",
       "label_zh": "僱傭合約及工資",
@@ -342,16 +282,6 @@
         "Sex Discrimination Ordinance Cap. 480 employment",
         "Disability Discrimination Ordinance Cap. 487 employment",
         "Race Discrimination Ordinance Cap. 602"
-      ]
-    },
-    {
-      "topic_id": "topic:employment_law:49:employees_compensation",
-      "label_en": "Employees' Compensation",
-      "label_zh": "僱員補償",
-      "search_queries": [
-        "Employees Compensation Ordinance Cap. 282",
-        "work injury compensation",
-        "occupational injury employment"
       ]
     },
     {
@@ -415,16 +345,6 @@
       ]
     },
     {
-      "topic_id": "topic:constitutional_administrative_law:59:public_law_error",
-      "label_en": "Public Law Error",
-      "label_zh": "公法錯誤",
-      "search_queries": [
-        "public law error judicial review",
-        "Wednesbury unreasonableness Hong Kong",
-        "error of law judicial review"
-      ]
-    },
-    {
       "topic_id": "topic:constitutional_administrative_law:60:natural_justice_and_procedural_fairness",
       "label_en": "Natural Justice and Procedural Fairness",
       "label_zh": "自然公義及程序公義",
@@ -432,16 +352,6 @@
         "natural justice procedural fairness",
         "right to be heard administrative",
         "bias apparent bias judicial review"
-      ]
-    },
-    {
-      "topic_id": "topic:constitutional_administrative_law:61:legitimate_expectation",
-      "label_en": "Legitimate Expectation",
-      "label_zh": "合理期望",
-      "search_queries": [
-        "legitimate expectation",
-        "substantive legitimate expectation",
-        "procedural legitimate expectation"
       ]
     },
     {
@@ -505,16 +415,6 @@
       ]
     },
     {
-      "topic_id": "topic:arbitration_adr:70:award_enforcement_and_setting_aside",
-      "label_en": "Award Enforcement and Setting Aside",
-      "label_zh": "裁決執行及撤銷",
-      "search_queries": [
-        "enforcement arbitral award",
-        "setting aside arbitral award",
-        "New York Convention award Hong Kong"
-      ]
-    },
-    {
       "topic_id": "topic:arbitration_adr:71:mediation_confidentiality",
       "label_en": "Mediation Confidentiality",
       "label_zh": "調解保密",
@@ -537,43 +437,8 @@
   ],
   "low_coverage_topics": [
     {
-      "topic_id": "topic:civil_procedure:05:summary_judgment_and_strike_out",
-      "label_en": "Summary Judgment and Strike Out",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:civil_procedure:07:security_for_costs",
-      "label_en": "Security for Costs",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:civil_procedure:10:enforcement_of_judgments",
-      "label_en": "Enforcement of Judgments",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:tort_law:24:contributory_negligence",
-      "label_en": "Contributory Negligence",
-      "case_count": 2
-    },
-    {
-      "topic_id": "topic:tort_law:28:private_nuisance",
-      "label_en": "Private Nuisance",
-      "case_count": 2
-    },
-    {
-      "topic_id": "topic:property_land_law:36:adverse_possession",
-      "label_en": "Adverse Possession",
-      "case_count": 1
-    },
-    {
-      "topic_id": "topic:company_commercial_law:40:winding_up_petitions",
-      "label_en": "Winding Up Petitions",
-      "case_count": 2
-    },
-    {
-      "topic_id": "topic:employment_law:51:restraint_of_trade",
-      "label_en": "Restraint of Trade",
+      "topic_id": "topic:contract_law:21:sale_of_goods",
+      "label_en": "Sale of Goods",
       "case_count": 2
     },
     {
@@ -582,9 +447,14 @@
       "case_count": 2
     },
     {
-      "topic_id": "topic:arbitration_adr:69:arbitration_agreements_and_stay",
-      "label_en": "Arbitration Agreements and Stay",
-      "case_count": 2
+      "topic_id": "topic:constitutional_administrative_law:59:public_law_error",
+      "label_en": "Public Law Error",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:constitutional_administrative_law:61:legitimate_expectation",
+      "label_en": "Legitimate Expectation",
+      "case_count": 1
     }
   ],
   "cases_missing_principles": [
@@ -592,12 +462,24 @@
     "[2017] EWHC 1025",
     "[2009] EWHC 476",
     "[2021] HKCA 1846",
+    "[2018] HKCA 75",
+    "[2019] HKCFI 2864",
     "[1990] RPC 656",
     "[2011] HKEC 648",
+    "[2020] HKCFI 2990",
+    "[2019] HKCFI 2408",
+    "[2020] HKCA 950",
+    "[1973] AC 360",
+    "[2010] UKSC 19",
+    "[1978] QB 927",
     "[2021] HKCFI 399",
     "[2018] HKCFI 1480",
     "[2001] HKEC 586",
     "[2019] HKCFI 2329",
+    "[2021] HKCFI 435",
+    "[2007] EWHC 3130",
+    "[1998] AC 20",
+    "[2018] HKCFI 112",
     "[2021] HKCFI 378",
     "[1982] QB 1053",
     "[2019] HKCFI 1068",
@@ -605,19 +487,7 @@
     "[2007] VSC 57",
     "[2001] IRLR 758",
     "[2001] CLC 221",
-    "[2008] EWHC 2613",
-    "[1996] AC 563",
-    "[1989] BCLC 498",
-    "[2010] EWHC 1872",
-    "[1975] QC 373",
-    "[1997] HKLRD 1327",
-    "[2021] HKDC 172",
-    "[1996] AC 669",
-    "[2020] HKDC 629",
-    "[2020] HKDC 661",
-    "[1988] HKC 377",
-    "[2018] HKCA 323",
-    "[1985] AC 809"
+    "[2008] EWHC 2613"
   ],
   "warnings": [
     "Search failed for 'writ originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
@@ -634,7 +504,6 @@
     "Search failed for 'litigation privilege discovery': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'strike out pleadings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'no triable issue summary judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Search failed for 'interlocutory injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'Mareva injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'Anton Piller order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'security for costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
@@ -834,14 +703,14 @@
     "Failed to fetch /en/cases/hkcfi/2021/1578: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/517: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2022/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
   ],
   "storage": {
-    "embedding_record_count": 570,
+    "embedding_record_count": 1367,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",
@@ -850,7 +719,7 @@
     },
     "chroma_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/chroma_records.json",
     "supabase_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/supabase_export.sql",
-    "hybrid_bundle_written": false
+    "hybrid_bundle_written": true
   },
   "next_actions": [
     "Run a second HKLII crawl on the uncovered Hong Kong Civil Law topics using more specific doctrine queries.",

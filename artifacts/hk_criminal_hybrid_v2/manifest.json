@@ -1,10 +1,10 @@
 {
   "title": "Hong Kong Criminal Law Hierarchical Graph",
-  "generated_at": "2026-04-13T18:41:11.854001+00:00",
-  "node_count": 2901,
-  "edge_count": 7958,
-  "case_count": 1128,
-  "statute_count": 338,
+  "generated_at": "2026-04-14T03:23:05.081478+00:00",
+  "node_count": 3501,
+  "edge_count": 13901,
+  "case_count": 1613,
+  "statute_count": 453,
   "topic_count": 60,
   "lineage_count": 12,
   "lineages": [
@@ -301,8 +301,8 @@
   "proposition_count": 656,
   "enriched_case_count": 196,
   "notes": [
-    "Merged graph: v2 structure (lineages, topics, modules) + v1+v2 enrichment nodes (paragraphs, propositions).",
-    "v1-only enriched cases are carried forward as standalone case nodes.",
+    "Hybrid hierarchical graph bundle generated from the Casemap relationship graph.",
+    "Hierarchy is represented explicitly as Module -> Subground -> Topic while authorities remain graph-native.",
     "Neo4j constraints and import templates are included for database-backed deployment."
   ],
   "neo4j": {
@@ -317,5 +317,20 @@
   "viewer_heading_public": "Hong Kong Criminal Law Hierarchical Knowledge Graph",
   "viewer_heading_internal": "Hong Kong Criminal Law Internal Hierarchy Explorer",
   "viewer_intro_public": "A Hong Kong Criminal Law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
-  "viewer_intro_internal": "This internal Hong Kong Criminal Law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links."
+  "viewer_intro_internal": "This internal Hong Kong Criminal Law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links.",
+  "cumulative_merge": {
+    "enabled": true,
+    "previous_found": true,
+    "previous_path": "artifacts/hk_criminal_hybrid_v2/hierarchical_graph_prev.json",
+    "previous_node_count": 2901,
+    "previous_edge_count": 7958,
+    "fresh_node_count": 2148,
+    "fresh_edge_count": 10965,
+    "retained_previous_only_nodes": 1353,
+    "added_topic_paths": 7,
+    "removed_orphan_topic_paths": 0,
+    "max_total_nodes": 10000,
+    "pruned_case_only_nodes": 0,
+    "cap_applied": false
+  }
 }
