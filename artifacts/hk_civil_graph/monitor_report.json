@@ -1,7 +1,7 @@
 {
   "title": "Hong Kong Civil Law Relationship Graph",
-  "generated_at": "2026-04-15T08:34:23.316599+00:00",
-  "case_count": 1040,
+  "generated_at": "2026-04-15T16:26:30.815844+00:00",
+  "case_count": 1009,
   "topic_count": 72,
   "uncovered_topics": [
     {
@@ -102,6 +102,16 @@
         "specific performance contract",
         "injunction breach of contract",
         "equitable remedies contract"
+      ]
+    },
+    {
+      "topic_id": "topic:tort_law:23:causation_and_remoteness",
+      "label_en": "Causation and Remoteness",
+      "label_zh": "因果關係及損害距離",
+      "search_queries": [
+        "causation negligence",
+        "remoteness damage negligence",
+        "thin skull rule"
       ]
     },
     {
@@ -285,6 +295,16 @@
       ]
     },
     {
+      "topic_id": "topic:family_law:52:divorce_and_matrimonial_causes",
+      "label_en": "Divorce and Matrimonial Causes",
+      "label_zh": "離婚及婚姻訴訟",
+      "search_queries": [
+        "Matrimonial Causes Ordinance Cap. 179",
+        "divorce petition unreasonable behaviour",
+        "matrimonial causes Hong Kong"
+      ]
+    },
+    {
       "topic_id": "topic:family_law:53:ancillary_relief_and_maintenance",
       "label_en": "Ancillary Relief and Maintenance",
       "label_zh": "附屬濟助及贍養",
@@ -427,29 +447,19 @@
       "case_count": 1
     },
     {
-      "topic_id": "topic:tort_law:23:causation_and_remoteness",
-      "label_en": "Causation and Remoteness",
-      "case_count": 1
-    },
-    {
       "topic_id": "topic:company_commercial_law:40:winding_up_petitions",
       "label_en": "Winding Up Petitions",
-      "case_count": 2
+      "case_count": 1
     },
     {
       "topic_id": "topic:employment_law:51:restraint_of_trade",
       "label_en": "Restraint of Trade",
-      "case_count": 2
-    },
-    {
-      "topic_id": "topic:family_law:52:divorce_and_matrimonial_causes",
-      "label_en": "Divorce and Matrimonial Causes",
       "case_count": 1
     },
     {
       "topic_id": "topic:family_law:55:relocation_and_access",
       "label_en": "Relocation and Access",
-      "case_count": 2
+      "case_count": 1
     },
     {
       "topic_id": "topic:constitutional_administrative_law:59:public_law_error",
@@ -465,13 +475,17 @@
       "topic_id": "topic:constitutional_administrative_law:61:legitimate_expectation",
       "label_en": "Legitimate Expectation",
       "case_count": 1
+    },
+    {
+      "topic_id": "topic:arbitration_adr:69:arbitration_agreements_and_stay",
+      "label_en": "Arbitration Agreements and Stay",
+      "case_count": 2
     }
   ],
   "cases_missing_principles": [
     "[2020] HKCFI 2477",
     "[2017] EWHC 1025",
     "[2009] EWHC 476",
-    "[2021] HKCA 1846",
     "[2018] HKCA 75",
     "[2019] HKCFI 2864",
     "[1990] RPC 656",
@@ -497,7 +511,8 @@
     "[1982] QB 1053",
     "[2019] HKCFI 1068",
     "[1999] CLC 1469",
-    "[2007] VSC 57"
+    "[2007] VSC 57",
+    "[2001] IRLR 758"
   ],
   "warnings": [
     "Search failed for 'writ originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
@@ -709,29 +724,42 @@
     "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'sanctioned payment costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'without prejudice save as to costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkca/2021/1846: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkca/2025/677: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfa/2026/2: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/1095: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1250: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/1578: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/2225: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/2840: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/517: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/814: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/1183: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/2127: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2022/306: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/977: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2023/1156: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/1478: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2023/1965: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/3043: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2023/3353: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2024/2754: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2025/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2026/229: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2021/1630: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/1164: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/917: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2024/1145: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2024/1689: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/2183: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
   ],
   "storage": {
-    "embedding_record_count": 1422,
+    "embedding_record_count": 1384,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",

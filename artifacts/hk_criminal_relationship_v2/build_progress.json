@@ -1,17 +1,17 @@
 {
   "title": "Hong Kong Criminal Law Relationship Graph",
-  "updated_at": "2026-04-15T08:05:40.944763+00:00",
+  "updated_at": "2026-04-15T16:24:36.053840+00:00",
   "status": "completed",
   "stage": "completed",
   "message": "Hong Kong Criminal Law graph build completed. Monitor report and exports are ready.",
   "percent": 100,
   "refresh_seconds": 300,
   "stats": {
-    "node_count": 1473,
-    "edge_count": 9501,
-    "case_count": 1017,
+    "node_count": 972,
+    "edge_count": 5898,
+    "case_count": 596,
     "topic_count": 60,
     "uncovered_topics": 0,
-    "low_coverage_topics": 0
+    "low_coverage_topics": 4
   }
 }

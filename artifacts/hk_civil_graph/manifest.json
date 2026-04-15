@@ -1,6 +1,6 @@
 {
   "title": "Hong Kong Civil Law Relationship Graph",
-  "generated_at": "2026-04-15T08:34:21.662483+00:00",
+  "generated_at": "2026-04-15T16:26:29.164701+00:00",
   "source_documents": [
     {
       "label": "HKLII API",
@@ -13,9 +13,9 @@
     }
   ],
   "source_count": 1,
-  "passage_count": 35974,
-  "retained_case_count": 1040,
-  "retained_statute_count": 310,
+  "passage_count": 35959,
+  "retained_case_count": 1009,
+  "retained_statute_count": 303,
   "public_mode": true,
   "notes": [
     "Primary Hong Kong Civil Law judgments were fetched from HKLII's public API.",
@@ -659,8 +659,8 @@
   "domain_tags": [
     "civil"
   ],
-  "node_count": 1434,
-  "edge_count": 3584,
+  "node_count": 1396,
+  "edge_count": 3475,
   "authority_tree": {
     "id": "authority_tree:hk_civil_law",
     "label_en": "Hong Kong Civil Law Knowledge Graph",
@@ -831,7 +831,6 @@
               "case:2021_hkca_1083",
               "case:2021_hkca_1313",
               "case:2021_hkca_1642",
-              "case:2021_hkca_1846",
               "case:2021_hkca_1847",
               "case:2021_hkca_1991",
               "case:2021_hkcfi_1035",
@@ -854,9 +853,9 @@
               "case:2022_hkcfi_1028",
               "case:2022_hkcfi_1221",
               "case:2022_hkcfi_1875",
-              "case:2022_hkcfi_2127",
               "case:2022_hkcfi_2344",
               "case:2022_hkcfi_2549",
+              "case:2022_hkcfi_2653",
               "case:2022_hkcfi_2685",
               "case:2022_hkcfi_2903",
               "case:2022_hkcfi_3018",
@@ -865,12 +864,10 @@
               "case:2022_hkdc_1013",
               "case:2022_hkdc_210",
               "case:2022_hkdc_614",
-              "case:2022_hkdc_917",
               "case:2023_hkca_1028",
               "case:2023_hkca_1094",
               "case:2023_hkcfi_1105",
               "case:2023_hkcfi_1382",
-              "case:2023_hkcfi_1478",
               "case:2023_hkcfi_1580",
               "case:2023_hkcfi_1597",
               "case:2023_hkcfi_2176",
@@ -965,9 +962,9 @@
               "statute:cap_548",
               "statute:cap_6",
               "statute:cap_645",
+              "statute:chapter_15",
+              "statute:chapter_17",
               "statute:chapter_5",
-              "statute:chapter_6",
-              "statute:chapter_9",
               "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
               "statute:companies_winding_up_rules",
               "statute:companies_ordinance",
@@ -983,7 +980,6 @@
               "statute:hong_kong_bill_of_rights_ordinance",
               "statute:inland_revenue_ordinance",
               "statute:land_registration_ordinance",
-              "statute:legal_aid_ordinance",
               "statute:legal_aid_regulations",
               "statute:legal_practitioners_ordinance",
               "statute:limitation_ordinance",
@@ -1000,7 +996,6 @@
               "statute:o_24",
               "statute:order_11",
               "statute:order_13",
-              "statute:order_14a",
               "statute:order_15",
               "statute:order_18",
               "statute:order_1a",
@@ -1021,7 +1016,6 @@
               "statute:order_73",
               "statute:parent_and_child_ordinance",
               "statute:patents_ordinance",
-              "statute:personal_data_privacy_ordinance",
               "statute:post_release_supervision_of_prisoners_ordinance",
               "statute:post_release_supervision_of_prisoners_regulation",
               "statute:prison_rules",
@@ -1055,7 +1049,6 @@
               "statute:s_67",
               "statute:s_6b",
               "statute:s_729",
-              "statute:s24",
               "statute:section_124",
               "statute:section_12a",
               "statute:section_177",
@@ -1088,8 +1081,8 @@
             ],
             "metrics": {
               "topics": 4,
-              "cases": 115,
-              "statutes": 140,
+              "cases": 112,
+              "statutes": 136,
               "sources": 1,
               "lineages": 0
             },
@@ -1143,7 +1136,6 @@
               "case:2023_hkdc_1077",
               "case:2021_hkcfa_20",
               "case:2021_hkcfi_1096",
-              "case:2021_hkcfi_1250",
               "case:2021_hkcfi_1477",
               "case:2021_hkcfi_2032",
               "case:2021_hkcfi_2111",
@@ -1152,11 +1144,13 @@
               "case:2021_hkcfi_2407",
               "case:2021_hkcfi_263",
               "case:2021_hkcfi_2986",
+              "case:2021_hkcfi_3466",
               "case:2021_hkcfi_3665",
               "case:2021_hkcfi_3853",
               "case:2021_hkcfi_484",
               "case:2021_hkcfi_606",
               "case:2021_hkdc_340",
+              "case:2021_hkdc_352",
               "case:2022_hkca_117",
               "case:2022_hkca_1512",
               "case:2022_hkca_951",
@@ -1170,7 +1164,6 @@
               "case:2022_hkcfi_2903",
               "case:2022_hkcfi_3018",
               "case:2022_hkcfi_644",
-              "case:2022_hkdc_1164",
               "case:2022_hkdc_29",
               "case:2022_hkdc_766",
               "case:2022_hkdc_846",
@@ -1192,7 +1185,6 @@
               "case:2024_hkcfi_2619",
               "case:2024_hkcfi_2723",
               "case:2024_hkcfi_2742",
-              "case:2024_hkcfi_2754",
               "case:2024_hkcfi_292",
               "case:2024_hkcfi_386",
               "case:2024_hkcfi_698",
@@ -1243,10 +1235,9 @@
               "statute:companies_ordinance",
               "statute:construction_sites_safety_regulations",
               "statute:conveyancing_and_property_ordinance",
-              "statute:costs_in_criminal_cases_ordinance",
-              "statute:criminal_procedure_ordinance",
               "statute:district_court_fees_rules",
               "statute:district_court_ordinance",
+              "statute:employees_compensation_ordinance",
               "statute:estate_agents_ordinance",
               "statute:estate_duty_ordinance",
               "statute:evidence_ordinance",
@@ -1278,7 +1269,6 @@
               "statute:order_24",
               "statute:order_29",
               "statute:order_3",
-              "statute:order_35",
               "statute:order_38",
               "statute:order_42",
               "statute:order_45",
@@ -1312,7 +1302,6 @@
               "statute:section_84",
               "statute:section_87",
               "statute:stamp_duty_ordinance",
-              "statute:summary_offences_ordinance",
               "statute:trade_marks_ordinance",
               "statute:trustee_ordinance",
               "statute:r_10",
@@ -1326,7 +1315,6 @@
               "statute:s_52a",
               "statute:s_81",
               "statute:s_95",
-              "statute:s_33a",
               "statute:s_40c",
               "statute:s_93",
               "statute:s_182",
@@ -1335,19 +1323,19 @@
               "statute:s_44",
               "statute:s_87",
               "statute:s_92",
-              "statute:section_17",
               "statute:section_2",
               "statute:section_20",
+              "statute:section_24",
               "statute:section_26",
               "statute:section_40c",
               "statute:section_41",
               "statute:section_47",
+              "statute:section_48",
               "statute:section_52",
               "statute:section_52a",
               "statute:section_56",
               "statute:section_6",
               "statute:section_63a",
-              "statute:section_65b",
               "statute:section_89",
               "statute:section_92",
               "statute:section_95",
@@ -1363,8 +1351,8 @@
             ],
             "metrics": {
               "topics": 4,
-              "cases": 84,
-              "statutes": 131,
+              "cases": 83,
+              "statutes": 127,
               "sources": 1,
               "lineages": 0
             },
@@ -1374,8 +1362,8 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 11,
-          "cases": 197,
-          "statutes": 216,
+          "cases": 193,
+          "statutes": 209,
           "sources": 1,
           "lineages": 0
         }
@@ -1487,15 +1475,13 @@
               "case:2021_hkcfi_1552",
               "case:2021_hkcfi_215",
               "case:2021_hkcfi_2422",
-              "case:2021_hkcfi_2840",
               "case:2021_hkcfi_2966",
               "case:2021_hkcfi_2970",
               "case:2021_hkcfi_3822",
               "case:2022_hkca_426",
               "case:2022_hkcfi_1450",
-              "case:2022_hkcfi_977",
+              "case:2022_hkcfi_2653",
               "case:2023_hkcfi_2176",
-              "case:2023_hkcfi_3043",
               "case:2023_hkfc_40",
               "case:2024_hkcfi_1444",
               "case:2024_hkcfi_1461",
@@ -1534,18 +1520,18 @@
               "statute:cap_4",
               "statute:cap_6",
               "statute:cap_7",
+              "statute:chapter_15",
+              "statute:chapter_17",
               "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
               "statute:companies_winding_up_rules",
               "statute:companies_ordinance",
               "statute:control_of_exemption_clauses_ordinance",
               "statute:conveyancing_and_property_ordinance",
               "statute:district_court_ordinance",
-              "statute:employees_compensation_ordinance",
               "statute:evidence_ordinance",
               "statute:high_court_ordinance",
               "statute:interpretation_and_general_clauses_ordinance",
               "statute:lands_tribunal_ordinance",
-              "statute:legal_aid_regulations",
               "statute:limitation_ordinance",
               "statute:matrimonial_causes_rules",
               "statute:matrimonial_proceedings_and_property_ordinance",
@@ -1567,7 +1553,6 @@
               "statute:section_11",
               "statute:section_12",
               "statute:section_3",
-              "statute:section_40",
               "statute:section_47a",
               "statute:securities_and_futures_ordinance",
               "statute:unconscionable_contracts_ordinance",
@@ -1597,8 +1582,8 @@
             ],
             "metrics": {
               "topics": 3,
-              "cases": 38,
-              "statutes": 70,
+              "cases": 36,
+              "statutes": 69,
               "sources": 1,
               "lineages": 0
             },
@@ -1683,8 +1668,8 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 10,
-          "cases": 39,
-          "statutes": 74,
+          "cases": 37,
+          "statutes": 73,
           "sources": 1,
           "lineages": 0
         }
@@ -1740,9 +1725,7 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2021_hkcfi_2225",
               "case:2021_hkdc_340",
-              "case:2022_hkcfi_1183",
               "case:2022_hkcfi_1255",
               "case:2022_hkdc_1090",
               "case:2022_hkdc_29",
@@ -1766,13 +1749,11 @@
               "statute:construction_sites_safety_regulations",
               "statute:control_of_exemption_clauses_ordinance",
               "statute:district_court_ordinance",
-              "statute:employees_compensation_assistance_ordinance",
               "statute:employees_compensation_ordinance",
               "statute:evidence_ordinance",
               "statute:factories_and_industrial_undertakings_woodworking_machinery_regulations",
               "statute:factories_and_industrial_undertakings_ordinance",
               "statute:high_court_ordinance",
-              "statute:law_amendment_and_reform_consolidation_ordinance",
               "statute:legal_aid_regulations",
               "statute:misrepresentation_ordinance",
               "statute:o_62",
@@ -1794,8 +1775,6 @@
               "statute:s_3",
               "statute:s_43",
               "statute:s_5",
-              "statute:section_20b",
-              "statute:section_20c",
               "statute:section_4",
               "statute:section_41",
               "statute:section_6",
@@ -1808,8 +1787,8 @@
             ],
             "metrics": {
               "topics": 3,
-              "cases": 12,
-              "statutes": 48,
+              "cases": 10,
+              "statutes": 44,
               "sources": 1,
               "lineages": 0
             },
@@ -1854,8 +1833,6 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2021_hkcfi_2225",
-              "case:2021_hkcfi_2840",
               "case:2021_hkdc_385",
               "case:2022_hkca_1855",
               "case:2022_hkcfi_3301",
@@ -1873,23 +1850,18 @@
             ],
             "statute_ids": [
               "statute:cap_4",
-              "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
               "statute:companies_ordinance",
               "statute:employees_compensation_ordinance",
               "statute:high_court_ordinance",
               "statute:lands_resumption_ordinance",
               "statute:lands_tribunal_ordinance",
               "statute:legal_aid_regulations",
-              "statute:limitation_ordinance",
               "statute:order_59",
               "statute:railways_ordinance",
               "statute:roads_works_use_and_compensation_ordinance",
               "statute:section_10",
               "statute:section_11",
-              "statute:section_40",
-              "statute:securities_and_futures_ordinance",
               "statute:s_827",
-              "statute:section_4",
               "statute:section_49",
               "statute:the_rules_of_the_high_court"
             ],
@@ -1898,8 +1870,8 @@
             ],
             "metrics": {
               "topics": 3,
-              "cases": 16,
-              "statutes": 20,
+              "cases": 14,
+              "statutes": 15,
               "sources": 1,
               "lineages": 0
             },
@@ -1980,8 +1952,8 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 8,
-          "cases": 38,
-          "statutes": 72,
+          "cases": 35,
+          "statutes": 65,
           "sources": 1,
           "lineages": 0
         }
@@ -2085,7 +2057,6 @@
               "case:2021_hkcfi_399",
               "case:2021_hkdc_172",
               "case:2022_hkcfi_1710",
-              "case:2022_hkcfi_977",
               "case:2022_hkdc_1095",
               "case:2022_hkdc_303",
               "case:2024_hkdc_21",
@@ -2122,7 +2093,7 @@
             ],
             "metrics": {
               "topics": 3,
-              "cases": 12,
+              "cases": 11,
               "statutes": 21,
               "sources": 1,
               "lineages": 0
@@ -2208,7 +2179,7 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 7,
-          "cases": 20,
+          "cases": 19,
           "statutes": 35,
           "sources": 1,
           "lineages": 0
@@ -2267,7 +2238,6 @@
             "case_ids": [
               "case:2021_hkca_1450",
               "case:2021_hkcfi_378",
-              "case:2021_hkcfi_814",
               "case:2022_hkcfi_1114",
               "case:2022_hkcfi_381",
               "case:2023_hkcfi_2932",
@@ -2289,7 +2259,6 @@
               "statute:s_727",
               "statute:s_903",
               "statute:s48",
-              "statute:section_131",
               "statute:section_20",
               "statute:section_26",
               "statute:section_905",
@@ -2300,8 +2269,8 @@
             ],
             "metrics": {
               "topics": 3,
-              "cases": 7,
-              "statutes": 20,
+              "cases": 6,
+              "statutes": 19,
               "sources": 1,
               "lineages": 0
             },
@@ -2344,23 +2313,16 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2023_hkcfi_1478",
               "case:2025_hkcfi_3881"
             ],
-            "statute_ids": [
-              "statute:cap_4",
-              "statute:chapter_6",
-              "statute:chapter_9",
-              "statute:order_14a",
-              "statute:the_rules_of_the_high_court"
-            ],
+            "statute_ids": [],
             "source_ids": [
               "source:hklii_api"
             ],
             "metrics": {
               "topics": 2,
-              "cases": 2,
-              "statutes": 5,
+              "cases": 1,
+              "statutes": 0,
               "sources": 1,
               "lineages": 0
             },
@@ -2419,11 +2381,15 @@
               "case:2021_hkdc_545",
               "case:2022_hkcfi_1810",
               "case:2022_hkcfi_2645",
+              "case:2022_hkcfi_2653",
               "case:2022_hkcfi_2726",
               "case:2022_hkcfi_948",
               "case:2023_hkcfi_1107",
+              "case:2023_hkcfi_1433",
+              "case:2023_hkcfi_1779",
               "case:2023_hkcfi_1816",
               "case:2023_hkcfi_2212",
+              "case:2023_hkcfi_2268",
               "case:2023_hkcfi_228",
               "case:2023_hkcfi_2399",
               "case:2023_hkcfi_2471",
@@ -2431,11 +2397,14 @@
               "case:2023_hkcfi_3368",
               "case:2023_hkcfi_834",
               "case:2023_hkdc_1223",
+              "case:2023_hkdc_1446",
               "case:2023_hkdc_196",
               "case:2024_hkcfi_1486",
+              "case:2024_hkcfi_1897",
               "case:2024_hkcfi_3000",
               "case:2024_hkcfi_3369",
               "case:2024_hkcfi_3541",
+              "case:2024_hkcfi_419",
               "case:2024_hkcfi_817",
               "case:2024_hkdc_401",
               "case:2025_hkcfi_1844",
@@ -2443,6 +2412,7 @@
               "case:2025_hkcfi_2223",
               "case:2025_hkcfi_2571",
               "case:2025_hkcfi_3503",
+              "case:2025_hkcfi_775",
               "case:2025_hkdc_1011",
               "case:2026_hkcfi_1975",
               "case:2026_hkcfi_465"
@@ -2459,18 +2429,27 @@
               "statute:cap_4",
               "statute:cap_49",
               "statute:cap_571",
+              "statute:chapter_15",
+              "statute:chapter_17",
               "statute:chapter_336h",
               "statute:chapter_4a",
               "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
               "statute:control_of_exemption_clauses_ordinance",
+              "statute:conveyancing_and_property_ordinance",
               "statute:district_court_ordinance",
               "statute:high_court_suitors_funds_rules",
+              "statute:land_development_corporation_ordinance",
               "statute:mental_health_ordinance",
               "statute:misrepresentation_ordinance",
+              "statute:o_53",
+              "statute:o_58",
               "statute:order_92",
+              "statute:personal_data_privacy_ordinance",
+              "statute:prevention_of_bribery_ordinance",
               "statute:rule_23",
               "statute:schedule_1",
               "statute:schedule_5",
+              "statute:section_12",
               "statute:section_213",
               "statute:section_3",
               "statute:section_62",
@@ -2510,8 +2489,8 @@
             ],
             "metrics": {
               "topics": 4,
-              "cases": 35,
-              "statutes": 56,
+              "cases": 43,
+              "statutes": 65,
               "sources": 1,
               "lineages": 0
             },
@@ -2521,8 +2500,8 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 9,
-          "cases": 44,
-          "statutes": 75,
+          "cases": 50,
+          "statutes": 80,
           "sources": 1,
           "lineages": 0
         }
@@ -2619,7 +2598,6 @@
               "case:2021_hkdc_1407",
               "case:2021_hkdc_237",
               "case:2021_hkdc_385",
-              "case:2022_hkcfi_1183",
               "case:2022_hkcfi_891",
               "case:2022_hkdc_1090",
               "case:2022_hkdc_775",
@@ -2635,18 +2613,11 @@
             ],
             "statute_ids": [
               "statute:cap_59",
-              "statute:employees_compensation_assistance_ordinance",
               "statute:employees_compensation_ordinance",
-              "statute:evidence_ordinance",
               "statute:factories_and_industrial_undertakings_woodworking_machinery_regulations",
               "statute:factories_and_industrial_undertakings_ordinance",
-              "statute:law_amendment_and_reform_consolidation_ordinance",
               "statute:legal_aid_regulations",
               "statute:occupational_safety_and_health_ordinance",
-              "statute:section_62",
-              "statute:section_20b",
-              "statute:section_20c",
-              "statute:section_6",
               "statute:section_6a",
               "statute:section_7"
             ],
@@ -2655,8 +2626,8 @@
             ],
             "metrics": {
               "topics": 2,
-              "cases": 16,
-              "statutes": 15,
+              "cases": 15,
+              "statutes": 8,
               "sources": 1,
               "lineages": 0
             },
@@ -2695,24 +2666,18 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2021_hkcfi_435",
-              "case:2023_hkcfi_1478"
+              "case:2021_hkcfi_435"
             ],
             "statute_ids": [
-              "statute:cap_4",
-              "statute:chapter_6",
-              "statute:chapter_9",
-              "statute:order_14a",
-              "statute:securities_and_futures_ordinance",
-              "statute:the_rules_of_the_high_court"
+              "statute:securities_and_futures_ordinance"
             ],
             "source_ids": [
               "source:hklii_api"
             ],
             "metrics": {
               "topics": 2,
-              "cases": 2,
-              "statutes": 6,
+              "cases": 1,
+              "statutes": 1,
               "sources": 1,
               "lineages": 0
             },
@@ -2722,8 +2687,8 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 6,
-          "cases": 18,
-          "statutes": 21,
+          "cases": 16,
+          "statutes": 9,
           "sources": 1,
           "lineages": 0
         }
@@ -2776,27 +2741,17 @@
             ],
             "lineage_ids": [],
             "lineage_titles": [],
-            "case_ids": [
-              "case:2023_hkcfi_1478"
-            ],
-            "statute_ids": [
-              "statute:cap_4",
-              "statute:chapter_6",
-              "statute:chapter_9",
-              "statute:order_14a",
-              "statute:the_rules_of_the_high_court"
-            ],
-            "source_ids": [
-              "source:hklii_api"
-            ],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
             "metrics": {
               "topics": 2,
-              "cases": 1,
-              "statutes": 5,
-              "sources": 1,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
               "lineages": 0
             },
-            "coverage": "mapped"
+            "coverage": "placeholder"
           },
           {
             "id": "subground:family_law:children_welfare",
@@ -2835,24 +2790,18 @@
             "lineage_ids": [],
             "lineage_titles": [],
             "case_ids": [
-              "case:2023_hkcfi_1478",
               "case:2025_hkcfi_388"
             ],
             "statute_ids": [
-              "statute:cap_4",
-              "statute:chapter_6",
-              "statute:chapter_9",
-              "statute:order_14a",
-              "statute:private_columbaria_ordinance",
-              "statute:the_rules_of_the_high_court"
+              "statute:private_columbaria_ordinance"
             ],
             "source_ids": [
               "source:hklii_api"
             ],
             "metrics": {
               "topics": 2,
-              "cases": 2,
-              "statutes": 6,
+              "cases": 1,
+              "statutes": 1,
               "sources": 1,
               "lineages": 0
             },
@@ -2906,8 +2855,8 @@
         "metrics": {
           "subgrounds": 3,
           "topics": 6,
-          "cases": 2,
-          "statutes": 6,
+          "cases": 1,
+          "statutes": 1,
           "sources": 1,
           "lineages": 0
         }
@@ -3170,7 +3119,6 @@
               "case:2022_hkcfi_1255",
               "case:2022_hkcfi_1710",
               "case:2022_hkcfi_826",
-              "case:2022_hkcfi_977",
               "case:2022_hkdc_1095",
               "case:2022_hkdc_303",
               "case:2023_hkca_33",
@@ -3232,7 +3180,7 @@
             ],
             "metrics": {
               "topics": 3,
-              "cases": 26,
+              "cases": 25,
               "statutes": 39,
               "sources": 1,
               "lineages": 0
@@ -3243,7 +3191,7 @@
         "metrics": {
           "subgrounds": 2,
           "topics": 5,
-          "cases": 26,
+          "cases": 25,
           "statutes": 39,
           "sources": 1,
           "lineages": 0
@@ -3308,7 +3256,6 @@
               "case:2022_hkcfi_1270",
               "case:2022_hkcfi_2549",
               "case:2023_hkca_888",
-              "case:2023_hkcfi_1478",
               "case:2023_hkcfi_1558",
               "case:2023_hkcfi_2540",
               "case:2023_hkcfi_2661",
@@ -3332,8 +3279,6 @@
               "statute:cap_4",
               "statute:cap_597",
               "statute:cap_645",
-              "statute:chapter_6",
-              "statute:chapter_9",
               "statute:companies_ordinance",
               "statute:hong_kong_bill_of_rights_ordinance",
               "statute:limitation_ordinance",
@@ -3341,7 +3286,6 @@
               "statute:mainland_judgments_reciprocal_enforcement_ordinance",
               "statute:matrimonial_causes_rules",
               "statute:matrimonial_proceedings_and_property_ordinance",
-              "statute:order_14a",
               "statute:order_38",
               "statute:order_45",
               "statute:order_49",
@@ -3379,8 +3323,8 @@
             ],
             "metrics": {
               "topics": 2,
-              "cases": 25,
-              "statutes": 48,
+              "cases": 24,
+              "statutes": 45,
               "sources": 1,
               "lineages": 0
             },
@@ -3438,8 +3382,8 @@
         "metrics": {
           "subgrounds": 2,
           "topics": 4,
-          "cases": 25,
-          "statutes": 48,
+          "cases": 24,
+          "statutes": 45,
           "sources": 1,
           "lineages": 0
         }
@@ -3448,7 +3392,7 @@
   },
   "auto_lineage_count": 0,
   "storage": {
-    "embedding_record_count": 1422,
+    "embedding_record_count": 1384,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",
@@ -3672,32 +3616,45 @@
     "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'sanctioned payment costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'without prejudice save as to costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkca/2021/1846: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkca/2025/677: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfa/2026/2: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/1095: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1250: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/1578: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/2225: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/2840: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/517: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/814: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/1183: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/2127: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2022/306: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/977: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2023/1156: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/1478: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2023/1965: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/3043: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2023/3353: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2024/2754: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2025/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2026/229: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2021/1630: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/1164: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/917: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2024/1145: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2024/1689: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/2183: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
   ],
-  "case_count": 319,
+  "case_count": 314,
   "candidates_registry": "data/batch/candidates_civil_clean.json",
-  "candidate_registry_count": 328,
+  "candidate_registry_count": 336,
   "monitor": {
-    "uncovered_topics": 41,
-    "low_coverage_topics": 10
+    "uncovered_topics": 43,
+    "low_coverage_topics": 9
   }
 }
