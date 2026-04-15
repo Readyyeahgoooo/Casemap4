@@ -1,10 +1,10 @@
 {
   "title": "Hong Kong Civil Law Hierarchical Graph",
-  "generated_at": "2026-04-14T06:15:31.011282+00:00",
-  "node_count": 1416,
-  "edge_count": 2620,
-  "case_count": 1007,
-  "statute_count": 288,
+  "generated_at": "2026-04-15T08:34:23.032423+00:00",
+  "node_count": 1536,
+  "edge_count": 2938,
+  "case_count": 1089,
+  "statute_count": 326,
   "topic_count": 72,
   "lineage_count": 10,
   "lineages": [
@@ -257,7 +257,7 @@
   ],
   "paragraph_count": 0,
   "proposition_count": 0,
-  "enriched_case_count": 1,
+  "enriched_case_count": 0,
   "notes": [
     "Hybrid hierarchical graph bundle generated from the Casemap relationship graph.",
     "Hierarchy is represented explicitly as Module -> Subground -> Topic while authorities remain graph-native.",
@@ -275,5 +275,20 @@
   "viewer_heading_public": "Hong Kong Civil Law Hierarchical Knowledge Graph",
   "viewer_heading_internal": "Hong Kong Civil Law Internal Hierarchy Explorer",
   "viewer_intro_public": "A Hong Kong Civil Law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
-  "viewer_intro_internal": "This internal Hong Kong Civil Law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links."
+  "viewer_intro_internal": "This internal Hong Kong Civil Law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links.",
+  "cumulative_merge": {
+    "enabled": true,
+    "previous_found": true,
+    "previous_path": "artifacts/hk_civil_hybrid_v1/hierarchical_graph_prev.json",
+    "previous_node_count": 1416,
+    "previous_edge_count": 2620,
+    "fresh_node_count": 1471,
+    "fresh_edge_count": 2564,
+    "retained_previous_only_nodes": 65,
+    "added_topic_paths": 0,
+    "removed_orphan_topic_paths": 0,
+    "max_total_nodes": 10000,
+    "pruned_case_only_nodes": 0,
+    "cap_applied": false
+  }
 }

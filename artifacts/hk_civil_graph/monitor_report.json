@@ -1,7 +1,7 @@
 {
   "title": "Hong Kong Civil Law Relationship Graph",
-  "generated_at": "2026-04-14T06:15:31.508531+00:00",
-  "case_count": 1007,
+  "generated_at": "2026-04-15T08:34:23.316599+00:00",
+  "case_count": 1040,
   "topic_count": 72,
   "uncovered_topics": [
     {
@@ -102,16 +102,6 @@
         "specific performance contract",
         "injunction breach of contract",
         "equitable remedies contract"
-      ]
-    },
-    {
-      "topic_id": "topic:tort_law:22:duty_and_breach_of_care",
-      "label_en": "Duty and Breach of Care",
-      "label_zh": "謹慎責任及違反責任",
-      "search_queries": [
-        "duty of care negligence",
-        "breach of duty negligence",
-        "standard of care negligence"
       ]
     },
     {
@@ -345,16 +335,6 @@
       ]
     },
     {
-      "topic_id": "topic:constitutional_administrative_law:60:natural_justice_and_procedural_fairness",
-      "label_en": "Natural Justice and Procedural Fairness",
-      "label_zh": "自然公義及程序公義",
-      "search_queries": [
-        "natural justice procedural fairness",
-        "right to be heard administrative",
-        "bias apparent bias judicial review"
-      ]
-    },
-    {
       "topic_id": "topic:constitutional_administrative_law:62:basic_law_and_bill_of_rights",
       "label_en": "Basic Law and Bill of Rights",
       "label_zh": "基本法及人權法案",
@@ -442,13 +422,43 @@
       "case_count": 2
     },
     {
+      "topic_id": "topic:tort_law:22:duty_and_breach_of_care",
+      "label_en": "Duty and Breach of Care",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:tort_law:23:causation_and_remoteness",
+      "label_en": "Causation and Remoteness",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:company_commercial_law:40:winding_up_petitions",
+      "label_en": "Winding Up Petitions",
+      "case_count": 2
+    },
+    {
+      "topic_id": "topic:employment_law:51:restraint_of_trade",
+      "label_en": "Restraint of Trade",
+      "case_count": 2
+    },
+    {
       "topic_id": "topic:family_law:52:divorce_and_matrimonial_causes",
       "label_en": "Divorce and Matrimonial Causes",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:family_law:55:relocation_and_access",
+      "label_en": "Relocation and Access",
       "case_count": 2
     },
     {
       "topic_id": "topic:constitutional_administrative_law:59:public_law_error",
       "label_en": "Public Law Error",
+      "case_count": 1
+    },
+    {
+      "topic_id": "topic:constitutional_administrative_law:60:natural_justice_and_procedural_fairness",
+      "label_en": "Natural Justice and Procedural Fairness",
       "case_count": 1
     },
     {
@@ -472,6 +482,9 @@
     "[1973] AC 360",
     "[2010] UKSC 19",
     "[1978] QB 927",
+    "[2021] HKCFI 355",
+    "[2020] HKCFI 2884",
+    "[2020] HKCFI 399",
     "[2021] HKCFI 399",
     "[2018] HKCFI 1480",
     "[2001] HKEC 586",
@@ -484,10 +497,7 @@
     "[1982] QB 1053",
     "[2019] HKCFI 1068",
     "[1999] CLC 1469",
-    "[2007] VSC 57",
-    "[2001] IRLR 758",
-    "[2001] CLC 221",
-    "[2008] EWHC 2613"
+    "[2007] VSC 57"
   ],
   "warnings": [
     "Search failed for 'writ originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
@@ -700,17 +710,28 @@
     "Search failed for 'sanctioned payment costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Search failed for 'without prejudice save as to costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkca/2025/677: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfa/2026/2: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1095: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/1578: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkcfi/2021/517: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Failed to fetch /en/cases/hkdc/2022/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-    "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/306: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/1156: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/1965: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/3353: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2025/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2026/229: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2021/1630: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2024/1145: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2024/1689: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/2183: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
     "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
   ],
   "storage": {
-    "embedding_record_count": 1367,
+    "embedding_record_count": 1422,
     "embedding_dimensions": 256,
     "embedding_backend": {
       "backend": "local-hash",
