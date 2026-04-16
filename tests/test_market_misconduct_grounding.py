@@ -60,3 +60,12 @@ def test_placeholder_case_summaries_are_not_presented_as_citations(monkeypatch):
     assert "Authority cited inside" not in result["answer"]
     assert "paragraph-level verified authority" in result["answer"]
     assert result["warnings"]
+
+
+def test_market_misconduct_live_grounding_filter_requires_sfo_context():
+    assert hg._is_market_misconduct_grounding(
+        "The SFC alleged false trading under the Securities and Futures Ordinance."
+    )
+    assert not hg._is_market_misconduct_grounding(
+        "There are overseas proceedings for market manipulation and fraud."
+    )

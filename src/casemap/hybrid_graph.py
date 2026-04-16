@@ -221,10 +221,40 @@ PLACEHOLDER_SUMMARY_PATTERNS = (
     "current graph placeholder",
 )
 
+MARKET_MISCONDUCT_QUERY_TOKENS = {"market", "manipulation", "securities", "futures", "sfo", "sfc", "insider", "misconduct"}
+MARKET_MISCONDUCT_GROUNDING_TERMS = (
+    "securities and futures ordinance",
+    "securities & futures ordinance",
+    "cap. 571",
+    "cap 571",
+    "false trading",
+    "insider dealing",
+    "market misconduct",
+    "securities and futures commission",
+    "stock market manipulation",
+    "price rigging",
+    "section 274",
+    "s.274",
+    "s 274",
+    "section 295",
+    "s.295",
+    "s 295",
+)
+
 
 def _is_placeholder_summary(text: str) -> bool:
     normalized = " ".join((text or "").strip().lower().split())
     return bool(normalized) and any(pattern in normalized for pattern in PLACEHOLDER_SUMMARY_PATTERNS)
+
+
+def _is_market_misconduct_query(query_tokens: list[str]) -> bool:
+    token_set = set(query_tokens)
+    return bool(token_set & MARKET_MISCONDUCT_QUERY_TOKENS) or {"false", "trading"} <= token_set
+
+
+def _is_market_misconduct_grounding(text: str) -> bool:
+    normalized = " ".join((text or "").strip().lower().split())
+    return any(term in normalized for term in MARKET_MISCONDUCT_GROUNDING_TERMS)
 
 
 CRIMINAL_QUERY_HINTS = {
@@ -491,19 +521,20 @@ def _live_hklii_grounding(question: str, legal_domain: str, max_results: int = 4
                     "support_score": _lexical_overlap_score(query_tokens, paragraph.text, document.case_name) + 0.12,
                 }
                 for paragraph in document.paragraphs[:20]
-                if paragraph.text.strip()
+                if paragraph.text.strip() and _lexical_overlap_score(query_tokens, paragraph.text, document.case_name) > 0
             ),
             key=lambda item: (item["support_score"], len(item["quote"])),
             reverse=True,
         )
         if not ranked_paragraphs:
             fallback_quote = (document.text or document.title or document.case_name).strip()
-            if fallback_quote:
+            fallback_score = _lexical_overlap_score(query_tokens, fallback_quote[:1200], document.case_name)
+            if fallback_quote and fallback_score > 0:
                 ranked_paragraphs = [
                     {
                         "paragraph_span": "",
                         "quote": fallback_quote[:420],
-                        "support_score": 0.08,
+                        "support_score": fallback_score,
                     }
                 ]
         for ranked in ranked_paragraphs[:2]:
@@ -528,7 +559,22 @@ def _live_hklii_grounding(question: str, legal_domain: str, max_results: int = 4
         citation_pool,
         key=lambda item: (item["support_score"], len(item["quote"]), item["case_name"]),
         reverse=True,
-    )[:max_citations]
+    )
+    if _is_market_misconduct_query(query_tokens):
+        citations = [
+            citation
+            for citation in citations
+            if _is_market_misconduct_grounding(
+                " ".join(
+                    [
+                        citation.get("case_name", ""),
+                        citation.get("neutral_citation", ""),
+                        citation.get("quote", ""),
+                    ]
+                )
+            )
+        ]
+    citations = citations[:max_citations]
 
     sources: list[dict] = []
     seen_cases: set[str] = set()
@@ -4197,17 +4243,9 @@ class DeterminatorPipeline:
             except Exception as exc:
                 local_result.setdefault("warnings", []).append(f"LLM synthesis skipped: {exc}")
         elif use_llm and not local_result.get("citations"):
-            try:
-                llm_result = self._llm_query(question, [], mode, model, classification)
-                llm_answer = llm_result["answer"]
-                llm_mode = llm_result["answer_mode"]
-                model_used = llm_result["model_used"]
-                new_knowledge = llm_result.get("new_knowledge", [])
-                local_result.setdefault("warnings", []).append(
-                    "No verified citations were available, so the answer was generated as an ungrounded LLM fallback."
-                )
-            except Exception as exc:
-                local_result.setdefault("warnings", []).append(f"Ungrounded LLM fallback failed: {exc}")
+            local_result.setdefault("warnings", []).append(
+                "No verified citations were available, so LLM synthesis was not used."
+            )
 
         final_answer = llm_answer or local_result.get("answer", "")
         final_mode = llm_mode
