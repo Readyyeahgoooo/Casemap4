@@ -6254,16 +6254,18 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
   <title>Casemap Determinator</title>
   <style>
     :root {{
-      --bg: #091017;
-      --panel: rgba(11, 18, 26, 0.92);
-      --panel-2: rgba(17, 27, 39, 0.9);
-      --ink: #f3f7fb;
-      --muted: #99a7b8;
-      --line: rgba(255, 255, 255, 0.12);
-      --accent: #f1a238;
-      --accent-2: #4dc0b5;
-      --danger: #d36b6b;
-      --shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+      --bg: #fbfbfa;
+      --panel: #ffffff;
+      --panel-2: #f7f7f5;
+      --ink: #202124;
+      --muted: #60656f;
+      --line: #e2e4e8;
+      --accent: #111827;
+      --accent-2: #2f6f73;
+      --danger: #b42318;
+      --source-bg: #fafafa;
+      --source-line: #dadde2;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
     }}
     html {{ scroll-behavior: smooth; }}
     * {{ box-sizing: border-box; }}
@@ -6272,11 +6274,8 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       margin: 0;
       min-height: 100vh;
       color: var(--ink);
-      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(77, 192, 181, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(241, 162, 56, 0.18), transparent 24%),
-        linear-gradient(180deg, #081018 0%, #0b141f 48%, #081018 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
     }}
     .shell {{
       width: min(1480px, calc(100vw - 32px));
@@ -6297,16 +6296,16 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     .topbar-nav {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
     .mode-btn {{
       padding: 8px 16px;
-      border-radius: 999px;
+      border-radius: 8px;
       border: 1px solid var(--line);
-      background: transparent;
+      background: var(--panel-2);
       color: var(--muted);
       font: inherit;
       font-size: 13px;
       cursor: pointer;
       transition: background 120ms, color 120ms;
     }}
-    .mode-btn.active {{ background: var(--accent); color: #0b121a; border-color: var(--accent); font-weight: 600; }}
+    .mode-btn.active {{ background: var(--accent); color: #ffffff; border-color: var(--accent); font-weight: 600; }}
     .hero {{
       display: grid;
       grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
@@ -6314,10 +6313,9 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .panel {{
       border: 1px solid var(--line);
-      border-radius: 24px;
+      border-radius: 8px;
       background: var(--panel);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
     }}
     .hero-copy {{
       padding: 24px 28px;
@@ -6351,8 +6349,8 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .stat {{
       border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      background: var(--panel-2);
       padding: 14px 16px;
     }}
     .stat strong {{
@@ -6380,16 +6378,16 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       gap: 8px;
       padding: 6px;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      background: var(--panel-2);
       width: fit-content;
     }}
     .mode-switch button,
     .inline-link {{
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 8px;
       padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.04);
+      background: var(--panel-2);
       color: var(--ink);
       cursor: pointer;
       font-size: 13px;
@@ -6397,7 +6395,7 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .mode-switch button.active {{
       background: var(--accent);
-      color: #101317;
+      color: #ffffff;
       font-weight: 600;
     }}
     .helper {{
@@ -6442,16 +6440,16 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       width: 100%;
       height: 100%;
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 8px;
       overflow: hidden;
-      background: rgba(0, 0, 0, 0.18);
+      background: #ffffff;
     }}
     .canvas-pane.hidden {{ display: none; }}
     iframe {{
       width: 100%;
       height: 100%;
       border: 0;
-      background: #0b121a;
+      background: #ffffff;
     }}
     #mainGraph {{
       width: 100%;
@@ -6469,7 +6467,7 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       width: 100%;
       height: 100%;
       overflow: auto;
-      background: #f5efe5;
+      background: #ffffff;
       color: #111827;
     }}
     .search-panel {{
@@ -6497,8 +6495,8 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     select {{
       width: 100%;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      background: #ffffff;
       color: var(--ink);
       padding: 14px 16px;
       font: inherit;
@@ -6516,10 +6514,10 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .primary {{
       border: 0;
-      border-radius: 999px;
+      border-radius: 8px;
       padding: 12px 18px;
-      background: linear-gradient(135deg, var(--accent) 0%, #ffd08a 100%);
-      color: #111827;
+      background: var(--accent);
+      color: #ffffff;
       font-weight: 700;
       cursor: pointer;
     }}
@@ -6536,22 +6534,22 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     .result.hidden {{ display: none; }}
     .card {{
       border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(19, 28, 40, 0.98);
-      padding: 14px 16px;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 16px 18px;
     }}
     .card h3 {{
       margin: 0 0 8px;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: var(--accent-2);
+      color: var(--muted);
     }}
     .answer {{
       white-space: pre-wrap;
-      font-size: 14px;
-      line-height: 1.75;
-      color: #e8edf3;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--ink);
     }}
     .answer,
     .answer p,
@@ -6559,13 +6557,13 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     .answer span,
     .answer li,
     .answer td {{
-      color: #e8edf3 !important;
+      color: var(--ink) !important;
     }}
-    .answer strong {{ color: #f3f7fb !important; font-weight: 600; }}
-    .answer em {{ color: #c8d8e8 !important; font-style: italic; }}
-    .answer h4 {{ margin: 12px 0 4px; color: var(--accent) !important; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; }}
+    .answer strong {{ color: var(--ink) !important; font-weight: 700; }}
+    .answer em {{ color: #333842 !important; font-style: italic; }}
+    .answer h4 {{ margin: 18px 0 6px; color: var(--ink) !important; font-size: 18px; text-transform: none; letter-spacing: 0; }}
     .answer table {{ width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }}
-    .answer th {{ background: rgba(255,255,255,0.08); color: var(--accent-2) !important; padding: 6px 10px; text-align: left; border: 1px solid var(--line); }}
+    .answer th {{ background: var(--panel-2); color: var(--ink) !important; padding: 6px 10px; text-align: left; border: 1px solid var(--line); }}
     .answer td {{ padding: 6px 10px; border: 1px solid var(--line); vertical-align: top; }}
     .answer ul, .answer ol {{ padding-left: 20px; margin: 6px 0; }}
     .answer li {{ margin: 3px 0; }}
@@ -6576,10 +6574,52 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .citation {{
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 8px;
       padding: 12px 14px;
-      background: rgba(255, 255, 255, 0.03);
+      background: var(--source-bg);
     }}
+    .principle-block {{
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }}
+    .principle-block:last-child {{ border-bottom: 0; }}
+    .inline-source {{
+      margin: 12px 0 4px 0;
+      border-left: 4px solid var(--source-line);
+      padding: 4px 0 4px 18px;
+    }}
+    .inline-source blockquote {{
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      font-style: italic;
+      color: #333842;
+    }}
+    .source-pill {{
+      display: inline-flex;
+      max-width: 100%;
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 10px;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+    .source-meta {{
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 12px;
+    }}
+    .source-meta a {{ color: var(--accent-2); font-weight: 700; }}
     .citation strong {{
       display: block;
       margin-bottom: 6px;
@@ -6592,20 +6632,20 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .citation p {{
       margin: 0;
-      color: #dbe5ef;
-      font-size: 13px;
-      line-height: 1.6;
+      color: #333842;
+      font-size: 14px;
+      line-height: 1.7;
     }}
     .warning {{
-      color: #ffd5a6;
+      color: #7a4a00;
       font-size: 13px;
       line-height: 1.55;
     }}
     .error {{
-      color: #ffd3d3;
-      background: rgba(211, 107, 107, 0.12);
-      border: 1px solid rgba(211, 107, 107, 0.25);
-      border-radius: 14px;
+      color: var(--danger);
+      background: #fff5f5;
+      border: 1px solid #ffd3d3;
+      border-radius: 8px;
       padding: 12px 14px;
       font-size: 13px;
       line-height: 1.6;
@@ -6796,6 +6836,74 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       return `<p>${{html}}</p>`;
     }}
 
+    function escHtml(value) {{
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }}
+
+    function citationSourceUrl(citation) {{
+      if (citation.hklii_deep_link) return citation.hklii_deep_link;
+      const links = citation.links || [];
+      return links.length ? (links[0].url || "") : "";
+    }}
+
+    function inlineCitationMarkup(citation) {{
+      if (!citation) return "";
+      const title = citation.case_name || citation.label || citation.citation_id || "Citation";
+      const nc = citation.neutral_citation || "";
+      const paraSpan = citation.paragraph_span || "";
+      const quote = citation.quote || citation.summary || "No paragraph text available.";
+      const link = citationSourceUrl(citation);
+      const sourceLabel = paraSpan ? `Para ${{paraSpan}} on HKLII` : "View source on HKLII";
+      const sourceLink = link
+        ? `<a href="${{escHtml(link)}}" target="_blank" rel="noopener">${{escHtml(sourceLabel)}} ↗</a>`
+        : "";
+      return `
+        <div class="inline-source">
+          <blockquote>"${{escHtml(quote)}}"</blockquote>
+          <span class="source-pill">${{escHtml(title)}}${{nc ? " · " + escHtml(nc) : ""}}</span>
+          <div class="source-meta">
+            ${{paraSpan ? `<span>¶ ${{escHtml(paraSpan)}}</span>` : ""}}
+            ${{citation.hklii_verified ? "<span>verified HKLII source</span>" : "<span>unverified graph source</span>"}}
+            ${{sourceLink}}
+          </div>
+        </div>`;
+    }}
+
+    function renderAnswerWithInlineCitations(answer, citations) {{
+      if (!answer || !answer.trim()) return "No answer returned.";
+      const citMap = {{}};
+      for (const citation of (citations || [])) {{
+        if (citation.citation_id) citMap[citation.citation_id] = citation;
+      }}
+      const tokens = answer.split(/(\\[C\\d+\\])/);
+      const blocks = [];
+      let pendingId = null;
+      for (const token of tokens) {{
+        const marker = token.match(/^\\[C(\\d+)\\]$/);
+        if (marker) {{
+          pendingId = `C${{marker[1]}}`;
+          continue;
+        }}
+        if (token.trim()) {{
+          blocks.push({{ id: pendingId, text: token.trim() }});
+          pendingId = null;
+        }}
+      }}
+      if (!blocks.length || !blocks.some(block => block.id && citMap[block.id])) {{
+        return markdownToHtml(answer);
+      }}
+      return blocks.map(block => `
+        <div class="principle-block">
+          <div class="answer">${{block.id ? `<strong>[${{escHtml(block.id)}}]</strong> ` : ""}}${{markdownToHtml(block.text)}}</div>
+          ${{block.id ? inlineCitationMarkup(citMap[block.id]) : ""}}
+        </div>
+      `).join("");
+    }}
+
     function setBusy(isBusy, message) {{
       document.getElementById("runBtn").disabled = isBusy;
       statusEl.textContent = message;
@@ -6823,35 +6931,35 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       const caseId = citation.case_id || citation.focus_node_id || "";
       const origin = citation.retrieval_origin || "bundle";
       const originBadge = origin === "hklii_live"
-        ? '<span style="display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(77,192,181,0.18);color:var(--accent-2);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;margin-left:6px">HKLII Live</span>'
-        : '<span style="display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(241,162,56,0.12);color:var(--accent);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;margin-left:6px">Graph</span>';
+        ? '<span style="display:inline-block;padding:2px 8px;border-radius:8px;background:#e8f6ef;color:var(--accent-2);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;margin-left:6px">HKLII Live</span>'
+        : '<span style="display:inline-block;padding:2px 8px;border-radius:8px;background:#f1f3f5;color:var(--accent);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;margin-left:6px">Graph</span>';
 
       // Build HKLII link: prefer hklii_deep_link (paragraph-level), fall back to source_links
       let hkliiHtml = "";
       const deepLink = citation.hklii_deep_link || "";
       if (deepLink) {{
-        hkliiHtml = `<a href="${{deepLink}}" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none;font-size:12px">See ${{paraSpan || "judgment"}} on HKLII ↗</a>`;
+        hkliiHtml = `<a href="${{deepLink}}" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none;font-size:12px;font-weight:700">See ${{paraSpan || "judgment"}} on HKLII ↗</a>`;
       }} else {{
-        const hkliiLinks = (citation.links || []).map(l => `<a href="${{l.url}}" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none;font-size:12px">${{l.label || "HKLII"}} ↗</a>`).join(" ");
+        const hkliiLinks = (citation.links || []).map(l => `<a href="${{l.url}}" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none;font-size:12px;font-weight:700">${{l.label || "HKLII"}} ↗</a>`).join(" ");
         hkliiHtml = hkliiLinks;
       }}
 
       // Citation header: [C1] Principle — Case Name [neutral_citation]
       const headerParts = [];
       if (citId) headerParts.push(`<span style="color:var(--accent);font-weight:700">[` + citId + `]</span>`);
-      if (principleLabel) headerParts.push(`<span style="color:#e8edf3">${{principleLabel}}</span>`);
+      if (principleLabel) headerParts.push(`<span style="color:var(--ink)">${{principleLabel}}</span>`);
       headerParts.push(`<span style="color:var(--muted)">—</span>`);
-      headerParts.push(`<em style="color:#dbe5ef">${{title}}</em>`);
+      headerParts.push(`<em style="color:var(--ink)">${{title}}</em>`);
       if (nc) headerParts.push(`<span style="color:var(--muted);font-size:12px">[` + nc + `]</span>`);
 
       return `
         <article class="citation" data-case-id="${{caseId}}" data-case-name="${{title}}" style="cursor:pointer" onclick="focusGraphNode('${{caseId}}','${{title.replace(/'/g,"\\'")}}')" title="Click to focus in graph">
           <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:6px">${{headerParts.join(" ")}}${{originBadge}}</div>
-          <p style="margin:0 0 8px;color:#dbe5ef;font-size:13px;line-height:1.65">${{quote}}</p>
+          <p style="margin:0 0 8px;color:#333842;font-size:14px;line-height:1.7">${{quote}}</p>
           <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
             ${{paraSpan ? '<span style="color:var(--muted);font-size:11px">¶ ' + paraSpan + '</span>' : ''}}
             ${{hkliiHtml}}
-            ${{caseId ? '<span style="color:var(--accent-2);font-size:11px;cursor:pointer">▶ Focus in graph</span>' : ''}}
+            ${{caseId ? '<span style="color:var(--accent-2);font-size:11px;cursor:pointer;font-weight:700">Focus in graph</span>' : ''}}
           </div>
         </article>
       `;
@@ -6877,7 +6985,8 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
         if (!response.ok) {{
           throw new Error(data.error || "Determinator request failed.");
         }}
-        answerEl.innerHTML = markdownToHtml(data.answer || "No answer returned.");
+        const answerUsesInlineCitations = /\\[C\\d+\\]/.test(data.answer || "");
+        answerEl.innerHTML = renderAnswerWithInlineCitations(data.answer || "No answer returned.", data.citations || []);
         metaEl.textContent = [
           data.answer_mode ? `Mode: ${{data.answer_mode}}` : "",
           data.model_used ? `Model: ${{data.model_used}}` : "",
@@ -6885,7 +6994,9 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
           data.used_fallback ? "Fallback used" : "Local grounding only"
         ].filter(Boolean).join(" · ");
         disclaimerEl.textContent = data.disclaimer || "";
-        citationsEl.innerHTML = (data.citations || []).length
+        citationsEl.innerHTML = answerUsesInlineCitations && (data.citations || []).length
+          ? "<div class='citation'><strong>Sources inserted inline</strong><p>Each cited source appears directly below the proposition that uses it.</p></div>"
+          : (data.citations || []).length
           ? data.citations.map(citationMarkup).join("")
           : "<div class='citation'><strong>No local citations</strong><p>The determiner did not return any supporting local citation blocks for this query.</p></div>";
         const warnings = data.warnings || [];

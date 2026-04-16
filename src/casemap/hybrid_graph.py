@@ -204,11 +204,28 @@ QUERY_SYNONYMS: dict[str, str] = {
     "laundering": "laundering",
     "launder": "laundering",
     "laundered": "laundering",
+    # Securities / market misconduct
+    "manipulating": "manipulation",
+    "manipulated": "manipulation",
+    "manipulative": "manipulation",
     # Bribing
     "bribing": "bribery",
     "bribed": "bribery",
     "bribe": "bribery",
 }
+
+PLACEHOLDER_SUMMARY_PATTERNS = (
+    "authority cited inside an hklii",
+    "hong kong legislation cited in",
+    "case linked to",
+    "current graph placeholder",
+)
+
+
+def _is_placeholder_summary(text: str) -> bool:
+    normalized = " ".join((text or "").strip().lower().split())
+    return bool(normalized) and any(pattern in normalized for pattern in PLACEHOLDER_SUMMARY_PATTERNS)
+
 
 CRIMINAL_QUERY_HINTS = {
     # Animal welfare
@@ -247,6 +264,15 @@ CRIMINAL_QUERY_HINTS = {
     "laundering": ["money laundering hong kong criminal", "organized serious crimes ordinance HKSAR"],
     "fraud": ["fraud deception hong kong criminal", "theft ordinance fraud HKSAR"],
     "deception": ["deception offence hong kong criminal", "obtaining property deception HKSAR"],
+    # Securities and market misconduct under the Securities and Futures Ordinance
+    "market": ["market manipulation false trading securities futures ordinance cap 571", "market misconduct tribunal HKSAR", "false trading securities HKSAR"],
+    "manipulation": ["market manipulation false trading securities futures ordinance cap 571", "managed manipulation securities HKSAR", "market misconduct tribunal HKSAR"],
+    "securities": ["securities futures ordinance cap 571 market misconduct", "false trading securities HKSAR", "insider dealing securities HKSAR"],
+    "futures": ["securities futures ordinance cap 571 market misconduct", "false trading securities HKSAR"],
+    "sfo": ["securities futures ordinance cap 571 market misconduct", "false trading securities HKSAR"],
+    "sfc": ["securities futures commission market misconduct HKSAR", "market manipulation SFC HKSAR"],
+    "insider": ["insider dealing securities futures ordinance HKSAR", "market misconduct insider dealing HKSAR"],
+    "misconduct": ["market misconduct securities futures ordinance HKSAR", "market manipulation false trading HKSAR"],
     # Theft and property offences
     "theft": ["theft hong kong criminal", "theft ordinance HKSAR"],
     "steal": ["theft hong kong criminal", "theft ordinance HKSAR"],
@@ -3196,7 +3222,7 @@ class HybridGraphStore:
                     )
             else:
                 summary = (card["metadata"].get("summary_en") or "").strip()
-                if summary:
+                if summary and not _is_placeholder_summary(summary):
                     citation_pool.append(
                         {
                             "case_id": card["id"],
@@ -3370,8 +3396,8 @@ class HybridGraphStore:
             extractive_answer = " ".join(
                 card["metadata"]["summary_en"]
                 for card in support_cases[:2]
-                if card["metadata"]["summary_en"] and not card["metadata"]["summary_en"].startswith("Case linked to")
-            ).strip() or "No paragraph-level evidence was found for this query, but related cases were retrieved."
+                if card["metadata"]["summary_en"] and not _is_placeholder_summary(card["metadata"]["summary_en"])
+            ).strip() or "Related graph records were found, but none currently has paragraph-level verified authority for this query."
         else:
             extractive_answer = "No sufficiently relevant authority path was found in the current graph bundle."
 
@@ -3806,6 +3832,14 @@ OFFENCE_ORDINANCE_RULES = [
         "strict_liability_possible": False,
     },
     {
+        "offence_family": "market_misconduct",
+        "ordinance": "Securities and Futures Ordinance (Cap. 571)",
+        "section": "market misconduct, false trading, price rigging, stock market manipulation, and insider dealing provisions",
+        "keywords": {"market", "manipulation", "manipulat", "securities", "futures", "sfo", "sfc", "insider", "misconduct"},
+        "phrases": {"market manipulation", "false trading", "insider dealing", "market misconduct", "front desk trader"},
+        "strict_liability_possible": True,
+    },
+    {
         "offence_family": "sexual_offences",
         "ordinance": "Crimes Ordinance (Cap. 200)",
         "section": "sexual offences",
@@ -3932,7 +3966,7 @@ class DeterminatorPipeline:
         area = "offence_elements"
         if any(t in tokens for t in {"sentence", "sentencing", "penalty", "imprisonment", "tariff"}):
             area = "sentencing"
-        elif any(t in tokens for t in {"defence", "defense", "duress", "self", "insanity", "intoxication"}):
+        elif any(t in tokens for t in {"defence", "defences", "defense", "defenses", "duress", "self", "insanity", "intoxication"}):
             area = "defences"
         elif any(t in tokens for t in {"arrest", "bail", "confession", "police", "warrant", "right", "silence"}):
             area = "procedure"
