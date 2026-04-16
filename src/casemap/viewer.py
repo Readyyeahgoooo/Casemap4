@@ -5680,118 +5680,532 @@ def render_case_analysis_page(bundle: dict) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Analyse Case Facts - {title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {{ color-scheme: light; --ink:#172126; --muted:#5f6f75; --line:#d8e1e3; --panel:#f7faf9; --accent:#2d6a8a; --accent2:#7a5c2e; }}
-    * {{ box-sizing: border-box; }}
-    body {{ margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:#fbfcfb; }}
-    main {{ max-width:1180px; margin:0 auto; padding:28px 18px 48px; }}
-    header {{ display:flex; justify-content:space-between; gap:18px; align-items:flex-start; border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:22px; }}
-    h1 {{ margin:0 0 8px; font-size:30px; line-height:1.1; }}
-    p {{ line-height:1.6; }}
-    .stats {{ display:flex; gap:8px; flex-wrap:wrap; }}
-    .stat {{ border:1px solid var(--line); border-radius:8px; padding:8px 10px; background:white; min-width:96px; }}
-    .stat strong {{ display:block; font-size:18px; }}
-    .grid {{ display:grid; grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr); gap:18px; align-items:start; }}
-    section {{ border:1px solid var(--line); border-radius:8px; background:white; padding:16px; }}
-    textarea {{ width:100%; min-height:260px; resize:vertical; border:1px solid var(--line); border-radius:8px; padding:12px; font:inherit; line-height:1.5; }}
-    .controls {{ display:flex; gap:10px; flex-wrap:wrap; align-items:end; margin-top:12px; }}
-    label {{ display:grid; gap:5px; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }}
-    select, input {{ border:1px solid var(--line); border-radius:8px; padding:9px; font:inherit; min-width:130px; }}
-    button {{ border:0; border-radius:8px; padding:10px 14px; background:var(--accent); color:white; font-weight:700; cursor:pointer; }}
-    button:disabled {{ opacity:.55; cursor:wait; }}
-    .status {{ color:var(--muted); font-size:13px; margin-top:10px; }}
-    .result {{ display:grid; gap:14px; }}
-    .card {{ border:1px solid var(--line); border-radius:8px; padding:14px; background:var(--panel); }}
-    .card h2 {{ margin:0 0 8px; font-size:16px; }}
-    .answer {{ white-space:pre-wrap; line-height:1.65; }}
-    .item {{ border-top:1px solid var(--line); padding-top:10px; margin-top:10px; }}
-    .item:first-child {{ border-top:0; padding-top:0; margin-top:0; }}
-    .meta {{ color:var(--muted); font-size:12px; }}
-    a {{ color:var(--accent); }}
-    .warning {{ color:#8a4c14; }}
-    @media (max-width: 860px) {{ .grid {{ grid-template-columns:1fr; }} header {{ display:block; }} }}
+    :root {{
+      --ink: #0f1923;
+      --ink-soft: #2e3e4a;
+      --muted: #586d78;
+      --line: #d4dde2;
+      --line-soft: #eaf0f3;
+      --panel: #f4f8fa;
+      --white: #ffffff;
+      --accent: #1a5f82;
+      --accent-light: #e8f3f9;
+      --accent2: #6b4c1e;
+      --accent2-light: #fdf3e7;
+      --good: #1a6645;
+      --good-light: #e8f6ef;
+      --warn: #7a4c00;
+      --warn-light: #fff8ec;
+      --cit-border: #c5d8e4;
+      --cit-bg: #f0f6fa;
+      --principle-border: #2d6a8a;
+    }}
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: #f6f9fb;
+    }}
+    main {{ max-width: 1240px; margin: 0 auto; padding: 32px 20px 64px; }}
+
+    /* ── Header ── */
+    .page-header {{
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }}
+    .page-header h1 {{
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }}
+    .page-header p {{
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 480px;
+    }}
+    .stats {{ display: flex; gap: 10px; flex-wrap: wrap; }}
+    .stat {{
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 14px;
+      background: var(--white);
+      min-width: 90px;
+      text-align: center;
+    }}
+    .stat strong {{ display: block; font-size: 20px; font-weight: 700; color: var(--accent); }}
+    .stat span {{ font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }}
+
+    /* ── Layout grid ── */
+    .grid {{
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 20px;
+      align-items: start;
+    }}
+
+    /* ── Input panel ── */
+    .input-panel {{
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      position: sticky;
+      top: 20px;
+    }}
+    .input-panel label {{
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }}
+    textarea {{
+      width: 100%;
+      min-height: 240px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--panel);
+      transition: border-color 150ms;
+    }}
+    textarea:focus {{ outline: none; border-color: var(--accent); background: var(--white); }}
+    .controls {{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin-top: 14px;
+    }}
+    .ctrl-group {{ display: grid; gap: 5px; }}
+    .ctrl-group label {{
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 0;
+    }}
+    select {{
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font: inherit;
+      font-size: 13px;
+      min-width: 120px;
+      color: var(--ink);
+      background: var(--white);
+    }}
+    #runBtn {{
+      border: 0;
+      border-radius: 8px;
+      padding: 10px 20px;
+      background: var(--accent);
+      color: var(--white);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: .01em;
+      transition: background 150ms;
+    }}
+    #runBtn:hover {{ background: #155070; }}
+    #runBtn:disabled {{ opacity: .5; cursor: wait; }}
+    .status {{
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+      min-height: 18px;
+    }}
+
+    /* ── Result area ── */
+    .result {{ display: grid; gap: 16px; }}
+    .card {{
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+    }}
+    .card-heading {{
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line-soft);
+    }}
+    .placeholder {{ font-size: 14px; color: var(--muted); font-style: italic; }}
+
+    /* ── Principle blocks ── */
+    .principle-block {{
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line-soft);
+    }}
+    .principle-block:last-child {{ border-bottom: 0; padding-bottom: 0; }}
+    .principle-block:first-child {{ padding-top: 0; }}
+    .principle-text {{
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.75;
+      color: var(--ink);
+    }}
+    .cit-badge {{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 26px;
+      height: 20px;
+      padding: 0 6px;
+      border-radius: 4px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      vertical-align: middle;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }}
+
+    /* ── Inline citation sub-card ── */
+    .inline-cit {{
+      margin-top: 10px;
+      margin-left: 4px;
+      background: var(--cit-bg);
+      border: 1px solid var(--cit-border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }}
+    .inline-cit-header {{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 8px;
+    }}
+    .inline-cit-name {{
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+    }}
+    .inline-cit-ref {{
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }}
+    .inline-cit-para {{
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-light);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-right: 6px;
+    }}
+    .inline-cit-quote {{
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      border-left: 0;
+      padding: 0;
+      font-style: italic;
+    }}
+    .inline-cit-link {{
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 8px;
+    }}
+    .inline-cit-link:hover {{ text-decoration: underline; }}
+    .verified-dot {{
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--good);
+      margin-right: 3px;
+      vertical-align: middle;
+    }}
+
+    /* ── Lineage & similar items ── */
+    .item {{
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line-soft);
+    }}
+    .item:last-child {{ border-bottom: 0; padding-bottom: 0; }}
+    .item:first-child {{ padding-top: 0; }}
+    .item-title {{ font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }}
+    .item-meta {{ font-size: 12px; color: var(--muted); margin-bottom: 4px; }}
+    .item-members {{ font-size: 13px; line-height: 1.7; color: var(--ink-soft); }}
+    .lineage-badge {{
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--accent2-light);
+      color: var(--accent2);
+      margin-right: 6px;
+    }}
+
+    /* ── Warnings ── */
+    .warning-text {{ font-size: 13px; color: var(--warn); background: var(--warn-light); padding: 10px 12px; border-radius: 8px; line-height: 1.6; }}
+
+    /* ── Links ── */
+    a {{ color: var(--accent); text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {{
+      .grid {{ grid-template-columns: 1fr; }}
+      .input-panel {{ position: static; }}
+      .page-header {{ flex-direction: column; }}
+    }}
   </style>
 </head>
 <body>
   <main>
-    <header>
+    <div class="page-header">
       <div>
         <h1>Analyse Case Facts</h1>
-        <p>Paste a factual scenario and Casemap will return graph-grounded principles, authority lineages, similar cases, and paragraph-level HKLII links where available.</p>
+        <p>Paste a factual scenario — Casemap returns graph-grounded principles with paragraph-level HKLII citations directly below each finding.</p>
       </div>
       <div class="stats">
         <div class="stat"><strong>{case_count}</strong><span>Cases</span></div>
         <div class="stat"><strong>{lineage_count}</strong><span>Lineages</span></div>
       </div>
-    </header>
+    </div>
+
     <div class="grid">
-      <section>
+      <!-- Input panel -->
+      <div class="input-panel">
         <label for="facts">Case Facts</label>
-        <textarea id="facts" placeholder="Describe the facts, parties, conduct, timing, charge, procedural issue, or sentencing context."></textarea>
+        <textarea id="facts" placeholder="Describe the facts, parties, conduct, timing, charge, procedural issue, or sentencing context.&#10;&#10;Example: D was arrested at the airport carrying 500g of cocaine concealed in a false-bottomed suitcase. He claims he did not know the drugs were there. Police conducted a search without a warrant."></textarea>
         <div class="controls">
-          <label>Mode
+          <div class="ctrl-group">
+            <label>Mode</label>
             <select id="mode">
               <option value="extractive" selected>Extractive</option>
               <option value="deepseek">DeepSeek</option>
               <option value="openrouter">OpenRouter</option>
             </select>
-          </label>
-          <label>Top Cases
+          </div>
+          <div class="ctrl-group">
+            <label>Top Cases</label>
             <select id="topK">
               <option value="3">3</option>
               <option value="5" selected>5</option>
               <option value="8">8</option>
             </select>
-          </label>
-          <button id="runBtn" type="button">Analyse</button>
+          </div>
+          <button id="runBtn" type="button">Analyse →</button>
         </div>
         <div id="status" class="status">Ready.</div>
-      </section>
-      <section class="result" id="result">
-        <div class="card"><h2>Grounded Analysis</h2><div id="answer" class="answer">No analysis yet.</div></div>
-        <div class="card"><h2>Authority Lineage</h2><div id="lineages" class="meta">No lineage selected yet.</div></div>
-        <div class="card"><h2>Supporting Citations</h2><div id="citations" class="meta">No citations yet.</div></div>
-        <div class="card"><h2>Factually Similar Cases</h2><div id="similar" class="meta">No similar cases yet.</div></div>
-        <div class="card"><h2>Warnings</h2><div id="warnings" class="warning">None.</div></div>
-      </section>
+      </div>
+
+      <!-- Result panel -->
+      <div class="result" id="result">
+        <div class="card">
+          <div class="card-heading">Principles &amp; Authority Citations</div>
+          <div id="answer"><p class="placeholder">Run an analysis to see graph-grounded principles, each immediately followed by the supporting paragraph citation and exact source.</p></div>
+        </div>
+        <div class="card">
+          <div class="card-heading">Authority Lineage</div>
+          <div id="lineages"><p class="placeholder">No lineage selected yet.</p></div>
+        </div>
+        <div class="card">
+          <div class="card-heading">Factually Similar Cases</div>
+          <div id="similar"><p class="placeholder">No similar cases yet.</p></div>
+        </div>
+        <div class="card" id="warnings-card" style="display:none">
+          <div class="card-heading">Warnings</div>
+          <div id="warnings"></div>
+        </div>
+      </div>
     </div>
   </main>
+
   <script>
-    const factsEl = document.getElementById("facts");
-    const modeEl = document.getElementById("mode");
-    const topKEl = document.getElementById("topK");
-    const runBtn = document.getElementById("runBtn");
+    const factsEl  = document.getElementById("facts");
+    const modeEl   = document.getElementById("mode");
+    const topKEl   = document.getElementById("topK");
+    const runBtn   = document.getElementById("runBtn");
     const statusEl = document.getElementById("status");
     const answerEl = document.getElementById("answer");
     const lineagesEl = document.getElementById("lineages");
-    const citationsEl = document.getElementById("citations");
-    const similarEl = document.getElementById("similar");
+    const similarEl  = document.getElementById("similar");
     const warningsEl = document.getElementById("warnings");
-    function esc(value) {{ return String(value || "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;"); }}
-    function linksHtml(links) {{ return (links || []).map((link) => `<a target="_blank" rel="noopener" href="${{esc(link.url)}}">${{esc(link.label || "HKLII")}}</a>`).join(" "); }}
-    function renderCitations(citations) {{
-      if (!citations.length) return "No citations returned.";
-      return citations.map((citation) => {{
-        const deep = citation.hklii_deep_link ? `<a target="_blank" rel="noopener" href="${{esc(citation.hklii_deep_link)}}">paragraph link</a>` : linksHtml(citation.links);
-        return `<div class="item"><strong>[${{esc(citation.citation_id)}}] ${{esc(citation.case_name)}}</strong><div class="meta">${{esc(citation.neutral_citation)}} ${{esc(citation.paragraph_span)}} ${{citation.hklii_verified ? "verified" : ""}} ${{deep}}</div><p>${{esc(citation.quote)}}</p></div>`;
+    const warningsCard = document.getElementById("warnings-card");
+
+    function esc(v) {{
+      return String(v || "")
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }}
+
+    /* Build a lookup map: citation_id → citation object */
+    function buildCitMap(citations) {{
+      const map = {{}};
+      for (const c of (citations || [])) map[c.citation_id] = c;
+      return map;
+    }}
+
+    /* Render HKLII source link */
+    function citSourceLink(cit) {{
+      const url = cit.hklii_deep_link
+        || (cit.links && cit.links[0] && cit.links[0].url)
+        || "";
+      if (!url) return "";
+      const paraLabel = cit.paragraph_span ? `Para ${{esc(cit.paragraph_span)}}` : "View judgment";
+      return `<a class="inline-cit-link" href="${{esc(url)}}" target="_blank" rel="noopener">
+        ↗ ${{paraLabel}} on HKLII${{cit.hklii_verified ? ' <span class="verified-dot" title="Verified paragraph link"></span>' : ''}}
+      </a>`;
+    }}
+
+    /* Render one inline citation sub-card */
+    function renderInlineCit(cit) {{
+      const paraTag = cit.paragraph_span
+        ? `<span class="inline-cit-para">¶ ${{esc(cit.paragraph_span)}}</span>`
+        : "";
+      return `
+        <div class="inline-cit">
+          <div class="inline-cit-header">
+            <span class="inline-cit-name">${{esc(cit.case_name)}}</span>
+            <span class="inline-cit-ref">${{esc(cit.neutral_citation)}}</span>
+          </div>
+          ${{paraTag}}<span class="inline-cit-ref" style="font-size:11px">${{esc(cit.principle_label || "")}}</span>
+          <div class="inline-cit-quote">"${{esc(cit.quote)}}"</div>
+          ${{citSourceLink(cit)}}
+        </div>`;
+    }}
+
+    /*
+     * Parse the answer string for [CN] markers and render each principle
+     * as a styled block immediately followed by its citation sub-card.
+     *
+     * Input format from API:  "[C1] quote text [C2] quote text ..."
+     */
+    function renderAnswer(answer, citations) {{
+      if (!answer || !answer.trim()) return '<p class="placeholder">No grounded answer returned.</p>';
+      const citMap = buildCitMap(citations);
+
+      /* Split on every [CN] marker, keeping the markers */
+      const tokens = answer.split(/(\\[C\\d+\\])/);
+      const blocks = [];
+      let pendingId = null;
+
+      for (const token of tokens) {{
+        const m = token.match(/^\\[C(\\d+)\\]$/);
+        if (m) {{
+          pendingId = `C${{m[1]}}`;
+        }} else if (token.trim()) {{
+          blocks.push({{ id: pendingId, text: token.trim() }});
+          pendingId = null;
+        }}
+      }}
+
+      if (!blocks.length) {{
+        /* No [CN] markers — render as plain paragraphs */
+        return answer.trim().split(/\n\n+/).map(p =>
+          `<div class="principle-block"><p class="principle-text">${{esc(p.trim())}}</p></div>`
+        ).join("");
+      }}
+
+      return blocks.map(block => {{
+        const badgeHtml = block.id
+          ? `<span class="cit-badge">${{esc(block.id)}}</span>`
+          : "";
+        const citHtml = (block.id && citMap[block.id])
+          ? renderInlineCit(citMap[block.id])
+          : "";
+        return `
+          <div class="principle-block">
+            <div class="principle-text">${{badgeHtml}}${{esc(block.text)}}</div>
+            ${{citHtml}}
+          </div>`;
       }}).join("");
     }}
+
     function renderLineages(lineages) {{
-      if (!lineages.length) return "No matched authority lineage.";
-      return lineages.map((lineage) => {{
-        const members = (lineage.members || []).map((member) => `${{esc(member.position || "")}}. ${{esc(member.label)}} ${{esc(member.code || "")}}`).join("<br>");
-        return `<div class="item"><strong>${{esc(lineage.title)}}</strong><div class="meta">${{esc(lineage.confidence_status || "")}} · ${{esc(lineage.source || "")}}</div><p>${{members}}</p></div>`;
+      if (!lineages.length) return '<p class="placeholder">No matched authority lineage.</p>';
+      return lineages.map(lin => {{
+        const members = (lin.members || []).map((m, i) =>
+          `<div style="padding:3px 0;border-top:${{i ? "1px solid var(--line-soft)" : "none"}};padding-top:${{i ? "6px" : "0"}}">
+            <span style="font-size:11px;color:var(--muted);min-width:20px;display:inline-block">${{esc(String(m.position || (i+1)))}}</span>
+            <strong style="font-size:13px">${{esc(m.label || m.case_name || "")}}</strong>
+            ${{m.code ? `<span class="lineage-badge">${{esc(m.code)}}</span>` : ""}}
+          </div>`
+        ).join("");
+        return `
+          <div class="item">
+            <div class="item-title">${{esc(lin.title || lin.lineage_title || "")}}</div>
+            <div class="item-meta">
+              ${{lin.confidence_status ? `<span class="lineage-badge">${{esc(lin.confidence_status)}}</span>` : ""}}
+              ${{esc(lin.source || "")}}
+            </div>
+            <div class="item-members">${{members}}</div>
+          </div>`;
       }}).join("");
     }}
+
     function renderSimilar(cases) {{
-      if (!cases.length) return "No similar cases returned.";
-      return cases.map((item) => `<div class="item"><strong>${{esc(item.case_name || item.label)}}</strong><div class="meta">${{esc(item.neutral_citation)}} · similarity ${{esc(item.similarity_score)}} · ${{linksHtml(item.source_links)}}</div></div>`).join("");
+      if (!cases.length) return '<p class="placeholder">No similar cases returned.</p>';
+      return cases.map(item => {{
+        const links = (item.source_links || []).map(l =>
+          `<a href="${{esc(l.url)}}" target="_blank" rel="noopener">${{esc(l.label || "HKLII")}}</a>`
+        ).join(" ");
+        const score = item.similarity_score != null
+          ? `<span style="font-size:11px;background:var(--good-light);color:var(--good);border-radius:4px;padding:2px 6px;font-weight:600">${{esc(String(item.similarity_score))}}</span>`
+          : "";
+        return `
+          <div class="item">
+            <div class="item-title">${{esc(item.case_name || item.label || "")}}</div>
+            <div class="item-meta">${{esc(item.neutral_citation || "")}} ${{score}} ${{links}}</div>
+          </div>`;
+      }}).join("");
     }}
+
     runBtn.addEventListener("click", async () => {{
       const facts = factsEl.value.trim();
       if (!facts) {{ statusEl.textContent = "Paste facts first."; return; }}
       runBtn.disabled = true;
-      statusEl.textContent = "Analysing against graph evidence...";
+      answerEl.innerHTML = '<p class="placeholder">Analysing against graph evidence…</p>';
+      lineagesEl.innerHTML = '<p class="placeholder">Loading…</p>';
+      similarEl.innerHTML  = '<p class="placeholder">Loading…</p>';
+      warningsCard.style.display = "none";
+      statusEl.textContent = "Querying knowledge graph…";
       try {{
         const response = await fetch("/api/analyse-case", {{
           method: "POST",
@@ -5800,14 +6214,19 @@ def render_case_analysis_page(bundle: dict) -> str:
         }});
         const payload = await response.json();
         if (!response.ok) throw new Error(payload.error || "Request failed");
-        answerEl.textContent = payload.answer || "No grounded answer returned.";
+        const citations = payload.citations || [];
+        answerEl.innerHTML  = renderAnswer(payload.answer || "", citations);
         lineagesEl.innerHTML = renderLineages(payload.authority_lineage_path || payload.matched_lineages || []);
-        citationsEl.innerHTML = renderCitations(payload.citations || []);
-        similarEl.innerHTML = renderSimilar(payload.factually_similar_cases || []);
-        warningsEl.textContent = (payload.warnings || []).join("\\n") || "None.";
-        statusEl.textContent = `Done. ${{(payload.citations || []).length}} citation(s), ${{(payload.authority_lineage_path || []).length}} lineage path(s).`;
+        similarEl.innerHTML  = renderSimilar(payload.factually_similar_cases || []);
+        const warns = (payload.warnings || []).filter(Boolean);
+        if (warns.length) {{
+          warningsEl.innerHTML = warns.map(w => `<div class="warning-text">${{esc(w)}}</div>`).join("");
+          warningsCard.style.display = "";
+        }}
+        statusEl.textContent = `Done · ${{citations.length}} citation(s) · ${{(payload.authority_lineage_path || []).length}} lineage path(s).`;
       }} catch (error) {{
-        statusEl.textContent = error.message || "Analysis failed.";
+        answerEl.innerHTML = `<p class="placeholder" style="color:var(--warn)">${{esc(error.message || "Analysis failed.")}}</p>`;
+        statusEl.textContent = "Error — see above.";
       }} finally {{
         runBtn.disabled = false;
       }}
