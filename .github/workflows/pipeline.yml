@@ -1,0 +1,225 @@
+name: Casemap4 Pipeline
+
+# Runs one full cycle every 6 hours (crawl → enrich → build → merge → push).
+# Vercel auto-redeploys when artifacts are pushed to main.
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # 00:00, 06:00, 12:00, 18:00 UTC
+  workflow_dispatch:          # also allows manual trigger from GitHub UI
+
+permissions:
+  contents: write             # needed to commit + push artifacts back
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300      # 5-hour hard cap (one cycle should finish in ~2h)
+
+    env:
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      PYTHONPATH: src
+      CRIMINAL_CANDIDATES: data/batch/candidates_criminal_clean.json
+      CIVIL_CANDIDATES:    data/batch/candidates_civil_batch.json
+      CIVIL_TREE:          data/batch/domain_trees/civil_tree.json
+      CRIMINAL_OUT:        artifacts/hk_criminal_relationship_v2
+      CRIMINAL_HYBRID_OUT: artifacts/hk_criminal_hybrid_v2
+      CIVIL_OUT:           artifacts/hk_civil_graph
+      CIVIL_HYBRID_OUT:    artifacts/hk_civil_hybrid_v1
+      MAX_PER_TOPIC:       "50"
+      MAX_ENRICH:          "120"
+      MAX_TOTAL_HYBRID_NODES: "10000"
+      CRAWL_ROUNDS:        "2"
+
+    steps:
+      # ── 1. Checkout ─────────────────────────────────────────────────────────
+      - name: Checkout repo (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history so merge-hybrid-graph can compare
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Python setup ─────────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]" 2>/dev/null || pip install -e . && pip install pypdf neo4j
+
+      # ── 3. Validate secrets ─────────────────────────────────────────────────
+      - name: Check API key
+        run: |
+          if [[ -z "$DEEPSEEK_API_KEY" ]]; then
+            echo "ERROR: DEEPSEEK_API_KEY secret is not set in repo settings."
+            exit 1
+          fi
+          echo "API key present."
+
+      # ── 4. PHASE 1: Criminal crawl ──────────────────────────────────────────
+      - name: Phase 1 — Criminal crawl (${{ env.CRAWL_ROUNDS }} rounds)
+        run: |
+          python3 -m casemap.batch_enrich loop \
+            --domain criminal \
+            --rounds "$CRAWL_ROUNDS" \
+            --max-per-topic "$MAX_PER_TOPIC" \
+            --candidates "$CRIMINAL_CANDIDATES" \
+            2>&1 | tee -a data/batch/criminal_loop.log || echo "[WARN] Criminal crawl exited non-zero (continuing)"
+
+      # ── 5. PHASE 2: Criminal graph build + cumulative merge ─────────────────
+      - name: Phase 2 — Criminal graph build
+        run: |
+          # Preserve previous graph for additive merge
+          if [[ -f "$CRIMINAL_HYBRID_OUT/hierarchical_graph.json" ]]; then
+            cp "$CRIMINAL_HYBRID_OUT/hierarchical_graph.json" \
+               "$CRIMINAL_HYBRID_OUT/hierarchical_graph_prev.json"
+          fi
+
+          python3 -m casemap build-domain-graph \
+            --domain criminal \
+            --candidates "$CRIMINAL_CANDIDATES" \
+            --output-dir "$CRIMINAL_OUT" \
+            --hybrid-output-dir "$CRIMINAL_HYBRID_OUT" \
+            --max-enrich "$MAX_ENRICH" \
+            --max-cases 600 \
+            --discover-lineages \
+            --lineages-path data/batch/discovered_lineages.json \
+            --enrichment-cache data/batch/enrichment_cache_criminal.json \
+            2>&1 | tee -a data/batch/criminal_build.log || echo "[WARN] Criminal graph build exited non-zero (continuing)"
+
+      - name: Phase 2b — Cumulative merge (additive, never shrinks)
+        run: |
+          PREV="$CRIMINAL_HYBRID_OUT/hierarchical_graph_prev.json"
+          CURR="$CRIMINAL_HYBRID_OUT/hierarchical_graph.json"
+          if [[ -f "$PREV" && -f "$CURR" ]]; then
+            python3 -m casemap merge-hybrid-graph \
+              --graph "$CURR" \
+              --previous "$PREV" \
+              --output-dir "$CRIMINAL_HYBRID_OUT" \
+              --max-total-nodes "$MAX_TOTAL_HYBRID_NODES" \
+              2>&1 | tee -a data/batch/criminal_build.log || echo "[WARN] Merge exited non-zero (continuing)"
+          else
+            echo "No previous graph to merge (first run or missing file); skipping."
+          fi
+
+      # ── 6. PHASE 3+4: Civil (only if civil tree exists) ─────────────────────
+      - name: Phase 3+4 — Civil crawl + build (if civil tree exists)
+        run: |
+          if [[ ! -f "$CIVIL_TREE" ]]; then
+            echo "[SKIP] No civil tree at $CIVIL_TREE — skipping civil phases"
+            exit 0
+          fi
+
+          python3 -m casemap.batch_enrich crawl \
+            --domain civil \
+            --tree "$CIVIL_TREE" \
+            --max-per-topic 30 \
+            --output "$CIVIL_CANDIDATES" \
+            2>&1 | tee -a data/batch/civil_crawl.log || echo "[WARN] Civil crawl exited non-zero"
+
+          if [[ -f "$CIVIL_CANDIDATES" ]]; then
+            python3 -m casemap.batch_enrich classify-domains \
+              --input "$CIVIL_CANDIDATES" \
+              --domain civil \
+              --no-trees \
+              2>&1 | tee -a data/batch/civil_crawl.log || echo "[WARN] Civil classify exited non-zero"
+          fi
+
+          CIVIL_CLEAN="data/batch/candidates_civil_clean.json"
+          if [[ -f "$CIVIL_CLEAN" ]]; then
+            if [[ -f "$CIVIL_HYBRID_OUT/hierarchical_graph.json" ]]; then
+              cp "$CIVIL_HYBRID_OUT/hierarchical_graph.json" \
+                 "$CIVIL_HYBRID_OUT/hierarchical_graph_prev.json"
+            fi
+            python3 -m casemap build-domain-graph \
+              --domain civil \
+              --tree "$CIVIL_TREE" \
+              --candidates "$CIVIL_CLEAN" \
+              --output-dir "$CIVIL_OUT" \
+              --hybrid-output-dir "$CIVIL_HYBRID_OUT" \
+              --max-enrich 80 \
+              --max-cases 400 \
+              --discover-lineages \
+              --lineages-path data/batch/discovered_lineages.json \
+              --enrichment-cache data/batch/enrichment_cache_civil.json \
+              2>&1 | tee -a data/batch/civil_build.log || echo "[WARN] Civil build exited non-zero"
+
+            PREV_CIVIL="$CIVIL_HYBRID_OUT/hierarchical_graph_prev.json"
+            CURR_CIVIL="$CIVIL_HYBRID_OUT/hierarchical_graph.json"
+            if [[ -f "$PREV_CIVIL" && -f "$CURR_CIVIL" ]]; then
+              python3 -m casemap merge-hybrid-graph \
+                --graph "$CURR_CIVIL" \
+                --previous "$PREV_CIVIL" \
+                --output-dir "$CIVIL_HYBRID_OUT" \
+                --max-total-nodes "$MAX_TOTAL_HYBRID_NODES" \
+                2>&1 | tee -a data/batch/civil_build.log || echo "[WARN] Civil merge exited non-zero"
+            fi
+          fi
+
+      # ── 7. PHASE 5: Snapshot manifest ──────────────────────────────────────
+      - name: Phase 5 — Record build snapshot
+        run: |
+          mkdir -p data/batch/snapshots
+          python3 - <<'PYEOF'
+          import json, datetime, pathlib
+          try:
+              g = json.loads(pathlib.Path("artifacts/hk_criminal_hybrid_v2/hierarchical_graph.json").read_text())
+              meta = g.get("meta", {})
+              snapshot = {
+                  "source": "github_actions",
+                  "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+                  "node_count": meta.get("node_count", 0),
+                  "case_count": meta.get("case_count", 0),
+                  "paragraph_count": meta.get("paragraph_count", 0),
+                  "enriched_case_count": meta.get("enriched_case_count", 0),
+                  "lineage_count": meta.get("lineage_count", 0),
+              }
+              with open("data/batch/snapshots/build_history.jsonl", "a") as f:
+                  f.write(json.dumps(snapshot) + "\n")
+              print(f"Snapshot: {snapshot['case_count']} cases, {snapshot['node_count']} nodes, "
+                    f"{snapshot['enriched_case_count']} enriched")
+          except Exception as e:
+              print(f"[WARN] Snapshot failed: {e}")
+          PYEOF
+
+      # ── 8. PHASE 6: Commit + push → triggers Vercel redeploy ────────────────
+      - name: Phase 6 — Commit and push artifacts
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            artifacts/hk_criminal_relationship_v2/ \
+            artifacts/hk_criminal_hybrid_v2/ \
+            data/batch/candidates_criminal_clean.json \
+            data/batch/discovered_lineages.json \
+            data/batch/enrichment_cache_criminal.json \
+            data/batch/criminal_build.log \
+            data/batch/criminal_loop.log \
+            2>/dev/null || true
+
+          # Add civil artifacts if they exist
+          [[ -d "$CIVIL_OUT" ]]      && git add -f artifacts/hk_civil_graph/      2>/dev/null || true
+          [[ -d "$CIVIL_HYBRID_OUT" ]] && git add -f "$CIVIL_HYBRID_OUT"/          2>/dev/null || true
+          [[ -f "data/batch/candidates_civil_clean.json" ]] && \
+            git add data/batch/candidates_civil_clean.json 2>/dev/null || true
+          [[ -f "data/batch/enrichment_cache_civil.json" ]] && \
+            git add data/batch/enrichment_cache_civil.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No changes this cycle — nothing to commit."
+          else
+            CASE_COUNT=$(python3 -c "
+          import json, pathlib
+          try:
+              g = json.loads(pathlib.Path('artifacts/hk_criminal_hybrid_v2/manifest.json').read_text())
+              print(g.get('case_count', '?'))
+          except:
+              print('?')
+          " 2>/dev/null)
+            DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
+            git commit -m "auto(actions): graph rebuild — ${CASE_COUNT} cases — ${DATE}"
+            git push origin main
+            echo "Pushed to main — Vercel will redeploy automatically."
+          fi
