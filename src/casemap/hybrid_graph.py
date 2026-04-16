@@ -217,8 +217,15 @@ QUERY_SYNONYMS: dict[str, str] = {
 PLACEHOLDER_SUMMARY_PATTERNS = (
     "authority cited inside an hklii",
     "hong kong legislation cited in",
-    "case linked to",
     "current graph placeholder",
+    # Generic shell sentences that add no legal content
+    "this case is linked to",
+    "[case linked to ",
+    "case linked to topic",
+    "case linked to module",
+    "case has not yet been enriched",
+    "no summary available",
+    "no enrichment available",
 )
 
 MARKET_MISCONDUCT_QUERY_TOKENS = {"market", "manipulation", "securities", "futures", "sfo", "sfc", "insider", "misconduct"}
@@ -3288,6 +3295,12 @@ class HybridGraphStore:
                         }
                     )
 
+        # Drop citations whose quote is too short to be meaningful (placeholders
+        # that slipped through, single-word hits, etc.).
+        citation_pool = [
+            c for c in citation_pool
+            if len((c.get("quote") or "").strip()) >= 30
+        ]
         citations = sorted(
             citation_pool,
             key=lambda item: (item["support_score"], len(item["quote"]), item["case_name"]),
@@ -3781,11 +3794,17 @@ If you identify a new HK case or principle not in the existing knowledge base, r
 
 IMPORTANT: Do not return irrelevant cases. Only cite cases directly applicable to the identified offence and the user's facts."""
 
+# These tokens suggest a purely civil/commercial query ONLY when no strong
+# criminal keyword is also present.  Terms like "company", "trespass",
+# "bankruptcy" can legitimately appear in criminal-law questions (company
+# director fraud, trespass + burglary, bankrupt commits fraud) so they must
+# NOT override a positive criminal signal.
 NON_CRIMINAL_INDICATORS = {
-    "contract", "tort", "negligence", "landlord", "tenant", "divorce",
-    "employment", "company", "shareholder", "copyright", "trademark",
-    "defamation", "nuisance", "trespass", "conveyancing", "probate",
-    "bankruptcy", "winding", "arbitration", "mediation",
+    "landlord", "tenant", "divorce", "conveyancing",
+    "copyright", "trademark", "defamation",
+    "arbitration", "mediation",
+    "probate", "testator", "intestate",
+    "shareholder", "breach of contract",
 }
 
 OFFENCE_ORDINANCE_RULES = [
@@ -4007,7 +4026,14 @@ class DeterminatorPipeline:
         }
         criminal_hits |= tokens & criminal_keywords
 
-        is_criminal = bool(criminal_hits) or (not non_criminal_hits and len(tokens) > 2)
+        # Criminal signal always overrides a civil-indicator hit.  A query like
+        # "company director charged with fraud" contains both "company" (civil
+        # indicator) and "fraud"/"charged" (criminal) — it must be treated as
+        # criminal.  Only reject as non-criminal when there are zero criminal
+        # signals AND at least one clear civil indicator.
+        is_criminal = bool(criminal_hits) or (
+            not non_criminal_hits and len(tokens) > 2
+        )
 
         area = "offence_elements"
         if any(t in tokens for t in {"sentence", "sentencing", "penalty", "imprisonment", "tariff"}):
