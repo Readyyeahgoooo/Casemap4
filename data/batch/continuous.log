@@ -2,8 +2,301 @@
 ══════════════════════════════════════════════════
   CYCLE 1 START
 ══════════════════════════════════════════════════
-[2026-04-13 19:09:43] Cycle 1 beginning
+[2026-04-13 21:25:09] Cycle 1 beginning
 
 ══════════════════════════════════════════════════
   PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+[2026-04-13 22:28:37] [WARN] Criminal crawl loop exited non-zero (continuing)
+
+══════════════════════════════════════════════════
+  PHASE 2 — CRIMINAL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-13 22:42:33] Criminal graph build done
+
+══════════════════════════════════════════════════
+  PHASE 3 — CIVIL CRAWL
+══════════════════════════════════════════════════
+[2026-04-13 23:17:20] Civil crawl done
+[2026-04-13 23:17:20] Civil classify done
+
+══════════════════════════════════════════════════
+  PHASE 4 — CIVIL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-13 23:17:32] Civil graph build done
+
+══════════════════════════════════════════════════
+  PHASE 5 — GIT COMMIT + PUSH
+══════════════════════════════════════════════════
+[codex/multi-domain-framework e3e7ceb] auto(cycle 1): graph rebuild — 2064 criminal candidates, 2026-04-13 23:17
+ 23 files changed, 876182 insertions(+), 425231 deletions(-)
+ssh: connect to host github.com port 22: Undefined error: 0
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[2026-04-13 23:17:33] [WARN] git push failed
+[2026-04-13 23:17:33] Cycle 1 complete. Sleeping 6h. Next run ~2026-04-14 05:17:33
+
+══════════════════════════════════════════════════
+  SLEEPING 6h
+══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════
+  CYCLE 1 START
+══════════════════════════════════════════════════
+[2026-04-14 02:19:02] Cycle 1 beginning
+log: command not found: date
+[] [WARN] Snapshot failed: data/batch/snapshots/20260414_021902_cycle_1_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+log: command not found: date
+[] [WARN] Criminal crawl loop exited non-zero (continuing)
+
+══════════════════════════════════════════════════
+  PHASE 2 — CRIMINAL GRAPH BUILD
+══════════════════════════════════════════════════
+log: command not found: date
+[] [WARN] Criminal graph build exited non-zero (continuing)
+
+══════════════════════════════════════════════════
+  PHASE 3 — CIVIL CRAWL
+══════════════════════════════════════════════════
+log: command not found: date
+[] [WARN] Civil crawl exited non-zero (continuing)
+log: command not found: date
+[] [WARN] Civil classify exited non-zero (continuing)
+
+══════════════════════════════════════════════════
+  PHASE 4 — CIVIL GRAPH BUILD
+══════════════════════════════════════════════════
+log: command not found: date
+[] [WARN] Civil graph build exited non-zero (continuing)
+
+══════════════════════════════════════════════════
+  PHASE 5 — GIT COMMIT + PUSH
+══════════════════════════════════════════════════
+run_continuous.sh:223: command not found: git
+
+══════════════════════════════════════════════════
+  CYCLE 1 START
+══════════════════════════════════════════════════
+[2026-04-14 02:19:35] Cycle 1 beginning
+[2026-04-14 02:19:36] Snapshot saved: data/batch/snapshots/20260414_021935_cycle_1_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════
+  CYCLE 1 START
+══════════════════════════════════════════════════
+[2026-04-14 02:21:23] Cycle 1 beginning
+[2026-04-14 02:21:24] Snapshot saved: data/batch/snapshots/20260414_022123_cycle_1_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════
+  CYCLE 1 START
+══════════════════════════════════════════════════
+[2026-04-14 02:28:47] Cycle 1 beginning
+[2026-04-14 02:28:47] Snapshot saved: data/batch/snapshots/20260414_022847_cycle_1_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════
+  CYCLE 1 START
+══════════════════════════════════════════════════
+[2026-04-14 02:53:25] Cycle 1 beginning
+[2026-04-14 02:53:26] Snapshot saved: data/batch/snapshots/20260414_025325_cycle_1_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════
+  CYCLE 1 START
+══════════════════════════════════════════════════
+[2026-04-14 03:44:10] Cycle 1 beginning
+[2026-04-14 03:44:13] Snapshot saved: data/batch/snapshots/20260414_034410_cycle_1_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+[2026-04-14 11:19:59] Criminal crawl loop done
+
+══════════════════════════════════════════════════
+  PHASE 2 — CRIMINAL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-14 11:23:05] Criminal graph build done
+[2026-04-14 11:23:07] Criminal cumulative merge done
+
+══════════════════════════════════════════════════
+  PHASE 3 — CIVIL CRAWL
+══════════════════════════════════════════════════
+[2026-04-14 14:13:52] Civil crawl done
+[2026-04-14 14:13:52] Civil classify done
+
+══════════════════════════════════════════════════
+  PHASE 4 — CIVIL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-14 14:15:31] Civil graph build done
+
+══════════════════════════════════════════════════
+  PHASE 5 — SNAPSHOT BACKUP
+══════════════════════════════════════════════════
+Snapshot: 3501 nodes, 1613 cases, 656 paras
+run_continuous.sh:261: no matches found: data/batch/snapshots/graph_criminal_*.json.gz
+[2026-04-14 14:15:32] Saved graph snapshot: graph_criminal_20260414_141531.json.gz
+
+══════════════════════════════════════════════════
+  PHASE 6 — GIT COMMIT + PUSH
+══════════════════════════════════════════════════
+[codex/multi-domain-framework 6192b19] auto(cycle 1): graph rebuild — 4581 criminal candidates, 2026-04-14 14:15
+ 29 files changed, 2457201 insertions(+), 339305 deletions(-)
+ create mode 100644 artifacts/hk_civil_hybrid_v1/hierarchical_graph.json
+ create mode 100644 artifacts/hk_civil_hybrid_v1/manifest.json
+ create mode 100644 artifacts/hk_civil_hybrid_v1/neo4j_constraints.cypher
+ create mode 100644 artifacts/hk_civil_hybrid_v1/neo4j_import.cypher
+ create mode 100644 artifacts/hk_civil_hybrid_v1/public_projection.json
+ create mode 100644 artifacts/hk_criminal_hybrid_v2/hierarchical_graph_prev.json
+ssh: connect to host github.com port 22: Undefined error: 0
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[2026-04-14 14:15:39] [WARN] SSH push failed — retrying via HTTPS
+fatal: unable to access 'https://github.com/Readyyeahgoooo/Casemap4.git/': Could not resolve host: github.com
+[2026-04-14 14:15:39] [WARN] Both SSH and HTTPS push failed; will retry next cycle
+[2026-04-14 14:15:39] Rotated data/batch/criminal_build.log (was    15029 lines, kept last 3000)
+[2026-04-14 14:15:40] Rotated data/batch/criminal_loop.log (was     4464 lines, kept last 3000)
+[2026-04-14 14:15:40] Rotated data/batch/civil_build.log (was     6683 lines, kept last 3000)
+[2026-04-14 14:15:43] Trimmed HKLII cache: removed 938 oldest files (kept 5000)
+[2026-04-14 14:15:43] Cycle 1 complete. Sleeping 6h. Next run ~2026-04-14 20:15:43
+
+══════════════════════════════════════════════════
+  SLEEPING 6h
+══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════
+  CYCLE 2 START
+══════════════════════════════════════════════════
+[2026-04-15 10:25:23] Cycle 2 beginning
+[2026-04-15 10:25:35] Snapshot saved: data/batch/snapshots/20260415_102524_cycle_2_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+[2026-04-15 15:18:13] Criminal crawl loop done
+
+══════════════════════════════════════════════════
+  PHASE 2 — CRIMINAL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-15 16:05:41] Criminal graph build done
+[2026-04-15 16:05:42] Criminal cumulative merge done
+
+══════════════════════════════════════════════════
+  PHASE 3 — CIVIL CRAWL
+══════════════════════════════════════════════════
+[2026-04-15 16:23:45] Civil crawl done
+[2026-04-15 16:23:46] Civil classify done
+
+══════════════════════════════════════════════════
+  PHASE 4 — CIVIL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-15 16:34:23] Civil graph build done
+[2026-04-15 16:34:23] Civil cumulative merge done
+
+══════════════════════════════════════════════════
+  PHASE 5 — SNAPSHOT BACKUP
+══════════════════════════════════════════════════
+Snapshot: 3560 nodes, 1660 cases, 656 paras
+[2026-04-15 16:34:24] Saved graph snapshot: graph_criminal_20260415_163423.json.gz
+
+══════════════════════════════════════════════════
+  PHASE 6 — GIT COMMIT + PUSH
+══════════════════════════════════════════════════
+[codex/multi-domain-framework 109bdb7] auto(cycle 2): graph rebuild — 5437 criminal candidates, 2026-04-15 16:34
+ 28 files changed, 1337282 insertions(+), 733522 deletions(-)
+ create mode 100644 artifacts/hk_civil_hybrid_v1/hierarchical_graph_prev.json
+ssh: connect to host github.com port 22: Undefined error: 0
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[2026-04-15 16:34:29] [WARN] SSH push failed — retrying via HTTPS
+fatal: unable to access 'https://github.com/Readyyeahgoooo/Casemap4.git/': Could not resolve host: github.com
+[2026-04-15 16:34:29] [WARN] Both SSH and HTTPS push failed; will retry next cycle
+[2026-04-15 16:34:29] Rotated data/batch/criminal_build.log (was    11755 lines, kept last 3000)
+[2026-04-15 16:34:29] Rotated data/batch/criminal_loop.log (was     4245 lines, kept last 3000)
+[2026-04-15 16:34:29] Rotated data/batch/civil_build.log (was     6997 lines, kept last 3000)
+[2026-04-15 16:34:32] Trimmed HKLII cache: removed 946 oldest files (kept 5000)
+[2026-04-15 16:34:32] Cycle 2 complete. Sleeping 6h. Next run ~2026-04-15 22:34:32
+
+══════════════════════════════════════════════════
+  SLEEPING 6h
+══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════
+  CYCLE 3 START
+══════════════════════════════════════════════════
+[2026-04-15 23:22:41] Cycle 3 beginning
+[2026-04-15 23:22:42] Snapshot saved: data/batch/snapshots/20260415_232241_cycle_3_prebuild.tgz
+
+══════════════════════════════════════════════════
+  PHASE 1 — CRIMINAL CRAWL (2 rounds)
+══════════════════════════════════════════════════
+[2026-04-16 00:21:38] Criminal crawl loop done
+
+══════════════════════════════════════════════════
+  PHASE 2 — CRIMINAL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-16 00:24:36] Criminal graph build done
+[2026-04-16 00:24:36] Criminal cumulative merge done
+
+══════════════════════════════════════════════════
+  PHASE 3 — CIVIL CRAWL
+══════════════════════════════════════════════════
+[2026-04-16 00:25:52] Civil crawl done
+[2026-04-16 00:25:52] Civil classify done
+
+══════════════════════════════════════════════════
+  PHASE 4 — CIVIL GRAPH BUILD
+══════════════════════════════════════════════════
+[2026-04-16 00:26:30] Civil graph build done
+[2026-04-16 00:26:31] Civil cumulative merge done
+
+══════════════════════════════════════════════════
+  PHASE 5 — SNAPSHOT BACKUP
+══════════════════════════════════════════════════
+Snapshot: 3564 nodes, 1664 cases, 656 paras
+[2026-04-16 00:26:31] Saved graph snapshot: graph_criminal_20260416_002631.json.gz
+
+══════════════════════════════════════════════════
+  PHASE 6 — GIT COMMIT + PUSH
+══════════════════════════════════════════════════
+[codex/multi-domain-framework d649443] auto(cycle 3): graph rebuild — 5578 criminal candidates, 2026-04-16 00:26
+ 28 files changed, 674254 insertions(+), 967194 deletions(-)
+ssh: connect to host github.com port 22: Undefined error: 0
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[2026-04-16 00:26:35] [WARN] SSH push failed — retrying via HTTPS
+fatal: unable to access 'https://github.com/Readyyeahgoooo/Casemap4.git/': Could not resolve host: github.com
+[2026-04-16 00:26:35] [WARN] Both SSH and HTTPS push failed; will retry next cycle
+[2026-04-16 00:26:35] Rotated data/batch/criminal_build.log (was    10190 lines, kept last 3000)
+[2026-04-16 00:26:35] Rotated data/batch/criminal_loop.log (was     3497 lines, kept last 3000)
+[2026-04-16 00:26:35] Rotated data/batch/civil_build.log (was     6954 lines, kept last 3000)
+[2026-04-16 00:26:36] Trimmed HKLII cache: removed 187 oldest files (kept 5000)
+[2026-04-16 00:26:36] Cycle 3 complete. Sleeping 6h. Next run ~2026-04-16 06:26:36
+
+══════════════════════════════════════════════════
+  SLEEPING 6h
 ══════════════════════════════════════════════════

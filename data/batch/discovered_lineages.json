@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "generated_at": "2026-04-15T16:26:29.170328+00:00",
+    "legal_domain": "civil",
+    "processed_topic_count": 25,
+    "discovered_count": 0,
+    "total_count": 0,
+    "rejected_count": 25
+  },
+  "lineages": [],
+  "rejected": [
+    {
+      "topic_id": "topic:civil_procedure:07:security_for_costs",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:company_commercial_law:45:securities_civil_and_regulatory_proceedi",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:civil_procedure:10:enforcement_of_judgments",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:contract_law:15:misrepresentation",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:civil_procedure:09:costs_and_taxation",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:arbitration_adr:70:award_enforcement_and_setting_aside",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:civil_procedure:05:summary_judgment_and_strike_out",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:probate_trusts_equity:67:constructive_and_resulting_trusts",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:civil_procedure:08:trial_evidence_and_burden_of_proof",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:civil_procedure:04:discovery_and_disclosure",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:civil_procedure:06:interim_injunctions",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:civil_procedure:01:writs_and_originating_summonses",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:tort_law:24:contributory_negligence",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:contract_law:16:mistake_duress_and_undue_influence",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:property_land_law:33:co_ownership_and_trusts_of_land",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:tort_law:25:personal_injury_damages",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:property_land_law:36:adverse_possession",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:company_commercial_law:37:directors_duties",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:tort_law:28:private_nuisance",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:employment_law:49:employees_compensation",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:contract_law:21:sale_of_goods",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:constitutional_administrative_law:61:legitimate_expectation",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:tort_law:22:duty_and_breach_of_care",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:arbitration_adr:69:arbitration_agreements_and_stay",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic_id": "topic:constitutional_administrative_law:59:public_law_error",
+      "reason": "llm_error: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ]
+}

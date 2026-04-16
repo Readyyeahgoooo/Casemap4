@@ -14,7 +14,7 @@ from urllib import request as urllib_request
 
 from .case_enrichment_data import CURATED_CASE_ENRICHMENTS
 from .criminal_enrichment_data import CURATED_CRIMINAL_CASE_ENRICHMENTS
-from .embeddings import create_embedding_backend
+from .embeddings import HashEmbeddingBackend, create_embedding_backend
 from .graphrag import normalize_scores, slugify, tokenize
 from .hklii_crawler import HKLIICrawler
 from .lineage_discovery import append_hallucination_log
@@ -2593,10 +2593,15 @@ class HybridGraphStore:
             self.incoming[edge["target"]].append(edge)
         # Lazy embedding backend for semantic retrieval boost
         self._embedding_backend = None
+        self._use_semantic_boost = False
         try:
             self._embedding_backend = create_embedding_backend(
                 backend=os.environ.get("CASEMAP_QUERY_EMBEDDING_BACKEND", "auto"),
             )
+            # LocalHash produces deterministic but semantically meaningless
+            # vectors.  Using them as a 30% scoring signal adds noise that
+            # can push irrelevant cases above relevant ones.
+            self._use_semantic_boost = not isinstance(self._embedding_backend, HashEmbeddingBackend)
         except Exception:
             pass
         if self._embedding_backend is not None:
@@ -3119,9 +3124,10 @@ class HybridGraphStore:
         lexical_norm = normalize_scores(lexical_scores)
 
         # ── Semantic embedding boost (30% weight) ─────────────────
-        # If nodes have summary_embedding, compute cosine similarity with query
+        # If nodes have summary_embedding, compute cosine similarity with query.
+        # Skipped when the backend is LocalHash (semantically meaningless).
         semantic_boost: dict[str, float] = {}
-        if hasattr(self, '_embedding_backend') and self._embedding_backend is not None:
+        if getattr(self, '_use_semantic_boost', False) and self._embedding_backend is not None:
             try:
                 query_emb = self._embedding_backend.embed(question)
                 if query_emb:
@@ -3240,6 +3246,25 @@ class HybridGraphStore:
                     # Stronger demotion for offence-mismatched cases
                     support_case_scores[case_id] *= 0.35
 
+        # ── Offence-family relevance gate ───────────────────────
+        # Use the existing OFFENCE_ORDINANCE_RULES to derive which
+        # offence families the query maps to, then severely penalise
+        # candidate cases whose offence_family is clearly unrelated.
+        # This prevents e.g. sexual-offence cases appearing for a
+        # fraud query and vice versa — a systemic fix rather than
+        # per-query-type special-casing.
+        _compatible_families: set[str] = set()
+        if offence_keywords:
+            _offence_kw_set = {k.lower() for k in offence_keywords}
+            for rule in OFFENCE_ORDINANCE_RULES:
+                if rule["keywords"] & _offence_kw_set:
+                    _compatible_families.add(rule["offence_family"])
+        if _compatible_families:
+            for case_id in support_case_ids:
+                case_family = (self.nodes.get(case_id) or {}).get("offence_family", "")
+                if case_family and case_family not in _compatible_families:
+                    support_case_scores[case_id] *= 0.2
+
         support_cases = [
             self.case_card(case_id)
             for case_id in support_case_ids
@@ -3319,6 +3344,50 @@ class HybridGraphStore:
             key=lambda item: (item["support_score"], len(item["quote"]), item["case_name"]),
             reverse=True,
         )[:bounded_max_citations]
+
+        # ── Global minimum score floor ──────────────────────────
+        # Drop citations below 0.15 support_score on ALL paths (not
+        # just the weak-fallback branch).  This prevents noise
+        # citations from padding out the list.
+        _MIN_CITATION_SCORE = 0.15
+        citations = [c for c in citations if c.get("support_score", 0) >= _MIN_CITATION_SCORE]
+
+        # ── Score cliff detector ────────────────────────────────
+        # If there is a steep quality drop between the best citation
+        # and later ones, truncate at the cliff.  This prevents
+        # padding with 6 noise citations when only 2 are genuine.
+        if len(citations) >= 2:
+            top_score = citations[0]["support_score"]
+            cliff_threshold = top_score * 0.3
+            cliff_idx = len(citations)
+            for i in range(1, len(citations)):
+                if citations[i]["support_score"] < cliff_threshold:
+                    cliff_idx = i
+                    break
+            # Keep at least 1 citation (the top one)
+            citations = citations[:max(cliff_idx, 1)]
+
+        # ── Topic-path coherence check ──────────────────────────
+        # If the query maps to specific offence families, verify each
+        # citation's topic_paths have at least minimal overlap with
+        # the query subject.  Citations with zero topic relevance AND
+        # a weak score are dropped.
+        if _compatible_families and citations:
+            _family_topic_tokens: set[str] = set()
+            for fam in _compatible_families:
+                _family_topic_tokens.update(tokenize(fam.replace("_", " ")))
+            if area_boost_tokens:
+                _family_topic_tokens |= area_boost_tokens
+            coherent_citations: list[dict] = []
+            for c in citations:
+                case_node = self.nodes.get(c.get("case_id", ""), {})
+                case_topics = " ".join(case_node.get("topic_paths", [])).lower()
+                case_topic_tokens = set(tokenize(case_topics))
+                topic_overlap = len(_family_topic_tokens & case_topic_tokens) / max(len(_family_topic_tokens), 1)
+                if topic_overlap < 0.1 and c.get("support_score", 0) < 0.30:
+                    continue  # drop: zero topic relevance + weak score
+                coherent_citations.append(c)
+            citations = coherent_citations
 
         live_hklii_trace: dict = {"attempted": False, "used": False, "searches": []}
         distinctive_query_tokens: set[str] = set()

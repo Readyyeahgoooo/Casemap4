@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-04-13T11:08:18.413506+00:00"
+    "generated_at": "2026-04-15T16:25:52.951068+00:00"
   },
   "candidates": [
     {
@@ -60,11 +60,696 @@
         "quarantine_reason": "cross_domain"
       },
       "target_domain": "civil",
-      "cross_references": [],
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "commencement_pleadings_service",
+          "topic_id": "writ_originating_summons",
+          "topic_label": "Writs and Originating Summonses",
+          "query": "writ originating summons"
+        },
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "interlocutory_case_management",
+          "topic_id": "interim_injunctions",
+          "topic_label": "Interim Injunctions",
+          "query": "interlocutory injunction"
+        }
+      ],
       "review_status": "pending",
       "review_notes": "",
       "enriched_at": "2026-04-13T11:05:58.454089+00:00",
       "paragraph_count": 62
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 629",
+      "case_name": "HKSAR v. CHOW HANG TUNG",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-02-10T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Alex Lee, Johnny Chan & Anna Lai, JJ in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/629",
+      "topic_id": "security_for_costs",
+      "topic_label": "Security for Costs",
+      "module_id": "civil_procedure",
+      "subground_id": "interlocutory_case_management",
+      "principles": [
+        {
+          "principle_label": "Equality of arms in fair trial",
+          "paraphrase_en": "The Basic Law and Hong Kong Bill of Rights guarantee equality before the law and a fair trial, which includes the right of an accused to call witnesses under the same conditions as the prosecution.",
+          "paragraph_span": "[15]",
+          "cited_statutes": [
+            "Basic Law",
+            "Cap. 383"
+          ]
+        },
+        {
+          "principle_label": "Restriction on video-link evidence in national security cases",
+          "paraphrase_en": "Amendments under section 144 apply equally to both prosecution and defense in national security proceedings by prohibiting overseas witnesses from giving evidence via television link, maintaining equality of arms.",
+          "paragraph_span": "[28]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Primary principle of witness presence in court",
+          "paraphrase_en": "In criminal proceedings, witnesses must generally give evidence in person before the court unless both parties agree to written statements or admitted facts, with video-link evidence being an exception requiring court leave.",
+          "paragraph_span": "[29]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "National security risk preclusion",
+          "paraphrase_en": "In national security cases, measures must be taken to preclude national security risks, such as preventing potential coaching of witnesses via live television link that could pervert the course of justice.",
+          "paragraph_span": "[35]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Proportionality of witness mode regulation",
+          "paraphrase_en": "Restrictions on the mode of calling witnesses in national security cases constitute limited regulation that does not affect the substantive right to call witnesses or prejudice the right to a fair trial.",
+          "paragraph_span": "[39]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "HKSAR v Hon Ming Kong & Ors",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the Court of Appeal's explanation that equality of arms requires the accused to have the same conditions as the prosecution for calling witnesses."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name",
+          "constitutional_keywords",
+          "generic_civil_keywords:1"
+        ],
+        "secondary_domains": [
+          "constitutional"
+        ],
+        "scores": {
+          "criminal": 0.35,
+          "civil": 0.05,
+          "constitutional": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "interlocutory_case_management",
+          "topic_id": "security_for_costs",
+          "topic_label": "Security for Costs",
+          "query": "security for costs"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:03:55.019565+00:00",
+      "paragraph_count": 130
+    },
+    {
+      "neutral_citation": "[2024] HKCA 400",
+      "case_name": "LAI CHEE YING v. THE COMMITTEE FOR SAFEGUARDING NATIONAL SECURITY OF THE HKSAR AND ANOTHER",
+      "court_code": "Court of Appeal",
+      "decision_date": "2024-04-29T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Kwan VP, Chu VP and Au JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2024/400",
+      "topic_id": "security_for_costs",
+      "topic_label": "Security for Costs",
+      "module_id": "civil_procedure",
+      "subground_id": "interlocutory_case_management",
+      "principles": [
+        {
+          "principle_label": "Jurisdiction over NSC decisions",
+          "paraphrase_en": "The Hong Kong courts have not been vested with any jurisdiction to supervise or review the work of the National Security Committee under Article 14 of the National Security Law, and therefore the question of that article ousting the courts' supervisory jurisdiction does not arise.",
+          "paragraph_span": "[19]",
+          "cited_statutes": [
+            "NSL 14"
+          ]
+        },
+        {
+          "principle_label": "Interpretation of NPCSC decisions",
+          "paraphrase_en": "An interpretation issued by the Standing Committee of the National People's Congress regarding the National Security Law has the same legal effect as the Law itself from the date the Law came into effect, and the Hong Kong courts are bound to follow it under the 'one country, two systems' principle.",
+          "paragraph_span": "[20], [38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Presumption against ouster clauses",
+          "paraphrase_en": "There exists a strong interpretative presumption against the statutory exclusion of judicial review, which can only be displaced by the most clear and explicit statutory wording, as judicial review is a principal mechanism for upholding the rule of law.",
+          "paragraph_span": "[7]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Rule of law and judicial review",
+          "paraphrase_en": "The right to access a court to review the lawfulness of administrative or executive acts is essential to the rule of law, which requires, at a minimum, review for jurisdictional error that renders a decision a nullity.",
+          "paragraph_span": "[6]",
+          "cited_statutes": [
+            "BL 80",
+            "NSL 5"
+          ]
+        },
+        {
+          "principle_label": "Discretion on indemnity costs on appeal",
+          "paraphrase_en": "An appellate court has the discretion to decide whether to award indemnity costs on appeal, and may decline to do so even if they were awarded below, particularly where the appeal raises distinct or reasonable legal arguments.",
+          "paragraph_span": "[54]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references the principle that statutory exclusion of judicial review requires 'the most clear and explicit words', a well-established common law presumption."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name",
+          "constitutional_keywords",
+          "generic_civil_keywords:1"
+        ],
+        "secondary_domains": [
+          "constitutional"
+        ],
+        "scores": {
+          "criminal": 0.35,
+          "civil": 0.05,
+          "constitutional": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "interlocutory_case_management",
+          "topic_id": "security_for_costs",
+          "topic_label": "Security for Costs",
+          "query": "security for costs"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:10:30.076056+00:00",
+      "paragraph_count": 158
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 3115",
+      "case_name": "HKSAR v. LAI KAN YAU",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-05T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Yau J"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/3115",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Murder - actus reus and causation",
+          "paraphrase_en": "The actus reus of murder is established when the defendant's unlawful act causes the death of the victim, as demonstrated by the fatal wound being the direct cause of death.",
+          "paragraph_span": "[4]-[7]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Murder - mens rea (malice aforethought)",
+          "paraphrase_en": "The mental element for murder requires an intention to kill or cause grievous bodily harm. The defendant's use of a knife to inflict multiple stab wounds to a vital area is evidence from which such intent can be inferred.",
+          "paragraph_span": "[4]-[5]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Admissibility of confessions and evidence",
+          "paraphrase_en": "Confessions made under caution in video-recorded interviews and re-enactments are admissible as evidence against the defendant, provided they are voluntary.",
+          "paragraph_span": "[4]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Expert evidence - pathologist and toxicologist",
+          "paraphrase_en": "Expert opinion from a pathologist and toxicologist is admissible to establish the cause of death and the likely physical state of the victim (e.g., unconsciousness) at the time of the fatal act, based on forensic findings and toxicology reports.",
+          "paragraph_span": "[6]-[7]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.65,
+        "signals": [
+          "criminal_party_name",
+          "criminal_keywords:5",
+          "tort_keywords",
+          "generic_civil_keywords:3"
+        ],
+        "secondary_domains": [
+          "tort",
+          "civil"
+        ],
+        "scores": {
+          "criminal": 0.65,
+          "civil": 0.15,
+          "tort": 0.3
+        },
+        "method": "existing",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:15:18.397664+00:00",
+      "paragraph_count": 30
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2271",
+      "case_name": "HKSAR v. THAPA PREMKALA",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-08-04T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Bruce SC in Chambers"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2271",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Admissibility of hearsay evidence",
+          "paraphrase_en": "Testimony from a witness about an out-of-court statement made by a co-accused, offered to assert the truth of its contents, is inadmissible as hearsay when considered in isolation.",
+          "paragraph_span": "[6]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Bail pending appeal - substantial sentence served",
+          "paraphrase_en": "Where there is a substantial risk that a significant part or all of a sentence will be served before an appeal is heard, the appellant must demonstrate reasonable prospects of success on appeal to be granted bail.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Magistrate's duty to give reasons",
+          "paraphrase_en": "While it is highly desirable for a magistrate to give reasons for conviction at the time, there is no constitutional or statutory rule that a failure to do so automatically invalidates the conviction. However, giving reasons is a component of a fair trial.",
+          "paragraph_span": "[]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Appellate review of reasons and afterthought",
+          "paraphrase_en": "An appellate court may treat the omission of a key point in oral reasons and its later insertion in a written Statement of Findings as an irregularity, suggesting an attempt to revisit evidence or defend original findings after the fact.",
+          "paragraph_span": "[25]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Consideration of good character and silence",
+          "paraphrase_en": "A failure by a trial judge to recognize that no adverse inference should be drawn from an accused's decision not to testify, and to properly consider the accused's previous good character as relevant to propensity, can constitute a material error.",
+          "paragraph_span": "[26]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "HKSAR v Lau Man Kin",
+          "target_neutral_citation": "[2010] 1 HKLRD 336",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the principle from Lau Man Kin that an appellant must show reasonable prospects of success for bail when a substantial part of the sentence may be served before appeal."
+        },
+        {
+          "target_case_name": "HKSAR v Lai Kam Wai",
+          "target_neutral_citation": "HCMA 538/2008, [2008] HKEC 1799",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Lai Kam Wai for the proposition that a magistrate's failure to give immediate reasons does not automatically vitiate a conviction."
+        },
+        {
+          "target_case_name": "HKSAR v Chan Ping Sing",
+          "target_neutral_citation": "HCMA 430/2007, [2007] HKEC 1932",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Chan Ping Sing as further authority supporting the principle that a lack of immediate reasons from a magistrate does not nullify a conviction."
+        },
+        {
+          "target_case_name": "HKSAR v Siti Handayani",
+          "target_neutral_citation": "[2020] 1 HKLRD 496",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the approach from Siti Handayani regarding the importance of appropriately considering an accused's good character."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.59,
+        "signals": [
+          "criminal_party_name",
+          "criminal_keywords:4",
+          "probate_keywords"
+        ],
+        "secondary_domains": [
+          "probate"
+        ],
+        "scores": {
+          "criminal": 0.59,
+          "probate": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:15:44.966962+00:00",
+      "paragraph_count": 62
+    },
+    {
+      "neutral_citation": "[2025] HKDC 359",
+      "case_name": "HKSAR v. ALI ZAIN",
+      "court_code": "District Court",
+      "decision_date": "2025-03-27T00:00:00+08:00",
+      "judges": [
+        "Before : H.H. Judge G. Lam"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2025/359",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Duty of care at pedestrian crossings",
+          "paraphrase_en": "Motorists have a legal duty to exercise the highest degree of care when approaching pedestrian crossings, due to the foreseeable presence of pedestrians at any time.",
+          "paragraph_span": "[20]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Judicial attitude to crossing offenses",
+          "paraphrase_en": "The courts must send a clear message that they treat traffic accidents occurring at pedestrian crossings with the utmost seriousness.",
+          "paragraph_span": "[20]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "SJ v Lam Siu Tong",
+          "target_neutral_citation": "[2009] 5 HKLRD 601",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment adopts the principle from this case that motorists must exercise utmost care at pedestrian crossings."
+        },
+        {
+          "target_case_name": "SJ v Wong Wai Hung",
+          "target_neutral_citation": "[2011] 2 HKC 224",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the judicial comment from this case that courts must treat pedestrian crossing accidents very seriously."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name",
+          "tort_keywords"
+        ],
+        "secondary_domains": [
+          "tort"
+        ],
+        "scores": {
+          "criminal": 0.35,
+          "tort": 0.3
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:16:02.719073+00:00",
+      "paragraph_count": 44
+    },
+    {
+      "neutral_citation": "[2025] HKCA 826",
+      "case_name": "HKSAR v. LAM SIU FUNG, ANDY",
+      "court_code": "Court of Appeal",
+      "decision_date": "2025-09-15T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Macrae VP, Zervos JA and K Yeung J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2025/826",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Mistaken belief in consent as a defence to rape",
+          "paraphrase_en": "A defendant is not guilty of rape if he genuinely believed the complainant was consenting to sexual intercourse, even if that belief was mistaken, unreasonable, or based on a misunderstanding.",
+          "paragraph_span": "[1]-[3]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Capacity to consent impaired by intoxication",
+          "paraphrase_en": "A complainant cannot consent to sexual intercourse if they are unconscious or so intoxicated that they are incapable of making a choice. However, consent given while intoxicated, even if it would not have been given when sober, is still valid consent if the person retained the capacity to make a choice.",
+          "paragraph_span": "[4]-[5]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Prosecution's burden regarding belief in consent",
+          "paraphrase_en": "The prosecution bears the burden of proving beyond reasonable doubt that the defendant did not genuinely believe the complainant was consenting. It is not for the defendant to prove he held such a belief.",
+          "paragraph_span": "[7]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Reasonable grounds as a factor in assessing genuine belief",
+          "paraphrase_en": "When deciding whether a defendant genuinely held a belief in consent, the jury should consider the presence or absence of reasonable grounds for that belief, alongside all surrounding circumstances. The reasonableness of the grounds is a factor affecting the likelihood the belief was actually held, but it is not a legal requirement for the belief to be reasonable.",
+          "paragraph_span": "[8], [10], [i]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Genuine belief requires appreciation of other party's state of mind",
+          "paraphrase_en": "A genuine belief in consensual sex must involve some appreciation of the other party's state of mind. The jury must consider what the defendant could have appreciated about the complainant that led him to hold the belief in consent.",
+          "paragraph_span": "[9]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.53,
+        "signals": [
+          "criminal_party_name",
+          "criminal_keywords:3",
+          "generic_civil_keywords:3"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "criminal": 0.53,
+          "civil": 0.15
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:20:34.717406+00:00",
+      "paragraph_count": 182
+    },
+    {
+      "neutral_citation": "[2022] HKCA 104",
+      "case_name": "HKSAR v. LEE ERNEST",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-02-16T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Macrae VP, Zervos and M Poon JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/104",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Prosecution disclosure obligations",
+          "paraphrase_en": "The prosecution's duty to disclose unused material is satisfied by providing relevant statements from individuals, and the absence of a formal investigation report on a person does not constitute non-disclosure if that person was not treated as a suspect.",
+          "paragraph_span": "[52]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Knowledge as element of drug trafficking",
+          "paraphrase_en": "In a drug trafficking case, a central issue for the jury to determine can be whether the defendant knew that the items in their possession contained dangerous drugs.",
+          "paragraph_span": "[61]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessment of circumstantial evidence",
+          "paraphrase_en": "The issue of a defendant's knowledge can properly be determined based on circumstantial evidence, provided the judge's summary of that evidence in the summing-up is accurate and not disputed by the defense.",
+          "paragraph_span": "[61]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "No case to answer ruling",
+          "paraphrase_en": "A judge may rule that a defendant has no case to answer at the close of the prosecution case, with reasons to be provided subsequently.",
+          "paragraph_span": "[36]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.53,
+        "signals": [
+          "criminal_party_name",
+          "criminal_keywords:3",
+          "civil_procedure_keywords",
+          "generic_civil_keywords:3"
+        ],
+        "secondary_domains": [
+          "civil"
+        ],
+        "scores": {
+          "criminal": 0.53,
+          "civil": 0.5
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:23:07.251189+00:00",
+      "paragraph_count": 220
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 1170",
+      "case_name": "HKSAR v. ABLE ENGINEERING CO LTD",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-05-06T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Campbell-Moffat J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/1170",
+      "topic_id": "employees_compensation",
+      "topic_label": "Employees' Compensation",
+      "module_id": "employment_law",
+      "subground_id": "employment_discrimination_compensation",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name",
+          "corporate_party_name"
+        ],
+        "secondary_domains": [
+          "commercial"
+        ],
+        "scores": {
+          "criminal": 0.35,
+          "commercial": 0.15,
+          "company": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "cross_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "employment_law",
+          "subground_id": "employment_discrimination_compensation",
+          "topic_id": "employees_compensation",
+          "topic_label": "Employees' Compensation",
+          "query": "occupational injury employment"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T06:09:27.705725+00:00",
+      "paragraph_count": 103
     }
   ]
 }

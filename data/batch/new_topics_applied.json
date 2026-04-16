@@ -9,23 +9,9 @@
       "obstructing justice"
     ],
     "parent_module": "offences_against_person",
-    "parent_subground": "NEW:intimidation_threats",
+    "parent_subground": "NEW:offences_against_justice",
     "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061586+00:00"
-  },
-  {
-    "id": "accessory_after_fact",
-    "label_en": "Accessory After the Fact",
-    "label_zh": "事後從犯",
-    "search_queries": [
-      "accessory after the fact",
-      "harbouring offender",
-      "assisting offender"
-    ],
-    "parent_module": "general_principles",
-    "parent_subground": "participation_inchoate",
-    "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061596+00:00"
+    "discovered_at": "2026-04-15T16:19:54.954659+00:00"
   },
   {
     "id": "wounding_with_intent",
@@ -39,53 +25,11 @@
     "parent_module": "offences_against_person",
     "parent_subground": "non_fatal_violence",
     "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061600+00:00"
+    "discovered_at": "2026-04-15T16:19:54.954670+00:00"
   },
   {
-    "id": "possession_of_dangerous_drugs",
-    "label_en": "Possession of Dangerous Drugs",
-    "label_zh": "管有危險藥物",
-    "search_queries": [
-      "possession of a dangerous drug",
-      "trafficking versus possession",
-      "Dangerous Drugs Ordinance possession"
-    ],
-    "parent_module": "public_order_regulatory",
-    "parent_subground": "dangerous_drugs",
-    "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061602+00:00"
-  },
-  {
-    "id": "riot_and_unlawful_assembly",
-    "label_en": "Riot and Unlawful Assembly",
-    "label_zh": "暴動及非法集結",
-    "search_queries": [
-      "riot",
-      "unlawful assembly",
-      "Public Order Ordinance Cap. 245"
-    ],
-    "parent_module": "public_order_regulatory",
-    "parent_subground": "public_order_weapons",
-    "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061604+00:00"
-  },
-  {
-    "id": "perjury",
-    "label_en": "Perjury and False Statements on Oath",
-    "label_zh": "發假誓及作出虛假陳述",
-    "search_queries": [
-      "perjury",
-      "false statement on oath",
-      "Crimes Ordinance perjury"
-    ],
-    "parent_module": "offences_against_person",
-    "parent_subground": "NEW:intimidation_threats",
-    "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061606+00:00"
-  },
-  {
-    "id": "possession_of_offensive_weapon",
-    "label_en": "Possession of Offensive Weapon",
+    "id": "possession_of_offensive_weapons",
+    "label_en": "Possession of Offensive Weapons",
     "label_zh": "管有攻擊性武器",
     "search_queries": [
       "possession of offensive weapon",
@@ -95,21 +39,35 @@
     "parent_module": "public_order_regulatory",
     "parent_subground": "public_order_weapons",
     "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061607+00:00"
+    "discovered_at": "2026-04-15T16:19:54.954671+00:00"
   },
   {
-    "id": "infanticide",
-    "label_en": "Infanticide",
-    "label_zh": "殺嬰罪",
+    "id": "unlawful_society_offences",
+    "label_en": "Unlawful Society and Triad Offences",
+    "label_zh": "非法社團及三合會罪行",
     "search_queries": [
-      "infanticide",
-      "Infanticide Ordinance",
-      "killing of newborn child"
+      "unlawful society",
+      "triad society",
+      "society offences"
+    ],
+    "parent_module": "public_order_regulatory",
+    "parent_subground": "NEW:society_and_triad_offences",
+    "source": "deepseek_discovery",
+    "discovered_at": "2026-04-15T16:19:54.954673+00:00"
+  },
+  {
+    "id": "perjury",
+    "label_en": "Perjury and False Statements on Oath",
+    "label_zh": "偽證及宣誓下作假證供",
+    "search_queries": [
+      "perjury",
+      "false statement on oath",
+      "Crimes Ordinance s.31"
     ],
     "parent_module": "offences_against_person",
-    "parent_subground": "homicide",
+    "parent_subground": "NEW:offences_against_justice",
     "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061609+00:00"
+    "discovered_at": "2026-04-15T16:19:54.954674+00:00"
   },
   {
     "id": "outraging_public_decency",
@@ -118,53 +76,95 @@
     "search_queries": [
       "outraging public decency",
       "act outraging public decency",
-      "common law outraging public decency"
+      "common law outraging decency"
     ],
     "parent_module": "public_order_regulatory",
     "parent_subground": "public_order_weapons",
     "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061611+00:00"
+    "discovered_at": "2026-04-15T16:19:54.954675+00:00"
   },
   {
-    "id": "sentencing_drug_trafficking",
-    "label_en": "Sentencing for Drug Trafficking",
-    "label_zh": "販毒罪量刑",
+    "id": "accessory_after_the_fact",
+    "label_en": "Accessory After the Fact",
+    "label_zh": "事後從犯",
     "search_queries": [
-      "sentencing drug trafficking",
-      "trafficking quantity",
-      "guideline sentence drug trafficking"
-    ],
-    "parent_module": "appeals_sentencing",
-    "parent_subground": "sentencing",
-    "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061613+00:00"
-  },
-  {
-    "id": "young_offenders_sentencing",
-    "label_en": "Sentencing of Young Offenders",
-    "label_zh": "青少年罪犯量刑",
-    "search_queries": [
-      "sentencing young offender",
-      "rehabilitation young offender",
-      "juvenile sentencing"
-    ],
-    "parent_module": "appeals_sentencing",
-    "parent_subground": "sentencing",
-    "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061614+00:00"
-  },
-  {
-    "id": "attempted_murder",
-    "label_en": "Attempted Murder",
-    "label_zh": "企圖謀殺",
-    "search_queries": [
-      "attempted murder",
-      "attempt murder",
-      "charge attempted murder"
+      "accessory after the fact",
+      "assist offender",
+      "harbour offender"
     ],
     "parent_module": "general_principles",
     "parent_subground": "participation_inchoate",
     "source": "deepseek_discovery",
-    "discovered_at": "2026-04-13T11:09:53.061616+00:00"
+    "discovered_at": "2026-04-15T16:19:54.954677+00:00"
+  },
+  {
+    "id": "infanticide",
+    "label_en": "Infanticide",
+    "label_zh": "殺嬰罪",
+    "search_queries": [
+      "infanticide",
+      "Infanticide Ordinance",
+      "killing of newborn"
+    ],
+    "parent_module": "offences_against_person",
+    "parent_subground": "homicide",
+    "source": "deepseek_discovery",
+    "discovered_at": "2026-04-15T16:19:54.954678+00:00"
+  },
+  {
+    "id": "contempt_of_court",
+    "label_en": "Criminal Contempt of Court",
+    "label_zh": "刑事藐視法庭",
+    "search_queries": [
+      "criminal contempt of court",
+      "contempt in the face of the court",
+      "scandalising the court"
+    ],
+    "parent_module": "offences_against_person",
+    "parent_subground": "NEW:offences_against_justice",
+    "source": "deepseek_discovery",
+    "discovered_at": "2026-04-15T16:19:54.954679+00:00"
+  },
+  {
+    "id": "possession_of_dangerous_drugs",
+    "label_en": "Possession of Dangerous Drugs",
+    "label_zh": "管有危險藥物",
+    "search_queries": [
+      "possession of a dangerous drug",
+      "trafficking vs possession",
+      "Dangerous Drugs Ordinance s.8"
+    ],
+    "parent_module": "public_order_regulatory",
+    "parent_subground": "dangerous_drugs",
+    "source": "deepseek_discovery",
+    "discovered_at": "2026-04-15T16:19:54.954681+00:00"
+  },
+  {
+    "id": "extortion",
+    "label_en": "Extortion (Demanding with Menaces)",
+    "label_zh": "勒索",
+    "search_queries": [
+      "extortion",
+      "demand with menaces",
+      "blackmail extortion"
+    ],
+    "parent_module": "property_dishonesty",
+    "parent_subground": "theft_robbery",
+    "source": "deepseek_discovery",
+    "discovered_at": "2026-04-15T16:19:54.954682+00:00"
+  },
+  {
+    "id": "going_equipped_for_stealing",
+    "label_en": "Going Equipped for Stealing",
+    "label_zh": "外出時備有偷竊用的物品",
+    "search_queries": [
+      "going equipped for stealing",
+      "article for use in theft",
+      "Theft Ordinance s.27"
+    ],
+    "parent_module": "property_dishonesty",
+    "parent_subground": "theft_robbery",
+    "source": "deepseek_discovery",
+    "discovered_at": "2026-04-15T16:19:54.954683+00:00"
   }
 ]

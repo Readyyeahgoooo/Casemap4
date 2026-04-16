@@ -16,3 +16,1302 @@
 
 [done] Report: data/batch/domain_filter_report.json
 [2026年 4月13日 星期一 19時08分18秒 HKT] CIVIL pipeline finished.
+[resume] Loaded 21 existing candidates from data/batch/candidates_civil_batch.json
+[batch] Processing 72 civil topics, max 30 cases each
+
+--- Topic: Writs and Originating Summonses (writ_originating_summons) ---
+  [ok] [2024] HKCFI 3519: YIU SAU LIN v. WONG TANG -> 0 principles (unknown)
+
+--- Topic: Pleadings and Amendment (pleadings_amendment) ---
+
+--- Topic: Service and Jurisdiction (service_jurisdiction) ---
+
+--- Topic: Discovery and Disclosure (discovery_disclosure) ---
+
+--- Topic: Summary Judgment and Strike Out (summary_judgment_strike_out) ---
+
+--- Topic: Interim Injunctions (interim_injunctions) ---
+
+--- Topic: Security for Costs (security_for_costs) ---
+
+--- Topic: Trial Evidence and Burden of Proof (trial_evidence_burden) ---
+
+--- Topic: Costs and Taxation (costs_taxation) ---
+
+--- Topic: Enforcement of Judgments (enforcement_judgment) ---
+
+--- Topic: Civil Appeals and Limitation (civil_appeals_limitation) ---
+
+--- Topic: Contract Formation (contract_formation) ---
+
+--- Topic: Contractual Terms and Interpretation (contractual_terms_interpretation) ---
+
+--- Topic: Third Party Rights (third_party_rights) ---
+
+--- Topic: Misrepresentation (misrepresentation) ---
+  [ok] [2023] HKCFI 3043: WONG SHU KEUNG v. KAM LUEN CONSOLIDATOR LTD -> 0 principles (civil)
+  [ok] [2025] HKDC 103: LIP CHUNG SHEK v. LEE WAI KWAN EDMUND -> 0 principles (unknown)
+  [ok] [2023] HKCA 781: LI NGAN KWAN AND ANOTHER v. GAO LI HUI AND OTHERS -> 0 principles (unknown)
+  [ok] [2025] HKDC 547: SUN HUNG KAI CREDIT LTD v. GUAN WENNA -> 0 principles (commercial)
+  [ok] [2021] HKCFI 3822: SPEEDY FINANCE LTD v. ZHANG XIAOPING -> 0 principles (commercial)
+  [ok] [2026] HKCFI 1966: TSUI PING SUM AND ANOTHER v. CHAN KA LOK AND OTHER -> 0 principles (unknown)
+
+--- Topic: Mistake, Duress and Undue Influence (mistake_duress_undue_influence) ---
+  [ok] [2024] HKCA 22: HKSAR v. THUO PENINAH WANGARI -> 0 principles (criminal)
+  [ok] [2021] HKCFI 2515: HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY AND ANOTHE -> 0 principles (criminal)
+  [ok] [2021] HKCA 1211: TASTY CATERING GROUP LTD AND ANOTHER v. CHENG HUNG -> 0 principles (commercial)
+  [ok] [2022] HKCA 1750: HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY -> 0 principles (criminal)
+  [ok] [2024] HKCFI 2773: FINE VISION OPPORTUNITY III LTD v. XINYUAN REAL ES -> 0 principles (civil)
+  [ok] [2024] HKCFI 424: LKF v. ZTISL -> 0 principles (unknown)
+  [ok] [2022] HKCFI 1450: PAN SUTONG v. BANK OF CHINA LTD (Trading as “Bank  -> 0 principles (commercial)
+  [ok] [2026] HKCFI 993: CHAN BENAMI HOLDINGS LTD v. CHI CHI HUNG, KENNETH -> 0 principles (commercial)
+  [ok] [2022] HKCFI 950: RE DAI YUMIN -> 0 principles (insolvency)
+  [ok] [2024] HKCA 872: HKSAR v. YUEN HOI LAM -> 0 principles (criminal)
+  [ok] [2020] HKCFI 2477: CHENG HUNG KIT AND OTHERS v. TASTY CATERING GROUP  -> 0 principles (commercial)
+  [ok] [2021] HKCA 779: RE LI XIAOMING -> 0 principles (unknown)
+  [ok] [2026] HKCFI 749: GUANGHUA SS HOLDINGS LTD v. CHEN JIANAN -> 0 principles (commercial)
+  [ok] [2023] HKCFI 3086: CHEN WU v. XIE FEI -> 0 principles (unknown)
+  [ok] [2024] HKCFI 2630: NG TUNG v. GRAND WAYFAIR INVESTMENT COMPANY LTD -> 0 principles (commercial)
+  [ok] [2025] HKCA 751: HKSAR v. GWALA NHLANHLA JOHANNES -> 0 principles (criminal)
+  [ok] [2025] HKDC 393: LIU TSAN CHING v. PAK TIM YING TIFFANY -> 0 principles (unknown)
+  [ok] [2025] HKDC 952: 周瑛偉 v. 李錦棠 -> 0 principles (unknown)
+  [ok] [2022] HKCFI 1630: 張鵬舉 v. 原翠美 -> 0 principles (unknown)
+  [ok] [2021] HKCFI 3218: 莫懿 V. 宏大香港資產管理有限公司 AND ANOTHER -> 0 principles (unknown)
+  [ok] [2021] HKCFI 2966: WEALTHY TECH GROUP HOLDINGS LTD v. YUNG MAY FONG B -> 0 principles (commercial)
+  [ok] [2024] HKCFI 2133: FAIRWING INVESTMENT LTD v. CHAU SAU NGOR AND ANOTH -> 0 principles (commercial)
+  [ok] [2025] HKCFI 3823: GLOBAL SPARKLE HOLDINGS IV LTD v. GE YIYANG AND AN -> 0 principles (commercial)
+
+--- Topic: Illegality and Public Policy (illegality_public_policy) ---
+
+--- Topic: Repudiatory Breach and Termination (repudiatory_breach_termination) ---
+
+--- Topic: Damages, Penalties and Liquidated Damages (contract_damages_penalties) ---
+
+--- Topic: Specific Performance and Injunctions (specific_performance_injunction) ---
+
+--- Topic: Sale of Goods (sale_of_goods_contract) ---
+
+--- Topic: Duty and Breach of Care (duty_breach_negligence) ---
+
+--- Topic: Causation and Remoteness (causation_remoteness_negligence) ---
+  [ok] [2023] HKCFI 1965: INVEST GAIN LTD v. NOVEL GOOD LTD -> 0 principles (commercial)
+  [ok] [2022] HKDC 247: MAK MEI LING v. DR. POON NAI YUN -> 0 principles (unknown)
+  [ok] [2022] HKCFI 306: YINGGAO RESOURCES LTD AND ANOTHER v. THE HONGKONG  -> 0 principles (commercial)
+  [ok] [2025] HKDC 1719: KWOK CARMAN v. CHENG SAI WAH -> 0 principles (unknown)
+  [ok] [2024] HKCFI 1820: HOU HSIAO BING v. REN BAOGEN -> 0 principles (unknown)
+  [ok] [2022] HKDC 59: CHIU KWAI YUK for herself and on behalf of members -> 0 principles (unknown)
+  [ok] [2021] HKCFI 1095: CHAU YUEN HEUNG v. JEKCO ELEVATORS LTD -> 0 principles (commercial)
+  [ok] [2022] HKCA 799: TANG HO HEI v. CHAN PO MEI -> 0 principles (unknown)
+  [ok] [2021] HKCFI 852: SUN MING LOK, A MINOR SUING BY HIS MOTHER AND NEXT -> 0 principles (unknown)
+  [ok] [2024] HKCFI 691: LEUNG KAI CHUN, suing by his mother and next frien -> 0 principles (unknown)
+  [ok] [2023] HKCFI 3353: LAM KAI KWONG v. UP CREATION LTD AND ANOTHER -> 0 principles (commercial)
+  [ok] [2024] HKDC 1689: CHAN KI v. GENERAL SECURITY (H.K.) LTD -> 0 principles (commercial)
+  [ok] [2025] HKCFA 10: CB v. COMMISSIONER OF POLICE, SECRETARY FOR JUSTIC -> 0 principles (unknown)
+  [ok] [2021] HKDC 1630: WAT TING CHEONG PAUL v. PROSPER JET LTD t/a LA KAF -> 0 principles (commercial)
+  [ok] [2024] HKDC 1145: WONG YUN WA, administratrix of the estate of CHAU  -> 0 principles (commercial)
+  [ok] [2023] HKCFI 1156: KO PUI YEE v. JONES LANG LASALLE MANAGEMENT SERVIC -> 0 principles (commercial)
+  [ok] [2026] HKCFI 229: POOSAALA RAM PRASAD v. THE HONGKONG AND SHANGHAI B -> 0 principles (commercial)
+  [ok] [2025] HKCA 954: HKSAR v. NG MA YU KANG AND ANOTHER -> 0 principles (criminal)
+  [ok] [2025] HKCFI 304: CHINA CANDY HOLDINGS LTD v. HLB HODGSON IMPEY CHEN -> 0 principles (commercial)
+  [ok] [2023] HKDC 1259: CHAU KA HUNG v. CHUNG CHUN HON -> 0 principles (unknown)
+  [ok] [2025] HKDC 2183: HE ZHIJUAN v. HONG YIP SERVICE COMPANY LTD -> 0 principles (commercial)
+  [ok] [2023] HKDC 644: WILMES, FRANZ JOSEF v. QUEEN MARY HOSPITAL -> 0 principles (unknown)
+  [ok] [2023] HKDC 1249: SEAN LEONARD v. HONG KONG HOSPITAL AUTHORITY AND O -> 0 principles (civil)
+  [ok] [2021] HKCA 897: SECURITIES AND FUTURES COMMISSION v. WONG WAI KWON -> 0 principles (unknown)
+  [ok] [2021] HKDC 684: CHING KWONG FAT v. FUNG DIN CHUNG RICKIE AND ANOTH -> 0 principles (unknown)
+  [ok] [2025] HKCFI 1600: KWAN KWOK KI v. WONG TUNG HUNG AND OTHERS -> 0 principles (unknown)
+  [ok] [2022] HKCFI 3028: CHAN KAM CHEUNG v. RONNIE K W CHOI & KEVIN K F LO  -> 0 principles (unknown)
+
+--- Topic: Contributory Negligence (contributory_negligence) ---
+
+--- Topic: Personal Injury Damages (personal_injury_damages) ---
+  [ok] [2023] HKCA 594: POWER SECURITIES CO LTD (formerly known as JUN YAN -> 0 principles (commercial)
+  [ok] [2024] HKCA 327: YUM SIU WAH v. WONG CHI SHING -> 0 principles (unknown)
+  [ok] [2021] HKCFI 2027: CHAN KAM PUI AND YANG WEI, THE ADMINISTRATORS OF T -> 0 principles (unknown)
+  [ok] [2022] HKCA 1855: FOOK LEE HOLDINGS LTD v. THE SECRETARY FOR TRANSPO -> 0 principles (commercial)
+  [ok] [2021] HKCFI 2840: WANG HAIHONG AND OTHERS v. J.P. MORGAN SECURITIES  -> 0 principles (commercial)
+  [ok] [2025] HKCFI 2642: PEKING UNIVERSITY RESOURCES (HOLDINGS) COMPANY LTD -> 0 principles (commercial)
+  [ok] [2022] HKCFI 3301: BONNY ACE LTD v. KR SPACE (HK) LTD -> 0 principles (commercial)
+  [ok] [2026] HKCA 204: IP SIU CHI v. KWAN WING HANG trading as FAI HUNG C -> 0 principles (commercial)
+  [ok] [2022] HKCFI 946: B K ANIL KUMAR v. J V FITNESS LTD (TRADING AS CALI -> 0 principles (commercial)
+  [ok] [2025] HKCFA 6: PEKING UNIVERSITY FOUNDER GROUP COMPANY LIMITED (北 -> 0 principles (commercial)
+  [ok] [2023] HKCA 1144: CHAN SIU LUNG v. YIP KAM SHUI t/a YING TUNG ENGINE -> 0 principles (unknown)
+  [ok] [2023] HKDC 912: ROCO INVESTMENT LTD AND ANOTHER v. RICH GAINER INT -> 0 principles (commercial)
+  [ok] [2024] HKCA 881: TONG WAI YEE WINNIE v. SECRETARY FOR EDUCATION AND -> 0 principles (unknown)
+  [ok] [2022] HKDC 1309: BONNY ACE LTD v. THE ATHLETIC CO., LTD -> 0 principles (commercial)
+  [ok] [2022] HKCFI 3825: TAM YUK CHING AND OTHERS v. HOOSENALLY & NEO (a fi -> 0 principles (unknown)
+  [ok] [2021] HKCA 1166: HKSAR v. KOFI FRIMPONG -> 0 principles (criminal)
+  [ok] [2022] HKCFI 3605: YEUNG PAK KWAN as administrator of the estate of L -> 0 principles (unknown)
+  [ok] [2022] HKDC 1284: WONG SIU CHI v. TAM KUT YU -> 0 principles (unknown)
+  [ok] [2025] HKDC 2176: CHOI CHING WAI v. HU AIJIAO -> 0 principles (unknown)
+  [ok] [2021] HKDC 160: LEUNG CHI KIN v. HUNG KA FAI t/a SIGN SQUARE -> 0 principles (unknown)
+  [ok] [2022] HKCFI 3355: BONNY ACE LTD v. MING YUE CHINESE CUISINE LTD -> 0 principles (commercial)
+  [ok] [2021] HKCFI 2225: 廈門新景地集團有限公司 formerly known as 廈門市鑫新景地房地產有限公司 v. ET -> 0 principles (commercial)
+  [ok] [2023] HKCFI 3342: SHEK PING CHEUNG DANIEL AND OTHERS v. PRINCE WINNE -> 0 principles (commercial)
+  [ok] [2022] HKDC 409: DOUBLE DRAGON DEVELOPMENT LTD v. CHEUNG KAM LAI -> 0 principles (commercial)
+  [ok] [2021] HKCA 1613: TSUI YUEN (formerly known as HO WAI HUNG) v. HO TS -> 0 principles (unknown)
+  [ok] [2022] HKCFI 3642: CHIU SUI CHING, the administrator of the estate of -> 0 principles (unknown)
+  [ok] [2021] HKDC 576: NG YUN TING v. CHAN MAN WAI RAYMOND -> 0 principles (unknown)
+  [ok] [2021] HKDC 385: GURUNG MOTI KUMARI v. NEW GLORY (H.K.) LTD -> 0 principles (commercial)
+  [ok] [2026] HKCFI 291: WIDELAND INTERNATIONAL LTD v. Crafa Hotel Manageme -> 0 principles (commercial)
+
+--- Topic: Occupiers' Liability (occupiers_liability) ---
+
+--- Topic: Vicarious and Professional Negligence (vicarious_professional_negligence) ---
+
+--- Topic: Private Nuisance (private_nuisance) ---
+
+--- Topic: Defamation and Privilege (defamation_privilege) ---
+
+--- Topic: Conveyancing Sale and Purchase (conveyancing_sale_purchase) ---
+
+--- Topic: Leases, Tenancy and Forfeiture (leases_tenancy_forfeiture) ---
+
+--- Topic: Mortgages and Priorities (mortgages_priorities) ---
+
+--- Topic: Co-ownership and Trusts of Land (co_ownership_trusts_land) ---
+  [ok] [2025] HKDC 1208: LEUNG YEE SHAN AND OTHERS v. LEUNG KIN WING -> 0 principles (unknown)
+  [ok] [2024] HKCA 508: HUI CHUN PING v. HUI KAU MO -> 0 principles (unknown)
+  [ok] [2024] HKDC 537: WONG CHI LEUNG v. XHAO TRADING CO., LTD -> 0 principles (commercial)
+  [ok] [2025] HKCFI 1128: AMIDAS HONG KONG LTD v. CHE SI LTD -> 0 principles (commercial)
+  [ok] [2021] HKDC 172: DONALD HENRY CASE v. PROFITLING INTERNATIONAL LTD  -> 0 principles (commercial)
+  [ok] [2025] HKDC 1586: DANA WELLS v. CHAN YANFENG -> 0 principles (unknown)
+  [ok] [2024] HKCA 499: WYM v. LYM -> 0 principles (unknown)
+  [ok] [2021] HKCFI 399: YING FU (H.K.) INDUSTRIAL LTD v. HEFAN TRADE LTD -> 0 principles (commercial)
+  [ok] [2025] HKCA 203: KWAN KWAI LIN AND ANOTHER v. YEUNG ON KI -> 0 principles (unknown)
+  [ok] [2026] HKCFA 9: EXCELLENCE RAISE OVERSEAS LIMITED, JOLLY ADMIRE LI -> 0 principles (commercial)
+  [ok] [2024] HKDC 21: SCANDINAVIAN MEDICAL SOLUTIONS A/S v. RUNZHI TRADI -> 0 principles (commercial)
+  [ok] [2021] HKDC 665: CHEN YUET WA EVA v. CHAN HO HEI -> 0 principles (unknown)
+  [ok] [2022] HKCFI 1710: HONG KONG SAI KUNG NGONG WO RESORT DEVELOPMENT LTD -> 0 principles (commercial)
+  [ok] [2023] HKDC 1801: MAK SHIU CHEUNG v. LUK MAN TAI -> 0 principles (unknown)
+  [ok] [2024] HKDC 217: KAM SIU HUNG v. WU CHUAN CHENG BEING THE ACCOUNT H -> 0 principles (commercial)
+  [ok] [2023] HKCFI 1039: ZHAI JIN CHENG v. WANG LIJUN AND ANOTHER -> 0 principles (unknown)
+  [ok] [2022] HKDC 303: LUK WING SZE v. HONG KONG XIN YU INTERNATIONAL IND -> 0 principles (commercial)
+  [ok] [2025] HKCFI 4562: HO YUK LAN v. HUI TSZ HANG AND ANOTHER -> 0 principles (unknown)
+  [ok] [2024] HKDC 71: CHUI CHI HUNG v. CHUI CHI WAI -> 0 principles (civil)
+  [ok] [2022] HKCFI 977: JSP INTERNATIONAL S.R.O. v. ALACRITY LTD AND OTHER -> 0 principles (civil)
+  [ok] [2024] HKCFI 2181: LEUNG CHI CHEONG (the person appointed to represen -> 0 principles (unknown)
+  [ok] [2025] HKDC 1925: ANNE FAN AND ANOTHER v. LING YACHAO -> 0 principles (unknown)
+  [ok] [2023] HKDC 1477: HU YANGZHAO v. YANG JIAN AND OTHERS -> 0 principles (unknown)
+  [ok] [2022] HKDC 1095: SHUN ON FINANCE LTD v. WONG FUNG KWAN AND ANOTHER -> 0 principles (commercial)
+  [ok] [2022] HKDC 929: ROBERTA CHRISTINA TEH MAY LING v. LUI CHUN SING AN -> 0 principles (unknown)
+  [ok] [2024] HKDC 1229: POON MEI YUNG v. CHOI OI YAU -> 0 principles (unknown)
+  [ok] [2021] HKCFI 1552: CREATIVE IMPACT (HONG KONG) LTD v. LUCKON TRAVEL L -> 0 principles (commercial)
+  [ok] [2021] HKCFI 318: WONG CHAAU HOP as sole administratrix of LEUNG FUN -> 0 principles (unknown)
+  [ok] [2024] HKDC 1100: LIN XUEQIN v. META-LUCI-HERAWATI -> 0 principles (unknown)
+
+--- Topic: Easements and Covenants (easements_covenants) ---
+
+--- Topic: Building Management and Deeds of Mutual Covenant (building_management_dmc) ---
+
+--- Topic: Adverse Possession (adverse_possession) ---
+
+--- Topic: Directors' Duties (directors_duties) ---
+  [ok] [2021] HKCFI 814: KWOK HIU KWAN v. CONVOY GLOBAL HOLDINGS LTD AND OT -> 0 principles (commercial)
+  [ok] [2021] HKCA 1450: CHINA METAL RECYCLING (HOLDINGS) LTD (IN LIQUIDATI -> 0 principles (commercial)
+  [ok] [2025] HKCFI 5278: HANSOM FINANCE LTD (IN CREDITORS' VOLUNTARY LIQUID -> 0 principles (commercial)
+  [ok] [2021] HKCFI 378: CHINA METAL RECYCLING (HOLDINGS) LTD (IN COMPULSOR -> 0 principles (commercial)
+
+--- Topic: Unfair Prejudice and Derivative Actions (unfair_prejudice_derivative) ---
+
+--- Topic: Company Restoration and Records (company_restoration_records) ---
+
+--- Topic: Winding Up Petitions (winding_up_petitions) ---
+  [ok] [2021] HKCFI 1781: PANG LOK SZE v. DIRECTOR OF PUBLIC PROSECUTIONS -> 0 principles (unknown)
+  [ok] [2023] HKCFI 1478: SIR ELLY KADOORIE & SONS LTD (FOR AND ON BEHALF OF -> 0 principles (commercial)
+  [ok] [2026] HKCFA 2: SAMANTHA JANE BRADLEY v. SIR ELLY KADOORIE & SONS  -> 0 principles (commercial)
+  [ok] [2022] HKCFI 2149: HKSAR v. LI KWAN CHIU -> 0 principles (criminal)
+  [ok] [2023] HKDC 1600: HKSAR v. W.N.M. -> 0 principles (criminal)
+  [ok] [2025] HKCFI 2917: HKSAR v. HOSSAIN MD IMRAN AND ANOTHER -> 0 principles (criminal)
+  [ok] [2025] HKDC 400: HKSAR v. L.L.K. AND ANOTHER -> 0 principles (criminal)
+  [ok] [2025] HKCFI 6484: HKSAR v. IP CHUN YIN JERRY AND ANOTHER -> 0 principles (criminal)
+
+--- Topic: Bankruptcy and Receivership (bankruptcy_receivership) ---
+
+--- Topic: Banking and Letters of Credit (banking_letters_credit) ---
+
+--- Topic: Insurance, Indemnity and Subrogation (insurance_indemnity_subrogation) ---
+
+--- Topic: Agency and Commercial Authority (agency_commercial_authority) ---
+
+--- Topic: Securities Civil and Regulatory Proceedings (securities_civil_regulatory) ---
+
+--- Topic: Employment Contract and Wages (employment_contract_wages) ---
+
+--- Topic: Dismissal and Termination (dismissal_termination) ---
+
+--- Topic: Employment Discrimination (employment_discrimination) ---
+
+--- Topic: Employees' Compensation (employees_compensation) ---
+
+--- Topic: MPF Obligations (mpf_obligations) ---
+
+--- Topic: Restraint of Trade (restraint_of_trade_employment) ---
+
+--- Topic: Divorce and Matrimonial Causes (divorce_matrimonial_causes) ---
+
+--- Topic: Ancillary Relief and Maintenance (ancillary_relief_maintenance) ---
+
+--- Topic: Custody, Care and Control (custody_care_control) ---
+
+--- Topic: Relocation and Access (children_relocation_access) ---
+  [ok] [2023] HKFC 41: TKM also known as WTKM v. WHG -> 0 principles (unknown)
+  [ok] [2025] HKFC 109: FM v. LWY -> 0 principles (family)
+  [ok] [2025] HKCFI 388: CHING TO YUEN LTD v. THE INCORPORATED OWNERS OF PR -> 0 principles (commercial)
+  [ok] [2023] HKFC 113: YCKS v. MPKC -> 0 principles (unknown)
+  [ok] [2023] HKFC 202: TRH v. KCS -> 0 principles (family)
+  [ok] [2023] HKFC 83: CHK v. CKT -> 0 principles (unknown)
+  [ok] [2024] HKFC 49: YHY v. YKM -> 0 principles (unknown)
+  [ok] [2021] HKFC 131: AKYC v. DK -> 0 principles (family)
+  [ok] [2020] HKFC 273: TSYV v. LWSV -> 0 principles (unknown)
+  [ok] [2022] HKFC 61: WKI also known as IWKV v. CKW also known as WCKW -> 0 principles (unknown)
+  [ok] [2024] HKFC 143: HKW v. YYC -> 0 principles (unknown)
+  [ok] [2024] HKCA 689: TKY v. YSGA -> 0 principles (unknown)
+  [ok] [2021] HKCFI 278: C v. S -> 0 principles (unknown)
+  [ok] [2022] HKFC 271: LPYY v. FWHF -> 0 principles (unknown)
+  [ok] [2025] HKFC 111: FCCV v. LSY -> 0 principles (unknown)
+  [ok] [2023] HKFC 18: HMC v. CWY -> 0 principles (unknown)
+  [ok] [2022] HKFC 153: CXW v. WY -> 0 principles (unknown)
+  [ok] [2023] HKFC 129: AA v. WSC -> 0 principles (unknown)
+  [ok] [2025] HKDC 263: CHAN LOI SUN AND OTHERS v. CHAN YUET（OR YUT）WO TSO -> 0 principles (unknown)
+  [ok] [2023] HKFC 145: KHH v. PKH -> 0 principles (unknown)
+  [ok] [2023] HKFC 62: ZZ v. LX -> 0 principles (unknown)
+  [ok] [2025] HKFC 165: BN v. GHB -> 0 principles (family)
+  [ok] [2021] HKCFI 1008: WGL v. ASB -> 0 principles (unknown)
+  [ok] [2022] HKFC 174: WSSA v. SYH -> 0 principles (family)
+
+--- Topic: Domestic Violence Orders (domestic_violence_orders) ---
+
+--- Topic: Family Injunctions (family_injunctions) ---
+
+--- Topic: Leave and Standing (judicial_review_leave_standing) ---
+
+--- Topic: Public Law Error (public_law_error) ---
+
+--- Topic: Natural Justice and Procedural Fairness (natural_justice_fairness) ---
+
+--- Topic: Legitimate Expectation (legitimate_expectation) ---
+
+--- Topic: Basic Law and Bill of Rights (basic_law_bill_rights) ---
+
+--- Topic: Public Law Remedies (public_law_remedies) ---
+
+--- Topic: Wills, Probate and Capacity (wills_probate_capacity) ---
+
+--- Topic: Intestacy and Estate Administration (intestacy_estate_administration) ---
+
+--- Topic: Trusts and Fiduciary Duties (trusts_fiduciary_duties) ---
+
+--- Topic: Constructive and Resulting Trusts (constructive_resulting_trusts) ---
+
+--- Topic: Tracing and Equitable Remedies (equitable_tracing_remedies) ---
+
+--- Topic: Arbitration Agreements and Stay (arbitration_agreement_stay) ---
+
+--- Topic: Award Enforcement and Setting Aside (award_enforcement_setting_aside) ---
+
+--- Topic: Mediation Confidentiality (mediation_confidentiality) ---
+
+--- Topic: Settlement and Costs Consequences (settlement_costs_consequences) ---
+
+[done] {
+  "topics_processed": 72,
+  "cases_crawled": 256,
+  "cases_enriched": 151,
+  "quarantined_count": 0,
+  "cross_references_added": 94,
+  "target_domain": "civil",
+  "domain_breakdown": {
+    "unknown": 72,
+    "civil": 5,
+    "commercial": 56,
+    "criminal": 12,
+    "insolvency": 1,
+    "family": 5
+  },
+  "errors": 0
+}
+[filter] Classifying 172 candidates (target: civil)
+  ✓ 77 matched (civil)
+  ⚠ 1 cross-domain
+  ✗ 94 out-of-domain
+
+  Out-of-domain breakdown:
+    unknown: 82
+    Criminal Law: 13
+
+  → data/batch/candidates_civil_clean.json (77 cases)
+  → data/batch/candidates_cross_domain.json (1 cases)
+  → data/batch/candidates_unknown.json (82 cases)
+  → data/batch/candidates_criminal.json (12 cases)
+
+[done] Report: data/batch/domain_filter_report.json
+run_continuous.sh:150: command not found: python3
+run_continuous.sh:161: command not found: python3
+[resume] Loaded 172 existing candidates from data/batch/candidates_civil_batch.json
+[batch] Processing 72 civil topics, max 30 cases each
+
+--- Topic: Writs and Originating Summonses (writ_originating_summons) ---
+
+--- Topic: Pleadings and Amendment (pleadings_amendment) ---
+
+--- Topic: Service and Jurisdiction (service_jurisdiction) ---
+
+--- Topic: Discovery and Disclosure (discovery_disclosure) ---
+  [ok] [2021] HKDC 1327: MAKATISOFT INC. v. HARBRIDGE CONSULTANCY SERVICES  -> 3 principles (commercial)
+  [ok] [2023] HKFC 208: H, RS v. X, Y -> 4 principles (civil)
+  [ok] [2025] HKCFI 4017: SOCAM DEVELOPMENT LTD (formerly known as SHUI ON C -> 5 principles (civil)
+  [ok] [2026] HKCA 266: ANGELA CHEN v. WAI WAI CHEN -> 5 principles (civil)
+  [ok] [2022] HKCFI 1875: NU PHARM LTD v. CHAMP GROUP LTD AND OTHERS -> 3 principles (civil)
+  [ok] [2024] HKFC 69: LYCV v. CYY -> 0 principles (family)
+  [ok] [2022] HKCFI 2344: CHINA METAL RECYCLING (HOLDINGS) LTD (IN LIQUIDATI -> 2 principles (civil)
+  [ok] [2023] HKCFI 2666: SARAS GOPI aka SARASWATHI GOPALAKRISHNAN v. BINA D -> 2 principles (civil)
+  [ok] [2023] HKDC 298: CHOI HEI MAN KAMMIE v. METRO CITY MANAGEMENT LTD -> 5 principles (civil)
+  [ok] [2024] HKFC 111: SL v. CPYD -> 4 principles (civil)
+  [ok] [2023] HKCFI 229: GREEN SUMMIT HOLDING PTE. LTD. v. XUDI TRADING CO. -> 0 principles (commercial)
+  [ok] [2025] HKCFI 5505: VICTORY CITY INTERNATIONAL HOLDINGS LTD (In Liquid -> 4 principles (civil)
+  [ok] [2023] HKDC 450: CHONG CHI KI PIERRE v. GLORY SKY PRECIOUS METALS L -> 0 principles (commercial)
+  [ok] [2025] HKCFI 1939: REALORD GROUP HOLDINGS LTD AND ANOTHER v. WIN DYNA -> 4 principles (civil)
+  [ok] [2021] HKCFI 1249: LAI DOMINIC YUK TSUN v. HANWOOD ENTERPRISES LTD AN -> 3 principles (commercial)
+  [ok] [2021] HKCFI 1368: KH FOUNDATIONS LTD v. CHUN YIP CONSTRUCTION CO LTD -> 1 principles (contract)
+  [ok] [2020] HKFC 258: TWF v. HWKR -> 5 principles (family)
+  [ok] [2024] HKFC 217: CKP v. SYK -> 5 principles (family)
+  [ok] [2023] HKCFI 2127: KONCI (1989) LTD v. CHOR JUN WO DAVID formerly kno -> 4 principles (civil)
+  [ok] [2026] HKDC 181: KONEW CAPITAL INTERNATIONAL LTD v. WONG KONG HEUNG -> 0 principles (commercial)
+  [ok] [2021] HKCA 1313: HONG KONG RESORT CO LTD v. TOWN PLANNING BOARD -> 5 principles (commercial)
+  [ok] [2024] HKDC 792: SUCCESS LANE DEVELOPMENT LTD v. FERGURSON HONG KON -> 2 principles (civil)
+  [ok] [2023] HKCFI 2176: CMBICDHAW INVESTMENTS LTD v. LI LEI AND OTHERS -> 4 principles (civil)
+  [ok] [2025] HKDC 1483: KITAHARA HONG KONG CO, LTD v. CHENG KAM WAH GRACE  -> 3 principles (civil)
+  [ok] [2023] HKCFI 1597: NEW WELL MASTER CO LTD (Formerly known as WELL MAS -> 2 principles (commercial)
+  [ok] [2025] HKDC 19: CHUNG FUNG PING v. CITIBANK (HONG KONG) LTD -> 5 principles (civil)
+  [ok] [2025] HKFC 92: TYP v. CWY AND ANOTHER -> 2 principles (civil)
+  [ok] [2023] HKCA 1094: NPYJ v. SMRC -> 2 principles (civil)
+
+--- Topic: Summary Judgment and Strike Out (summary_judgment_strike_out) ---
+  [ok] [2022] HKCFI 2903: ZPMC OFFSHORE SERVICE CO LTD (Formerly known as SH -> 3 principles (civil)
+  [ok] [2021] HKCFI 892: WONG SZE LING AND ANOTHER v. YOUNG CHEUNG LEE AND  -> 2 principles (unknown)
+  [ok] [2022] HKDC 1013: WONG TSZ HANG by her uncle and next friend CHU MAN -> 2 principles (civil)
+  [ok] [2024] HKCFI 1180: CHINA MEDICAL TECHNOLOGIES, INC (In Liquidation) A -> 1 principles (insolvency)
+  [ok] [2026] HKCFI 239: SAM WOO BORE PILE FOUNDATION LTD v. NEW EDEX CONST -> 0 principles (commercial)
+  [ok] [2024] HKCFI 199: AU DIN HAR ELLEN v. AU YEE WAN also known as YEE W -> 1 principles (civil)
+  [ok] [2024] HKCFI 416: CHAN YAT FUNG v. YING SHING DESIGN & DECORATION LT -> 3 principles (civil)
+  [ok] [2022] HKCA 1037: CHAN WS AND ANOTHER v. CC Bank -> 4 principles (insolvency)
+  [ok] [2021] HKCFI 2445: ASIAHI IWASA WA & ASSOCIATES MANAGEMENT CONSULTANT -> 0 principles (commercial)
+  [ok] [2024] HKCFI 2022: YOUNG CRYSTAL LTD AND OTHERS v. HANG SENG BANK LTD -> 2 principles (commercial)
+  [ok] [2024] HKDC 1230: XU QIANGLI AND ANOTHER v. ELABS COMPANY LTD -> 2 principles (civil)
+  [ok] [2021] HKCFI 3853: LO KAI SHUI v. HSBC INTERNATIONAL TRUSTEE LTD AND  -> 0 principles (probate)
+  [ok] [2023] HKDC 1662: CHOI WAI KWONG v. CHOI WAI KEUNG -> 4 principles (civil)
+  [ok] [2022] HKCFI 2127: LAW YIU WAI RAY AND ANOTHER v. CHEUNG YING MAN als -> 5 principles (civil)
+  [ok] [2021] HKCFI 716: CHAN CHUN CHUEN v. KAO, LEE & YIP -> 5 principles (civil)
+  [ok] [2024] HKCFI 3186: PATRICK HUNG HING YU v. HO YIN MAN AND OTHERS -> 1 principles (civil)
+  [ok] [2026] HKCFI 1765: KU KIN PONG v. YAT CHUN EXPAND LTD AND ANOTHER -> 0 principles (commercial)
+  [ok] [2021] HKCFI 243: TRENUS OCEANWAY LTD v. RICHLAND INTERNATIONAL LTD  -> 1 principles (company)
+  [ok] [2025] HKCFI 6483: LAI CHIK KUN MICHAEL AND OTHERS v. THE BAPTIST CON -> 3 principles (unknown)
+  [ok] [2024] HKCFI 3598: RE GOLDSTONE HOLDINGS LTD -> 4 principles (contract)
+  [ok] [2024] HKCFI 3578: 謝紅玲 v. 李偉斌律師行 -> 4 principles (civil)
+  [ok] [2024] HKCFI 2134: RE HONG KONG EASY CHARGE LTD -> 2 principles (civil)
+  [ok] [2021] HKCA 1991: FUNG YUK LUEN v. WONG FUNG LAN AND OTHERS -> 3 principles (civil)
+  [ok] [2023] HKCFI 726: RE DAYS IMPEX LTD (In Liquidation) -> 0 principles (commercial)
+  [ok] [2021] HKCA 1039: CHINA MEDICAL TECHNOLOGIES, INC. (in liquidation)  -> 2 principles (civil)
+  [ok] [2024] HKCFI 1548: ROBIN, BERNARDO JR FELIZARTA v. TORTURE CLAIMS APP -> 1 principles (constitutional)
+  [ok] [2025] HKCFI 4793: CHIEF HOLDINGS (H.K.) LTD AND ANOTHER v. HE CHENGU -> 4 principles (contract)
+  [ok] [2022] HKCFI 3032: DONALD SIDNEY DOBKIN v. HUAANDA (H.K.) LTD AND OTH -> 1 principles (commercial)
+
+--- Topic: Interim Injunctions (interim_injunctions) ---
+  [ok] [2022] HKCFI 1028: MEMORAN CO LTD v. THE INCORPORATED OWNERS OF MEI H -> 3 principles (civil)
+  [ok] [2024] HKDC 235: YIELD-THE-BEST LTD v. ZHUO SAIYUN -> 4 principles (civil)
+  [ok] [2025] HKDC 1589: GOLDRISE INVESTMENT LTD v. MAK WAI KWAN ANTONIO -> 4 principles (civil)
+  [ok] [2024] HKDC 795: SHUM CHUN TUNG v. TO YING LAM AILEEN AND ANOTHER -> 3 principles (civil)
+  [ok] [2025] HKDC 1402: TANG KWOK PONG v. TANG LUN KOK TSO with TANG CHUEN -> 5 principles (civil)
+  [ok] [2025] HKCFI 714: 廣西宏桂匯康食品有限公司 v. 廣州市國鼎貿易有限公司 AND OTHERS -> 1 principles (civil)
+  [ok] [2025] HKCFI 5506: YINGHENG CO LTD v. SANG KANGQIAO -> 2 principles (civil)
+  [ok] [2021] HKCFI 643: TAI SANG FEEDS CO LTD AND OTHERS v. SHARPLY DEVELO -> 3 principles (civil)
+  [ok] [2025] HKCFI 1769: INFO SALONS TECHNOLOGY SERVICES (HK) LTD v. FENG W -> 0 principles (civil)
+  [ok] [2022] HKDC 210: POLYSONIC INVESTMENT LTD v. CHAN GEORGE LUNG CHEUN -> 5 principles (civil)
+  [ok] [2024] HKCFI 419: NEW SPARKLE ROLL INTERNATIONAL GROUP LTD AND ANOTH -> 4 principles (civil)
+  [ok] [2023] HKCFI 1105: KINGFIELD INVESTMENT DEVELOPMENT LTD v. PAKCO PROP -> 4 principles (civil)
+  [ok] [2026] HKCFI 1503: NG CHUNG YING DAYDES v. TANG MAN KIT otherwise kno -> 0 principles (civil)
+  [ok] [2021] HKCA 1642: CHOW STEEL INDUSTRIES PUBLIC CO LTD AND OTHERS v.  -> 3 principles (civil)
+  [ok] [2021] HKCFI 2646: CHENG SING KEUNG AND ANOTHER v. CHAN KA HAY AND OT -> 0 principles (unknown)
+  [ok] [2022] HKDC 614: HO KWOK MING v. WONG HUNG HO AND OTHERS -> 4 principles (civil)
+  [ok] [2025] HKCFI 1732: SHUN YEE NATIVES ASSOCIATION (HONG KONG) LTD AND A -> 3 principles (commercial)
+  [ok] [2024] HKDC 1080: WANFU FINANCE COMPANY LTD v. TSE TONG LAM ANTONIO  -> 4 principles (civil)
+  [ok] [2022] HKDC 917: MTM LAB JAPAN LTD AND OTHERS v. ABACUS LTD AND ANO -> 2 principles (commercial)
+  [ok] [2024] HKCFI 1444: MING YANG CAPITAL LTD v. CHINA VERED ASSET MANAGEM -> 1 principles (civil)
+  [ok] [2025] HKCFI 1023: LU YONGDE v. ALLAN YAP AND OTHERS -> 5 principles (civil)
+  [ok] [2022] HKCA 421: CHINA MEDICAL TECHNOLOGIES, INC. (IN LIQUIDATION)  -> 2 principles (civil)
+  [ok] [2021] HKCFI 248: ZHAO ZHI QIANG v. ZHAO ZHIGUANG AND ANOTHER -> 5 principles (civil)
+  [ok] [2026] HKCFI 1617: 郭莉 v. 刘君林 -> 2 principles (civil)
+  [ok] [2022] HKCFI 1331: HUI (ANNIE) GUO v. YUEDONG XU AND OTHERS -> 1 principles (unknown)
+  [ok] [2025] HKCFI 467: OASIS KINDERGARTEN LTD v. KOWLOON TONG BAPTIST CHU -> 5 principles (civil)
+
+--- Topic: Security for Costs (security_for_costs) ---
+  [ok] [2024] HKCA 756: RE CHU JIARU -> 0 principles (unknown)
+  [ok] [2022] HKCFI 1221: BONITA CO., LTD S.A. v. CHARK YUK YING BRENDA t/a  -> 3 principles (commercial)
+  [ok] [2024] HKCFI 2320: KING FIELD SHIPYARD LTD v. TAI PAK SEA-FOOD RESTAU -> 2 principles (commercial)
+  [ok] [2022] HKDC 355: HKSAR v. LAI MAN LING AND OTHERS -> 5 principles (criminal)
+  [ok] [2025] HKCA 109: RE CHINA ZENITH CHEMICAL GROUP LTD (formerly known -> 1 principles (commercial)
+  [ok] [2025] HKCFI 629: HKSAR v. CHOW HANG TUNG -> 5 principles (criminal)
+  [ok] [2026] HKCFI 658: R v. C -> 3 principles (civil)
+  [ok] [2024] HKDC 1256: CORNELIS PIETER ALEXANDER VAN DE RIET v. KD CONCEP -> 5 principles (civil)
+  [ok] [2023] HKCFI 1580: REAL ESTATE AND FINANCE FUND (IN LIQUIDATION) AND  -> 2 principles (civil)
+  [ok] [2021] HKCFI 250: DELCO PARTICIPATION B.V. v. HWH HOLDINGS LTD -> 4 principles (civil)
+  [ok] [2021] HKCA 1847: RE SNG ALLAN, also known as SNG HOCK SENG -> 3 principles (insolvency)
+  [ok] [2024] HKCFI 3052: P1 AND ANOTHER v. D -> 5 principles (civil)
+  [ok] [2025] HKDC 394: CORNELIS PIETER ALEXANDER v. KD CONCEPT LTD AND AN -> 2 principles (commercial)
+  [ok] [2023] HKCFI 1382: LAI CHEE-YING v. SECRETARY FOR JUSTICE -> 1 principles (constitutional)
+  [ok] [2021] HKCFA 42: HKSAR v. NG HAU YI SIDNEY (伍巧怡) -> 2 principles (criminal)
+  [ok] [2021] HKFC 58: LX v. CWC, the Administratrix of the Estate of WTF -> 2 principles (civil)
+  [ok] [2023] HKFC 95: ZLL AND ANOTHER v. CBC -> 2 principles (civil)
+  [ok] [2024] HKCFI 1357: SA AND OTHERS v. BH AND ANOTHER -> 3 principles (civil)
+  [ok] [2023] HKCA 1028: HIGH FASHION NEW MEDIA CORPORATION LTD (suing on b -> 0 principles (commercial)
+  [ok] [2023] HKCFI 2429: SONG LIHUA v. LEE CHEE HON (Former Name: QUE WENBI -> 3 principles (civil)
+  [ok] [2023] HKCFI 659: TWO WAY MEDIA LTD v. PCCW LTD AND OTHERS -> 0 principles (commercial)
+  [ok] [2024] HKCFI 698: AAD AND ANOTHER v. BBF -> 4 principles (civil)
+  [ok] [2024] HKCFI 386: WANG HSUAN HAN v. CATHAY PACIFIC AIRWAYS LTD -> 3 principles (civil)
+  [ok] [2021] HKCA 1083: LAM WAI LIK ERIC AND OTHERS v. TAM SUET MUI -> 3 principles (civil)
+  [ok] [2025] HKCA 177: RE DRAGON SEAFOODS LTD -> 2 principles (civil)
+  [ok] [2022] HKCA 1133: GURDAS S. CHOITHRAMANI v. MAYER BROWN (formerly kn -> 0 principles (unknown)
+  [ok] [2025] HKCA 193: HWH HOLDINGS LTD AND ANOTHER v. STEPHENSON HARWOOD -> 4 principles (civil)
+  [ok] [2024] HKCA 400: LAI CHEE YING v. THE COMMITTEE FOR SAFEGUARDING NA -> 5 principles (criminal)
+  [ok] [2025] HKCFI 2773: UNITED HARVEST INDUSTRIES LTD v. CHING MAN CHUN LO -> 0 principles (commercial)
+  [ok] [2025] HKCA 585: MA CHUN MAN v. COMMISSIONER OF CORRECTIONAL SERVIC -> 3 principles (constitutional)
+
+--- Topic: Trial Evidence and Burden of Proof (trial_evidence_burden) ---
+  [ok] [2021] HKDC 296: LEE SAU YEE SHIRLEY v. RYBINSKI MARIUSZ -> 2 principles (unknown)
+  [ok] [2023] HKCA 367: HKSAR v. BUI VAN-CUONG -> 3 principles (criminal)
+  [ok] [2026] HKCFI 1297: YIP YUEN CHUN SHIREA v. CHICK TAK HIM in his capac -> 4 principles (probate)
+  [ok] [2022] HKDC 1164: PANG YU HIM v. SECRETARY FOR JUSTICE -> 5 principles (civil)
+  [ok] [2026] HKDC 555: WU TANGLUN v. CK ENGINEERING (HONG KONG) CO LTD AN -> 4 principles (tort)
+  [ok] [2021] HKCFI 2111: KUNG KWOK WAI DAVID, the executor of the last Will -> 5 principles (land)
+  [ok] [2021] HKCFI 3115: HKSAR v. LAI KAN YAU -> 4 principles (criminal)
+  [ok] [2021] HKCFI 2271: HKSAR v. THAPA PREMKALA -> 5 principles (criminal)
+  [ok] [2025] HKDC 359: HKSAR v. ALI ZAIN -> 2 principles (criminal)
+  [ok] [2022] HKDC 766: OPERA NATIONAL DE PARIS v. SUN BON INTERNAITONAL L -> 0 principles (commercial)
+  [ok] [2024] HKFC 46: CSF v. HYC -> 2 principles (family)
+  [ok] [2026] HKCA 514: HKSAR v. EKSTROM PATRIK TOBIAS -> 5 principles (criminal)
+  [ok] [2021] HKCFI 3778: SECRETARY FOR JUSTICE v. LAI CHEE YING -> 5 principles (criminal)
+  [ok] [2022] HKCA 951: ANTHONY ERIC RYAN HOTUNG v. HOTUNG, MICHAEL ERIC A -> 5 principles (civil)
+  [ok] [2023] HKCA 1100: HKSAR v. DINH KA YAN, GIGI -> 3 principles (criminal)
+  [ok] [2022] HKDC 846: LEE AH KEUNG AND ANOTHER v. 李國忠 transliterated as  -> 2 principles (land)
+  [ok] [2025] HKFC 157: YCR also known as CRY v. YSJ nee SJE -> 4 principles (unknown)
+  [ok] [2021] HKFC 181: BKGGB also known as NGGB v. BKND -> 3 principles (family)
+  [ok] [2024] HKCA 818: MAK, RACHEL WING NAM v. CHING KAI CHUNG -> 3 principles (probate)
+  [ok] [2023] HKCFI 2088: HKSAR v. SZE CHING LOK -> 0 principles (criminal)
+  [ok] [2022] HKFC 237: GM SA aka DG, M S v. DDPJ -> 3 principles (unknown)
+  [ok] [2025] HKCA 826: HKSAR v. LAM SIU FUNG, ANDY -> 5 principles (criminal)
+  [ok] [2021] HKDC 340: SO KAM v. GUILDFORD LTD AND ANOTHER -> 5 principles (tort)
+  [ok] [2022] HKCFI 1660: YAN YU YING v. LEUNG WING HEI -> 1 principles (civil)
+  [ok] [2024] HKCFI 2619: EST-OUEST AUCTIONS CO LTD AND ANOTHER v. NEW ART E -> 3 principles (ip)
+  [ok] [2025] HKFC 126: AA v. BB -> 5 principles (civil)
+  [ok] [2022] HKDC 29: WU LAI SHUN v. CHAN KWAI YU t/a 匯隆食品批發公司 -> 4 principles (tort)
+  [ok] [2022] HKCA 104: HKSAR v. LEE ERNEST -> 4 principles (criminal)
+  [ok] [2021] HKCFI 1250: PANG SIU WING alias PANG WING v. CHUNGSHAN COMMERC -> 4 principles (tort)
+  [ok] [2025] HKDC 1565: CHUNG LOI KIU by her next friend, LAU CHING MAN v. -> 5 principles (civil)
+
+--- Topic: Costs and Taxation (costs_taxation) ---
+  [ok] [2024] HKFC 19: RMH v. GY -> 5 principles (civil)
+  [ok] [2026] HKCA 214: COMPETITION COMMISSION v. ATAL BUILDING SERVICES E -> 4 principles (civil)
+  [ok] [2025] HKFC 180: S,A v. T,M -> 4 principles (civil)
+  [ok] [2024] HKCFI 1897: TO YUNG SING HERMAN v. SZETO CHAK MEI AND OTHERS -> 5 principles (civil)
+  [ok] [2023] HKCFI 1684: SCHUTZ, GILLES YVES RENE v. HAI CLOUD EXCHANGE (HK -> 4 principles (civil)
+  [ok] [2024] HKCFI 1330: CHAN LAAM AND OTHERS v. KING & COMPANY (a firm) -> 1 principles (civil)
+  [ok] [2021] HKCA 1076: LAW TING PONG SECONDARY SCHOOL v. CHEN WAI WAH -> 0 principles (unknown)
+  [ok] [2026] HKCFI 954: ZHANG RUI KANG AND ANOTHER v. TUNGHSU GROUP CO LTD -> 4 principles (civil)
+  [ok] [2022] HKCA 1512: LPC v. CKHA -> 2 principles (civil)
+  [ok] [2024] HKFC 33: CHN v. CCY -> 3 principles (family)
+  [ok] [2023] HKDC 1077: HKSAR v. REHMAN SAFE UR -> 1 principles (civil)
+  [ok] [2024] HKCFI 292: WAN HIN AND COMPANY LIMITED (IN LIQUIDATION) AND A -> 3 principles (civil)
+  [ok] [2022] HKCFI 644: FUNG PING SUM CONNIE v. APPEAL PANEL (ESTATE AGENT -> 4 principles (civil)
+  [ok] [2022] HKCFI 2685: 深圳正高金屬製品有限公司 v. IU HO CONSTRUCTION ENGINEERING CO  -> 5 principles (civil)
+  [ok] [2023] HKFC 201: YYT v. CCM AND OTHERS -> 3 principles (family)
+  [ok] [2022] HKCA 482: SECURITIES AND FUTURES COMMISSION v. LU RUIFENG AN -> 0 principles (unknown)
+  [ok] [2021] HKCFI 2986: KWOK KA MAN BARBARA AND ANOTHER v. LI YUK LAN AND  -> 3 principles (civil)
+  [ok] [2024] HKCFI 204: HKSAR v. CLEMENT, RICHARD MARK -> 3 principles (civil)
+  [ok] [2024] HKCFI 2742: WAN KWOK LEUNG v. WAN KWOK LING BONNIE, the sole e -> 4 principles (civil)
+  [ok] [2025] HKCFI 3051: VASILY TRUBNIKOV v. EVGENY VOLOSOV AND OTHERS -> 5 principles (civil)
+  [ok] [2024] HKCFA 17: MK v. DIRECTOR OF LEGAL AID -> 1 principles (civil)
+  [ok] [2025] HKCFI 1685: CHINA CITY CONSTRUCTION (INTERNATIONAL) CO LTD (IN -> 3 principles (civil)
+  [ok] [2023] HKCFI 403: JTM324 STRATEGIC ADVISORS, INC. v. PERMEX CO LTD -> 5 principles (civil)
+  [ok] [2022] HKCFI 178: RE LEHMAN BROTHERS ASIA HOLDINGS LTD (in liquidati -> 1 principles (civil)
+  [ok] [2026] HKCA 59: LAU SIU HUNG AND KWOK SIN KWAN (BEING THE JOINT AN -> 1 principles (civil)
+  [ok] [2022] HKCFI 3018: RE CHUI TAK KEUNG DUNCAN -> 3 principles (civil)
+  [ok] [2023] HKCFI 975: 特廣有限公司 v. 華都中心業主立案法團 AND OTHERS -> 0 principles (unknown)
+  [ok] [2024] HKDC 2035: WONG CHI WING v. WONG SIU WA -> 2 principles (unknown)
+  [ok] [2022] HKCA 1697: HKSAR v. THAPA KAMALA -> 0 principles (criminal)
+  [ok] [2021] HKCFI 3665: LIU HUI HONG, the person appointed to represent th -> 5 principles (civil)
+
+--- Topic: Enforcement of Judgments (enforcement_judgment) ---
+  [ok] [2021] HKCFI 1477: A CO v. B CO AND OTHERS -> 2 principles (civil)
+  [ok] [2025] HKCFI 5714: HD HYUNDAI INFRACORE CHINA CO LTD v. LI ZHIWEI -> 4 principles (civil)
+  [ok] [2025] HKCA 462: CHINA MINSHENG TRUST CO., LTD v. FU KWAN -> 5 principles (civil)
+  [ok] [2024] HKCFI 773: G v. X AND OTHERS -> 2 principles (civil)
+  [ok] [2022] HKCFI 1270: LIN CHIEN HSIUNG v. LIN HSIU FEN -> 3 principles (civil)
+  [ok] [2024] HKCFI 2723: 宁波梅山保税港区和光泰润二号股权投资中心(有限合伙) v. 北京微影时代科技有限公司 -> 4 principles (civil)
+  [ok] [2023] HKFC 40: TTW v. LLYS -> 3 principles (civil)
+  [ok] [2023] HKCFI 2661: BB v. KO -> 4 principles (civil)
+  [ok] [2022] HKCFI 2549: HUA SHE ASSET MANAGEMENT (SHANGHAI) CO LTD v. BEIJ -> 1 principles (civil)
+  [ok] [2021] HKCFI 2407: 廣東順德展煒商貿有限公司 v. SUN FUNG TIMBER CO LTD -> 2 principles (civil)
+  [ok] [2021] HKCFI 1096: 深圳市智能制造軟件開發有限公司 v. YICK HEUNG KNITTERS LTD -> 2 principles (civil)
+  [ok] [2023] HKCFI 1558: SKY POWER CONSTRUCTION ENGINEERING LTD v. IRAERO A -> 5 principles (civil)
+  [ok] [2021] HKCFI 215: KEIRON PETER ARCH ROCHESTER v. GLORY SKY PRECIOUS  -> 1 principles (civil)
+  [ok] [2025] HKCFI 683: S v. K -> 5 principles (civil)
+  [ok] [2023] HKCA 888: 深圳市深超科技投資有限公司 v. 世紀晶源科技有限公司 AND ANOTHER -> 5 principles (civil)
+  [ok] [2021] HKCFI 2341: A CONSORTIUM COMPRISING TPL AND ICB v. AE LTD -> 3 principles (civil)
+  [ok] [2026] HKCFI 1795: SIC v. WI AND ANOTHER -> 3 principles (civil)
+  [ok] [2024] HKCFI 1464: 湖州升華金融服務有限公司 v. HANG PIN LIVING TECHNOLOGY COMPANY -> 2 principles (contract)
+  [ok] [2025] HKCFI 3905: DENG MIAN v. PAN RONG -> 3 principles (civil)
+  [ok] [2021] HKCFI 263: S v. G -> 3 principles (civil)
+  [ok] [2023] HKCFI 2540: SONG LIHUA v. LEE CHEE HON (FORMER NAME: QUE WENBI -> 5 principles (civil)
+  [ok] [2021] HKCFI 655: ISRAEL SORIN (IZZY) SHOHAT v. BALRAM CHAINRAI -> 0 principles (unknown)
+  [ok] [2023] HKCFI 647: Q AND ANOTHER v. F AND ANOTHER -> 0 principles (unknown)
+  [ok] [2021] HKCFI 606: AUTONOMOUS NON-COMMERCIAL ORGANIZATION “ORGANIZING -> 3 principles (civil)
+  [ok] [2024] HKCFI 958: 中國機床銷售與技術服務有限公司 v. NATIONSYNC ELECTRICAL AND MACHI -> 0 principles (commercial)
+
+--- Topic: Civil Appeals and Limitation (civil_appeals_limitation) ---
+  [ok] [2021] HKCFA 36: TANG KWOK PANG v. KOT SEE FOR -> 0 principles (unknown)
+  [ok] [2025] HKCFI 6132: AKTER TANIA v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2023] HKCFI 110: RE AZAM ADEEL -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 6170: MOHAMED SULTAN SEINUL LAFEER v. TORTURE CLAIMS APP -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 1346: GURUNG PURNA v. TORTURE CLAIMS APPEAL BOARD / NON- -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 6002: HOANG HONG DIU v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 707: KHAN ZAHID ALI v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 6016: TRAN VAN KHANH v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 5898: KATHAMUTHU MUTHUKKARUPPAN v. TORTURE CLAIMS APPEAL -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 1368: FAISAL IQBAL RANA v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 1318: RIYANTI IDAH v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 251: ANIK v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 247: YANUAR FARIDAH v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 254: PHAM VAN THAO v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 1312: NOVI KARTIKA SARI v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 5701: RITA v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+
+--- Topic: Contract Formation (contract_formation) ---
+
+--- Topic: Contractual Terms and Interpretation (contractual_terms_interpretation) ---
+
+--- Topic: Third Party Rights (third_party_rights) ---
+
+--- Topic: Misrepresentation (misrepresentation) ---
+  [ok] [2024] HKCFI 2499: DU GUORONG v. BANK OF CHINA INTERNATIONAL LTD AND  -> 0 principles (civil)
+  [ok] [2025] HKCFI 5272: S.C.A. TECHNOPOL LTD v. TIANJI INTERNATIONAL CO.,  -> 0 principles (commercial)
+  [ok] [2024] HKCFI 1493: CF v. SHK -> 0 principles (unknown)
+  [ok] [2025] HKCFI 3881: FUKU GROUP LIMITED formerly known as LIONSTAR GROU -> 0 principles (commercial)
+  [ok] [2021] HKCFI 861: SPY v. KYH -> 0 principles (unknown)
+  [ok] [2022] HKCA 870: GM-SA aka DG, M-S v. DDPJ -> 0 principles (unknown)
+  [ok] [2024] HKCFI 1461: CHINA JIANXIN CREDIT SERVICES LTD v. CHINA WAH YAN -> 0 principles (commercial)
+  [ok] [2021] HKCFI 2970: CHINA CRUISE LINE LTD AND OTHERS v. STAR YIELD COR -> 0 principles (commercial)
+  [ok] [2021] HKCFI 711: KOT SEE FOR v. KUNG HO YIN AND OTHERS -> 0 principles (unknown)
+
+--- Topic: Mistake, Duress and Undue Influence (mistake_duress_undue_influence) ---
+
+--- Topic: Illegality and Public Policy (illegality_public_policy) ---
+
+--- Topic: Repudiatory Breach and Termination (repudiatory_breach_termination) ---
+
+--- Topic: Damages, Penalties and Liquidated Damages (contract_damages_penalties) ---
+
+--- Topic: Specific Performance and Injunctions (specific_performance_injunction) ---
+
+--- Topic: Sale of Goods (sale_of_goods_contract) ---
+
+--- Topic: Duty and Breach of Care (duty_breach_negligence) ---
+
+--- Topic: Causation and Remoteness (causation_remoteness_negligence) ---
+
+--- Topic: Contributory Negligence (contributory_negligence) ---
+
+--- Topic: Personal Injury Damages (personal_injury_damages) ---
+
+--- Topic: Occupiers' Liability (occupiers_liability) ---
+
+--- Topic: Vicarious and Professional Negligence (vicarious_professional_negligence) ---
+
+--- Topic: Private Nuisance (private_nuisance) ---
+  [ok] [2024] HKDC 1902: WU HUCHENG v. TIAN JIONG AND ANOTHER -> 0 principles (unknown)
+  [ok] [2023] HKDC 1735: LO WEI v. WISER (HONG KONG) LTD AND OTHERS -> 0 principles (commercial)
+  [ok] [2025] HKDC 904: FU SAU TAI, RAYMOND v. WOO KWONG PO AND ANOTHER -> 0 principles (unknown)
+  [ok] [2023] HKDC 1160: YEUNG YIK CHUN v. WONG LAI MING AND ANOTHER -> 0 principles (unknown)
+  [ok] [2024] HKDC 1500: CHENG SUK LAI v. WONG MAN FAI -> 0 principles (unknown)
+  [ok] [2022] HKDC 671: CHOY SHOK CHUN v. YU HON KEUNG -> 0 principles (unknown)
+  [ok] [2023] HKDC 834: SKY CENTURY INDUSTRIAL LTD v. CHOW MAN TO AND OTHE -> 0 principles (commercial)
+  [ok] [2025] HKDC 2132: LAI TUN YU AND ANOTHER v. NG HUNG MING as the EXEC -> 0 principles (unknown)
+  [ok] [2024] HKDC 459: KAN LAI LING v. WONG MAN KIT -> 0 principles (unknown)
+  [ok] [2023] HKDC 1117: CHIU YI TUNG v. LO YUE FUNG FRANKY AND ANOTHER -> 0 principles (unknown)
+  [ok] [2026] HKDC 502: CHOW CHI YI v. POON TAK LUN (also known as 潘德鄰) -> 0 principles (unknown)
+  [ok] [2026] HKDC 44: 黃嘉謀 v. 油塘工業大廈第三座業主立案法團 -> 0 principles (unknown)
+  [ok] [2021] HKDC 1492: HUI TUNG v. WORLD WIN CONSULTANTS LTD. -> 0 principles (commercial)
+  [ok] [2024] HKDC 1899: CHU CHEUNG CHEUNG AND ANOTHER v. THE INCORPORATED  -> 0 principles (unknown)
+  [ok] [2021] HKDC 1342: THE INCORPORATED OWNERS OF KINGDOM POWER COMMERCIA -> 0 principles (commercial)
+  [ok] [2021] HKDC 1225: CHIOU HSIN YING v. WONG SHING YU BYRON -> 0 principles (unknown)
+  [ok] [2021] HKDC 1540: LEUNG TAK KWAN t/a WALLPAPER WAREHOUSE (HK) CO. v. -> 0 principles (commercial)
+  [ok] [2022] HKDC 211: POLYSOON INVESTMENTS LTD v. LAU MO KUN AND ANOTHER -> 0 principles (commercial)
+  [ok] [2023] HKDC 230: CHAN PAT HUNG EVA suing by her attorney, PUN SAU Y -> 0 principles (unknown)
+  [ok] [2024] HKCFI 2031: CHAU WAI HUNG AND ANOTHER v. LAM TAK CHUEN AND ANO -> 0 principles (unknown)
+  [ok] [2024] HKDC 887: LAM CHING KWONG v. MAN WING SUM AND ANOTHER -> 0 principles (civil)
+  [ok] [2024] HKCA 505: MAN KWONG KAU AND ANOTHER v. WONG WAI HONG -> 0 principles (unknown)
+  [ok] [2023] HKCFI 2430: TAI CHENG INTERNATIONAL (HOLDINGS) LTD v. CHAN LAI -> 0 principles (civil)
+  [ok] [2023] HKDC 1697: TOP VICTORY (ASIA) LTD v. KONG SHUI SUN AND ANOTHE -> 0 principles (commercial)
+  [ok] [2024] HKDC 1920: LANDTOWN GARDEN LTD v. THE INCORPORATED OWNERS OF  -> 0 principles (commercial)
+  [ok] [2023] HKDC 309: SI, WING ON ANDREW AND ANOTHER v. CHENG SAU WAI -> 0 principles (unknown)
+  [ok] [2021] HKDC 813: YUNG YUK YIN v. THE INCORPORATED OWNERS OF KEYMOUN -> 0 principles (unknown)
+
+--- Topic: Defamation and Privilege (defamation_privilege) ---
+
+--- Topic: Conveyancing Sale and Purchase (conveyancing_sale_purchase) ---
+
+--- Topic: Leases, Tenancy and Forfeiture (leases_tenancy_forfeiture) ---
+
+--- Topic: Mortgages and Priorities (mortgages_priorities) ---
+
+--- Topic: Co-ownership and Trusts of Land (co_ownership_trusts_land) ---
+
+--- Topic: Easements and Covenants (easements_covenants) ---
+
+--- Topic: Building Management and Deeds of Mutual Covenant (building_management_dmc) ---
+
+--- Topic: Adverse Possession (adverse_possession) ---
+
+--- Topic: Directors' Duties (directors_duties) ---
+  [ok] [2022] HKCFI 1114: CHINACULTURE.COM LTD v. LAM TING BALL, PAUL AND OT -> 0 principles (commercial)
+  [ok] [2025] HKCFI 1110: PI 1 & PI 2 v. MR -> 0 principles (unknown)
+  [ok] [2025] HKCFI 6449: SECURITIES AND FUTURES COMMISSION v. LI HUI AND OT -> 0 principles (unknown)
+  [ok] [2026] HKCFI 694: SECURITIES AND FUTURES COMMISSION v. ANDREW LIU AN -> 0 principles (unknown)
+  [ok] [2023] HKCFI 2932: FAN REN DA ANTHONY AND ANOTHER v. THE STOCK EXCHAN -> 0 principles (commercial)
+
+--- Topic: Unfair Prejudice and Derivative Actions (unfair_prejudice_derivative) ---
+
+--- Topic: Company Restoration and Records (company_restoration_records) ---
+
+--- Topic: Winding Up Petitions (winding_up_petitions) ---
+
+--- Topic: Bankruptcy and Receivership (bankruptcy_receivership) ---
+
+--- Topic: Banking and Letters of Credit (banking_letters_credit) ---
+
+--- Topic: Insurance, Indemnity and Subrogation (insurance_indemnity_subrogation) ---
+
+--- Topic: Agency and Commercial Authority (agency_commercial_authority) ---
+
+--- Topic: Securities Civil and Regulatory Proceedings (securities_civil_regulatory) ---
+  [ok] [2021] HKCFI 707: NEW FRONT DEVELOPMENTS LTD v. RHB SECURITIES HONG  -> 0 principles (commercial)
+  [ok] [2023] HKCFI 3368: TSANG WING WAI MICHAEL v. SUNLINK COMMERCIAL LTD -> 0 principles (commercial)
+  [ok] [2025] HKCFI 855: CC v. AC -> 0 principles (unknown)
+  [ok] [2022] HKDC 815: HKSAR v. CHAN TAI SUM -> 0 principles (criminal)
+  [ok] [2021] HKCFI 1444: SECURITIES AND FUTURES COMMISSION v. AN UNKNOWN PE -> 0 principles (unknown)
+  [ok] [2026] HKCFI 465: RE ELION INTERNATIONAL INVESTMENT LTD -> 0 principles (insolvency)
+  [ok] [2021] HKCFI 3073: LO MING CHI CHARLES AND ANOTHER v. FULLPOWER INVES -> 0 principles (commercial)
+  [ok] [2026] HKCFI 1610: SECURITIES AND FUTURES COMMISSION v. TAM CHUNG WAI -> 0 principles (unknown)
+  [ok] [2021] HKCFI 435: YUANTA SECURITIES (HONG KONG) CO LTD v. NG YIN LAM -> 0 principles (commercial)
+  [ok] [2021] HKCFI 302: SECURITIES AND FUTURES COMMISSION v. CHIU DUNCAN A -> 0 principles (unknown)
+  [ok] [2026] HKCFI 1975: ZHANG XIAOCHEN v. PC SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2021] HKCFI 3351: SECURITIES AND FUTURES COMMISSION v. YIK FONG FONG -> 0 principles (unknown)
+  [ok] [2025] HKCFI 2571: RE CHINA-HONG KONG LINK SECURITIES COMPANY LTD (In -> 0 principles (commercial)
+
+--- Topic: Employment Contract and Wages (employment_contract_wages) ---
+
+--- Topic: Dismissal and Termination (dismissal_termination) ---
+
+--- Topic: Employment Discrimination (employment_discrimination) ---
+
+--- Topic: Employees' Compensation (employees_compensation) ---
+  [ok] [2021] HKCA 256: YEUNG LAI PING v. SECRETARY FOR JUSTICE -> 0 principles (unknown)
+  [ok] [2025] HKCFI 418: GURUNG JAGAT v. DRAGAGES HONG KONG LTD AND ANOTHER -> 0 principles (commercial)
+  [ok] [2024] HKDC 1516: HUI KA KIT v. YEUNG YAN WAI ANSON -> 0 principles (unknown)
+  [ok] [2021] HKCFA 39: HKSAR v. CHO TING KAI (曹挺楷) AND OTHERS -> 0 principles (criminal)
+  [ok] [2024] HKDC 1156: OU XIYUAN v. LILI LILI COMPANY LTD AND ANOTHER -> 0 principles (commercial)
+  [ok] [2022] HKCFI 1183: KOK WAI LEUNG v. HO TIN BUILDING MATERIAL LTD AND  -> 0 principles (commercial)
+  [ok] [2021] HKCFI 1170: HKSAR v. ABLE ENGINEERING CO LTD -> 0 principles (criminal)
+  [ok] [2024] HKCFI 1278: LIU RUISHAN by WU WEIXIA her next friend v. FU YIC -> 0 principles (unknown)
+  [ok] [2022] HKCFI 3330: CHEUNG HAY SHING v. DR. PANG KA HUNG PETER AND ANO -> 0 principles (unknown)
+  [ok] [2022] HKCFI 52: WONG HOI HUNG v. DUNG KAM KIT -> 0 principles (unknown)
+  [ok] [2023] HKCFI 2035: STANTON SALLY LOUISE v. CONNAUGHT WEST LTD AND OTH -> 0 principles (commercial)
+  [ok] [2021] HKDC 1177: LEUNG SIU KAM v. 梁國強 AND ANOTHER -> 0 principles (unknown)
+  [ok] [2024] HKDC 983: YUNG WAI LOK v. WAH KOON DESIGN ENGINEERING LTD -> 0 principles (civil)
+  [ok] [2023] HKDC 1818: RANAMAGAR RAM BAHADUR v. HOUNG KEE (ASIA) LTD AND  -> 0 principles (commercial)
+  [ok] [2026] HKDC 510: KHAN WASAL v. NG KUEN HAP trading as 俠記五金回收公司 -> 0 principles (unknown)
+  [ok] [2022] HKDC 775: B K RAM PRASHAD v. FREYSSINET HONG KONG LTD AND AN -> 0 principles (commercial)
+  [ok] [2022] HKDC 674: YEUNG SIU LING v. HOSPITAL AUTHORITY -> 0 principles (unknown)
+  [ok] [2022] HKCFI 891: CHAN TAK MAN v. WING & KWONG STEEL ENGINEERING CO, -> 0 principles (commercial)
+  [ok] [2025] HKDC 814: TSOI CHEONG WANG v. NGAI SZE WAI trading as LENGEN -> 0 principles (commercial)
+  [ok] [2022] HKDC 1090: LAM MAN WAI AD v. ONTIME CORPORATION LTD -> 0 principles (commercial)
+  [ok] [2022] HKCFI 970: CHAN SIU LUNG v. YIP KAM SHUI AND OTHERS -> 0 principles (unknown)
+  [ok] [2024] HKDC 236: SHAUKET IQBAL v. WAMPUM ENGINEERING COMPANY AND OT -> 0 principles (commercial)
+  [ok] [2023] HKCFI 636: LEE HONG KONG HANSEN v. MTR CORPORATION LTD -> 0 principles (commercial)
+  [ok] [2021] HKDC 237: HU WAN v. SANWO INTERNATIONAL CO LTD -> 0 principles (commercial)
+  [ok] [2024] HKCFI 749: UNWAR NAVIN KUMAR v. GURKHAS CONSRTUCTION LTD AND  -> 0 principles (civil)
+  [ok] [2021] HKDC 1407: LAM WING CHING v. JUN CHENG LOGISTICS LTD AND ANOT -> 0 principles (commercial)
+
+--- Topic: MPF Obligations (mpf_obligations) ---
+
+--- Topic: Restraint of Trade (restraint_of_trade_employment) ---
+
+--- Topic: Divorce and Matrimonial Causes (divorce_matrimonial_causes) ---
+
+--- Topic: Ancillary Relief and Maintenance (ancillary_relief_maintenance) ---
+
+--- Topic: Custody, Care and Control (custody_care_control) ---
+
+--- Topic: Relocation and Access (children_relocation_access) ---
+
+--- Topic: Domestic Violence Orders (domestic_violence_orders) ---
+
+--- Topic: Family Injunctions (family_injunctions) ---
+
+--- Topic: Leave and Standing (judicial_review_leave_standing) ---
+  [ok] [2021] HKCFI 133: 郭卓堅 v. 葛佩帆及另一人 -> 0 principles (unknown)
+
+--- Topic: Public Law Error (public_law_error) ---
+
+--- Topic: Natural Justice and Procedural Fairness (natural_justice_fairness) ---
+
+--- Topic: Legitimate Expectation (legitimate_expectation) ---
+
+--- Topic: Basic Law and Bill of Rights (basic_law_bill_rights) ---
+
+--- Topic: Public Law Remedies (public_law_remedies) ---
+
+--- Topic: Wills, Probate and Capacity (wills_probate_capacity) ---
+
+--- Topic: Intestacy and Estate Administration (intestacy_estate_administration) ---
+
+--- Topic: Trusts and Fiduciary Duties (trusts_fiduciary_duties) ---
+
+--- Topic: Constructive and Resulting Trusts (constructive_resulting_trusts) ---
+  [ok] [2023] HKCA 33: DONORA CO LTD v. THE INCORPORATED OWNERS OF TSUEN  -> 0 principles (commercial)
+  [ok] [2022] HKCFI 1105: SPM LTD v. APPEAL TRIBUNAL ( BUILDINGS ORDINANCE ) -> 0 principles (commercial)
+  [ok] [2023] HKCFI 2142: HONG KONG HOUSING SOCIETY v. THE INCORPORATED OWNE -> 0 principles (civil)
+  [ok] [2023] HKCFI 3314: THE INCORPORATED OWNERS OF GOLDEN INDUSTRIAL BUILD -> 0 principles (commercial)
+  [ok] [2024] HKCFI 2010: CHINACHEM AGENCIES LTD v. KUNG YAN SUM -> 0 principles (commercial)
+  [ok] [2024] HKCFA 3: DONORA COMPANY LIMITED v. THE INCORPORATED OWNERS  -> 0 principles (commercial)
+  [ok] [2025] HKCFA 8: SO KWAI CHUNG v. WONG WAI YING ANITA AND OTHERS -> 0 principles (unknown)
+  [ok] [2025] HKCFI 227: C1 AND OTHERS v. IBS -> 0 principles (unknown)
+  [ok] [2025] HKCA 685: THE INCORPORATED OWNERS OF HUNG WAI BUILDING v. SU -> 0 principles (commercial)
+  [ok] [2025] HKDC 1044: CHAU TAT WING, suing in his own capacity and as th -> 0 principles (unknown)
+  [ok] [2021] HKCFA 37: HKSAR v. TONG WAI HUNG (湯偉雄) -> 0 principles (criminal)
+  [ok] [2022] HKCFI 826: TUNG WOON HING CANDICE AND OTHERS v. CATHAY PACIFI -> 0 principles (commercial)
+  [ok] [2026] HKCA 88: LI CHUN BON AND ANOTHER v. CHINA MOBILE HONG KONG  -> 0 principles (commercial)
+  [ok] [2025] HKCFI 1629: CHAU KWAN LAM v. CHAU KA YEE CARIE -> 0 principles (unknown)
+  [ok] [2021] HKCFI 2124: WONG YIN TAK v. YIP WAI MAN -> 0 principles (unknown)
+  [ok] [2021] HKCFI 678: PIERHEAD GARDEN MANAGEMENT CO LTD v. THE INCORPORA -> 0 principles (commercial)
+  [ok] [2021] HKDC 1266: PEARL BLUE INVESTMENT LTD v. FIE CO LTD -> 0 principles (commercial)
+  [ok] [2025] HKCFI 974: PANG KIT PING, the administratrix of the estate of -> 0 principles (civil)
+  [ok] [2021] HKDC 1000: HKSAR v. SO HO LUN (also known as MA YU LUNG) -> 0 principles (criminal)
+  [ok] [2022] HKCA 426: THE INCORPORATED OWNERS OF HUNG WAI BUILDING v. SU -> 0 principles (commercial)
+  [ok] [2024] HKCFI 2753: LEUNG YIU MAN v. CHU KUEN -> 0 principles (unknown)
+  [ok] [2022] HKCFI 1255: LIU SHIH TENG, THE ADMINISTRATOR OF THE ESTATE OF  -> 0 principles (commercial)
+  [ok] [2022] HKCFI 1380: LO YUK KUEN v. PERSONAL REPRESENTATIVE OF THE ESTA -> 0 principles (unknown)
+
+--- Topic: Tracing and Equitable Remedies (equitable_tracing_remedies) ---
+
+--- Topic: Arbitration Agreements and Stay (arbitration_agreement_stay) ---
+
+--- Topic: Award Enforcement and Setting Aside (award_enforcement_setting_aside) ---
+
+--- Topic: Mediation Confidentiality (mediation_confidentiality) ---
+
+--- Topic: Settlement and Costs Consequences (settlement_costs_consequences) ---
+
+[done] {
+  "topics_processed": 72,
+  "cases_crawled": 444,
+  "cases_enriched": 317,
+  "quarantined_count": 0,
+  "cross_references_added": 191,
+  "target_domain": "civil",
+  "domain_breakdown": {
+    "commercial": 69,
+    "civil": 122,
+    "family": 7,
+    "contract": 4,
+    "unknown": 62,
+    "insolvency": 4,
+    "probate": 3,
+    "company": 1,
+    "constitutional": 18,
+    "criminal": 20,
+    "tort": 4,
+    "land": 2,
+    "ip": 1
+  },
+  "errors": 0
+}
+[filter] Classifying 489 candidates (target: civil)
+  ✓ 287 matched (civil)
+  ⚠ 9 cross-domain
+  ✗ 193 out-of-domain
+
+  Out-of-domain breakdown:
+    unknown: 169
+    Criminal Law: 33
+
+  → data/batch/candidates_civil_clean.json (287 cases)
+  → data/batch/candidates_cross_domain.json (9 cases)
+  → data/batch/candidates_unknown.json (169 cases)
+  → data/batch/candidates_criminal.json (24 cases)
+
+[done] Report: data/batch/domain_filter_report.json
+[resume] Loaded 489 existing candidates from data/batch/candidates_civil_batch.json
+[batch] Processing 72 civil topics, max 30 cases each
+
+--- Topic: Writs and Originating Summonses (writ_originating_summons) ---
+
+--- Topic: Pleadings and Amendment (pleadings_amendment) ---
+
+--- Topic: Service and Jurisdiction (service_jurisdiction) ---
+
+--- Topic: Discovery and Disclosure (discovery_disclosure) ---
+
+--- Topic: Summary Judgment and Strike Out (summary_judgment_strike_out) ---
+  [ok] [2023] HKDC 203: AU HEUNG BEN v. SO LIANG KI ALBERT -> 0 principles (unknown)
+  [ok] [2021] HKCFI 698: LAI FUNG LIN v. SADDIQ ENVIRONMENTAL SOLUTIONS (HO -> 0 principles (commercial)
+  [ok] [2024] HKCFI 3415: QIAN FEIYI v. FIRST PRESTIGE INC AND OTHERS -> 0 principles (civil)
+  [ok] [2025] HKCFI 2710: THE BANK OF EAST ASIA, LTD v. DARE LTD AND OTHERS -> 0 principles (commercial)
+
+--- Topic: Interim Injunctions (interim_injunctions) ---
+  [ok] [2025] HKCFI 4279: CHUNG YING BUILDING MATERIALS COMPANY LTD (in Liqu -> 0 principles (commercial)
+
+--- Topic: Security for Costs (security_for_costs) ---
+
+--- Topic: Trial Evidence and Burden of Proof (trial_evidence_burden) ---
+  [ok] [2021] HKDC 211: WONG MEI YUK v. THE INCORPORATED OWNERS OF LOWER W -> 0 principles (unknown)
+  [ok] [2021] HKDC 1449: THE INCORPORATED OWNERS OF SHATIN NEW TOWN AND OTH -> 0 principles (unknown)
+  [ok] [2021] HKCFI 300: HKSAR v. BALAKRISHNAN MAHENDRAN AND ANOTHER -> 0 principles (criminal)
+  [ok] [2023] HKCFI 247: HKSAR v. ADJEI ROBERT (also known as ADJEI KING) -> 0 principles (criminal)
+  [ok] [2022] HKDC 261: HKSAR v. CHEUNG WAI CHING AND OTHERS -> 0 principles (criminal)
+  [ok] [2021] HKCA 912: TONG YING KIT v. SECRETARY FOR JUSTICE -> 0 principles (unknown)
+  [ok] [2021] HKCA 63: HKSAR v. CHAN HO -> 0 principles (criminal)
+  [ok] [2024] HKDC 1612: CHAN CHUN WAH t/a YUEN SANG TRANSPORTATION CO v. H -> 0 principles (commercial)
+  [ok] [2023] HKCFA 11: HKSAR v. CHEN KEEN (alias JACK CHEN) (陳克恩) -> 0 principles (criminal)
+  [ok] [2024] HKCFI 2754: LAI CHEE YING v. TA KUNG PAO (HONG KONG) LTD AND A -> 0 principles (commercial)
+  [ok] [2024] HKFC 128: CHUI v. CHENG -> 0 principles (unknown)
+
+--- Topic: Costs and Taxation (costs_taxation) ---
+  [ok] [2024] HKCFI 3552: NG YIU CHI v. NG KWOK PIU PHILIP -> 0 principles (unknown)
+  [ok] [2022] HKCA 1517: HKSAR v. CHEN KEEN (alias JACK CHEN) AND OTHERS -> 0 principles (criminal)
+  [ok] [2024] HKDC 1770: MEI LIK KO FINANCE LTD v. WONG KONG HEUNG -> 0 principles (commercial)
+  [ok] [2022] HKCFI 1555: YANCROWN LTD v. CHAN WAI PIU -> 0 principles (commercial)
+  [ok] [2024] HKDC 1438: FARMAN v. SECRETARY FOR JUSTICE sued for and on be -> 0 principles (unknown)
+  [ok] [2021] HKCFA 20: HSIN CHONG CONSTRUCTION COMPANY LIMITED (in liquid -> 0 principles (commercial)
+  [ok] [2025] HKCFI 2461: HO YUEN YU IVY v. ZHANG LIHUA -> 0 principles (unknown)
+
+--- Topic: Enforcement of Judgments (enforcement_judgment) ---
+  [ok] [2025] HKCFI 6482: HAITONG INTERNATIONAL SECURITIES COMPANY LTD v. CH -> 0 principles (commercial)
+  [ok] [2021] HKCFI 2032: NIKKEI AMERICA, INC AND ANOTHER v. AULIC INDUSTRY  -> 0 principles (commercial)
+  [ok] [2021] HKCFI 484: TRANSUNION LTD v. HONGKONG TAIJIN INDUSTRY LTD AND -> 0 principles (commercial)
+  [ok] [2025] HKCFI 1281: TJIN JOEN JOE, ANDY TSJOE KONG AND ANOTHER v. oakw -> 0 principles (unknown)
+
+--- Topic: Civil Appeals and Limitation (civil_appeals_limitation) ---
+  [ok] [2026] HKCFI 535: ALI GHAZANFAR v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 1402: WINARSIH v. TORTURE CLAIMS APPEAL BOARD / NON-REFO -> 0 principles (constitutional)
+  [ok] [2024] HKCFI 643: BEYDOU MAGAGI SEYBOU v. TORTURE CLAIMS APPEAL BOAR -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 3461: PHU THI YEN v. TORTURE CLAIMS APPEAL BOARD AND ANO -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 5863: FRANCISCO AVELINE DEGALA v. TORTURE CLAIMS APPEAL  -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 5277: LUBEGA ISIMA v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 431: DWI MAYA SARI v. TORTURE CLAIMS APPEAL BOARD / NON -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 5886: SETIYOWATI RINI v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 164: NONAN RUTH FELIX v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 6105: OKTAVIANI NUR v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2026] HKCFI 1369: MOHAMMAD ALAM v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 6107: AMI LESTARI v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2025] HKCFI 6232: BARRICK MOHAMMED WAZID v. DIRECTOR OF IMMIGRATION -> 0 principles (constitutional)
+  [ok] [2024] HKCFI 1131: VI THI HIEN v. TORTURE CLAIMS APPEAL BOARD / NON-R -> 0 principles (constitutional)
+
+--- Topic: Contract Formation (contract_formation) ---
+
+--- Topic: Contractual Terms and Interpretation (contractual_terms_interpretation) ---
+
+--- Topic: Third Party Rights (third_party_rights) ---
+
+--- Topic: Misrepresentation (misrepresentation) ---
+  [ok] [2024] HKCFI 954: LEUNG CHEUK LIM v. 莊因東先生, JP 法律援助署署長 -> 0 principles (unknown)
+
+--- Topic: Mistake, Duress and Undue Influence (mistake_duress_undue_influence) ---
+
+--- Topic: Illegality and Public Policy (illegality_public_policy) ---
+
+--- Topic: Repudiatory Breach and Termination (repudiatory_breach_termination) ---
+
+--- Topic: Damages, Penalties and Liquidated Damages (contract_damages_penalties) ---
+
+--- Topic: Specific Performance and Injunctions (specific_performance_injunction) ---
+
+--- Topic: Sale of Goods (sale_of_goods_contract) ---
+
+--- Topic: Duty and Breach of Care (duty_breach_negligence) ---
+
+--- Topic: Causation and Remoteness (causation_remoteness_negligence) ---
+  [ok] [2026] HKCFI 1574: ELIO MARC LUCIEN CASCARINO by his father and next  -> 0 principles (unknown)
+
+--- Topic: Contributory Negligence (contributory_negligence) ---
+
+--- Topic: Personal Injury Damages (personal_injury_damages) ---
+
+--- Topic: Occupiers' Liability (occupiers_liability) ---
+
+--- Topic: Vicarious and Professional Negligence (vicarious_professional_negligence) ---
+
+--- Topic: Private Nuisance (private_nuisance) ---
+
+--- Topic: Defamation and Privilege (defamation_privilege) ---
+
+--- Topic: Conveyancing Sale and Purchase (conveyancing_sale_purchase) ---
+
+--- Topic: Leases, Tenancy and Forfeiture (leases_tenancy_forfeiture) ---
+
+--- Topic: Mortgages and Priorities (mortgages_priorities) ---
+
+--- Topic: Co-ownership and Trusts of Land (co_ownership_trusts_land) ---
+
+--- Topic: Easements and Covenants (easements_covenants) ---
+
+--- Topic: Building Management and Deeds of Mutual Covenant (building_management_dmc) ---
+
+--- Topic: Adverse Possession (adverse_possession) ---
+
+--- Topic: Directors' Duties (directors_duties) ---
+  [ok] [2022] HKCFI 381: LANCOM LTD v. CAPXON INTERNATIONAL ELECTRONIC CO L -> 0 principles (civil)
+  [ok] [2021] HKCA 100: WANG PENGYING v. NG WING FAI AND OTHERS -> 0 principles (unknown)
+
+--- Topic: Unfair Prejudice and Derivative Actions (unfair_prejudice_derivative) ---
+
+--- Topic: Company Restoration and Records (company_restoration_records) ---
+
+--- Topic: Winding Up Petitions (winding_up_petitions) ---
+
+--- Topic: Bankruptcy and Receivership (bankruptcy_receivership) ---
+
+--- Topic: Banking and Letters of Credit (banking_letters_credit) ---
+
+--- Topic: Insurance, Indemnity and Subrogation (insurance_indemnity_subrogation) ---
+
+--- Topic: Agency and Commercial Authority (agency_commercial_authority) ---
+
+--- Topic: Securities Civil and Regulatory Proceedings (securities_civil_regulatory) ---
+  [ok] [2023] HKCFI 2471: SECURITIES AND FUTURES COMMISSION v. VANTAGE NEW G -> 0 principles (civil)
+  [ok] [2025] HKDC 1011: RE EWARTON SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2023] HKCFI 2212: RE PRESIDENT SECURITIES (HONG KONG) LTD -> 0 principles (commercial)
+  [ok] [2025] HKCFI 2223: BANK OF QINGDAO CO LTD v. OOO SECURITIES (HK) GROU -> 0 principles (commercial)
+  [ok] [2023] HKDC 1223: RE YIELDFUL SECURITIES LTD -> 0 principles (probate)
+  [ok] [2023] HKCFI 834: RE YING WAH SECURITIES COMPANY LTD -> 0 principles (commercial)
+  [ok] [2024] HKCFI 817: RE MERDEKA SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2022] HKCFI 948: RE MUFG SECURITIES ASIA LTD -> 0 principles (commercial)
+  [ok] [2025] HKCFI 3503: BANK OF QINGDAO CO., LTD v. OOO SECURITIES (HK) GR -> 0 principles (commercial)
+  [ok] [2023] HKCFI 312: RE MTF SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2022] HKCFI 2645: RE RHB SECURITIES HONG KONG LTD AND ANOTHER -> 0 principles (commercial)
+  [ok] [2024] HKDC 401: RE GLS SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2024] HKCFI 3541: COL SECURITIES (HK) LTD (FORMERLY KNOWN AS CITISEC -> 0 principles (commercial)
+  [ok] [2025] HKCFI 2045: RE SINO WEALTH SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2023] HKCFI 1816: PACIFIC FOUNDATION SECURITIES LTD v. SUCCESS SEVEN -> 0 principles (commercial)
+  [ok] [2023] HKDC 196: RE QUASAR SECURITIES CO LTD -> 0 principles (commercial)
+  [ok] [2021] HKCFI 355: RE WAH THAI SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2024] HKCFI 3369: RE TAI FUNG SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2022] HKCFI 2726: ALLTOGETHER LAND CO LTD v. CHINA CREATE CAPITAL LT -> 0 principles (commercial)
+  [ok] [2023] HKCFI 228: RE FULLJET SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2021] HKDC 545: RE GRAND SECURITIES CO LTD -> 0 principles (commercial)
+  [ok] [2025] HKCFI 1844: RE YARDLEY SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2021] HKCFI 3851: RE WING FAT SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2023] HKCFI 2399: RE RICH BAY SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2022] HKCFI 1810: RE TIMES SECURITIES CO LTD -> 0 principles (commercial)
+  [ok] [2024] HKCFI 3000: THE JOINT LIQUIDATORS OF BULL’S-EYE LTD (IN LIQUID -> 0 principles (commercial)
+  [ok] [2023] HKCFI 1107: RE LAMTEX SECURITIES LTD -> 0 principles (commercial)
+  [ok] [2024] HKCFI 1486: RE MING HON SECURITIES LTD -> 0 principles (civil)
+
+--- Topic: Employment Contract and Wages (employment_contract_wages) ---
+
+--- Topic: Dismissal and Termination (dismissal_termination) ---
+
+--- Topic: Employment Discrimination (employment_discrimination) ---
+
+--- Topic: Employees' Compensation (employees_compensation) ---
+
+--- Topic: MPF Obligations (mpf_obligations) ---
+
+--- Topic: Restraint of Trade (restraint_of_trade_employment) ---
+
+--- Topic: Divorce and Matrimonial Causes (divorce_matrimonial_causes) ---
+
+--- Topic: Ancillary Relief and Maintenance (ancillary_relief_maintenance) ---
+
+--- Topic: Custody, Care and Control (custody_care_control) ---
+
+--- Topic: Relocation and Access (children_relocation_access) ---
+
+--- Topic: Domestic Violence Orders (domestic_violence_orders) ---
+
+--- Topic: Family Injunctions (family_injunctions) ---
+
+--- Topic: Leave and Standing (judicial_review_leave_standing) ---
+  [ok] [2024] HKCFI 2596: 莊裕安 v. 張舉能 AND OTHERS -> 0 principles (unknown)
+
+--- Topic: Public Law Error (public_law_error) ---
+
+--- Topic: Natural Justice and Procedural Fairness (natural_justice_fairness) ---
+
+--- Topic: Legitimate Expectation (legitimate_expectation) ---
+
+--- Topic: Basic Law and Bill of Rights (basic_law_bill_rights) ---
+
+--- Topic: Public Law Remedies (public_law_remedies) ---
+
+--- Topic: Wills, Probate and Capacity (wills_probate_capacity) ---
+
+--- Topic: Intestacy and Estate Administration (intestacy_estate_administration) ---
+
+--- Topic: Trusts and Fiduciary Duties (trusts_fiduciary_duties) ---
+
+--- Topic: Constructive and Resulting Trusts (constructive_resulting_trusts) ---
+
+--- Topic: Tracing and Equitable Remedies (equitable_tracing_remedies) ---
+
+--- Topic: Arbitration Agreements and Stay (arbitration_agreement_stay) ---
+
+--- Topic: Award Enforcement and Setting Aside (award_enforcement_setting_aside) ---
+
+--- Topic: Mediation Confidentiality (mediation_confidentiality) ---
+
+--- Topic: Settlement and Costs Consequences (settlement_costs_consequences) ---
+
+[done] {
+  "topics_processed": 72,
+  "cases_crawled": 258,
+  "cases_enriched": 74,
+  "quarantined_count": 0,
+  "cross_references_added": 318,
+  "target_domain": "civil",
+  "domain_breakdown": {
+    "unknown": 13,
+    "commercial": 36,
+    "civil": 4,
+    "criminal": 6,
+    "constitutional": 14,
+    "probate": 1
+  },
+  "errors": 0
+}
+[filter] Classifying 563 candidates (target: civil)
+  ✓ 328 matched (civil)
+  ⚠ 9 cross-domain
+  ✗ 226 out-of-domain
+
+  Out-of-domain breakdown:
+    unknown: 196
+    Criminal Law: 39
+
+  → data/batch/candidates_civil_clean.json (328 cases)
+  → data/batch/candidates_cross_domain.json (9 cases)
+  → data/batch/candidates_unknown.json (196 cases)
+  → data/batch/candidates_criminal.json (30 cases)
+
+[done] Report: data/batch/domain_filter_report.json
+[resume] Loaded 563 existing candidates from data/batch/candidates_civil_batch.json
+[batch] Processing 72 civil topics, max 30 cases each
+
+--- Topic: Writs and Originating Summonses (writ_originating_summons) ---
+
+--- Topic: Pleadings and Amendment (pleadings_amendment) ---
+
+--- Topic: Service and Jurisdiction (service_jurisdiction) ---
+
+--- Topic: Discovery and Disclosure (discovery_disclosure) ---
+
+--- Topic: Summary Judgment and Strike Out (summary_judgment_strike_out) ---
+
+--- Topic: Interim Injunctions (interim_injunctions) ---
+
+--- Topic: Security for Costs (security_for_costs) ---
+
+--- Topic: Trial Evidence and Burden of Proof (trial_evidence_burden) ---
+  [ok] [2025] HKCA 676: THE LAW SOCIETY OF HONG KONG v. SHAM YICK CHUN GAR -> 0 principles (civil)
+  [ok] [2021] HKCFI 3466: HIGH FASHION NEW MEDIA CORPORATION LTD v. LEONG MA -> 0 principles (commercial)
+  [ok] [2021] HKCA 1523: M v. TORTURE CLAIMS APPEAL BOARD/ NON-REFOULEMENT  -> 0 principles (unknown)
+  [ok] [2023] HKCFI 2841: KZ v. TORTURE CLAIMS APPEAL BOARD / NON-REFOULEMEN -> 0 principles (constitutional)
+  [ok] [2025] HKDC 616: LEE SZE MAN (sue by CHING KWONG MING her mother an -> 0 principles (unknown)
+  [ok] [2022] HKCFI 2289: TIGER RESORT ASIA LITD v. KAZUO OKADA AND OTHERS -> 0 principles (unknown)
+  [ok] [2021] HKDC 352: HONG CHUN TAK v. YIP KAN KEE CONTRACTING CO LTD AN -> 0 principles (commercial)
+  [ok] [2021] HKCFI 2177: JL v. TORTURE CLAIMS APPEAL BOARD -> 0 principles (constitutional)
+  [ok] [2021] HKCFI 3173: HKSAR v. HUI KA LOK, SAM -> 0 principles (criminal)
+  [ok] [2026] HKDC 264: CISSIE SUEN MIU LING, also known as SUEN MIU LING  -> 0 principles (unknown)
+
+--- Topic: Costs and Taxation (costs_taxation) ---
+
+--- Topic: Enforcement of Judgments (enforcement_judgment) ---
+
+--- Topic: Civil Appeals and Limitation (civil_appeals_limitation) ---
+
+--- Topic: Contract Formation (contract_formation) ---
+
+--- Topic: Contractual Terms and Interpretation (contractual_terms_interpretation) ---
+
+--- Topic: Third Party Rights (third_party_rights) ---
+
+--- Topic: Misrepresentation (misrepresentation) ---
+
+--- Topic: Mistake, Duress and Undue Influence (mistake_duress_undue_influence) ---
+
+--- Topic: Illegality and Public Policy (illegality_public_policy) ---
+
+--- Topic: Repudiatory Breach and Termination (repudiatory_breach_termination) ---
+
+--- Topic: Damages, Penalties and Liquidated Damages (contract_damages_penalties) ---
+
+--- Topic: Specific Performance and Injunctions (specific_performance_injunction) ---
+
+--- Topic: Sale of Goods (sale_of_goods_contract) ---
+
+--- Topic: Duty and Breach of Care (duty_breach_negligence) ---
+
+--- Topic: Causation and Remoteness (causation_remoteness_negligence) ---
+
+--- Topic: Contributory Negligence (contributory_negligence) ---
+
+--- Topic: Personal Injury Damages (personal_injury_damages) ---
+
+--- Topic: Occupiers' Liability (occupiers_liability) ---
+
+--- Topic: Vicarious and Professional Negligence (vicarious_professional_negligence) ---
+
+--- Topic: Private Nuisance (private_nuisance) ---
+
+--- Topic: Defamation and Privilege (defamation_privilege) ---
+
+--- Topic: Conveyancing Sale and Purchase (conveyancing_sale_purchase) ---
+
+--- Topic: Leases, Tenancy and Forfeiture (leases_tenancy_forfeiture) ---
+
+--- Topic: Mortgages and Priorities (mortgages_priorities) ---
+
+--- Topic: Co-ownership and Trusts of Land (co_ownership_trusts_land) ---
+
+--- Topic: Easements and Covenants (easements_covenants) ---
+
+--- Topic: Building Management and Deeds of Mutual Covenant (building_management_dmc) ---
+
+--- Topic: Adverse Possession (adverse_possession) ---
+
+--- Topic: Directors' Duties (directors_duties) ---
+
+--- Topic: Unfair Prejudice and Derivative Actions (unfair_prejudice_derivative) ---
+
+--- Topic: Company Restoration and Records (company_restoration_records) ---
+
+--- Topic: Winding Up Petitions (winding_up_petitions) ---
+
+--- Topic: Bankruptcy and Receivership (bankruptcy_receivership) ---
+
+--- Topic: Banking and Letters of Credit (banking_letters_credit) ---
+
+--- Topic: Insurance, Indemnity and Subrogation (insurance_indemnity_subrogation) ---
+
+--- Topic: Agency and Commercial Authority (agency_commercial_authority) ---
+
+--- Topic: Securities Civil and Regulatory Proceedings (securities_civil_regulatory) ---
+  [ok] [2025] HKCFI 775: BANK OF QINGDAO CO LTD v. OOO SECURITIES (HK) GROU -> 0 principles (commercial)
+  [ok] [2023] HKCFA 32: DAVID SUBOTIC AND OTHERS v. SECURITIES AND FUTURES -> 0 principles (unknown)
+  [ok] [2021] HKCFA 41: SECURITIES AND FUTURES COMMISSION v. YIU HOI YING  -> 0 principles (unknown)
+  [ok] [2025] HKCA 595: CHEN WENCAN AND ANOTHER v. SECRETARY FOR JUSTICE A -> 0 principles (unknown)
+  [ok] [2022] HKCA 1909: SECURITIES AND FUTURES COMMISSION v. ISIDOR SUBOTI -> 0 principles (unknown)
+  [ok] [2022] HKCFI 2330: TAM SZE LEUNG AND OTHERS v. SECRETARY FOR JUSTICE  -> 0 principles (unknown)
+  [ok] [2025] HKCFI 5399: RE TSE WAI IP -> 0 principles (insolvency)
+  [ok] [2023] HKDC 1446: STANDARD CHARTERED BANK (HONG KONG) LTD v. KHANDUR -> 0 principles (commercial)
+  [ok] [2021] HKCFI 2862: HKSAR v. KIU MEI LING AND OTHERS -> 0 principles (criminal)
+  [ok] [2022] HKCFI 2653: HONG KONG ZHIXIN FINANCIAL NEWS AGENCY LTD v. CHIN -> 0 principles (commercial)
+  [ok] [2023] HKCFI 1433: SUN YAN v. SUPERB JADE LTD AND OTHERS -> 0 principles (commercial)
+  [ok] [2025] HKCFI 2978: HKSAR v. MANVEER, SINGH -> 0 principles (criminal)
+  [ok] [2023] HKCFI 2495: KONG COLIN CHUNG PING (aka COLIN CHUNG PING KONG), -> 0 principles (unknown)
+  [ok] [2023] HKCFI 2123: CHEN ZHENMIN v. HARTANTO HADY AND ANOTHER -> 0 principles (unknown)
+  [ok] [2024] HKDC 1836: HKSAR v. ZULIFKAR -> 0 principles (criminal)
+  [ok] [2021] HKDC 654: HKSAR v. NG MAN TANG -> 0 principles (criminal)
+  [ok] [2021] HKDC 456: HKSAR v. WUN PIK CHUN -> 0 principles (criminal)
+  [ok] [2025] HKCFI 6434: HKSAR v. SIDHU, BALVEER SINGH -> 0 principles (criminal)
+  [ok] [2023] HKCFI 2268: MULTI-BEST ENTERPRISES LTD v. LUK FAI HOLDINGS COM -> 0 principles (commercial)
+  [ok] [2021] HKDC 613: HKSAR v. WONG HO LEONG -> 0 principles (criminal)
+  [ok] [2025] HKCA 1122: HO KONG, THE SOLE EXECUTOR OF THE ESTATE OF FONG M -> 0 principles (unknown)
+  [ok] [2023] HKCFI 1779: VEMBER LORD LTD v. THE SWATCH GROUP (HONG KONG) LT -> 0 principles (commercial)
+
+--- Topic: Employment Contract and Wages (employment_contract_wages) ---
+
+--- Topic: Dismissal and Termination (dismissal_termination) ---
+
+--- Topic: Employment Discrimination (employment_discrimination) ---
+
+--- Topic: Employees' Compensation (employees_compensation) ---
+
+--- Topic: MPF Obligations (mpf_obligations) ---
+
+--- Topic: Restraint of Trade (restraint_of_trade_employment) ---
+
+--- Topic: Divorce and Matrimonial Causes (divorce_matrimonial_causes) ---
+
+--- Topic: Ancillary Relief and Maintenance (ancillary_relief_maintenance) ---
+
+--- Topic: Custody, Care and Control (custody_care_control) ---
+
+--- Topic: Relocation and Access (children_relocation_access) ---
+
+--- Topic: Domestic Violence Orders (domestic_violence_orders) ---
+
+--- Topic: Family Injunctions (family_injunctions) ---
+
+--- Topic: Leave and Standing (judicial_review_leave_standing) ---
+
+--- Topic: Public Law Error (public_law_error) ---
+
+--- Topic: Natural Justice and Procedural Fairness (natural_justice_fairness) ---
+
+--- Topic: Legitimate Expectation (legitimate_expectation) ---
+
+--- Topic: Basic Law and Bill of Rights (basic_law_bill_rights) ---
+
+--- Topic: Public Law Remedies (public_law_remedies) ---
+
+--- Topic: Wills, Probate and Capacity (wills_probate_capacity) ---
+
+--- Topic: Intestacy and Estate Administration (intestacy_estate_administration) ---
+
+--- Topic: Trusts and Fiduciary Duties (trusts_fiduciary_duties) ---
+
+--- Topic: Constructive and Resulting Trusts (constructive_resulting_trusts) ---
+
+--- Topic: Tracing and Equitable Remedies (equitable_tracing_remedies) ---
+
+--- Topic: Arbitration Agreements and Stay (arbitration_agreement_stay) ---
+
+--- Topic: Award Enforcement and Setting Aside (award_enforcement_setting_aside) ---
+
+--- Topic: Mediation Confidentiality (mediation_confidentiality) ---
+
+--- Topic: Settlement and Costs Consequences (settlement_costs_consequences) ---
+
+[done] {
+  "topics_processed": 72,
+  "cases_crawled": 229,
+  "cases_enriched": 32,
+  "quarantined_count": 0,
+  "cross_references_added": 83,
+  "target_domain": "civil",
+  "domain_breakdown": {
+    "civil": 1,
+    "commercial": 8,
+    "unknown": 12,
+    "constitutional": 2,
+    "criminal": 8,
+    "insolvency": 1
+  },
+  "errors": 0
+}
+[filter] Classifying 595 candidates (target: civil)
+  ✓ 336 matched (civil)
+  ⚠ 9 cross-domain
+  ✗ 250 out-of-domain
+
+  Out-of-domain breakdown:
+    unknown: 212
+    Criminal Law: 47
+
+  → data/batch/candidates_civil_clean.json (336 cases)
+  → data/batch/candidates_cross_domain.json (9 cases)
+  → data/batch/candidates_unknown.json (212 cases)
+  → data/batch/candidates_criminal.json (38 cases)
+
+[done] Report: data/batch/domain_filter_report.json

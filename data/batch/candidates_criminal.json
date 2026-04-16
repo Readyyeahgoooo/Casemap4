@@ -1,0 +1,2133 @@
+{
+  "meta": {
+    "generated_at": "2026-04-15T16:25:52.953675+00:00",
+    "domain": "criminal"
+  },
+  "candidates": [
+    {
+      "neutral_citation": "[2024] HKCA 22",
+      "case_name": "HKSAR v. THUO PENINAH WANGARI",
+      "court_code": "Court of Appeal",
+      "decision_date": "2024-01-17T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Macrae VP, Zervos and M Poon JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2024/22",
+      "topic_id": "mistake_duress_undue_influence",
+      "topic_label": "Mistake, Duress and Undue Influence",
+      "module_id": "contract_law",
+      "subground_id": "vitiating_factors",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "contract_law",
+          "subground_id": "vitiating_factors",
+          "topic_id": "mistake_duress_undue_influence",
+          "topic_label": "Mistake, Duress and Undue Influence",
+          "query": "duress undue influence"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:43:36.990859+00:00",
+      "paragraph_count": 196
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2515",
+      "case_name": "HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-03-15T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Campbell‑Moffat J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2515",
+      "topic_id": "mistake_duress_undue_influence",
+      "topic_label": "Mistake, Duress and Undue Influence",
+      "module_id": "contract_law",
+      "subground_id": "vitiating_factors",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "contract_law",
+          "subground_id": "vitiating_factors",
+          "topic_id": "mistake_duress_undue_influence",
+          "topic_label": "Mistake, Duress and Undue Influence",
+          "query": "duress undue influence"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:43:36.998883+00:00",
+      "paragraph_count": 80
+    },
+    {
+      "neutral_citation": "[2022] HKCA 1750",
+      "case_name": "HKSAR v. QUINTERO BERNAL DIEGO-JHOVANNY",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-12-06T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Zervos JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/1750",
+      "topic_id": "mistake_duress_undue_influence",
+      "topic_label": "Mistake, Duress and Undue Influence",
+      "module_id": "contract_law",
+      "subground_id": "vitiating_factors",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "contract_law",
+          "subground_id": "vitiating_factors",
+          "topic_id": "mistake_duress_undue_influence",
+          "topic_label": "Mistake, Duress and Undue Influence",
+          "query": "duress undue influence"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:43:37.012989+00:00",
+      "paragraph_count": 92
+    },
+    {
+      "neutral_citation": "[2024] HKCA 872",
+      "case_name": "HKSAR v. YUEN HOI LAM",
+      "court_code": "Court of Appeal",
+      "decision_date": "2024-09-26T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Pang, M Poon and Anthea Pang JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2024/872",
+      "topic_id": "mistake_duress_undue_influence",
+      "topic_label": "Mistake, Duress and Undue Influence",
+      "module_id": "contract_law",
+      "subground_id": "vitiating_factors",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "contract_law",
+          "subground_id": "vitiating_factors",
+          "topic_id": "mistake_duress_undue_influence",
+          "topic_label": "Mistake, Duress and Undue Influence",
+          "query": "duress undue influence"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:43:37.069107+00:00",
+      "paragraph_count": 90
+    },
+    {
+      "neutral_citation": "[2025] HKCA 751",
+      "case_name": "HKSAR v. GWALA NHLANHLA JOHANNES",
+      "court_code": "Court of Appeal",
+      "decision_date": "2025-08-12T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Zervos JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2025/751",
+      "topic_id": "mistake_duress_undue_influence",
+      "topic_label": "Mistake, Duress and Undue Influence",
+      "module_id": "contract_law",
+      "subground_id": "vitiating_factors",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "contract_law",
+          "subground_id": "vitiating_factors",
+          "topic_id": "mistake_duress_undue_influence",
+          "topic_label": "Mistake, Duress and Undue Influence",
+          "query": "duress undue influence"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:43:37.118172+00:00",
+      "paragraph_count": 59
+    },
+    {
+      "neutral_citation": "[2025] HKCA 954",
+      "case_name": "HKSAR v. NG MA YU KANG AND ANOTHER",
+      "court_code": "Court of Appeal",
+      "decision_date": "2025-11-04T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Zervos JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2025/954",
+      "topic_id": "causation_remoteness_negligence",
+      "topic_label": "Causation and Remoteness",
+      "module_id": "tort_law",
+      "subground_id": "negligence_elements",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "tort_law",
+          "subground_id": "negligence_elements",
+          "topic_id": "causation_remoteness_negligence",
+          "topic_label": "Causation and Remoteness",
+          "query": "causation negligence"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:43:44.478700+00:00",
+      "paragraph_count": 189
+    },
+    {
+      "neutral_citation": "[2021] HKCA 1166",
+      "case_name": "HKSAR v. KOFI FRIMPONG",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-08-13T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Zervos JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/1166",
+      "topic_id": "personal_injury_damages",
+      "topic_label": "Personal Injury Damages",
+      "module_id": "tort_law",
+      "subground_id": "personal_injury_occupiers_professional",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "tort_law",
+          "subground_id": "personal_injury_occupiers_professional",
+          "topic_id": "personal_injury_damages",
+          "topic_label": "Personal Injury Damages",
+          "query": "loss of earnings personal injury"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:43:46.777130+00:00",
+      "paragraph_count": 57
+    },
+    {
+      "neutral_citation": "[2022] HKCFI 2149",
+      "case_name": "HKSAR v. LI KWAN CHIU",
+      "court_code": "Court of First Instance",
+      "decision_date": "2022-07-25T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Alex Lee J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2022/2149",
+      "topic_id": "winding_up_petitions",
+      "topic_label": "Winding Up Petitions",
+      "module_id": "company_commercial_law",
+      "subground_id": "winding_up_insolvency",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "employment_law",
+          "subground_id": "mpf_restraint_trade",
+          "topic_id": "restraint_of_trade_employment",
+          "topic_label": "Restraint of Trade",
+          "query": "non-compete employment"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "matrimonial_financial",
+          "topic_id": "divorce_matrimonial_causes",
+          "topic_label": "Divorce and Matrimonial Causes",
+          "query": "divorce petition unreasonable behaviour"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "children_welfare",
+          "topic_id": "children_relocation_access",
+          "topic_label": "Relocation and Access",
+          "query": "child relocation Hong Kong"
+        },
+        {
+          "domain": "civil",
+          "module_id": "arbitration_adr",
+          "subground_id": "arbitration_procedure_awards",
+          "topic_id": "arbitration_agreement_stay",
+          "topic_label": "Arbitration Agreements and Stay",
+          "query": "kompetenz kompetenz arbitration"
+        },
+        {
+          "domain": "civil",
+          "module_id": "company_commercial_law",
+          "subground_id": "winding_up_insolvency",
+          "topic_id": "winding_up_petitions",
+          "topic_label": "Winding Up Petitions",
+          "query": "winding up petition"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:44:02.622031+00:00",
+      "paragraph_count": 226
+    },
+    {
+      "neutral_citation": "[2023] HKDC 1600",
+      "case_name": "HKSAR v. W.N.M.",
+      "court_code": "District Court",
+      "decision_date": "2023-10-17T00:00:00+08:00",
+      "judges": [
+        "Before: HH Judge Stanley Chan"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2023/1600",
+      "topic_id": "winding_up_petitions",
+      "topic_label": "Winding Up Petitions",
+      "module_id": "company_commercial_law",
+      "subground_id": "winding_up_insolvency",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "employment_law",
+          "subground_id": "mpf_restraint_trade",
+          "topic_id": "restraint_of_trade_employment",
+          "topic_label": "Restraint of Trade",
+          "query": "non-compete employment"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "matrimonial_financial",
+          "topic_id": "divorce_matrimonial_causes",
+          "topic_label": "Divorce and Matrimonial Causes",
+          "query": "divorce petition unreasonable behaviour"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "children_welfare",
+          "topic_id": "children_relocation_access",
+          "topic_label": "Relocation and Access",
+          "query": "child relocation Hong Kong"
+        },
+        {
+          "domain": "civil",
+          "module_id": "arbitration_adr",
+          "subground_id": "arbitration_procedure_awards",
+          "topic_id": "arbitration_agreement_stay",
+          "topic_label": "Arbitration Agreements and Stay",
+          "query": "kompetenz kompetenz arbitration"
+        },
+        {
+          "domain": "civil",
+          "module_id": "company_commercial_law",
+          "subground_id": "winding_up_insolvency",
+          "topic_id": "winding_up_petitions",
+          "topic_label": "Winding Up Petitions",
+          "query": "winding up petition"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:44:02.631467+00:00",
+      "paragraph_count": 197
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 2917",
+      "case_name": "HKSAR v. HOSSAIN MD IMRAN AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-06-11T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Woodcock J"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/2917",
+      "topic_id": "winding_up_petitions",
+      "topic_label": "Winding Up Petitions",
+      "module_id": "company_commercial_law",
+      "subground_id": "winding_up_insolvency",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "employment_law",
+          "subground_id": "mpf_restraint_trade",
+          "topic_id": "restraint_of_trade_employment",
+          "topic_label": "Restraint of Trade",
+          "query": "non-compete employment"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "matrimonial_financial",
+          "topic_id": "divorce_matrimonial_causes",
+          "topic_label": "Divorce and Matrimonial Causes",
+          "query": "divorce petition unreasonable behaviour"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "children_welfare",
+          "topic_id": "children_relocation_access",
+          "topic_label": "Relocation and Access",
+          "query": "child relocation Hong Kong"
+        },
+        {
+          "domain": "civil",
+          "module_id": "arbitration_adr",
+          "subground_id": "arbitration_procedure_awards",
+          "topic_id": "arbitration_agreement_stay",
+          "topic_label": "Arbitration Agreements and Stay",
+          "query": "kompetenz kompetenz arbitration"
+        },
+        {
+          "domain": "civil",
+          "module_id": "company_commercial_law",
+          "subground_id": "winding_up_insolvency",
+          "topic_id": "winding_up_petitions",
+          "topic_label": "Winding Up Petitions",
+          "query": "winding up petition"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:44:02.636274+00:00",
+      "paragraph_count": 29
+    },
+    {
+      "neutral_citation": "[2025] HKDC 400",
+      "case_name": "HKSAR v. L.L.K. AND ANOTHER",
+      "court_code": "District Court",
+      "decision_date": "2025-03-07T00:00:00+08:00",
+      "judges": [
+        "Before: District Judge Clement Lee"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2025/400",
+      "topic_id": "winding_up_petitions",
+      "topic_label": "Winding Up Petitions",
+      "module_id": "company_commercial_law",
+      "subground_id": "winding_up_insolvency",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "employment_law",
+          "subground_id": "mpf_restraint_trade",
+          "topic_id": "restraint_of_trade_employment",
+          "topic_label": "Restraint of Trade",
+          "query": "non-compete employment"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "matrimonial_financial",
+          "topic_id": "divorce_matrimonial_causes",
+          "topic_label": "Divorce and Matrimonial Causes",
+          "query": "divorce petition unreasonable behaviour"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "children_welfare",
+          "topic_id": "children_relocation_access",
+          "topic_label": "Relocation and Access",
+          "query": "child relocation Hong Kong"
+        },
+        {
+          "domain": "civil",
+          "module_id": "arbitration_adr",
+          "subground_id": "arbitration_procedure_awards",
+          "topic_id": "arbitration_agreement_stay",
+          "topic_label": "Arbitration Agreements and Stay",
+          "query": "kompetenz kompetenz arbitration"
+        },
+        {
+          "domain": "civil",
+          "module_id": "company_commercial_law",
+          "subground_id": "winding_up_insolvency",
+          "topic_id": "winding_up_petitions",
+          "topic_label": "Winding Up Petitions",
+          "query": "winding up petition"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:44:02.644346+00:00",
+      "paragraph_count": 80
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 6484",
+      "case_name": "HKSAR v. IP CHUN YIN JERRY AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-11-18T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Anna Lai J"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/6484",
+      "topic_id": "winding_up_petitions",
+      "topic_label": "Winding Up Petitions",
+      "module_id": "company_commercial_law",
+      "subground_id": "winding_up_insolvency",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "employment_law",
+          "subground_id": "mpf_restraint_trade",
+          "topic_id": "restraint_of_trade_employment",
+          "topic_label": "Restraint of Trade",
+          "query": "non-compete employment"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "matrimonial_financial",
+          "topic_id": "divorce_matrimonial_causes",
+          "topic_label": "Divorce and Matrimonial Causes",
+          "query": "divorce petition unreasonable behaviour"
+        },
+        {
+          "domain": "civil",
+          "module_id": "family_law",
+          "subground_id": "children_welfare",
+          "topic_id": "children_relocation_access",
+          "topic_label": "Relocation and Access",
+          "query": "child relocation Hong Kong"
+        },
+        {
+          "domain": "civil",
+          "module_id": "arbitration_adr",
+          "subground_id": "arbitration_procedure_awards",
+          "topic_id": "arbitration_agreement_stay",
+          "topic_label": "Arbitration Agreements and Stay",
+          "query": "kompetenz kompetenz arbitration"
+        },
+        {
+          "domain": "civil",
+          "module_id": "company_commercial_law",
+          "subground_id": "winding_up_insolvency",
+          "topic_id": "winding_up_petitions",
+          "topic_label": "Winding Up Petitions",
+          "query": "winding up petition"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-13T14:44:02.653282+00:00",
+      "paragraph_count": 101
+    },
+    {
+      "neutral_citation": "[2022] HKDC 355",
+      "case_name": "HKSAR v. LAI MAN LING AND OTHERS",
+      "court_code": "District Court",
+      "decision_date": "2022-04-21T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge W.K. Kwok"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/355",
+      "topic_id": "security_for_costs",
+      "topic_label": "Security for Costs",
+      "module_id": "civil_procedure",
+      "subground_id": "interlocutory_case_management",
+      "principles": [
+        {
+          "principle_label": "Sedition as national security offence",
+          "paraphrase_en": "The Court of Final Appeal has conclusively determined that the sedition offence under section 10 of the Crimes Ordinance constitutes an offence endangering national security.",
+          "paragraph_span": "[24]",
+          "cited_statutes": [
+            "Cap. 200 s.10"
+          ]
+        },
+        {
+          "principle_label": "Mandatory designated judge for national security cases",
+          "paraphrase_en": "For cases concerning offences endangering national security, the National Security Law mandates that bail applications and trials must be presided over by a designated judge.",
+          "paragraph_span": "[38]",
+          "cited_statutes": [
+            "NSL 42(2)",
+            "NSL 44(3)"
+          ]
+        },
+        {
+          "principle_label": "Consistent classification of offence stages",
+          "paraphrase_en": "An offence classified as endangering national security at the bail stage must retain that same classification throughout the trial proceedings; inconsistent classification within the same case is not permissible.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Proper procedure for listing before designated judge",
+          "paraphrase_en": "It is proper procedure for the prosecution to request that a case involving a national security offence be listed before a designated judge, as required by law.",
+          "paragraph_span": "[42]",
+          "cited_statutes": [
+            "NSL 44(3)"
+          ]
+        },
+        {
+          "principle_label": "Request for designated judge not judge-shopping",
+          "paraphrase_en": "A prosecution request for a case to be heard by a designated judge, as mandated for national security offences, does not constitute improper judge-shopping when no particular judge is specified.",
+          "paragraph_span": "[43]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Court of Final Appeal ruling",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows the CFA's conclusive determination that sedition under section 10 of the Crimes Ordinance is an offence endangering national security."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "interlocutory_case_management",
+          "topic_id": "security_for_costs",
+          "topic_label": "Security for Costs",
+          "query": "security for costs"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:03:05.140340+00:00",
+      "paragraph_count": 77
+    },
+    {
+      "neutral_citation": "[2021] HKCFA 42",
+      "case_name": "HKSAR v. NG HAU YI SIDNEY (伍巧怡)",
+      "court_code": "Court of Final Appeal",
+      "decision_date": "2021-12-14T00:00:00+08:00",
+      "judges": [
+        "Appeal Committee: Chief Justice Cheung, Mr Justice Ribeiro PJ and Mr Justice Fok PJ"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfa/2021/42",
+      "topic_id": "security_for_costs",
+      "topic_label": "Security for Costs",
+      "module_id": "civil_procedure",
+      "subground_id": "interlocutory_case_management",
+      "principles": [
+        {
+          "principle_label": "Bail threshold under NSL Article 42(2)",
+          "paraphrase_en": "The more stringent bail threshold under Article 42(2) of the National Security Law applies not only to offences created by the NSL itself, but also to acts endangering national security that are capable of constituting an offence under the NSL or under other HKSAR laws that safeguard national security.",
+          "paragraph_span": "[6]-[28]",
+          "cited_statutes": [
+            "National Security Law Article 42(2)"
+          ]
+        },
+        {
+          "principle_label": "Interpretation of 'acts endangering national security'",
+          "paraphrase_en": "The phrase 'acts endangering national security' in NSL Article 42(2) should be construed broadly to cover acts capable of constituting an offence under the National Security Law or under other HKSAR laws enacted to safeguard national security.",
+          "paragraph_span": "[28]",
+          "cited_statutes": [
+            "National Security Law Article 42(2)",
+            "National Security Law Article 8"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "HKSAR v Lai Chee Ying",
+          "target_neutral_citation": "",
+          "relationship_type": "FOLLOWS",
+          "description": "The present judgment follows and applies the construction of NSL Article 42(2) established in the Lai case."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "interlocutory_case_management",
+          "topic_id": "security_for_costs",
+          "topic_label": "Security for Costs",
+          "query": "security for costs"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:07:11.674847+00:00",
+      "paragraph_count": 84
+    },
+    {
+      "neutral_citation": "[2023] HKCA 367",
+      "case_name": "HKSAR v. BUI VAN-CUONG",
+      "court_code": "Court of Appeal",
+      "decision_date": "2023-03-17T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Macrae VP, Zervos and Anthea Pang JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2023/367",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Provocation defense requirements",
+          "paraphrase_en": "For the defense of provocation to arise, there must be provoking conduct that caused the defendant to lose self-control. If no such provocation exists, the defense fails and the defendant is guilty of murder.",
+          "paragraph_span": "[11]-[11]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Objective test for provocation",
+          "paraphrase_en": "When assessing provocation, the jury must consider whether a person of ordinary self-control would have reacted as the accused did, taking into account the accused's entire factual situation including their history, experiences, background, and personal attributes.",
+          "paragraph_span": "[11]-[11]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Distinction from diminished responsibility",
+          "paraphrase_en": "The law of provocation should not indirectly incorporate the concept of diminished responsibility, as these are distinct legal defenses with different requirements and purposes.",
+          "paragraph_span": "[11]-[11]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Camplin",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment references Lord Simon's approach in Camplin regarding consideration of the 'entire factual situation' when assessing provocation."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.47,
+        "signals": [
+          "criminal_party_name",
+          "criminal_keywords:2",
+          "generic_civil_keywords:2"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.47,
+          "civil": 0.1
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "civil burden of proof"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:13:24.900286+00:00",
+      "paragraph_count": 151
+    },
+    {
+      "neutral_citation": "[2026] HKCA 514",
+      "case_name": "HKSAR v. EKSTROM PATRIK TOBIAS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2026-03-24T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Macrae VP, Zervos JA and Barnes J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2026/514",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Admissibility of electronic messages as recent complaint",
+          "paraphrase_en": "Electronic messages, such as WhatsApp messages, can be admissible as recent complaint evidence even if the recipient of those messages does not testify in court.",
+          "paragraph_span": "[16]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Modern law on 'recent' complaint",
+          "paraphrase_en": "The requirement for a complaint to be 'recent' involves not only a temporal assessment but also a broader contextual and subjective evaluation, considering factors like the nature of the assault, the relationship with the assailant, and the complainant's characteristics.",
+          "paragraph_span": "[38]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Content requirement for a complaint",
+          "paraphrase_en": "For a communication to qualify as a complaint of a sexual offence, it must at least convey to the recipient that a sexual wrong by the accused is being alleged, though it need not recite all the legal ingredients of the offence.",
+          "paragraph_span": "[69]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Holistic assessment of complaint admissibility",
+          "paraphrase_en": "When determining if conduct qualifies as a complaint, the court must consider the whole circumstances holistically; factors like consistency with the later account can be part of this assessment and need not be considered in rigid isolation.",
+          "paragraph_span": "[75]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Appellate restraint on tactical decisions",
+          "paraphrase_en": "An appellate court should be slow to overturn a verdict based on a challenge to tactical decisions made by trial counsel, unless there are exceptional circumstances or a demonstrable miscarriage of justice.",
+          "paragraph_span": "[56]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "HKSAR v So Tsz Yeung",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that WhatsApp messages can be admissible as recent complaint evidence even if the recipient does not testify."
+        },
+        {
+          "target_case_name": "HKSAR v Chak Kong Fai",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the modern legal guidance from this case on the contextual factors for determining what constitutes a 'recent' complaint."
+        },
+        {
+          "target_case_name": "R v S",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites this case alongside Chak Kong Fai for guidance on the law concerning recent complaints in sexual offence cases."
+        },
+        {
+          "target_case_name": "Lam Siu Fung Andy",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the principle from this case that appellate courts should be reluctant to interfere with verdicts based on trial counsel's tactical decisions."
+        },
+        {
+          "target_case_name": "R v Birks",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the established principle from this case concerning appellate restraint regarding trial counsel's tactical choices."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:17:04.295500+00:00",
+      "paragraph_count": 236
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 3778",
+      "case_name": "SECRETARY FOR JUSTICE v. LAI CHEE YING",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-12-20T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Andrew Chan J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/3778",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Appeal by Case Stated vs rehearing",
+          "paraphrase_en": "An appeal under Section 105 of the Magistrates Ordinance (by way of Case Stated) is distinct from an appeal under Section 113 (by way of rehearing). The appellate court in a Case Stated appeal does not reassess the weight of trial evidence, including witness testimony; it is a review.",
+          "paragraph_span": "[12]",
+          "cited_statutes": [
+            "Magistrates Ordinance s.105",
+            "Magistrates Ordinance s.113"
+          ]
+        },
+        {
+          "principle_label": "Perversity as error of law",
+          "paraphrase_en": "A magistrate's finding of fact constitutes an error of law (perversity) if no reasonable magistrate, properly directing themselves, could have reached that conclusion. This requires showing the magistrate misdirected themselves, misunderstood facts, considered irrelevant matters, or overlooked relevant ones.",
+          "paragraph_span": "[13]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Elements of criminal intimidation",
+          "paraphrase_en": "For criminal intimidation, the key questions are the intention behind the threat and its effect (or likely effect) on the recipient. This is assessed by reference to the specific circumstances of both persons involved at the time the words were spoken, regardless of whether the threat was made directly, reported later, or not reported at all.",
+          "paragraph_span": "[22]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Assessing alarm and ordinary firmness",
+          "paraphrase_en": "The court must consider whether a threat is of a kind likely to overcome the ordinary free will of a person of ordinary firmness. The actual alarm of the recipient is a relevant factor, but the test is objective (the 'firm man'), not purely subjective.",
+          "paragraph_span": "[57]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Denial not an admission",
+          "paraphrase_en": "A suspect's denial or rejection of a proposition during a police interview cannot, without more, be treated as an admission or confession of that same proposition.",
+          "paragraph_span": "[19]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "Lo Tong Kai v The Queen",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The judgment applies the legal principle from Lo Tong Kai regarding the relevant questions for criminal intimidation (intention and effect of the threat)."
+        },
+        {
+          "target_case_name": "Kwan Sing Kit",
+          "target_neutral_citation": "",
+          "relationship_type": "CITES",
+          "description": "The judgment cites Kwan Sing Kit as a comparable case where the parties had a long history of conflict, which is relevant to assessing the context of the threat."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:17:32.510310+00:00",
+      "paragraph_count": 68
+    },
+    {
+      "neutral_citation": "[2023] HKCA 1100",
+      "case_name": "HKSAR v. DINH KA YAN, GIGI",
+      "court_code": "Court of Appeal",
+      "decision_date": "2023-09-20T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Macrae VP and Zervos JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2023/1100",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [
+        {
+          "principle_label": "Sentencing factual basis after jury verdict",
+          "paraphrase_en": "A sentencing judge must determine the factual basis for sentence consistently with the jury's verdict. If the verdict has only one possible interpretation, the judge must sentence on that basis. If multiple interpretations are possible, the judge must determine the facts for sentencing by applying the criminal standard of proof to the trial evidence.",
+          "paragraph_span": "[30]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Judge's fact-finding power in sentencing",
+          "paraphrase_en": "A judge is entitled to form an independent view of the facts relevant to sentencing, provided that view is not inconsistent or in conflict with the jury's verdict.",
+          "paragraph_span": "[30], [37]",
+          "cited_statutes": []
+        },
+        {
+          "principle_label": "Prohibition against going behind verdict",
+          "paraphrase_en": "A party cannot invite the court to go behind or undermine the jury's verdict when establishing the factual basis for sentencing.",
+          "paragraph_span": "[21]",
+          "cited_statutes": []
+        }
+      ],
+      "relationships": [
+        {
+          "target_case_name": "HKSAR v Yee Yiu Sam",
+          "target_neutral_citation": "",
+          "relationship_type": "APPLIES",
+          "description": "The court endorses the general statements of principle made by Stock JA in that case regarding sentencing after a jury verdict."
+        }
+      ],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.47,
+        "signals": [
+          "criminal_party_name",
+          "criminal_keywords:2"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.47
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:18:20.511092+00:00",
+      "paragraph_count": 92
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 2088",
+      "case_name": "HKSAR v. SZE CHING LOK",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-08-09T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Campbell-Moffat J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/2088",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:19:58.269294+00:00",
+      "paragraph_count": 90
+    },
+    {
+      "neutral_citation": "[2022] HKCA 1697",
+      "case_name": "HKSAR v. THAPA KAMALA",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-11-11T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Poon CJHC, Pang JA and Anthea Pang JA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/1697",
+      "topic_id": "costs_taxation",
+      "topic_label": "Costs and Taxation",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "costs_taxation",
+          "topic_label": "Costs and Taxation",
+          "query": "costs follow event"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T04:34:17.533455+00:00",
+      "paragraph_count": 27
+    },
+    {
+      "neutral_citation": "[2022] HKDC 815",
+      "case_name": "HKSAR v. CHAN TAI SUM",
+      "court_code": "District Court",
+      "decision_date": "2022-08-01T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge W.K. Kwok"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/815",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "interlocutory_case_management",
+          "topic_id": "summary_judgment_strike_out",
+          "topic_label": "Summary Judgment and Strike Out",
+          "query": "no triable issue summary judgment"
+        },
+        {
+          "domain": "civil",
+          "module_id": "company_commercial_law",
+          "subground_id": "commercial_transactions",
+          "topic_id": "securities_civil_regulatory",
+          "topic_label": "Securities Civil and Regulatory Proceedings",
+          "query": "Securities Futures Ordinance Cap. 571 civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T06:09:23.174316+00:00",
+      "paragraph_count": 171
+    },
+    {
+      "neutral_citation": "[2021] HKCFA 39",
+      "case_name": "HKSAR v. CHO TING KAI (曹挺楷) AND OTHERS",
+      "court_code": "Court of Final Appeal",
+      "decision_date": "2021-11-05T00:00:00+08:00",
+      "judges": [
+        "Appeal Committee: Mr Justice Fok PJ, Mr Justice Lam PJ and Mr Justice Chan NPJ"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfa/2021/39",
+      "topic_id": "employees_compensation",
+      "topic_label": "Employees' Compensation",
+      "module_id": "employment_law",
+      "subground_id": "employment_discrimination_compensation",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "employment_law",
+          "subground_id": "employment_discrimination_compensation",
+          "topic_id": "employees_compensation",
+          "topic_label": "Employees' Compensation",
+          "query": "occupational injury employment"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T06:09:27.666019+00:00",
+      "paragraph_count": 50
+    },
+    {
+      "neutral_citation": "[2021] HKCFA 37",
+      "case_name": "HKSAR v. TONG WAI HUNG (湯偉雄)",
+      "court_code": "Court of Final Appeal",
+      "decision_date": "2021-11-04T00:00:00+08:00",
+      "judges": [
+        "Before: Chief Justice Cheung, Mr Justice Ribeiro PJ, Mr Justice Fok PJ, Mr Justice Lam PJ and Lord Sumption NPJ"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfa/2021/37",
+      "topic_id": "constructive_resulting_trusts",
+      "topic_label": "Constructive and Resulting Trusts",
+      "module_id": "probate_trusts_equity",
+      "subground_id": "trusts_equitable_remedies",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "probate_trusts_equity",
+          "subground_id": "trusts_equitable_remedies",
+          "topic_id": "constructive_resulting_trusts",
+          "topic_label": "Constructive and Resulting Trusts",
+          "query": "common intention constructive trust"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T06:09:46.898392+00:00",
+      "paragraph_count": 307
+    },
+    {
+      "neutral_citation": "[2021] HKDC 1000",
+      "case_name": "HKSAR v. SO HO LUN (also known as MA YU LUNG)",
+      "court_code": "District Court",
+      "decision_date": "2021-08-12T00:00:00+08:00",
+      "judges": [
+        "Before: HH Judge Dufton"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/1000",
+      "topic_id": "constructive_resulting_trusts",
+      "topic_label": "Constructive and Resulting Trusts",
+      "module_id": "probate_trusts_equity",
+      "subground_id": "trusts_equitable_remedies",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "probate_trusts_equity",
+          "subground_id": "trusts_equitable_remedies",
+          "topic_id": "constructive_resulting_trusts",
+          "topic_label": "Constructive and Resulting Trusts",
+          "query": "common intention constructive trust"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-14T06:09:47.007822+00:00",
+      "paragraph_count": 33
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 300",
+      "case_name": "HKSAR v. BALAKRISHNAN MAHENDRAN AND ANOTHER",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-02-08T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Barnes J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/300",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T08:05:49.971278+00:00",
+      "paragraph_count": 86
+    },
+    {
+      "neutral_citation": "[2023] HKCFI 247",
+      "case_name": "HKSAR v. ADJEI ROBERT (also known as ADJEI KING)",
+      "court_code": "Court of First Instance",
+      "decision_date": "2023-01-27T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Anna Lai J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2023/247",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T08:05:49.984124+00:00",
+      "paragraph_count": 127
+    },
+    {
+      "neutral_citation": "[2022] HKDC 261",
+      "case_name": "HKSAR v. CHEUNG WAI CHING AND OTHERS",
+      "court_code": "District Court",
+      "decision_date": "2022-03-25T00:00:00+08:00",
+      "judges": [
+        "Before: His Honour Judge Ko in Chambers (Paper Disposal)"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2022/261",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T08:05:50.001915+00:00",
+      "paragraph_count": 191
+    },
+    {
+      "neutral_citation": "[2021] HKCA 63",
+      "case_name": "HKSAR v. CHAN HO",
+      "court_code": "Court of Appeal",
+      "decision_date": "2021-01-18T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Macrae VP, McWalters and Zervos JJA in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2021/63",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T08:05:50.039161+00:00",
+      "paragraph_count": 114
+    },
+    {
+      "neutral_citation": "[2023] HKCFA 11",
+      "case_name": "HKSAR v. CHEN KEEN (alias JACK CHEN) (陳克恩)",
+      "court_code": "Court of Final Appeal",
+      "decision_date": "2023-05-24T00:00:00+08:00",
+      "judges": [
+        "Before: Chief Justice Cheung, Mr Justice Ribeiro PJ, Mr Justice Fok PJ, Mr Justice Lam PJ and Mr Justice Gummow NPJ"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfa/2023/11",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T08:05:50.078197+00:00",
+      "paragraph_count": 171
+    },
+    {
+      "neutral_citation": "[2022] HKCA 1517",
+      "case_name": "HKSAR v. CHEN KEEN (alias JACK CHEN) AND OTHERS",
+      "court_code": "Court of Appeal",
+      "decision_date": "2022-10-27T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Yuen JA, M Poon JA and Barnes J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkca/2022/1517",
+      "topic_id": "costs_taxation",
+      "topic_label": "Costs and Taxation",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "trial_evidence_burden",
+          "topic_label": "Trial Evidence and Burden of Proof",
+          "query": "trial evidence civil"
+        },
+        {
+          "domain": "civil",
+          "module_id": "civil_procedure",
+          "subground_id": "trial_costs_enforcement_appeals",
+          "topic_id": "costs_taxation",
+          "topic_label": "Costs and Taxation",
+          "query": "costs follow event"
+        }
+      ],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T08:05:51.209268+00:00",
+      "paragraph_count": 45
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 3173",
+      "case_name": "HKSAR v. HUI KA LOK, SAM",
+      "court_code": "Court of First Instance",
+      "decision_date": "2021-10-22T00:00:00+08:00",
+      "judges": [
+        "Before: Hon Campbell-Moffat J in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/3173",
+      "topic_id": "trial_evidence_burden",
+      "topic_label": "Trial Evidence and Burden of Proof",
+      "module_id": "civil_procedure",
+      "subground_id": "trial_costs_enforcement_appeals",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:24:44.597552+00:00",
+      "paragraph_count": 28
+    },
+    {
+      "neutral_citation": "[2021] HKCFI 2862",
+      "case_name": "HKSAR v. KIU MEI LING AND OTHERS",
+      "court_code": "Court of First Instance",
+      "decision_date": "2019-03-27T00:00:00+08:00",
+      "judges": [
+        "Before: DHCJ Lunn"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2021/2862",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:25:23.307181+00:00",
+      "paragraph_count": 95
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 2978",
+      "case_name": "HKSAR v. MANVEER, SINGH",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-04-08T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy High Court Judge Yiu in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/2978",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:25:23.389566+00:00",
+      "paragraph_count": 53
+    },
+    {
+      "neutral_citation": "[2024] HKDC 1836",
+      "case_name": "HKSAR v. ZULIFKAR",
+      "court_code": "District Court",
+      "decision_date": "2024-10-30T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge Terence Wai"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2024/1836",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:25:23.430866+00:00",
+      "paragraph_count": 38
+    },
+    {
+      "neutral_citation": "[2021] HKDC 654",
+      "case_name": "HKSAR v. NG MAN TANG",
+      "court_code": "District Court",
+      "decision_date": "2021-05-28T00:00:00+08:00",
+      "judges": [
+        "Before: HH Judge Dufton"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/654",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:25:23.441298+00:00",
+      "paragraph_count": 46
+    },
+    {
+      "neutral_citation": "[2021] HKDC 456",
+      "case_name": "HKSAR v. WUN PIK CHUN",
+      "court_code": "District Court",
+      "decision_date": "2021-04-16T00:00:00+08:00",
+      "judges": [
+        "Before: Deputy District Judge David Cheung in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/456",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:25:23.452625+00:00",
+      "paragraph_count": 48
+    },
+    {
+      "neutral_citation": "[2025] HKCFI 6434",
+      "case_name": "HKSAR v. SIDHU, BALVEER SINGH",
+      "court_code": "Court of First Instance",
+      "decision_date": "2025-12-24T00:00:00+08:00",
+      "judges": [
+        "Before: DHCJ E Lee in Court"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkcfi/2025/6434",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:25:23.465547+00:00",
+      "paragraph_count": 54
+    },
+    {
+      "neutral_citation": "[2021] HKDC 613",
+      "case_name": "HKSAR v. WONG HO LEONG",
+      "court_code": "District Court",
+      "decision_date": "2021-04-13T00:00:00+08:00",
+      "judges": [
+        "Before: HH Judge K Lo"
+      ],
+      "source_url": "https://www.hklii.hk/en/cases/hkdc/2021/613",
+      "topic_id": "securities_civil_regulatory",
+      "topic_label": "Securities Civil and Regulatory Proceedings",
+      "module_id": "company_commercial_law",
+      "subground_id": "commercial_transactions",
+      "principles": [],
+      "relationships": [],
+      "assignment_confidence": 0.6,
+      "assignment_status": "candidate",
+      "enrichment_status": "candidate",
+      "domain_classification": {
+        "domain": "criminal",
+        "confidence": 0.35,
+        "signals": [
+          "criminal_party_name"
+        ],
+        "secondary_domains": [],
+        "scores": {
+          "criminal": 0.35
+        },
+        "method": "rules",
+        "quarantine_reason": "out_of_domain"
+      },
+      "target_domain": "civil",
+      "cross_references": [],
+      "review_status": "pending",
+      "review_notes": "",
+      "enriched_at": "2026-04-15T16:25:23.502110+00:00",
+      "paragraph_count": 32
+    }
+  ]
+}

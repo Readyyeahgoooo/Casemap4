@@ -1,0 +1,3000 @@
+              "statute:cap_32",
+              "statute:cap_336",
+              "statute:cap_341",
+              "statute:cap_4",
+              "statute:cap_429",
+              "statute:cap_475",
+              "statute:cap_481",
+              "statute:cap_548",
+              "statute:cap_6",
+              "statute:cap_645",
+              "statute:chapter_15",
+              "statute:chapter_17",
+              "statute:chapter_5",
+              "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
+              "statute:companies_winding_up_rules",
+              "statute:companies_ordinance",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:crimes_ordinance",
+              "statute:criminal_procedure_ordinance",
+              "statute:district_court_ordinance",
+              "statute:domestic_and_cohabitation_relationships_violence_ordinance",
+              "statute:evidence_ordinance",
+              "statute:foreign_judgments_reciprocal_enforcement_ordinance",
+              "statute:guardianship_of_minors_ordinance",
+              "statute:high_court_ordinance",
+              "statute:hong_kong_bill_of_rights_ordinance",
+              "statute:inland_revenue_ordinance",
+              "statute:land_registration_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:legal_practitioners_ordinance",
+              "statute:limitation_ordinance",
+              "statute:mainland_judgments_reciprocal_enforcement_ordinance",
+              "statute:married_persons_status_ordinance",
+              "statute:matrimonial_causes_ordinance",
+              "statute:matrimonial_causes_rules",
+              "statute:matrimonial_proceedings_and_property_ordinance",
+              "statute:merchant_shipping_local_vessels_safety_and_survey_regulation",
+              "statute:non_contentious_probate_rules",
+              "statute:o_18",
+              "statute:o_23",
+              "statute:o_62",
+              "statute:o_24",
+              "statute:order_11",
+              "statute:order_13",
+              "statute:order_15",
+              "statute:order_18",
+              "statute:order_1a",
+              "statute:order_2",
+              "statute:order_21",
+              "statute:order_23",
+              "statute:order_24",
+              "statute:order_25",
+              "statute:order_28",
+              "statute:order_29",
+              "statute:order_3",
+              "statute:order_42",
+              "statute:order_53",
+              "statute:order_58",
+              "statute:order_59",
+              "statute:order_62",
+              "statute:order_65",
+              "statute:order_73",
+              "statute:parent_and_child_ordinance",
+              "statute:patents_ordinance",
+              "statute:post_release_supervision_of_prisoners_ordinance",
+              "statute:post_release_supervision_of_prisoners_regulation",
+              "statute:prison_rules",
+              "statute:rule_3",
+              "statute:rule_6",
+              "statute:section_14aa",
+              "statute:section_21l",
+              "statute:section_3",
+              "statute:section_47a",
+              "statute:section_84",
+              "statute:securities_and_futures_ordinance",
+              "statute:separation_and_maintenance_orders_ordinance",
+              "statute:town_planning_ordinance",
+              "statute:r_14a",
+              "statute:r_10",
+              "statute:r_10a",
+              "statute:r_29",
+              "statute:rule_44",
+              "statute:rule_69",
+              "statute:rule_77",
+              "statute:rule_9",
+              "statute:s_2",
+              "statute:s_21m",
+              "statute:s_52a",
+              "statute:s_52b",
+              "statute:s_81",
+              "statute:s_178",
+              "statute:s_42",
+              "statute:s_43",
+              "statute:s_44",
+              "statute:s_67",
+              "statute:s_6b",
+              "statute:s_729",
+              "statute:section_124",
+              "statute:section_12a",
+              "statute:section_177",
+              "statute:section_2",
+              "statute:section_21m",
+              "statute:section_26",
+              "statute:section_27",
+              "statute:section_327",
+              "statute:section_41",
+              "statute:section_42",
+              "statute:section_47",
+              "statute:section_52a",
+              "statute:section_56",
+              "statute:section_6",
+              "statute:section_63a",
+              "statute:section_67a",
+              "statute:section_724",
+              "statute:section_75",
+              "statute:section_81",
+              "statute:section_905",
+              "statute:sections_10",
+              "statute:sections_4",
+              "statute:sections_724",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court",
+              "statute:the_united_nations"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 4,
+              "cases": 112,
+              "statutes": 136,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:civil_procedure:trial_costs_enforcement_appeals",
+            "module_id": "module:civil_procedure",
+            "slug": "trial_costs_enforcement_appeals",
+            "type": "subground",
+            "label_en": "Trial, Costs, Enforcement and Appeals",
+            "label_zh": "審訊、訟費、執行及上訴",
+            "label": "Trial, Costs, Enforcement and Appeals / 審訊、訟費、執行及上訴",
+            "secondary_label": "審訊、訟費、執行及上訴",
+            "summary_en": "Trial conduct, evidential burdens, costs, enforcement tools, limitation, and civil appeals.",
+            "summary_zh": "審訊進行、舉證責任、訟費、執行工具、時效及民事上訴。",
+            "summary": "Trial conduct, evidential burdens, costs, enforcement tools, limitation, and civil appeals.",
+            "children": [
+              {
+                "en": "trial",
+                "zh": "審訊"
+              },
+              {
+                "en": "costs",
+                "zh": "訟費"
+              },
+              {
+                "en": "enforcement",
+                "zh": "執行"
+              },
+              {
+                "en": "appeals",
+                "zh": "上訴"
+              }
+            ],
+            "topic_ids": [
+              "topic:civil_procedure:08:trial_evidence_and_burden_of_proof",
+              "topic:civil_procedure:09:costs_and_taxation",
+              "topic:civil_procedure:10:enforcement_of_judgments",
+              "topic:civil_procedure:11:civil_appeals_and_limitation"
+            ],
+            "topic_labels": [
+              "Trial Evidence and Burden of Proof",
+              "Costs and Taxation",
+              "Enforcement of Judgments",
+              "Civil Appeals and Limitation"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2023_hkdc_1077",
+              "case:2021_hkcfa_20",
+              "case:2021_hkcfi_1096",
+              "case:2021_hkcfi_1477",
+              "case:2021_hkcfi_2032",
+              "case:2021_hkcfi_2111",
+              "case:2021_hkcfi_215",
+              "case:2021_hkcfi_2341",
+              "case:2021_hkcfi_2407",
+              "case:2021_hkcfi_263",
+              "case:2021_hkcfi_2986",
+              "case:2021_hkcfi_3466",
+              "case:2021_hkcfi_3665",
+              "case:2021_hkcfi_3853",
+              "case:2021_hkcfi_484",
+              "case:2021_hkcfi_606",
+              "case:2021_hkdc_340",
+              "case:2021_hkdc_352",
+              "case:2022_hkca_117",
+              "case:2022_hkca_1512",
+              "case:2022_hkca_951",
+              "case:2022_hkcfi_1270",
+              "case:2022_hkcfi_1555",
+              "case:2022_hkcfi_1660",
+              "case:2022_hkcfi_178",
+              "case:2022_hkcfi_2549",
+              "case:2022_hkcfi_2685",
+              "case:2022_hkcfi_2726",
+              "case:2022_hkcfi_2903",
+              "case:2022_hkcfi_3018",
+              "case:2022_hkcfi_644",
+              "case:2022_hkdc_29",
+              "case:2022_hkdc_766",
+              "case:2022_hkdc_846",
+              "case:2023_hkca_888",
+              "case:2023_hkcfi_1558",
+              "case:2023_hkcfi_1684",
+              "case:2023_hkcfi_2540",
+              "case:2023_hkcfi_2661",
+              "case:2023_hkcfi_403",
+              "case:2023_hkcfi_659",
+              "case:2023_hkfc_201",
+              "case:2023_hkfc_40",
+              "case:2024_hkca_818",
+              "case:2024_hkcfa_17",
+              "case:2024_hkcfi_1330",
+              "case:2024_hkcfi_1464",
+              "case:2024_hkcfi_1897",
+              "case:2024_hkcfi_204",
+              "case:2024_hkcfi_2619",
+              "case:2024_hkcfi_2723",
+              "case:2024_hkcfi_2742",
+              "case:2024_hkcfi_292",
+              "case:2024_hkcfi_386",
+              "case:2024_hkcfi_698",
+              "case:2024_hkcfi_773",
+              "case:2024_hkcfi_958",
+              "case:2024_hkdc_1256",
+              "case:2024_hkdc_1612",
+              "case:2024_hkdc_1770",
+              "case:2024_hkdc_792",
+              "case:2024_hkfc_19",
+              "case:2024_hkfc_33",
+              "case:2025_hkca_193",
+              "case:2025_hkca_462",
+              "case:2025_hkcfi_1128",
+              "case:2025_hkcfi_1685",
+              "case:2025_hkcfi_3051",
+              "case:2025_hkcfi_3905",
+              "case:2025_hkcfi_5714",
+              "case:2025_hkcfi_6482",
+              "case:2025_hkcfi_683",
+              "case:2025_hkcfi_714",
+              "case:2025_hkfc_126",
+              "case:2025_hkfc_180",
+              "case:2026_hkca_214",
+              "case:2026_hkca_266",
+              "case:2026_hkca_59",
+              "case:2026_hkcfi_1297",
+              "case:2026_hkcfi_1795",
+              "case:2026_hkcfi_658",
+              "case:2026_hkcfi_954",
+              "case:2026_hkdc_555"
+            ],
+            "statute_ids": [
+              "statute:anti_money_laundering_and_counter_terrorist_financing_ordinance",
+              "statute:arbitration_ordinance",
+              "statute:bankruptcy_ordinance",
+              "statute:cap_3_cap_32",
+              "statute:cap_179",
+              "statute:cap_314",
+              "statute:cap_319",
+              "statute:cap_32",
+              "statute:cap_336",
+              "statute:cap_341",
+              "statute:cap_4",
+              "statute:cap_597",
+              "statute:cap_645",
+              "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
+              "statute:companies_ordinance",
+              "statute:construction_sites_safety_regulations",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:district_court_fees_rules",
+              "statute:district_court_ordinance",
+              "statute:employees_compensation_ordinance",
+              "statute:estate_agents_ordinance",
+              "statute:estate_duty_ordinance",
+              "statute:evidence_ordinance",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:foreign_judgments_reciprocal_enforcement_ordinance",
+              "statute:guardianship_of_minors_ordinance",
+              "statute:high_court_ordinance",
+              "statute:hong_kong_bill_of_rights_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:limitation_ordinance",
+              "statute:loan_fund",
+              "statute:mainland_judgments_reciprocal_enforcement_ordinance",
+              "statute:matrimonial_causes_rules",
+              "statute:matrimonial_proceedings_and_property_ordinance",
+              "statute:mediation_ordinance",
+              "statute:o_23",
+              "statute:o_62",
+              "statute:o_24",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:order_11",
+              "statute:order_113",
+              "statute:order_13",
+              "statute:order_14",
+              "statute:order_15",
+              "statute:order_18",
+              "statute:order_1a",
+              "statute:order_21",
+              "statute:order_23",
+              "statute:order_24",
+              "statute:order_29",
+              "statute:order_3",
+              "statute:order_38",
+              "statute:order_42",
+              "statute:order_45",
+              "statute:order_49",
+              "statute:order_50",
+              "statute:order_52",
+              "statute:order_53",
+              "statute:order_58",
+              "statute:order_59",
+              "statute:order_62",
+              "statute:order_71a",
+              "statute:order_73",
+              "statute:order_85",
+              "statute:patents_ordinance",
+              "statute:probate_and_administration_ordinance",
+              "statute:road_traffic_ordinance",
+              "statute:rule_20",
+              "statute:rule_35",
+              "statute:rule_6",
+              "statute:rule_87",
+              "statute:section_10",
+              "statute:section_12",
+              "statute:section_14aa",
+              "statute:section_21l",
+              "statute:section_22",
+              "statute:section_3",
+              "statute:section_33",
+              "statute:section_40",
+              "statute:section_62",
+              "statute:section_8",
+              "statute:section_84",
+              "statute:section_87",
+              "statute:stamp_duty_ordinance",
+              "statute:trade_marks_ordinance",
+              "statute:trustee_ordinance",
+              "statute:r_10",
+              "statute:r_10a",
+              "statute:rule_10",
+              "statute:rule_2",
+              "statute:rule_40",
+              "statute:s_21m",
+              "statute:s_30",
+              "statute:s_48",
+              "statute:s_52a",
+              "statute:s_81",
+              "statute:s_95",
+              "statute:s_40c",
+              "statute:s_93",
+              "statute:s_182",
+              "statute:s_3",
+              "statute:s_42",
+              "statute:s_44",
+              "statute:s_87",
+              "statute:s_92",
+              "statute:section_2",
+              "statute:section_20",
+              "statute:section_24",
+              "statute:section_26",
+              "statute:section_40c",
+              "statute:section_41",
+              "statute:section_47",
+              "statute:section_48",
+              "statute:section_52",
+              "statute:section_52a",
+              "statute:section_56",
+              "statute:section_6",
+              "statute:section_63a",
+              "statute:section_89",
+              "statute:section_92",
+              "statute:section_95",
+              "statute:sections_33",
+              "statute:sections_84",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court",
+              "statute:the_united_nations",
+              "statute:645"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 4,
+              "cases": 83,
+              "statutes": 127,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 3,
+          "topics": 11,
+          "cases": 193,
+          "statutes": 209,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:contract_law",
+        "slug": "contract_law",
+        "type": "module",
+        "label_en": "Contract Law",
+        "label_zh": "合約法",
+        "label": "Contract Law / 合約法",
+        "secondary_label": "合約法",
+        "summary_en": "Formation, terms, vitiating factors, breach, termination, remedies, restitution, and statutory contract regimes.",
+        "summary_zh": "涵蓋合約成立、條款、影響合約效力因素、違約、終止、補救、返還及法定合約制度。",
+        "summary": "Formation, terms, vitiating factors, breach, termination, remedies, restitution, and statutory contract regimes.",
+        "subgrounds": [
+          {
+            "id": "subground:contract_law:formation_terms_interpretation",
+            "module_id": "module:contract_law",
+            "slug": "formation_terms_interpretation",
+            "type": "subground",
+            "label_en": "Formation, Terms and Interpretation",
+            "label_zh": "成立、條款及詮釋",
+            "label": "Formation, Terms and Interpretation / 成立、條款及詮釋",
+            "secondary_label": "成立、條款及詮釋",
+            "summary_en": "Offer and acceptance, consideration, intention, incorporation, implied terms, and contractual construction.",
+            "summary_zh": "要約與承諾、代價、締約意圖、納入條款、隱含條款及合約詮釋。",
+            "summary": "Offer and acceptance, consideration, intention, incorporation, implied terms, and contractual construction.",
+            "children": [
+              {
+                "en": "formation",
+                "zh": "成立"
+              },
+              {
+                "en": "terms",
+                "zh": "條款"
+              },
+              {
+                "en": "interpretation",
+                "zh": "詮釋"
+              }
+            ],
+            "topic_ids": [
+              "topic:contract_law:12:contract_formation",
+              "topic:contract_law:13:contractual_terms_and_interpretation",
+              "topic:contract_law:14:third_party_rights"
+            ],
+            "topic_labels": [
+              "Contract Formation",
+              "Contractual Terms and Interpretation",
+              "Third Party Rights"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
+            "metrics": {
+              "topics": 3,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
+              "lineages": 0
+            },
+            "coverage": "placeholder"
+          },
+          {
+            "id": "subground:contract_law:vitiating_factors",
+            "module_id": "module:contract_law",
+            "slug": "vitiating_factors",
+            "type": "subground",
+            "label_en": "Vitiating Factors",
+            "label_zh": "影響合約效力因素",
+            "label": "Vitiating Factors / 影響合約效力因素",
+            "secondary_label": "影響合約效力因素",
+            "summary_en": "Misrepresentation, mistake, duress, undue influence, unconscionability, and illegality.",
+            "summary_zh": "失實陳述、錯誤、脅迫、不當影響、不合情理及非法性。",
+            "summary": "Misrepresentation, mistake, duress, undue influence, unconscionability, and illegality.",
+            "children": [
+              {
+                "en": "misrepresentation",
+                "zh": "失實陳述"
+              },
+              {
+                "en": "mistake",
+                "zh": "錯誤"
+              },
+              {
+                "en": "duress",
+                "zh": "脅迫"
+              }
+            ],
+            "topic_ids": [
+              "topic:contract_law:15:misrepresentation",
+              "topic:contract_law:16:mistake_duress_and_undue_influence",
+              "topic:contract_law:17:illegality_and_public_policy"
+            ],
+            "topic_labels": [
+              "Misrepresentation",
+              "Mistake, Duress and Undue Influence",
+              "Illegality and Public Policy"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2020_hkcfi_2477",
+              "case:2021_hkca_1211",
+              "case:2021_hkca_1450",
+              "case:2021_hkcfi_1552",
+              "case:2021_hkcfi_215",
+              "case:2021_hkcfi_2422",
+              "case:2021_hkcfi_2966",
+              "case:2021_hkcfi_2970",
+              "case:2021_hkcfi_3822",
+              "case:2022_hkca_426",
+              "case:2022_hkcfi_1450",
+              "case:2022_hkcfi_2653",
+              "case:2023_hkcfi_2176",
+              "case:2023_hkfc_40",
+              "case:2024_hkcfi_1444",
+              "case:2024_hkcfi_1461",
+              "case:2024_hkcfi_2133",
+              "case:2024_hkcfi_2499",
+              "case:2024_hkcfi_2630",
+              "case:2024_hkcfi_2773",
+              "case:2025_hkca_685",
+              "case:2025_hkcfi_3051",
+              "case:2025_hkcfi_3823",
+              "case:2025_hkcfi_3881",
+              "case:2025_hkcfi_4793",
+              "case:2025_hkcfi_5272",
+              "case:2025_hkdc_19",
+              "case:2025_hkdc_547",
+              "case:2025_hkfc_126",
+              "case:2026_hkcfa_9",
+              "case:2026_hkcfi_1765",
+              "case:2026_hkcfi_1795",
+              "case:2026_hkcfi_1975",
+              "case:2026_hkcfi_749",
+              "case:2026_hkcfi_993",
+              "case:2026_hkdc_181"
+            ],
+            "statute_ids": [
+              "statute:arbitration_ordinance",
+              "statute:banking_ordinance",
+              "statute:bankruptcy_ordinance",
+              "statute:bankruptcy_rules",
+              "statute:bond_fund",
+              "statute:building_management_ordinance",
+              "statute:cap_179",
+              "statute:cap_319",
+              "statute:cap_32",
+              "statute:cap_336",
+              "statute:cap_4",
+              "statute:cap_6",
+              "statute:cap_7",
+              "statute:chapter_15",
+              "statute:chapter_17",
+              "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
+              "statute:companies_winding_up_rules",
+              "statute:companies_ordinance",
+              "statute:control_of_exemption_clauses_ordinance",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:district_court_ordinance",
+              "statute:evidence_ordinance",
+              "statute:high_court_ordinance",
+              "statute:interpretation_and_general_clauses_ordinance",
+              "statute:lands_tribunal_ordinance",
+              "statute:limitation_ordinance",
+              "statute:matrimonial_causes_rules",
+              "statute:matrimonial_proceedings_and_property_ordinance",
+              "statute:misrepresentation_ordinance",
+              "statute:money_lenders_ordinance",
+              "statute:order_14",
+              "statute:order_24",
+              "statute:order_45",
+              "statute:order_49",
+              "statute:order_50",
+              "statute:order_52",
+              "statute:order_59",
+              "statute:order_62",
+              "statute:order_65",
+              "statute:order_73",
+              "statute:order_83a",
+              "statute:order_86",
+              "statute:rule_87",
+              "statute:section_11",
+              "statute:section_12",
+              "statute:section_3",
+              "statute:section_47a",
+              "statute:securities_and_futures_ordinance",
+              "statute:unconscionable_contracts_ordinance",
+              "statute:rule_1",
+              "statute:rule_48",
+              "statute:rule_5",
+              "statute:s_102",
+              "statute:s_108",
+              "statute:s_119",
+              "statute:s_3",
+              "statute:s_5",
+              "statute:section_17",
+              "statute:section_177",
+              "statute:section_20",
+              "statute:section_26",
+              "statute:section_27",
+              "statute:section_35",
+              "statute:section_4",
+              "statute:section_45",
+              "statute:section_49",
+              "statute:sections_724",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 3,
+              "cases": 36,
+              "statutes": 69,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:contract_law:breach_remedies_contract",
+            "module_id": "module:contract_law",
+            "slug": "breach_remedies_contract",
+            "type": "subground",
+            "label_en": "Breach, Termination and Remedies",
+            "label_zh": "違約、終止及補救",
+            "label": "Breach, Termination and Remedies / 違約、終止及補救",
+            "secondary_label": "違約、終止及補救",
+            "summary_en": "Repudiation, termination, damages, penalties, specific performance, injunctions, restitution, and sale of goods remedies.",
+            "summary_zh": "毀約、終止、損害賠償、罰款條款、強制履行、禁制令、返還及貨品售賣補救。",
+            "summary": "Repudiation, termination, damages, penalties, specific performance, injunctions, restitution, and sale of goods remedies.",
+            "children": [
+              {
+                "en": "breach",
+                "zh": "違約"
+              },
+              {
+                "en": "termination",
+                "zh": "終止"
+              },
+              {
+                "en": "remedies",
+                "zh": "補救"
+              }
+            ],
+            "topic_ids": [
+              "topic:contract_law:18:repudiatory_breach_and_termination",
+              "topic:contract_law:19:damages_penalties_and_liquidated_damages",
+              "topic:contract_law:20:specific_performance_and_injunctions",
+              "topic:contract_law:21:sale_of_goods"
+            ],
+            "topic_labels": [
+              "Repudiatory Breach and Termination",
+              "Damages, Penalties and Liquidated Damages",
+              "Specific Performance and Injunctions",
+              "Sale of Goods"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2025_hkcfi_714",
+              "case:2026_hkcfi_1975"
+            ],
+            "statute_ids": [
+              "statute:banking_ordinance",
+              "statute:bond_fund",
+              "statute:cap_4",
+              "statute:cap_645",
+              "statute:control_of_exemption_clauses_ordinance",
+              "statute:high_court_ordinance",
+              "statute:mainland_judgments_reciprocal_enforcement_ordinance",
+              "statute:misrepresentation_ordinance",
+              "statute:order_11",
+              "statute:order_29",
+              "statute:securities_and_futures_ordinance",
+              "statute:unconscionable_contracts_ordinance",
+              "statute:s_108",
+              "statute:s_119",
+              "statute:s_3",
+              "statute:s_5",
+              "statute:section_4"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 4,
+              "cases": 2,
+              "statutes": 17,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 3,
+          "topics": 10,
+          "cases": 37,
+          "statutes": 73,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:tort_law",
+        "slug": "tort_law",
+        "type": "module",
+        "label_en": "Tort Law",
+        "label_zh": "侵權法",
+        "label": "Tort Law / 侵權法",
+        "secondary_label": "侵權法",
+        "summary_en": "Negligence, personal injury, occupiers' liability, vicarious liability, nuisance, defamation, and professional negligence.",
+        "summary_zh": "疏忽、個人傷害、佔用人法律責任、轉承責任、滋擾、誹謗及專業疏忽。",
+        "summary": "Negligence, personal injury, occupiers' liability, vicarious liability, nuisance, defamation, and professional negligence.",
+        "subgrounds": [
+          {
+            "id": "subground:tort_law:negligence_elements",
+            "module_id": "module:tort_law",
+            "slug": "negligence_elements",
+            "type": "subground",
+            "label_en": "Negligence Elements",
+            "label_zh": "疏忽要素",
+            "label": "Negligence Elements / 疏忽要素",
+            "secondary_label": "疏忽要素",
+            "summary_en": "Duty of care, breach, causation, remoteness, defences, and apportionment.",
+            "summary_zh": "謹慎責任、違反責任、因果關係、損害距離、抗辯及分擔責任。",
+            "summary": "Duty of care, breach, causation, remoteness, defences, and apportionment.",
+            "children": [
+              {
+                "en": "duty",
+                "zh": "責任"
+              },
+              {
+                "en": "breach",
+                "zh": "違反"
+              },
+              {
+                "en": "causation",
+                "zh": "因果關係"
+              }
+            ],
+            "topic_ids": [
+              "topic:tort_law:22:duty_and_breach_of_care",
+              "topic:tort_law:23:causation_and_remoteness",
+              "topic:tort_law:24:contributory_negligence"
+            ],
+            "topic_labels": [
+              "Duty and Breach of Care",
+              "Causation and Remoteness",
+              "Contributory Negligence"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkdc_340",
+              "case:2022_hkcfi_1255",
+              "case:2022_hkdc_1090",
+              "case:2022_hkdc_29",
+              "case:2022_hkdc_304",
+              "case:2023_hkcfi_636",
+              "case:2023_hkdc_298",
+              "case:2025_hkdc_814",
+              "case:2026_hkcfi_1975",
+              "case:2026_hkdc_555"
+            ],
+            "statute_ids": [
+              "statute:banking_ordinance",
+              "statute:bond_fund",
+              "statute:building_standards_of_sanitary_fitments_plumbing_drainage_works_and_latrines_reg",
+              "statute:building_management_ordinance",
+              "statute:cap_102",
+              "statute:cap_123",
+              "statute:cap_314",
+              "statute:cap_336",
+              "statute:cap_59",
+              "statute:construction_sites_safety_regulations",
+              "statute:control_of_exemption_clauses_ordinance",
+              "statute:district_court_ordinance",
+              "statute:employees_compensation_ordinance",
+              "statute:evidence_ordinance",
+              "statute:factories_and_industrial_undertakings_woodworking_machinery_regulations",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:high_court_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:misrepresentation_ordinance",
+              "statute:o_62",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:occupiers_liability_ordinance",
+              "statute:order_24",
+              "statute:road_traffic_ordinance",
+              "statute:section_14aa",
+              "statute:section_47a",
+              "statute:section_62",
+              "statute:section_8",
+              "statute:securities_and_futures_ordinance",
+              "statute:unconscionable_contracts_ordinance",
+              "statute:waterworks_regulations",
+              "statute:s_24",
+              "statute:s_34",
+              "statute:s_108",
+              "statute:s_119",
+              "statute:s_3",
+              "statute:s_43",
+              "statute:s_5",
+              "statute:section_4",
+              "statute:section_41",
+              "statute:section_6",
+              "statute:section_6a",
+              "statute:section_7",
+              "statute:the_rules_of_the_district_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 3,
+              "cases": 10,
+              "statutes": 44,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:tort_law:personal_injury_occupiers_professional",
+            "module_id": "module:tort_law",
+            "slug": "personal_injury_occupiers_professional",
+            "type": "subground",
+            "label_en": "Personal Injury, Occupiers and Professional Negligence",
+            "label_zh": "個人傷害、佔用人及專業疏忽",
+            "label": "Personal Injury, Occupiers and Professional Negligence / 個人傷害、佔用人及專業疏忽",
+            "secondary_label": "個人傷害、佔用人及專業疏忽",
+            "summary_en": "Assessment of personal injury claims, occupiers' liability, vicarious liability, and professional negligence.",
+            "summary_zh": "個人傷害申索評估、佔用人責任、轉承責任及專業疏忽。",
+            "summary": "Assessment of personal injury claims, occupiers' liability, vicarious liability, and professional negligence.",
+            "children": [
+              {
+                "en": "personal injury",
+                "zh": "個人傷害"
+              },
+              {
+                "en": "occupiers",
+                "zh": "佔用人"
+              },
+              {
+                "en": "professional negligence",
+                "zh": "專業疏忽"
+              }
+            ],
+            "topic_ids": [
+              "topic:tort_law:25:personal_injury_damages",
+              "topic:tort_law:26:occupiers_liability",
+              "topic:tort_law:27:vicarious_and_professional_negligence"
+            ],
+            "topic_labels": [
+              "Personal Injury Damages",
+              "Occupiers' Liability",
+              "Vicarious and Professional Negligence"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkdc_385",
+              "case:2022_hkca_1855",
+              "case:2022_hkcfi_3301",
+              "case:2022_hkcfi_3355",
+              "case:2022_hkcfi_946",
+              "case:2022_hkdc_1309",
+              "case:2022_hkdc_409",
+              "case:2023_hkca_594",
+              "case:2023_hkcfi_3342",
+              "case:2023_hkdc_912",
+              "case:2025_hkcfa_6",
+              "case:2025_hkcfi_2642",
+              "case:2026_hkca_204",
+              "case:2026_hkcfi_291"
+            ],
+            "statute_ids": [
+              "statute:cap_4",
+              "statute:companies_ordinance",
+              "statute:employees_compensation_ordinance",
+              "statute:high_court_ordinance",
+              "statute:lands_resumption_ordinance",
+              "statute:lands_tribunal_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:order_59",
+              "statute:railways_ordinance",
+              "statute:roads_works_use_and_compensation_ordinance",
+              "statute:section_10",
+              "statute:section_11",
+              "statute:s_827",
+              "statute:section_49",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 3,
+              "cases": 14,
+              "statutes": 15,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:tort_law:nuisance_defamation",
+            "module_id": "module:tort_law",
+            "slug": "nuisance_defamation",
+            "type": "subground",
+            "label_en": "Nuisance and Defamation",
+            "label_zh": "滋擾及誹謗",
+            "label": "Nuisance and Defamation / 滋擾及誹謗",
+            "secondary_label": "滋擾及誹謗",
+            "summary_en": "Private nuisance, public nuisance in civil proceedings, defamation, privilege, and remedies.",
+            "summary_zh": "私人滋擾、民事程序中的公眾滋擾、誹謗、特權及補救。",
+            "summary": "Private nuisance, public nuisance in civil proceedings, defamation, privilege, and remedies.",
+            "children": [
+              {
+                "en": "nuisance",
+                "zh": "滋擾"
+              },
+              {
+                "en": "defamation",
+                "zh": "誹謗"
+              }
+            ],
+            "topic_ids": [
+              "topic:tort_law:28:private_nuisance",
+              "topic:tort_law:29:defamation_and_privilege"
+            ],
+            "topic_labels": [
+              "Private Nuisance",
+              "Defamation and Privilege"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkcfi_678",
+              "case:2021_hkdc_1342",
+              "case:2021_hkdc_1492",
+              "case:2021_hkdc_1540",
+              "case:2022_hkdc_211",
+              "case:2023_hkcfi_2430",
+              "case:2023_hkdc_1697",
+              "case:2023_hkdc_1735",
+              "case:2023_hkdc_834",
+              "case:2024_hkdc_1920",
+              "case:2025_hkcfi_388"
+            ],
+            "statute_ids": [
+              "statute:building_management_ordinance",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:order_14",
+              "statute:private_columbaria_ordinance",
+              "statute:public_health_and_municipal_services_ordinance",
+              "statute:section_16",
+              "statute:section_8",
+              "statute:s_127",
+              "statute:s_34h",
+              "statute:section_2",
+              "statute:section_34h",
+              "statute:the_rules_of_the_district_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 11,
+              "statutes": 12,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 3,
+          "topics": 8,
+          "cases": 35,
+          "statutes": 65,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:property_land_law",
+        "slug": "property_land_law",
+        "type": "module",
+        "label_en": "Property and Land Law",
+        "label_zh": "物業及土地法",
+        "label": "Property and Land Law / 物業及土地法",
+        "secondary_label": "物業及土地法",
+        "summary_en": "Conveyancing, leases, mortgages, co-ownership, easements, covenants, building management, and adverse possession.",
+        "summary_zh": "物業轉易、租賃、按揭、共同擁有權、地役權、契諾、建築物管理及逆權管有。",
+        "summary": "Conveyancing, leases, mortgages, co-ownership, easements, covenants, building management, and adverse possession.",
+        "subgrounds": [
+          {
+            "id": "subground:property_land_law:conveyancing_leases",
+            "module_id": "module:property_land_law",
+            "slug": "conveyancing_leases",
+            "type": "subground",
+            "label_en": "Conveyancing and Leases",
+            "label_zh": "物業轉易及租賃",
+            "label": "Conveyancing and Leases / 物業轉易及租賃",
+            "secondary_label": "物業轉易及租賃",
+            "summary_en": "Sale and purchase, completion, title, landlord and tenant disputes, forfeiture, and relief.",
+            "summary_zh": "買賣、完成交易、業權、業主租客爭議、沒收租賃及濟助。",
+            "summary": "Sale and purchase, completion, title, landlord and tenant disputes, forfeiture, and relief.",
+            "children": [
+              {
+                "en": "conveyancing",
+                "zh": "物業轉易"
+              },
+              {
+                "en": "leases",
+                "zh": "租賃"
+              }
+            ],
+            "topic_ids": [
+              "topic:property_land_law:30:conveyancing_sale_and_purchase",
+              "topic:property_land_law:31:leases_tenancy_and_forfeiture"
+            ],
+            "topic_labels": [
+              "Conveyancing Sale and Purchase",
+              "Leases, Tenancy and Forfeiture"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
+            "metrics": {
+              "topics": 2,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
+              "lineages": 0
+            },
+            "coverage": "placeholder"
+          },
+          {
+            "id": "subground:property_land_law:land_interests",
+            "module_id": "module:property_land_law",
+            "slug": "land_interests",
+            "type": "subground",
+            "label_en": "Land Interests",
+            "label_zh": "土地權益",
+            "label": "Land Interests / 土地權益",
+            "secondary_label": "土地權益",
+            "summary_en": "Mortgages, co-ownership, trusts of land, easements, restrictive covenants, registration, and priorities.",
+            "summary_zh": "按揭、共同擁有、土地信託、地役權、限制性契諾、註冊及優先次序。",
+            "summary": "Mortgages, co-ownership, trusts of land, easements, restrictive covenants, registration, and priorities.",
+            "children": [
+              {
+                "en": "mortgages",
+                "zh": "按揭"
+              },
+              {
+                "en": "co-ownership",
+                "zh": "共同擁有"
+              },
+              {
+                "en": "easements",
+                "zh": "地役權"
+              }
+            ],
+            "topic_ids": [
+              "topic:property_land_law:32:mortgages_and_priorities",
+              "topic:property_land_law:33:co_ownership_and_trusts_of_land",
+              "topic:property_land_law:34:easements_and_covenants"
+            ],
+            "topic_labels": [
+              "Mortgages and Priorities",
+              "Co-ownership and Trusts of Land",
+              "Easements and Covenants"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkcfi_1552",
+              "case:2021_hkcfi_399",
+              "case:2021_hkdc_172",
+              "case:2022_hkcfi_1710",
+              "case:2022_hkdc_1095",
+              "case:2022_hkdc_303",
+              "case:2024_hkdc_21",
+              "case:2024_hkdc_217",
+              "case:2024_hkdc_537",
+              "case:2025_hkcfi_1128",
+              "case:2026_hkcfa_9"
+            ],
+            "statute_ids": [
+              "statute:cap_163",
+              "statute:cap_336",
+              "statute:companies_ordinance",
+              "statute:district_court_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:limitation_ordinance",
+              "statute:order_14",
+              "statute:order_15",
+              "statute:order_19",
+              "statute:order_32",
+              "statute:order_83a",
+              "statute:probate_and_administration_ordinance",
+              "statute:trustee_ordinance",
+              "statute:section_2",
+              "statute:section_20",
+              "statute:section_50",
+              "statute:section_52",
+              "statute:section_827",
+              "statute:sections_33",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 3,
+              "cases": 11,
+              "statutes": 21,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:property_land_law:building_management_possession",
+            "module_id": "module:property_land_law",
+            "slug": "building_management_possession",
+            "type": "subground",
+            "label_en": "Building Management and Possession",
+            "label_zh": "建築物管理及管有",
+            "label": "Building Management and Possession / 建築物管理及管有",
+            "secondary_label": "建築物管理及管有",
+            "summary_en": "Deeds of mutual covenant, incorporated owners, management disputes, adverse possession, and possession claims.",
+            "summary_zh": "公契、業主立案法團、管理爭議、逆權管有及管有申索。",
+            "summary": "Deeds of mutual covenant, incorporated owners, management disputes, adverse possession, and possession claims.",
+            "children": [
+              {
+                "en": "building management",
+                "zh": "建築物管理"
+              },
+              {
+                "en": "possession",
+                "zh": "管有"
+              }
+            ],
+            "topic_ids": [
+              "topic:property_land_law:35:building_management_and_deeds_of_mutual_",
+              "topic:property_land_law:36:adverse_possession"
+            ],
+            "topic_labels": [
+              "Building Management and Deeds of Mutual Covenant",
+              "Adverse Possession"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkca_1991",
+              "case:2021_hkcfi_2111",
+              "case:2021_hkdc_304",
+              "case:2022_hkca_426",
+              "case:2022_hkdc_846",
+              "case:2023_hkdc_1662",
+              "case:2024_hkcfi_1897",
+              "case:2024_hkdc_235"
+            ],
+            "statute_ids": [
+              "statute:building_management_ordinance",
+              "statute:cap_336",
+              "statute:cap_4",
+              "statute:cap_7",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:district_court_ordinance",
+              "statute:estate_duty_ordinance",
+              "statute:high_court_ordinance",
+              "statute:interpretation_and_general_clauses_ordinance",
+              "statute:lands_tribunal_ordinance",
+              "statute:limitation_ordinance",
+              "statute:order_113",
+              "statute:order_18",
+              "statute:order_88",
+              "statute:section_12",
+              "statute:section_22",
+              "statute:section_45",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 8,
+              "statutes": 19,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 3,
+          "topics": 7,
+          "cases": 19,
+          "statutes": 35,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:company_commercial_law",
+        "slug": "company_commercial_law",
+        "type": "module",
+        "label_en": "Company and Commercial Law",
+        "label_zh": "公司及商業法",
+        "label": "Company and Commercial Law / 公司及商業法",
+        "secondary_label": "公司及商業法",
+        "summary_en": "Company governance, shareholder remedies, winding up, insolvency, banking, insurance, agency, and commercial transactions.",
+        "summary_zh": "公司管治、股東補救、清盤、無力償債、銀行、保險、代理及商業交易。",
+        "summary": "Company governance, shareholder remedies, winding up, insolvency, banking, insurance, agency, and commercial transactions.",
+        "subgrounds": [
+          {
+            "id": "subground:company_commercial_law:company_governance_shareholders",
+            "module_id": "module:company_commercial_law",
+            "slug": "company_governance_shareholders",
+            "type": "subground",
+            "label_en": "Company Governance and Shareholders",
+            "label_zh": "公司管治及股東",
+            "label": "Company Governance and Shareholders / 公司管治及股東",
+            "secondary_label": "公司管治及股東",
+            "summary_en": "Directors' duties, shareholder rights, unfair prejudice, derivative actions, and company restoration.",
+            "summary_zh": "董事責任、股東權利、不公平損害、衍生訴訟及公司恢復註冊。",
+            "summary": "Directors' duties, shareholder rights, unfair prejudice, derivative actions, and company restoration.",
+            "children": [
+              {
+                "en": "directors",
+                "zh": "董事"
+              },
+              {
+                "en": "shareholders",
+                "zh": "股東"
+              },
+              {
+                "en": "remedies",
+                "zh": "補救"
+              }
+            ],
+            "topic_ids": [
+              "topic:company_commercial_law:37:directors_duties",
+              "topic:company_commercial_law:38:unfair_prejudice_and_derivative_actions",
+              "topic:company_commercial_law:39:company_restoration_and_records"
+            ],
+            "topic_labels": [
+              "Directors' Duties",
+              "Unfair Prejudice and Derivative Actions",
+              "Company Restoration and Records"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkca_1450",
+              "case:2021_hkcfi_378",
+              "case:2022_hkcfi_1114",
+              "case:2022_hkcfi_381",
+              "case:2023_hkcfi_2932",
+              "case:2025_hkcfi_5278"
+            ],
+            "statute_ids": [
+              "statute:cap_32",
+              "statute:cap_4",
+              "statute:chapter_14",
+              "statute:companies_ordinance",
+              "statute:evidence_ordinance",
+              "statute:high_court_ordinance",
+              "statute:limitation_ordinance",
+              "statute:money_lenders_ordinance",
+              "statute:section_465",
+              "statute:securities_and_futures_ordinance",
+              "statute:rule_1",
+              "statute:s_212",
+              "statute:s_727",
+              "statute:s_903",
+              "statute:s48",
+              "statute:section_20",
+              "statute:section_26",
+              "statute:section_905",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 3,
+              "cases": 6,
+              "statutes": 19,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:company_commercial_law:winding_up_insolvency",
+            "module_id": "module:company_commercial_law",
+            "slug": "winding_up_insolvency",
+            "type": "subground",
+            "label_en": "Winding Up and Insolvency",
+            "label_zh": "清盤及無力償債",
+            "label": "Winding Up and Insolvency / 清盤及無力償債",
+            "secondary_label": "清盤及無力償債",
+            "summary_en": "Winding up petitions, statutory demands, bankruptcy, receivership, liquidators, and insolvency-related civil remedies.",
+            "summary_zh": "清盤呈請、法定要求償債書、破產、接管人、清盤人及無力償債相關民事補救。",
+            "summary": "Winding up petitions, statutory demands, bankruptcy, receivership, liquidators, and insolvency-related civil remedies.",
+            "children": [
+              {
+                "en": "winding up",
+                "zh": "清盤"
+              },
+              {
+                "en": "bankruptcy",
+                "zh": "破產"
+              },
+              {
+                "en": "receivership",
+                "zh": "接管"
+              }
+            ],
+            "topic_ids": [
+              "topic:company_commercial_law:40:winding_up_petitions",
+              "topic:company_commercial_law:41:bankruptcy_and_receivership"
+            ],
+            "topic_labels": [
+              "Winding Up Petitions",
+              "Bankruptcy and Receivership"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2025_hkcfi_3881"
+            ],
+            "statute_ids": [],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 1,
+              "statutes": 0,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:company_commercial_law:commercial_transactions",
+            "module_id": "module:company_commercial_law",
+            "slug": "commercial_transactions",
+            "type": "subground",
+            "label_en": "Commercial Transactions",
+            "label_zh": "商業交易",
+            "label": "Commercial Transactions / 商業交易",
+            "secondary_label": "商業交易",
+            "summary_en": "Sale of goods, banking, letters of credit, insurance, agency, guarantees, and securities/regulatory civil proceedings.",
+            "summary_zh": "貨品售賣、銀行、信用證、保險、代理、擔保及證券或監管民事程序。",
+            "summary": "Sale of goods, banking, letters of credit, insurance, agency, guarantees, and securities/regulatory civil proceedings.",
+            "children": [
+              {
+                "en": "banking",
+                "zh": "銀行"
+              },
+              {
+                "en": "insurance",
+                "zh": "保險"
+              },
+              {
+                "en": "agency",
+                "zh": "代理"
+              },
+              {
+                "en": "securities",
+                "zh": "證券"
+              }
+            ],
+            "topic_ids": [
+              "topic:company_commercial_law:42:banking_and_letters_of_credit",
+              "topic:company_commercial_law:43:insurance_indemnity_and_subrogation",
+              "topic:company_commercial_law:44:agency_and_commercial_authority",
+              "topic:company_commercial_law:45:securities_civil_and_regulatory_proceedi"
+            ],
+            "topic_labels": [
+              "Banking and Letters of Credit",
+              "Insurance, Indemnity and Subrogation",
+              "Agency and Commercial Authority",
+              "Securities Civil and Regulatory Proceedings"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkcfi_3073",
+              "case:2021_hkcfi_355",
+              "case:2021_hkcfi_3851",
+              "case:2021_hkcfi_435",
+              "case:2021_hkcfi_707",
+              "case:2021_hkdc_545",
+              "case:2022_hkcfi_1810",
+              "case:2022_hkcfi_2645",
+              "case:2022_hkcfi_2653",
+              "case:2022_hkcfi_2726",
+              "case:2022_hkcfi_948",
+              "case:2023_hkcfi_1107",
+              "case:2023_hkcfi_1433",
+              "case:2023_hkcfi_1779",
+              "case:2023_hkcfi_1816",
+              "case:2023_hkcfi_2212",
+              "case:2023_hkcfi_2268",
+              "case:2023_hkcfi_228",
+              "case:2023_hkcfi_2399",
+              "case:2023_hkcfi_2471",
+              "case:2023_hkcfi_312",
+              "case:2023_hkcfi_3368",
+              "case:2023_hkcfi_834",
+              "case:2023_hkdc_1223",
+              "case:2023_hkdc_1446",
+              "case:2023_hkdc_196",
+              "case:2024_hkcfi_1486",
+              "case:2024_hkcfi_1897",
+              "case:2024_hkcfi_3000",
+              "case:2024_hkcfi_3369",
+              "case:2024_hkcfi_3541",
+              "case:2024_hkcfi_419",
+              "case:2024_hkcfi_817",
+              "case:2024_hkdc_401",
+              "case:2025_hkcfi_1844",
+              "case:2025_hkcfi_2045",
+              "case:2025_hkcfi_2223",
+              "case:2025_hkcfi_2571",
+              "case:2025_hkcfi_3503",
+              "case:2025_hkcfi_775",
+              "case:2025_hkdc_1011",
+              "case:2026_hkcfi_1975",
+              "case:2026_hkcfi_465"
+            ],
+            "statute_ids": [
+              "statute:banking_ordinance",
+              "statute:bond_fund",
+              "statute:cap_cap_1",
+              "statute:cap_336_cap_336",
+              "statute:cap_4_cap_4",
+              "statute:cap_32",
+              "statute:cap_336",
+              "statute:cap_338",
+              "statute:cap_4",
+              "statute:cap_49",
+              "statute:cap_571",
+              "statute:chapter_15",
+              "statute:chapter_17",
+              "statute:chapter_336h",
+              "statute:chapter_4a",
+              "statute:companies_winding_up_and_miscellaneous_provisions_ordinance",
+              "statute:control_of_exemption_clauses_ordinance",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:district_court_ordinance",
+              "statute:high_court_suitors_funds_rules",
+              "statute:land_development_corporation_ordinance",
+              "statute:mental_health_ordinance",
+              "statute:misrepresentation_ordinance",
+              "statute:o_53",
+              "statute:o_58",
+              "statute:order_92",
+              "statute:personal_data_privacy_ordinance",
+              "statute:prevention_of_bribery_ordinance",
+              "statute:rule_23",
+              "statute:schedule_1",
+              "statute:schedule_5",
+              "statute:section_12",
+              "statute:section_213",
+              "statute:section_3",
+              "statute:section_62",
+              "statute:securities_ordinance",
+              "statute:securities_and_futures_client_money_rules",
+              "statute:securities_and_futures_contract_notes_statements_of_account_and_receipts_rules",
+              "statute:securities_and_futures_financial_resources_rules",
+              "statute:securities_and_futures_keeping_of_records_rules",
+              "statute:securities_and_futures_ordinance",
+              "statute:trustee_ordinance",
+              "statute:unconscionable_contracts_ordinance",
+              "statute:financial_resources_rules",
+              "statute:rule_32",
+              "statute:s_56",
+              "statute:s_108",
+              "statute:s_119",
+              "statute:s_178",
+              "statute:s_182",
+              "statute:s_275",
+              "statute:s_3",
+              "statute:s_5",
+              "statute:section_177",
+              "statute:section_37",
+              "statute:section_4",
+              "statute:section_56",
+              "statute:section_81",
+              "statute:sections_11",
+              "statute:sections_4",
+              "statute:sections_56",
+              "statute:sections_62",
+              "statute:sections_67",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 4,
+              "cases": 43,
+              "statutes": 65,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 3,
+          "topics": 9,
+          "cases": 50,
+          "statutes": 80,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:employment_law",
+        "slug": "employment_law",
+        "type": "module",
+        "label_en": "Employment Law",
+        "label_zh": "僱傭法",
+        "label": "Employment Law / 僱傭法",
+        "secondary_label": "僱傭法",
+        "summary_en": "Employment contracts, wages, termination, dismissal claims, discrimination, employees' compensation, MPF, and restraints.",
+        "summary_zh": "僱傭合約、工資、終止、解僱申索、歧視、僱員補償、強積金及限制性條款。",
+        "summary": "Employment contracts, wages, termination, dismissal claims, discrimination, employees' compensation, MPF, and restraints.",
+        "subgrounds": [
+          {
+            "id": "subground:employment_law:employment_contracts_termination",
+            "module_id": "module:employment_law",
+            "slug": "employment_contracts_termination",
+            "type": "subground",
+            "label_en": "Employment Contracts and Termination",
+            "label_zh": "僱傭合約及終止",
+            "label": "Employment Contracts and Termination / 僱傭合約及終止",
+            "secondary_label": "僱傭合約及終止",
+            "summary_en": "Employment status, wages, contractual duties, termination, dismissal, and severance.",
+            "summary_zh": "僱傭身份、工資、合約責任、終止、解僱及遣散。",
+            "summary": "Employment status, wages, contractual duties, termination, dismissal, and severance.",
+            "children": [
+              {
+                "en": "contract",
+                "zh": "合約"
+              },
+              {
+                "en": "termination",
+                "zh": "終止"
+              }
+            ],
+            "topic_ids": [
+              "topic:employment_law:46:employment_contract_and_wages",
+              "topic:employment_law:47:dismissal_and_termination"
+            ],
+            "topic_labels": [
+              "Employment Contract and Wages",
+              "Dismissal and Termination"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
+            "metrics": {
+              "topics": 2,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
+              "lineages": 0
+            },
+            "coverage": "placeholder"
+          },
+          {
+            "id": "subground:employment_law:employment_discrimination_compensation",
+            "module_id": "module:employment_law",
+            "slug": "employment_discrimination_compensation",
+            "type": "subground",
+            "label_en": "Discrimination and Compensation",
+            "label_zh": "歧視及補償",
+            "label": "Discrimination and Compensation / 歧視及補償",
+            "secondary_label": "歧視及補償",
+            "summary_en": "Workplace discrimination, employees' compensation, occupational injury claims, and tribunal proceedings.",
+            "summary_zh": "職場歧視、僱員補償、工傷申索及審裁處程序。",
+            "summary": "Workplace discrimination, employees' compensation, occupational injury claims, and tribunal proceedings.",
+            "children": [
+              {
+                "en": "discrimination",
+                "zh": "歧視"
+              },
+              {
+                "en": "compensation",
+                "zh": "補償"
+              }
+            ],
+            "topic_ids": [
+              "topic:employment_law:48:employment_discrimination",
+              "topic:employment_law:49:employees_compensation"
+            ],
+            "topic_labels": [
+              "Employment Discrimination",
+              "Employees' Compensation"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkdc_1407",
+              "case:2021_hkdc_237",
+              "case:2021_hkdc_385",
+              "case:2022_hkcfi_891",
+              "case:2022_hkdc_1090",
+              "case:2022_hkdc_775",
+              "case:2023_hkcfi_2035",
+              "case:2023_hkcfi_636",
+              "case:2023_hkdc_1818",
+              "case:2024_hkcfi_749",
+              "case:2024_hkdc_1156",
+              "case:2024_hkdc_236",
+              "case:2024_hkdc_983",
+              "case:2025_hkcfi_418",
+              "case:2025_hkdc_814"
+            ],
+            "statute_ids": [
+              "statute:cap_59",
+              "statute:employees_compensation_ordinance",
+              "statute:factories_and_industrial_undertakings_woodworking_machinery_regulations",
+              "statute:factories_and_industrial_undertakings_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:occupational_safety_and_health_ordinance",
+              "statute:section_6a",
+              "statute:section_7"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 15,
+              "statutes": 8,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:employment_law:mpf_restraint_trade",
+            "module_id": "module:employment_law",
+            "slug": "mpf_restraint_trade",
+            "type": "subground",
+            "label_en": "MPF and Restraint of Trade",
+            "label_zh": "強積金及營業限制",
+            "label": "MPF and Restraint of Trade / 強積金及營業限制",
+            "secondary_label": "強積金及營業限制",
+            "summary_en": "Mandatory provident fund disputes and post-employment restraints.",
+            "summary_zh": "強積金爭議及離職後限制。",
+            "summary": "Mandatory provident fund disputes and post-employment restraints.",
+            "children": [
+              {
+                "en": "MPF",
+                "zh": "強積金"
+              },
+              {
+                "en": "restraints",
+                "zh": "限制"
+              }
+            ],
+            "topic_ids": [
+              "topic:employment_law:50:mpf_obligations",
+              "topic:employment_law:51:restraint_of_trade"
+            ],
+            "topic_labels": [
+              "MPF Obligations",
+              "Restraint of Trade"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkcfi_435"
+            ],
+            "statute_ids": [
+              "statute:securities_and_futures_ordinance"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 1,
+              "statutes": 1,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 3,
+          "topics": 6,
+          "cases": 16,
+          "statutes": 9,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:family_law",
+        "slug": "family_law",
+        "type": "module",
+        "label_en": "Family Law",
+        "label_zh": "家事法",
+        "label": "Family Law / 家事法",
+        "secondary_label": "家事法",
+        "summary_en": "Divorce, children, maintenance, ancillary relief, domestic violence, and family injunctions.",
+        "summary_zh": "離婚、子女、贍養、附屬濟助、家庭暴力及家事禁制令。",
+        "summary": "Divorce, children, maintenance, ancillary relief, domestic violence, and family injunctions.",
+        "subgrounds": [
+          {
+            "id": "subground:family_law:matrimonial_financial",
+            "module_id": "module:family_law",
+            "slug": "matrimonial_financial",
+            "type": "subground",
+            "label_en": "Matrimonial and Financial Relief",
+            "label_zh": "婚姻及財務濟助",
+            "label": "Matrimonial and Financial Relief / 婚姻及財務濟助",
+            "secondary_label": "婚姻及財務濟助",
+            "summary_en": "Divorce, separation, maintenance, ancillary relief, and matrimonial property.",
+            "summary_zh": "離婚、分居、贍養、附屬濟助及婚姻財產。",
+            "summary": "Divorce, separation, maintenance, ancillary relief, and matrimonial property.",
+            "children": [
+              {
+                "en": "divorce",
+                "zh": "離婚"
+              },
+              {
+                "en": "maintenance",
+                "zh": "贍養"
+              },
+              {
+                "en": "property",
+                "zh": "財產"
+              }
+            ],
+            "topic_ids": [
+              "topic:family_law:52:divorce_and_matrimonial_causes",
+              "topic:family_law:53:ancillary_relief_and_maintenance"
+            ],
+            "topic_labels": [
+              "Divorce and Matrimonial Causes",
+              "Ancillary Relief and Maintenance"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
+            "metrics": {
+              "topics": 2,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
+              "lineages": 0
+            },
+            "coverage": "placeholder"
+          },
+          {
+            "id": "subground:family_law:children_welfare",
+            "module_id": "module:family_law",
+            "slug": "children_welfare",
+            "type": "subground",
+            "label_en": "Children and Welfare",
+            "label_zh": "子女及福利",
+            "label": "Children and Welfare / 子女及福利",
+            "secondary_label": "子女及福利",
+            "summary_en": "Custody, care and control, access, guardianship, relocation, and welfare principles.",
+            "summary_zh": "管養權、照顧及管束、探視、監護、遷移及福利原則。",
+            "summary": "Custody, care and control, access, guardianship, relocation, and welfare principles.",
+            "children": [
+              {
+                "en": "custody",
+                "zh": "管養"
+              },
+              {
+                "en": "access",
+                "zh": "探視"
+              },
+              {
+                "en": "welfare",
+                "zh": "福利"
+              }
+            ],
+            "topic_ids": [
+              "topic:family_law:54:custody_care_and_control",
+              "topic:family_law:55:relocation_and_access"
+            ],
+            "topic_labels": [
+              "Custody, Care and Control",
+              "Relocation and Access"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2025_hkcfi_388"
+            ],
+            "statute_ids": [
+              "statute:private_columbaria_ordinance"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 1,
+              "statutes": 1,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:family_law:family_protection",
+            "module_id": "module:family_law",
+            "slug": "family_protection",
+            "type": "subground",
+            "label_en": "Family Protection",
+            "label_zh": "家庭保護",
+            "label": "Family Protection / 家庭保護",
+            "secondary_label": "家庭保護",
+            "summary_en": "Domestic violence, non-molestation orders, occupation orders, and protective injunctions.",
+            "summary_zh": "家庭暴力、非騷擾令、佔用令及保護性禁制令。",
+            "summary": "Domestic violence, non-molestation orders, occupation orders, and protective injunctions.",
+            "children": [
+              {
+                "en": "domestic violence",
+                "zh": "家庭暴力"
+              },
+              {
+                "en": "injunctions",
+                "zh": "禁制令"
+              }
+            ],
+            "topic_ids": [
+              "topic:family_law:56:domestic_violence_orders",
+              "topic:family_law:57:family_injunctions"
+            ],
+            "topic_labels": [
+              "Domestic Violence Orders",
+              "Family Injunctions"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
+            "metrics": {
+              "topics": 2,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
+              "lineages": 0
+            },
+            "coverage": "placeholder"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 3,
+          "topics": 6,
+          "cases": 1,
+          "statutes": 1,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:constitutional_administrative_law",
+        "slug": "constitutional_administrative_law",
+        "type": "module",
+        "label_en": "Constitutional and Administrative Law",
+        "label_zh": "憲制及行政法",
+        "label": "Constitutional and Administrative Law / 憲制及行政法",
+        "secondary_label": "憲制及行政法",
+        "summary_en": "Judicial review, procedural fairness, legitimate expectation, Basic Law, Bill of Rights, and administrative remedies.",
+        "summary_zh": "司法覆核、程序公義、合理期望、基本法、人權法案及行政法補救。",
+        "summary": "Judicial review, procedural fairness, legitimate expectation, Basic Law, Bill of Rights, and administrative remedies.",
+        "subgrounds": [
+          {
+            "id": "subground:constitutional_administrative_law:judicial_review_procedure",
+            "module_id": "module:constitutional_administrative_law",
+            "slug": "judicial_review_procedure",
+            "type": "subground",
+            "label_en": "Judicial Review Procedure",
+            "label_zh": "司法覆核程序",
+            "label": "Judicial Review Procedure / 司法覆核程序",
+            "secondary_label": "司法覆核程序",
+            "summary_en": "Leave, standing, promptness, alternative remedies, and public law boundaries.",
+            "summary_zh": "許可、申請資格、迅速性、其他補救及公法界線。",
+            "summary": "Leave, standing, promptness, alternative remedies, and public law boundaries.",
+            "children": [
+              {
+                "en": "leave",
+                "zh": "許可"
+              },
+              {
+                "en": "standing",
+                "zh": "資格"
+              },
+              {
+                "en": "public law",
+                "zh": "公法"
+              }
+            ],
+            "topic_ids": [
+              "topic:constitutional_administrative_law:58:leave_and_standing",
+              "topic:constitutional_administrative_law:59:public_law_error"
+            ],
+            "topic_labels": [
+              "Leave and Standing",
+              "Public Law Error"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2022_hkcfi_644"
+            ],
+            "statute_ids": [
+              "statute:cap_4",
+              "statute:estate_agents_ordinance",
+              "statute:order_53",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 1,
+              "statutes": 4,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:constitutional_administrative_law:fairness_rights_remedies",
+            "module_id": "module:constitutional_administrative_law",
+            "slug": "fairness_rights_remedies",
+            "type": "subground",
+            "label_en": "Fairness, Rights and Remedies",
+            "label_zh": "公義、權利及補救",
+            "label": "Fairness, Rights and Remedies / 公義、權利及補救",
+            "secondary_label": "公義、權利及補救",
+            "summary_en": "Natural justice, procedural fairness, legitimate expectation, constitutional rights, and public law remedies.",
+            "summary_zh": "自然公義、程序公義、合理期望、憲制權利及公法補救。",
+            "summary": "Natural justice, procedural fairness, legitimate expectation, constitutional rights, and public law remedies.",
+            "children": [
+              {
+                "en": "fairness",
+                "zh": "公義"
+              },
+              {
+                "en": "rights",
+                "zh": "權利"
+              },
+              {
+                "en": "remedies",
+                "zh": "補救"
+              }
+            ],
+            "topic_ids": [
+              "topic:constitutional_administrative_law:60:natural_justice_and_procedural_fairness",
+              "topic:constitutional_administrative_law:61:legitimate_expectation",
+              "topic:constitutional_administrative_law:62:basic_law_and_bill_of_rights",
+              "topic:constitutional_administrative_law:63:public_law_remedies"
+            ],
+            "topic_labels": [
+              "Natural Justice and Procedural Fairness",
+              "Legitimate Expectation",
+              "Basic Law and Bill of Rights",
+              "Public Law Remedies"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2022_hkcfi_1555",
+              "case:2025_hkca_585"
+            ],
+            "statute_ids": [
+              "statute:cap_234",
+              "statute:cap_475",
+              "statute:criminal_procedure_ordinance",
+              "statute:hong_kong_bill_of_rights_ordinance",
+              "statute:post_release_supervision_of_prisoners_ordinance",
+              "statute:post_release_supervision_of_prisoners_regulation",
+              "statute:prison_rules",
+              "statute:section_3",
+              "statute:rule_69",
+              "statute:section_6",
+              "statute:section_67a"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 4,
+              "cases": 2,
+              "statutes": 11,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 2,
+          "topics": 6,
+          "cases": 3,
+          "statutes": 15,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:probate_trusts_equity",
+        "slug": "probate_trusts_equity",
+        "type": "module",
+        "label_en": "Probate, Trusts and Equity",
+        "label_zh": "遺產、信託及衡平法",
+        "label": "Probate, Trusts and Equity / 遺產、信託及衡平法",
+        "secondary_label": "遺產、信託及衡平法",
+        "summary_en": "Wills, probate, intestacy, estate administration, trusts, fiduciary duties, tracing, and equitable remedies.",
+        "summary_zh": "遺囑、遺囑認證、無遺囑繼承、遺產管理、信託、受信責任、追蹤及衡平法補救。",
+        "summary": "Wills, probate, intestacy, estate administration, trusts, fiduciary duties, tracing, and equitable remedies.",
+        "subgrounds": [
+          {
+            "id": "subground:probate_trusts_equity:succession_estates",
+            "module_id": "module:probate_trusts_equity",
+            "slug": "succession_estates",
+            "type": "subground",
+            "label_en": "Succession and Estates",
+            "label_zh": "繼承及遺產",
+            "label": "Succession and Estates / 繼承及遺產",
+            "secondary_label": "繼承及遺產",
+            "summary_en": "Wills, testamentary capacity, probate, intestacy, family provision, and estate administration.",
+            "summary_zh": "遺囑、立遺囑能力、遺囑認證、無遺囑繼承、家庭供養及遺產管理。",
+            "summary": "Wills, testamentary capacity, probate, intestacy, family provision, and estate administration.",
+            "children": [
+              {
+                "en": "wills",
+                "zh": "遺囑"
+              },
+              {
+                "en": "probate",
+                "zh": "認證"
+              },
+              {
+                "en": "estates",
+                "zh": "遺產"
+              }
+            ],
+            "topic_ids": [
+              "topic:probate_trusts_equity:64:wills_probate_and_capacity",
+              "topic:probate_trusts_equity:65:intestacy_and_estate_administration"
+            ],
+            "topic_labels": [
+              "Wills, Probate and Capacity",
+              "Intestacy and Estate Administration"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
+            "metrics": {
+              "topics": 2,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
+              "lineages": 0
+            },
+            "coverage": "placeholder"
+          },
+          {
+            "id": "subground:probate_trusts_equity:trusts_equitable_remedies",
+            "module_id": "module:probate_trusts_equity",
+            "slug": "trusts_equitable_remedies",
+            "type": "subground",
+            "label_en": "Trusts and Equitable Remedies",
+            "label_zh": "信託及衡平法補救",
+            "label": "Trusts and Equitable Remedies / 信託及衡平法補救",
+            "secondary_label": "信託及衡平法補救",
+            "summary_en": "Express trusts, resulting trusts, constructive trusts, fiduciary duties, tracing, account, and equitable compensation.",
+            "summary_zh": "明示信託、歸復信託、構定信託、受信責任、追蹤、交代帳目及衡平法補償。",
+            "summary": "Express trusts, resulting trusts, constructive trusts, fiduciary duties, tracing, account, and equitable compensation.",
+            "children": [
+              {
+                "en": "trusts",
+                "zh": "信託"
+              },
+              {
+                "en": "fiduciary",
+                "zh": "受信"
+              },
+              {
+                "en": "tracing",
+                "zh": "追蹤"
+              }
+            ],
+            "topic_ids": [
+              "topic:probate_trusts_equity:66:trusts_and_fiduciary_duties",
+              "topic:probate_trusts_equity:67:constructive_and_resulting_trusts",
+              "topic:probate_trusts_equity:68:tracing_and_equitable_remedies"
+            ],
+            "topic_labels": [
+              "Trusts and Fiduciary Duties",
+              "Constructive and Resulting Trusts",
+              "Tracing and Equitable Remedies"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkcfi_1552",
+              "case:2021_hkcfi_399",
+              "case:2021_hkcfi_678",
+              "case:2021_hkdc_1266",
+              "case:2021_hkdc_172",
+              "case:2022_hkca_426",
+              "case:2022_hkcfi_1028",
+              "case:2022_hkcfi_1105",
+              "case:2022_hkcfi_1255",
+              "case:2022_hkcfi_1710",
+              "case:2022_hkcfi_826",
+              "case:2022_hkdc_1095",
+              "case:2022_hkdc_303",
+              "case:2023_hkca_33",
+              "case:2023_hkcfi_3314",
+              "case:2024_hkcfa_3",
+              "case:2024_hkcfi_2010",
+              "case:2024_hkdc_1920",
+              "case:2024_hkdc_21",
+              "case:2024_hkdc_217",
+              "case:2024_hkdc_537",
+              "case:2025_hkca_685",
+              "case:2025_hkcfi_1128",
+              "case:2026_hkca_88",
+              "case:2026_hkcfa_9"
+            ],
+            "statute_ids": [
+              "statute:buildings_ordinance",
+              "statute:building_management_ordinance",
+              "statute:cap_163",
+              "statute:cap_336",
+              "statute:cap_4",
+              "statute:cap_7",
+              "statute:companies_ordinance",
+              "statute:conveyancing_and_property_ordinance",
+              "statute:district_court_ordinance",
+              "statute:high_court_ordinance",
+              "statute:interpretation_and_general_clauses_ordinance",
+              "statute:labour_tribunal_ordinance",
+              "statute:lands_tribunal_ordinance",
+              "statute:legal_aid_regulations",
+              "statute:limitation_ordinance",
+              "statute:occupiers_liability_ordinance",
+              "statute:order_14",
+              "statute:order_15",
+              "statute:order_19",
+              "statute:order_32",
+              "statute:order_59",
+              "statute:order_83a",
+              "statute:probate_and_administration_ordinance",
+              "statute:section_11",
+              "statute:section_14aa",
+              "statute:section_8",
+              "statute:trustee_ordinance",
+              "statute:s32",
+              "statute:section_2",
+              "statute:section_20",
+              "statute:section_34i",
+              "statute:section_41",
+              "statute:section_45",
+              "statute:section_50",
+              "statute:section_52",
+              "statute:section_827",
+              "statute:sections_33",
+              "statute:the_rules_of_the_district_court",
+              "statute:the_rules_of_the_high_court"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 3,
+              "cases": 25,
+              "statutes": 39,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 2,
+          "topics": 5,
+          "cases": 25,
+          "statutes": 39,
+          "sources": 1,
+          "lineages": 0
+        }
+      },
+      {
+        "id": "module:arbitration_adr",
+        "slug": "arbitration_adr",
+        "type": "module",
+        "label_en": "Arbitration and ADR",
+        "label_zh": "仲裁及替代爭議解決",
+        "label": "Arbitration and ADR / 仲裁及替代爭議解決",
+        "secondary_label": "仲裁及替代爭議解決",
+        "summary_en": "Arbitration agreements, stays, award enforcement, setting aside, mediation, settlement, and costs consequences.",
+        "summary_zh": "仲裁協議、擱置法律程序、裁決執行、撤銷裁決、調解、和解及訟費後果。",
+        "summary": "Arbitration agreements, stays, award enforcement, setting aside, mediation, settlement, and costs consequences.",
+        "subgrounds": [
+          {
+            "id": "subground:arbitration_adr:arbitration_procedure_awards",
+            "module_id": "module:arbitration_adr",
+            "slug": "arbitration_procedure_awards",
+            "type": "subground",
+            "label_en": "Arbitration Procedure and Awards",
+            "label_zh": "仲裁程序及裁決",
+            "label": "Arbitration Procedure and Awards / 仲裁程序及裁決",
+            "secondary_label": "仲裁程序及裁決",
+            "summary_en": "Arbitration agreements, stay of court proceedings, tribunal jurisdiction, enforcement, and setting aside.",
+            "summary_zh": "仲裁協議、擱置法院程序、仲裁庭管轄權、執行及撤銷。",
+            "summary": "Arbitration agreements, stay of court proceedings, tribunal jurisdiction, enforcement, and setting aside.",
+            "children": [
+              {
+                "en": "agreement",
+                "zh": "協議"
+              },
+              {
+                "en": "stay",
+                "zh": "擱置"
+              },
+              {
+                "en": "awards",
+                "zh": "裁決"
+              }
+            ],
+            "topic_ids": [
+              "topic:arbitration_adr:69:arbitration_agreements_and_stay",
+              "topic:arbitration_adr:70:award_enforcement_and_setting_aside"
+            ],
+            "topic_labels": [
+              "Arbitration Agreements and Stay",
+              "Award Enforcement and Setting Aside"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [
+              "case:2021_hkcfi_1096",
+              "case:2021_hkcfi_1477",
+              "case:2021_hkcfi_215",
+              "case:2021_hkcfi_2341",
+              "case:2021_hkcfi_2407",
+              "case:2021_hkcfi_263",
+              "case:2021_hkcfi_606",
+              "case:2022_hkcfi_1270",
+              "case:2022_hkcfi_2549",
+              "case:2023_hkca_888",
+              "case:2023_hkcfi_1558",
+              "case:2023_hkcfi_2540",
+              "case:2023_hkcfi_2661",
+              "case:2023_hkfc_40",
+              "case:2024_hkcfi_1464",
+              "case:2024_hkcfi_2723",
+              "case:2024_hkcfi_698",
+              "case:2024_hkcfi_773",
+              "case:2024_hkcfi_958",
+              "case:2025_hkca_462",
+              "case:2025_hkcfi_3905",
+              "case:2025_hkcfi_5714",
+              "case:2025_hkcfi_683",
+              "case:2026_hkcfi_1795"
+            ],
+            "statute_ids": [
+              "statute:arbitration_ordinance",
+              "statute:cap_179",
+              "statute:cap_319",
+              "statute:cap_341",
+              "statute:cap_4",
+              "statute:cap_597",
+              "statute:cap_645",
+              "statute:companies_ordinance",
+              "statute:hong_kong_bill_of_rights_ordinance",
+              "statute:limitation_ordinance",
+              "statute:loan_fund",
+              "statute:mainland_judgments_reciprocal_enforcement_ordinance",
+              "statute:matrimonial_causes_rules",
+              "statute:matrimonial_proceedings_and_property_ordinance",
+              "statute:order_38",
+              "statute:order_45",
+              "statute:order_49",
+              "statute:order_50",
+              "statute:order_52",
+              "statute:order_71a",
+              "statute:order_73",
+              "statute:rule_35",
+              "statute:rule_87",
+              "statute:section_12",
+              "statute:section_3",
+              "statute:section_84",
+              "statute:section_87",
+              "statute:r_10",
+              "statute:r_10a",
+              "statute:rule_10",
+              "statute:s_95",
+              "statute:s_40c",
+              "statute:s_93",
+              "statute:s_44",
+              "statute:s_87",
+              "statute:s_92",
+              "statute:section_2",
+              "statute:section_40c",
+              "statute:section_89",
+              "statute:section_92",
+              "statute:section_95",
+              "statute:sections_84",
+              "statute:the_rules_of_the_high_court",
+              "statute:the_united_nations",
+              "statute:645"
+            ],
+            "source_ids": [
+              "source:hklii_api"
+            ],
+            "metrics": {
+              "topics": 2,
+              "cases": 24,
+              "statutes": 45,
+              "sources": 1,
+              "lineages": 0
+            },
+            "coverage": "mapped"
+          },
+          {
+            "id": "subground:arbitration_adr:mediation_settlement",
+            "module_id": "module:arbitration_adr",
+            "slug": "mediation_settlement",
+            "type": "subground",
+            "label_en": "Mediation and Settlement",
+            "label_zh": "調解及和解",
+            "label": "Mediation and Settlement / 調解及和解",
+            "secondary_label": "調解及和解",
+            "summary_en": "Mediation confidentiality, settlement agreements, sanctioned offers, Calderbank letters, and costs consequences.",
+            "summary_zh": "調解保密、和解協議、附帶條款付款、Calderbank 信件及訟費後果。",
+            "summary": "Mediation confidentiality, settlement agreements, sanctioned offers, Calderbank letters, and costs consequences.",
+            "children": [
+              {
+                "en": "mediation",
+                "zh": "調解"
+              },
+              {
+                "en": "settlement",
+                "zh": "和解"
+              },
+              {
+                "en": "costs",
+                "zh": "訟費"
+              }
+            ],
+            "topic_ids": [
+              "topic:arbitration_adr:71:mediation_confidentiality",
+              "topic:arbitration_adr:72:settlement_and_costs_consequences"
+            ],
+            "topic_labels": [
+              "Mediation Confidentiality",
+              "Settlement and Costs Consequences"
+            ],
+            "lineage_ids": [],
+            "lineage_titles": [],
+            "case_ids": [],
+            "statute_ids": [],
+            "source_ids": [],
+            "metrics": {
+              "topics": 2,
+              "cases": 0,
+              "statutes": 0,
+              "sources": 0,
+              "lineages": 0
+            },
+            "coverage": "placeholder"
+          }
+        ],
+        "metrics": {
+          "subgrounds": 2,
+          "topics": 4,
+          "cases": 24,
+          "statutes": 45,
+          "sources": 1,
+          "lineages": 0
+        }
+      }
+    ]
+  },
+  "auto_lineage_count": 0,
+  "storage": {
+    "embedding_record_count": 1384,
+    "embedding_dimensions": 256,
+    "embedding_backend": {
+      "backend": "local-hash",
+      "model": "deterministic-token-hash",
+      "dimensions": 256
+    },
+    "chroma_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/chroma_records.json",
+    "supabase_export": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/supabase_export.sql",
+    "hybrid_bundle_written": true
+  },
+  "monitor_report": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/monitor_report.json",
+  "monitor_dashboard": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/monitor_report.html",
+  "build_progress": "/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap4/artifacts/hk_civil_graph/build_progress.json",
+  "crawler_warnings": [
+    "Search failed for 'writ originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Rules of High Court writ': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'District Court originating summons': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'pleadings amendment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'statement of claim amendment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unpleaded defence summary judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'service out of jurisdiction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'substituted service': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'jurisdiction challenge civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'discovery disclosure civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'specific discovery': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'litigation privilege discovery': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'strike out pleadings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'no triable issue summary judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mareva injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Anton Piller order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'security for costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'company plaintiff security costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Order 23 security for costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'civil burden of proof': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trial evidence civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'hearsay civil evidence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'costs follow event': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'taxation of costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'enforcement of judgment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'garnishee order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'charging order civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'leave to appeal civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Limitation Ordinance Cap. 347': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'extension of time civil appeal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract formation offer acceptance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'consideration intention contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'certainty contract terms': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract interpretation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'implied terms contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'incorporation exclusion clause': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Contracts Rights of Third Parties Ordinance Cap. 623': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'third party rights contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'privity contract Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Misrepresentation Ordinance Cap. 284': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fraudulent misrepresentation damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mistake contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'duress undue influence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unconscionable bargain contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract illegality public policy': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'illegal contract restitution': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restraint of trade contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'repudiatory breach termination': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'anticipatory breach contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'affirmation termination contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contract damages remoteness': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'penalty clause liquidated damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mitigation contract damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'specific performance contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'injunction breach of contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable remedies contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Sale of Goods Ordinance Cap. 26': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'implied terms sale of goods': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'rejection goods breach': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach of duty negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'standard of care negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'causation negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'remoteness damage negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'thin skull rule': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'contributory negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'apportionment negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Law Amendment Reform Consolidation Ordinance contributory negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'personal injury damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'loss of earnings personal injury': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'pain suffering loss amenity': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Occupiers Liability Ordinance Cap. 314': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupiers liability': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'visitor duty occupier': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'vicarious liability': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'professional negligence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'solicitor negligence duty': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'private nuisance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'nuisance injunction damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'water seepage nuisance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Defamation Ordinance Cap. 21': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'defamation qualified privilege': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'libel slander damages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'sale and purchase property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'good title conveyancing': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Landlord Tenant Consolidation Ordinance Cap. 7': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'forfeiture lease relief': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'tenancy possession arrears': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mortgage priority land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Land Registration Ordinance Cap. 128': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable mortgage property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'co-ownership property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'resulting trust property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'constructive trust land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'easement right of way': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restrictive covenant land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'building covenant property': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Building Management Ordinance Cap. 344': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'deed of mutual covenant': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'incorporated owners building management': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'adverse possession': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'limitation adverse possession': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'squatter possession land': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fiduciary duty director': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach directors duties': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unfair prejudice Companies Ordinance Cap. 622': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'derivative action company': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'minority shareholder unfair prejudice': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'company restoration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Companies Registry restoration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'inspection company records': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'winding up petition': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Companies Winding Up Cap. 32': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'statutory demand winding up': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Bankruptcy Ordinance Cap. 6': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'receivership company': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trustee in bankruptcy': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'banking letter of credit': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'bank duty customer': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'guarantee indemnity bank': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'insurance indemnity subrogation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Insurance Ordinance Cap. 41': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'policy interpretation insurance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'agency authority contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'apparent authority agent': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach warranty authority': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Securities Futures Ordinance Cap. 571 civil': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'market misconduct tribunal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'SFC injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Employment Ordinance Cap. 57 wages': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'employment contract terms': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'employee contractor status': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'wrongful dismissal': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'unreasonable dismissal Employment Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'termination employment contract': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Sex Discrimination Ordinance Cap. 480 employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Disability Discrimination Ordinance Cap. 487 employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Race Discrimination Ordinance Cap. 602': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Employees Compensation Ordinance Cap. 282': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'work injury compensation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupational injury employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mandatory Provident Fund Cap. 485': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'MPF contribution employer': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'MPF Schemes Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'restraint of trade employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'non-compete employment': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'confidential information employee injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Matrimonial Causes Ordinance Cap. 179': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'divorce petition unreasonable behaviour': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'matrimonial causes Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'ancillary relief': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Matrimonial Proceedings Property Ordinance Cap. 192': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'maintenance spouse children': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'child custody welfare': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'care and control access': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Guardianship of Minors Ordinance Cap. 13': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'child relocation Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'access order child': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'best interests child relocation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Domestic Cohabitation Relationships Violence Ordinance Cap. 189': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'non-molestation order': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'occupation order domestic violence': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'family injunction': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'injunction matrimonial proceedings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'molestation injunction family': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'promptness judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'alternative remedy judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'public law error judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Wednesbury unreasonableness Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'error of law judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'natural justice procedural fairness': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'right to be heard administrative': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'bias apparent bias judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'substantive legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'procedural legitimate expectation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Basic Law judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Hong Kong Bill of Rights Ordinance Cap. 383': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'proportionality constitutional rights': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'certiorari mandamus prohibition': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'declaration judicial review': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'damages public law': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'wills probate testamentary capacity': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'probate caveat': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'valid will Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'intestacy estate administration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'administrator estate': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Inheritance Provision Family Dependants Ordinance': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'fiduciary duty trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'breach of trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'trustee duty account': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'constructive trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'resulting trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'common intention constructive trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable tracing': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'account of profits fiduciary': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'equitable compensation breach trust': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Arbitration Ordinance Cap. 609 stay': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'arbitration agreement stay proceedings': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'kompetenz kompetenz arbitration': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'enforcement arbitral award': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'setting aside arbitral award': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'New York Convention award Hong Kong': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Mediation Ordinance Cap. 620': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'mediation confidentiality': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'without prejudice mediation': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'Calderbank offer costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'sanctioned payment costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Search failed for 'without prejudice save as to costs': <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkca/2021/1846: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkca/2025/677: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfa/2026/2: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1095: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1250: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/1578: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/2225: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/2840: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/517: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2021/814: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/1183: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/2127: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/306: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2022/977: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/1156: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/1478: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/1965: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/3043: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2023/3353: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2024/2754: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2025/304: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkcfi/2026/229: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2021/1630: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/1164: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2022/917: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/83: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2023/891: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2024/1145: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2024/1689: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/181: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/2183: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/2001: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Failed to fetch /en/cases/hkdc/2025/528: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  "case_count": 314,
+  "candidates_registry": "data/batch/candidates_civil_clean.json",
+  "candidate_registry_count": 336,
+  "monitor": {
+    "uncovered_topics": 43,
+    "low_coverage_topics": 9
+  }
+}
+{
+  "title": "Hong Kong Civil Law Hierarchical Graph",
+  "generated_at": "2026-04-15T16:26:30.490304+00:00",
+  "node_count": 1572,
+  "edge_count": 3012,
+  "case_count": 1117,
+  "statute_count": 334,
+  "topic_count": 72,
+  "lineage_count": 10,
+  "lineages": [
+    {
+      "id": "ancillary_relief_equality",
+      "node_id": "lineage:ancillary_relief_equality",
+      "title": "Ancillary Relief: From Discretion to Equality",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:family_law:53:ancillary_relief_and_maintenance"
+      ],
+      "topic_labels": [
+        "Ancillary Relief and Maintenance"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    },
+    {
+      "id": "intermediate_terms_hongkong_fir",
+      "node_id": "lineage:intermediate_terms_hongkong_fir",
+      "title": "Breach and Termination: \"Intermediate Terms\"",
+      "member_count": 2,
+      "topic_ids": [
+        "topic:contract_law:18:repudiatory_breach_and_termination"
+      ],
+      "topic_labels": [
+        "Repudiatory Breach and Termination"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract",
+        "criminal"
+      ]
+    },
+    {
+      "id": "consideration_practical_benefit",
+      "node_id": "lineage:consideration_practical_benefit",
+      "title": "Consideration and Variations: \"Practical Benefit\"",
+      "member_count": 6,
+      "topic_ids": [
+        "topic:contract_law:12:contract_formation"
+      ],
+      "topic_labels": [
+        "Contract Formation"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "interpretation_context_text",
+      "node_id": "lineage:interpretation_context_text",
+      "title": "Contractual Interpretation: \"Context vs. Text\"",
+      "member_count": 7,
+      "topic_ids": [
+        "topic:contract_law:13:contractual_terms_and_interpretation"
+      ],
+      "topic_labels": [
+        "Contractual Terms and Interpretation"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "judicial_review_wednesbury_proportionality",
+      "node_id": "lineage:judicial_review_wednesbury_proportionality",
+      "title": "Judicial Review: From Wednesbury to Proportionality",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:constitutional_administrative_law:62:basic_law_and_bill_of_rights"
+      ],
+      "topic_labels": [
+        "Basic Law and Bill of Rights"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    },
+    {
+      "id": "negligence_duty_of_care",
+      "node_id": "lineage:negligence_duty_of_care",
+      "title": "Negligence: Duty of Care",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:tort_law:24:contributory_negligence"
+      ],
+      "topic_labels": [
+        "Contributory Negligence"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "DIST",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    },
+    {
+      "id": "penalty_clauses_modern_test",
+      "node_id": "lineage:penalty_clauses_modern_test",
+      "title": "Penalty Clauses: \"Modern Test\"",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:contract_law:19:damages_penalties_and_liquidated_damages"
+      ],
+      "topic_labels": [
+        "Damages, Penalties and Liquidated Damages"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "unconscionability_statutory",
+      "node_id": "lineage:unconscionability_statutory",
+      "title": "Unconscionability: \"Statutory\"",
+      "member_count": 2,
+      "topic_ids": [
+        "topic:contract_law:17:illegality_and_public_policy"
+      ],
+      "topic_labels": [
+        "Illegality and Public Policy"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "CODI"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "undue_influence_etridge",
+      "node_id": "lineage:undue_influence_etridge",
+      "title": "Undue Influence: \"Etridge\"",
+      "member_count": 2,
+      "topic_ids": [
+        "topic:contract_law:17:illegality_and_public_policy"
+      ],
+      "topic_labels": [
+        "Illegality and Public Policy"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil",
+        "contract"
+      ]
+    },
+    {
+      "id": "unfair_prejudice_minority_shareholders",
+      "node_id": "lineage:unfair_prejudice_minority_shareholders",
+      "title": "Unfair Prejudice and Minority Shareholder Protection",
+      "member_count": 4,
+      "topic_ids": [
+        "topic:company_commercial_law:39:company_restoration_and_records"
+      ],
+      "topic_labels": [
+        "Company Restoration and Records"
+      ],
+      "topic_hints": [],
+      "codes": [
+        "APPD",
+        "FLLW",
+        "ORIG"
+      ],
+      "source": "curated",
+      "confidence_status": "established",
+      "confidence_score": 1.0,
+      "domain_tags": [
+        "civil"
+      ]
+    }
+  ],
+  "paragraph_count": 0,
+  "proposition_count": 0,
+  "enriched_case_count": 0,
+  "notes": [
+    "Hybrid hierarchical graph bundle generated from the Casemap relationship graph.",
+    "Hierarchy is represented explicitly as Module -> Subground -> Topic while authorities remain graph-native.",
+    "Neo4j constraints and import templates are included for database-backed deployment."
+  ],
+  "neo4j": {
+    "vector_dimensions": 1536,
+    "constraints_file": "neo4j_constraints.cypher",
+    "import_file": "neo4j_import.cypher"
+  },
+  "legal_domain": "civil",
+  "domain_tags": [
+    "civil"
+  ],
+  "viewer_heading_public": "Hong Kong Civil Law Hierarchical Knowledge Graph",
+  "viewer_heading_internal": "Hong Kong Civil Law Internal Hierarchy Explorer",
+  "viewer_intro_public": "A Hong Kong Civil Law hierarchy and authority network built from HKLII judgments plus local textbook passages. Start at the doctrinal modules, then drill into topics, cases, and statutes.",
+  "viewer_intro_internal": "This internal Hong Kong Civil Law explorer uses the same hierarchy shell but keeps the graph centered on case metadata, textbook support passages, and statute links.",
+  "cumulative_merge": {
+    "enabled": true,
+    "previous_found": true,
+    "previous_path": "artifacts/hk_civil_hybrid_v1/hierarchical_graph_prev.json",
+    "previous_node_count": 1536,
+    "previous_edge_count": 2938,
+    "fresh_node_count": 1433,
+    "fresh_edge_count": 2419,
+    "retained_previous_only_nodes": 139,
+    "added_topic_paths": 3,
+    "removed_orphan_topic_paths": 0,
+    "max_total_nodes": 10000,
+    "pruned_case_only_nodes": 0,
+    "cap_applied": false
+  }
+}
