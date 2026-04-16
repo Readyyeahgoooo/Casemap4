@@ -111,6 +111,7 @@ QUERY_STOPWORDS = {
     "which",
     "with",
     "would",
+    "without",
     # Domain stopwords: appear in nearly every criminal-law node,
     # so they add noise rather than signal to lexical scoring.
     "hong",
@@ -310,6 +311,18 @@ CRIMINAL_QUERY_HINTS = {
     "sfc": ["securities futures commission market misconduct HKSAR", "market manipulation SFC HKSAR"],
     "insider": ["insider dealing securities futures ordinance HKSAR", "market misconduct insider dealing HKSAR"],
     "misconduct": ["market misconduct securities futures ordinance HKSAR", "market manipulation false trading HKSAR"],
+    # Options / derivatives licensing compliance
+    "option": ["securities and futures ordinance cap 571 licence dealing in securities", "unlicensed derivatives dealing hong kong SFC"],
+    "options": ["securities and futures ordinance cap 571 licence dealing in securities", "unlicensed derivatives dealing hong kong SFC"],
+    "derivative": ["derivatives trading licence hong kong SFC", "securities and futures ordinance cap 571 regulated activity"],
+    "derivatives": ["derivatives trading licence hong kong SFC", "securities and futures ordinance cap 571 regulated activity"],
+    "licence": ["SFC licence regulated activity cap 571", "unlicensed dealing in securities hong kong"],
+    "license": ["SFC license regulated activity cap 571", "unlicensed dealing in securities hong kong"],
+    "licensed": ["SFC licence requirements dealing in securities cap 571", "regulated activity type 1 licence hong kong"],
+    "unlicensed": ["unlicensed dealing in securities cap 571", "SFC prosecution unlicensed regulated activity hong kong"],
+    "broker": ["licensed broker SFC register hong kong", "dealing in securities licence cap 571"],
+    "brokers": ["licensed broker SFC register hong kong", "dealing in securities licence cap 571"],
+    "compliance": ["SFC compliance regulated activities cap 571", "licensing obligations securities and futures ordinance hong kong"],
     # Theft and property offences
     "theft": ["theft hong kong criminal", "theft ordinance HKSAR"],
     "steal": ["theft hong kong criminal", "theft ordinance HKSAR"],
@@ -3426,6 +3439,63 @@ class HybridGraphStore:
                         c for c in citations
                         if c.get("support_score", 0) >= _MIN_WEAK_FALLBACK_SCORE
                     ]
+                    # If weak fallback citations do not contain the distinctive
+                    # legal anchors from the query (e.g. options/licensing
+                    # terms), they are likely off-topic and should be suppressed.
+                    if citations:
+                        anchor_candidates = {
+                            "option",
+                            "options",
+                            "derivative",
+                            "derivatives",
+                            "licence",
+                            "license",
+                            "licensed",
+                            "unlicensed",
+                            "securities",
+                            "futures",
+                            "sfc",
+                            "market",
+                            "manipulation",
+                            "insider",
+                            "misconduct",
+                        }
+                        query_anchors = {t for t in distinctive_query_tokens if t in anchor_candidates}
+                        if query_anchors:
+                            citation_tokens = set(
+                                tokenize(
+                                    " ".join(
+                                        f"{c.get('case_name', '')} {c.get('quote', '')} {c.get('principle_label', '')}"
+                                        for c in citations[: min(4, len(citations))]
+                                    )
+                                )
+                            )
+                            if not (query_anchors & citation_tokens):
+                                citations = []
+                            # Options/derivatives compliance queries need
+                            # licensing/securities anchors, not just a generic
+                            # appearance of the word "options".
+                            options_query = bool(
+                                {"option", "options", "derivative", "derivatives"} & distinctive_query_tokens
+                            )
+                            if citations and options_query:
+                                compliance_tokens = {
+                                    "securities",
+                                    "futures",
+                                    "derivative",
+                                    "derivatives",
+                                    "licence",
+                                    "license",
+                                    "licensed",
+                                    "unlicensed",
+                                    "sfc",
+                                    "regulated",
+                                    "regulatory",
+                                    "cap",
+                                    "571",
+                                }
+                                if not (citation_tokens & compliance_tokens):
+                                    citations = []
                     if not warnings_from_live:
                         if citations:
                             warnings = ["Local criminal graph coverage was weak, and no live HKLII matches were found.  Showing best local results."]
@@ -3897,6 +3967,14 @@ OFFENCE_ORDINANCE_RULES = [
         "strict_liability_possible": False,
     },
     {
+        "offence_family": "unlicensed_securities_activity",
+        "ordinance": "Securities and Futures Ordinance (Cap. 571)",
+        "section": "licensing requirement for regulated activities (including dealing in securities/derivatives)",
+        "keywords": {"option", "options", "derivative", "derivatives", "licence", "license", "licensed", "unlicensed", "sfc", "securities", "futures", "broker"},
+        "phrases": {"trade options", "options trading", "without licence", "without license", "unlicensed dealing", "regulated activity"},
+        "strict_liability_possible": True,
+    },
+    {
         "offence_family": "market_misconduct",
         "ordinance": "Securities and Futures Ordinance (Cap. 571)",
         "section": "market misconduct, false trading, price rigging, stock market manipulation, and insider dealing provisions",
@@ -4023,6 +4101,9 @@ class DeterminatorPipeline:
             "stabbing", "stabbed",
             "shoplifting", "shoplifted",
             "laundering", "launder",
+            "option", "options", "derivative", "derivatives",
+            "licence", "license", "licensed", "unlicensed",
+            "securities", "futures",
         }
         criminal_hits |= tokens & criminal_keywords
 
