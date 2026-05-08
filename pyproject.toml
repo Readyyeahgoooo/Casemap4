@@ -10,5 +10,8 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = ["neo4j>=5.22.0", "pypdf>=6.9.2"]
 
+[project.optional-dependencies]
+pipeline = ["sentence-transformers>=2.7.0"]
+
 [tool.setuptools.packages.find]
 where = ["src"]

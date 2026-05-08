@@ -11,6 +11,7 @@ from .domain_graph import build_domain_graph_artifacts
 from .graphrag import RerankedRetriever, build_artifacts
 from .hybrid_graph import HybridGraphStore, build_hybrid_graph_artifacts, merge_with_previous_artifact, write_hybrid_graph_artifacts
 from .lineage_discovery import DISCOVERED_LINEAGES_DEFAULT_PATH, discover_lineages_from_file
+from .paragraph_index import build_paragraph_index, search_paragraph_index
 from .relationship_graph import build_relationship_artifacts, export_public_relationship_artifacts
 from .supabase_sync import load_env_file, sync_criminal_artifacts_to_supabase
 
@@ -167,6 +168,48 @@ def discover_lineages_command(args: argparse.Namespace) -> int:
         max_topics=args.max_topics,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
+    return 0
+
+
+def build_paragraph_index_command(args: argparse.Namespace) -> int:
+    result = build_paragraph_index(
+        graph_path=args.graph or None,
+        case_paths_file=args.case_paths_file or None,
+        output_dir=args.output_dir,
+        max_cases=args.max_cases,
+        batch_size=args.batch_size,
+        embedding_backend=args.embedding_backend,
+        embedding_model=args.embedding_model,
+        embedding_dimensions=args.embedding_dimensions,
+        reset=args.reset,
+    )
+    print(json.dumps(result.manifest, indent=2, ensure_ascii=False))
+    return 0
+
+
+def paragraph_query_command(args: argparse.Namespace) -> int:
+    result = search_paragraph_index(
+        index_path=args.index,
+        question=args.question,
+        top_k=args.top_k,
+        embedding_backend=args.embedding_backend,
+        embedding_model=args.embedding_model,
+        embedding_dimensions=args.embedding_dimensions,
+    )
+    if args.as_json:
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        return 0
+    for rank, item in enumerate(result["results"], start=1):
+        metadata = item["metadata"]
+        print(
+            f"[{rank}] {metadata.get('case_name', '')} "
+            f"{metadata.get('neutral_citation', '')} {metadata.get('paragraph_span', '')} "
+            f"score={item['score']}"
+        )
+        print(item["document"])
+        if metadata.get("source_url"):
+            print(f"Source: {metadata['source_url']}")
+        print()
     return 0
 
 
@@ -506,6 +549,58 @@ def parser() -> argparse.ArgumentParser:
     hybrid_query_parser.add_argument("--question", required=True, help="Question to ask")
     hybrid_query_parser.add_argument("--top-k", type=int, default=5, help="Number of supporting case cards to return")
     hybrid_query_parser.set_defaults(func=hybrid_query_command)
+
+    paragraph_index_parser = subparsers.add_parser(
+        "build-paragraph-index",
+        help="Build or resume a paragraph-level HKLII case vector index from graph case links or a case-path list",
+    )
+    paragraph_index_parser.add_argument(
+        "--graph",
+        default=str(Path("artifacts") / "hk_criminal_relationship" / "relationship_graph.json"),
+        help="Relationship graph containing HKLII case links. Use an empty string with --case-paths-file only.",
+    )
+    paragraph_index_parser.add_argument(
+        "--case-paths-file",
+        default="",
+        help="Optional newline-delimited HKLII /en/cases/... paths or URLs to add to the index.",
+    )
+    paragraph_index_parser.add_argument(
+        "--output-dir",
+        default=str(Path("artifacts") / "hk_case_paragraph_index"),
+        help="Directory for paragraph_chroma_records.json, manifest, and resumable state.",
+    )
+    paragraph_index_parser.add_argument("--max-cases", type=int, default=50, help="Maximum new cases to fetch in this run; use 0 for all remaining candidates")
+    paragraph_index_parser.add_argument("--batch-size", type=int, default=32, help="Embedding batch size")
+    paragraph_index_parser.add_argument(
+        "--embedding-backend",
+        default="auto",
+        help="Embedding backend to use: auto, local-hash, sentence-transformers, or openai",
+    )
+    paragraph_index_parser.add_argument("--embedding-model", default="", help="Optional embedding model override")
+    paragraph_index_parser.add_argument("--embedding-dimensions", type=int, default=0, help="Optional embedding dimension override")
+    paragraph_index_parser.add_argument("--reset", action="store_true", help="Discard existing index/state and rebuild from the first candidate")
+    paragraph_index_parser.set_defaults(func=build_paragraph_index_command)
+
+    paragraph_query_parser = subparsers.add_parser(
+        "paragraph-query",
+        help="Search the paragraph-level HKLII vector index with lexical + vector reranking",
+    )
+    paragraph_query_parser.add_argument(
+        "--index",
+        default=str(Path("artifacts") / "hk_case_paragraph_index" / "paragraph_chroma_records.json"),
+        help="Path to paragraph_chroma_records.json",
+    )
+    paragraph_query_parser.add_argument("--question", required=True, help="Question to search for")
+    paragraph_query_parser.add_argument("--top-k", type=int, default=8, help="Number of paragraph hits to return")
+    paragraph_query_parser.add_argument(
+        "--embedding-backend",
+        default="auto",
+        help="Embedding backend to use for the query; should match the built index",
+    )
+    paragraph_query_parser.add_argument("--embedding-model", default="", help="Optional embedding model override")
+    paragraph_query_parser.add_argument("--embedding-dimensions", type=int, default=0, help="Optional embedding dimension override")
+    paragraph_query_parser.add_argument("--json", action="store_true", dest="as_json", help="Print JSON output")
+    paragraph_query_parser.set_defaults(func=paragraph_query_command)
 
     serve_internal_parser = subparsers.add_parser(
         "serve-internal",

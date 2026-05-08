@@ -186,6 +186,45 @@ Hosted criminal-law sync:
 PYTHONPATH=src .venv/bin/python -m casemap sync-criminal-supabase --max-cases 10 --prefix casemap/hk_criminal/latest
 ```
 
+## Resumable HKLII Paragraph Index
+
+For long-running capture jobs, keep ingestion separate from deployment. This command fetches HKLII case documents from the relationship graph, labels every paragraph with case/topic/citation metadata, embeds it, and writes a Chroma-compatible JSON index that can resume safely after interruption:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m casemap build-paragraph-index \
+  --graph artifacts/hk_criminal_relationship/relationship_graph.json \
+  --output-dir artifacts/hk_case_paragraph_index \
+  --max-cases 50 \
+  --embedding-backend sentence-transformers
+```
+
+Repeat the same command to continue with the next unprocessed cases. Use `--reset` only when you deliberately want to rebuild the index from scratch. For a cheap smoke run:
+
+```bash
+PYTHONPATH=src python3 -m casemap build-paragraph-index \
+  --output-dir artifacts/hk_case_paragraph_index \
+  --max-cases 5 \
+  --embedding-backend local-hash
+```
+
+Search exact indexed paragraphs with vector + lexical reranking:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m casemap paragraph-query \
+  --index artifacts/hk_case_paragraph_index/paragraph_chroma_records.json \
+  --question "mens rea for assault in Hong Kong" \
+  --top-k 8 \
+  --embedding-backend sentence-transformers
+```
+
+The output files are:
+
+- `paragraph_chroma_records.json`: collection-style records with `id`, `document`, `metadata`, and `embedding`
+- `paragraph_index_state.json`: resumable checkpoint of processed HKLII paths and recent errors
+- `paragraph_index_manifest.json`: counts, backend details, warnings, and remaining case count
+
+Deployment stays read-only: `.vercelignore` excludes caches, local index exports, tests, docs, and unrelated project folders so Vercel does not try to upload the multi-week capture workspace.
+
 To keep future Codex sessions cheaper and more accurate, start from:
 
 - [docs/project_handoff.md](/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap-/docs/project_handoff.md)
