@@ -225,6 +225,21 @@ The output files are:
 
 Deployment stays read-only: `.vercelignore` excludes caches, local index exports, tests, docs, and unrelated project folders so Vercel does not try to upload the multi-week capture workspace.
 
+## Supabase Candidate Sync
+
+For larger online storage, sync the clean candidate registry directly into Supabase raw case JSON plus exact paragraph chunks. The command is resumable and strict by default: it keeps only candidates classified into the requested domain and does not include cross-domain candidates unless explicitly requested.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m casemap sync-candidates-supabase \
+  --candidates data/batch/candidates_criminal_clean.json \
+  --domain criminal \
+  --prefix casemap/hk_criminal/latest \
+  --max-cases 250 \
+  --embedding-backend sentence-transformers
+```
+
+Repeat the same command to continue from `data/batch/supabase_candidate_sync_state.json`. Use `--max-cases 0` only when the Supabase project, API keys, and embedding backend have already been tested on a small batch.
+
 To keep future Codex sessions cheaper and more accurate, start from:
 
 - [docs/project_handoff.md](/Users/puiyuenwong/PolymarketCorrelationStrategy/Casemap-/docs/project_handoff.md)

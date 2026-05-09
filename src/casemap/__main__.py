@@ -13,7 +13,7 @@ from .hybrid_graph import HybridGraphStore, build_hybrid_graph_artifacts, merge_
 from .lineage_discovery import DISCOVERED_LINEAGES_DEFAULT_PATH, discover_lineages_from_file
 from .paragraph_index import build_paragraph_index, search_paragraph_index
 from .relationship_graph import build_relationship_artifacts, export_public_relationship_artifacts
-from .supabase_sync import load_env_file, sync_criminal_artifacts_to_supabase
+from .supabase_sync import load_env_file, sync_candidate_registry_to_supabase, sync_criminal_artifacts_to_supabase
 
 
 def build_command(args: argparse.Namespace) -> int:
@@ -148,6 +148,24 @@ def sync_criminal_supabase_command(args: argparse.Namespace) -> int:
         embedding_backend=args.embedding_backend,
         embedding_model=args.embedding_model,
         prune_prefix_cases=args.prune_prefix_cases,
+    )
+    print(json.dumps(manifest, indent=2, ensure_ascii=False))
+    return 0
+
+
+def sync_candidates_supabase_command(args: argparse.Namespace) -> int:
+    for candidate in args.env_file:
+        load_env_file(candidate)
+    manifest = sync_candidate_registry_to_supabase(
+        candidates_path=args.candidates,
+        bucket=args.bucket,
+        prefix=args.prefix,
+        max_cases=args.max_cases,
+        domain=args.domain,
+        embedding_backend=args.embedding_backend,
+        embedding_model=args.embedding_model,
+        state_path=args.state,
+        include_cross_domain=args.include_cross_domain,
     )
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0
@@ -540,6 +558,52 @@ def parser() -> argparse.ArgumentParser:
     )
     sync_parser.set_defaults(prune_prefix_cases=False)
     sync_parser.set_defaults(func=sync_criminal_supabase_command)
+
+    candidate_sync_parser = subparsers.add_parser(
+        "sync-candidates-supabase",
+        help="Strictly sync a candidate registry to Supabase raw case JSON plus exact paragraph chunks",
+    )
+    candidate_sync_parser.add_argument(
+        "--candidates",
+        default=str(Path("data") / "batch" / "candidates_criminal_clean.json"),
+        help="Candidate registry JSON with source_url, domain_classification, and extracted principles",
+    )
+    candidate_sync_parser.add_argument("--domain", default="criminal", help="Target legal domain to retain")
+    candidate_sync_parser.add_argument("--bucket", default="Casebase", help="Supabase Storage bucket name")
+    candidate_sync_parser.add_argument(
+        "--prefix",
+        default="casemap/hk_criminal/latest",
+        help="Storage prefix for per-case JSON files",
+    )
+    candidate_sync_parser.add_argument(
+        "--max-cases",
+        type=int,
+        default=100,
+        help="Maximum new cases to sync this run; use 0 for all remaining strict candidates",
+    )
+    candidate_sync_parser.add_argument(
+        "--state",
+        default=str(Path("data") / "batch" / "supabase_candidate_sync_state.json"),
+        help="Resumable sync state path. Processed HKLII ids are skipped on later runs.",
+    )
+    candidate_sync_parser.add_argument(
+        "--embedding-backend",
+        default="auto",
+        help="Embedding backend for exact paragraph chunks: auto, deepseek, openai, sentence-transformers, or local-hash",
+    )
+    candidate_sync_parser.add_argument("--embedding-model", default="", help="Optional embedding model override")
+    candidate_sync_parser.add_argument(
+        "--include-cross-domain",
+        action="store_true",
+        help="Also sync cross-domain cases with criminal as a secondary domain. Default keeps strict matched cases only.",
+    )
+    candidate_sync_parser.add_argument(
+        "--env-file",
+        action="append",
+        default=[".env.local", ".env"],
+        help="Env file to load before syncing. Repeat to add more files.",
+    )
+    candidate_sync_parser.set_defaults(func=sync_candidates_supabase_command)
 
     hybrid_query_parser = subparsers.add_parser(
         "hybrid-query",

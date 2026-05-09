@@ -13,6 +13,7 @@ import re
 import ssl
 
 from .embeddings import create_embedding_backend
+from .domain_classifier import filter_candidates_by_domain
 from .hklii_crawler import HKLIICrawler
 
 HKLII_PATH_RE = re.compile(r"^/en/cases/(?P<court>[^/]+)/(?P<year>\d{4})/(?P<num>\d+)$", re.IGNORECASE)
@@ -30,6 +31,7 @@ CRIMINAL_RELEVANCE_RE = re.compile(
     r")\b",
     re.IGNORECASE,
 )
+DEFAULT_CANDIDATE_SYNC_STATE = Path("data") / "batch" / "supabase_candidate_sync_state.json"
 
 
 @dataclass
@@ -129,6 +131,17 @@ def _derive_public_path(node: dict) -> str | None:
     match = NEUTRAL_RE.match(citation)
     if match and court_code in {"hkdc", "hkcfi", "hkca", "hkcfa"}:
         return f"/en/cases/{court_code}/{match.group('year')}/{match.group('num')}"
+    return None
+
+
+def _derive_candidate_public_path(candidate: dict) -> str | None:
+    source_url = str(candidate.get("source_url") or candidate.get("public_url") or "").strip()
+    if not source_url:
+        return None
+    parsed = urllib_parse.urlparse(source_url)
+    path = parsed.path if parsed.scheme else source_url
+    if "/en/cases/" in path:
+        return path
     return None
 
 
@@ -301,6 +314,68 @@ def _build_case_chunk_rows(case_id: int, hklii_id: str, case_doc, node_context: 
     return chunk_rows
 
 
+def _candidate_legal_principles(candidate: dict) -> list[str]:
+    principles: list[str] = []
+    for principle in candidate.get("principles", []) or []:
+        if not isinstance(principle, dict):
+            continue
+        statement = (
+            principle.get("statement_en")
+            or principle.get("paraphrase_en")
+            or principle.get("public_excerpt")
+            or principle.get("principle_label")
+            or ""
+        )
+        if statement:
+            principles.append(str(statement))
+    return principles[:20]
+
+
+def _load_sync_state(path: Path) -> dict:
+    if not path.exists():
+        return {"processed_hklii_ids": [], "errors": []}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {"processed_hklii_ids": [], "errors": []}
+    payload.setdefault("processed_hklii_ids", [])
+    payload.setdefault("errors", [])
+    return payload
+
+
+def _write_sync_state(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def _candidate_case_payload(case_doc, hklii_id: str, case_storage_path: str, candidate: dict, relationship_path: str) -> dict:
+    topic_label = str(candidate.get("topic_label") or "")
+    summary_parts = [
+        topic_label,
+        *(
+            str(principle)
+            for principle in _candidate_legal_principles(candidate)[:3]
+        ),
+    ]
+    catchwords = " | ".join(part for part in summary_parts if part)
+    return {
+        "hklii_id": hklii_id,
+        "case_name": case_doc.case_name,
+        "neutral_citation": case_doc.neutral_citation,
+        "court": case_doc.court_name,
+        "action_number": case_doc.title,
+        "decision_date": case_doc.decision_date,
+        "judges": "; ".join(case_doc.judges),
+        "catchwords": catchwords,
+        "legislation_cited": "; ".join(reference.label for reference in case_doc.cited_statutes),
+        "cases_cited": "; ".join(reference.label for reference in case_doc.cited_cases),
+        "case_url": case_doc.public_url,
+        "doc_storage_path": case_storage_path,
+        "doc_local_path": relationship_path,
+        "scraped_at": datetime.now(UTC).isoformat(),
+    }
+
+
 def sync_case_document_to_supabase(
     case_doc,
     *,
@@ -374,6 +449,185 @@ def sync_case_document_to_supabase(
         "neutral_citation": case_doc.neutral_citation,
         "chunk_count": len(chunk_rows),
         "storage_path": case_storage_path,
+        "embedding_backend": embedder.manifest(),
+    }
+
+
+def sync_candidate_registry_to_supabase(
+    candidates_path: str | Path,
+    *,
+    bucket: str = "Casebase",
+    prefix: str = "casemap/hk_criminal/latest",
+    max_cases: int = 100,
+    domain: str = "criminal",
+    embedding_backend: str = "auto",
+    embedding_model: str = "",
+    state_path: str | Path = DEFAULT_CANDIDATE_SYNC_STATE,
+    include_cross_domain: bool = False,
+) -> dict:
+    """Strictly sync candidate-registry cases and exact paragraphs to Supabase.
+
+    This is intended for large online growth runs. It does not prune existing
+    Supabase rows; it resumes from a state file and replaces chunks only for the
+    case currently being refreshed.
+    """
+    config = SupabaseConfig.from_env()
+    source_path = Path(candidates_path).expanduser().resolve()
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    all_candidates = payload.get("candidates", [])
+    if not isinstance(all_candidates, list):
+        raise RuntimeError(f"Candidate registry did not contain a candidates list: {source_path}")
+
+    matched, cross_domain, out_of_domain = filter_candidates_by_domain(
+        [candidate for candidate in all_candidates if isinstance(candidate, dict)],
+        target_domain=domain,
+        use_llm_for_ambiguous=False,
+        force_reclassify=False,
+    )
+    candidates = matched + (cross_domain if include_cross_domain else [])
+
+    state_file = Path(state_path).expanduser().resolve()
+    state = _load_sync_state(state_file)
+    processed_ids = set(state.get("processed_hklii_ids", []))
+    errors: list[dict] = list(state.get("errors", []))
+
+    crawler = HKLIICrawler()
+    embedder = create_embedding_backend(backend=embedding_backend, model=embedding_model)
+    synced_cases: list[dict] = []
+    skipped_cases: list[dict] = []
+    seen_paths: set[str] = set()
+
+    for candidate in candidates:
+        public_path = _derive_candidate_public_path(candidate)
+        if not public_path or public_path in seen_paths:
+            continue
+        seen_paths.add(public_path)
+        try:
+            hklii_id = _derive_hklii_id(public_path)
+        except Exception as exc:
+            skipped_cases.append({"case_name": candidate.get("case_name", ""), "reason": str(exc)})
+            continue
+        if hklii_id in processed_ids:
+            continue
+        try:
+            case_doc = crawler.fetch_case_document(public_path)
+            sample_text = " ".join(paragraph.text for paragraph in case_doc.paragraphs[:8] if paragraph.text)
+            node_like = {
+                "summary_en": " ".join(_candidate_legal_principles(candidate)[:2]),
+                "principles": candidate.get("principles", []),
+                "topics": [candidate.get("topic_label", "")],
+            }
+            if not _looks_criminally_relevant(node_like, case_doc.case_name, title=case_doc.title, sample_text=sample_text):
+                skipped_cases.append({"hklii_id": hklii_id, "case_name": case_doc.case_name, "reason": "failed criminal relevance guard"})
+                continue
+            raw_payload = {
+                "hklii_id": hklii_id,
+                "public_url": case_doc.public_url,
+                "case_name": case_doc.case_name,
+                "neutral_citation": case_doc.neutral_citation,
+                "court_name": case_doc.court_name,
+                "court_code": case_doc.court_code,
+                "decision_date": case_doc.decision_date,
+                "judges": case_doc.judges,
+                "paragraphs": [
+                    {"paragraph_span": paragraph.paragraph_span, "text": paragraph.text}
+                    for paragraph in case_doc.paragraphs
+                ],
+                "cited_cases": [{"label": ref.label, "url": ref.url} for ref in case_doc.cited_cases],
+                "cited_statutes": [{"label": ref.label, "url": ref.url} for ref in case_doc.cited_statutes],
+                "candidate_context": {
+                    "topic_id": candidate.get("topic_id", ""),
+                    "topic_label": candidate.get("topic_label", ""),
+                    "module_id": candidate.get("module_id", ""),
+                    "subground_id": candidate.get("subground_id", ""),
+                    "domain_classification": candidate.get("domain_classification", {}),
+                },
+            }
+            case_storage_path = _upload_bytes_to_storage(
+                config,
+                bucket,
+                json.dumps(raw_payload, ensure_ascii=False, indent=2).encode("utf-8"),
+                f"{prefix}/cases/{hklii_id}.json",
+                content_type="application/json",
+            )
+            case_id = _upsert_case(
+                config,
+                _candidate_case_payload(
+                    case_doc,
+                    hklii_id,
+                    case_storage_path,
+                    candidate,
+                    str(source_path),
+                ),
+            )
+            chunk_rows = _build_case_chunk_rows(
+                case_id,
+                hklii_id,
+                case_doc,
+                {"legal_principles": _candidate_legal_principles(candidate)},
+                embedder,
+            )
+            _replace_case_chunks(config, hklii_id, chunk_rows)
+            processed_ids.add(hklii_id)
+            synced_cases.append(
+                {
+                    "hklii_id": hklii_id,
+                    "case_name": case_doc.case_name,
+                    "neutral_citation": case_doc.neutral_citation,
+                    "chunk_count": len(chunk_rows),
+                }
+            )
+            state.update(
+                {
+                    "updated_at": datetime.now(UTC).isoformat(),
+                    "source": str(source_path),
+                    "domain": domain,
+                    "processed_hklii_ids": sorted(processed_ids),
+                    "errors": errors[-100:],
+                    "last_hklii_id": hklii_id,
+                }
+            )
+            _write_sync_state(state_file, state)
+            if max_cases > 0 and len(synced_cases) >= max_cases:
+                break
+        except Exception as exc:
+            error_payload = {
+                "hklii_id": hklii_id,
+                "case_name": candidate.get("case_name", ""),
+                "error": str(exc),
+                "at": datetime.now(UTC).isoformat(),
+            }
+            errors.append(error_payload)
+            state.update(
+                {
+                    "updated_at": datetime.now(UTC).isoformat(),
+                    "source": str(source_path),
+                    "domain": domain,
+                    "processed_hklii_ids": sorted(processed_ids),
+                    "errors": errors[-100:],
+                    "last_failed_hklii_id": hklii_id,
+                }
+            )
+            _write_sync_state(state_file, state)
+            skipped_cases.append({"hklii_id": hklii_id, "case_name": candidate.get("case_name", ""), "reason": str(exc)})
+            continue
+
+    return {
+        "source": str(source_path),
+        "domain": domain,
+        "candidate_count": len(all_candidates),
+        "matched_candidate_count": len(matched),
+        "cross_domain_candidate_count": len(cross_domain),
+        "out_of_domain_candidate_count": len(out_of_domain),
+        "include_cross_domain": include_cross_domain,
+        "already_processed_count": len(processed_ids) - len(synced_cases),
+        "synced_case_count": len(synced_cases),
+        "synced_cases": synced_cases,
+        "skipped_cases": skipped_cases[:50],
+        "error_count": len(errors),
+        "recent_errors": errors[-10:],
+        "state_path": str(state_file),
+        "crawler_warnings": crawler.warnings,
         "embedding_backend": embedder.manifest(),
     }
 
