@@ -3202,22 +3202,22 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
   <title>{graph_payload["meta"].get("title", "Casemap Hybrid Hierarchical Graph")}</title>
   <style>
     :root {{
-      --bg: #f3ede2;
-      --bg-deep: #ebe2d2;
-      --panel: rgba(255, 250, 242, 0.88);
+      --bg: #f4f6f8;
+      --bg-deep: #e9edf2;
+      --panel: rgba(255, 255, 255, 0.76);
       --panel-strong: rgba(255, 255, 255, 0.92);
-      --ink: #1f2328;
-      --muted: #6e675d;
-      --line: rgba(31, 35, 40, 0.12);
-      --shadow: 0 20px 60px rgba(31, 35, 40, 0.08);
-      --shadow-soft: 0 12px 28px rgba(31, 35, 40, 0.06);
-      --module: #204e5f;
-      --subground: #d08c34;
-      --topic: #5b7f63;
-      --lineage: #7c2d12;
-      --case: #355c7d;
-      --statute: #6b7280;
-      --accent: #8f3b1b;
+      --ink: #111827;
+      --muted: #667085;
+      --line: rgba(17, 24, 39, 0.1);
+      --shadow: 0 24px 70px rgba(15, 23, 42, 0.11);
+      --shadow-soft: 0 12px 32px rgba(15, 23, 42, 0.07);
+      --module: #28313c;
+      --subground: #64748b;
+      --topic: #667085;
+      --lineage: #5f756e;
+      --case: #748397;
+      --statute: #8a7284;
+      --accent: #1f2937;
     }}
 
     * {{ box-sizing: border-box; }}
@@ -3228,9 +3228,9 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
       color: var(--ink);
       font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
       background:
-        radial-gradient(circle at top left, rgba(208, 140, 52, 0.18), transparent 26%),
-        radial-gradient(circle at top right, rgba(32, 78, 95, 0.14), transparent 24%),
-        linear-gradient(180deg, #faf5ec 0%, var(--bg) 42%, var(--bg-deep) 100%);
+        linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,246,248,0.98)),
+        repeating-linear-gradient(0deg, rgba(17, 24, 39, 0.026) 0 1px, transparent 1px 38px),
+        repeating-linear-gradient(90deg, rgba(17, 24, 39, 0.026) 0 1px, transparent 1px 38px);
     }}
 
     .shell {{
@@ -3246,9 +3246,11 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
 
     .detail-panel {{
       border-left: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255, 252, 247, 0.95), rgba(244, 238, 228, 0.98));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(245, 247, 250, 0.94));
       padding: 24px 22px 30px;
       overflow-y: auto;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
     }}
 
     .meta {{
@@ -3294,7 +3296,7 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
       padding: 6px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.58);
+      background: rgba(255, 255, 255, 0.7);
       box-shadow: var(--shadow-soft);
     }}
 
@@ -3332,10 +3334,12 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
     .graph-shell {{
       border: 1px solid var(--line);
       border-radius: 30px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(244, 238, 228, 0.82));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(246, 248, 251, 0.82));
       box-shadow: var(--shadow);
       margin-bottom: 20px;
       overflow: hidden;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }}
 
     .graph-toolbar {{
@@ -3420,9 +3424,9 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
       min-height: 680px;
       border-top: 1px solid rgba(31, 35, 40, 0.08);
       background:
-        radial-gradient(circle at top left, rgba(208, 140, 52, 0.09), transparent 24%),
-        radial-gradient(circle at bottom right, rgba(32, 78, 95, 0.08), transparent 24%),
-        linear-gradient(180deg, rgba(251, 248, 242, 0.96), rgba(240, 233, 222, 0.88));
+        linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(244, 247, 250, 0.9)),
+        repeating-linear-gradient(0deg, rgba(17, 24, 39, 0.024) 0 1px, transparent 1px 34px),
+        repeating-linear-gradient(90deg, rgba(17, 24, 39, 0.024) 0 1px, transparent 1px 34px);
       border-radius: 24px;
       overflow: hidden;
     }}
@@ -3441,8 +3445,8 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
 
     .graph-edge-link {{
       fill: none;
-      stroke: rgba(31, 35, 40, 0.15);
-      stroke-width: 2;
+      stroke: rgba(17, 24, 39, 0.12);
+      stroke-width: 1.4;
       stroke-linecap: round;
     }}
 
@@ -3457,40 +3461,40 @@ def render_hybrid_hierarchy(graph_payload: dict, page_mode: str = "hierarchy") -
 
     .graph-node-surface {{
       fill: rgba(255, 255, 255, 0.94);
-      stroke: rgba(31, 35, 40, 0.16);
-      stroke-width: 1.5;
-      filter: drop-shadow(0 12px 22px rgba(31, 35, 40, 0.1));
+      stroke: rgba(17, 24, 39, 0.14);
+      stroke-width: 1.2;
+      filter: drop-shadow(0 12px 22px rgba(15, 23, 42, 0.09));
       transition: stroke 140ms ease, stroke-width 140ms ease, transform 140ms ease;
     }}
 
     .graph-node.root .graph-node-surface {{
-      fill: #182029;
-      stroke: rgba(17, 22, 28, 0.78);
+      fill: #1f2937;
+      stroke: rgba(17, 24, 39, 0.78);
     }}
 
     .graph-node.module .graph-node-surface {{
-      fill: rgba(32, 78, 95, 0.94);
-      stroke: rgba(32, 78, 95, 0.95);
+      fill: rgba(40, 49, 60, 0.94);
+      stroke: rgba(40, 49, 60, 0.95);
     }}
 
     .graph-node.subground .graph-node-surface {{
-      fill: rgba(208, 140, 52, 0.15);
-      stroke: rgba(208, 140, 52, 0.4);
+      fill: rgba(100, 116, 139, 0.13);
+      stroke: rgba(100, 116, 139, 0.32);
     }}
 
     .graph-node.topic .graph-node-surface {{
-      fill: rgba(91, 127, 99, 0.14);
-      stroke: rgba(91, 127, 99, 0.34);
+      fill: rgba(102, 112, 133, 0.12);
+      stroke: rgba(102, 112, 133, 0.3);
     }}
 
     .graph-node.authoritylineage .graph-node-surface {{
-      fill: rgba(124, 45, 18, 0.14);
-      stroke: rgba(124, 45, 18, 0.35);
+      fill: rgba(95, 117, 110, 0.12);
+      stroke: rgba(95, 117, 110, 0.32);
     }}
 
     .graph-node.case .graph-node-surface {{
-      fill: rgba(53, 92, 125, 0.14);
-      stroke: rgba(53, 92, 125, 0.34);
+      fill: rgba(116, 131, 151, 0.12);
+      stroke: rgba(116, 131, 151, 0.3);
     }}
 
     .graph-node.statute .graph-node-surface {{
@@ -5419,48 +5423,208 @@ def render_knowledge_graph(bundle: dict) -> str:
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <style>
     :root {{
-      --bg: #f0f4f8;
-      --panel: rgba(255,255,255,0.92);
-      --ink: #101317;
-      --muted: #6b7280;
-      --line: rgba(16,19,23,0.1);
-      --module: #0f4c5c;
-      --subground: #2d6a8a;
-      --topic: #d28d2d;
-      --case: #7f5539;
-      --statute: #bc4749;
-      --lineage: #52796f;
-      --accent: #0f1216;
+      --bg: #f4f6f8;
+      --panel: rgba(255, 255, 255, 0.76);
+      --panel-strong: rgba(255, 255, 255, 0.94);
+      --ink: #111827;
+      --muted: #667085;
+      --line: rgba(17, 24, 39, 0.1);
+      --line-strong: rgba(17, 24, 39, 0.18);
+      --module: #28313c;
+      --subground: #526070;
+      --topic: #64748b;
+      --case: #748397;
+      --statute: #8a7284;
+      --lineage: #5f756e;
+      --accent: #1f2937;
+      --active: #0f172a;
+      --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+      --shadow-soft: 0 12px 32px rgba(15, 23, 42, 0.08);
     }}
     * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-    body {{ font-family: "Avenir Next","Helvetica Neue",sans-serif; background: var(--bg); color: var(--ink); height: 100vh; display: flex; flex-direction: column; }}
-    .toolbar {{ display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--panel); border-bottom: 1px solid var(--line); flex-shrink: 0; }}
-    .toolbar h1 {{ font-size: 16px; font-weight: 600; letter-spacing: -0.02em; }}
-    .toolbar .counts {{ color: var(--muted); font-size: 12px; }}
-    .toolbar input {{ padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; background: white; width: 220px; }}
-    nav.nav {{ display: inline-flex; gap: 6px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.7); margin-left: auto; }}
-    nav.nav a {{ padding: 7px 12px; border-radius: 999px; color: var(--ink); text-decoration: none; font-size: 12px; }}
-    nav.nav a.active {{ background: var(--accent); color: white; }}
-    .legend {{ display: flex; gap: 10px; flex-wrap: wrap; font-size: 11px; color: var(--muted); }}
-    .legend span {{ display: inline-flex; align-items: center; gap: 5px; }}
-    .swatch {{ width: 9px; height: 9px; border-radius: 2px; display: inline-block; }}
+    body {{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(244,246,248,0.98)),
+        repeating-linear-gradient(0deg, rgba(17, 24, 39, 0.026) 0 1px, transparent 1px 38px),
+        repeating-linear-gradient(90deg, rgba(17, 24, 39, 0.026) 0 1px, transparent 1px 38px);
+      color: var(--ink);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }}
+    .toolbar {{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 18px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      flex-shrink: 0;
+    }}
+    .toolbar h1 {{ font-size: 15px; font-weight: 640; letter-spacing: -0.01em; white-space: nowrap; }}
+    .toolbar .counts {{ color: var(--muted); font-size: 12px; white-space: nowrap; }}
+    .toolbar input {{
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-size: 13px;
+      background: rgba(255,255,255,0.86);
+      width: 240px;
+      color: var(--ink);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset;
+    }}
+    nav.nav {{
+      display: inline-flex;
+      gap: 5px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.62);
+      margin-left: auto;
+    }}
+    nav.nav a {{ padding: 8px 12px; border-radius: 9px; color: var(--muted); text-decoration: none; font-size: 12px; font-weight: 540; }}
+    nav.nav a.active {{ background: var(--accent); color: white; box-shadow: var(--shadow-soft); }}
+    .legend {{ display: flex; gap: 8px; flex-wrap: wrap; font-size: 11px; color: var(--muted); }}
+    .legend span {{
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.62);
+    }}
+    .swatch {{ width: 9px; height: 9px; border-radius: 999px; display: inline-block; }}
     .main {{ display: flex; flex: 1; overflow: hidden; }}
-    #graph-container {{ flex: 1; overflow: hidden; position: relative; }}
+    #graph-container {{
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      margin: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.82), rgba(245,247,250,0.92)),
+        repeating-linear-gradient(0deg, rgba(17, 24, 39, 0.032) 0 1px, transparent 1px 36px),
+        repeating-linear-gradient(90deg, rgba(17, 24, 39, 0.032) 0 1px, transparent 1px 36px);
+      box-shadow: var(--shadow);
+    }}
+    #graph-container::before {{
+      content: "Drag to pan · Scroll to zoom · Case labels reveal as you zoom";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.72);
+      color: var(--muted);
+      font-size: 11px;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(16px);
+    }}
     svg {{ width: 100%; height: 100%; }}
-    .side {{ width: 320px; border-left: 1px solid var(--line); background: var(--panel); padding: 20px 18px; overflow-y: auto; flex-shrink: 0; }}
-    .side .meta {{ font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 6px; }}
-    .side h2 {{ font-size: 20px; line-height: 1.1; margin-bottom: 8px; }}
-    .side .pill {{ display: inline-block; padding: 5px 10px; border-radius: 999px; font-size: 11px; background: rgba(16,19,23,0.06); color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }}
+    .side {{
+      width: 340px;
+      border-left: 1px solid var(--line);
+      background: var(--panel);
+      padding: 22px 20px;
+      overflow-y: auto;
+      flex-shrink: 0;
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }}
+    .side .meta {{ font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 6px; font-weight: 560; }}
+    .side h2 {{ font-size: 20px; line-height: 1.14; margin-bottom: 9px; letter-spacing: -0.025em; font-weight: 640; }}
+    .side .pill {{ display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 11px; background: rgba(17,24,39,0.06); color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; border: 1px solid var(--line); font-weight: 560; }}
     .side p {{ font-size: 14px; line-height: 1.6; color: var(--ink); margin-bottom: 14px; }}
     .side ul {{ list-style: none; display: grid; gap: 8px; margin-bottom: 14px; }}
-    .side ul li {{ border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; font-size: 13px; background: rgba(255,255,255,0.6); }}
-    .node circle {{ stroke: rgba(255,255,255,0.9); stroke-width: 1.5; cursor: pointer; transition: stroke-width 120ms; }}
-    .node circle:hover {{ stroke-width: 3; }}
-    .node text {{ font-size: 10px; fill: var(--ink); pointer-events: none; font-family: "SFMono-Regular",monospace; }}
-    .link {{ stroke: rgba(16,19,23,0.12); stroke-width: 1; }}
-    .link.CITES, .link.FOLLOWS, .link.APPLIES {{ stroke: rgba(16,19,23,0.22); stroke-width: 1.4; }}
+    .side ul li {{ border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 13px; background: rgba(255,255,255,0.64); box-shadow: var(--shadow-soft); }}
+    .node rect {{
+      stroke: rgba(17,24,39,0.15);
+      stroke-width: 1.1;
+      cursor: pointer;
+      filter: drop-shadow(0 10px 20px rgba(15, 23, 42, 0.09));
+      transition: stroke-width 120ms, filter 120ms;
+    }}
+    .node rect:hover {{ stroke-width: 2; filter: drop-shadow(0 16px 26px rgba(15, 23, 42, 0.13)); }}
+    .node text {{
+      font-size: 10.5px;
+      fill: var(--ink);
+      pointer-events: none;
+      font-weight: 560;
+      letter-spacing: 0;
+    }}
+    .node .node-kind {{
+      fill: var(--muted);
+      font-size: 8.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }}
+    .node.module text,
+    .node.subground text {{
+      fill: rgba(255, 255, 255, 0.88);
+    }}
+    .node.module .node-kind,
+    .node.subground .node-kind {{
+      fill: rgba(255, 255, 255, 0.5);
+    }}
+    .node.case,
+    .node.statute,
+    .node.authoritylineage {{
+      opacity: 0;
+      pointer-events: none;
+    }}
+    .detail-revealed .node.case,
+    .detail-revealed .node.statute,
+    .detail-revealed .node.authoritylineage,
+    .node.case.active,
+    .node.statute.active,
+    .node.authoritylineage.active,
+    .node.case.nearby,
+    .node.statute.nearby,
+    .node.authoritylineage.nearby {{
+      opacity: 1;
+      pointer-events: auto;
+    }}
+    .node.case .node-label,
+    .node.statute .node-label,
+    .node.authoritylineage .node-label {{
+      opacity: 0;
+    }}
+    .labels-revealed .node.case .node-label,
+    .labels-revealed .node.statute .node-label,
+    .labels-revealed .node.authoritylineage .node-label,
+    .node.active .node-label,
+    .node.nearby .node-label {{
+      opacity: 1;
+    }}
+    .link {{ fill: none; stroke: rgba(17,24,39,0.12); stroke-width: 1.15; stroke-linecap: round; opacity: 0.38; }}
+    .link.CITES, .link.FOLLOWS, .link.APPLIES {{ stroke: rgba(17,24,39,0.16); stroke-width: 1.2; }}
+    .link.authority-edge {{
+      opacity: 0;
+    }}
+    .detail-revealed .link.authority-edge {{
+      opacity: 0.16;
+    }}
     .faded {{ opacity: 0.1; }}
-    .active circle {{ stroke: var(--accent) !important; stroke-width: 3.5 !important; }}
+    .nearby {{ opacity: 1; }}
+    .active rect {{ stroke: var(--active) !important; stroke-width: 3 !important; }}
+    @media (max-width: 960px) {{
+      .toolbar {{ align-items: flex-start; flex-wrap: wrap; }}
+      .legend {{ order: 5; width: 100%; }}
+      .main {{ flex-direction: column; }}
+      #graph-container {{ min-height: 68vh; }}
+      .side {{ width: 100%; border-left: 0; border-top: 1px solid var(--line); }}
+    }}
   </style>
 </head>
 <body>
@@ -5507,7 +5671,9 @@ def render_knowledge_graph(bundle: dict) -> str:
       Statute: getComputedStyle(document.documentElement).getPropertyValue("--statute").trim(),
       AuthorityLineage: getComputedStyle(document.documentElement).getPropertyValue("--lineage").trim(),
     }};
-    const RADIUS = {{ Module: 22, Subground: 15, Topic: 11, Case: 9, Statute: 8, AuthorityLineage: 8 }};
+    const RADIUS = {{ Module: 72, Subground: 58, Topic: 50, Case: 34, Statute: 34, AuthorityLineage: 40 }};
+    const NODE_HEIGHT = {{ Module: 54, Subground: 46, Topic: 42, Case: 34, Statute: 34, AuthorityLineage: 36 }};
+    const NODE_WIDTH = {{ Module: 164, Subground: 148, Topic: 138, Case: 108, Statute: 108, AuthorityLineage: 116 }};
 
     const nodeIndex = new Map(NODES.map(n => [n.id, n]));
     const neighbours = new Map(NODES.map(n => [n.id, new Set()]));
@@ -5519,61 +5685,123 @@ def render_knowledge_graph(bundle: dict) -> str:
     const height = () => container.clientHeight;
 
     const zoom = d3.zoom().scaleExtent([0.05, 4]).on("zoom", (event) => g.attr("transform", event.transform));
-    svg.call(zoom);
+    svg.call(zoom.on("zoom", (event) => {{
+      g.attr("transform", event.transform);
+      document.body.classList.toggle("labels-revealed", event.transform.k >= 0.95);
+      document.body.classList.toggle("detail-revealed", event.transform.k >= 0.8);
+    }}));
     const g = svg.append("g");
+
+    NODES.forEach((d, index) => {{
+      const ring = {{ Module: 80, Subground: 220, Topic: 390, AuthorityLineage: 510, Statute: 610, Case: 660 }}[d.type] || 600;
+      const angle = (index * 137.508 / 180) * Math.PI;
+      d.x = Math.cos(angle) * ring;
+      d.y = Math.sin(angle) * ring * 0.72;
+      d.w = Math.max(NODE_WIDTH[d.type] || 112, Math.min(220, (d.label || "").length * 6.2 + 34));
+      d.h = NODE_HEIGHT[d.type] || 34;
+    }});
 
     const sim = d3.forceSimulation(NODES)
       .force("link", d3.forceLink(EDGES).id(d => d.id).distance(d => {{
         const types = [d.source.type || "", d.target.type || ""];
-        if (types.includes("Module")) return 180;
-        if (types.includes("Subground")) return 120;
-        if (types.includes("Topic")) return 80;
-        return 60;
-      }}).strength(0.6))
+        if (types.includes("Module")) return 210;
+        if (types.includes("Subground")) return 150;
+        if (types.includes("Topic")) return 116;
+        return 84;
+      }}).strength(0.42))
       .force("charge", d3.forceManyBody().strength(d => {{
-        if (d.type === "Module") return -800;
-        if (d.type === "Subground") return -400;
-        if (d.type === "Topic") return -200;
-        return -120;
+        if (d.type === "Module") return -950;
+        if (d.type === "Subground") return -520;
+        if (d.type === "Topic") return -280;
+        return -90;
       }}))
+      .force("radial", d3.forceRadial(d => {{
+        if (d.type === "Module") return 80;
+        if (d.type === "Subground") return 230;
+        if (d.type === "Topic") return 410;
+        if (d.type === "AuthorityLineage") return 500;
+        if (d.type === "Statute") return 610;
+        return 670;
+      }}, 0, 0).strength(0.14))
       .force("center", d3.forceCenter(0, 0))
-      .force("collision", d3.forceCollide().radius(d => (RADIUS[d.type] || 9) + 4));
+      .force("collision", d3.forceCollide().radius(d => (RADIUS[d.type] || 40) + 12))
+      .alphaDecay(0.03);
 
-    const link = g.append("g").selectAll("line")
-      .data(EDGES).join("line")
-      .attr("class", d => `link ${{d.type}}`)
+    function endpointType(endpoint) {{
+      return typeof endpoint === "object" ? endpoint.type : nodeIndex.get(endpoint)?.type;
+    }}
+
+    function isAuthorityEdge(edge) {{
+      const types = [endpointType(edge.source), endpointType(edge.target)];
+      return types.some(type => ["Case", "Statute", "AuthorityLineage"].includes(type));
+    }}
+
+    const link = g.append("g").selectAll("path")
+      .data(EDGES).join("path")
+      .attr("class", d => `link ${{d.type}} ${{isAuthorityEdge(d) ? "authority-edge" : "spine-edge"}}`)
       .attr("marker-end", null);
 
     const node = g.append("g").selectAll("g")
       .data(NODES).join("g")
-      .attr("class", "node")
+      .attr("class", d => `node ${{String(d.type || "").toLowerCase()}}`)
       .call(d3.drag()
         .on("start", (event, d) => {{ if (!event.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; }})
         .on("drag", (event, d) => {{ d.fx = event.x; d.fy = event.y; }})
         .on("end", (event, d) => {{ if (!event.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }}))
       .on("click", (event, d) => selectNode(d.id));
 
-    node.append("circle")
-      .attr("r", d => RADIUS[d.type] || 9)
+    node.append("rect")
+      .attr("x", d => -(d.w || 120) / 2)
+      .attr("y", d => -(d.h || 36) / 2)
+      .attr("width", d => d.w || 120)
+      .attr("height", d => d.h || 36)
+      .attr("rx", 12)
+      .attr("ry", 12)
       .attr("fill", d => COLOR[d.type] || "#888")
-      .attr("fill-opacity", 0.88);
+      .attr("fill-opacity", d => ["Module", "Subground"].includes(d.type) ? 0.9 : 0.16);
 
     node.append("text")
-      .attr("dx", d => (RADIUS[d.type] || 9) + 4)
-      .attr("dy", "0.35em")
+      .attr("class", "node-kind")
+      .attr("text-anchor", "middle")
+      .attr("y", d => -(d.h || 36) / 2 + 12)
+      .text(d => d.type === "AuthorityLineage" ? "Lineage" : d.type);
+
+    node.append("text")
+      .attr("class", "node-label")
+      .attr("text-anchor", "middle")
+      .attr("dy", "0.45em")
       .text(d => d.label.length > 28 ? d.label.slice(0, 26) + "…" : d.label);
 
     sim.on("tick", () => {{
-      link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
-          .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+      link.attr("d", d => {{
+        const dx = d.target.x - d.source.x;
+        const dy = d.target.y - d.source.y;
+        const curve = Math.min(90, Math.sqrt(dx * dx + dy * dy) * 0.16);
+        const mx = (d.source.x + d.target.x) / 2 - dy / Math.max(1, Math.sqrt(dx * dx + dy * dy)) * curve;
+        const my = (d.source.y + d.target.y) / 2 + dx / Math.max(1, Math.sqrt(dx * dx + dy * dy)) * curve;
+        return `M${{d.source.x}},${{d.source.y}} Q${{mx}},${{my}} ${{d.target.x}},${{d.target.y}}`;
+      }});
       node.attr("transform", d => `translate(${{d.x}},${{d.y}})`);
     }});
 
     // Centre view after initial layout
     sim.on("end", () => {{
-      const bounds = g.node().getBBox();
+      const visibleForInitial = NODES.filter(n => ["Module", "Subground", "Topic"].includes(n.type));
+      const bounds = visibleForInitial.length
+        ? visibleForInitial.reduce((acc, n) => {{
+            const halfW = (n.w || 120) / 2;
+            const halfH = (n.h || 36) / 2;
+            acc.x = Math.min(acc.x, (n.x || 0) - halfW);
+            acc.y = Math.min(acc.y, (n.y || 0) - halfH);
+            acc.maxX = Math.max(acc.maxX, (n.x || 0) + halfW);
+            acc.maxY = Math.max(acc.maxY, (n.y || 0) + halfH);
+            acc.width = acc.maxX - acc.x;
+            acc.height = acc.maxY - acc.y;
+            return acc;
+          }}, {{ x: Infinity, y: Infinity, maxX: -Infinity, maxY: -Infinity, width: 1, height: 1 }})
+        : g.node().getBBox();
       const w = width(), h = height();
-      const scale = Math.min(0.9, 0.9 / Math.max(bounds.width / w, bounds.height / h));
+      const scale = Math.min(0.72, 0.78 / Math.max(bounds.width / w, bounds.height / h));
       svg.call(zoom.transform, d3.zoomIdentity
         .translate(w / 2 - scale * (bounds.x + bounds.width / 2), h / 2 - scale * (bounds.y + bounds.height / 2))
         .scale(scale));
@@ -5615,7 +5843,9 @@ def render_knowledge_graph(bundle: dict) -> str:
       }}
       node.classed("faded", d => d.id !== id && !neighbours.get(id)?.has(d.id));
       node.classed("active", d => d.id === id);
+      node.classed("nearby", d => d.id !== id && neighbours.get(id)?.has(d.id));
       link.classed("faded", d => d.source.id !== id && d.target.id !== id);
+      document.body.classList.add("detail-revealed");
     }}
 
     function zoomToNode(n, scale = 1.45) {{
@@ -5657,7 +5887,7 @@ def render_knowledge_graph(bundle: dict) -> str:
 
     document.getElementById("search").addEventListener("input", e => {{
       const q = e.target.value.trim().toLowerCase();
-      if (!q) {{ node.classed("faded", false).classed("active", false); link.classed("faded", false); return; }}
+      if (!q) {{ node.classed("faded", false).classed("active", false).classed("nearby", false); link.classed("faded", false); document.body.classList.remove("detail-revealed"); return; }}
       const match = NODES.find(n => n.label.toLowerCase().includes(q) || n.summary.toLowerCase().includes(q));
       if (match) {{
         selectNode(match.id);
@@ -6254,18 +6484,25 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
   <title>Casemap Determinator</title>
   <style>
     :root {{
-      --bg: #fbfbfa;
-      --panel: #ffffff;
-      --panel-2: #f7f7f5;
-      --ink: #202124;
-      --muted: #60656f;
-      --line: #e2e4e8;
-      --accent: #111827;
-      --accent-2: #2f6f73;
+      --bg: #f4f5f7;
+      --panel: rgba(255, 255, 255, 0.7);
+      --panel-2: rgba(245, 247, 250, 0.92);
+      --ink: #1d1d1f;
+      --muted: #8a96aa;
+      --line: rgba(255, 255, 255, 0.72);
+      --accent: #3b82f6;
+      --accent-2: #9333ea;
+      --navy: #111827;
+      --navy-2: #263557;
+      --blush: #f4dbe4;
+      --lavender: #ebe2ff;
+      --sky: #e5f0ff;
+      --mint: #dff7ef;
       --danger: #b42318;
-      --source-bg: #fafafa;
-      --source-line: #dadde2;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --source-bg: rgba(248, 250, 252, 0.88);
+      --source-line: rgba(17, 24, 39, 0.14);
+      --shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+      --shadow-soft: 0 4px 24px -1px rgba(0, 0, 0, 0.04), 0 2px 8px -1px rgba(0, 0, 0, 0.02);
     }}
     html {{ scroll-behavior: smooth; }}
     * {{ box-sizing: border-box; }}
@@ -6275,58 +6512,242 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       min-height: 100vh;
       color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.03) 0, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(147, 51, 234, 0.03) 0, transparent 50%),
+        #f8f9fb;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }}
     .shell {{
-      width: min(1480px, calc(100vw - 32px));
-      margin: 16px auto;
+      width: min(1680px, calc(100vw - 48px));
+      margin: 0 auto 0;
       display: grid;
-      gap: 16px;
+      gap: 0;
     }}
     .topbar {{
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding: 14px 22px;
+      gap: 34px;
+      padding: 24px 0;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(255, 255, 255, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      color: var(--ink);
+      overflow: hidden;
+    }}
+    .brand {{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 260px;
+    }}
+    .brand-mark {{
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: #111827;
+      color: #ffffff;
+      font-size: 22px;
+      box-shadow: 0 10px 28px -10px rgba(17, 24, 39, 0.26);
+    }}
+    .brand-name {{
+      font-size: 22px;
+      font-weight: 720;
+      letter-spacing: -0.035em;
+      line-height: 1;
+    }}
+    .brand-sub {{
+      margin-top: 7px;
+      color: #93a0b6;
+      font-size: 12px;
+      font-weight: 640;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }}
+    .main-nav {{
+      display: flex;
+      align-items: center;
+      gap: clamp(22px, 3.5vw, 52px);
+      flex: 1;
+    }}
+    .main-nav a {{
+      position: relative;
+      color: #93a0b6;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }}
+    .main-nav a.active {{
+      color: var(--ink);
+    }}
+    .main-nav a.active::after {{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -18px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--accent);
+    }}
+    .nav-actions {{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }}
+    .icon-btn {{
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 14px;
+      background: transparent;
+      color: #516078;
+      font-size: 22px;
+    }}
+    .account-pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px 10px 12px;
+      border: 1px solid rgba(66, 87, 126, 0.12);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 680;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.22);
+    }}
+    .account-icon {{
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #f1f5fb;
+      color: #8190a7;
+      font-size: 20px;
     }}
     .topbar-left {{ flex: 1; min-width: 0; }}
-    .topbar-left h1 {{ margin: 4px 0 0; font-size: 20px; letter-spacing: -0.02em; line-height: 1.1; }}
-    .topbar-stats {{ display: flex; gap: 16px; }}
+    .topbar-left h1 {{ margin: 6px 0 0; font-size: 22px; letter-spacing: -0.03em; line-height: 1.04; color: var(--ink); }}
+    .topbar-stats {{ display: flex; gap: 12px; }}
     .topbar-nav {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
     .mode-btn {{
       padding: 8px 16px;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      background: var(--panel-2);
+      border-radius: 10px;
+      border: 1px solid rgba(66, 87, 126, 0.12);
+      background: rgba(255, 255, 255, 0.72);
       color: var(--muted);
       font: inherit;
       font-size: 13px;
       cursor: pointer;
       transition: background 120ms, color 120ms;
     }}
-    .mode-btn.active {{ background: var(--accent); color: #ffffff; border-color: var(--accent); font-weight: 600; }}
-    .hero {{
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
-      gap: 16px;
-    }}
+    .mode-btn.active {{ background: var(--ink); color: #ffffff; border-color: var(--ink); font-weight: 650; }}
     .panel {{
-      border: 1px solid var(--line);
-      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 24px;
       background: var(--panel);
       box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }}
+    .topbar.panel {{
+      background: rgba(255, 255, 255, 0.7);
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }}
+    .topbar.panel .inline-link {{
+      border-color: rgba(66, 87, 126, 0.12);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
     }}
     .hero-copy {{
       padding: 24px 28px;
       display: grid;
       gap: 14px;
     }}
+    .hero {{
+      min-height: 320px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      align-items: center;
+      gap: 40px;
+      padding: 64px 0 44px;
+    }}
+    .engine-pill {{
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: #111827;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 680;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      box-shadow: 0 14px 34px -18px rgba(17, 24, 39, 0.3);
+      margin-bottom: 20px;
+    }}
+    .hero-title {{
+      margin: 0;
+      max-width: 900px;
+      color: #111827;
+      font-size: clamp(44px, 4.9vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.038em;
+      font-weight: 620;
+    }}
+    .hero-title .blue {{
+      color: var(--accent);
+      font-weight: 670;
+    }}
+    .hero-metrics {{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 44px;
+      justify-self: end;
+      align-self: end;
+      margin-bottom: 30px;
+    }}
+    .hero-metric span {{
+      display: block;
+      color: #96a3b8;
+      font-size: 13px;
+      font-weight: 640;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }}
+    .hero-metric strong {{
+      color: #111827;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }}
     .eyebrow {{
       font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--accent-2);
+      color: var(--accent);
+      font-weight: 650;
     }}
     h1 {{
       margin: 0;
@@ -6349,15 +6770,18 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .stat {{
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel-2);
-      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.76);
+      padding: 13px 16px;
+      box-shadow: var(--shadow-soft);
+      min-width: 96px;
     }}
     .stat strong {{
       display: block;
       font-size: 24px;
       line-height: 1;
       letter-spacing: -0.04em;
+      color: var(--ink);
     }}
     .stat span {{
       display: block;
@@ -6378,16 +6802,16 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       gap: 8px;
       padding: 6px;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 12px;
       background: var(--panel-2);
       width: fit-content;
     }}
     .mode-switch button,
     .inline-link {{
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 10px 14px;
-      background: var(--panel-2);
+      background: rgba(255, 255, 255, 0.72);
       color: var(--ink);
       cursor: pointer;
       font-size: 13px;
@@ -6405,26 +6829,32 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .workspace {{
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(360px, 0.9fr);
-      gap: 16px;
+      grid-template-columns: 1fr;
+      gap: 76px;
       align-items: start;
     }}
     .canvas {{
       overflow: hidden;
-      min-height: 780px;
+      min-height: 760px;
+      border-radius: 40px;
+      box-shadow: 0 40px 100px -30px rgba(15, 23, 42, 0.12);
     }}
     .section-anchor {{ scroll-margin-top: 18px; }}
     .canvas-header {{
-      padding: 18px 20px 0;
+      padding: 0 12px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      border-bottom: 0;
+      background: transparent;
     }}
     .canvas-header h2 {{
       margin: 0;
-      font-size: 18px;
-      letter-spacing: -0.03em;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 680;
     }}
     .canvas-header .sub {{
       color: var(--muted);
@@ -6433,16 +6863,17 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       letter-spacing: 0.14em;
     }}
     .canvas-stage {{
-      padding: 16px;
-      height: 720px;
+      padding: 0;
+      height: 660px;
     }}
     .canvas-pane {{
       width: 100%;
       height: 100%;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 24px;
       overflow: hidden;
-      background: #ffffff;
+      background: rgba(255,255,255,0.82);
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
     }}
     .canvas-pane.hidden {{ display: none; }}
     iframe {{
@@ -6471,15 +6902,20 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       color: #111827;
     }}
     .search-panel {{
-      padding: 20px;
+      position: static;
+      top: auto;
+      padding: 0 0 60px;
       display: grid;
-      gap: 14px;
+      gap: 20px;
       align-content: start;
+      background: transparent;
+      min-height: 0;
+      box-shadow: none;
+      border: 0;
+      backdrop-filter: none;
     }}
     .search-panel h2 {{
-      margin: 0;
-      font-size: 24px;
-      letter-spacing: -0.03em;
+      display: none;
     }}
     .label {{
       font-size: 11px;
@@ -6488,23 +6924,117 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       color: var(--muted);
     }}
     .controls {{
+      position: relative;
       display: grid;
-      gap: 10px;
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, #fdfdff 0%, #f5f7fa 100%);
+      box-shadow: 0 20px 50px -18px rgba(0, 0, 0, 0.08);
+      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    }}
+    .controls:focus-within {{
+      border-color: rgba(59, 130, 246, 0.22);
+      box-shadow: 0 26px 70px -22px rgba(59, 130, 246, 0.18), 0 20px 50px -18px rgba(0, 0, 0, 0.08);
+      transform: translateY(-1px);
+    }}
+    .controls .label[for="question"] {{
+      display: none;
+    }}
+    .search-row {{
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 14px 12px 18px;
+      border: 1px solid rgba(66, 87, 126, 0.1);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), var(--shadow-soft);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }}
+    .search-icon {{
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(241, 245, 249, 0.86);
+      color: #8a96aa;
+      font-size: 22px;
     }}
     textarea,
     select {{
       width: 100%;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #ffffff;
+      border: 1px solid rgba(66, 87, 126, 0.1);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.88);
       color: var(--ink);
       padding: 14px 16px;
       font: inherit;
     }}
     textarea {{
-      min-height: 132px;
-      resize: vertical;
+      min-height: 52px;
+      max-height: 150px;
+      resize: none;
       line-height: 1.55;
+      font-size: 16px;
+      border: 0;
+      background: transparent;
+      padding: 10px 0;
+      outline: 0;
+    }}
+    textarea::placeholder {{ color: #a8b2c2; }}
+    .filter-row {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }}
+    .filter-chips {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }}
+    .filter-chip {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border: 1px solid rgba(66, 87, 126, 0.1);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.68);
+      color: #526070;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease, color 120ms ease;
+    }}
+    .filter-chip:hover {{ transform: translateY(-1px); background: rgba(255, 255, 255, 0.9); color: var(--ink); }}
+    .filter-chip span:first-child {{
+      color: #64748b;
+      font-size: 14px;
+    }}
+    .model-path {{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    .model-path .label {{
+      font-size: 10px;
+      letter-spacing: 0.18em;
+    }}
+    .model-path select {{
+      min-width: 170px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow-soft);
     }}
     .actions {{
       display: flex;
@@ -6514,29 +7044,235 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .primary {{
       border: 0;
-      border-radius: 8px;
-      padding: 12px 18px;
-      background: var(--accent);
+      border-radius: 20px;
+      padding: 14px 24px;
+      background: #111827;
       color: #ffffff;
-      font-weight: 700;
+      font-weight: 680;
       cursor: pointer;
+      box-shadow: 0 18px 34px -20px rgba(17, 24, 39, 0.34);
+      white-space: nowrap;
+      transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
+    }}
+    .primary:hover {{ background: #1f2937; transform: translateY(-1px); }}
+    .primary:disabled {{ opacity: 0.55; cursor: wait; transform: none; }}
+    .inquiry-grid {{
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(360px, 0.7fr);
+      gap: 24px;
+      margin-top: 38px;
     }}
     .status {{
       color: var(--muted);
       font-size: 13px;
     }}
     .result {{
-      border-top: 1px solid var(--line);
-      padding-top: 16px;
+      border-top: 0;
+      padding-top: 0;
       display: grid;
-      gap: 14px;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.75fr);
+      gap: 24px;
+      margin-top: 24px;
     }}
     .result.hidden {{ display: none; }}
+    .side-stack {{
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }}
     .card {{
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.78);
+      padding: 26px;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }}
+    .answer-card {{
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+    }}
+    .answer-card::before {{
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.05);
+      filter: blur(40px);
+      pointer-events: none;
+    }}
+    .answer-header {{
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(66, 87, 126, 0.08);
+      z-index: 1;
+    }}
+    .answer-badge {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.08);
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 720;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }}
+    .answer-badge::before {{
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+    }}
+    .answer-tools {{
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }}
+    .tool-button {{
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(66, 87, 126, 0.08);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.82);
+      color: #8a96aa;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      transition: color 120ms ease, transform 120ms ease, border-color 120ms ease;
+    }}
+    .tool-button:hover {{ color: var(--accent); border-color: rgba(59, 130, 246, 0.16); transform: translateY(-1px); }}
+    .loading-card {{
+      min-height: 500px;
+      padding: 34px;
+    }}
+    .skeleton-stack {{
+      display: grid;
+      gap: 28px;
+    }}
+    .skeleton-line,
+    .skeleton-block {{
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: rgba(226, 232, 240, 0.42);
+    }}
+    .skeleton-line::after,
+    .skeleton-block::after {{
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.72), transparent);
+      animation: shimmer 1.3s infinite;
+    }}
+    .skeleton-line {{ height: 14px; }}
+    .skeleton-block {{ height: 128px; border-radius: 24px; }}
+    @keyframes shimmer {{
+      100% {{ transform: translateX(100%); }}
+    }}
+    .empty-card {{
+      min-height: 500px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 42px;
+    }}
+    .empty-icon {{
+      width: 78px;
+      height: 78px;
+      border-radius: 28px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 22px;
       background: #ffffff;
-      padding: 16px 18px;
+      color: #b5bfcc;
+      border: 1px solid rgba(66, 87, 126, 0.08);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      font-size: 30px;
+    }}
+    .card.empty-card h3 {{
+      margin: 0;
+      color: var(--ink);
+      font-size: 22px;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      font-weight: 680;
+    }}
+    .card.empty-card p {{
+      max-width: 320px;
+      margin: 10px auto 0;
+      color: #8a96aa;
+      line-height: 1.6;
+      font-size: 14px;
+    }}
+    .footer {{
+      margin: 40px calc(50% - 50vw) 0;
+      padding: 84px max(56px, calc((100vw - 1680px) / 2 + 24px)) 72px;
+      background: #0b1020;
+      color: #ffffff;
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) repeat(3, minmax(160px, 220px));
+      gap: 60px;
+    }}
+    .footer-brand {{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 22px;
+      font-weight: 720;
+      letter-spacing: -0.03em;
+      margin-bottom: 28px;
+    }}
+    .footer-mark {{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+      color: #0b1020;
+    }}
+    .footer p {{
+      margin: 0;
+      max-width: 360px;
+      color: #8793aa;
+      line-height: 1.7;
+      font-weight: 520;
+    }}
+    .footer h3 {{
+      margin: 0 0 28px;
+      color: #ffffff;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }}
+    .footer a {{
+      display: block;
+      margin-bottom: 20px;
+      color: #5f6d86;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 680;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }}
     .card h3 {{
       margin: 0 0 8px;
@@ -6574,7 +7310,7 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
     .citation {{
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 12px 14px;
       background: var(--source-bg);
     }}
@@ -6600,7 +7336,7 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       max-width: 100%;
       margin-top: 12px;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 6px 10px;
       background: #ffffff;
       color: var(--ink);
@@ -6645,7 +7381,7 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       color: var(--danger);
       background: #fff5f5;
       border: 1px solid #ffd3d3;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 12px 14px;
       font-size: 13px;
       line-height: 1.6;
@@ -6661,11 +7397,52 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       .canvas-stage {{
         height: 580px;
       }}
+      .controls,
+      .result,
+      .inquiry-grid {{
+        grid-template-columns: 1fr;
+      }}
+      .search-row {{
+        grid-template-columns: 42px minmax(0, 1fr);
+      }}
+      .search-row .primary {{
+        grid-column: 1 / -1;
+        justify-self: stretch;
+      }}
+      .footer {{
+        grid-template-columns: 1fr 1fr;
+      }}
     }}
     @media (max-width: 760px) {{
       .shell {{
-        width: min(100vw - 16px, 100%);
+        width: min(100vw - 20px, 100%);
         margin: 8px auto 16px;
+      }}
+      .topbar {{
+        position: static;
+        gap: 16px;
+      }}
+      .main-nav {{
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+      }}
+      .hero {{
+        padding: 44px 0 34px;
+      }}
+      .hero-title {{
+        font-size: clamp(44px, 15vw, 72px);
+      }}
+      .hero-metrics {{
+        justify-self: start;
+      }}
+      .filter-row,
+      .model-path {{
+        align-items: stretch;
+        width: 100%;
+      }}
+      .model-path {{
+        display: grid;
       }}
       .hero-copy,
       .hero-side,
@@ -6679,35 +7456,58 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
         padding: 10px;
         height: 420px;
       }}
+      .footer {{
+        grid-template-columns: 1fr;
+        padding: 56px 24px;
+      }}
     }}
   </style>
 </head>
 <body>
   <main class="shell">
     <header class="topbar panel">
-      <div class="topbar-left">
-        <span class="eyebrow">{legal_domain} · GraphRAG</span>
-        <h1>{heading}</h1>
+      <div class="brand">
+        <div class="brand-mark">♢</div>
+        <div>
+          <div class="brand-name">Casemap</div>
+          <div class="brand-sub">Legal Dynamics</div>
+        </div>
       </div>
-      <div class="topbar-stats">
-        <div class="stat"><strong>{node_count}</strong><span>Nodes</span></div>
-        <div class="stat"><strong>{case_count}</strong><span>Cases</span></div>
-        <div class="stat"><strong>{statute_count}</strong><span>Statutes</span></div>
-      </div>
-      <div class="topbar-nav">
-        <a class="inline-link" href="#graphSection">Jump to Graph</a>
-        <a class="inline-link" href="#inquirySection">Jump to Inquiry</a>
-        <button id="graphModeBtn" class="mode-btn active" type="button">Knowledge Graph</button>
-        <button id="hierarchyModeBtn" class="mode-btn" type="button">Hierarchy Tree</button>
-        <a class="inline-link" href="/tree">Full Tree</a>
+      <nav class="main-nav">
+        <a class="active" href="#graphSection">Graph Explorer</a>
+        <a href="#inquirySection">Intelligent Search</a>
+        <a href="/tree">Resources</a>
+        <a href="/analyse">Law Journal</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" aria-label="Notifications">♧</button>
+        <a class="account-pill" href="#inquirySection"><span class="account-icon">♙</span>Account</a>
       </div>
     </header>
+
+    <section class="hero">
+      <div>
+        <div class="engine-pill">▣ Engine v2.4</div>
+        <h1 class="hero-title">Accelerating legal insight with <span class="blue">GraphRAG.</span></h1>
+      </div>
+      <div class="hero-metrics">
+        <div class="hero-metric"><span>Uptime</span><strong>99.9%</strong></div>
+        <div class="hero-metric"><span>Cloud Sync</span><strong>Active</strong></div>
+      </div>
+    </section>
 
     <section class="workspace">
       <section id="graphSection" class="panel canvas section-anchor">
         <div class="canvas-header">
-          <div class="sub">Doctrinal Relationship Map</div>
-          <h2 id="canvasTitle">Graph Workspace</h2>
+          <div>
+            <h2 id="canvasTitle">Graph Topology</h2>
+            <span class="eyebrow">Live Retrieval</span>
+          </div>
+          <div class="topbar-nav">
+            <button id="graphModeBtn" class="mode-btn active" type="button">Focus View</button>
+            <button id="hierarchyModeBtn" class="mode-btn" type="button">Hierarchy</button>
+            <a class="inline-link" href="/tree">Export Data</a>
+          </div>
         </div>
         <div class="canvas-stage">
           <div id="graphPane" class="canvas-pane">
@@ -6719,50 +7519,153 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
         </div>
       </section>
 
-      <aside id="inquirySection" class="panel search-panel section-anchor">
-        <div class="label">Determinator</div>
-        <h2>Structured Criminal RAG</h2>
-        <p class="helper">This panel queries the existing graph and embeddings first, then uses the determiner pipeline to synthesize a tighter answer. When available, fallback LLM synthesis stays grounded against the local citations.</p>
+      <section id="inquirySection" class="search-panel section-anchor">
         <div class="controls">
-          <label class="label" for="question">Question</label>
-          <textarea id="question" placeholder="Ask about offences, defences, procedure, evidence, sentencing, or a specific Hong Kong criminal-law topic."></textarea>
-          <label class="label" for="mode">Model Path</label>
-          <select id="mode">
-            <option value="openrouter">OpenRouter</option>
-            <option value="deepseek">DeepSeek</option>
-          </select>
-          <div class="actions">
-            <button id="runBtn" class="primary" type="button">Run Determinator</button>
-            <span id="status" class="status">Ready.</span>
+          <div class="search-row">
+            <div class="search-icon">⌕</div>
+            <label class="label" for="question">Question</label>
+            <textarea id="question" placeholder="Search HK laws, precedents, paragraphs, or citations..."></textarea>
+            <button id="runBtn" class="primary" type="button">✦ AI Generate</button>
           </div>
+          <div class="filter-row">
+            <div class="filter-chips" aria-label="Search filters">
+              <button class="filter-chip" type="button"><span>▤</span>Cases <span>⌄</span></button>
+              <button class="filter-chip" type="button"><span>⚖</span>Statutes <span>⌄</span></button>
+              <button class="filter-chip" type="button"><span>§</span>Doctrine <span>⌄</span></button>
+              <button class="filter-chip" type="button"><span>¶</span>Citations <span>⌄</span></button>
+            </div>
+            <div class="model-path">
+              <label class="label" for="mode">Model Path</label>
+              <select id="mode">
+                <option value="openrouter">OpenRouter</option>
+                <option value="deepseek">DeepSeek</option>
+              </select>
+            </div>
+          </div>
+          <span id="status" class="status">Ready.</span>
         </div>
 
+        <section id="emptyState" class="result empty-result">
+          <div class="card empty-card">
+            <div>
+              <div class="empty-icon">▧</div>
+              <h3>Ready for Inquiry</h3>
+              <p>Ask a legal question above to generate a grounded answer from the Hong Kong law GraphRAG.</p>
+            </div>
+          </div>
+          <div class="side-stack">
+            <div class="card">
+              <h3>Shielded Citations <span style="float:right;color:#9aa6b8">0 Total</span></h3>
+              <p class="helper">No citations loaded.</p>
+            </div>
+            <div class="card">
+              <h3>Source Trail</h3>
+              <div class="source-meta">
+                <span>Criminal Law</span><span>›</span><span>Topic</span><span>›</span><span>Paragraph</span>
+              </div>
+              <p class="helper" style="margin-top:12px">Trail appears after the first grounded answer.</p>
+            </div>
+            <div class="card" style="background:rgba(255,251,235,0.54);border-color:rgba(245,158,11,0.14)">
+              <h3 style="color:#b45309">Grounding Warnings</h3>
+              <p class="helper" style="color:#b45309">Some sources may require verification against latest HK Gazette updates.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="loadingState" class="result hidden">
+          <div class="card loading-card">
+            <div class="answer-header">
+              <div class="answer-badge">Grounding Answer</div>
+              <div class="answer-tools">
+                <span class="tool-button" aria-hidden="true">⌁</span>
+                <span class="tool-button" aria-hidden="true">⌄</span>
+                <span class="tool-button" aria-hidden="true">□</span>
+              </div>
+            </div>
+            <div class="skeleton-stack">
+              <div class="skeleton-line" style="width:28%"></div>
+              <div class="skeleton-line" style="width:76%"></div>
+              <div class="skeleton-block"></div>
+              <div class="skeleton-line" style="width:22%"></div>
+              <div class="skeleton-block" style="height:150px"></div>
+            </div>
+          </div>
+          <div class="side-stack">
+            <div class="card">
+              <h3>Supporting Citations</h3>
+              <div class="skeleton-stack" style="gap:12px">
+                <div class="skeleton-line" style="width:90%"></div>
+                <div class="skeleton-line" style="width:74%"></div>
+                <div class="skeleton-line" style="width:82%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Source Trail</h3>
+              <div class="skeleton-line" style="width:88%"></div>
+            </div>
+          </div>
+        </section>
+
         <section id="result" class="result hidden">
-          <div class="card">
-            <h3>Grounded Answer</h3>
+          <div class="card answer-card">
+            <div class="answer-header">
+              <div class="answer-badge">Grounded Answer</div>
+              <div class="answer-tools">
+                <button id="copyAnswerBtn" class="tool-button" type="button" aria-label="Copy answer">⧉</button>
+                <button class="tool-button" type="button" aria-label="Download answer">⇩</button>
+                <button class="tool-button" type="button" aria-label="Bookmark answer">□</button>
+              </div>
+            </div>
             <div id="answer" class="answer"></div>
           </div>
-          <div class="card">
-            <h3>Mode</h3>
-            <div id="meta" class="answer"></div>
-          </div>
-          <div class="card">
-            <h3>Disclaimer</h3>
-            <div id="disclaimer" class="answer"></div>
-          </div>
-          <div class="card">
-            <h3>Supporting Citations</h3>
-            <div id="citations" class="citations"></div>
-          </div>
-          <div id="warningsCard" class="card hidden">
-            <h3>Warnings</h3>
-            <div id="warnings" class="warning"></div>
+          <div class="side-stack">
+            <div class="card">
+              <h3>Mode</h3>
+              <div id="meta" class="answer"></div>
+            </div>
+            <div class="card">
+              <h3>Supporting Citations</h3>
+              <div id="citations" class="citations"></div>
+            </div>
+            <div class="card">
+              <h3>Disclaimer</h3>
+              <div id="disclaimer" class="answer"></div>
+            </div>
+            <div id="warningsCard" class="card hidden">
+              <h3>Warnings</h3>
+              <div id="warnings" class="warning"></div>
+            </div>
           </div>
         </section>
 
         <div id="errorBox" class="error hidden"></div>
-      </aside>
+      </section>
     </section>
+
+    <footer class="footer">
+      <div>
+        <div class="footer-brand"><span class="footer-mark">♢</span>Casemap</div>
+        <p>Advancing justice through high-fidelity legal graphing and semantic intelligence.</p>
+      </div>
+      <div>
+        <h3>System</h3>
+        <a href="/graph">Network</a>
+        <a href="/api/manifest">API</a>
+        <a href="/health">Uptime</a>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="/tree">Docs</a>
+        <a href="/analyse">Precedents</a>
+        <a href="/monitor">Gazette</a>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <a href="/tree">Methodology</a>
+        <a href="/health">Privacy</a>
+        <a href="#inquirySection">Contact</a>
+      </div>
+    </footer>
   </main>
 
   <script>
@@ -6772,6 +7675,8 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     const graphModeBtn = document.getElementById("graphModeBtn");
     const hierarchyModeBtn = document.getElementById("hierarchyModeBtn");
     const canvasTitle = document.getElementById("canvasTitle");
+    const emptyStateEl = document.getElementById("emptyState");
+    const loadingStateEl = document.getElementById("loadingState");
     const resultEl = document.getElementById("result");
     const answerEl = document.getElementById("answer");
     const metaEl = document.getElementById("meta");
@@ -6781,6 +7686,8 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     const warningsEl = document.getElementById("warnings");
     const errorBox = document.getElementById("errorBox");
     const statusEl = document.getElementById("status");
+    const runBtn = document.getElementById("runBtn");
+    const copyAnswerBtn = document.getElementById("copyAnswerBtn");
 
     function switchMode(mode) {{
       const showGraph = mode === "graph";
@@ -6788,7 +7695,7 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
       hierarchyPane.classList.toggle("hidden", showGraph);
       graphModeBtn.classList.toggle("active", showGraph);
       hierarchyModeBtn.classList.toggle("active", !showGraph);
-      canvasTitle.textContent = showGraph ? "Graph Workspace" : "Hierarchy Backup";
+      canvasTitle.textContent = showGraph ? "Graph Topology" : "Hierarchy Backup";
     }}
 
     graphModeBtn.addEventListener("click", () => switchMode("graph"));
@@ -6905,7 +7812,8 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
     }}
 
     function setBusy(isBusy, message) {{
-      document.getElementById("runBtn").disabled = isBusy;
+      runBtn.disabled = isBusy;
+      runBtn.textContent = isBusy ? "✦ Thinking..." : "✦ AI Generate";
       statusEl.textContent = message;
     }}
 
@@ -6974,6 +7882,9 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
         return;
       }}
       errorBox.classList.add("hidden");
+      emptyStateEl.classList.add("hidden");
+      resultEl.classList.add("hidden");
+      loadingStateEl.classList.remove("hidden");
       setBusy(true, "Querying graph and determiner pipeline...");
       try {{
         const response = await fetch("/api/determinator", {{
@@ -7002,17 +7913,33 @@ def render_determinator_page(bundle: dict, hierarchy_html: str) -> str:
         const warnings = data.warnings || [];
         warningsCard.classList.toggle("hidden", !warnings.length);
         warningsEl.textContent = warnings.join("\\n");
+        loadingStateEl.classList.add("hidden");
         resultEl.classList.remove("hidden");
+        emptyStateEl.classList.add("hidden");
         setBusy(false, "Completed.");
       }} catch (error) {{
+        loadingStateEl.classList.add("hidden");
         resultEl.classList.add("hidden");
+        emptyStateEl.classList.remove("hidden");
         errorBox.textContent = error.message || "Unexpected error while querying the determiner.";
         errorBox.classList.remove("hidden");
         setBusy(false, "Failed.");
       }}
     }}
 
-    document.getElementById("runBtn").addEventListener("click", runDeterminator);
+    runBtn.addEventListener("click", runDeterminator);
+    copyAnswerBtn.addEventListener("click", async () => {{
+      const text = answerEl.innerText || "";
+      if (!text.trim()) return;
+      try {{
+        await navigator.clipboard.writeText(text);
+        copyAnswerBtn.textContent = "✓";
+        setTimeout(() => copyAnswerBtn.textContent = "⧉", 1200);
+      }} catch (error) {{
+        copyAnswerBtn.textContent = "!";
+        setTimeout(() => copyAnswerBtn.textContent = "⧉", 1200);
+      }}
+    }});
     document.getElementById("question").addEventListener("keydown", (event) => {{
       if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {{
         runDeterminator();
