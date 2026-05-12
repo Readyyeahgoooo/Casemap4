@@ -78,6 +78,83 @@ def test_options_query_maps_to_sfo_licensing_context():
     assert classification["primary_ordinance"]["ordinance"] == "Securities and Futures Ordinance (Cap. 571)"
 
 
+def test_investment_banker_personal_account_query_routes_to_sfo_compliance():
+    classification = DeterminatorPipeline()._classify(
+        "The consequence of Ibankers investing in their personal accounts"
+    )
+
+    assert classification["is_criminal"] is True
+    assert classification["area"] == "financial_regulatory"
+    assert classification["primary_ordinance"]["offence_family"] == "personal_account_dealing"
+    assert "Securities and Futures Ordinance" in classification["primary_ordinance"]["ordinance"]
+    assert not any(
+        item["offence_family"] in {"theft", "fraud", "money_laundering"}
+        for item in classification["offence_candidates"]
+    )
+
+
+def test_personal_account_query_suppresses_theft_citation_without_misappropriation(monkeypatch):
+    monkeypatch.setattr(
+        hg,
+        "_live_hklii_grounding",
+        lambda *args, **kwargs: {"citations": [], "sources": [], "warnings": [], "search_trace": []},
+    )
+    bundle = {
+        "meta": {"title": "Test", "legal_domain": "criminal"},
+        "tree": {"id": "tree", "label_en": "Tree", "label_zh": "", "modules": []},
+        "nodes": [
+            {
+                "id": "case:theft",
+                "type": "Case",
+                "label": "Theft Case",
+                "case_name": "HKSAR v Chan",
+                "summary_en": "Funds transferred into a defendant bank account may be property belonging to another under the Theft Ordinance.",
+                "topic_paths": ["Property and Dishonesty Offences/Theft"],
+                "offence_family": "theft",
+                "authority_score": 0.8,
+            },
+            {
+                "id": "paragraph:theft",
+                "type": "Paragraph",
+                "label": "Theft [10]",
+                "case_id": "case:theft",
+                "paragraph_span": "[10]",
+                "public_excerpt": "Funds transferred into a defendant bank account may be property belonging to another under the Theft Ordinance.",
+                "hklii_deep_link": "https://example.com#p10",
+            },
+            {
+                "id": "proposition:theft",
+                "type": "Proposition",
+                "label": "Theft funds in account",
+                "label_en": "Funds in account can be property belonging to another",
+                "statement_en": "Funds transferred into a defendant bank account may be property belonging to another under the Theft Ordinance.",
+            },
+        ],
+        "edges": [
+            {"source": "paragraph:theft", "target": "case:theft", "type": "PART_OF", "weight": 1.0},
+            {"source": "paragraph:theft", "target": "proposition:theft", "type": "SUPPORTS", "weight": 1.0},
+        ],
+        "case_cards": {},
+    }
+    store = HybridGraphStore(bundle)
+    classification = DeterminatorPipeline()._classify(
+        "The consequence of Ibankers investing in their personal accounts"
+    )
+
+    result = store.query(
+        "The consequence of Ibankers investing in their personal accounts",
+        top_k=5,
+        mode="extractive",
+        max_citations=8,
+        classification_area=classification["area"],
+        offence_keywords=classification["criminal_hits"],
+    )
+
+    assert result["citations"] == []
+    assert "Theft Ordinance" not in result["answer"]
+    assert "No directly relevant" in result["answer"]
+
+
 def test_weak_fallback_offtopic_citations_are_suppressed_for_options_query(monkeypatch):
     monkeypatch.setattr(
         hg,
@@ -266,8 +343,9 @@ def test_score_cliff_detector_truncates_noise_citations(monkeypatch):
     assert "HKSAR v Unrelated" not in cited_names
 
 
-def test_localhash_semantic_boost_disabled():
+def test_localhash_semantic_boost_disabled(monkeypatch):
     """LocalHash backend should NOT be used for semantic scoring."""
+    monkeypatch.setenv("CASEMAP_QUERY_EMBEDDING_BACKEND", "local-hash")
     from casemap.embeddings import HashEmbeddingBackend
     bundle = {
         "meta": {"title": "Test", "legal_domain": "criminal"},

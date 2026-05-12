@@ -29,6 +29,8 @@ jobs:
       MAX_ENRICH:          "120"
       MAX_TOTAL_HYBRID_NODES: "10000"
       CRAWL_ROUNDS:        "2"
+      # Opt into Node 24 for GitHub-hosted actions (avoids Node 20 deprecation noise).
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
     steps:
       # ── 1. Checkout ─────────────────────────────────────────────────────────
@@ -46,19 +48,23 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: pip install -e ".[dev]" 2>/dev/null || pip install -e . && pip install pypdf neo4j
+        run: pip install -e ".[dev]" 2>/dev/null || pip install -e . && pip install pytest pypdf neo4j
 
-      # ── 3. Validate secrets ─────────────────────────────────────────────────
+      # ── 3. Secrets gate (do not fail the whole workflow on forks without secrets)
       - name: Check API key
+        id: apikey
         run: |
-          if [[ -z "$DEEPSEEK_API_KEY" ]]; then
-            echo "ERROR: DEEPSEEK_API_KEY secret is not set in repo settings."
-            exit 1
+          if [[ -z "${DEEPSEEK_API_KEY:-}" ]]; then
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::DEEPSEEK_API_KEY is not set — skipping enrichment/build/push (fork or unset secret). Running smoke tests only."
+          else
+            echo "present=true" >> "$GITHUB_OUTPUT"
+            echo "API key present."
           fi
-          echo "API key present."
 
       # ── 4. PHASE 1: Criminal crawl ──────────────────────────────────────────
       - name: Phase 1 — Criminal crawl (${{ env.CRAWL_ROUNDS }} rounds)
+        if: steps.apikey.outputs.present == 'true'
         run: |
           python3 -m casemap.batch_enrich loop \
             --domain criminal \
@@ -69,6 +75,7 @@ jobs:
 
       # ── 5. PHASE 2: Criminal graph build + cumulative merge ─────────────────
       - name: Phase 2 — Criminal graph build
+        if: steps.apikey.outputs.present == 'true'
         run: |
           # Preserve previous graph for additive merge
           if [[ -f "$CRIMINAL_HYBRID_OUT/hierarchical_graph.json" ]]; then
@@ -89,6 +96,7 @@ jobs:
             2>&1 | tee -a data/batch/criminal_build.log || echo "[WARN] Criminal graph build exited non-zero (continuing)"
 
       - name: Phase 2b — Cumulative merge (additive, never shrinks)
+        if: steps.apikey.outputs.present == 'true'
         run: |
           PREV="$CRIMINAL_HYBRID_OUT/hierarchical_graph_prev.json"
           CURR="$CRIMINAL_HYBRID_OUT/hierarchical_graph.json"
@@ -105,6 +113,7 @@ jobs:
 
       # ── 6. PHASE 3+4: Civil (only if civil tree exists) ─────────────────────
       - name: Phase 3+4 — Civil crawl + build (if civil tree exists)
+        if: steps.apikey.outputs.present == 'true'
         run: |
           if [[ ! -f "$CIVIL_TREE" ]]; then
             echo "[SKIP] No civil tree at $CIVIL_TREE — skipping civil phases"
@@ -159,6 +168,7 @@ jobs:
 
       # ── 7. PHASE 5: Snapshot manifest ──────────────────────────────────────
       - name: Phase 5 — Record build snapshot
+        if: steps.apikey.outputs.present == 'true'
         run: |
           mkdir -p data/batch/snapshots
           python3 - <<'PYEOF'
@@ -185,6 +195,9 @@ jobs:
 
       # ── 8. PHASE 6: Commit + push → triggers Vercel redeploy ────────────────
       - name: Phase 6 — Commit and push artifacts
+        if: steps.apikey.outputs.present == 'true'
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -220,6 +233,12 @@ jobs:
           " 2>/dev/null)
             DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
             git commit -m "auto(actions): graph rebuild — ${CASE_COUNT} cases — ${DATE}"
-            git push origin main
-            echo "Pushed to main — Vercel will redeploy automatically."
+            git push origin "${BRANCH:-main}"
+            echo "Pushed to ${BRANCH:-main} — Vercel will redeploy automatically."
           fi
+
+      # ── 9. Smoke tests when enrichment secrets are unavailable ─────────────
+      - name: Smoke — pytest (no DEEPSEEK_API_KEY)
+        if: steps.apikey.outputs.present != 'true'
+        run: |
+          PYTHONPATH=src python3 -m pytest tests/test_golden_retrieval.py tests/test_supabase_chunk_rpc.py -q --tb=no

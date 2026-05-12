@@ -288,29 +288,40 @@ def _build_case_chunk_rows(case_id: int, hklii_id: str, case_doc, node_context: 
     chunk_texts = [paragraph.text for paragraph in populated_paragraphs]
     embeddings = embedder.embed_documents(chunk_texts) if chunk_texts else []
     chunk_rows: list[dict] = []
+    dims = int(getattr(embedder, "dimensions", 0) or 0) or int(os.environ.get("CASEMAP_EMBEDDING_VECTOR_DIM", "384"))
+    legal_domain = str(node_context.get("legal_domain") or "").strip()
+    offence_family = str(node_context.get("offence_family") or "").strip()
+    topic_label = str(node_context.get("topic_label") or "").strip()
+    classification_area = str(node_context.get("classification_area") or "").strip()
     for index, (paragraph, embedding) in enumerate(zip(populated_paragraphs, embeddings, strict=True), start=1):
-        chunk_rows.append(
-            {
-                "case_id": case_id,
-                "hklii_id": hklii_id,
-                "chunk_index": index,
-                "chunk_text": paragraph.text,
-                "section_type": paragraph.paragraph_span or "paragraph",
-                "case_name": case_doc.case_name,
-                "neutral_citation": case_doc.neutral_citation,
-                "court": case_doc.court_name,
-                "decision_date": case_doc.decision_date,
-                "embedding": json.dumps(embedding),
-                "cases_cited": [reference.label for reference in case_doc.cited_cases[:25]],
-                "judges_mentioned": case_doc.judges[:10],
-                "legislation_cited": [reference.label for reference in case_doc.cited_statutes[:25]],
-                "legal_principles": [
-                    principle
-                    for principle in node_context.get("legal_principles", [])
-                    if principle
-                ],
-            }
-        )
+        emb_list = [float(x) for x in embedding]
+        row: dict = {
+            "case_id": case_id,
+            "hklii_id": hklii_id,
+            "chunk_index": index,
+            "chunk_text": paragraph.text,
+            "section_type": paragraph.paragraph_span or "paragraph",
+            "case_name": case_doc.case_name,
+            "neutral_citation": case_doc.neutral_citation,
+            "court": case_doc.court_name,
+            "decision_date": case_doc.decision_date,
+            "embedding": json.dumps(emb_list),
+            "cases_cited": [reference.label for reference in case_doc.cited_cases[:25]],
+            "judges_mentioned": case_doc.judges[:10],
+            "legislation_cited": [reference.label for reference in case_doc.cited_statutes[:25]],
+            "legal_principles": [
+                principle
+                for principle in node_context.get("legal_principles", [])
+                if principle
+            ],
+            "legal_domain": legal_domain or None,
+            "offence_family": offence_family or None,
+            "topic_label": topic_label or None,
+            "classification_area": classification_area or None,
+        }
+        if len(emb_list) == dims:
+            row["embedding_vec"] = "[" + ",".join(str(x) for x in emb_list) + "]"
+        chunk_rows.append(row)
     return chunk_rows
 
 
@@ -438,7 +449,13 @@ def sync_case_document_to_supabase(
         case_id,
         hklii_id,
         case_doc,
-        {"legal_principles": legal_principles or []},
+        {
+            "legal_principles": legal_principles or [],
+            "legal_domain": "criminal",
+            "offence_family": "",
+            "topic_label": "",
+            "classification_area": "",
+        },
         embedder,
     )
     _replace_case_chunks(config, hklii_id, chunk_rows)
@@ -564,7 +581,13 @@ def sync_candidate_registry_to_supabase(
                 case_id,
                 hklii_id,
                 case_doc,
-                {"legal_principles": _candidate_legal_principles(candidate)},
+                {
+                    "legal_principles": _candidate_legal_principles(candidate),
+                    "legal_domain": domain,
+                    "offence_family": str(candidate.get("offence_family") or ""),
+                    "topic_label": str(candidate.get("topic_label") or ""),
+                    "classification_area": "",
+                },
                 embedder,
             )
             _replace_case_chunks(config, hklii_id, chunk_rows)
@@ -773,11 +796,23 @@ def sync_criminal_artifacts_to_supabase(
                 "scraped_at": datetime.now(UTC).isoformat(),
             }
             case_id = _upsert_case(config, case_json)
+            topic_paths = node.get("topic_paths") or []
+            topic_tail = str(topic_paths[-1]) if topic_paths else str(node.get("label") or "")
             chunk_rows = _build_case_chunk_rows(
                 case_id,
                 hklii_id,
                 case_doc,
-                {"legal_principles": [principle.get("statement_en", "") for principle in node.get("principles", []) if principle.get("statement_en")]},
+                {
+                    "legal_principles": [
+                        principle.get("statement_en", "")
+                        for principle in node.get("principles", [])
+                        if principle.get("statement_en")
+                    ],
+                    "legal_domain": "criminal",
+                    "offence_family": str(node.get("offence_family") or ""),
+                    "topic_label": topic_tail,
+                    "classification_area": "",
+                },
                 embedder,
             )
             _replace_case_chunks(config, hklii_id, chunk_rows)

@@ -11,6 +11,7 @@ SRC_DIR = BASE_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
+from casemap.api_query import run_hybrid_post_query
 from casemap.graphrag import RerankedRetriever
 from casemap.hybrid_graph import DeterminatorPipeline, HybridGraphStore, KnowledgeGrowthWriter, _infer_legal_domain, analyse_case_facts
 from casemap.neo4j_store import Neo4jGraphStore
@@ -481,7 +482,8 @@ def app(environ, start_response):
                 return _json_response(start_response, {"error": "Missing question"}, status="400 Bad Request")
             return _json_response(
                 start_response,
-                hybrid_store.query(
+                run_hybrid_post_query(
+                    hybrid_store,
                     question,
                     top_k=top_k,
                     mode=mode,

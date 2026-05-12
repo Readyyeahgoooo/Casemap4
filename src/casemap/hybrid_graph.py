@@ -230,6 +230,56 @@ PLACEHOLDER_SUMMARY_PATTERNS = (
 )
 
 MARKET_MISCONDUCT_QUERY_TOKENS = {"market", "manipulation", "securities", "futures", "sfo", "sfc", "insider", "misconduct"}
+FINANCIAL_PROFESSIONAL_TOKENS = {
+    "ibanker",
+    "ibankers",
+    "banker",
+    "bankers",
+    "investment",
+    "analyst",
+    "dealer",
+    "trader",
+    "broker",
+    "employee",
+    "staff",
+}
+PERSONAL_DEALING_TOKENS = {
+    "personal",
+    "account",
+    "accounts",
+    "trade",
+    "trading",
+    "invest",
+    "investing",
+    "investment",
+    "stocks",
+    "shares",
+    "securities",
+    "futures",
+    "options",
+}
+MISAPPROPRIATION_TOKENS = {
+    "client",
+    "customer",
+    "fund",
+    "funds",
+    "money",
+    "transfer",
+    "transferred",
+    "misappropriate",
+    "misappropriation",
+    "steal",
+    "stole",
+    "stolen",
+    "theft",
+    "fraud",
+    "deception",
+    "dishonest",
+    "dishonestly",
+    "embezzle",
+    "embezzlement",
+    "entrusted",
+}
 MARKET_MISCONDUCT_GROUNDING_TERMS = (
     "securities and futures ordinance",
     "securities & futures ordinance",
@@ -248,6 +298,42 @@ MARKET_MISCONDUCT_GROUNDING_TERMS = (
     "s.295",
     "s 295",
 )
+
+
+def _is_personal_account_dealing_query(query_tokens: list[str]) -> bool:
+    token_set = set(query_tokens)
+    joined = " ".join(query_tokens)
+    phrase_hit = any(
+        phrase in joined
+        for phrase in (
+            "personal account",
+            "personal accounts",
+            "own account",
+            "employee account",
+            "staff account",
+            "investment banker",
+            "investment bankers",
+        )
+    )
+    return phrase_hit and bool(token_set & (FINANCIAL_PROFESSIONAL_TOKENS | {"securities", "stocks", "shares", "trading", "investing"}))
+
+
+def _has_misappropriation_signal(query_tokens: list[str]) -> bool:
+    token_set = set(query_tokens)
+    joined = " ".join(query_tokens)
+    return bool(token_set & MISAPPROPRIATION_TOKENS) or any(
+        phrase in joined
+        for phrase in (
+            "client funds",
+            "customer funds",
+            "client money",
+            "customer money",
+            "without authority",
+            "without authorization",
+            "without authorisation",
+            "entrusted funds",
+        )
+    )
 
 
 def _is_placeholder_summary(text: str) -> bool:
@@ -323,6 +409,13 @@ CRIMINAL_QUERY_HINTS = {
     "broker": ["licensed broker SFC register hong kong", "dealing in securities licence cap 571"],
     "brokers": ["licensed broker SFC register hong kong", "dealing in securities licence cap 571"],
     "compliance": ["SFC compliance regulated activities cap 571", "licensing obligations securities and futures ordinance hong kong"],
+    "ibanker": ["SFC personal account dealing investment banker Hong Kong", "securities futures ordinance insider dealing personal account"],
+    "ibankers": ["SFC personal account dealing investment bankers Hong Kong", "securities futures ordinance insider dealing personal accounts"],
+    "banker": ["SFC personal account dealing banker Hong Kong", "insider dealing securities futures ordinance Hong Kong"],
+    "bankers": ["SFC personal account dealing bankers Hong Kong", "insider dealing securities futures ordinance Hong Kong"],
+    "investment": ["investment banker personal account dealing SFC Hong Kong", "securities futures ordinance insider dealing investment bank"],
+    "investing": ["personal account dealing SFC Hong Kong", "investment banker personal account trading"],
+    "trading": ["personal account dealing SFC Hong Kong", "securities futures ordinance regulated trading"],
     # Theft and property offences
     "theft": ["theft hong kong criminal", "theft ordinance HKSAR"],
     "steal": ["theft hong kong criminal", "theft ordinance HKSAR"],
@@ -593,6 +686,39 @@ def _live_hklii_grounding(question: str, legal_domain: str, max_results: int = 4
                     ]
                 )
             )
+        ]
+    if _is_personal_account_dealing_query(query_tokens) and not _has_misappropriation_signal(query_tokens):
+        regulatory_tokens = {
+            "sfc",
+            "sfo",
+            "securities",
+            "futures",
+            "insider",
+            "market",
+            "misconduct",
+            "regulated",
+            "regulatory",
+            "licence",
+            "license",
+            "licensed",
+            "compliance",
+            "code",
+            "conduct",
+            "cap",
+            "571",
+        }
+        citations = [
+            citation
+            for citation in citations
+            if regulatory_tokens & set(tokenize(
+                " ".join(
+                    [
+                        citation.get("case_name", ""),
+                        citation.get("neutral_citation", ""),
+                        citation.get("quote", ""),
+                    ]
+                )
+            ))
         ]
     citations = citations[:max_citations]
 
@@ -2940,6 +3066,14 @@ class HybridGraphStore:
                 "legal_domain": legal_domain,
             }
 
+        _kw_scoring: set[str] = {str(k or "").lower() for k in (offence_keywords or []) if k}
+        if legal_domain == "criminal":
+            violent_tokens = {"stab", "stabbing", "stabbed", "wound", "wounding", "gbh", "grievous", "bodily"}
+            animal_tokens = {"dog", "cat", "pet", "animal", "animals", "cruelty", "livestock", "bird", "wildlife"}
+            if _kw_scoring & violent_tokens and not (set(query_tokens) & animal_tokens):
+                _kw_scoring |= {"assault", "wounding", "grievous"}
+        offence_keywords_scoring = sorted(_kw_scoring)
+
         searchable: list[tuple[str, str, str]] = []
         for node in self.nodes.values():
             if node["type"] == "Case":
@@ -3001,6 +3135,7 @@ class HybridGraphStore:
             "sentencing": {"sentencing", "sentence", "penalty", "tariff", "imprisonment", "discount", "starting point"},
             "defences": {"defence", "defense", "duress", "self-defence", "insanity", "intoxication", "provocation", "diminished", "automatism", "consent"},
             "procedure": {"bail", "arrest", "confession", "evidence", "admissibility", "identification", "witness", "disclosure", "warrant", "caution", "silence", "police"},
+            "financial_regulatory": {"sfc", "sfo", "securities", "futures", "insider", "dealing", "personal", "account", "accounts", "trading", "investment", "banker", "bankers", "compliance", "market", "misconduct"},
             "offence_elements": set(),  # rely on offence_keywords instead
         }
         area_boost_tokens: set[str] = set()
@@ -3016,11 +3151,11 @@ class HybridGraphStore:
         # tokens already in the boost set.  This prevents "stabbing a
         # dog" from boosting "Assault & Wounding" when the classifier
         # already identified "animal_cruelty" via the "dog" token.
-        if offence_keywords:
-            area_boost_tokens = area_boost_tokens | {k.lower() for k in offence_keywords}
+        if offence_keywords_scoring:
+            area_boost_tokens = area_boost_tokens | set(offence_keywords_scoring)
             # Resolve synonyms to decide which hints to expand
             _resolved_offence_kws: set[str] = set()
-            for kw in offence_keywords:
+            for kw in offence_keywords_scoring:
                 kw_lower = kw.lower()
                 canonical = QUERY_SYNONYMS.get(kw_lower, kw_lower)
                 _resolved_offence_kws.add(canonical)
@@ -3086,6 +3221,15 @@ class HybridGraphStore:
             query_token_set = set(scoring_tokens)
             overlap = len(query_token_set & text_token_set)
             score = overlap / max(math.sqrt(len(text_token_set) * len(query_token_set)), 1)
+            # Strong anchor when classifier offence tokens appear in the topic
+            # label or proposition text (e.g. "elements of theft" → Theft topic).
+            if offence_keywords_scoring and kind in {"Topic", "Proposition"}:
+                blob_l = (text or "").lower()
+                for ok in offence_keywords_scoring:
+                    okl = (ok or "").lower()
+                    if len(okl) >= 3 and okl in blob_l:
+                        score += 0.40 if kind == "Topic" else 0.26
+                        break
             if kind == "Proposition":
                 score += 0.18
             elif kind == "Topic" and overlap:
@@ -3265,6 +3409,14 @@ class HybridGraphStore:
                 if case_family and case_family not in _compatible_families:
                     support_case_scores[case_id] *= 0.2
 
+        _family_overlap_tokens: set[str] = set()
+        for fam in _compatible_families:
+            _family_overlap_tokens.update(tokenize(fam.replace("_", " ")))
+            for rule in OFFENCE_ORDINANCE_RULES:
+                if rule.get("offence_family") == fam:
+                    _family_overlap_tokens |= set(rule.get("keywords") or set())
+                    break
+
         support_cases = [
             self.case_card(case_id)
             for case_id in support_case_ids
@@ -3332,6 +3484,42 @@ class HybridGraphStore:
                             "support_score": round(case_score, 6),
                         }
                     )
+                elif (
+                    _compatible_families
+                    and _family_overlap_tokens
+                    and card["metadata"].get("enrichment_status") == "case_only"
+                    and summary
+                    and _is_placeholder_summary(summary)
+                    and resolved_area == "sentencing"
+                ):
+                    topic_paths = card["metadata"].get("topic_paths") or []
+                    paths_blob = " ".join(topic_paths).lower()
+                    path_tokens = set(tokenize(paths_blob))
+                    if topic_paths and path_tokens & _family_overlap_tokens:
+                        stub = (
+                            "This case node is indexed in the bundle under topic paths including: "
+                            + "; ".join(topic_paths[:5])
+                            + ". Paragraph-level principle excerpts are not yet stored on this record; "
+                            "open any available HKLII source link for the full ratio."
+                        )
+                        citation_pool.append(
+                            {
+                                "case_id": card["id"],
+                                "focus_node_id": card["id"],
+                                "case_name": card["metadata"]["case_name"],
+                                "neutral_citation": card["metadata"]["neutral_citation"],
+                                "paragraph_span": "",
+                                "principle_label": "Topic index (pending paragraph enrichment)",
+                                "quote": stub,
+                                "hklii_deep_link": "",
+                                "links": card["metadata"]["source_links"],
+                                "lineage_titles": lineage_titles,
+                                "lineage_ids": lineage_ids,
+                                "matched_lineage_ids": matched_lineage_ids,
+                                "hklii_verified": bool(_first_hklii_url(card["metadata"].get("source_links", []))),
+                                "support_score": round(case_score * 0.88, 6),
+                            }
+                        )
 
         # Drop citations whose quote is too short to be meaningful (placeholders
         # that slipped through, single-word hits, etc.).
@@ -3358,7 +3546,7 @@ class HybridGraphStore:
         # padding with 6 noise citations when only 2 are genuine.
         if len(citations) >= 2:
             top_score = citations[0]["support_score"]
-            cliff_threshold = top_score * 0.3
+            cliff_threshold = top_score * 0.24
             cliff_idx = len(citations)
             for i in range(1, len(citations)):
                 if citations[i]["support_score"] < cliff_threshold:
@@ -3373,27 +3561,69 @@ class HybridGraphStore:
         # the query subject.  Citations with zero topic relevance AND
         # a weak score are dropped.
         if _compatible_families and citations:
-            _family_topic_tokens: set[str] = set()
+            # Core tokens per offence family (ordinance rule keywords + family
+            # name). Do not union the full area_boost set here: it is large and
+            # shrinks overlap ratio so clearly on-point cases (e.g. murder
+            # sentencing) read as "irrelevant" and get stripped.
+            _family_core_tokens: set[str] = set()
             for fam in _compatible_families:
-                _family_topic_tokens.update(tokenize(fam.replace("_", " ")))
+                _family_core_tokens.update(tokenize(fam.replace("_", " ")))
+                for rule in OFFENCE_ORDINANCE_RULES:
+                    if rule.get("offence_family") == fam:
+                        _family_core_tokens |= set(rule.get("keywords") or set())
+                        _family_core_tokens.update(tokenize(str(rule.get("ordinance", ""))))
+                        break
+            _family_broad_tokens: set[str] = set(_family_core_tokens)
             if area_boost_tokens:
-                _family_topic_tokens |= area_boost_tokens
+                _family_broad_tokens |= area_boost_tokens
             coherent_citations: list[dict] = []
             for c in citations:
                 case_node = self.nodes.get(c.get("case_id", ""), {})
                 case_topics = " ".join(case_node.get("topic_paths", [])).lower()
                 case_topic_tokens = set(tokenize(case_topics))
-                topic_overlap = len(_family_topic_tokens & case_topic_tokens) / max(len(_family_topic_tokens), 1)
+                core_overlap = len(_family_core_tokens & case_topic_tokens) / max(len(_family_core_tokens), 1)
+                broad_overlap = len(_family_broad_tokens & case_topic_tokens) / max(len(_family_broad_tokens), 1)
+                topic_overlap = max(core_overlap, broad_overlap)
                 if topic_overlap < 0.1 and c.get("support_score", 0) < 0.30:
                     continue  # drop: zero topic relevance + weak score
                 coherent_citations.append(c)
             citations = coherent_citations
+
+        if resolved_area == "financial_regulatory" and citations:
+            regulatory_tokens = {
+                "sfc",
+                "sfo",
+                "securities",
+                "futures",
+                "insider",
+                "market",
+                "misconduct",
+                "regulated",
+                "regulatory",
+                "licence",
+                "license",
+                "licensed",
+                "unlicensed",
+                "compliance",
+                "code",
+                "conduct",
+                "cap",
+                "571",
+            }
+            citations = [
+                c for c in citations
+                if regulatory_tokens & set(tokenize(
+                    f"{c.get('case_name', '')} {c.get('quote', '')} {c.get('principle_label', '')}"
+                ))
+            ]
 
         live_hklii_trace: dict = {"attempted": False, "used": False, "searches": []}
         distinctive_query_tokens: set[str] = set()
         token_coverage: float | None = None
         suppress_local_summary = False
         prefer_live_grounding = False
+        if resolved_area == "financial_regulatory" and not citations:
+            suppress_local_summary = True
         if legal_domain == "criminal":
             top_local_support = max((citation["support_score"] for citation in citations), default=0.0)
             distinctive_query_tokens = {token for token in query_tokens if token not in QUERY_STOPWORDS}
@@ -3513,6 +3743,17 @@ class HybridGraphStore:
                     # terms), they are likely off-topic and should be suppressed.
                     if citations:
                         anchor_candidates = {
+                            "ibanker",
+                            "ibankers",
+                            "banker",
+                            "bankers",
+                            "investment",
+                            "investing",
+                            "personal",
+                            "account",
+                            "accounts",
+                            "trading",
+                            "trade",
                             "option",
                             "options",
                             "derivative",
@@ -3913,15 +4154,17 @@ DEEPSEEK_DEFAULT_MODEL = "deepseek-chat"
 
 DETERMINATOR_SYSTEM_PROMPT = """You are an HK criminal law assistant. Apply this 8-step framework strictly:
 
-Step 0 – Classify: Is this a criminal law / procedure question? If yes, which area: offence elements | defences | sentencing | pre-trial procedure | trial rights | post-conviction.
+Step 0 – Classify: Is this a criminal law / procedure question? If yes, which area: offence elements | financial regulatory / SFO | defences | sentencing | pre-trial procedure | trial rights | post-conviction.
 
-Step 1 – Offence & Ordinance: Map the described conduct to the correct HK ordinance and section. Examples: violence → Cap. 212; theft → Cap. 210; drugs → Cap. 134; animal cruelty → Cap. 169; tax evasion → Cap. 112 s.82. If unclear, list top 2-3 possible offences and ask for clarification.
+Step 1 – Offence & Ordinance: Map the described conduct to the correct HK ordinance and section. Examples: violence → Cap. 212; theft → Theft Ordinance (Cap. 210); fraud → Theft Ordinance (Cap. 210) s.16A; securities/personal-account dealing/insider dealing/market misconduct → Securities and Futures Ordinance (Cap. 571) and SFC Code of Conduct; drugs → Cap. 134; animal cruelty → Cap. 169; tax evasion → Cap. 112 s.82. If unclear, list top 2-3 possible offences and ask for clarification.
+
+For investment bankers, brokers, analysts, traders, or licensed-person staff trading/investing in personal accounts, classify first as securities regulatory / SFO / SFC Code of Conduct. Do NOT classify as theft, fraud, or misappropriation unless the facts mention client/customer funds, deception, unauthorized transfers, dishonesty, entrusted property, or other misappropriation facts.
 
 Step 2 – Elements: State actus reus and mens rea for the identified offence. Note: some offences are strict liability (no mens rea required). Check each element against the user's stated facts — note which are present, missing, or ambiguous.
 
 Step 3 – Defences: List only defences legally available for this specific offence in HK (e.g. duress, self-defence, intoxication if negates MR, mental disorder under CPO s.75, lawful authority). For each applicable defence, cite 1-2 relevant HK cases.
 
-Step 4 – Procedure & Rights: Identify relevant procedural issues: police powers (Cap. 232 ss.50-59), right to silence, confession admissibility (voir dire under Cap. 221 s.65), bail (Cap. 221 s.9G), legal representation (Legal Aid Ordinance Cap. 227).
+Step 4 – Procedure & Rights: Identify relevant procedural issues where applicable: police powers (Cap. 232 ss.50-59), right to silence, confession admissibility (voir dire under Cap. 221 s.65), bail (Cap. 221 s.9G), legal representation and legal aid (Legal Aid Ordinance Cap. 91). For SFC/regulatory matters, also discuss internal compliance, employer discipline, SFC investigation/disciplinary risk, market misconduct/insider dealing escalation, and criminal prosecution only where the facts support it.
 
 Step 5 – Sentencing: State maximum penalty from the ordinance. Apply HK sentencing principles. List applicable aggravating factors (planning, abuse of trust, vulnerable victim, repeat offending) and mitigating factors (remorse, guilty plea, no record, restitution).
 
@@ -4034,6 +4277,47 @@ OFFENCE_ORDINANCE_RULES = [
         "keywords": {"launder", "laundering", "proceeds", "indictable", "property"},
         "phrases": {"money laundering", "proceeds of crime"},
         "strict_liability_possible": False,
+    },
+    {
+        "offence_family": "personal_account_dealing",
+        "ordinance": "Securities and Futures Ordinance (Cap. 571) / SFC Code of Conduct",
+        "section": "personal account dealing, conflicts controls, inside information, and market misconduct / insider dealing escalation",
+        "keywords": {
+            "ibanker",
+            "ibankers",
+            "banker",
+            "bankers",
+            "investment",
+            "analyst",
+            "trader",
+            "dealer",
+            "broker",
+            "personal",
+            "account",
+            "accounts",
+            "invest",
+            "investing",
+            "trade",
+            "trading",
+            "stocks",
+            "shares",
+            "securities",
+            "sfc",
+            "sfo",
+            "insider",
+        },
+        "phrases": {
+            "personal account",
+            "personal accounts",
+            "own account",
+            "employee account",
+            "staff account",
+            "personal account dealing",
+            "personal account trading",
+            "investment banker",
+            "investment bankers",
+        },
+        "strict_liability_possible": True,
     },
     {
         "offence_family": "unlicensed_securities_activity",
@@ -4155,7 +4439,9 @@ class DeterminatorPipeline:
         return candidates[:3]
 
     def _classify(self, question: str) -> dict:
-        tokens = set(tokenize(question))
+        query_tokens = tokenize(question)
+        tokens = set(query_tokens)
+        joined = " ".join(query_tokens)
         non_criminal_hits = tokens & NON_CRIMINAL_INDICATORS
         criminal_hits = tokens & set(CRIMINAL_QUERY_HINTS.keys())
         criminal_keywords = {
@@ -4176,6 +4462,12 @@ class DeterminatorPipeline:
         }
         criminal_hits |= tokens & criminal_keywords
 
+        personal_dealing_query = _is_personal_account_dealing_query(query_tokens)
+        misappropriation_signal = _has_misappropriation_signal(query_tokens)
+        if personal_dealing_query:
+            criminal_hits |= tokens & (FINANCIAL_PROFESSIONAL_TOKENS | PERSONAL_DEALING_TOKENS | set(CRIMINAL_QUERY_HINTS.keys()))
+            criminal_hits.update({"personal_account_dealing", "sfc", "sfo", "securities"})
+
         # Criminal signal always overrides a civil-indicator hit.  A query like
         # "company director charged with fraud" contains both "company" (civil
         # indicator) and "fraud"/"charged" (criminal) — it must be treated as
@@ -4186,7 +4478,9 @@ class DeterminatorPipeline:
         )
 
         area = "offence_elements"
-        if any(t in tokens for t in {"sentence", "sentencing", "penalty", "imprisonment", "tariff"}):
+        if personal_dealing_query and not misappropriation_signal:
+            area = "financial_regulatory"
+        elif any(t in tokens for t in {"sentence", "sentencing", "penalty", "imprisonment", "tariff"}):
             area = "sentencing"
         elif any(t in tokens for t in {"defence", "defences", "defense", "defenses", "duress", "self", "insanity", "intoxication"}):
             area = "defences"
@@ -4194,12 +4488,24 @@ class DeterminatorPipeline:
             area = "procedure"
 
         offence_candidates = self._map_offence_candidates(question)
+        if personal_dealing_query and not misappropriation_signal:
+            def _candidate_rank(item: dict) -> tuple[int, int]:
+                return (1 if item.get("offence_family") == "personal_account_dealing" else 0, item.get("match_score", 0))
+
+            offence_candidates.sort(key=_candidate_rank, reverse=True)
+            offence_candidates = [
+                candidate
+                for candidate in offence_candidates
+                if candidate.get("offence_family") not in {"theft", "fraud", "money_laundering"}
+            ][:3]
         return {
             "is_criminal": is_criminal,
             "area": area,
             "criminal_hits": sorted(criminal_hits),
             "offence_candidates": offence_candidates,
             "primary_ordinance": offence_candidates[0] if offence_candidates else None,
+            "personal_account_dealing": personal_dealing_query,
+            "misappropriation_signal": misappropriation_signal,
         }
 
     def _llm_query(self, question: str, citations: list[dict], mode: str, model: str, classification: dict) -> dict:
@@ -4320,6 +4626,28 @@ class DeterminatorPipeline:
     def _ungrounded_answer(self, question: str, classification: dict) -> str:
         primary = classification.get("primary_ordinance") or {}
         alternatives = classification.get("offence_candidates", [])[1:3]
+        if classification.get("area") == "financial_regulatory":
+            lines = [
+                "**Step 0 - Classification**",
+                "- Question type: Securities regulatory / SFO / SFC compliance first, not automatically theft or fraud.",
+                "- The query appears to concern investment-bank or licensed-person staff trading or investing through personal accounts.",
+                "",
+                "**Step 1 - Primary Legal Route**",
+                "- Start with Securities and Futures Ordinance (Cap. 571), SFC Code of Conduct controls on employee personal account dealing, conflicts of interest, and misuse of inside/confidential information.",
+                "- Consider insider dealing or market misconduct only if the facts involve inside information, client order information, front-running, false trading, price rigging, or similar market-abuse conduct.",
+                "- Consider theft/fraud only if the facts add client/customer funds, deception, unauthorized transfer, entrusted property, or dishonest misappropriation.",
+                "",
+                "**Step 2 - Missing Facts**",
+                "- The present wording does not say whose money was invested, whether the banker used inside/client information, whether employer approval was obtained, or whether client funds were transferred.",
+                "- Without those facts, the safer answer is regulatory/compliance risk rather than a concluded criminal theft/fraud offence.",
+                "",
+                "**Step 3 - Source Status**",
+                "- No sufficiently verified local HKLII paragraph authority was recovered for this query, so the app is withholding case-specific citations rather than padding the answer with unrelated theft, burglary, or nuisance authorities.",
+                "",
+                "**Step 4 - Next Step**",
+                "- Re-ask with facts such as: personal funds or client funds; inside information or public information; employer approval; licensed status; securities/futures/options involved; and whether any client order was front-run.",
+            ]
+            return "\n".join(lines)
         lines = [
             "**Step 0 - Classification**",
             f"- Question type: Criminal law / procedure",

@@ -166,6 +166,8 @@ Important:
 - Do not put the service-role key into client-side code or public Vercel env exposed to the browser.
 - Until a service-role key is added, the current repo is still operating in local-export mode for `supabase_export.sql` and related artifacts rather than live Supabase ingestion.
 
+**Scaled paragraph retrieval (pgvector + FTS):** apply the SQL in `supabase/migrations/20260212120000_case_chunks_retrieval_scale.sql` in the Supabase SQL editor (or via Supabase CLI), then `GRANT EXECUTE` on `match_case_chunks` to `anon` / `authenticated` as noted in that file. Re-run `sync-candidates-supabase` (or `sync-criminal-supabase`) so rows get `embedding_vec` and metadata columns. Runtime `/api/query` uses **only** `SUPABASE_PUBLISHABLE_KEY`; set `CASEMAP_SUPABASE_QUERY=auto` and `CASEMAP_QUERY_EMBEDDING_BACKEND=sentence-transformers` to align query vectors with MiniLM ingest.
+
 Suggested Vercel env setup:
 
 ```bash

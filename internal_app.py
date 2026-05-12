@@ -10,6 +10,7 @@ SRC_DIR = BASE_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
+from casemap.api_query import run_hybrid_post_query
 from casemap.hybrid_graph import HybridGraphStore
 from casemap.viewer import render_hybrid_hierarchy
 
@@ -139,7 +140,8 @@ def app(environ, start_response):
             return _json_response(start_response, {"error": "Missing question"}, status="400 Bad Request")
         return _json_response(
             start_response,
-            store.query(
+            run_hybrid_post_query(
+                store,
                 question,
                 top_k=bounded_top_k,
                 mode=mode,
