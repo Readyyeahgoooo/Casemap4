@@ -1,0 +1,29 @@
+name: AgentPay Guard CI
+
+on:
+  pull_request:
+    paths:
+      - "agentpay-guard/**"
+      - ".github/workflows/agentpay-guard-ci.yml"
+  push:
+    paths:
+      - "agentpay-guard/**"
+      - ".github/workflows/agentpay-guard-ci.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: agentpay-guard
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Run tests
+        run: npm test

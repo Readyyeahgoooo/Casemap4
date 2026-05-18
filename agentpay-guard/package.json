@@ -1,0 +1,24 @@
+{
+  "name": "agentpay-guard-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AgentPay Guard v0.1 core engine for mandate, policy, receipt, and audit controls around AI-agent payments.",
+  "type": "module",
+  "bin": {
+    "agentpay": "./packages/cli/src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "verify": "node scripts/verify-v01.mjs",
+    "demo:approved": "node packages/cli/src/cli.js payment:check examples/payment-approved.json",
+    "demo:blocked": "node packages/cli/src/cli.js payment:check examples/payment-blocked.json",
+    "api": "node apps/api/src/server.js"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  }
+}
