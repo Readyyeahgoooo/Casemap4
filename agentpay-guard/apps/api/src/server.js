@@ -1,7 +1,27 @@
 import http from "node:http";
+import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { AgentPayGuard } from "../../../packages/core/src/index.js";
+import { listDemoScenarios, runDemoScenario } from "./demo.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const webRoot = path.resolve(__dirname, "../../web");
+const webAssets = new Map([
+  ["/", { file: "index.html", type: "text/html; charset=utf-8" }],
+  ["/styles.css", { file: "styles.css", type: "text/css; charset=utf-8" }],
+  ["/app.js", { file: "app.js", type: "application/javascript; charset=utf-8" }]
+]);
+
+function parsePort(argv = process.argv, env = process.env) {
+  const portFlag = argv.find((arg) => arg.startsWith("--port="));
+  if (portFlag) return Number(portFlag.split("=")[1]);
+
+  const portIndex = argv.indexOf("--port");
+  if (portIndex !== -1 && argv[portIndex + 1]) return Number(argv[portIndex + 1]);
+
+  return Number(env.PORT ?? 8787);
+}
 
 export function filterAuditEvents(events, { subjectId, caseId, type } = {}) {
   let filtered = events;
@@ -37,14 +57,38 @@ function send(response, status, payload) {
   response.end(JSON.stringify(payload, null, 2));
 }
 
+async function serveWebAsset(response, pathname) {
+  const asset = webAssets.get(pathname);
+  if (!asset) return false;
+  const body = await readFile(path.join(webRoot, asset.file));
+  response.writeHead(200, { "content-type": asset.type });
+  response.end(body);
+  return true;
+}
+
 export function createAgentPayApi(guard = new AgentPayGuard()) {
   return http.createServer(async (request, response) => {
     try {
       const url = new URL(request.url, `http://${request.headers.host}`);
       const body = request.method === "POST" ? await readBody(request) : {};
 
+      if (request.method === "GET" && (await serveWebAsset(response, url.pathname))) {
+        return;
+      }
+
       if (request.method === "GET" && url.pathname === "/health") {
         return send(response, 200, { status: "ok" });
+      }
+      if (request.method === "GET" && url.pathname === "/demo/scenarios") {
+        return send(response, 200, { scenarios: listDemoScenarios() });
+      }
+      if (
+        (request.method === "GET" || request.method === "POST") &&
+        url.pathname.match(/^\/demo\/run\/[^/]+$/)
+      ) {
+        const scenarioId = url.pathname.split("/")[3];
+        const result = await runDemoScenario(scenarioId);
+        return result ? send(response, 200, result) : send(response, 404, { error: "not_found" });
       }
       if (request.method === "POST" && url.pathname === "/principals") return send(response, 201, guard.createPrincipal(body));
       if (request.method === "POST" && url.pathname === "/users") return send(response, 201, guard.createUser(body));
@@ -87,8 +131,8 @@ export function createAgentPayApi(guard = new AgentPayGuard()) {
 const isMain =
   process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
-  const port = Number(process.env.PORT ?? 8787);
+  const port = parsePort();
   createAgentPayApi().listen(port, () => {
-    console.log(`AgentPay Guard API listening on http://127.0.0.1:${port}`);
+    console.log(`AgentPay Guard API and web demo listening on http://127.0.0.1:${port}`);
   });
 }

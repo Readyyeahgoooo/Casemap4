@@ -12,7 +12,10 @@
     "verify": "node scripts/verify-v01.mjs",
     "demo:approved": "node packages/cli/src/cli.js payment:check examples/payment-approved.json",
     "demo:blocked": "node packages/cli/src/cli.js payment:check examples/payment-blocked.json",
-    "api": "node apps/api/src/server.js"
+    "demo:human-approval": "node packages/cli/src/cli.js payment:check examples/payment-human-approval.json",
+    "api": "node apps/api/src/server.js",
+    "web": "node apps/api/src/server.js --port 5173",
+    "dev": "node apps/api/src/server.js --port 5173"
   },
   "workspaces": [
     "packages/*",

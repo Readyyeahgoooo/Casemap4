@@ -15,4 +15,5 @@ function run(command, args) {
 run("npm", ["test"]);
 run("npm", ["run", "demo:approved"]);
 run("npm", ["run", "demo:blocked"]);
+run("npm", ["run", "demo:human-approval"]);
 console.log("AgentPay Guard v0.1 verification passed.");

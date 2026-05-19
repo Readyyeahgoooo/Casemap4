@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgentPay Guard Evidence Console</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <aside class="sidebar" aria-label="AgentPay Guard navigation">
+        <div class="brand">
+          <div class="brand-mark">AG</div>
+          <div>
+            <strong>AgentPay Guard</strong>
+            <span>Authority evidence layer</span>
+          </div>
+        </div>
+
+        <nav class="nav-section" aria-label="Workspace">
+          <p>Workspace</p>
+          <a class="nav-item active" href="#case-overview">Dashboard</a>
+          <a class="nav-item" href="#authority-chain">Authority Chain</a>
+          <a class="nav-item" href="#rule-checklist">Rule Checklist</a>
+          <a class="nav-item" href="#audit-timeline">Audit Timeline</a>
+          <a class="nav-item" href="#raw-evidence">Raw Evidence</a>
+        </nav>
+
+        <nav class="nav-section" aria-label="Data">
+          <p>Data</p>
+          <span class="nav-item muted">Principals</span>
+          <span class="nav-item muted">Approvers</span>
+          <span class="nav-item muted">Agents</span>
+          <span class="nav-item muted">Mandates</span>
+          <span class="nav-item muted">Cases</span>
+        </nav>
+
+        <div class="sidebar-caveat">
+          <strong>Important Caveat</strong>
+          <span>Mock payments only. No real KYB, sanctions screening, legal advice, or regulatory compliance proof.</span>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">AI Agent Payment Guard</p>
+            <h1>Payment Authority Case</h1>
+            <p class="lede">Control, approve, and audit AI-agent payments with mandate evidence and tamper-evident logs.</p>
+          </div>
+          <div class="topbar-meta">
+            <span class="version-pill">v0.1.0 Mock Demo</span>
+            <span class="health-pill">API healthy</span>
+          </div>
+        </header>
+
+        <section class="quick-actions" aria-labelledby="quick-actions-title">
+          <div class="section-heading">
+            <h2 id="quick-actions-title">Demo Quick Actions</h2>
+            <p>Run an evidence scenario and inspect the resulting authority case.</p>
+          </div>
+          <div class="scenario-actions" id="scenario-buttons"></div>
+        </section>
+
+        <section class="case-panel" id="case-overview" aria-labelledby="case-title">
+          <div class="section-heading inline">
+            <div>
+              <h2 id="case-title">Latest Decision Summary</h2>
+              <p>Decision, mandate scope, receipt or case, and audit validity.</p>
+            </div>
+            <button class="secondary-button" type="button" data-tab-jump="full">View Full Evidence Pack</button>
+          </div>
+          <div id="decision-summary"></div>
+        </section>
+
+        <section class="authority-panel" aria-labelledby="authority-title">
+          <div class="section-heading">
+            <h2 id="authority-title">Authority Chain</h2>
+            <p>Principal -> approver -> agent -> mandate -> request -> decision -> receipt or case.</p>
+          </div>
+          <div id="authority-chain" class="authority-chain"></div>
+        </section>
+
+        <section class="insight-grid">
+          <article class="panel" aria-labelledby="rules-title">
+            <div class="section-heading compact">
+              <h2 id="rules-title">Rule Checklist</h2>
+              <p>Authority and policy checks.</p>
+            </div>
+            <div id="rule-checklist" class="rule-list"></div>
+          </article>
+
+          <article class="panel" aria-labelledby="timeline-title">
+            <div class="section-heading compact">
+              <h2 id="timeline-title">Audit Timeline</h2>
+              <p>Scoped hash-chain events.</p>
+            </div>
+            <div id="audit-timeline" class="timeline"></div>
+          </article>
+
+          <article class="panel" aria-labelledby="verification-title">
+            <div class="section-heading compact">
+              <h2 id="verification-title">Audit Verification</h2>
+              <p>Tamper-evident proof state.</p>
+            </div>
+            <div id="audit-verification"></div>
+          </article>
+        </section>
+
+        <section class="raw-panel" id="raw-evidence" aria-labelledby="raw-title">
+          <div class="section-heading inline">
+            <div>
+              <h2 id="raw-title">Raw Evidence</h2>
+              <p>Structured JSON for developers, auditors, and integration tests.</p>
+            </div>
+          </div>
+          <div id="raw-tabs" class="tabs"></div>
+          <pre id="raw-json" class="raw-json"></pre>
+        </section>
+      </main>
+
+      <aside class="scenario-rail" aria-label="Scenario evidence previews">
+        <div class="rail-header">
+          <h2>Scenario Evidence</h2>
+          <p>Approved, blocked, and human approval paths.</p>
+        </div>
+        <div id="scenario-rail"></div>
+      </aside>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

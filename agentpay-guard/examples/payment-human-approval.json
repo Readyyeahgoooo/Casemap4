@@ -1,0 +1,45 @@
+{
+  "principal": {
+    "type": "company",
+    "legal_name": "ABC Trading Limited",
+    "jurisdiction": "HK",
+    "company_number": "1234567"
+  },
+  "user": {
+    "email": "finance_manager@abc.example",
+    "role": "finance_approver"
+  },
+  "agent": {
+    "name": "ResearchBuyerBot",
+    "type": "autonomous_api_buyer",
+    "wallet_address": "0xabc0000000000000000000000000000000000001",
+    "chain": "base"
+  },
+  "mandate": {
+    "allowed_actions": ["buy_api_credits", "pay_mcp_server"],
+    "allowed_merchants": ["api.vendor.com"],
+    "denied_merchants": [],
+    "allowed_tokens": ["USDC"],
+    "allowed_chains": ["base"],
+    "denied_wallets": [],
+    "limits": {
+      "auto_approve_limit_usd": 20,
+      "human_approval_limit_usd": 100,
+      "hard_block_limit_usd": 500,
+      "daily_limit_usd": 1000
+    },
+    "expires_at": "2027-06-30T23:59:59Z"
+  },
+  "payment_request": {
+    "merchant": "api.vendor.com",
+    "amount_usd": "75.00",
+    "token": "USDC",
+    "chain": "base",
+    "purpose": "buy_api_credits",
+    "merchant_request_id": "vendor_req_003",
+    "nonce": "nonce_003",
+    "idempotency_key": "idem_human_approval_001",
+    "decision_ttl": "PT10M"
+  },
+  "expected_decision_status": "pending_human_approval"
+}

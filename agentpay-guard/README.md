@@ -1,8 +1,8 @@
 # AgentPay Guard
 
-AgentPay Guard is the open-source core of **AgentPay Compliance OS**: a deterministic mandate, policy, receipt, and audit layer for AI-agent stablecoin payments.
+AgentPay Guard is open-source mandate, policy, receipt, and audit infrastructure for AI-agent stablecoin payments.
 
-It sits between AI agents and payment rails like x402, checking whether each payment is authorised, within limits, attributable, auditable, and reviewable. v0.1 uses mock payments only, so the core evidence flow can be tested without wallets, private keys, gas, or real stablecoin transfers.
+It sits before payment rails like x402, AP2, and stablecoin checkout flows: before an AI agent pays, AgentPay Guard checks whether the payment is authorised; after it pays or is blocked, it generates the evidence pack. v0.1/v0.2 uses mock payments only, so the evidence flow can be tested without wallets, private keys, gas, or real stablecoin transfers.
 
 ## Quick Start
 
@@ -18,18 +18,30 @@ cd agentpay-guard
 npm test
 npm run demo:approved
 npm run demo:blocked
+npm run demo:human-approval
 ```
 
-Run the local API:
+Run the browser demo:
+
+```bash
+cd agentpay-guard
+npm run web
+```
+
+Open `http://127.0.0.1:5173` to see the visual Evidence Pack demo.
+
+Run the local API on the default API port:
 
 ```bash
 cd agentpay-guard
 npm run api
 ```
 
-The API listens on `http://127.0.0.1:8787` and exposes the v0.1 endpoints:
+`npm run api` listens on `http://127.0.0.1:8787`. The web/dev server and API process expose the same v0.1 endpoints:
 
 - `GET /health`
+- `GET /demo/scenarios`
+- `GET /demo/run/:scenario`
 - `POST /principals`
 - `POST /users`
 - `POST /agents`
@@ -46,6 +58,7 @@ The API listens on `http://127.0.0.1:8787` and exposes the v0.1 endpoints:
 ```bash
 node packages/cli/src/cli.js policy:test examples/payment-approved.json
 node packages/cli/src/cli.js policy:test examples/payment-blocked.json
+node packages/cli/src/cli.js policy:test examples/payment-human-approval.json
 node packages/cli/src/cli.js payment:check examples/payment-approved.json
 node packages/cli/src/cli.js audit:verify evidence-pack.json
 ```
@@ -58,6 +71,24 @@ The demo flow is:
 4. Execute a mock payment only if the decision is approved.
 5. Generate a receipt.
 6. Export evidence with principal → approver user → agent → mandate → decision → receipt (`approver_user`, `authority_chain_summary`, `scoped_audit_events` for reviewers, `audit_events` for full chain verification).
+
+## Visual Demo
+
+The browser demo is designed for a non-technical boss, investor, or internal stakeholder. It shows the product wedge: use the payment rail for payment, and use AgentPay Guard for authority and evidence.
+
+- A landing page with approved, blocked, and human-approval demo buttons.
+- A one-screen decision summary explaining the attempted payment.
+- An authority chain from company → approver → agent → mandate → payment request → decision → receipt.
+- A rule checklist showing which deterministic controls passed or triggered.
+- An audit timeline built from hash-chained events.
+- Raw evidence tabs for mandate, decision, receipt, audit events, and the full exported evidence pack.
+
+Use it as a two-minute narrative:
+
+1. Run the approved demo to show safe autonomous spending within mandate.
+2. Run the blocked demo to show pre-payment controls stopping a risky merchant or wallet.
+3. Run the human-approval demo to show escalation without execution.
+4. Open the raw evidence tabs to show that every outcome is explainable and auditable.
 
 ## Mandate Limits
 
@@ -140,12 +171,14 @@ Every `POST /payment-requests/check` call must include `idempotency_key`. AgentP
 
 ```text
 agentpay-guard/
-  apps/api/              Dependency-free local HTTP API
+  apps/api/              Dependency-free local HTTP API and demo endpoints
+  apps/web/              Investor-friendly static Evidence Pack viewer
   packages/core/         Mandates, policy decisions, receipts, audit chain
   packages/shared/       Shared validation, roles, hashing helpers
   packages/sdk/          Minimal SDK wrapper
   packages/cli/          policy:test, payment:check, audit:verify
-  examples/              Approved and blocked demo scenarios
+  examples/              Approved, blocked, and human-approval scenarios
+  docs/                  Product demo, evidence-pack, roadmap, and threat-model docs
   tests/                 Node test suite
 ```
 
@@ -162,12 +195,14 @@ Included:
 - Hash-chained audit events.
 - Evidence-pack JSON export with approver user and authority chain summary.
 - Mandate-agent-principal binding on create and payment check.
+- Browser-based Evidence Pack viewer for approved, blocked, and escalation demos.
+- GitHub-ready docs for demo flow, evidence fields, roadmap, and threat model.
 - CLI verification.
 - Unit tests for the core acceptance criteria.
 
 Deferred:
 
-- Full dashboard.
+- Full SaaS dashboard.
 - Real stablecoin transfers.
 - x402 integration.
 - DID/VC/EIP-712 mandate signatures.
