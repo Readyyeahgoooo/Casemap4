@@ -1,3 +1,4 @@
 node_modules/
 data/*.db
 data/audit-checkpoints.jsonl
+data/demo-agents-registry.json

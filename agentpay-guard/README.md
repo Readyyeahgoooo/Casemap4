@@ -32,6 +32,23 @@ npm run web
 
 Open `http://127.0.0.1:5173` to see the visual Evidence Pack demo.
 
+### Live LLM agent demo (investor walkthrough)
+
+See **[docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md)** for the full step-by-step guide. Short version:
+
+```bash
+# Terminal 1
+npm run web
+
+# Terminal 2
+npm run demo:seed
+
+# Terminal 3
+npm run demo:agents
+```
+
+Optional: `export OPENAI_API_KEY=...` or `ANTHROPIC_API_KEY=...` for real LLM purchase planning (falls back to offline catalog if unset).
+
 Run the local API on the default API port:
 
 ```bash

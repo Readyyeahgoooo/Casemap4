@@ -4,6 +4,15 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { AgentPayGuard } from "../../../packages/core/src/index.js";
 import { listDemoScenarios, runDemoScenario } from "./demo.js";
+import {
+  extractDemoMeta,
+  getDemoAgentWorld,
+  recordAgentPaymentFlow,
+  seedDemoAgents,
+  stashDemoMeta,
+  takeDemoMeta
+} from "./demo-agents.js";
+import { clearLiveEvents, listLiveEvents, liveFeedStats } from "./live-feed.js";
 import { verifyAuditChain } from "../../../packages/core/src/audit.js";
 import {
   applyCors,
@@ -139,6 +148,29 @@ export function createAgentPayApi(
         const result = await runDemoScenario(scenarioId);
         return result ? send(response, 200, result) : send(response, 404, { error: "not_found" });
       }
+      if (request.method === "POST" && url.pathname === "/demo/seed-agents") {
+        const world = seedDemoAgents(guard);
+        return send(response, 201, { seeded: true, ...world });
+      }
+      if (request.method === "GET" && url.pathname === "/demo/agents") {
+        const world = getDemoAgentWorld();
+        return send(response, 200, {
+          seeded: Boolean(world),
+          ...(world ?? { agents: [] })
+        });
+      }
+      if (request.method === "GET" && url.pathname === "/demo/live-feed") {
+        const limit = Number(url.searchParams.get("limit") ?? 50);
+        const agentSlug = url.searchParams.get("agent_slug");
+        return send(response, 200, {
+          events: listLiveEvents({ limit, agent_slug: agentSlug }),
+          stats: liveFeedStats()
+        });
+      }
+      if (request.method === "POST" && url.pathname === "/demo/live-feed/clear") {
+        clearLiveEvents();
+        return send(response, 200, { cleared: true });
+      }
       if (request.method === "POST" && url.pathname === "/principals") return send(response, 201, guard.createPrincipal(body));
       if (request.method === "POST" && url.pathname === "/users") return send(response, 201, guard.createUser(body));
       if (request.method === "POST" && url.pathname === "/agents") return send(response, 201, guard.createAgent(body));
@@ -146,9 +178,45 @@ export function createAgentPayApi(
       if (request.method === "POST" && url.pathname.match(/^\/mandates\/[^/]+\/revoke$/)) {
         return send(response, 200, guard.revokeMandate(url.pathname.split("/")[2]));
       }
-      if (request.method === "POST" && url.pathname === "/payment-requests/check") return send(response, 200, guard.checkPayment(body));
+      if (request.method === "POST" && url.pathname === "/payment-requests/check") {
+        const { paymentBody, demoMeta } = extractDemoMeta(body);
+        const actor = demoMeta.demo_agent_slug
+          ? `agent:${demoMeta.demo_agent_slug}`
+          : "api";
+        const result = guard.checkPayment(paymentBody, actor);
+        if (demoMeta.demo_agent_slug) {
+          stashDemoMeta(result.payment_request.id, demoMeta);
+          recordAgentPaymentFlow({
+            agent_slug: demoMeta.demo_agent_slug,
+            agent_name: demoMeta.demo_agent_name ?? demoMeta.demo_agent_slug,
+            phase: "decision",
+            message: `${result.decision.status} (${result.decision.reason})`,
+            llm: demoMeta.demo_llm,
+            payment_request: result.payment_request,
+            decision: result.decision,
+            review_case: result.case,
+            obeyed: result.decision.status === "blocked" || result.decision.status === "pending_human_approval" || result.decision.status === "manual_review"
+          });
+        }
+        return send(response, 200, result);
+      }
       if (request.method === "POST" && url.pathname.match(/^\/payment-requests\/[^/]+\/execute-mock$/)) {
-        return send(response, 200, guard.executeMockPayment(url.pathname.split("/")[2]));
+        const paymentRequestId = url.pathname.split("/")[2];
+        const result = guard.executeMockPayment(paymentRequestId);
+        const demoMeta = takeDemoMeta(paymentRequestId);
+        if (demoMeta?.demo_agent_slug) {
+          recordAgentPaymentFlow({
+            agent_slug: demoMeta.demo_agent_slug,
+            agent_name: demoMeta.demo_agent_name ?? demoMeta.demo_agent_slug,
+            phase: "executed",
+            message: `Mock payment executed; receipt ${result.receipt?.id ?? "created"}.`,
+            payment_request: result.payment_request,
+            decision: result.decision,
+            receipt: result.receipt,
+            obeyed: true
+          });
+        }
+        return send(response, 200, result);
       }
       if (request.method === "GET" && url.pathname.match(/^\/receipts\/[^/]+$/)) {
         const receipt = guard.getReceipt(url.pathname.split("/")[2]);

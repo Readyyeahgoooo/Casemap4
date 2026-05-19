@@ -92,7 +92,12 @@ function normalizeApiKeyRegistry(apiKeyOrRegistry) {
 export function isPublicApiPath(method, pathname) {
   if (method === "GET" && (pathname === "/" || pathname === "/health")) return true;
   if (method === "GET" && (pathname === "/styles.css" || pathname === "/app.js")) return true;
-  if (method === "GET" && pathname.startsWith("/demo/")) return true;
+  if (pathname.startsWith("/demo/")) {
+    if (method === "GET") return true;
+    if (method === "POST" && (pathname === "/demo/seed-agents" || pathname === "/demo/live-feed/clear")) {
+      return true;
+    }
+  }
   return false;
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "agentpay-guard-workspace",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "description": "AgentPay Guard v0.1 core engine for mandate, policy, receipt, and audit controls around AI-agent payments.",
   "type": "module",
@@ -15,7 +15,13 @@
     "demo:human-approval": "node packages/cli/src/cli.js payment:check examples/payment-human-approval.json",
     "api": "node apps/api/src/server.js",
     "web": "node apps/api/src/server.js --port 5173",
-    "dev": "node apps/api/src/server.js --port 5173"
+    "dev": "node apps/api/src/server.js --port 5173",
+    "demo:seed": "node scripts/demo-seed.mjs",
+    "demo:agents": "node apps/agents/run-all.mjs",
+    "demo:agents:once": "node apps/agents/run-all.mjs --once",
+    "demo:agent:procurement": "node apps/agents/procurement-agent.mjs",
+    "demo:agent:research": "node apps/agents/research-agent.mjs",
+    "demo:agent:travel": "node apps/agents/travel-agent.mjs"
   },
   "workspaces": [
     "packages/*",

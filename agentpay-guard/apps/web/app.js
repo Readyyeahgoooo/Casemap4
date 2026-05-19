@@ -3,7 +3,8 @@ const state = {
   previews: new Map(),
   activeScenario: null,
   activeTab: "summary",
-  data: null
+  data: null,
+  liveFeed: { events: [], stats: null }
 };
 
 const statusClasses = {
@@ -116,10 +117,18 @@ function markerForStatus(status) {
   return "!";
 }
 
-async function fetchJson(path) {
-  const response = await fetch(path);
+async function fetchJson(path, options = {}) {
+  const response = await fetch(path, options);
   if (!response.ok) throw new Error(`Request failed: ${path}`);
   return response.json();
+}
+
+async function postJson(path, body) {
+  return fetchJson(path, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(body ?? {})
+  });
 }
 
 async function loadScenarios() {
@@ -466,6 +475,97 @@ function renderTabs(data) {
   el("raw-json").textContent = json(values[state.activeTab]);
 }
 
+function renderLiveFeed() {
+  const stats = state.liveFeed.stats;
+  const events = state.liveFeed.events;
+  const statsEl = el("live-feed-stats");
+  const listEl = el("live-feed-list");
+
+  if (!statsEl || !listEl) return;
+
+  if (!events.length) {
+    statsEl.innerHTML = `<p class="live-feed-empty">No live agent events yet. Seed agents, then run <code>npm run demo:agents</code> in a terminal.</p>`;
+    listEl.innerHTML = "";
+    return;
+  }
+
+  const agentStats = stats?.by_agent ?? {};
+  statsEl.innerHTML = Object.entries(agentStats)
+    .map(
+      ([slug, counts]) => `
+        <div class="live-stat-card">
+          <strong>${escapeHtml(slug)}</strong>
+          <span>${counts.approved} approved · ${counts.blocked} blocked · ${counts.pending} review</span>
+        </div>
+      `
+    )
+    .join("");
+
+  listEl.innerHTML = events
+    .map((event) => {
+      const status = event.decision?.status ?? event.phase;
+      const tone = statusTone(status);
+      const amount = event.payment_request?.amount_usd;
+      const merchant = event.payment_request?.merchant;
+      const llmNote = event.llm?.item_description ?? event.llm?.reasoning ?? "";
+      return `
+        <button type="button" class="live-feed-card ${tone}" data-payment-request="${escapeHtml(event.payment_request?.id ?? "")}">
+          <div class="live-feed-card-head">
+            <strong>${escapeHtml(event.agent_name ?? event.agent_slug)}</strong>
+            <span>${escapeHtml(formatTime(event.at))}</span>
+          </div>
+          <p class="live-feed-phase">${escapeHtml(event.phase)} — ${escapeHtml(statusLabels[status] ?? capitalizeWords(status))}</p>
+          <p class="live-feed-detail">${escapeHtml(merchant ?? "n/a")} · ${escapeHtml(amount ?? "--")} USDC</p>
+          <p class="live-feed-reason">${escapeHtml(event.message ?? event.decision?.reason ?? "")}</p>
+          ${llmNote ? `<p class="live-feed-llm">${escapeHtml(llmNote)}</p>` : ""}
+        </button>
+      `;
+    })
+    .join("");
+
+  for (const card of listEl.querySelectorAll("[data-payment-request]")) {
+    card.addEventListener("click", async () => {
+      const paymentRequestId = card.dataset.paymentRequest;
+      if (!paymentRequestId) return;
+      try {
+        const evidence_pack = await fetchJson(`/evidence-packs/${paymentRequestId}`);
+        state.data = {
+          scenario: {
+            id: "live",
+            title: "Live Agent Event",
+            summary: "Evidence pack from the live agent feed."
+          },
+          evidence_pack
+        };
+        state.activeTab = "summary";
+        renderAll();
+        el("case-overview")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  }
+}
+
+async function refreshLiveFeed() {
+  const payload = await fetchJson("/demo/live-feed?limit=30");
+  state.liveFeed = payload;
+  renderLiveFeed();
+}
+
+async function pollHealth() {
+  try {
+    const health = await fetchJson("/health");
+    const pill = el("health-pill");
+    if (pill) {
+      pill.textContent = health.demo_mode ? "API healthy (demo mode)" : "API healthy";
+    }
+  } catch {
+    const pill = el("health-pill");
+    if (pill) pill.textContent = "API unreachable";
+  }
+}
+
 function bindStaticActions() {
   for (const button of document.querySelectorAll("[data-tab-jump]")) {
     button.addEventListener("click", () => {
@@ -484,6 +584,24 @@ function bindStaticActions() {
       });
     });
   }
+
+  const seedButton = el("seed-agents-button");
+  if (seedButton) {
+    seedButton.addEventListener("click", () => {
+      postJson("/demo/seed-agents")
+        .then(() => refreshLiveFeed())
+        .catch((error) => console.error(error));
+    });
+  }
+
+  const clearButton = el("clear-live-feed-button");
+  if (clearButton) {
+    clearButton.addEventListener("click", () => {
+      postJson("/demo/live-feed/clear")
+        .then(() => refreshLiveFeed())
+        .catch((error) => console.error(error));
+    });
+  }
 }
 
 function renderAll() {
@@ -499,7 +617,15 @@ function renderAll() {
 }
 
 bindStaticActions();
+pollHealth();
+setInterval(pollHealth, 15_000);
+setInterval(() => {
+  refreshLiveFeed().catch((error) => console.error(error));
+}, 2_000);
+
 loadScenarios().catch((error) => {
   console.error(error);
   el("decision-summary").innerHTML = `<div class="empty-state">Failed to load demo data.</div>`;
 });
+
+refreshLiveFeed().catch((error) => console.error(error));

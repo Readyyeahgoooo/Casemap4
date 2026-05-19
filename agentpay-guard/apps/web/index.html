@@ -19,6 +19,7 @@
 
         <nav class="nav-section" aria-label="Workspace">
           <p>Workspace</p>
+          <a class="nav-item" href="#live-agent-feed">Live Agents</a>
           <a class="nav-item active" href="#case-overview">Dashboard</a>
           <a class="nav-item" href="#authority-chain">Authority Chain</a>
           <a class="nav-item" href="#rule-checklist">Rule Checklist</a>
@@ -49,10 +50,25 @@
             <p class="lede">Control, approve, and audit AI-agent payments with mandate evidence and tamper-evident logs.</p>
           </div>
           <div class="topbar-meta">
-            <span class="version-pill">v0.1.0 Mock Demo</span>
-            <span class="health-pill">API healthy</span>
+            <span class="version-pill">v0.1.3 Live Agent Demo</span>
+            <span class="health-pill" id="health-pill">API healthy</span>
           </div>
         </header>
+
+        <section class="live-feed-panel" id="live-agent-feed" aria-labelledby="live-feed-title">
+          <div class="section-heading inline">
+            <div>
+              <h2 id="live-feed-title">Live Agent Feed</h2>
+              <p>Autonomous demo agents submit real payment requests; Guard returns approve, block, or review.</p>
+            </div>
+            <div class="live-feed-actions">
+              <button class="secondary-button" type="button" id="seed-agents-button">Seed demo agents</button>
+              <button class="secondary-button" type="button" id="clear-live-feed-button">Clear feed</button>
+            </div>
+          </div>
+          <div id="live-feed-stats" class="live-feed-stats"></div>
+          <div id="live-feed-list" class="live-feed-list"></div>
+        </section>
 
         <section class="quick-actions" aria-labelledby="quick-actions-title">
           <div class="section-heading">
