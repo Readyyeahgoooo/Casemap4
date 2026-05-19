@@ -2,7 +2,9 @@
 
 AgentPay Guard is open-source mandate, policy, receipt, and audit infrastructure for AI-agent stablecoin payments.
 
-It sits before payment rails like x402, AP2, and stablecoin checkout flows: before an AI agent pays, AgentPay Guard checks whether the payment is authorised; after it pays or is blocked, it generates the evidence pack. v0.1/v0.2 uses mock payments only, so the evidence flow can be tested without wallets, private keys, gas, or real stablecoin transfers.
+It sits before payment rails like x402 and stablecoin checkout flows: before an AI agent pays, AgentPay Guard verifies that the request matches a signed mandate, spending policy, merchant scope, and token/chain limits, then produces a tamper-evident evidence pack.
+
+v0.1.2 is a **local mock demo only** — not production payment infrastructure, not automated regulatory compliance, and not Bitcoin/Lightning support. Demo approver signing keys are stored in-memory for Ed25519 mandate signatures and must not be treated as enterprise key custody.
 
 ## Quick Start
 
@@ -52,6 +54,42 @@ npm run api
 - `GET /receipts/:id`
 - `GET /evidence-packs/:payment_request_id`
 - `GET /audit-events` (optional filters: `subject_id`, `case_id`, `type`)
+- `GET /audit-events/verify` (optional `subject_id` for scoped chain verification)
+
+## v0.1.2 demo hardening
+
+- Ed25519 mandate signatures with `mandate_hash` stored on decisions and evidence packs.
+- Demo signing private keys stay internal and are redacted from public user records, evidence packs, and audit payload hashing.
+- Replay protection via `merchant_request_id` or `nonce` uniqueness per agent.
+- Fail-closed `decision_ttl` validation (`PT10M`, `PT1H`, `PT30S`, max `PT24H`).
+- Optional `AGENTPAY_API_KEY` for all-role local protection, or scoped `AGENTPAY_API_KEYS` for route-level role checks.
+- Demo `ScreeningProvider` interface with merchant/wallet screening results captured on decisions and receipts.
+- Composite demo screening (`ofac_demo_v0.2` + `demo_screening_v0.2`) backed by `data/ofac-demo.json`.
+- Optional SQLite persistence (`AGENTPAY_STORE=sqlite`, `AGENTPAY_DB_PATH=./data/agentpay.db`) with append-only audit triggers.
+- File-based audit checkpoints (`AGENTPAY_CHECKPOINT_INTERVAL`, `AGENTPAY_CHECKPOINT_FILE`) surfaced on evidence packs.
+- In-memory per-key API rate limiting (`AGENTPAY_RATE_LIMIT_PER_MIN`, default 120/min).
+- Default bind host `127.0.0.1`, localhost-only CORS, 1MB request body cap.
+- IDN-safe merchant domain normalization and EVM wallet validation (Base/Ethereum-style chains only).
+
+```bash
+export AGENTPAY_API_KEY="rotate-me-before-any-non-local-demo"
+npm run api
+```
+
+Scoped API keys use `key=role|role;key2=role`:
+
+```bash
+export AGENTPAY_API_KEYS="admin-dev=admin|developer;auditor-demo=read_only_auditor"
+npm run api
+```
+
+Persist audit and entity state locally:
+
+```bash
+export AGENTPAY_STORE=sqlite
+export AGENTPAY_DB_PATH=./data/agentpay.db
+npm run api
+```
 
 ## CLI Demo
 
@@ -69,7 +107,7 @@ The demo flow is:
 2. Submit a payment request with an idempotency key.
 3. Run deterministic policy checks.
 4. Execute a mock payment only if the decision is approved.
-5. Generate a receipt.
+5. Generate a receipt with the screening status recorded.
 6. Export evidence with principal → approver user → agent → mandate → decision → receipt (`approver_user`, `authority_chain_summary`, `scoped_audit_events` for reviewers, `audit_events` for full chain verification).
 
 ## Visual Demo
@@ -139,13 +177,14 @@ The v0.1 design explicitly considers:
 - Chain reorg or failed transaction.
 - Admin account compromise.
 
-The current release partially mitigates a subset of these risks with deterministic policies, mandate status checks, idempotency keys, payment request hashes, mock-only execution with single-execute enforcement and decision TTL checks, denylist/allowlist checks, and hash-chained audit events.
+The current release partially mitigates a subset of these risks with deterministic policies, Ed25519-signed mandates, mandate-agent-principal binding, redacted demo signing-key handling, idempotency keys, merchant/nonce replay indexes, payment request hashes, mandate hashes on decisions, mock-only execution with single-execute enforcement, fail-closed decision TTL checks, route-level scoped API keys when configured, demo screening hooks, denylist/allowlist checks, and hash-chained audit events.
 
-v0.1 does not fully solve daily-limit race conditions under concurrent execution, webhook spoofing, prompt-injection isolation, production RBAC/auth, WORM storage, chain finality handling, or enterprise key custody. Enterprise-grade key custody, webhook signing, access logging, WORM storage, and chain finality handling are later-version work.
+v0.1/v0.2 does not fully solve daily-limit race conditions under concurrent execution, webhook spoofing, prompt-injection isolation, production login/SSO, workspace isolation, WORM storage, chain finality handling, or enterprise key custody. Enterprise-grade key custody, webhook signing, access logging, WORM storage, and chain finality handling are later-version work.
 
 ## Data Handling
 
-- Do not store private keys.
+- Do not store production agent wallet private keys.
+- Demo approver signing private keys are generated in-memory for `finance_approver` users only; public API/evidence responses expose only the public key. Rotate or replace before any non-local deployment.
 - Do not put secrets in audit logs.
 - Do not send customer data to LLMs by default.
 - Redact sensitive metadata where possible.
@@ -155,7 +194,7 @@ v0.1 does not fully solve daily-limit race conditions under concurrent execution
 
 ## Roles
 
-The v0.1 model includes the minimum roles even though authentication is local/demo-only:
+The v0.1 model includes the minimum roles. When `AGENTPAY_API_KEYS` is configured, protected routes enforce these roles at the API-key level:
 
 - `admin`
 - `developer`
@@ -195,6 +234,8 @@ Included:
 - Hash-chained audit events.
 - Evidence-pack JSON export with approver user and authority chain summary.
 - Mandate-agent-principal binding on create and payment check.
+- Demo screening provider interface with clear/flagged merchant and wallet results.
+- Scoped API-key route checks for local pilots.
 - Browser-based Evidence Pack viewer for approved, blocked, and escalation demos.
 - GitHub-ready docs for demo flow, evidence fields, roadmap, and threat model.
 - CLI verification.
@@ -206,6 +247,6 @@ Deferred:
 - Real stablecoin transfers.
 - x402 integration.
 - DID/VC/EIP-712 mandate signatures.
-- OFAC/vendor AML integrations.
+- OFAC/vendor AML integrations beyond the demo screening provider.
 - Hosted API.
 - SSO, SIEM, WORM storage, and enterprise retention controls.

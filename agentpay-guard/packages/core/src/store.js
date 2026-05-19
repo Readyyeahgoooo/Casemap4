@@ -20,6 +20,8 @@ export function createMemoryStore() {
     receipts: new Map(),
     cases: new Map(),
     auditEvents: [],
-    idempotency: new Map()
+    idempotency: new Map(),
+    merchantRequestIndex: new Map(),
+    nonceIndex: new Map()
   };
 }

@@ -1,3 +1,5 @@
+import { domainToASCII } from "node:url";
+
 export const ROLES = Object.freeze([
   "admin",
   "developer",
@@ -54,7 +56,22 @@ export function ensurePositiveAmount(amount, field = "amount_usd") {
 }
 
 export function normalizeDomain(value) {
-  return String(value).trim().toLowerCase();
+  const raw = String(value).trim().toLowerCase();
+  const withoutProtocol = raw.replace(/^https?:\/\//, "").split("/")[0].split(":")[0];
+  const ascii = domainToASCII(withoutProtocol);
+  if (!ascii) {
+    throw new ValidationError("Invalid merchant domain", { value });
+  }
+  return ascii;
+}
+
+export function normalizeWallet(value) {
+  if (value === undefined || value === null || value === "") return null;
+  const address = String(value).trim();
+  if (!/^0x[a-fA-F0-9]{40}$/.test(address)) {
+    throw new ValidationError("Invalid EVM wallet address", { value });
+  }
+  return address.toLowerCase();
 }
 
 export function createId(prefix, counter) {

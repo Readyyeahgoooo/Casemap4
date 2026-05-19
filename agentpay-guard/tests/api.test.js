@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { AgentPayGuard } from "../packages/core/src/index.js";
 import { createAgentPayApi } from "../apps/api/src/server.js";
+import { resetRateLimitForTests } from "../apps/api/src/security.js";
 
 function listen(server) {
   return new Promise((resolve) => {
@@ -25,7 +26,8 @@ test("API /health returns ok", async () => {
   try {
     const result = await request(baseUrl, "/health");
     assert.equal(result.status, 200);
-    assert.deepEqual(result.body, { status: "ok" });
+    assert.equal(result.body.status, "ok");
+    assert.equal(result.body.demo_mode, true);
   } finally {
     await close();
   }
@@ -74,7 +76,9 @@ test("API /audit-events filters by subject_id", async () => {
     token: "USDC",
     chain: "base",
     purpose: "buy_api_credits",
-    idempotency_key: "api_idem_1"
+    idempotency_key: "api_idem_1",
+    merchant_request_id: "api_vendor_1",
+    nonce: "api_nonce_1"
   });
   const paymentRequestId = checked.payment_request.id;
 
@@ -137,7 +141,9 @@ test("API /audit-events filters by case_id and type", async () => {
     token: "USDC",
     chain: "base",
     purpose: "buy_api_credits",
-    idempotency_key: "api_filter_case"
+    idempotency_key: "api_filter_case",
+    merchant_request_id: "api_vendor_blocked",
+    nonce: "api_nonce_blocked"
   });
 
   const server = createAgentPayApi(guard);
@@ -210,5 +216,125 @@ test("API demo run returns evidence pack for blocked and human approval scenario
     assert.equal(pending.body.evidence_pack.case.status, "pending_review");
   } finally {
     await close();
+  }
+});
+
+test("API /audit-events/verify returns scoped chain verification", async () => {
+  const guard = new AgentPayGuard();
+  const principal = guard.createPrincipal({
+    type: "company",
+    legal_name: "Verify Chain Co",
+    jurisdiction: "HK"
+  });
+  const user = guard.createUser({
+    principal_id: principal.id,
+    email: "verify@example.com",
+    role: "finance_approver"
+  });
+  const agent = guard.createAgent({
+    principal_id: principal.id,
+    name: "VerifyBot",
+    type: "autonomous_api_buyer",
+    wallet_address: "0xabc0000000000000000000000000000000000003",
+    chain: "base"
+  });
+  const mandate = guard.createMandate({
+    agent_id: agent.id,
+    principal_id: principal.id,
+    allowed_actions: ["buy_api_credits"],
+    allowed_merchants: ["api.vendor.com"],
+    allowed_tokens: ["USDC"],
+    allowed_chains: ["base"],
+    limits: {
+      auto_approve_limit_usd: 20,
+      human_approval_limit_usd: 100,
+      hard_block_limit_usd: 500
+    },
+    expires_at: "2027-06-30T23:59:59.000Z",
+    signed_by: user.email
+  });
+  const checked = guard.checkPayment({
+    agent_id: agent.id,
+    mandate_id: mandate.id,
+    merchant: "api.vendor.com",
+    amount_usd: "5.00",
+    token: "USDC",
+    chain: "base",
+    purpose: "buy_api_credits",
+    idempotency_key: "verify_chain_idem",
+    merchant_request_id: "verify_chain_vendor",
+    nonce: "verify_chain_nonce"
+  });
+
+  const server = createAgentPayApi(guard);
+  const { baseUrl, close } = await listen(server);
+  try {
+    const scoped = await request(
+      baseUrl,
+      `/audit-events/verify?subject_id=${checked.payment_request.id}`
+    );
+    const full = await request(baseUrl, "/audit-events/verify");
+
+    assert.equal(scoped.status, 200);
+    assert.equal(scoped.body.subject_id, checked.payment_request.id);
+    assert.equal(scoped.body.verification.valid, true);
+    assert.ok(scoped.body.event_count >= 1);
+
+    assert.equal(full.status, 200);
+    assert.equal(full.body.verification.valid, true);
+    assert.ok(full.body.event_count >= scoped.body.event_count);
+  } finally {
+    await close();
+  }
+});
+
+test("API rate limit returns 429 when exceeded", async () => {
+  const previousLimit = process.env.AGENTPAY_RATE_LIMIT_PER_MIN;
+  process.env.AGENTPAY_RATE_LIMIT_PER_MIN = "2";
+  resetRateLimitForTests();
+
+  const server = createAgentPayApi(new AgentPayGuard());
+  const { baseUrl, close } = await listen(server);
+  try {
+    const first = await request(baseUrl, "/principals", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        type: "company",
+        legal_name: "Rate Limit Co",
+        jurisdiction: "HK"
+      })
+    });
+    const second = await request(baseUrl, "/principals", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        type: "company",
+        legal_name: "Rate Limit Co 2",
+        jurisdiction: "HK"
+      })
+    });
+    const third = await request(baseUrl, "/principals", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        type: "company",
+        legal_name: "Rate Limit Co 3",
+        jurisdiction: "HK"
+      })
+    });
+
+    assert.equal(first.status, 201);
+    assert.equal(second.status, 201);
+    assert.equal(third.status, 429);
+    assert.equal(third.body.error, "TooManyRequestsError");
+  } finally {
+    await close();
+    resetRateLimitForTests();
+    if (previousLimit === undefined) {
+      delete process.env.AGENTPAY_RATE_LIMIT_PER_MIN;
+    } else {
+      process.env.AGENTPAY_RATE_LIMIT_PER_MIN = previousLimit;
+    }
   }
 });

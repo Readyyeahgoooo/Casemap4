@@ -1,6 +1,6 @@
 {
   "name": "agentpay-guard-workspace",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "description": "AgentPay Guard v0.1 core engine for mandate, policy, receipt, and audit controls around AI-agent payments.",
   "type": "module",

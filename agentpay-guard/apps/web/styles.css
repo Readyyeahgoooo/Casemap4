@@ -343,6 +343,10 @@ h3 {
   background: var(--amber);
 }
 
+.verify-chain-button {
+  margin-top: 0.75rem;
+}
+
 .secondary-button {
   min-height: 36px;
   padding: 0 12px;

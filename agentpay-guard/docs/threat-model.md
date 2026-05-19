@@ -13,23 +13,26 @@ AgentPay Guard v0.1/v0.2 is a local-first mock payment demo and core library. It
 - Disallowed merchant, purpose, token, or chain through allowlist checks.
 - Double mock execution through single-execute enforcement.
 - Stale decisions through execute-time TTL checks.
+- Demo signing private key exposure through public-output and audit-hash redaction.
+- Route misuse through scoped API-key role checks when `AGENTPAY_API_KEYS` is configured.
+- Basic screening extensibility through the demo `ScreeningProvider` interface.
 - Audit tampering after the fact through hash-chain verification.
 
 ## Not Solved In v0.1/v0.2
 
-- Real authentication, SSO, MFA, or workspace isolation.
-- RBAC enforcement on API routes.
+- Real login, SSO, MFA, or workspace isolation.
+- Enterprise RBAC with user sessions, policy administration, and approval delegation.
 - Concurrent daily-limit race conditions.
 - Real wallet ownership proof, DID/VC, or EIP-712 mandate signatures.
 - Real x402 or stablecoin payment execution.
-- Sanctions, AML, KYB, or KYC vendor screening.
+- Real sanctions, AML, KYB, or KYC vendor screening beyond demo hooks.
 - WORM storage, SIEM export, SOC 2 controls, or enterprise retention.
 - Legal or regulatory compliance conclusions.
 
 ## Next Hardening Milestones
 
 1. Persistent database with transactional execution and append-only audit writes.
-2. Login, workspace separation, API keys, and route-level RBAC.
+2. Login, workspace separation, API keys, and enterprise RBAC.
 3. Human approval workflow with approval expiry and audit events.
-4. Screening provider interface for demo/manual screening first, vendor integrations later.
+4. OFAC/OpenSanctions-style ingestion and vendor screening adapters.
 5. x402 sandbox adapter that calls AgentPay Guard before payment execution.

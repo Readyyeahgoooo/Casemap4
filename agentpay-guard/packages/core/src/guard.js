@@ -2,24 +2,35 @@ import {
   ConflictError,
   ensureRole,
   normalizeDomain,
+  normalizeWallet,
   requireFields,
   ValidationError
 } from "../../shared/src/schemas.js";
 import { paymentRequestHash } from "../../shared/src/hash.js";
+import { normalizeDecisionTtl, parseIsoDurationMs } from "../../shared/src/duration.js";
+import {
+  generateSigningKeyPair,
+  mandateHash,
+  MANDATE_SIGNATURE_TYPE,
+  signMandateHash,
+  verifyMandateSignature
+} from "../../shared/src/mandate-sign.js";
 import { createAuditEvent, verifyAuditChain } from "./audit.js";
 import { evaluatePaymentPolicy } from "./policy.js";
-import { createMemoryStore } from "./store.js";
+import { publicUser, redactSensitive } from "./redact.js";
+import { createCompositeScreeningProvider } from "./screening.js";
+import { maybeAppendAuditCheckpoint, readLatestAuditCheckpoint } from "./checkpoint.js";
+import { createStore } from "./store-factory.js";
 
 const DEFAULT_ROLES = ["admin", "developer", "compliance_reviewer", "finance_approver", "read_only_auditor"];
+const EVM_CHAINS = new Set(["base", "ethereum", "mainnet", "sepolia", "polygon"]);
 
-function parseIsoDurationMs(value) {
-  if (!value) return null;
-  const match = /^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/.exec(value);
-  if (!match) return null;
-  const hours = Number(match[1] ?? 0);
-  const minutes = Number(match[2] ?? 0);
-  const seconds = Number(match[3] ?? 0);
-  return ((hours * 60 * 60) + (minutes * 60) + seconds) * 1000;
+function merchantRequestIndexKey(agentId, merchant, merchantRequestId) {
+  return `${agentId}|${merchant}|${merchantRequestId}`;
+}
+
+function nonceIndexKey(agentId, nonce) {
+  return `${agentId}|${nonce}`;
 }
 
 function scopeAuditEventsForEvidencePack(events, relatedIds) {
@@ -30,9 +41,14 @@ function scopeAuditEventsForEvidencePack(events, relatedIds) {
 }
 
 export class AgentPayGuard {
-  constructor({ store = createMemoryStore(), now = () => new Date() } = {}) {
+  constructor({
+    store = createStore(),
+    now = () => new Date(),
+    screeningProvider = createCompositeScreeningProvider()
+  } = {}) {
     this.store = store;
     this.now = now;
+    this.screeningProvider = screeningProvider;
   }
 
   appendAuditEvent(input) {
@@ -42,9 +58,12 @@ export class AgentPayGuard {
       id,
       previous_event_hash: previous,
       created_at: this.now().toISOString(),
-      ...input
+      ...input,
+      input: redactSensitive(input.input ?? {}),
+      output: redactSensitive(input.output ?? {})
     });
     this.store.auditEvents.push(event);
+    maybeAppendAuditCheckpoint(this.store.auditEvents, { now: this.now });
     return event;
   }
 
@@ -68,29 +87,45 @@ export class AgentPayGuard {
     requireFields(input, ["principal_id", "email", "role"], "user");
     ensureRole(input.role);
     this.requirePrincipal(input.principal_id);
+
+    let signing_public_key = input.signing_public_key ?? null;
+    let signing_private_key = input.signing_private_key ?? null;
+    if (!signing_public_key && input.role === "finance_approver") {
+      const keys = generateSigningKeyPair();
+      signing_public_key = keys.publicKey;
+      signing_private_key = keys.privateKey;
+    }
+
     const user = {
       id: input.id ?? this.store.nextId("usr"),
       principal_id: input.principal_id,
       email: input.email,
       role: input.role,
       status: input.status ?? "active",
+      signing_public_key,
+      signing_private_key,
       created_at: this.now().toISOString()
     };
     this.store.users.set(user.id, user);
-    this.appendAuditEvent({ type: "USER_CREATED", actor, subject_id: user.id, input, output: user });
-    return user;
+    this.appendAuditEvent({ type: "USER_CREATED", actor, subject_id: user.id, input, output: publicUser(user) });
+    return publicUser(user);
   }
 
   createAgent(input, actor = "system") {
     requireFields(input, ["principal_id", "name", "type", "wallet_address", "chain"], "agent");
     this.requirePrincipal(input.principal_id);
+    const chain = String(input.chain).toLowerCase();
+    const wallet_address = EVM_CHAINS.has(chain)
+      ? normalizeWallet(input.wallet_address)
+      : String(input.wallet_address).trim();
+
     const agent = {
       id: input.id ?? this.store.nextId("agt"),
       principal_id: input.principal_id,
       name: input.name,
       type: input.type,
-      wallet_address: input.wallet_address,
-      chain: input.chain,
+      wallet_address,
+      chain,
       status: input.status ?? "active",
       created_at: this.now().toISOString()
     };
@@ -111,8 +146,16 @@ export class AgentPayGuard {
       });
     }
     const signer = this.requireUserByEmailForPrincipal(input.signed_by, principal.id);
-    const mandate = {
-      id: input.id ?? this.store.nextId("mnd"),
+    if (!signer.signing_private_key || !signer.signing_public_key) {
+      throw new ValidationError("signer must have a demo signing key to create mandates", {
+        signer_user_id: signer.id,
+        email: signer.email
+      });
+    }
+
+    const mandateId = input.id ?? this.store.nextId("mnd");
+    const mandateCore = {
+      id: mandateId,
       agent_id: input.agent_id,
       principal_id: input.principal_id,
       signer_user_id: signer.id,
@@ -121,7 +164,7 @@ export class AgentPayGuard {
       denied_merchants: (input.denied_merchants ?? []).map(normalizeDomain),
       allowed_tokens: input.allowed_tokens,
       allowed_chains: input.allowed_chains,
-      denied_wallets: input.denied_wallets ?? [],
+      denied_wallets: (input.denied_wallets ?? []).map((wallet) => normalizeWallet(wallet)),
       limits: {
         auto_approve_limit_usd: Number(input.limits.auto_approve_limit_usd),
         human_approval_limit_usd: Number(input.limits.human_approval_limit_usd),
@@ -130,10 +173,33 @@ export class AgentPayGuard {
       },
       status: input.status ?? "active",
       signed_by: input.signed_by,
-      signature: input.signature ?? "placeholder-signature-v0.1",
       expires_at: input.expires_at,
       created_at: this.now().toISOString(),
       revoked_at: null
+    };
+
+    const hash = mandateHash(mandateCore);
+    const signed_at = this.now().toISOString();
+    const signature = signMandateHash(hash, signer.signing_private_key);
+    const verification = verifyMandateSignature({
+      ...mandateCore,
+      mandate_hash: hash,
+      signature_type: MANDATE_SIGNATURE_TYPE,
+      signature,
+      signed_at,
+      signer_public_key: signer.signing_public_key
+    });
+    if (!verification.valid) {
+      throw new ValidationError("mandate signature verification failed at creation", verification);
+    }
+
+    const mandate = {
+      ...mandateCore,
+      mandate_hash: hash,
+      signature_type: MANDATE_SIGNATURE_TYPE,
+      signature,
+      signed_at,
+      signer_public_key: signer.signing_public_key
     };
     this.store.mandates.set(mandate.id, mandate);
     this.appendAuditEvent({ type: "MANDATE_CREATED", actor, subject_id: mandate.id, input, output: mandate });
@@ -160,7 +226,27 @@ export class AgentPayGuard {
     const mandate = input.mandate_id ? this.requireMandate(input.mandate_id) : this.findActiveMandateForAgent(agent.id);
     this.assertMandateBelongsToAgent(mandate, agent, principal);
 
-    const hashInput = { ...input, mandate_id: mandate.id };
+    if (!input.merchant_request_id && !input.nonce) {
+      throw new ValidationError("merchant_request_id or nonce is required for replay protection", {
+        agent_id: agent.id
+      });
+    }
+
+    const decisionTtl = normalizeDecisionTtl(input.decision_ttl);
+    parseIsoDurationMs(decisionTtl);
+
+    const merchant = normalizeDomain(input.merchant);
+    const counterparty_wallet_address = input.counterparty_wallet_address
+      ? normalizeWallet(input.counterparty_wallet_address)
+      : null;
+
+    const hashInput = {
+      ...input,
+      mandate_id: mandate.id,
+      decision_ttl: decisionTtl,
+      merchant,
+      counterparty_wallet_address
+    };
     const computedRequestHash = paymentRequestHash(hashInput);
     if (input.payment_request_hash && input.payment_request_hash !== computedRequestHash) {
       throw new ValidationError("payment_request_hash does not match request payload", {
@@ -184,29 +270,46 @@ export class AgentPayGuard {
       };
     }
 
+    this.assertReplayProtection({
+      agentId: agent.id,
+      merchant,
+      merchantRequestId: input.merchant_request_id ?? null,
+      nonce: input.nonce ?? null
+    });
+
+    const mandateHashAtDecision = mandateHash(mandate);
     const paymentRequest = {
       id: input.id ?? this.store.nextId("payreq"),
       agent_id: agent.id,
       mandate_id: mandate.id,
-      merchant: normalizeDomain(input.merchant),
+      merchant,
       amount_usd: String(input.amount_usd),
       token: input.token,
       chain: input.chain,
       purpose: input.purpose,
-      counterparty_wallet_address: input.counterparty_wallet_address ?? null,
+      counterparty_wallet_address,
       merchant_request_id: input.merchant_request_id ?? null,
       nonce: input.nonce ?? null,
       idempotency_key: input.idempotency_key,
       payment_request_hash: requestHash,
-      decision_ttl: input.decision_ttl ?? "PT10M",
+      decision_ttl: decisionTtl,
       status: "checked",
       created_at: this.now().toISOString()
     };
     this.store.paymentRequests.set(paymentRequest.id, paymentRequest);
+    this.indexReplayIdentifiers(paymentRequest);
+
+    const screeningResult = this.screeningProvider.screenPaymentRequest({
+      principal,
+      agent,
+      mandate,
+      paymentRequest
+    });
 
     const policyResult = evaluatePaymentPolicy({
       mandate,
       paymentRequest,
+      screeningResult,
       now: this.now(),
       approvedDailyTotalUsd: this.approvedDailyTotalUsd(agent.id)
     });
@@ -222,6 +325,11 @@ export class AgentPayGuard {
       rules_checked: policyResult.rules_checked,
       rules_triggered: policyResult.rules_triggered,
       policy_version: policyResult.policy_version,
+      mandate_hash: mandateHashAtDecision,
+      payment_request_hash: requestHash,
+      screening_status: screeningResult.status,
+      screening_provider: screeningResult.provider,
+      screening_result: screeningResult,
       created_at: this.now().toISOString()
     };
     this.store.policyDecisions.set(decision.id, decision);
@@ -241,7 +349,7 @@ export class AgentPayGuard {
       actor,
       subject_id: paymentRequest.id,
       case_id: reviewCase?.id ?? null,
-      input: { payment_request: paymentRequest, mandate },
+      input: { payment_request: paymentRequest, mandate, screening_result: screeningResult },
       output: decision,
       policy_version: decision.policy_version
     });
@@ -267,15 +375,13 @@ export class AgentPayGuard {
     }
 
     const ttlMs = parseIsoDurationMs(paymentRequest.decision_ttl);
-    if (ttlMs !== null) {
-      const expiresAt = new Date(paymentRequest.created_at).getTime() + ttlMs;
-      if (this.now().getTime() > expiresAt) {
-        throw new ConflictError("payment decision ttl expired", {
-          payment_request_id: paymentRequestId,
-          created_at: paymentRequest.created_at,
-          decision_ttl: paymentRequest.decision_ttl
-        });
-      }
+    const expiresAt = new Date(paymentRequest.created_at).getTime() + ttlMs;
+    if (this.now().getTime() > expiresAt) {
+      throw new ConflictError("payment decision ttl expired", {
+        payment_request_id: paymentRequestId,
+        created_at: paymentRequest.created_at,
+        decision_ttl: paymentRequest.decision_ttl
+      });
     }
 
     const decision = [...this.store.policyDecisions.values()].find(
@@ -354,12 +460,15 @@ export class AgentPayGuard {
       ].filter(Boolean)
     );
     const scoped_audit_events = scopeAuditEventsForEvidencePack(this.store.auditEvents, relatedIds);
+    const current_mandate_hash = mandateHash(mandate);
+    const mandate_signature = verifyMandateSignature(mandate);
+    const latest_checkpoint = readLatestAuditCheckpoint();
 
     return {
-      evidence_pack_version: "agentpay-evidence-v0.1",
+      evidence_pack_version: "agentpay-evidence-v0.1.2",
       exported_at: this.now().toISOString(),
       principal,
-      approver_user: approverUser,
+      approver_user: publicUser(approverUser),
       agent,
       mandate,
       payment_request: paymentRequest,
@@ -368,6 +477,18 @@ export class AgentPayGuard {
       receipt,
       case: reviewCase,
       authority_chain_summary,
+      mandate_integrity: {
+        mandate_hash_at_decision: decision?.mandate_hash ?? null,
+        current_mandate_hash,
+        mandate_hash_matches: decision?.mandate_hash === current_mandate_hash,
+        mandate_signature_valid: mandate_signature.valid,
+        mandate_signature_reason: mandate_signature.reason ?? null
+      },
+      audit_checkpoint: latest_checkpoint,
+      store: {
+        kind: this.store.kind ?? "memory",
+        path: this.store.path ?? null
+      },
       audit_events: this.store.auditEvents,
       scoped_audit_events,
       audit_verification: verifyAuditChain(this.store.auditEvents)
@@ -424,7 +545,7 @@ export class AgentPayGuard {
       chain: paymentRequest.chain,
       tx_hash: payment.tx_hash,
       policy_decision: decision.status,
-      screening_status: "v0.1_allowlist_denylist_only",
+      screening_status: decision.screening_status,
       created_at: this.now().toISOString()
     };
   }
@@ -504,5 +625,42 @@ export class AgentPayGuard {
           item.status === "active"
       ) ?? null
     );
+  }
+
+  assertReplayProtection({ agentId, merchant, merchantRequestId, nonce }) {
+    if (merchantRequestId) {
+      const key = merchantRequestIndexKey(agentId, merchant, merchantRequestId);
+      if (this.store.merchantRequestIndex.has(key)) {
+        throw new ConflictError("merchant_request_id was already used for this agent and merchant", {
+          agent_id: agentId,
+          merchant,
+          merchant_request_id: merchantRequestId,
+          existing_payment_request_id: this.store.merchantRequestIndex.get(key)
+        });
+      }
+    }
+
+    if (nonce) {
+      const key = nonceIndexKey(agentId, nonce);
+      if (this.store.nonceIndex.has(key)) {
+        throw new ConflictError("nonce was already used for this agent", {
+          agent_id: agentId,
+          nonce,
+          existing_payment_request_id: this.store.nonceIndex.get(key)
+        });
+      }
+    }
+  }
+
+  indexReplayIdentifiers(paymentRequest) {
+    if (paymentRequest.merchant_request_id) {
+      this.store.merchantRequestIndex.set(
+        merchantRequestIndexKey(paymentRequest.agent_id, paymentRequest.merchant, paymentRequest.merchant_request_id),
+        paymentRequest.id
+      );
+    }
+    if (paymentRequest.nonce) {
+      this.store.nonceIndex.set(nonceIndexKey(paymentRequest.agent_id, paymentRequest.nonce), paymentRequest.id);
+    }
   }
 }

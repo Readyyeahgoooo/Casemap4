@@ -47,10 +47,13 @@ const ruleLabels = {
   block_disallowed_token: "Token allowed",
   block_disallowed_chain: "Chain allowed",
   block_denylisted_wallet: "Wallet not denylisted",
+  block_screening_result: "Screening clear",
   block_daily_limit_exceeded: "Daily limit not exceeded",
   block_hard_limit_exceeded: "Hard block limit not exceeded",
   apply_approval_thresholds: "Approval threshold applied",
-  audit_chain_valid: "Audit chain valid"
+  audit_chain_valid: "Audit chain valid",
+  mandate_signature_valid: "Mandate signature valid",
+  mandate_hash_matches: "Mandate hash matches decision-time snapshot"
 };
 
 const chainLabels = {
@@ -349,7 +352,17 @@ function buildRules(pack) {
     passed: pack.audit_verification.valid,
     reason: pack.audit_verification.valid ? "Passed" : "Audit verification failed"
   };
-  return [...authorityRules, ...policyRules, auditRule];
+  const signatureRule = {
+    id: "mandate_signature_valid",
+    passed: pack.mandate_integrity?.mandate_signature_valid === true,
+    reason: pack.mandate_integrity?.mandate_signature_valid ? "Ed25519 mandate signature valid" : "Mandate signature invalid"
+  };
+  const mandateHashRule = {
+    id: "mandate_hash_matches",
+    passed: pack.mandate_integrity?.mandate_hash_matches === true,
+    reason: pack.mandate_integrity?.mandate_hash_matches ? "Mandate hash unchanged since decision" : "Mandate hash drift detected"
+  };
+  return [...authorityRules, signatureRule, mandateHashRule, ...policyRules, auditRule];
 }
 
 function renderRuleChecklist(data) {
@@ -387,25 +400,35 @@ function renderTimeline(data) {
     .join("");
 }
 
-function renderAuditVerification(data) {
+function renderAuditVerification(data, verification = data.evidence_pack.audit_verification) {
   const pack = data.evidence_pack;
   const first = pack.scoped_audit_events[0];
   const last = pack.scoped_audit_events.at(-1);
+  const checkpoint = pack.audit_checkpoint;
   el("audit-verification").innerHTML = `
-    <div class="verification-card ${pack.audit_verification.valid ? "approved" : "blocked"}">
-      <span class="verification-mark">${pack.audit_verification.valid ? "✓" : "×"}</span>
+    <div class="verification-card ${verification.valid ? "approved" : "blocked"}">
+      <span class="verification-mark">${verification.valid ? "✓" : "×"}</span>
       <div>
-        <strong>${pack.audit_verification.valid ? "Valid" : "Invalid"}</strong>
+        <strong>${verification.valid ? "Valid" : "Invalid"}</strong>
         <small>Audit chain is hash-linked and tamper-evident.</small>
       </div>
     </div>
     <dl class="verification-list">
       <div><dt>Scoped Events</dt><dd>${pack.scoped_audit_events.length}</dd></div>
       <div><dt>Total Events</dt><dd>${pack.audit_events.length}</dd></div>
+      <div><dt>Store</dt><dd>${escapeHtml(pack.store?.kind ?? "memory")}</dd></div>
       <div><dt>First Hash</dt><dd>${escapeHtml(shortHash(first?.event_hash))}</dd></div>
       <div><dt>Latest Hash</dt><dd>${escapeHtml(shortHash(last?.event_hash))}</dd></div>
+      <div><dt>Checkpoint</dt><dd>${checkpoint ? escapeHtml(shortHash(checkpoint.root_hash)) : "Not anchored yet"}</dd></div>
     </dl>
   `;
+}
+
+async function verifyAuditChainFromApi() {
+  if (!state.data?.evidence_pack?.payment_request?.id) return;
+  const subjectId = state.data.evidence_pack.payment_request.id;
+  const result = await fetchJson(`/audit-events/verify?subject_id=${encodeURIComponent(subjectId)}`);
+  renderAuditVerification(state.data, result.verification);
 }
 
 function renderTabs(data) {
@@ -449,6 +472,16 @@ function bindStaticActions() {
       state.activeTab = button.dataset.tabJump;
       renderTabs(state.data);
       el("raw-evidence").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  const verifyButton = el("verify-chain-button");
+  if (verifyButton) {
+    verifyButton.addEventListener("click", () => {
+      verifyAuditChainFromApi().catch((error) => {
+        console.error(error);
+        el("audit-verification").innerHTML = `<div class="empty-state">Audit verification request failed.</div>`;
+      });
     });
   }
 }

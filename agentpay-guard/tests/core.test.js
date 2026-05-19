@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test from "node:test";
-import { AgentPayGuard } from "../packages/core/src/index.js";
+import { AgentPayGuard, createDemoScreeningProvider } from "../packages/core/src/index.js";
+import { createStore } from "../packages/core/src/store-factory.js";
 
 function setup() {
   const guard = new AgentPayGuard({ now: () => new Date("2026-05-17T04:30:00.000Z") });
@@ -43,15 +47,16 @@ function setup() {
 }
 
 function request(overrides = {}) {
+  const idempotency_key = overrides.idempotency_key ?? "idem_001";
   return {
     merchant: "api.vendor.com",
     amount_usd: "5.00",
     token: "USDC",
     chain: "base",
     purpose: "buy_api_credits",
-    merchant_request_id: "vendor_req_001",
-    nonce: "nonce_001",
-    idempotency_key: "idem_001",
+    merchant_request_id: overrides.merchant_request_id ?? `vendor_${idempotency_key}`,
+    nonce: overrides.nonce ?? `nonce_${idempotency_key}`,
+    idempotency_key,
     ...overrides
   };
 }
@@ -71,6 +76,7 @@ test("approves a payment within mandate and generates receipt/evidence", () => {
   assert.equal(executed.receipt.token, "USDC");
   assert.equal(executed.receipt.chain, "base");
   assert.equal(executed.receipt.purpose, "buy_api_credits");
+  assert.equal(executed.receipt.screening_status, "clear");
   assert.ok(executed.receipt.decision_id);
   assert.ok(executed.receipt.tx_hash);
 
@@ -130,8 +136,77 @@ test("blocks disallowed merchant, token, chain, denylisted merchant, and wallet"
   assert.equal(guard.checkPayment({ ...request({ purpose: "purchase_dataset", idempotency_key: "idem_purpose" }), agent_id: agent.id, mandate_id: mandate.id }).decision.reason, "purpose_not_allowed");
   assert.equal(guard.checkPayment({ ...request({ token: "ETH", idempotency_key: "idem_token" }), agent_id: agent.id, mandate_id: mandate.id }).decision.status, "blocked");
   assert.equal(guard.checkPayment({ ...request({ chain: "solana", idempotency_key: "idem_chain" }), agent_id: agent.id, mandate_id: mandate.id }).decision.status, "blocked");
-  assert.equal(guard.checkPayment({ ...request({ merchant: "blocked.vendor.com", idempotency_key: "idem_denied_merchant" }), agent_id: agent.id, mandate_id: mandate.id }).decision.reason, "merchant_denylisted");
-  assert.equal(guard.checkPayment({ ...request({ counterparty_wallet_address: "0xdead000000000000000000000000000000000000", idempotency_key: "idem_wallet" }), agent_id: agent.id, mandate_id: mandate.id }).decision.reason, "wallet_denylisted");
+  assert.equal(
+    guard.checkPayment({
+      ...request({ merchant: "blocked.vendor.com", idempotency_key: "idem_denied_merchant" }),
+      agent_id: agent.id,
+      mandate_id: mandate.id
+    }).decision.reason,
+    "screening_hit"
+  );
+  assert.equal(
+    guard.checkPayment({
+      ...request({
+        counterparty_wallet_address: "0xdead000000000000000000000000000000000000",
+        idempotency_key: "idem_wallet"
+      }),
+      agent_id: agent.id,
+      mandate_id: mandate.id
+    }).decision.reason,
+    "screening_hit"
+  );
+});
+
+test("screening provider can block an otherwise allowed payment", () => {
+  const guard = new AgentPayGuard({
+    now: () => new Date("2026-05-17T04:30:00.000Z"),
+    screeningProvider: createDemoScreeningProvider({
+      flaggedMerchants: ["api.vendor.com"]
+    })
+  });
+  const principal = guard.createPrincipal({
+    type: "company",
+    legal_name: "ABC Trading Limited",
+    jurisdiction: "HK"
+  });
+  const user = guard.createUser({
+    principal_id: principal.id,
+    email: "finance_manager@abc.example",
+    role: "finance_approver"
+  });
+  const agent = guard.createAgent({
+    principal_id: principal.id,
+    name: "ResearchBuyerBot",
+    type: "autonomous_api_buyer",
+    wallet_address: "0xabc0000000000000000000000000000000000001",
+    chain: "base"
+  });
+  const mandate = guard.createMandate({
+    agent_id: agent.id,
+    principal_id: principal.id,
+    allowed_actions: ["buy_api_credits"],
+    allowed_merchants: ["api.vendor.com"],
+    allowed_tokens: ["USDC"],
+    allowed_chains: ["base"],
+    limits: {
+      auto_approve_limit_usd: 20,
+      human_approval_limit_usd: 100,
+      hard_block_limit_usd: 500
+    },
+    expires_at: "2026-06-30T23:59:59.000Z",
+    signed_by: user.email
+  });
+  const checked = guard.checkPayment({
+    ...request({ idempotency_key: "idem_screening_hit" }),
+    agent_id: agent.id,
+    mandate_id: mandate.id
+  });
+
+  assert.equal(checked.decision.status, "blocked");
+  assert.equal(checked.decision.reason, "screening_hit");
+  assert.equal(checked.decision.screening_status, "flagged");
+  assert.equal(checked.decision.screening_provider, "demo_screening_v0.2");
+  assert.ok(checked.decision.rules_triggered.some((rule) => rule.id === "block_screening_result"));
 });
 
 test("handles idempotency and rejects conflicting reuse", () => {
@@ -500,4 +575,124 @@ test("audit chain detects tampering", () => {
   const tampered = guard.store.auditEvents.map((event) => ({ ...event }));
   tampered[1].output_hash = "sha256:tampered";
   assert.equal(guard.verifyAuditEvents(tampered).valid, false);
+});
+
+test("composite screening blocks OFAC demo merchants", () => {
+  const guard = new AgentPayGuard({ now: () => new Date("2026-05-17T04:30:00.000Z") });
+  const principal = guard.createPrincipal({
+    type: "company",
+    legal_name: "OFAC Demo Co",
+    jurisdiction: "HK"
+  });
+  const user = guard.createUser({
+    principal_id: principal.id,
+    email: "compliance@example.com",
+    role: "finance_approver"
+  });
+  const agent = guard.createAgent({
+    principal_id: principal.id,
+    name: "OfacBot",
+    type: "autonomous_api_buyer",
+    wallet_address: "0xabc0000000000000000000000000000000000009",
+    chain: "base"
+  });
+  const mandate = guard.createMandate({
+    agent_id: agent.id,
+    principal_id: principal.id,
+    allowed_actions: ["buy_api_credits"],
+    allowed_merchants: ["sanctioned-example.test"],
+    allowed_tokens: ["USDC"],
+    allowed_chains: ["base"],
+    limits: {
+      auto_approve_limit_usd: 20,
+      human_approval_limit_usd: 100,
+      hard_block_limit_usd: 500
+    },
+    expires_at: "2026-06-30T23:59:59.000Z",
+    signed_by: user.email
+  });
+
+  const checked = guard.checkPayment({
+    ...request({
+      merchant: "sanctioned-example.test",
+      idempotency_key: "idem_ofac_demo",
+      merchant_request_id: "ofac_demo_vendor",
+      nonce: "ofac_demo_nonce"
+    }),
+    agent_id: agent.id,
+    mandate_id: mandate.id
+  });
+
+  assert.equal(checked.decision.status, "blocked");
+  assert.equal(checked.decision.reason, "screening_hit");
+  assert.match(checked.decision.screening_provider, /ofac_demo_v0\.2/);
+  assert.ok(
+    checked.decision.screening_result.checks.some(
+      (check) => check.source === "ofac_demo_list" && check.status === "flagged"
+    )
+  );
+});
+
+test("sqlite store persists entities and audit events across restarts", () => {
+  const dir = mkdtempSync(join(tmpdir(), "agentpay-sqlite-"));
+  const dbPath = join(dir, "agentpay-test.db");
+
+  try {
+    const store1 = createStore({ kind: "sqlite", path: dbPath });
+    const guard1 = new AgentPayGuard({
+      store: store1,
+      now: () => new Date("2026-05-17T04:30:00.000Z")
+    });
+    const principal = guard1.createPrincipal({
+      type: "company",
+      legal_name: "SQLite Persistence Co",
+      jurisdiction: "HK"
+    });
+    const user = guard1.createUser({
+      principal_id: principal.id,
+      email: "ops@sqlite.example",
+      role: "finance_approver"
+    });
+    const agent = guard1.createAgent({
+      principal_id: principal.id,
+      name: "SqliteBot",
+      type: "autonomous_api_buyer",
+      wallet_address: "0xabc0000000000000000000000000000000000008",
+      chain: "base"
+    });
+    const mandate = guard1.createMandate({
+      agent_id: agent.id,
+      principal_id: principal.id,
+      allowed_actions: ["buy_api_credits"],
+      allowed_merchants: ["api.vendor.com"],
+      allowed_tokens: ["USDC"],
+      allowed_chains: ["base"],
+      limits: {
+        auto_approve_limit_usd: 20,
+        human_approval_limit_usd: 100,
+        hard_block_limit_usd: 500
+      },
+      expires_at: "2026-06-30T23:59:59.000Z",
+      signed_by: user.email
+    });
+    guard1.checkPayment({
+      ...request({
+        idempotency_key: "idem_sqlite_persist",
+        merchant_request_id: "sqlite_vendor_1",
+        nonce: "sqlite_nonce_1"
+      }),
+      agent_id: agent.id,
+      mandate_id: mandate.id
+    });
+
+    const store2 = createStore({ kind: "sqlite", path: dbPath });
+    const guard2 = new AgentPayGuard({ store: store2 });
+
+    assert.equal(guard2.store.kind, "sqlite");
+    assert.equal(guard2.store.principals.get(principal.id).legal_name, "SQLite Persistence Co");
+    assert.ok(guard2.store.auditEvents.length >= 1);
+    assert.equal(guard2.verifyAuditEvents().valid, true);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

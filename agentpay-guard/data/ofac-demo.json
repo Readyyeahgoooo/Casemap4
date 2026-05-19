@@ -1,0 +1,11 @@
+{
+  "source": "agentpay_ofac_demo_v0.2",
+  "note": "Illustrative demo list for local screening only. Replace with nightly OFAC SDN ingestion before any production claim.",
+  "merchants": [
+    "blocked.vendor.com",
+    "sanctioned-example.test"
+  ],
+  "wallets": [
+    "0xdead000000000000000000000000000000000000"
+  ]
+}

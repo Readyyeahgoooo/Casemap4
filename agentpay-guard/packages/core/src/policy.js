@@ -14,6 +14,7 @@ function walletMatches(list = [], value) {
 export function evaluatePaymentPolicy({
   mandate,
   paymentRequest,
+  screeningResult = null,
   now = new Date(),
   approvedDailyTotalUsd = 0
 }) {
@@ -77,6 +78,12 @@ export function evaluatePaymentPolicy({
     check("block_denylisted_wallet");
   }
 
+  if (screeningResult?.blocked) {
+    trigger("block_screening_result", "block", screeningResult.reason ?? "screening_hit");
+  } else {
+    check("block_screening_result");
+  }
+
   if (limits.daily_limit_usd && approvedDailyTotalUsd + amount > Number(limits.daily_limit_usd)) {
     trigger("block_daily_limit_exceeded", "block", "daily_limit_exceeded");
   } else {
@@ -91,6 +98,7 @@ export function evaluatePaymentPolicy({
 
   if (rules_triggered.some((rule) => rule.action === "block")) {
     const reasonPriority = [
+      "screening_hit",
       "wallet_denylisted",
       "merchant_denylisted",
       "mandate_not_active",

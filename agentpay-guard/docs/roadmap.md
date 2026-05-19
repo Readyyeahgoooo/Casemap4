@@ -34,6 +34,8 @@ Status: implemented as a dependency-free local web app served by `npm run web`.
 - API keys.
 - Role checks for agent, mandate, approval, case review, evidence export, and policy changes.
 
+Status: route-level scoped API keys are implemented for the local API. Real login, workspace isolation, user sessions, and enterprise RBAC remain deferred.
+
 ## Milestone 5: x402 Sandbox
 
 - Mock x402 endpoint.
@@ -47,6 +49,8 @@ Status: implemented as a dependency-free local web app served by `npm run web`.
 - `screenPrincipal()`.
 - `screenUser()`.
 - Demo provider first, vendor adapters later.
+
+Status: a demo payment-request screening provider is implemented for merchant and wallet clear/flagged results. Real sanctions-list ingestion and vendor adapters remain deferred.
 
 ## Milestone 7: Corporate Pilot Pack
 

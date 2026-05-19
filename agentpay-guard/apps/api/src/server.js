@@ -4,6 +4,18 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { AgentPayGuard } from "../../../packages/core/src/index.js";
 import { listDemoScenarios, runDemoScenario } from "./demo.js";
+import { verifyAuditChain } from "../../../packages/core/src/audit.js";
+import {
+  applyCors,
+  assertApiKey,
+  assertRateLimit,
+  getConfiguredApiKey,
+  getConfiguredApiKeyRegistry,
+  handlePreflight,
+  isPublicApiPath,
+  requiredRolesForRoute
+} from "./security.js";
+import { createStore } from "../../../packages/core/src/store-factory.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(__dirname, "../../web");
@@ -23,6 +35,16 @@ function parsePort(argv = process.argv, env = process.env) {
   return Number(env.PORT ?? 8787);
 }
 
+function parseHost(argv = process.argv, env = process.env) {
+  const hostFlag = argv.find((arg) => arg.startsWith("--host="));
+  if (hostFlag) return hostFlag.split("=")[1];
+
+  const hostIndex = argv.indexOf("--host");
+  if (hostIndex !== -1 && argv[hostIndex + 1]) return argv[hostIndex + 1];
+
+  return env.HOST ?? "127.0.0.1";
+}
+
 export function filterAuditEvents(events, { subjectId, caseId, type } = {}) {
   let filtered = events;
   if (subjectId) {
@@ -37,11 +59,24 @@ export function filterAuditEvents(events, { subjectId, caseId, type } = {}) {
   return filtered;
 }
 
-export async function readBody(request) {
+export async function readBody(request, { maxBytes = 1_000_000 } = {}) {
   const chunks = [];
-  for await (const chunk of request) chunks.push(chunk);
+  let total = 0;
+
+  for await (const chunk of request) {
+    total += chunk.length;
+    if (total > maxBytes) {
+      const error = new Error("Request body too large");
+      error.name = "ValidationError";
+      error.statusCode = 413;
+      throw error;
+    }
+    chunks.push(chunk);
+  }
+
   const raw = Buffer.concat(chunks).toString("utf8");
   if (!raw) return {};
+
   try {
     return JSON.parse(raw);
   } catch {
@@ -52,8 +87,8 @@ export async function readBody(request) {
   }
 }
 
-function send(response, status, payload) {
-  response.writeHead(status, { "content-type": "application/json" });
+function send(response, status, payload, headers = {}) {
+  response.writeHead(status, { "content-type": "application/json", ...headers });
   response.end(JSON.stringify(payload, null, 2));
 }
 
@@ -66,10 +101,24 @@ async function serveWebAsset(response, pathname) {
   return true;
 }
 
-export function createAgentPayApi(guard = new AgentPayGuard()) {
+export function createAgentPayApi(
+  guard = new AgentPayGuard(),
+  { apiKey = null, apiKeys = getConfiguredApiKeyRegistry() } = {}
+) {
+  const apiKeyRegistry = apiKeys ?? apiKey;
+
   return http.createServer(async (request, response) => {
     try {
+      applyCors(request, response);
+      if (handlePreflight(request, response)) return;
+
       const url = new URL(request.url, `http://${request.headers.host}`);
+
+      if (!isPublicApiPath(request.method, url.pathname)) {
+        assertRateLimit(request);
+        assertApiKey(request, apiKeyRegistry, requiredRolesForRoute(request.method, url.pathname));
+      }
+
       const body = request.method === "POST" ? await readBody(request) : {};
 
       if (request.method === "GET" && (await serveWebAsset(response, url.pathname))) {
@@ -77,7 +126,7 @@ export function createAgentPayApi(guard = new AgentPayGuard()) {
       }
 
       if (request.method === "GET" && url.pathname === "/health") {
-        return send(response, 200, { status: "ok" });
+        return send(response, 200, { status: "ok", demo_mode: !apiKeyRegistry });
       }
       if (request.method === "GET" && url.pathname === "/demo/scenarios") {
         return send(response, 200, { scenarios: listDemoScenarios() });
@@ -116,6 +165,19 @@ export function createAgentPayApi(guard = new AgentPayGuard()) {
         });
         return send(response, 200, events);
       }
+      if (request.method === "GET" && url.pathname === "/audit-events/verify") {
+        const subjectId = url.searchParams.get("subject_id");
+        const allEvents = guard.store.auditEvents;
+        const scopedEvents = subjectId
+          ? filterAuditEvents(allEvents, { subjectId })
+          : allEvents;
+        return send(response, 200, {
+          subject_id: subjectId,
+          event_count: scopedEvents.length,
+          total_event_count: allEvents.length,
+          verification: verifyAuditChain(allEvents)
+        });
+      }
 
       return send(response, 404, { error: "not_found" });
     } catch (error) {
@@ -132,7 +194,17 @@ const isMain =
   process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
   const port = parsePort();
-  createAgentPayApi().listen(port, () => {
-    console.log(`AgentPay Guard API and web demo listening on http://127.0.0.1:${port}`);
+  const host = parseHost();
+  const apiKey = getConfiguredApiKey();
+  const apiKeys = getConfiguredApiKeyRegistry();
+
+  if (!apiKeys) {
+    console.warn("No AGENTPAY_API_KEY set. Local demo mode only. Do not expose this server publicly.");
+  }
+
+  const store = createStore();
+  createAgentPayApi(new AgentPayGuard({ store }), { apiKey, apiKeys }).listen(port, host, () => {
+    const storeLabel = store.kind === "sqlite" ? `sqlite (${store.path})` : "memory";
+    console.log(`AgentPay Guard API and web demo listening on http://${host}:${port} [store=${storeLabel}]`);
   });
 }
